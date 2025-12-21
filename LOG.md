@@ -1,5 +1,33 @@
 # 2025-12-21
 
+## Script Test Upload Singolo
+
+**test_upload_single.py:**
+- Upload primo video dall'anagrafica senza youtube_id
+- Modalità `--dry-run` per preview senza caricare
+- Aggiorna anagrafica con youtube_id dopo upload
+- Previene duplicati in run successive
+
+**Flusso:**
+1. Trova primo video senza youtube_id in anagrafica
+2. Autentica YouTube (skip in dry-run)
+3. Download video da pagina ARS (skip in dry-run)
+4. Costruisce metadati completi
+5. Upload + aggiunta a playlist anno
+6. Aggiorna anagrafica con youtube_id
+7. Cleanup file temporaneo
+
+**Funzioni:**
+- `get_first_unuploaded_video()`: trova video da uploadare
+- `update_anagrafica_youtube_id()`: aggiorna CSV dopo upload
+- Conferma utente prima di upload reale
+
+**Uso:**
+```bash
+python3 test_upload_single.py --dry-run  # Preview
+python3 test_upload_single.py            # Upload reale
+```
+
 ## Playlist Annuali e Link Ricerca Seduta
 
 **Organizzazione contenuti YouTube:**
