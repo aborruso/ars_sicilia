@@ -17,9 +17,12 @@ Sistema automatizzato per scaricare video sedute Assemblea Regionale Siciliana e
 - Scraping automatico pagine sedute da https://www.ars.sicilia.it
 - Download video HLS con yt-dlp
 - Upload su YouTube con metadati strutturati
+- **Playlist annuali**: aggiunta automatica a playlist anno
+- **Link ricerca seduta**: ogni video include link per trovare tutti video stessa seduta
 - Logging upload per evitare duplicati
 - Naming convention: `Lavori d'aula: seduta n. 219/A del 10 Dicembre 2025 - 11:30`
-- Recording date impostato su data effettiva seduta
+- Recording date impostato su data effettiva video (distingue data seduta da data video)
+- Tags ottimizzati per ricerca: numero seduta, anno, mese
 - Link a OdG e resoconti nella descrizione
 
 ## Requisiti
@@ -104,6 +107,43 @@ Al primo avvio:
 2. Seleziona account Google del canale YouTube
 3. Clicca "Continua" per autorizzare
 4. Token salvato in `config/token.json` per riuso
+
+### 5. Configurazione Playlist e Channel ID
+
+#### 5.1 Ottieni Channel ID
+
+1. Vai su YouTube Studio: https://studio.youtube.com
+2. In alto a sinistra, clicca sull'icona del canale
+3. Clicca "Impostazioni" → "Canale"
+4. Copia l'ID canale (es. `UCxxxxxxxxxxxxxxxxxxx`) o handle (es. `@ARSSicilia`)
+5. Apri `config/config.yaml` e compila `youtube.channel_id`:
+   ```yaml
+   youtube:
+     channel_id: "@ARSSicilia"  # O UCxxxxxxxxxxxxxxxxxxx
+   ```
+
+**Nota:** Il channel_id abilita link ricerca seduta nelle descrizioni video.
+
+#### 5.2 Crea Playlist Annuali
+
+1. Vai su YouTube Studio → Playlist
+2. Crea nuova playlist:
+   - Nome: `ARS 2025 - Sedute Assemblea`
+   - Visibilità: Pubblica
+   - Descrizione: `Sedute Assemblea Regionale Siciliana - Anno 2025`
+3. Dalla pagina playlist, copia l'ID dall'URL:
+   - URL: `https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxxxxxx`
+   - ID playlist: `PLxxxxxxxxxxxxxxxxxxx`
+4. Ripeti per anno 2026, 2027, etc.
+5. Apri `config/config.yaml` e compila playlist:
+   ```yaml
+   youtube:
+     playlists:
+       "2025": "PLxxxxxxxxxxxxxxxxxxx"
+       "2026": "PLyyyyyyyyyyyyyyyyyy"
+   ```
+
+**Nota:** I video verranno aggiunti automaticamente alla playlist dell'anno corrispondente.
 
 ## Utilizzo
 

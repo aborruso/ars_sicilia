@@ -20,6 +20,14 @@ youtube:
   privacy: "public"  # public|unlisted|private
   default_language: "it"
 
+  # Channel ID per link ricerca sedute
+  channel_id: ""  # Da compilare dopo prima autenticazione
+
+  # Playlist annuali (creare manualmente su YouTube)
+  playlists:
+    "2025": ""  # Playlist ID per anno 2025
+    "2026": ""  # Playlist ID per anno 2026
+
   # Tags base applicati a tutti i video
   tags:
     - "ARS"

@@ -23,13 +23,14 @@ def build_title(seduta_info: dict, video_info: dict) -> str:
     return f"Lavori d'aula: seduta n. {numero} del {data_formattata} - {ora}"
 
 
-def build_description(seduta_info: dict, video_info: dict) -> str:
+def build_description(seduta_info: dict, video_info: dict, config: dict = None) -> str:
     """
     Costruisce descrizione video YouTube.
 
     Args:
         seduta_info: Dict con info seduta
         video_info: Dict con info video
+        config: Dict configurazione (opzionale, per channel_id)
 
     Returns:
         Descrizione formattata
@@ -46,9 +47,21 @@ def build_description(seduta_info: dict, video_info: dict) -> str:
         ""
     ]
 
+    # Link ricerca tutti video seduta
+    if config and config.get('youtube', {}).get('channel_id'):
+        channel_id = config['youtube']['channel_id']
+        # Rimuovi @ se presente nel channel_id
+        if channel_id.startswith('@'):
+            channel_id = channel_id[1:]
+        # URL encode del numero seduta per ricerca
+        search_query = f"seduta+n+{numero.replace('/', '%2F')}"
+        search_url = f"https://www.youtube.com/@{channel_id}/search?query={search_query}"
+        description_parts.append(f"🔍 Tutti i video seduta {numero}: {search_url}")
+        description_parts.append("")
+
     # Aggiungi documenti se disponibili
     if seduta_info.get('odg_url') or seduta_info.get('resoconto_url'):
-        description_parts.append("Documenti:")
+        description_parts.append("📄 Documenti:")
 
         if seduta_info.get('odg_url'):
             description_parts.append(f"- OdG e Comunicazioni: {seduta_info['odg_url']}")
@@ -60,7 +73,7 @@ def build_description(seduta_info: dict, video_info: dict) -> str:
 
     # Aggiungi link pagina ARS
     if seduta_info.get('url_pagina'):
-        description_parts.append(f"Link alla seduta: {seduta_info['url_pagina']}")
+        description_parts.append(f"🔗 Link alla seduta: {seduta_info['url_pagina']}")
 
     return "\n".join(description_parts)
 
@@ -88,7 +101,7 @@ def build_recording_date(video_info: dict) -> str:
 
 def build_tags(seduta_info: dict, config: dict) -> list:
     """
-    Costruisce lista tags per YouTube.
+    Costruisce lista tags per YouTube ottimizzati per ricerca seduta.
 
     Args:
         seduta_info: Dict con info seduta
@@ -100,21 +113,25 @@ def build_tags(seduta_info: dict, config: dict) -> list:
     # Tags base da config
     tags = config.get('youtube', {}).get('tags', []).copy()
 
-    # Tag numero seduta (solo numero, no suffisso)
+    # Tag specifici seduta per ricerca
     if seduta_info.get('numero_seduta'):
-        numero_base = seduta_info['numero_seduta'].split('/')[0]
-        tags.append(f"Seduta {numero_base}")
+        numero = seduta_info['numero_seduta']
+        numero_base = numero.split('/')[0]
 
-    # Tag anno
+        # Tag numero completo e base
+        tags.append(f"Seduta n. {numero}")  # Es: "Seduta n. 220" o "Seduta n. 219/A"
+        if '/' in numero:
+            tags.append(f"Seduta {numero_base}")  # Es: "Seduta 219" (senza suffisso)
+
+    # Tag anno e mese
     if seduta_info.get('data_seduta'):
         anno = extract_year(seduta_info['data_seduta'])
         if anno:
             tags.append(anno)
 
-        # Tag mese
         mese = extract_month_name(seduta_info['data_seduta'])
         if mese:
-            tags.append(mese)
+            tags.append(f"{mese} {anno}")  # Es: "Dicembre 2025"
 
     return tags
 
@@ -133,7 +150,7 @@ def build_youtube_metadata(seduta_info: dict, video_info: dict, config: dict) ->
     """
     return {
         'title': build_title(seduta_info, video_info),
-        'description': build_description(seduta_info, video_info),
+        'description': build_description(seduta_info, video_info, config),
         'tags': build_tags(seduta_info, config),
         'category': config.get('youtube', {}).get('category_id', '25'),
         'privacy': config.get('youtube', {}).get('privacy', 'public'),

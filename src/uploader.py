@@ -85,14 +85,15 @@ def authenticate(secrets_file: str, token_file: str):
     return youtube
 
 
-def upload_video(youtube, file_path: str, metadata: dict) -> Optional[str]:
+def upload_video(youtube, file_path: str, metadata: dict, playlist_id: Optional[str] = None) -> Optional[str]:
     """
-    Upload video su YouTube.
+    Upload video su YouTube e aggiunta a playlist (opzionale).
 
     Args:
         youtube: YouTube API client
         file_path: Path al file video
         metadata: Dict con metadati video
+        playlist_id: ID playlist YouTube (opzionale)
 
     Returns:
         ID video YouTube o None se fallito
@@ -153,6 +154,11 @@ def upload_video(youtube, file_path: str, metadata: dict) -> Optional[str]:
         video_id = response.get('id')
         if video_id:
             print(f"  ✓ Video caricato: https://youtube.com/watch?v={video_id}")
+
+            # Aggiungi a playlist se specificato
+            if playlist_id:
+                add_video_to_playlist(youtube, video_id, playlist_id)
+
             return video_id
         else:
             print(f"  ✗ Upload fallito: nessun ID restituito")
@@ -200,6 +206,64 @@ def get_channel_info(youtube) -> Optional[dict]:
         return None
 
 
+def add_video_to_playlist(youtube, video_id: str, playlist_id: str) -> bool:
+    """
+    Aggiunge video a playlist YouTube.
+
+    Args:
+        youtube: YouTube API client
+        video_id: ID video YouTube
+        playlist_id: ID playlist YouTube
+
+    Returns:
+        True se successo, False altrimenti
+    """
+    try:
+        request = youtube.playlistItems().insert(
+            part='snippet',
+            body={
+                'snippet': {
+                    'playlistId': playlist_id,
+                    'resourceId': {
+                        'kind': 'youtube#video',
+                        'videoId': video_id
+                    }
+                }
+            }
+        )
+        response = request.execute()
+        print(f"  ✓ Video aggiunto a playlist: {playlist_id}")
+        return True
+
+    except HttpError as e:
+        print(f"  ✗ Errore aggiunta a playlist: {e}")
+        return False
+    except Exception as e:
+        print(f"  ✗ Errore aggiunta a playlist: {e}")
+        return False
+
+
+def get_playlist_id_for_year(config: dict, year: str) -> Optional[str]:
+    """
+    Ottiene playlist ID per anno dalla configurazione.
+
+    Args:
+        config: Dict configurazione
+        year: Anno (es. "2025")
+
+    Returns:
+        Playlist ID o None se non configurato
+    """
+    playlists = config.get('youtube', {}).get('playlists', {})
+    playlist_id = playlists.get(year)
+
+    if not playlist_id:
+        print(f"  ⚠ Playlist per anno {year} non configurata")
+        return None
+
+    return playlist_id
+
+
 def check_quota_usage(youtube) -> Optional[dict]:
     """
     Verifica quota API YouTube utilizzata (approssimata).
@@ -218,6 +282,8 @@ def check_quota_usage(youtube) -> Optional[dict]:
     return {
         'daily_limit': 10000,
         'upload_cost': 1600,
+        'playlist_cost': 50,
+        'total_cost_per_video': 1650,
         'max_daily_uploads': 6,
         'note': 'Quota esatta disponibile solo su Google Cloud Console'
     }
