@@ -14,7 +14,8 @@ from googleapiclient.errors import HttpError
 
 SCOPES = [
     'https://www.googleapis.com/auth/youtube.upload',
-    'https://www.googleapis.com/auth/youtube.readonly'
+    'https://www.googleapis.com/auth/youtube.readonly',
+    'https://www.googleapis.com/auth/youtube'  # Gestione completa canale (include playlist)
 ]
 
 
@@ -206,6 +207,59 @@ def get_channel_info(youtube) -> Optional[dict]:
         return None
 
 
+def create_playlist(youtube, year: str, title: str = None, description: str = None) -> Optional[str]:
+    """
+    Crea nuova playlist YouTube per anno.
+
+    Args:
+        youtube: YouTube API client
+        year: Anno (es. "2025")
+        title: Titolo playlist (default: "ARS {anno} - Sedute Assemblea")
+        description: Descrizione (default auto-generata)
+
+    Returns:
+        Playlist ID o None se fallito
+    """
+    if not title:
+        title = f"ARS {year} - Sedute Assemblea"
+
+    if not description:
+        description = f"Sedute Assemblea Regionale Siciliana - Anno {year}\n\nVideo pubblicati automaticamente."
+
+    try:
+        request = youtube.playlists().insert(
+            part='snippet,status',
+            body={
+                'snippet': {
+                    'title': title,
+                    'description': description,
+                    'defaultLanguage': 'it'
+                },
+                'status': {
+                    'privacyStatus': 'public'
+                }
+            }
+        )
+        response = request.execute()
+
+        playlist_id = response.get('id')
+        if playlist_id:
+            print(f"  ✓ Playlist creata: {title}")
+            print(f"  ID: {playlist_id}")
+            print(f"  URL: https://www.youtube.com/playlist?list={playlist_id}")
+            return playlist_id
+        else:
+            print(f"  ✗ Creazione playlist fallita: nessun ID restituito")
+            return None
+
+    except HttpError as e:
+        print(f"  ✗ Errore HTTP creazione playlist: {e}")
+        return None
+    except Exception as e:
+        print(f"  ✗ Errore creazione playlist: {e}")
+        return None
+
+
 def add_video_to_playlist(youtube, video_id: str, playlist_id: str) -> bool:
     """
     Aggiunge video a playlist YouTube.
@@ -243,9 +297,52 @@ def add_video_to_playlist(youtube, video_id: str, playlist_id: str) -> bool:
         return False
 
 
+def get_or_create_playlist_for_year(youtube, config: dict, year: str, auto_create: bool = True) -> Optional[str]:
+    """
+    Ottiene playlist ID per anno dalla configurazione o la crea automaticamente.
+
+    Args:
+        youtube: YouTube API client
+        config: Dict configurazione
+        year: Anno (es. "2025")
+        auto_create: Se True, crea playlist se non esiste (default: True)
+
+    Returns:
+        Playlist ID o None se non configurato/creato
+    """
+    playlists = config.get('youtube', {}).get('playlists', {})
+    playlist_id = playlists.get(year)
+
+    if playlist_id:
+        return playlist_id
+
+    # Playlist non configurata
+    if not auto_create:
+        print(f"  ⚠ Playlist per anno {year} non configurata")
+        return None
+
+    # Crea playlist automaticamente
+    print(f"  📋 Playlist anno {year} non trovata, creazione automatica...")
+    playlist_id = create_playlist(youtube, year)
+
+    if playlist_id:
+        # Salva ID in config per riutilizzo (solo in memoria, non su file)
+        if 'youtube' not in config:
+            config['youtube'] = {}
+        if 'playlists' not in config['youtube']:
+            config['youtube']['playlists'] = {}
+        config['youtube']['playlists'][year] = playlist_id
+
+        print(f"  ℹ️  Aggiungi questo ID a config/config.yaml per riutilizzo:")
+        print(f"     playlists:")
+        print(f"       \"{year}\": \"{playlist_id}\"")
+
+    return playlist_id
+
+
 def get_playlist_id_for_year(config: dict, year: str) -> Optional[str]:
     """
-    Ottiene playlist ID per anno dalla configurazione.
+    Ottiene playlist ID per anno dalla configurazione (deprecato, usa get_or_create_playlist_for_year).
 
     Args:
         config: Dict configurazione

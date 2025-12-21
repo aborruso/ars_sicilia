@@ -108,6 +108,11 @@ def main():
         action='store_true',
         help='Mostra cosa farebbe senza uploadare realmente'
     )
+    parser.add_argument(
+        '--yes', '-y',
+        action='store_true',
+        help='Conferma automatica (salta prompt di conferma)'
+    )
     args = parser.parse_args()
 
     mode = "DRY-RUN" if args.dry_run else "UPLOAD REALE"
@@ -135,13 +140,15 @@ def main():
     print(f"  ID video ARS: {video_row['id_video']}")
     print(f"  URL pagina: {video_row['video_page_url']}")
 
-    # Conferma utente (skip in dry-run)
-    if not args.dry_run:
+    # Conferma utente (skip in dry-run o con --yes)
+    if not args.dry_run and not args.yes:
         print(f"\n⚠️  ATTENZIONE: Questo video verrà caricato su YouTube!")
         response = input("Continuare? [y/N]: ")
         if response.lower() != 'y':
             print("Operazione annullata.")
             return 0
+    elif not args.dry_run and args.yes:
+        print(f"\n✓ Conferma automatica attiva (--yes)")
     
     # Prepara info seduta e video
     seduta_info = {
@@ -194,7 +201,7 @@ def main():
             success = downloader.download_video(
                 video_row['video_page_url'],
                 str(video_path),
-                timeout=config['download'].get('timeout', 3600)
+                retries=config['download'].get('max_retries', 3)
             )
 
             if not success or not video_path.exists():
@@ -227,12 +234,18 @@ def main():
         print(f"\n  🏷️  TAGS:")
         print(f"  {', '.join(metadata['tags'])}")
     
-    # Determina playlist
+    # Determina playlist (crea automaticamente se non esiste)
     playlist_id = None
     if video_row['data_video']:
         year = extract_year(video_row['data_video'])
         if year:
-            playlist_id = uploader.get_playlist_id_for_year(config, year)
+            if args.dry_run:
+                # In dry-run non creare playlist, usa quella configurata
+                playlist_id = uploader.get_playlist_id_for_year(config, year)
+            else:
+                # In upload reale, crea se non esiste
+                playlist_id = uploader.get_or_create_playlist_for_year(youtube, config, year)
+
             if playlist_id:
                 print(f"  Playlist anno {year}: {playlist_id}")
     

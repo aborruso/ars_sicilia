@@ -21,7 +21,7 @@ youtube:
   default_language: "it"
 
   # Channel ID per link ricerca sedute
-  channel_id: ""  # Da compilare dopo prima autenticazione
+  channel_id: "@AndreaBorruso"
 
   # Playlist annuali (creare manualmente su YouTube)
   playlists:
