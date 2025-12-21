@@ -21,7 +21,9 @@ youtube:
   token_file: "./config/token.json"
   category_id: "25"  # News & Politics
   privacy: "public"  # public|unlisted|private
+  license: "creativeCommon"  # creativeCommon|youtube
   default_language: "it"
+  audio_language: "it-IT"
   timezone: "Europe/Rome"
 
   # Channel ID per link ricerca sedute

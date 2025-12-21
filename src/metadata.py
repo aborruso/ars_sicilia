@@ -7,6 +7,13 @@ from urllib.parse import quote
 from .utils import format_date_italian, extract_year, extract_month_name
 
 
+def escape_time_for_description(ora: str | None) -> str | None:
+    """Evita che YouTube interpreti l'orario come timestamp nella descrizione."""
+    if not ora:
+        return None
+    return ora.replace(":", ":\u200B", 1)
+
+
 def build_title(seduta_info: dict, video_info: dict) -> str:
     """
     Costruisce titolo video YouTube.
@@ -56,18 +63,26 @@ def build_description(seduta_info: dict, video_info: dict, config: dict = None) 
         Descrizione formattata
     """
     data_seduta_formattata = format_date_italian(seduta_info['data_seduta'])
+    data_video_formattata = format_date_italian(video_info['data_video'] or seduta_info['data_seduta'])
     numero = seduta_info['numero_seduta']
-    ora = video_info['ora_video']
+    ora = escape_time_for_description(video_info['ora_video'])
 
     token = build_seduta_token(seduta_info)
 
     description_parts = [
-        f"Seduta n. {numero} del {data_seduta_formattata}",
-        f"Video dalle ore {ora}",
+        f"Seduta dell'Assemblea Regionale Siciliana n. {numero} del {data_seduta_formattata}.",
+    ]
+    if ora:
+        description_parts.append(
+            f"Data e ora di svolgimento: {data_video_formattata}, dalle ore {ora}."
+        )
+    else:
+        description_parts.append(f"Data di svolgimento: {data_video_formattata}.")
+    description_parts.extend([
         "",
         "Assemblea Regionale Siciliana - XVIII Legislatura",
         ""
-    ]
+    ])
 
     if token:
         description_parts.append(f"{token}")
@@ -112,9 +127,9 @@ def build_recording_date(video_info: dict, timezone: str = "Europe/Rome") -> str
         Data/ora in formato ISO 8601
     """
     data = video_info['data_video']
-    ora = video_info['ora_video']
+    ora = video_info.get('ora_video') or "00:00"
 
-    if not data or not ora:
+    if not data:
         return None
 
     try:
@@ -180,9 +195,11 @@ def build_youtube_metadata(seduta_info: dict, video_info: dict, config: dict) ->
         'tags': build_tags(seduta_info, config),
         'category': config.get('youtube', {}).get('category_id', '25'),
         'privacy': config.get('youtube', {}).get('privacy', 'public'),
+        'license': config.get('youtube', {}).get('license', 'creativeCommon'),
         'recordingDate': build_recording_date(
             video_info,
             timezone=config.get('youtube', {}).get('timezone', 'Europe/Rome')
         ),
-        'defaultLanguage': config.get('youtube', {}).get('default_language', 'it')
+        'defaultLanguage': config.get('youtube', {}).get('default_language', 'it'),
+        'defaultAudioLanguage': config.get('youtube', {}).get('audio_language', 'it-IT')
     }

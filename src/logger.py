@@ -89,6 +89,98 @@ def is_video_uploaded(
         return False
 
 
+def is_video_uploaded_in_anagrafica(
+    anagrafica_path: str,
+    id_video: str,
+    numero_seduta: Optional[str] = None,
+    data_seduta: Optional[str] = None
+) -> bool:
+    """
+    Verifica se il video ha già youtube_id in anagrafica.
+
+    Args:
+        anagrafica_path: Path al file anagrafica CSV
+        id_video: ID video ARS
+
+    Returns:
+        True se youtube_id presente per la riga corrispondente
+    """
+    try:
+        path = Path(anagrafica_path)
+        if not path.exists():
+            return False
+
+        with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                match = row.get('id_video') == id_video
+                if numero_seduta and data_seduta:
+                    match = (
+                        match
+                        and row.get('numero_seduta') == numero_seduta
+                        and row.get('data_seduta') == data_seduta
+                    )
+                if match and row.get('youtube_id'):
+                    return True
+
+        return False
+
+    except Exception as e:
+        print(f"Errore verifica anagrafica: {e}")
+        return False
+
+
+def update_anagrafica_youtube_id(
+    anagrafica_path: str,
+    id_video: str,
+    youtube_id: str,
+    numero_seduta: Optional[str] = None,
+    data_seduta: Optional[str] = None
+) -> bool:
+    """
+    Aggiorna youtube_id per video in anagrafica.
+
+    Args:
+        anagrafica_path: Path al CSV anagrafica
+        id_video: ID video ARS
+        youtube_id: ID video YouTube
+        numero_seduta: Numero seduta (opzionale per matching forte)
+        data_seduta: Data seduta (opzionale per matching forte)
+
+    Returns:
+        True se aggiornato
+    """
+    try:
+        rows = []
+        with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames
+
+            for row in reader:
+                match = row.get('id_video') == id_video
+                if numero_seduta and data_seduta:
+                    match = (
+                        match
+                        and row.get('numero_seduta') == numero_seduta
+                        and row.get('data_seduta') == data_seduta
+                    )
+                if match:
+                    row['youtube_id'] = youtube_id
+                    row['last_check'] = datetime.now().isoformat()
+                rows.append(row)
+
+        with open(anagrafica_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+
+        return True
+
+    except Exception as e:
+        print(f"Errore aggiornamento anagrafica: {e}")
+        return False
+
+
 def log_upload(
     log_path: str,
     video_info: dict,

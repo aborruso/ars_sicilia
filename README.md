@@ -2,16 +2,18 @@
 
 Sistema automatizzato per scaricare video sedute Assemblea Regionale Siciliana e pubblicarli su YouTube con metadati ricercabili.
 
+Questo progetto nasce da un'idea semplice da civic hacker: la trasparenza deve essere efficace. Non basta dire "i video sono online": chi vuole capire se e quando si è parlato di un argomento oggi ha davanti solo un elenco di video. Portarli su YouTube con metadati strutturati e trascrizione automatica cambia tutto: si può cercare nel testo, collegare sedute e video, e usare le trascrizioni come materia prima per analisi (anche con LLM e con gli strumenti basati sull'intelligenza artificiale). L'obiettivo è trasformare un archivio statico in uno strumento di ricerca e controllo civico.
+
 ## Funzionalità
 
 ### Anagrafica Video
-- **Script:** `build_anagrafica.py`
+- **Script:** `scripts/build_anagrafica.py`
 - Crawler incrementale sedute dal 10/12/2025 in poi
 - Naviga usando `div.next_link` (freccia destra)
 - Estrae metadati senza scaricare video
 - Rileva aggiornamenti sedute (nuovi video)
 - Output CSV: `data/anagrafica_video.csv`
-- Wrapper per cron: `run_daily.sh`
+- Wrapper per cron: `scripts/run_daily.sh`
 
 ### Upload YouTube
 - Scraping automatico pagine sedute da https://www.ars.sicilia.it
@@ -100,7 +102,7 @@ Se serve più quota, richiedi aumento su Google Cloud Console.
 ### 4. Prima Autenticazione
 
 ```bash
-python3 main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-219-del-10122025
+python3 scripts/main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-219-del-10122025
 ```
 
 Al primo avvio:
@@ -154,10 +156,10 @@ Prima di caricare tutti i video, testa l'upload del primo:
 
 ```bash
 # Modalità dry-run (mostra cosa farebbe senza caricare)
-python3 test_upload_single.py --dry-run
+python3 scripts/test_upload_single.py --dry-run
 
 # Upload reale del primo video
-python3 test_upload_single.py
+python3 scripts/test_upload_single.py
 ```
 
 Lo script:
@@ -175,10 +177,10 @@ Se hai video già caricati e vuoi aggiungere/aggiornare il token e il link di ri
 
 ```bash
 # Preview senza aggiornare
-.venv/bin/python3 update_descriptions.py --dry-run
+.venv/bin/python3 scripts/update_descriptions.py --dry-run
 
 # Update reale delle descrizioni
-.venv/bin/python3 update_descriptions.py
+.venv/bin/python3 scripts/update_descriptions.py
 ```
 
 Il link di ricerca generato usa questa forma:
@@ -188,7 +190,7 @@ https://www.youtube.com/results?search_query="ARS_SEDUTA_219-2025-12-10"+intitle
 
 Per aggiornare anche i titoli già pubblicati:
 ```bash
-.venv/bin/python3 update_descriptions.py --update-titles
+.venv/bin/python3 scripts/update_descriptions.py --update-titles
 ```
 
 ### Configurazione Avanzata (config.yaml)
@@ -213,10 +215,10 @@ Costruisce/aggiorna anagrafica sedute dal 10/12/2025:
 
 ```bash
 # Manuale
-./run_daily.sh
+./scripts/run_daily.sh
 
 # Con venv
-.venv/bin/python3 build_anagrafica.py
+.venv/bin/python3 scripts/build_anagrafica.py
 ```
 
 **Output:**
@@ -230,19 +232,25 @@ Costruisce/aggiorna anagrafica sedute dal 10/12/2025:
 
 **Cron giornaliero:**
 ```cron
-0 8 * * * /path/to/ars_sicilia/run_daily.sh
+0 8 * * * /path/to/ars_sicilia/scripts/run_daily.sh
 ```
+
+**GitHub Actions (01:37 UTC = 02:37 CET / 03:37 CEST):**
+Il workflow `daily_upload.yml` esegue ogni giorno fino a 4 upload, calcola quanti upload sono già stati fatti nel giorno (da `data/anagrafica_video.csv` via `last_check`) e si ferma se il limite è raggiunto, poi aggiorna l'anagrafica nel repo.
+
+**RSS pubblico (gh-pages):**
+Il feed è pubblicato su GitHub Pages: `https://<user>.github.io/<repo>/feed.xml`. Usa `data_video` + `ora_video` come `pubDate` e include gli ultimi 20 video caricati.
 
 ### Processare Seduta Specifica
 
 ```bash
-python3 main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-XXX-del-DDMMYYYY
+python3 scripts/main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-XXX-del-DDMMYYYY
 ```
 
 ### Processare Ultima Seduta Disponibile
 
 ```bash
-python3 main.py
+python3 scripts/main.py
 ```
 
 Lo script cercherà automaticamente l'ultima seduta disponibile.
@@ -259,7 +267,7 @@ Aggiungi:
 
 ```cron
 # Ogni giorno alle 3:00 AM
-0 3 * * * cd /home/aborruso/git/idee/ars_sicilia && /usr/bin/python3 main.py >> data/logs/cron.log 2>&1
+0 3 * * * cd /home/aborruso/git/idee/ars_sicilia && /usr/bin/python3 scripts/main.py >> data/logs/cron.log 2>&1
 ```
 
 ## Struttura File
@@ -284,9 +292,13 @@ ars_sicilia/
 │   │   ├── upload_log.csv  # Log upload video
 │   │   └── index.csv       # Indice sedute
 │   └── videos/             # Video temporanei (auto-cleanup)
-├── build_anagrafica.py     # Script anagrafica incrementale
-├── run_daily.sh            # Wrapper cron con lock
-├── main.py                 # Script upload YouTube
+├── scripts/
+│   ├── build_anagrafica.py   # Script anagrafica incrementale
+│   ├── run_daily.sh          # Wrapper cron con lock
+│   ├── main.py               # Script upload YouTube
+│   ├── test_upload_single.py # Test upload singolo video
+│   ├── update_descriptions.py # Aggiorna descrizioni e metadati
+│   └── generate_rss.py       # Genera feed RSS pubblico
 ├── requirements.txt
 └── README.md
 ```

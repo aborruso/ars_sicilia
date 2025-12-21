@@ -115,10 +115,12 @@ def upload_video(youtube, file_path: str, metadata: dict, playlist_id: Optional[
             'description': metadata['description'],
             'tags': metadata.get('tags', []),
             'categoryId': metadata.get('category', '25'),
-            'defaultLanguage': metadata.get('defaultLanguage', 'it')
+            'defaultLanguage': metadata.get('defaultLanguage', 'it'),
+            'defaultAudioLanguage': metadata.get('defaultAudioLanguage', 'it-IT')
         },
         'status': {
-            'privacyStatus': metadata.get('privacy', 'public')
+            'privacyStatus': metadata.get('privacy', 'public'),
+            'license': metadata.get('license', 'creativeCommon')
         }
     }
 

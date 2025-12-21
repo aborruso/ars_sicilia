@@ -1,0 +1,85 @@
+name: Daily ARS uploads
+
+on:
+  schedule:
+    - cron: "37 1 * * *" # 01:37 UTC (02:37 CET / 03:37 CEST)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m venv .venv
+          . .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Write YouTube credentials
+        run: |
+          mkdir -p config
+          echo '${{ secrets.YT_CLIENT_SECRET_JSON }}' > config/youtube_secrets.json
+          echo '${{ secrets.YT_TOKEN_JSON }}' > config/token.json
+
+      - name: Run anagrafica update
+        run: |
+          . .venv/bin/activate
+          python scripts/build_anagrafica.py
+
+      - name: Compute remaining uploads today
+        id: quota
+        env:
+          MAX_DAILY_UPLOADS: "4"
+        run: |
+          python - <<'PY'
+          import csv
+          import datetime
+          import os
+          from pathlib import Path
+
+          max_daily = int(os.environ.get("MAX_DAILY_UPLOADS", "4"))
+          anagrafica_path = Path("data/anagrafica_video.csv")
+          today = datetime.date.today().isoformat()
+          uploaded_today = 0
+
+          if anagrafica_path.exists():
+              with anagrafica_path.open(newline='', encoding='utf-8') as f:
+                  reader = csv.DictReader(f)
+                  for row in reader:
+                      if not row.get('youtube_id'):
+                          continue
+                      ts = row.get('last_check', '')
+                      if ts.startswith(today):
+                          uploaded_today += 1
+
+          remaining = max(0, max_daily - uploaded_today)
+          print(f"uploaded_today={uploaded_today} remaining={remaining}")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"remaining={remaining}\n")
+          PY
+
+      - name: Upload max 4 videos
+        if: ${{ steps.quota.outputs.remaining != '0' }}
+        run: |
+          . .venv/bin/activate
+          for i in $(seq 1 ${{ steps.quota.outputs.remaining }}); do
+            python scripts/test_upload_single.py --yes || break
+          done
+
+      - name: Commit updated logs/anagrafica
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data/anagrafica_video.csv || true
+          git commit -m "chore: update anagrafica" || exit 0
+          git push
