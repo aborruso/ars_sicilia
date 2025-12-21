@@ -1,5 +1,35 @@
 # 2025-12-21
 
+## Playlist Annuali e Link Ricerca Seduta
+
+**Organizzazione contenuti YouTube:**
+- Playlist annuali: video aggiunti automaticamente a playlist anno (es. "ARS 2025")
+- Link ricerca seduta in descrizione: `youtube.com/@Canale/search?query=seduta+n+220`
+- Utenti possono filtrare video per seduta specifica senza playlist dedicate
+
+**Configurazione (`config/config.yaml`):**
+- `youtube.channel_id`: ID canale o handle (es. `@ARSSicilia`)
+- `youtube.playlists`: mapping anno → playlist ID (es. `2025: PLxxxxxxxxx`)
+
+**Funzioni nuove (`src/uploader.py`):**
+- `add_video_to_playlist()`: aggiunge video a playlist (50 units API)
+- `get_playlist_id_for_year()`: seleziona playlist da anno
+- `upload_video()`: parametro `playlist_id` opzionale
+
+**Metadati migliorati (`src/metadata.py`):**
+- Descrizione con link ricerca seduta (se channel_id configurato)
+- Tags ottimizzati: "Seduta n. 220", "Dicembre 2025"
+- Emoji per sezioni: 🔍 ricerca, 📄 documenti, 🔗 link
+
+**Quota API aggiornata:**
+- Upload: 1,600 units
+- Playlist insert: 50 units
+- **Totale: 1,650 units/video → ~6 video/giorno**
+
+**Documentazione:**
+- README: sezione configurazione playlist e channel_id
+- Istruzioni creare playlist su YouTube Studio
+
 ## Fix Estrazione Date Video Multi-Date
 
 **Problema rilevato:**
