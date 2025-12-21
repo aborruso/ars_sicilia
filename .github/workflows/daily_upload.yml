@@ -80,6 +80,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add data/anagrafica_video.csv || true
+          git add data/anagrafica_video.csv data/playlists.json || true
           git commit -m "chore: update anagrafica" || exit 0
           git push

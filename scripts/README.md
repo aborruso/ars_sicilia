@@ -23,4 +23,5 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 
 - Config: `config/config.yaml`
 - Log/anagrafica: `data/`
+- Stato playlist auto-create: `data/playlists.json`
 - Per dettagli completi, vedi `README.md` principale.

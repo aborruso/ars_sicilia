@@ -355,6 +355,18 @@ Parametri principali:
 - `download.cleanup_after_upload`: Elimina video dopo upload (default: true)
 - `youtube.privacy`: public | unlisted | private (default: public)
 - `youtube.tags`: Tags base applicati a tutti video
+- Playlist auto-create: se una playlist annuale non è configurata, l'ID viene salvato in `data/playlists.json` per riuso.
+
+## Segreti e credenziali (produzione)
+
+Per i workflow GitHub Actions sono richiesti questi secret:
+- `YT_CLIENT_SECRET_JSON`: contenuto JSON di `config/youtube_secrets.json`
+- `YT_TOKEN_JSON`: contenuto JSON di `config/token.json`
+
+Aggiornare i secret:
+1. Rigenera `config/token.json` in locale (vedi sezione OAuth / token scaduto).
+2. Copia i file JSON nei secret del repo GitHub (Settings → Secrets and variables → Actions).
+3. Verifica che i workflow `daily_upload.yml` e `publish_rss.yml` completino senza errori.
 
 ## Monitoraggio
 

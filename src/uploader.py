@@ -1,5 +1,6 @@
 """Upload video su YouTube con OAuth2."""
 
+import json
 import os
 from pathlib import Path
 from typing import Optional
@@ -17,6 +18,47 @@ SCOPES = [
     'https://www.googleapis.com/auth/youtube.readonly',
     'https://www.googleapis.com/auth/youtube'  # Gestione completa canale (include playlist)
 ]
+
+DEFAULT_PLAYLIST_STATE_PATH = Path("data/playlists.json")
+
+
+def _load_playlist_state(path: Path) -> dict:
+    """
+    Carica mappa playlist annuali da file JSON (year -> playlist_id).
+    """
+    if not path.exists():
+        return {}
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"  ⚠ Impossibile leggere stato playlist ({path}): {e}")
+        return {}
+
+    if not isinstance(data, dict):
+        print(f"  ⚠ Stato playlist non valido: atteso dict, trovato {type(data).__name__}")
+        return {}
+
+    # Filtra valori non stringa
+    return {str(k): str(v) for k, v in data.items() if v}
+
+
+def _save_playlist_state(path: Path, data: dict) -> bool:
+    """
+    Salva mappa playlist annuali su file JSON. Ritorna True se riuscito.
+    """
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp_path = path.with_suffix(path.suffix + ".tmp")
+        tmp_path.write_text(
+            json.dumps(data, indent=2, sort_keys=True),
+            encoding="utf-8"
+        )
+        os.replace(tmp_path, path)
+        return True
+    except Exception as e:
+        print(f"  ⚠ Impossibile salvare stato playlist ({path}): {e}")
+        return False
 
 
 def authenticate(secrets_file: str, token_file: str):
@@ -299,7 +341,13 @@ def add_video_to_playlist(youtube, video_id: str, playlist_id: str) -> bool:
         return False
 
 
-def get_or_create_playlist_for_year(youtube, config: dict, year: str, auto_create: bool = True) -> Optional[str]:
+def get_or_create_playlist_for_year(
+    youtube,
+    config: dict,
+    year: str,
+    auto_create: bool = True,
+    state_path: Optional[str] = None
+) -> Optional[str]:
     """
     Ottiene playlist ID per anno dalla configurazione o la crea automaticamente.
 
@@ -315,6 +363,13 @@ def get_or_create_playlist_for_year(youtube, config: dict, year: str, auto_creat
     playlists = config.get('youtube', {}).get('playlists', {})
     playlist_id = playlists.get(year)
 
+    if playlist_id:
+        return playlist_id
+
+    # Controlla file stato locale
+    state_file = Path(state_path) if state_path else DEFAULT_PLAYLIST_STATE_PATH
+    state_data = _load_playlist_state(state_file)
+    playlist_id = state_data.get(year)
     if playlist_id:
         return playlist_id
 
@@ -335,14 +390,23 @@ def get_or_create_playlist_for_year(youtube, config: dict, year: str, auto_creat
             config['youtube']['playlists'] = {}
         config['youtube']['playlists'][year] = playlist_id
 
-        print(f"  ℹ️  Aggiungi questo ID a config/config.yaml per riutilizzo:")
-        print(f"     playlists:")
-        print(f"       \"{year}\": \"{playlist_id}\"")
+        # Salva su file di stato per riuso futuro
+        state_data[year] = playlist_id
+        if _save_playlist_state(state_file, state_data):
+            print(f"  ℹ️  Playlist salvata in {state_file}")
+        else:
+            print(f"  ℹ️  Aggiungi questo ID a config/config.yaml per riutilizzo:")
+            print(f"     playlists:")
+            print(f"       \"{year}\": \"{playlist_id}\"")
 
     return playlist_id
 
 
-def get_playlist_id_for_year(config: dict, year: str) -> Optional[str]:
+def get_playlist_id_for_year(
+    config: dict,
+    year: str,
+    state_path: Optional[str] = None
+) -> Optional[str]:
     """
     Ottiene playlist ID per anno dalla configurazione (deprecato, usa get_or_create_playlist_for_year).
 
@@ -355,6 +419,14 @@ def get_playlist_id_for_year(config: dict, year: str) -> Optional[str]:
     """
     playlists = config.get('youtube', {}).get('playlists', {})
     playlist_id = playlists.get(year)
+
+    if playlist_id:
+        return playlist_id
+
+    # Fallback su file di stato locale
+    state_file = Path(state_path) if state_path else DEFAULT_PLAYLIST_STATE_PATH
+    state_data = _load_playlist_state(state_file)
+    playlist_id = state_data.get(year)
 
     if not playlist_id:
         print(f"  ⚠ Playlist per anno {year} non configurata")
