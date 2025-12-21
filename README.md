@@ -51,20 +51,20 @@ pip3 install -r requirements.txt
 
 ### Setup Google Cloud e YouTube API
 
-#### 3.1 Crea Progetto Google Cloud
+#### Crea Progetto Google Cloud
 
 1. Vai su https://console.cloud.google.com/
 2. Clicca "Nuovo Progetto"
 3. Nome: `ars-youtube-uploader`
 4. Clicca "Crea"
 
-#### 3.2 Abilita YouTube Data API v3
+#### Abilita YouTube Data API v3
 
 1. Nel progetto, vai su "API & Services" → "Library"
 2. Cerca "YouTube Data API v3"
 3. Clicca "Abilita"
 
-#### 3.3 Configura OAuth Consent Screen
+#### Configura OAuth Consent Screen
 
 1. Vai su "API & Services" → "OAuth consent screen"
 2. Seleziona "External"
@@ -79,7 +79,7 @@ pip3 install -r requirements.txt
 7. Test users: aggiungi email Google del canale YouTube
 8. Clicca "Save and Continue" → "Back to Dashboard"
 
-#### 3.4 Crea Credenziali OAuth 2.0
+#### Crea Credenziali OAuth 2.0
 
 1. Vai su "API & Services" → "Credentials"
 2. Clicca "Create Credentials" → "OAuth client ID"
@@ -89,7 +89,7 @@ pip3 install -r requirements.txt
 6. Nella finestra popup, clicca "Download JSON"
 7. Salva file scaricato come `config/youtube_secrets.json`
 
-#### 3.5 Verifica Quota
+#### Verifica Quota
 
 1. Vai su "API & Services" → "YouTube Data API v3" → "Quotas"
 2. Verifica quota disponibili:
@@ -113,7 +113,7 @@ Al primo avvio:
 
 ### Configurazione Playlist e Channel ID
 
-#### 5.1 Ottieni Channel ID
+#### Ottieni Channel ID
 
 1. Vai su YouTube Studio: https://studio.youtube.com
 2. In alto a sinistra, clicca sull'icona del canale
@@ -127,7 +127,7 @@ Al primo avvio:
 
 **Nota:** Il channel_id resta opzionale; il link ricerca seduta usa una ricerca globale con token.
 
-#### 5.2 Crea Playlist Annuali
+#### Crea Playlist Annuali
 
 1. Vai su YouTube Studio → Playlist
 2. Crea nuova playlist:
