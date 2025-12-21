@@ -1,5 +1,26 @@
 # 2025-12-21
 
+## Fix Estrazione Date Video Multi-Date
+
+**Problema rilevato:**
+- Sedute con video distribuiti su più giorni (es. seduta 220: 16-21 dicembre)
+- `data_video` errata: tutti video mostravano data_seduta invece di data effettiva
+
+**Fix implementati src/scraper.py:**
+- `extract_seduta_number()`: estrae da `<title>` invece di body (evita match link navigazione)
+- `extract_video_metadata()`: usa `title` attribute video_box (contiene data+ora complete)
+- Fallback robusto: h4 heading precedente se title mancante
+- Distinzione corretta `data_seduta` vs `data_video`
+
+**Risultato:**
+- Seduta 220 (data_seduta: 16/12): 4 video 16/12, 3 video 17/12, 5 video 18/12, 3 video 19/12, 7 video 20/12, 2 video 21/12
+- Seduta 219 (data_seduta: 10/12): 2 video 10/12, 2 video 15/12
+- Anagrafica rigenerata: 28 video con date corrette
+
+**Versionamento dati:**
+- Anagrafica CSV ora committata su GitHub
+- .gitignore modificato: esclusi solo logs, inclusa anagrafica pubblica
+
 ## Anagrafica Video Incrementale
 
 Implementato sistema anagrafica completo:
