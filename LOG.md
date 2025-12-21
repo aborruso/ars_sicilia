@@ -4,6 +4,7 @@
 
 - Scraping con timeout/retry configurabili e backoff
 - Creazione automatica directory download
+- Download limitato a max 720p quando disponibile
 - recordingDate timezone-aware (Europe/Rome)
 - Dedup più robusto (id_video + numero_seduta + data_seduta)
 - Selezione ultima seduta deterministica

@@ -195,6 +195,9 @@ scraping:
   retries: 3
   backoff_factor: 0.5
 
+download:
+  max_height: 720
+
 youtube:
   timezone: "Europe/Rome"
 ```

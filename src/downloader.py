@@ -6,7 +6,12 @@ from pathlib import Path
 from typing import Optional
 
 
-def download_video(video_url: str, output_path: str, retries: int = 3) -> bool:
+def download_video(
+    video_url: str,
+    output_path: str,
+    retries: int = 3,
+    max_height: int | None = None
+) -> bool:
     """
     Download video HLS usando yt-dlp.
 
@@ -24,9 +29,16 @@ def download_video(video_url: str, output_path: str, retries: int = 3) -> bool:
 
             Path(output_path).parent.mkdir(parents=True, exist_ok=True)
 
+            format_selector = 'best'
+            if max_height:
+                format_selector = (
+                    f'bestvideo[height<={max_height}]+bestaudio/'
+                    f'best[height<={max_height}]/best'
+                )
+
             cmd = [
                 'yt-dlp',
-                '-f', 'best',
+                '-f', format_selector,
                 '--no-playlist',
                 '--progress',  # Mostra barra progresso
                 '--newline',   # Una linea per update

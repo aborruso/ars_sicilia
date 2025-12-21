@@ -214,7 +214,8 @@ def main():
             success = downloader.download_video(
                 video_row['video_page_url'],
                 str(video_path),
-                retries=config['download'].get('max_retries', 3)
+                retries=config['download'].get('max_retries', 3),
+                max_height=config['download'].get('max_height')
             )
 
             if not success or not video_path.exists():

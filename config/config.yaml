@@ -13,6 +13,7 @@ download:
   temp_dir: "./data/videos"
   cleanup_after_upload: true
   max_retries: 3
+  max_height: 720  # Forza al massimo 720p (se disponibile)
   timeout: 3600  # Timeout download singolo video (1 ora)
 
 youtube:

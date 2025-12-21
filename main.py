@@ -134,7 +134,8 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
         success = downloader.download_video(
             video_url,
             output_file,
-            retries=config['download']['max_retries']
+            retries=config['download']['max_retries'],
+            max_height=config['download'].get('max_height')
         )
 
         if not success:
