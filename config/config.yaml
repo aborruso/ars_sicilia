@@ -23,9 +23,9 @@ youtube:
   # Channel ID per link ricerca sedute
   channel_id: "@AndreaBorruso"
 
-  # Playlist annuali (creare manualmente su YouTube)
+  # Playlist annuali
   playlists:
-    "2025": ""  # Playlist ID per anno 2025
+    "2025": "PLsw2_RDx9eLXddCRRzX1UDPUJfPPSqK1q"
     "2026": ""  # Playlist ID per anno 2026
 
   # Tags base applicati a tutti i video
