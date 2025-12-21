@@ -37,11 +37,27 @@ def extract_seduta_number(html: BeautifulSoup) -> Optional[str]:
     Returns:
         Numero seduta (es. "219/A") o None
     """
-    # Cerca pattern "Seduta n. 219/A"
+    # Cerca prima nel title (più affidabile)
+    title = html.find('title')
+    if title:
+        title_text = title.get_text()
+        match = re.search(r'Seduta numero\s+(\d+/?\w*)', title_text, re.IGNORECASE)
+        if match:
+            return match.group(1)
+
+    # Fallback: cerca nel h1 o span principale
+    main_heading = html.find('h1')
+    if main_heading:
+        match = re.search(r'Seduta\s+(?:numero|n\.)\s+(\d+/?\w*)', main_heading.get_text(), re.IGNORECASE)
+        if match:
+            return match.group(1)
+
+    # Ultimo fallback: cerca in tutto il testo
     text = html.get_text()
-    match = re.search(r'Seduta n\.\s*(\d+/?\w*)', text)
+    match = re.search(r'Seduta numero\s+(\d+/?\w*)', text, re.IGNORECASE)
     if match:
         return match.group(1)
+
     return None
 
 
@@ -114,7 +130,7 @@ def extract_video_metadata(video_element, current_date_heading: str = None) -> O
 
     Args:
         video_element: Tag BeautifulSoup dell'elemento video
-        current_date_heading: Data corrente dal heading (es. "10 Dicembre 2025")
+        current_date_heading: Data corrente dal heading (fallback se title non disponibile)
 
     Returns:
         Dict con metadati video o None
@@ -131,16 +147,31 @@ def extract_video_metadata(video_element, current_date_heading: str = None) -> O
             return None
         id_video = match.group(1)
 
-        # Estrai testo "Video dalle HH:MM"
-        text = video_element.get_text().strip()
-        ora_video = parse_time_from_text(text)
+        # Prova a estrarre data e ora dal title attribute (più affidabile)
+        # Formato: "16 Dicembre 2025 - Video dalle 11:37"
+        title_attr = video_element.get('title', '')
+        data_video = None
+        ora_video = None
+
+        if title_attr:
+            # Estrai data dal title
+            date_match = re.search(r'(\d{1,2}\s+\w+\s+\d{4})', title_attr)
+            if date_match:
+                data_video = parse_italian_date(date_match.group(1))
+
+            # Estrai ora dal title
+            ora_video = parse_time_from_text(title_attr)
+
+        # Fallback: usa heading corrente e testo elemento
+        if not data_video and current_date_heading:
+            data_video = parse_italian_date(current_date_heading)
+
+        if not ora_video:
+            text = video_element.get_text().strip()
+            ora_video = parse_time_from_text(text)
+
         if not ora_video:
             return None
-
-        # Data video (usa heading corrente o parsing del testo)
-        data_video = None
-        if current_date_heading:
-            data_video = parse_italian_date(current_date_heading)
 
         # Stream URL (costruito da ID video)
         stream_url = build_video_stream_url(id_video, data_video, ora_video)
@@ -229,24 +260,24 @@ def extract_seduta_info(html: BeautifulSoup, seduta_url: str) -> dict:
     videos = []
     video_elements = find_video_elements(html)
 
-    # Cerca heading date per associare video alle date corrette
-    current_date = seduta_date  # Default: usa data seduta
+    # Processa ogni elemento video trovando la data dall'h4 precedente
+    for video_el in video_elements:
+        # Trova l'heading h4 con data più vicino che precede questo video
+        video_date = None
+        previous_h4_list = video_el.find_all_previous('h4')
 
-    # Trova tutti gli heading h4 con date (es. "10 Dicembre 2025")
-    date_headings = html.find_all('h4')
+        # Cerca il primo h4 (più vicino) con pattern data italiana
+        for h4 in previous_h4_list:
+            h4_text = h4.get_text().strip()
+            if re.match(r'\d{1,2}\s+\w+\s+\d{4}', h4_text):
+                video_date = parse_italian_date(h4_text)
+                break
 
-    # Processa ogni elemento video con la data corrente
-    for i, video_el in enumerate(video_elements):
-        # Cerca heading data precedente
-        for heading in date_headings:
-            heading_text = heading.get_text().strip()
-            if re.match(r'\d{1,2}\s+\w+\s+\d{4}', heading_text):
-                # Controlla se video viene dopo questo heading
-                if heading in video_el.find_all_previous('h4'):
-                    current_date = parse_italian_date(heading_text)
-                    break
+        # Se non trovato, usa data seduta come fallback
+        if not video_date:
+            video_date = seduta_date
 
-        video_data = extract_video_metadata(video_el, current_date or seduta_date)
+        video_data = extract_video_metadata(video_el, video_date)
         if video_data:
             video_data['numero_seduta'] = seduta_number
             video_data['data_seduta'] = seduta_date
