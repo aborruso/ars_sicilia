@@ -147,6 +147,27 @@ Al primo avvio:
 
 ## Utilizzo
 
+### Test Upload Singolo Video
+
+Prima di caricare tutti i video, testa l'upload del primo:
+
+```bash
+# Modalità dry-run (mostra cosa farebbe senza caricare)
+python3 test_upload_single.py --dry-run
+
+# Upload reale del primo video
+python3 test_upload_single.py
+```
+
+Lo script:
+1. Trova primo video dall'anagrafica senza `youtube_id`
+2. Scarica il video
+3. Carica su YouTube con metadati completi
+4. Aggiunge a playlist anno (se configurata)
+5. **Aggiorna anagrafica** con `youtube_id` per evitare duplicati
+
+**Importante:** Dopo upload successo, il video non verrà ricaricato in esecuzioni successive.
+
 ### Build Anagrafica Video
 
 Costruisce/aggiorna anagrafica sedute dal 10/12/2025:
