@@ -5,4 +5,4 @@
 - [x] 1.4 (Opzionale) Estendere update_descriptions.py per backfill recordingDate
 
 ## Validation
-- [x] 2.1 Eseguire test_upload_single.py --dry-run e verificare recordingDate
+- [x] 2.1 Eseguire upload_single.py --dry-run e verificare recordingDate

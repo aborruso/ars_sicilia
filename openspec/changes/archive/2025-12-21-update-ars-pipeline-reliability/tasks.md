@@ -8,4 +8,4 @@
 
 ## Validation
 - [x] 2.1 Run `build_anagrafica.py` smoke check
-- [x] 2.2 Run `test_upload_single.py --dry-run`
+- [x] 2.2 Run `upload_single.py --dry-run`

@@ -6,8 +6,8 @@ Carica il primo video dall'anagrafica senza youtube_id.
 Se upload successo, aggiorna anagrafica per evitare duplicati.
 
 Usage:
-    python3 test_upload_single.py              # Upload primo video
-    python3 test_upload_single.py --dry-run    # Mostra cosa farebbe senza uploadare
+    python3 upload_single.py              # Upload primo video
+    python3 upload_single.py --dry-run    # Mostra cosa farebbe senza uploadare
 """
 import sys
 from pathlib import Path

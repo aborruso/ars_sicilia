@@ -19,7 +19,8 @@
 
 ## Script Test Upload Singolo
 
-**test_upload_single.py:**
+**upload_single.py:**
+- Rinominato da `test_upload_single.py`
 - Upload primo video dall'anagrafica senza youtube_id
 - Modalità `--dry-run` per preview senza caricare
 - Aggiorna anagrafica con youtube_id dopo upload
@@ -41,8 +42,8 @@
 
 **Uso:**
 ```bash
-python3 test_upload_single.py --dry-run  # Preview
-python3 test_upload_single.py            # Upload reale
+python3 upload_single.py --dry-run  # Preview
+python3 upload_single.py            # Upload reale
 ```
 
 ## Playlist Annuali e Link Ricerca Seduta

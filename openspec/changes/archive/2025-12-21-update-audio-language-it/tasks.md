@@ -4,4 +4,4 @@
 - [x] 1.3 (Opzionale) Backfill lingua audio sui video esistenti
 
 ## Validation
-- [x] 2.1 Eseguire test_upload_single.py --dry-run e verificare defaultAudioLanguage
+- [x] 2.1 Eseguire upload_single.py --dry-run e verificare defaultAudioLanguage

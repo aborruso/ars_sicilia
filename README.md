@@ -156,10 +156,10 @@ Prima di caricare tutti i video, testa l'upload del primo:
 
 ```bash
 # Modalità dry-run (mostra cosa farebbe senza caricare)
-python3 scripts/test_upload_single.py --dry-run
+python3 scripts/upload_single.py --dry-run
 
 # Upload reale del primo video
-python3 scripts/test_upload_single.py
+python3 scripts/upload_single.py
 ```
 
 Lo script:
@@ -296,7 +296,7 @@ ars_sicilia/
 │   ├── build_anagrafica.py   # Script anagrafica incrementale
 │   ├── run_daily.sh          # Wrapper cron con lock
 │   ├── main.py               # Script upload YouTube
-│   ├── test_upload_single.py # Test upload singolo video
+│   ├── upload_single.py # Test upload singolo video
 │   ├── update_descriptions.py # Aggiorna descrizioni e metadati
 │   └── generate_rss.py       # Genera feed RSS pubblico
 ├── requirements.txt

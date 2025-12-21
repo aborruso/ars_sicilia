@@ -73,7 +73,7 @@ jobs:
         run: |
           . .venv/bin/activate
           for i in $(seq 1 ${{ steps.quota.outputs.remaining }}); do
-            python scripts/test_upload_single.py --yes || break
+            python scripts/upload_single.py --yes || break
           done
 
       - name: Commit updated logs/anagrafica

@@ -13,12 +13,13 @@ Sedute pubblicate su https://www.ars.sicilia.it/agenda/lavori-aula
 3. **Metadati ricchi** - Titoli, descrizioni, tags, recordingDate, link OdG/Resoconti
 4. **Trascrizione automatica** - Abilitare estrazione testo YouTube
 5. **Registro completo** - Log upload per evitare duplicati
+6. **Feed pubblico** - RSS con gli ultimi video caricati
 
 ### Stato Attuale
 
 #### ✅ Fase 1: Anagrafica Video (Completata)
 
-**Script:** `build_anagrafica.py`
+**Script:** `scripts/build_anagrafica.py`
 
 Funzionalità:
 - Crawler incrementale partendo da seduta 219 (10/12/2025)
@@ -31,23 +32,30 @@ Funzionalità:
   - video_page_url
 - **Rilevamento aggiornamenti**: se seduta ha nuovi video, aggiorna anagrafica
 - Output: `data/anagrafica_video.csv`
-- Wrapper: `run_daily.sh` con lock file e logging
+- Wrapper: `scripts/run_daily.sh` con lock file e logging
 - Pronto per cron job giornaliero
 
-**Risultati primo run:**
-- Sedute processate: 2 (218, 219)
-- Video catalogati: 28
-- Tempo esecuzione: ~10 secondi
+**Output:** `data/anagrafica_video.csv`
 
-#### 🔄 Fase 2: Upload YouTube (Da Implementare)
+#### ✅ Fase 2: Upload YouTube (Completata)
 
-- Integrare anagrafica con `main.py`
-- Processare solo video con `youtube_id` vuoto
-- Popolare `youtube_id` dopo upload riuscito
-- Rispettare quota YouTube API (max 6 video/giorno)
+- Pipeline di upload integrata in `scripts/main.py`
+- Processa solo video con `youtube_id` vuoto
+- Popola `youtube_id` dopo upload riuscito
+- Rispetta la quota YouTube API (max teorico ~6 video/giorno)
 
-#### 📋 Fase 3: Automazione (Da Configurare)
+#### ✅ Fase 3: Automazione (Configurata)
 
-- Cron job giornaliero per `build_anagrafica.py`
-- Cron job per upload graduale video
-- Monitoraggio e alerting
+- GitHub Actions giornaliero per aggiornare anagrafica e caricare fino a 4 video/giorno
+- Workflow separato per generare e pubblicare RSS su `gh-pages`
+- Smoke test singolo upload: `scripts/upload_single.py`
+
+#### ✅ Fase 4: Feed pubblico RSS (Configurata)
+
+- Feed pubblicato su GitHub Pages: `https://aborruso.github.io/ars_sicilia/feed.xml`
+- Generazione via `scripts/generate_rss.py` con limite 20 video
+- `pubDate` derivato da `data_video` + `ora_video`
+
+#### 📌 Backlog / Prossimi passi
+
+- Trascrizione automatica: abilitare e verificare export testo per analisi
