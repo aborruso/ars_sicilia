@@ -6,8 +6,9 @@ config/token.json
 # Virtual environment
 .venv/
 
-# Generated data
-data/*.csv
+# Generated data (exclude logs but keep anagrafica)
+data/logs/*.csv
+data/logs/*.log
 data/.anagrafica.lock
 
 # Video temporanei
