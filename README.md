@@ -335,6 +335,8 @@ Campi:
 - `video_page_url`: URL pagina video ARS
 - `youtube_id`: ID video YouTube (vuoto se non uploadato)
 - `last_check`: Timestamp ultimo controllo (ISO 8601)
+- `status`: Stato upload in anagrafica (es. `success`, `failed`)
+- `failure_reason`: Motivo fallimento (se `status=failed`)
 
 ## Indice Sedute
 

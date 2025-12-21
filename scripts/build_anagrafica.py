@@ -40,24 +40,51 @@ def init_anagrafica_csv(file_path: str) -> bool:
         path = Path(file_path)
         path.parent.mkdir(parents=True, exist_ok=True)
 
+        required_fields = [
+            'numero_seduta',
+            'data_seduta',
+            'url_pagina',
+            'odg_url',
+            'resoconto_url',
+            'id_video',
+            'ora_video',
+            'data_video',
+            'stream_url',
+            'video_page_url',
+            'youtube_id',
+            'last_check',
+            'status',
+            'failure_reason'
+        ]
+
         if not path.exists():
             with open(file_path, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
-                writer.writerow([
-                    'numero_seduta',
-                    'data_seduta',
-                    'url_pagina',
-                    'odg_url',
-                    'resoconto_url',
-                    'id_video',
-                    'ora_video',
-                    'data_video',
-                    'stream_url',
-                    'video_page_url',
-                    'youtube_id',
-                    'last_check'
-                ])
+                writer.writerow(required_fields)
             print(f"✓ Anagrafica creata: {file_path}")
+            return True
+
+        # File esistente: verifica schema e aggiungi colonne mancanti
+        with open(file_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames or []
+            missing = [f for f in required_fields if f not in fieldnames]
+            if not missing:
+                return True
+
+            rows = []
+            for row in reader:
+                for key in missing:
+                    row.setdefault(key, '')
+                rows.append(row)
+
+        # Riscrivi con header aggiornato
+        new_fieldnames = fieldnames + missing
+        with open(file_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=new_fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+        print(f"✓ Anagrafica aggiornata con nuove colonne: {', '.join(missing)}")
 
         return True
 
@@ -178,7 +205,9 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict) -> int:
                     video.get('stream_url', ''),
                     video.get('video_page_url', ''),
                     '',  # youtube_id inizialmente vuoto
-                    timestamp
+                    timestamp,
+                    '',  # status
+                    ''   # failure_reason
                 ])
                 video_count += 1
 

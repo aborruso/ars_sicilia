@@ -140,6 +140,14 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
         if not video_url:
             print(f"  ✗ URL video non disponibile")
             logger.log_upload(log_file, video, '', 'failed', 'URL video mancante')
+            if anagrafica_path:
+                logger.update_anagrafica_failure(
+                    anagrafica_path,
+                    video_id,
+                    'URL video mancante',
+                    numero_seduta=seduta_info.get('numero_seduta'),
+                    data_seduta=seduta_info.get('data_seduta')
+                )
             results['failed'] += 1
             continue
 
@@ -154,6 +162,14 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
 
         if not success:
             logger.log_upload(log_file, video, '', 'failed', 'Download fallito')
+            if anagrafica_path:
+                logger.update_anagrafica_failure(
+                    anagrafica_path,
+                    video_id,
+                    'Download fallito',
+                    numero_seduta=seduta_info.get('numero_seduta'),
+                    data_seduta=seduta_info.get('data_seduta')
+                )
             results['failed'] += 1
             continue
 
@@ -183,11 +199,27 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
                 results['uploaded'] += 1
             else:
                 logger.log_upload(log_file, video, '', 'failed', 'Upload fallito (no ID)')
+                if anagrafica_path:
+                    logger.update_anagrafica_failure(
+                        anagrafica_path,
+                        video_id,
+                        'Upload fallito (no ID)',
+                        numero_seduta=seduta_info.get('numero_seduta'),
+                        data_seduta=seduta_info.get('data_seduta')
+                    )
                 results['failed'] += 1
 
         except Exception as e:
             print(f"  ✗ Errore upload: {e}")
             logger.log_upload(log_file, video, '', 'failed', str(e))
+            if anagrafica_path:
+                logger.update_anagrafica_failure(
+                    anagrafica_path,
+                    video_id,
+                    f"Upload fallito: {e}",
+                    numero_seduta=seduta_info.get('numero_seduta'),
+                    data_seduta=seduta_info.get('data_seduta')
+                )
             results['failed'] += 1
 
         finally:

@@ -6,6 +6,21 @@ from pathlib import Path
 from typing import Optional
 
 
+ANAGRAFICA_EXTRA_FIELDS = ['status', 'failure_reason']
+
+
+def _ensure_anagrafica_fields(fieldnames: list) -> list:
+    """
+    Garantisce che i campi aggiuntivi siano presenti nell'anagrafica.
+    """
+    if not fieldnames:
+        fieldnames = []
+    for field in ANAGRAFICA_EXTRA_FIELDS:
+        if field not in fieldnames:
+            fieldnames.append(field)
+    return fieldnames
+
+
 def init_log_file(log_path: str) -> bool:
     """
     Crea file CSV log se non esiste.
@@ -154,7 +169,7 @@ def update_anagrafica_youtube_id(
         rows = []
         with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            fieldnames = reader.fieldnames
+            fieldnames = _ensure_anagrafica_fields(reader.fieldnames or [])
 
             for row in reader:
                 match = row.get('id_video') == id_video
@@ -167,6 +182,8 @@ def update_anagrafica_youtube_id(
                 if match:
                     row['youtube_id'] = youtube_id
                     row['last_check'] = datetime.now().isoformat()
+                    row['status'] = 'success'
+                    row['failure_reason'] = ''
                 rows.append(row)
 
         with open(anagrafica_path, 'w', newline='', encoding='utf-8') as f:
@@ -178,6 +195,58 @@ def update_anagrafica_youtube_id(
 
     except Exception as e:
         print(f"Errore aggiornamento anagrafica: {e}")
+        return False
+
+
+def update_anagrafica_failure(
+    anagrafica_path: str,
+    id_video: str,
+    error: str,
+    numero_seduta: Optional[str] = None,
+    data_seduta: Optional[str] = None
+) -> bool:
+    """
+    Registra fallimento upload in anagrafica.
+
+    Args:
+        anagrafica_path: Path al CSV anagrafica
+        id_video: ID video ARS
+        error: Motivo fallimento
+        numero_seduta: Numero seduta (opzionale per matching forte)
+        data_seduta: Data seduta (opzionale per matching forte)
+
+    Returns:
+        True se aggiornato
+    """
+    try:
+        rows = []
+        with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            fieldnames = _ensure_anagrafica_fields(reader.fieldnames or [])
+
+            for row in reader:
+                match = row.get('id_video') == id_video
+                if numero_seduta and data_seduta:
+                    match = (
+                        match
+                        and row.get('numero_seduta') == numero_seduta
+                        and row.get('data_seduta') == data_seduta
+                    )
+                if match:
+                    row['status'] = 'failed'
+                    row['failure_reason'] = (error or '').replace('\n', ' ').strip()
+                    row['last_check'] = datetime.now().isoformat()
+                rows.append(row)
+
+        with open(anagrafica_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+
+        return True
+
+    except Exception as e:
+        print(f"Errore aggiornamento anagrafica (failed): {e}")
         return False
 
 

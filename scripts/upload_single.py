@@ -27,6 +27,19 @@ from src.metadata import build_youtube_metadata
 from src.utils import extract_year
 
 
+ANAGRAFICA_EXTRA_FIELDS = ['status', 'failure_reason']
+
+
+def _ensure_anagrafica_fields(fieldnames: list) -> list:
+    """Garantisce che i campi aggiuntivi siano presenti nell'anagrafica."""
+    if not fieldnames:
+        fieldnames = []
+    for field in ANAGRAFICA_EXTRA_FIELDS:
+        if field not in fieldnames:
+            fieldnames.append(field)
+    return fieldnames
+
+
 def load_config(config_path: str = './config/config.yaml') -> dict:
     """Carica configurazione."""
     with open(config_path, 'r', encoding='utf-8') as f:
@@ -44,18 +57,26 @@ def get_first_unuploaded_video(anagrafica_path: str) -> Optional[dict]:
         Dict con dati video o None
     """
     try:
+        failed_candidate = None
         with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
                 # Salta video già uploadati
                 if row.get('youtube_id'):
                     continue
-                    
+
                 # Verifica che abbia dati essenziali
-                if row.get('id_video') and row.get('ora_video'):
+                if not (row.get('id_video') and row.get('ora_video')):
+                    continue
+
+                status = (row.get('status') or '').lower()
+                if status == 'failed':
                     return row
-                    
-        return None
+
+                if failed_candidate is None:
+                    failed_candidate = row
+
+        return failed_candidate
         
     except Exception as e:
         print(f"✗ Errore lettura anagrafica: {e}")
@@ -85,7 +106,7 @@ def update_anagrafica_youtube_id(
         rows = []
         with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            fieldnames = reader.fieldnames
+            fieldnames = _ensure_anagrafica_fields(reader.fieldnames or [])
             
             for row in reader:
                 # Aggiorna youtube_id se match
@@ -99,6 +120,8 @@ def update_anagrafica_youtube_id(
                 if match:
                     row['youtube_id'] = youtube_id
                     row['last_check'] = datetime.now().isoformat()
+                    row['status'] = 'success'
+                    row['failure_reason'] = ''
                 rows.append(row)
         
         # Riscrivi anagrafica
@@ -111,6 +134,48 @@ def update_anagrafica_youtube_id(
         
     except Exception as e:
         print(f"✗ Errore aggiornamento anagrafica: {e}")
+        return False
+
+
+def update_anagrafica_failure(
+    anagrafica_path: str,
+    id_video: str,
+    error: str,
+    numero_seduta: str | None = None,
+    data_seduta: str | None = None
+) -> bool:
+    """
+    Registra fallimento upload in anagrafica.
+    """
+    try:
+        rows = []
+        with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            fieldnames = _ensure_anagrafica_fields(reader.fieldnames or [])
+
+            for row in reader:
+                match = row.get('id_video') == id_video
+                if numero_seduta and data_seduta:
+                    match = (
+                        match
+                        and row.get('numero_seduta') == numero_seduta
+                        and row.get('data_seduta') == data_seduta
+                    )
+                if match:
+                    row['status'] = 'failed'
+                    row['failure_reason'] = (error or '').replace('\n', ' ').strip()
+                    row['last_check'] = datetime.now().isoformat()
+                rows.append(row)
+
+        with open(anagrafica_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(rows)
+
+        return True
+
+    except Exception as e:
+        print(f"✗ Errore aggiornamento anagrafica (failed): {e}")
         return False
 
 
@@ -224,6 +289,13 @@ def main():
 
             if not success or not video_path.exists():
                 print(f"  ✗ Download fallito")
+                update_anagrafica_failure(
+                    anagrafica_path,
+                    video_row['id_video'],
+                    'Download fallito',
+                    numero_seduta=video_row.get('numero_seduta'),
+                    data_seduta=video_row.get('data_seduta')
+                )
                 return 1
 
             print(f"  ✓ Video scaricato: {video_path}")
@@ -231,6 +303,13 @@ def main():
 
         except Exception as e:
             print(f"  ✗ Errore download: {e}")
+            update_anagrafica_failure(
+                anagrafica_path,
+                video_row['id_video'],
+                f"Download fallito: {e}",
+                numero_seduta=video_row.get('numero_seduta'),
+                data_seduta=video_row.get('data_seduta')
+            )
             return 1
     else:
         print(f"\n⬇️  [DRY-RUN] Download video saltato")
@@ -283,6 +362,13 @@ def main():
 
             if not youtube_id:
                 print(f"  ✗ Upload fallito")
+                update_anagrafica_failure(
+                    anagrafica_path,
+                    video_row['id_video'],
+                    'Upload fallito (no ID)',
+                    numero_seduta=video_row.get('numero_seduta'),
+                    data_seduta=video_row.get('data_seduta')
+                )
                 return 1
 
             print(f"\n✅ UPLOAD COMPLETATO!")
@@ -291,6 +377,13 @@ def main():
 
         except Exception as e:
             print(f"  ✗ Errore upload: {e}")
+            update_anagrafica_failure(
+                anagrafica_path,
+                video_row['id_video'],
+                f"Upload fallito: {e}",
+                numero_seduta=video_row.get('numero_seduta'),
+                data_seduta=video_row.get('data_seduta')
+            )
             return 1
 
         finally:
