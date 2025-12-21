@@ -40,6 +40,8 @@ wheels/
 # IDE
 .vscode/
 .idea/
+.claude/
+.opencode/
 *.swp
 *.swo
 *~
