@@ -176,12 +176,24 @@ def extract_video_metadata(video_element, current_date_heading: str = None) -> O
         # Stream URL (costruito da ID video)
         stream_url = build_video_stream_url(id_video, data_video, ora_video)
 
+        # Normalizza URL rimuovendo doppi slash (possono essere nell'HTML originale)
+        if not video_page_url.startswith('http'):
+            # Rimuovi slash iniziale se presente per evitare doppi slash
+            clean_path = video_page_url.lstrip('/')
+            video_page_url = f"https://www.ars.sicilia.it/{clean_path}"
+        else:
+            # URL già completo, ma potrebbe avere doppi slash dall'HTML
+            # Rimuovi doppi slash tranne quello in https://
+            video_page_url = video_page_url.replace('https://', 'PLACEHOLDER')
+            video_page_url = video_page_url.replace('//', '/')
+            video_page_url = video_page_url.replace('PLACEHOLDER', 'https://')
+
         return {
             'id_video': id_video,
             'ora_video': ora_video,
             'data_video': data_video,
             'stream_url': stream_url,
-            'video_page_url': video_page_url if video_page_url.startswith('http') else f"https://www.ars.sicilia.it{video_page_url}"
+            'video_page_url': video_page_url
         }
     except Exception as e:
         print(f"Errore estrazione video: {e}")

@@ -26,15 +26,15 @@ def download_video(video_url: str, output_path: str, retries: int = 3) -> bool:
                 'yt-dlp',
                 '-f', 'best',
                 '--no-playlist',
-                '--no-warnings',
+                '--progress',  # Mostra barra progresso
+                '--newline',   # Una linea per update
                 '-o', output_path,
                 video_url
             ]
 
+            # Non catturare output per mostrare progresso in tempo reale
             result = subprocess.run(
                 cmd,
-                capture_output=True,
-                text=True,
                 timeout=3600  # 1 ora max per video
             )
 
@@ -42,13 +42,13 @@ def download_video(video_url: str, output_path: str, retries: int = 3) -> bool:
                 # Verifica che il file esista
                 if Path(output_path).exists():
                     file_size = Path(output_path).stat().st_size
-                    print(f"  Download completato: {file_size / 1024 / 1024:.1f} MB")
+                    print(f"  ✓ Download completato: {file_size / 1024 / 1024:.1f} MB")
                     return True
                 else:
-                    print(f"  Errore: file non trovato dopo download")
+                    print(f"  ✗ Errore: file non trovato dopo download")
                     return False
             else:
-                print(f"  Errore yt-dlp: {result.stderr}")
+                print(f"  ✗ Download fallito (exit code {result.returncode})")
 
                 # Se ultimo tentativo fallito
                 if attempt == retries - 1:
