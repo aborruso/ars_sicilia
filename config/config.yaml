@@ -6,6 +6,8 @@ scraping:
   start_date: "2025-12-10"  # Seduta n. 219 del 10 dicembre 2025
   user_agent: "ARS-YouTube-Bot/1.0"
   timeout: 30  # Timeout richieste HTTP in secondi
+  retries: 3
+  backoff_factor: 0.5
 
 download:
   temp_dir: "./data/videos"
@@ -19,6 +21,7 @@ youtube:
   category_id: "25"  # News & Politics
   privacy: "public"  # public|unlisted|private
   default_language: "it"
+  timezone: "Europe/Rome"
 
   # Channel ID per link ricerca sedute
   channel_id: "@AndreaBorruso"

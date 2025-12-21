@@ -45,7 +45,12 @@ def init_log_file(log_path: str) -> bool:
         return False
 
 
-def is_video_uploaded(log_path: str, id_video: str) -> bool:
+def is_video_uploaded(
+    log_path: str,
+    id_video: str,
+    numero_seduta: Optional[str] = None,
+    data_seduta: Optional[str] = None
+) -> bool:
     """
     Verifica se video è già stato uploadato.
 
@@ -64,8 +69,18 @@ def is_video_uploaded(log_path: str, id_video: str) -> bool:
         with open(log_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
-                if row['id_video'] == id_video and row['status'] == 'success':
-                    return True
+                if row['status'] != 'success':
+                    continue
+                if numero_seduta and data_seduta:
+                    if (
+                        row.get('id_video') == id_video
+                        and row.get('numero_seduta') == numero_seduta
+                        and row.get('data_seduta') == data_seduta
+                    ):
+                        return True
+                else:
+                    if row.get('id_video') == id_video:
+                        return True
 
         return False
 

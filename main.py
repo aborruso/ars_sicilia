@@ -7,7 +7,9 @@ Download video sedute ARS e upload su YouTube con metadati.
 
 import sys
 import yaml
+from datetime import datetime
 from pathlib import Path
+import re
 
 # Import moduli locali
 from src import scraper, downloader, uploader, metadata, logger
@@ -25,6 +27,23 @@ def load_config(config_path: str = './config/config.yaml') -> dict:
     """
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
+
+
+def extract_seduta_date_from_href(href: str) -> str | None:
+    """
+    Estrae data seduta da URL tipo .../seduta-numero-219-del-10122025.
+
+    Returns:
+        Data in formato YYYY-MM-DD o None
+    """
+    match = re.search(r'seduta-numero-.*-del-(\d{8})', href)
+    if not match:
+        return None
+    try:
+        raw = match.group(1)
+        return datetime.strptime(raw, "%d%m%Y").date().isoformat()
+    except Exception:
+        return None
 
 
 def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
@@ -46,9 +65,13 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
     # 1. Scraping
     print("[1/4] Scraping pagina seduta...")
     try:
+        scraping_cfg = config.get('scraping', {})
         html = scraper.get_seduta_page(
             seduta_url,
-            config['scraping']['user_agent']
+            scraping_cfg.get('user_agent', 'ARS-YouTube-Bot/1.0'),
+            timeout=scraping_cfg.get('timeout', 30),
+            retries=scraping_cfg.get('retries', 3),
+            backoff_factor=scraping_cfg.get('backoff_factor', 0.5)
         )
         seduta_info = scraper.extract_seduta_info(html, seduta_url)
 
@@ -85,7 +108,12 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
         log_file = config['logging']['log_file']
 
         # Check se già uploadato
-        if logger.is_video_uploaded(log_file, video_id):
+        if logger.is_video_uploaded(
+            log_file,
+            video_id,
+            numero_seduta=seduta_info.get('numero_seduta'),
+            data_seduta=seduta_info.get('data_seduta')
+        ):
             print(f"  ⊙ Video già uploadato (ID {video_id}), skip")
             results['skipped'] += 1
             continue
@@ -214,15 +242,31 @@ def main():
 
         print("URL seduta non specificato, cerco ultima seduta...")
         try:
-            html = scraper.get_seduta_page(seduta_url, config['scraping']['user_agent'])
+            scraping_cfg = config.get('scraping', {})
+            html = scraper.get_seduta_page(
+                seduta_url,
+                scraping_cfg.get('user_agent', 'ARS-YouTube-Bot/1.0'),
+                timeout=scraping_cfg.get('timeout', 30),
+                retries=scraping_cfg.get('retries', 3),
+                backoff_factor=scraping_cfg.get('backoff_factor', 0.5)
+            )
 
             # Trova link all'ultima seduta
-            # Per semplicità, usa prima seduta con link seduta-numero-XXX
+            # Seleziona la seduta più recente in base alla data nell'URL
+            candidates = []
             for link in html.find_all('a', href=True):
                 href = link['href']
                 if 'seduta-numero-' in href:
-                    seduta_url = href if href.startswith('http') else f"https://www.ars.sicilia.it{href}"
-                    break
+                    full_url = href if href.startswith('http') else f"https://www.ars.sicilia.it{href}"
+                    seduta_date = extract_seduta_date_from_href(href)
+                    candidates.append((seduta_date, full_url))
+
+            if candidates:
+                dated = [c for c in candidates if c[0]]
+                if dated:
+                    seduta_url = max(dated, key=lambda x: x[0])[1]
+                else:
+                    seduta_url = candidates[0][1]
 
             if seduta_url == "https://www.ars.sicilia.it/agenda/lavori-aula":
                 print("✗ Impossibile trovare URL seduta")

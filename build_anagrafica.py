@@ -217,15 +217,26 @@ def crawl_nuove_sedute(config: dict, sedute_processate: Set[str], seduta_video_c
             print(f"Analisi: {current_url}")
 
             # Scarica pagina
+            scraping_cfg = config.get('scraping', {})
             html = scraper.get_seduta_page(
                 current_url,
-                config['scraping']['user_agent']
+                scraping_cfg.get('user_agent', 'ARS-YouTube-Bot/1.0'),
+                timeout=scraping_cfg.get('timeout', 30),
+                retries=scraping_cfg.get('retries', 3),
+                backoff_factor=scraping_cfg.get('backoff_factor', 0.5)
             )
 
             # Estrai info
             seduta_info = scraper.extract_seduta_info(html, current_url)
             numero_seduta = seduta_info['numero_seduta']
             video_count_new = len(seduta_info['videos'])
+            start_date = config.get('scraping', {}).get('start_date')
+
+            if start_date and seduta_info.get('data_seduta'):
+                if seduta_info['data_seduta'] < start_date:
+                    print(f"  ⊙ Seduta {numero_seduta} prima di start_date ({start_date}), skip")
+                    current_url = scraper.get_next_seduta_url(html, numero_seduta, go_forward=True)
+                    continue
 
             # Verifica se già processata
             if numero_seduta in sedute_processate:

@@ -58,7 +58,13 @@ def get_first_unuploaded_video(anagrafica_path: str) -> Optional[dict]:
         return None
 
 
-def update_anagrafica_youtube_id(anagrafica_path: str, id_video: str, youtube_id: str) -> bool:
+def update_anagrafica_youtube_id(
+    anagrafica_path: str,
+    id_video: str,
+    youtube_id: str,
+    numero_seduta: str | None = None,
+    data_seduta: str | None = None
+) -> bool:
     """
     Aggiorna youtube_id per video in anagrafica.
     
@@ -79,7 +85,14 @@ def update_anagrafica_youtube_id(anagrafica_path: str, id_video: str, youtube_id
             
             for row in reader:
                 # Aggiorna youtube_id se match
-                if row['id_video'] == id_video:
+                match = row['id_video'] == id_video
+                if numero_seduta and data_seduta:
+                    match = (
+                        match
+                        and row.get('numero_seduta') == numero_seduta
+                        and row.get('data_seduta') == data_seduta
+                    )
+                if match:
                     row['youtube_id'] = youtube_id
                     row['last_check'] = datetime.now().isoformat()
                 rows.append(row)
@@ -282,7 +295,13 @@ def main():
 
         # Aggiorna anagrafica
         print(f"\n💾 Aggiornamento anagrafica...")
-        if update_anagrafica_youtube_id(anagrafica_path, video_row['id_video'], youtube_id):
+        if update_anagrafica_youtube_id(
+            anagrafica_path,
+            video_row['id_video'],
+            youtube_id,
+            numero_seduta=video_row.get('numero_seduta'),
+            data_seduta=video_row.get('data_seduta')
+        ):
             print(f"  ✓ Anagrafica aggiornata: {anagrafica_path}")
             print(f"  Campo youtube_id impostato per video {video_row['id_video']}")
         else:

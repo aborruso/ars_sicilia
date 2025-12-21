@@ -22,6 +22,8 @@ def download_video(video_url: str, output_path: str, retries: int = 3) -> bool:
         try:
             print(f"  Download tentativo {attempt + 1}/{retries}...")
 
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+
             cmd = [
                 'yt-dlp',
                 '-f', 'best',

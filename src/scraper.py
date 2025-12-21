@@ -1,13 +1,22 @@
 """Scraper per pagine sedute ARS."""
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from bs4 import BeautifulSoup
 import re
-from typing import Optional
+from typing import Optional, Iterable
 from .utils import parse_italian_date, parse_time_from_text
 
 
-def get_seduta_page(seduta_url: str, user_agent: str = "ARS-YouTube-Bot/1.0") -> BeautifulSoup:
+def get_seduta_page(
+    seduta_url: str,
+    user_agent: str = "ARS-YouTube-Bot/1.0",
+    timeout: int = 30,
+    retries: int = 3,
+    backoff_factor: float = 0.5,
+    status_forcelist: Iterable[int] = (429, 500, 502, 503, 504),
+) -> BeautifulSoup:
     """
     Scarica HTML pagina seduta.
 
@@ -22,7 +31,18 @@ def get_seduta_page(seduta_url: str, user_agent: str = "ARS-YouTube-Bot/1.0") ->
         requests.RequestException: Se download fallisce
     """
     headers = {'User-Agent': user_agent}
-    response = requests.get(seduta_url, headers=headers, timeout=30)
+    session = requests.Session()
+    retry = Retry(
+        total=retries,
+        backoff_factor=backoff_factor,
+        status_forcelist=list(status_forcelist),
+        allowed_methods=frozenset(["GET"]),
+        raise_on_status=False
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    response = session.get(seduta_url, headers=headers, timeout=timeout)
     response.raise_for_status()
     return BeautifulSoup(response.content, 'html.parser')
 
