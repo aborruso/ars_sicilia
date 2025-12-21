@@ -37,19 +37,19 @@ Questo progetto nasce da un'idea semplice da civic hacker: la trasparenza deve e
 
 ## Setup Iniziale
 
-### 1. Installazione Dipendenze
+### Installazione Dipendenze
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-### 2. Setup Canale YouTube
+### Setup Canale YouTube
 
 1. Crea canale YouTube dedicato (es. "ARS Sicilia - Sedute Assemblea")
 2. Verifica canale per video >15 minuti: https://www.youtube.com/verify
 3. Annota Channel ID (opzionale)
 
-### 3. Setup Google Cloud e YouTube API
+### Setup Google Cloud e YouTube API
 
 #### 3.1 Crea Progetto Google Cloud
 
@@ -99,7 +99,7 @@ pip3 install -r requirements.txt
 
 Se serve più quota, richiedi aumento su Google Cloud Console.
 
-### 4. Prima Autenticazione
+### Prima Autenticazione
 
 ```bash
 python3 scripts/main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-219-del-10122025
@@ -111,7 +111,7 @@ Al primo avvio:
 3. Clicca "Continua" per autorizzare
 4. Token salvato in `config/token.json` per riuso
 
-### 5. Configurazione Playlist e Channel ID
+### Configurazione Playlist e Channel ID
 
 #### 5.1 Ottieni Channel ID
 
@@ -239,7 +239,7 @@ Costruisce/aggiorna anagrafica sedute dal 10/12/2025:
 Il workflow `daily_upload.yml` esegue ogni giorno fino a 4 upload, calcola quanti upload sono già stati fatti nel giorno (da `data/anagrafica_video.csv` via `last_check`) e si ferma se il limite è raggiunto, poi aggiorna l'anagrafica nel repo.
 
 **RSS pubblico (gh-pages):**
-Il feed è pubblicato su GitHub Pages: `https://<user>.github.io/<repo>/feed.xml`. Usa `data_video` + `ora_video` come `pubDate` e include gli ultimi 20 video caricati.
+Il feed è pubblicato su GitHub Pages: `https://aborruso.github.io/ars_sicilia/feed.xml`. Usa `data_video` + `ora_video` come `pubDate` e include gli ultimi 20 video caricati.
 
 ### Processare Seduta Specifica
 
