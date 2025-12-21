@@ -18,12 +18,13 @@ Sistema automatizzato per scaricare video sedute Assemblea Regionale Siciliana e
 - Download video HLS con yt-dlp
 - Upload su YouTube con metadati strutturati
 - **Playlist annuali**: aggiunta automatica a playlist anno
-- **Link ricerca seduta**: ogni video include link per trovare tutti video stessa seduta
+- **Link ricerca seduta**: ogni video include link di ricerca globale basato su token univoco
 - Logging upload per evitare duplicati
 - Naming convention: `Lavori d'aula: seduta n. 219/A del 10 Dicembre 2025 - 11:30`
 - Recording date impostato su data effettiva video (distingue data seduta da data video)
 - Tags ottimizzati per ricerca: numero seduta, anno, mese
 - Link a OdG e resoconti nella descrizione
+- Token univoco in descrizione: `ARS_SEDUTA_<numero>-<YYYY-MM-DD>`
 
 ## Requisiti
 
@@ -122,7 +123,7 @@ Al primo avvio:
      channel_id: "@ARSSicilia"  # O UCxxxxxxxxxxxxxxxxxxx
    ```
 
-**Nota:** Il channel_id abilita link ricerca seduta nelle descrizioni video.
+**Nota:** Il channel_id resta opzionale; il link ricerca seduta usa una ricerca globale con token.
 
 #### 5.2 Crea Playlist Annuali
 
@@ -167,6 +168,36 @@ Lo script:
 5. **Aggiorna anagrafica** con `youtube_id` per evitare duplicati
 
 **Importante:** Dopo upload successo, il video non verrà ricaricato in esecuzioni successive.
+
+### Aggiornare Descrizioni Esistenti
+
+Se hai video già caricati e vuoi aggiungere/aggiornare il token e il link di ricerca:
+
+```bash
+# Preview senza aggiornare
+.venv/bin/python3 update_descriptions.py --dry-run
+
+# Update reale delle descrizioni
+.venv/bin/python3 update_descriptions.py
+```
+
+Il link di ricerca generato usa questa forma:
+```
+https://www.youtube.com/results?search_query="ARS_SEDUTA_219-2025-12-10"+intitle:"Lavori d'aula"
+```
+
+### Configurazione Avanzata (config.yaml)
+
+Opzioni utili per robustezza e metadati:
+```yaml
+scraping:
+  timeout: 30
+  retries: 3
+  backoff_factor: 0.5
+
+youtube:
+  timezone: "Europe/Rome"
+```
 
 ### Build Anagrafica Video
 

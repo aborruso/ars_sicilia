@@ -1,5 +1,20 @@
 # 2025-12-21
 
+## Affidabilità Pipeline e Metadati
+
+- Scraping con timeout/retry configurabili e backoff
+- Creazione automatica directory download
+- recordingDate timezone-aware (Europe/Rome)
+- Dedup più robusto (id_video + numero_seduta + data_seduta)
+- Selezione ultima seduta deterministica
+- Filtro `start_date` in anagrafica
+
+## Token Seduta e Link Ricerca
+
+- Token univoco in descrizione: `ARS_SEDUTA_<numero>-<YYYY-MM-DD>`
+- Link ricerca globale con operatori: `results?search_query="TOKEN"+intitle:"Lavori d'aula"`
+- Script `update_descriptions.py` per aggiornare descrizioni già caricate
+
 ## Script Test Upload Singolo
 
 **test_upload_single.py:**

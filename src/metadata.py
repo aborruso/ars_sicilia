@@ -1,5 +1,9 @@
 """Costruzione metadati YouTube."""
 
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from urllib.parse import quote
+
 from .utils import format_date_italian, extract_year, extract_month_name
 
 
@@ -23,6 +27,18 @@ def build_title(seduta_info: dict, video_info: dict) -> str:
     return f"Lavori d'aula: seduta n. {numero} del {data_formattata} - {ora}"
 
 
+def build_seduta_token(seduta_info: dict) -> str | None:
+    """
+    Costruisce token univoco per seduta.
+
+    Formato: ARS_SEDUTA_{numero}-{data} (es. ARS_SEDUTA_219-2025-12-10)
+    """
+    if not seduta_info.get('numero_seduta') or not seduta_info.get('data_seduta'):
+        return None
+    numero_token = seduta_info['numero_seduta'].replace('/', '-')
+    return f"ARS_SEDUTA_{numero_token}-{seduta_info['data_seduta']}"
+
+
 def build_description(seduta_info: dict, video_info: dict, config: dict = None) -> str:
     """
     Costruisce descrizione video YouTube.
@@ -39,6 +55,8 @@ def build_description(seduta_info: dict, video_info: dict, config: dict = None) 
     numero = seduta_info['numero_seduta']
     ora = video_info['ora_video']
 
+    token = build_seduta_token(seduta_info)
+
     description_parts = [
         f"Seduta n. {numero} del {data_seduta_formattata}",
         f"Video dalle ore {ora}",
@@ -47,15 +65,14 @@ def build_description(seduta_info: dict, video_info: dict, config: dict = None) 
         ""
     ]
 
-    # Link ricerca tutti video seduta
-    if config and config.get('youtube', {}).get('channel_id'):
-        channel_id = config['youtube']['channel_id']
-        # Rimuovi @ se presente nel channel_id
-        if channel_id.startswith('@'):
-            channel_id = channel_id[1:]
-        # URL encode del numero seduta per ricerca
-        search_query = f"seduta+n+{numero.replace('/', '%2F')}"
-        search_url = f"https://www.youtube.com/@{channel_id}/search?query={search_query}"
+    if token:
+        description_parts.append(f"{token}")
+        description_parts.append("")
+
+    # Link ricerca tutti video seduta (ricerca globale con operatori)
+    if token:
+        search_query = f"\"{token}\" intitle:\"Lavori d'aula\""
+        search_url = f"https://www.youtube.com/results?search_query={quote(search_query)}"
         description_parts.append(f"🔍 Tutti i video seduta {numero}: {search_url}")
         description_parts.append("")
 
@@ -78,7 +95,7 @@ def build_description(seduta_info: dict, video_info: dict, config: dict = None) 
     return "\n".join(description_parts)
 
 
-def build_recording_date(video_info: dict) -> str:
+def build_recording_date(video_info: dict, timezone: str = "Europe/Rome") -> str:
     """
     Costruisce recordingDate in formato ISO 8601.
 
@@ -96,7 +113,12 @@ def build_recording_date(video_info: dict) -> str:
     if not data or not ora:
         return None
 
-    return f"{data}T{ora}:00Z"
+    try:
+        dt = datetime.fromisoformat(f"{data}T{ora}:00")
+        dt = dt.replace(tzinfo=ZoneInfo(timezone))
+        return dt.isoformat(timespec="seconds")
+    except Exception:
+        return None
 
 
 def build_tags(seduta_info: dict, config: dict) -> list:
@@ -154,6 +176,9 @@ def build_youtube_metadata(seduta_info: dict, video_info: dict, config: dict) ->
         'tags': build_tags(seduta_info, config),
         'category': config.get('youtube', {}).get('category_id', '25'),
         'privacy': config.get('youtube', {}).get('privacy', 'public'),
-        'recordingDate': build_recording_date(video_info),
+        'recordingDate': build_recording_date(
+            video_info,
+            timezone=config.get('youtube', {}).get('timezone', 'Europe/Rome')
+        ),
         'defaultLanguage': config.get('youtube', {}).get('default_language', 'it')
     }
