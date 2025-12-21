@@ -15,6 +15,7 @@
 - Token univoco in descrizione: `ARS_SEDUTA_<numero>-<YYYY-MM-DD>`
 - Link ricerca globale con operatori: `results?search_query="TOKEN"+intitle:"Lavori d'aula"`
 - Script `update_descriptions.py` per aggiornare descrizioni già caricate
+- Flag `--update-titles` per aggiornare i titoli già pubblicati
 
 ## Script Test Upload Singolo
 

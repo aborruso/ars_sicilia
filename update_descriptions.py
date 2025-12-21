@@ -104,6 +104,7 @@ def main():
     parser = argparse.ArgumentParser(description='Aggiorna descrizioni YouTube con token seduta')
     parser.add_argument('--dry-run', action='store_true', help='Mostra cosa farebbe senza aggiornare')
     parser.add_argument('--limit', type=int, default=0, help='Limita numero di update (0 = no limit)')
+    parser.add_argument('--update-titles', action='store_true', help='Aggiorna anche i titoli con il nuovo formato')
     args = parser.parse_args()
 
     config = load_config()
@@ -152,6 +153,10 @@ def main():
             continue
 
         new_description = build_description(seduta_info, video_info, config)
+        new_title = None
+        if args.update_titles:
+            from src.metadata import build_title
+            new_title = build_title(seduta_info, video_info)
 
         if args.dry_run:
             print(f"[DRY] {youtube_id}: aggiungere token {token}")
@@ -166,13 +171,16 @@ def main():
             continue
 
         current_desc = current.get('snippet', {}).get('description', '')
-        if token in current_desc and current_desc == new_description:
+        current_title = current.get('snippet', {}).get('title', '')
+        if token in current_desc and current_desc == new_description and (not new_title or current_title == new_title):
             skipped += 1
             continue
 
         recording_date = build_recording_date(video_info, timezone=config.get('youtube', {}).get('timezone', 'Europe/Rome'))
 
         print(f"Aggiorno {youtube_id}...")
+        if new_title:
+            current['snippet']['title'] = new_title
         ok = update_video_description(youtube, youtube_id, new_description, current, recording_date)
         if ok:
             updated += 1

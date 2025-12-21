@@ -186,6 +186,11 @@ Il link di ricerca generato usa questa forma:
 https://www.youtube.com/results?search_query="ARS_SEDUTA_219-2025-12-10"+intitle:"Lavori d'aula"
 ```
 
+Per aggiornare anche i titoli già pubblicati:
+```bash
+.venv/bin/python3 update_descriptions.py --update-titles
+```
+
 ### Configurazione Avanzata (config.yaml)
 
 Opzioni utili per robustezza e metadati:

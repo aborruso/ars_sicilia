@@ -20,11 +20,15 @@ def build_title(seduta_info: dict, video_info: dict) -> str:
     Returns:
         Titolo formattato
     """
-    data_formattata = format_date_italian(video_info['data_video'] or seduta_info['data_seduta'])
+    data_seduta_formattata = format_date_italian(seduta_info['data_seduta'])
+    data_video_formattata = format_date_italian(video_info['data_video'] or seduta_info['data_seduta'])
     numero = seduta_info['numero_seduta']
     ora = video_info['ora_video']
 
-    return f"Lavori d'aula: seduta n. {numero} del {data_formattata} - {ora}"
+    return (
+        f"Lavori d'aula: seduta n. {numero} ({data_seduta_formattata}), "
+        f"{data_video_formattata} dalle ore {ora}"
+    )
 
 
 def build_seduta_token(seduta_info: dict) -> str | None:
