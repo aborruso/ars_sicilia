@@ -39,7 +39,7 @@ jobs:
       - name: Compute remaining uploads today
         id: quota
         env:
-          MAX_DAILY_UPLOADS: "4"
+          MAX_DAILY_UPLOADS: "2"
         run: |
           python - <<'PY'
           import csv
@@ -68,7 +68,7 @@ jobs:
               f.write(f"remaining={remaining}\n")
           PY
 
-      - name: Upload max 4 videos
+      - name: Upload max 2 videos
         if: ${{ steps.quota.outputs.remaining != '0' }}
         run: |
           . .venv/bin/activate
