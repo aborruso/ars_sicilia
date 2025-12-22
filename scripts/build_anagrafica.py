@@ -153,6 +153,7 @@ def get_existing_youtube_ids(file_path: str, numero_seduta: str) -> dict:
                     key = (row['data_video'], row['ora_video'])
                     existing_ids[key] = {
                         'youtube_id': row.get('youtube_id', ''),
+                        'last_check': row.get('last_check', ''),
                         'status': row.get('status', ''),
                         'failure_reason': row.get('failure_reason', '')
                     }
@@ -239,6 +240,8 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                 youtube_id = existing.get('youtube_id', '')
                 status = existing.get('status', '')
                 failure_reason = existing.get('failure_reason', '')
+                # Preserva last_check se youtube_id esiste (non aggiornare timestamp per video già uploadati)
+                last_check = existing.get('last_check', '') if youtube_id else timestamp
 
                 writer.writerow([
                     numero_seduta,
@@ -252,7 +255,7 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                     video.get('stream_url', ''),
                     video.get('video_page_url', ''),
                     youtube_id,  # Preservato da record esistente
-                    timestamp if not youtube_id else existing.get('last_check', timestamp),
+                    last_check,  # Preservato per video uploadati, nuovo timestamp per video nuovi
                     status,
                     failure_reason
                 ])
