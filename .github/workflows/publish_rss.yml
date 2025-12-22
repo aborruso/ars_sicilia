@@ -20,16 +20,19 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
+        env:
+          VENV_PATH: /tmp/ars_venv
         run: |
-          python -m venv .venv
-          . .venv/bin/activate
+          python -m venv "$VENV_PATH"
+          . "$VENV_PATH/bin/activate"
           pip install -r requirements.txt
 
       - name: Generate RSS
         env:
           BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          VENV_PATH: /tmp/ars_venv
         run: |
-          . .venv/bin/activate
+          . "$VENV_PATH/bin/activate"
           python scripts/generate_rss.py \
             --base-url "$BASE_URL" \
             --limit 20 \
@@ -60,6 +63,7 @@ jobs:
             git rm -rf .
           fi
 
+          rm -rf .venv
           rm -rf *
           cp -R "$tmp_dir/public/"* .
           touch .nojekyll
