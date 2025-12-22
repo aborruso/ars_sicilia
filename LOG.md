@@ -1,3 +1,12 @@
+# 2025-12-22
+
+## Auto-aggiornamento ID Video con Preservazione YouTube IDs
+
+- build_anagrafica.py aggiorna sempre sedute ultimi 14 giorni (ARS cambia ID video)
+- Preserva youtube_id esistenti usando chiave (numero_seduta, data_video, ora_video)
+- Fix: download falliva per ID obsoleti + re-upload duplicati
+- Workflow daily_upload già esegue build_anagrafica prima upload
+
 # 2025-12-21
 
 ## Affidabilità Pipeline e Metadati

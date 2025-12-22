@@ -129,6 +129,40 @@ def load_existing_anagrafica(file_path: str) -> tuple[Set[str], Optional[str], d
         return set(), None, {}
 
 
+def get_existing_youtube_ids(file_path: str, numero_seduta: str) -> dict:
+    """
+    Estrae youtube_id esistenti per una seduta usando chiave (data_video, ora_video).
+
+    Args:
+        file_path: Path al file CSV
+        numero_seduta: Numero seduta
+
+    Returns:
+        Dict con chiave (data_video, ora_video) -> dict con youtube_id, status, failure_reason
+    """
+    existing_ids = {}
+    try:
+        path = Path(file_path)
+        if not path.exists():
+            return existing_ids
+
+        with open(file_path, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row['numero_seduta'] == numero_seduta:
+                    key = (row['data_video'], row['ora_video'])
+                    existing_ids[key] = {
+                        'youtube_id': row.get('youtube_id', ''),
+                        'status': row.get('status', ''),
+                        'failure_reason': row.get('failure_reason', '')
+                    }
+
+    except Exception as e:
+        print(f"⚠ Errore lettura youtube_id esistenti: {e}")
+
+    return existing_ids
+
+
 def remove_seduta_from_anagrafica(file_path: str, numero_seduta: str) -> bool:
     """
     Rimuove tutti i video di una seduta dall'anagrafica.
@@ -167,13 +201,14 @@ def remove_seduta_from_anagrafica(file_path: str, numero_seduta: str) -> bool:
         return False
 
 
-def save_seduta_to_anagrafica(file_path: str, seduta_info: dict) -> int:
+def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtube_ids: dict = None) -> int:
     """
-    Salva seduta in anagrafica CSV.
+    Salva seduta in anagrafica CSV preservando youtube_id esistenti.
 
     Args:
         file_path: Path al file CSV
         seduta_info: Dict con info seduta (da scraper)
+        existing_youtube_ids: Dict opzionale con youtube_id esistenti (chiave: (data_video, ora_video))
 
     Returns:
         Numero video salvati
@@ -181,6 +216,8 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict) -> int:
     try:
         timestamp = datetime.now().isoformat()
         video_count = 0
+        if existing_youtube_ids is None:
+            existing_youtube_ids = {}
 
         with open(file_path, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
@@ -193,6 +230,16 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict) -> int:
 
             # Scrivi una riga per ogni video
             for video in seduta_info['videos']:
+                data_video = video.get('data_video', data_seduta)
+                ora_video = video['ora_video']
+
+                # Recupera youtube_id esistente se presente (chiave: data_video + ora_video)
+                key = (data_video, ora_video)
+                existing = existing_youtube_ids.get(key, {})
+                youtube_id = existing.get('youtube_id', '')
+                status = existing.get('status', '')
+                failure_reason = existing.get('failure_reason', '')
+
                 writer.writerow([
                     numero_seduta,
                     data_seduta,
@@ -200,14 +247,14 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict) -> int:
                     odg_url,
                     resoconto_url,
                     video['id_video'],
-                    video['ora_video'],
-                    video.get('data_video', data_seduta),
+                    ora_video,
+                    data_video,
                     video.get('stream_url', ''),
                     video.get('video_page_url', ''),
-                    '',  # youtube_id inizialmente vuoto
-                    timestamp,
-                    '',  # status
-                    ''   # failure_reason
+                    youtube_id,  # Preservato da record esistente
+                    timestamp if not youtube_id else existing.get('last_check', timestamp),
+                    status,
+                    failure_reason
                 ])
                 video_count += 1
 
@@ -275,20 +322,36 @@ def crawl_nuove_sedute(config: dict, sedute_processate: Set[str], seduta_video_c
             if numero_seduta in sedute_processate:
                 video_count_old = seduta_video_count.get(numero_seduta, 0)
 
-                # Se count video è uguale, skip
-                if video_count_new == video_count_old:
+                # Sempre aggiorna sedute recenti (ultimi 14 giorni)
+                # perché l'ARS può cambiare gli ID video anche senza cambiare il count
+                from datetime import date, timedelta
+                is_recent = False
+                if seduta_info.get('data_seduta'):
+                    cutoff_date = (date.today() - timedelta(days=14)).isoformat()
+                    is_recent = seduta_info['data_seduta'] >= cutoff_date
+
+                # Se count video è uguale e NON è recente, skip
+                if video_count_new == video_count_old and not is_recent:
                     print(f"  ⊙ Seduta {numero_seduta} già in anagrafica ({video_count_old} video), skip")
                     stats['sedute_skip'] += 1
                     current_url = scraper.get_next_seduta_url(html, numero_seduta, go_forward=True)
                     continue
 
-                # Se count è diverso, aggiorna
-                print(f"  ↻ Seduta {numero_seduta} aggiornata: {video_count_old} → {video_count_new} video")
+                # Aggiorna se count diverso o se recente
+                reason = f"{video_count_old} → {video_count_new} video" if video_count_new != video_count_old else "seduta recente"
+                print(f"  ↻ Seduta {numero_seduta} aggiornata: {reason}")
+
+                # Salva youtube_id esistenti prima di rimuovere
+                existing_youtube_ids = get_existing_youtube_ids(anagrafica_file, numero_seduta)
+
                 # Rimuovi video vecchi dall'anagrafica
                 remove_seduta_from_anagrafica(anagrafica_file, numero_seduta)
                 sedute_processate.remove(numero_seduta)
                 stats['sedute_aggiornate'] += 1
-                # Continua per salvare nuovi dati
+                # Continua per salvare nuovi dati con youtube_id preservati
+            else:
+                # Nuova seduta, nessun youtube_id da preservare
+                existing_youtube_ids = {}
 
             # Nuova seduta
             print(f"  ✓ Seduta {numero_seduta} del {seduta_info['data_seduta']}")
@@ -299,8 +362,8 @@ def crawl_nuove_sedute(config: dict, sedute_processate: Set[str], seduta_video_c
             if seduta_info.get('resoconto_url'):
                 print(f"    Resoconto: presente")
 
-            # Salva in anagrafica
-            video_count = save_seduta_to_anagrafica(anagrafica_file, seduta_info)
+            # Salva in anagrafica preservando youtube_id esistenti
+            video_count = save_seduta_to_anagrafica(anagrafica_file, seduta_info, existing_youtube_ids)
 
             if video_count > 0:
                 print(f"    Salvati {video_count} video in anagrafica")
