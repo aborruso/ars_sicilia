@@ -58,3 +58,4 @@ logs/
 # altro
 .xdgcache/
 tmp/
+data/videos/
