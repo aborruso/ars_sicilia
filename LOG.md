@@ -1,5 +1,16 @@
 # 2025-12-23
 
+## Client Python per API ARS Sicilia
+
+- Creato client completo per database Disegni di Legge ARS
+- Fix: search() ora chiama get_results_page() dopo POST (redirect JavaScript non HTTP)
+- Endpoint principale: POST /home/cerca/221.jsp → GET /icaro/default.jsp
+- Funzionalità: ricerca, paginazione (10 risultati/pagina), contenuto completo DDL
+- Documentazione completa API con esempi curl e workflow
+- 4 esempi funzionanti: ricerca legislatura, anno, firmatario, numero DDL
+- Test OK: 1079 risultati legislatura 18, 108 pagine, contenuto completo accessibile
+- Directory: `ars_sicilia_api/` con client, docs, examples, requirements.txt
+
 ## Estrazione Dati Disegni Legge da PDF OdG
 
 - Script `extract_odg_data.sh` per estrazione strutturata da PDF ordini giorno
