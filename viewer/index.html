@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARS Sicilia - Elenco Sedute</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    .subtitle {
+      color: #7f8c8d;
+      margin-bottom: 30px;
+      font-size: 0.95em;
+    }
+
+    .controls {
+      margin-bottom: 25px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    input[type="text"], input[type="file"], select {
+      padding: 10px 15px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+
+    #searchBox {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover { background: #2980b9; }
+
+    .stats {
+      background: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-label {
+      font-size: 0.8em;
+      color: #7f8c8d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-value {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .seduta-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+
+    .seduta-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .seduta-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .seduta-title {
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+
+    .seduta-meta {
+      font-size: 0.9em;
+      opacity: 0.9;
+      margin-top: 5px;
+    }
+
+    .seduta-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .seduta-links a {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.85em;
+      transition: background 0.3s;
+    }
+
+    .seduta-links a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    .toggle {
+      font-size: 1.5em;
+      transition: transform 0.3s;
+    }
+
+    .toggle.open {
+      transform: rotate(180deg);
+    }
+
+    .videos {
+      padding: 20px;
+      display: none;
+      background: #fafafa;
+    }
+
+    .videos.open {
+      display: block;
+    }
+
+    .video-item {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 12px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .video-time {
+      font-weight: 700;
+      color: #3498db;
+      font-size: 1.1em;
+      white-space: nowrap;
+    }
+
+    .video-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .video-date {
+      font-size: 0.9em;
+      color: #7f8c8d;
+    }
+
+    .video-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .video-actions a, .badge {
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.85em;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    .video-actions a {
+      background: #e74c3c;
+      color: white;
+    }
+
+    .video-actions a:hover {
+      opacity: 0.8;
+    }
+
+    .badge {
+      background: #27ae60;
+      color: white;
+    }
+
+    .badge.pending {
+      background: #f39c12;
+    }
+
+    .badge.failed {
+      background: #e74c3c;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #7f8c8d;
+    }
+
+    .empty-state h2 {
+      margin-bottom: 10px;
+      color: #95a5a6;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 0.85em;
+    }
+
+    footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .seduta-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .seduta-links {
+        margin-top: 15px;
+      }
+
+      .video-item {
+        grid-template-columns: 1fr;
+      }
+
+      .video-actions {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ARS Sicilia - Elenco Sedute</h1>
+    <p class="subtitle">Assemblea Regionale Siciliana - Archivio Video</p>
+
+    <div class="controls">
+      <input type="text" id="searchBox" placeholder="Cerca seduta...">
+      <input type="file" id="csvFile" accept=".csv">
+      <button onclick="loadDefaultCSV()">Carica CSV Default</button>
+      <button onclick="downloadData()">Scarica Dati</button>
+    </div>
+
+    <div class="stats" id="stats" style="display: none;">
+      <div class="stat-item">
+        <span class="stat-label">Sedute</span>
+        <span class="stat-value" id="statSedute">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Video Totali</span>
+        <span class="stat-value" id="statVideo">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Su YouTube</span>
+        <span class="stat-value" id="statYouTube">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">In Attesa</span>
+        <span class="stat-value" id="statPending">0</span>
+      </div>
+    </div>
+
+    <div id="sedute"></div>
+
+    <footer>
+      <p>Tool creato per visualizzare le sedute ARS Sicilia &middot;
+      <a href="https://github.com/aborruso/ars_sicilia" target="_blank">Progetto GitHub</a></p>
+    </footer>
+  </div>
+
+  <script>
+    let allData = [];
+    let sedute = [];
+
+    // Load CSV file
+    document.getElementById('csvFile').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => {
+          processData(results.data);
+        }
+      });
+    });
+
+    // Load default CSV from GitHub raw URL
+    async function loadDefaultCSV() {
+      try {
+        const response = await fetch('https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/anagrafica_video.csv');
+        const csvText = await response.text();
+
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            processData(results.data);
+          }
+        });
+      } catch (error) {
+        alert('Errore nel caricamento del CSV: ' + error.message);
+      }
+    }
+
+    // Process CSV data
+    function processData(data) {
+      allData = data;
+
+      // Group by seduta number
+      const grouped = {};
+      data.forEach(row => {
+        const num = row.numero_seduta;
+        if (!grouped[num]) {
+          grouped[num] = {
+            numero: num,
+            data: row.data_seduta,
+            url: row.url_pagina,
+            odg: row.odg_url,
+            resoconto: row.resoconto_url,
+            videos: []
+          };
+        }
+        grouped[num].videos.push({
+          id: row.id_video,
+          ora: row.ora_video,
+          data: row.data_video,
+          youtube_id: row.youtube_id,
+          video_url: row.video_page_url,
+          status: row.status || (row.youtube_id ? 'success' : 'pending')
+        });
+      });
+
+      // Convert to array and sort
+      sedute = Object.values(grouped).sort((a, b) => {
+        return parseInt(b.numero) - parseInt(a.numero);
+      });
+
+      updateStats();
+      renderSedute();
+    }
+
+    // Update statistics
+    function updateStats() {
+      const totalVideo = allData.length;
+      const onYouTube = allData.filter(r => r.youtube_id).length;
+      const pending = totalVideo - onYouTube;
+
+      document.getElementById('statSedute').textContent = sedute.length;
+      document.getElementById('statVideo').textContent = totalVideo;
+      document.getElementById('statYouTube').textContent = onYouTube;
+      document.getElementById('statPending').textContent = pending;
+      document.getElementById('stats').style.display = 'flex';
+    }
+
+    // Render sedute cards
+    function renderSedute(filter = '') {
+      const container = document.getElementById('sedute');
+
+      if (sedute.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <h2>Nessuna seduta caricata</h2>
+            <p>Carica un file CSV o clicca su "Carica CSV Default"</p>
+          </div>
+        `;
+        return;
+      }
+
+      const filtered = filter ?
+        sedute.filter(s =>
+          s.numero.includes(filter) ||
+          s.data.includes(filter)
+        ) : sedute;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <h2>Nessun risultato</h2>
+            <p>Prova con un altro termine di ricerca</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map((seduta, idx) => `
+        <div class="seduta-card">
+          <div class="seduta-header" onclick="toggleSeduta(${idx})">
+            <div>
+              <div class="seduta-title">Seduta n. ${seduta.numero}</div>
+              <div class="seduta-meta">
+                ${formatDate(seduta.data)} &middot; ${seduta.videos.length} video
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+              <div class="seduta-links" onclick="event.stopPropagation()">
+                ${seduta.odg ? `<a href="${seduta.odg}" target="_blank">OdG</a>` : ''}
+                ${seduta.resoconto ? `<a href="${seduta.resoconto}" target="_blank">Resoconto</a>` : ''}
+                <a href="${seduta.url}" target="_blank">Pagina ARS</a>
+              </div>
+              <div class="toggle" id="toggle-${idx}">▼</div>
+            </div>
+          </div>
+          <div class="videos" id="videos-${idx}">
+            ${renderVideos(seduta.videos)}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render videos for a seduta
+    function renderVideos(videos) {
+      // Sort by date and time
+      const sorted = [...videos].sort((a, b) => {
+        const dateA = `${a.data} ${a.ora}`;
+        const dateB = `${b.data} ${b.ora}`;
+        return dateA.localeCompare(dateB);
+      });
+
+      return sorted.map(video => `
+        <div class="video-item">
+          <div class="video-time">${video.ora}</div>
+          <div class="video-info">
+            <div class="video-date">📅 ${formatDate(video.data)}</div>
+          </div>
+          <div class="video-actions">
+            ${video.youtube_id ?
+              `<a href="https://www.youtube.com/watch?v=${video.youtube_id}" target="_blank">▶ YouTube</a>` :
+              `<span class="badge pending">In attesa</span>`
+            }
+            <a href="${video.video_url}" target="_blank">ARS</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Toggle seduta expansion
+    function toggleSeduta(idx) {
+      const videos = document.getElementById(`videos-${idx}`);
+      const toggle = document.getElementById(`toggle-${idx}`);
+
+      videos.classList.toggle('open');
+      toggle.classList.toggle('open');
+    }
+
+    // Format date
+    function formatDate(dateStr) {
+      if (!dateStr) return '';
+      const [year, month, day] = dateStr.split('-');
+      return `${day}/${month}/${year}`;
+    }
+
+    // Search functionality
+    document.getElementById('searchBox').addEventListener('input', (e) => {
+      renderSedute(e.target.value);
+    });
+
+    // Download current data as JSON
+    function downloadData() {
+      if (sedute.length === 0) {
+        alert('Nessun dato da scaricare');
+        return;
+      }
+
+      const json = JSON.stringify(sedute, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'sedute_ars.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Auto-load default CSV on page load
+    window.addEventListener('load', () => {
+      loadDefaultCSV();
+    });
+  </script>
+</body>
+</html>
