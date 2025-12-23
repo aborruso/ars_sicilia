@@ -11,6 +11,16 @@
 - Test OK: 1079 risultati legislatura 18, 108 pagine, contenuto completo accessibile
 - Directory: `ars_sicilia_api/` con client, docs, examples, requirements.txt
 
+## Guida alla Ricerca Formattata
+
+- Formattata GUIDA_ALLA_RICERCA.md con backtick per code markup
+- Operatori: AND, OR, NOT, ADJ, NEAR, SAME, WITH, LINE, XOR
+- Field qualifiers: .LEGISL, .FIRMAT, .TITOLO, .TESTO, etc.
+- Funzioni speciali: IMG(), SEL(), LVL(), DOCNO(), ALLDOC
+- Wildcards: $, %, /
+- Code blocks per esempi query
+- Migliorata leggibilità struttura markdown
+
 ## Estrazione Dati Disegni Legge da PDF OdG
 
 - Script `extract_odg_data.sh` per estrazione strutturata da PDF ordini giorno
