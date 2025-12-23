@@ -1,0 +1,49 @@
+name: Sync viewer to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'viewer/**'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-branch
+
+      - name: Copy viewer folder
+        run: |
+          rm -rf gh-pages-branch/viewer
+          cp -r viewer gh-pages-branch/
+
+      - name: Commit and push to gh-pages
+        working-directory: gh-pages-branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add viewer/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: sync viewer from main
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+            git push origin gh-pages
+          fi
