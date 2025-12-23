@@ -64,7 +64,7 @@ Una espressione di ricerca è dunque un insieme costituito da termini di ricerca
 
 **Qualunque termine, sigla, verbo...** contenuto nel testo. I numeri devono essere ricercati senza i punti separatori e senza la virgola dei decimali a meno di non usare la identificazione di IMG(Image).
 
-**Qualunque numero o cifra**, anche negativa (segno  dopo l'utima cifra). I numeri devono essere ricercati senza i punti separatori e senza la virgola dei decimali a meno di non usare la identificazione di IMG (Image).
+**Qualunque numero o cifra**, anche negativa (segno - dopo l'ultima cifra). I numeri devono essere ricercati senza i punti separatori e senza la virgola dei decimali a meno di non usare la identificazione di IMG (Image).
 
 **Un Intervallo Numerico**. Le cifre di intervallo sono separate in modo consecutivo dal simbolo / (125/321).
 
