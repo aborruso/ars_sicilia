@@ -1,3 +1,16 @@
+# 2025-12-23
+
+## Estrazione Dati Disegni Legge da PDF OdG
+
+- Script `extract_odg_data.sh` per estrazione strutturata da PDF ordini giorno
+- Pipeline: markitdown (PDF→testo) + llm CLI (testo→JSON strutturato)
+- Campi estratti: titolo_disegno, numero_disegno, legislatura, data_ora (ISO 8601)
+- Deduplicazione automatica: PDF già processati saltati
+- Output: `data/disegni_legge.jsonl` (append incrementale)
+- URL ICARO auto-generati: link diretto scheda disegno (legislatura + numero)
+- Input: URL PDF distinti da campo odg_url in anagrafica_video.csv
+- Cleanup finale: `mlr uniq -a` rimuove duplicati esatti (safety measure)
+
 # 2025-12-22
 
 ## Auto-aggiornamento ID Video con Preservazione YouTube IDs

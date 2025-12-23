@@ -59,3 +59,44 @@ Funzionalità:
 #### 📌 Backlog / Prossimi passi
 
 - Trascrizione automatica: abilitare e verificare export testo per analisi
+
+---
+
+## Estrazione Dati Disegni Legge da PDF OdG
+
+Estrazione strutturata dei disegni di legge discussi dai PDF degli ordini del giorno (OdG).
+
+### Obiettivi
+
+1. **Archiviazione storica** - Catalogo completo disegni legge con metadati strutturati
+2. **Linkage video↔disegni** - Collegare video sedute ai disegni discussi
+3. **URL ICARO** - Generazione automatica link alle schede ICARO
+4. **Tracciabilità** - Storico di quando ogni disegno è stato discusso
+
+### Stato Attuale
+
+#### ✅ Fase 1: Estrazione PDF OdG (Completata)
+
+**Script:** `scripts/extract_odg_data.sh`
+
+Funzionalità:
+- Legge URL PDF distinti dal campo `odg_url` in `data/anagrafica_video.csv`
+- Pipeline: `markitdown` (PDF→testo) + `llm` (estrazione strutturata con LLM)
+- Campi estratti per ogni disegno:
+  - `titolo_disegno` - Titolo completo del disegno
+  - `numero_disegno` - Numero (solo parte numerica)
+  - `legislatura` - Numero romano (es. XVIII)
+  - `data_ora` - Data e ora seduta (ISO 8601)
+  - `pdf_url` - URL PDF sorgente
+  - `url_disegno` - URL ICARO generato automaticamente
+- Deduplicazione: PDF già processati saltati, cleanup duplicati esatti con `mlr`
+- Output: `data/disegni_legge.jsonl` (formato JSONL incrementale)
+- Esecuzione: manuale on-demand
+
+**Output:** `data/disegni_legge.jsonl`
+
+#### 📌 Prossimi passi
+
+- Linkage automatico video→disegni usando numero_seduta e data_ora
+- Arricchimento descrizioni YouTube con link ai disegni discussi
+- Dashboard query disegni per legislatura/anno/stato

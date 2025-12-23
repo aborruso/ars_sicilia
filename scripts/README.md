@@ -9,6 +9,7 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `upload_single.py` — Upload singolo video (primo senza `youtube_id`), con `--dry-run`.
 - `run_daily.sh` — Wrapper per esecuzione giornaliera con lock file.
 - `generate_rss.py` — Genera `public/feed.xml` dai video caricati.
+- `extract_odg_data.sh` — Estrae dati disegni legge dai PDF OdG e li salva in `data/disegni_legge.jsonl`.
 - `update_descriptions.py` — Aggiorna descrizioni (e opzionalmente titoli) dei video già pubblicati.
 
 ## Auth / Setup
