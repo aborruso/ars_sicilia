@@ -25,6 +25,7 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 ### Architecture Patterns
 - Modular pipeline: `scraper` (HTML fetch/parse) → `metadata` (title/description/tags) → `downloader` (yt-dlp HLS) → `uploader` (YouTube Data API) → `logger` (CSV log/index).
 - Script entrypoints live under `scripts/` (e.g., `scripts/main.py`, `scripts/build_anagrafica.py`, `scripts/extract_odg_data.sh`, `scripts/run_daily.sh`).
+- Document extraction: scraper extracts 4 document types from seduta pages (OdG, resoconto provvisorio/stenografico, allegato) via pattern matching on HTML labels; maintains backward-compatible `resoconto_url` field (prefers stenographic over provisional).
 - OdG extraction pipeline: `extract_odg_data.sh` uses `markitdown` (PDF→text) + `llm` (text→JSON) to extract legislative bills from agenda PDFs; outputs to `data/disegni_legge.jsonl` with deduplication.
 - RSS feed generation via `scripts/generate_rss.py`, published by GitHub Actions.
 - Configuration-driven behavior via `config/config.yaml`; defaults target seduta 219 (10/12/2025) onward.
@@ -47,7 +48,8 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 ## Domain Context
 - Source site: https://www.ars.sicilia.it; seduta pages under `/agenda/sedute-aula/` with `video_box` entries containing `data-src` links to per-video pages.
 - Seduta numbering includes suffixes (e.g., `219/A`); dates are Italian text (`10 Dicembre 2025`) parsed to `YYYY-MM-DD`.
-- YouTube metadata pattern: title `Lavori d'aula: seduta n. {numero} del {data} - {ora}`; description includes OdG/Resoconto links and seduta URL; tags add base list + seduta number/year/month.
+- Seduta documents: 4 types extracted (OdG e Comunicazioni, Resoconto provvisorio, Resoconto stenografico, Allegato alla seduta); HTML pattern `<h3>Label<a href>` uniform across all types.
+- YouTube metadata pattern: title `Lavori d'aula: seduta n. {numero} del {data} - {ora}`; description includes all available documents (OdG, resoconto provvisorio/stenografico, allegato) with emoji indicators and seduta URL; tags add base list + seduta number/year/month.
 - Recording date uses video date/time (`YYYY-MM-DDTHH:MM:00Z`) when available; falls back to seduta date for titles/descriptions.
 
 ## Important Constraints
