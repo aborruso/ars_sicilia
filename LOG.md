@@ -1,3 +1,15 @@
+# 2025-12-24
+
+## Retry con Backoff Esponenziale per Upload
+
+- Aggiunto retry automatico per errori SSL/network temporanei (EOF occurred in violation of protocol)
+- Download: 3 tentativi, delay iniziale 2s, backoff esponenziale (2s → 4s → 8s)
+- Upload: 5 tentativi, delay iniziale 3s, backoff esponenziale (3s → 6s → 12s → 24s → 48s)
+- Funzione `is_temporary_error()`: rileva errori SSL, timeout, network
+- Funzione `retry_with_backoff()`: gestisce retry con backoff configurabile
+- Video failed hanno priorità assoluta e vengono riprovati al prossimo run
+- Errori permanenti (quota, file not found) falliscono subito senza retry
+
 # 2025-12-23
 
 ## Client Python per API ARS Sicilia
