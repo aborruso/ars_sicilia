@@ -1,0 +1,79 @@
+prompt: |
+  Crea un digest delle trascrizioni di sedute dell'Assemblea Regionale per aiutare i cittadini a comprendere i principali punti discussi. L'obiettivo è produrre un riassunto chiaro e sintetico che favorisca la cittadinanza attiva rendendo accessibili i lavori parlamentari regionali.
+
+  IMPORTANTE: Tutto l'output deve essere in italiano.
+
+  Ecco la trascrizione da analizzare:
+
+  <transcript>
+  $input
+  </transcript>
+
+  Analizza questa trascrizione e produci tre output chiave:
+
+  1. **DIGEST**: Un riassunto chiaro e sintetico dei punti principali della seduta. Scrivi in linguaggio accessibile per il pubblico generale, evidenziando decisioni chiave, dibattiti, proposte ed esiti. Concentrati su ciò che è più rilevante per i cittadini.
+     - Struttura cronologica degli eventi
+     - Evidenzia i nodi politici e le tensioni
+     - Includi gli esiti delle votazioni con numeri precisi (se presenti)
+     - Spiega i termini tecnici quando necessario
+
+  2. **CATEGORIE**: Estrai ed elenca le categorie rilevanti che definiscono contesto e tematiche della seduta. Usa categorie tipiche della vita parlamentare regionale, come:
+     - Sanità
+     - Bilancio e Finanze
+     - Infrastrutture e Trasporti
+     - Ambiente e Territorio
+     - Istruzione e Formazione
+     - Sviluppo Economico
+     - Politiche Sociali
+     - Agricoltura
+     - Turismo e Cultura
+     - Lavoro
+     - Enti Locali e Autonomie
+     - Giustizia e Contenzioso
+     - Procedure Parlamentari
+     E qualsiasi altra categoria rilevante che emerga dal contenuto.
+
+  3. **PERSONE MENZIONATE**: Crea un elenco di tutte le persone citate nella trascrizione con i loro ruoli (es. Presidente della Regione, Assessore regionale, Deputato regionale, Sindaco, ecc.).
+     - Includi il nome completo quando disponibile
+     - Specifica il ruolo istituzionale
+     - Per gli assessori, indica la delega se menzionata (es. "Assessore al Bilancio")
+     - Per i deputati, indica il gruppo parlamentare se menzionato
+
+  Prima di produrre l'output finale, usa lo scratchpad per organizzare i tuoi pensieri.
+
+  <scratchpad>
+  - Leggi la trascrizione e identifica gli argomenti principali
+  - Annota decisioni chiave, proposte e dibattiti
+  - Identifica temi ricorrenti e mappali su categorie appropriate
+  - Elenca tutte le persone menzionate e determina i loro ruoli dal contesto
+  - Pianifica come strutturare il digest per massima chiarezza e coinvolgimento cittadino
+  - Nota eventuali votazioni e i loro esiti
+  - Identifica tensioni politiche o procedurali significative
+  </scratchpad>
+
+  Ora fornisci la tua analisi nel seguente formato:
+
+  <digest>
+  Scrivi un riassunto chiaro e sintetico della seduta (circa 250-500 parole). Concentrati sui punti principali che i cittadini devono conoscere. Usa linguaggio accessibile e organizza le informazioni logicamente. Evidenzia decisioni chiave, dibattiti ed esiti.
+
+  Struttura suggerita:
+  - Contesto generale della seduta
+  - Argomenti principali discussi
+  - Dibattiti significativi e posizioni politiche
+  - Decisioni prese ed esiti delle votazioni
+  - Eventuali questioni procedurali o tensioni politiche rilevanti
+  </digest>
+
+  <categories>
+  Elenca le categorie rilevanti, una per riga, che caratterizzano temi e contesto di questa seduta. Usa categorie parlamentari regionali standard in italiano.
+  </categories>
+
+  <people>
+  Elenca ogni persona menzionata nella trascrizione con il suo ruolo, nel seguente formato:
+  - [Nome Cognome]: [Ruolo/Titolo completo]
+
+  Se il ruolo di una persona non è esplicitamente indicato, deducilo dal contesto o annotalo come "Ruolo non specificato" se poco chiaro.
+  Ordina alfabeticamente per cognome.
+  </people>
+
+  RICORDA: Il tuo digest deve servire la cittadinanza attiva rendendo i lavori parlamentari regionali trasparenti e comprensibili al pubblico generale.

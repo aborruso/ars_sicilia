@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "digest": {
+      "type": "string",
+      "description": "A clear, synthetic summary of the session in MARKDOWN format (approximately 200-400 words). Use Markdown formatting: ## for section headers, **bold** for emphasis, - for bullet lists. Focus on the main points that citizens need to know. Use accessible language in Italian and organize information logically with clear sections. Highlight key decisions, debates, and outcomes. IMPORTANT: The digest must be COMPLETE with proper ending, not truncated. Conclude all sections and sentences properly."
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of relevant categories that characterize the themes and context of this session. Use standard regional parliamentary categories in Italian (e.g., Sanità, Bilancio e Finanze, Infrastrutture e Trasporti, Ambiente e Territorio, etc.)"
+    },
+    "people": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Full name of the person mentioned"
+          },
+          "role": {
+            "type": "string",
+            "description": "Their role or title (e.g., Presidente della Regione, Assessore, Consigliere regionale, Sindaco, etc.)"
+          }
+        },
+        "required": ["name", "role"]
+      },
+      "description": "List of all people cited in the transcript with their roles"
+    }
+  },
+  "required": ["digest", "categories", "people"]
+}
