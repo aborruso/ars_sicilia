@@ -2,6 +2,66 @@
 
 L'obiettivo del progetto è rendere più leggibili e analizzabili i contenuti pubblicati dall'Assemblea Regionale Siciliana.
 
+## Sito per consultare le sedute dell'Assemblea
+
+Sarà sviluppato un sito dedicato a consultare e leggere in modo comodo le informazioni sulle sedute dell'Assemblea.
+
+### Requisiti
+
+- **Sito full static**: build unica, nessun backend.
+- **Stack**: Astro con Tailwind CSS (eventuale React solo se serve per componenti interattivi).
+- **Contenuti**: il sito deve leggere fonti Markdown e renderizzarle in HTML sul web.
+- **Deploy**: GitHub Pages.
+- **Permalink**: stabili e leggibili, senza cambi improvvisi nel tempo.
+- **Accessibilità come priorità**: semantic HTML, contrasto colori, navigazione da tastiera, ARIA solo dove serve.
+- **Performance e SEO**: output leggero, sitemap e metadati curati.
+- **OpenGraph**: immagini e meta tag coerenti per condivisione social; previsto un default globale e, dove possibile, immagini dedicate per pagina/contenuto.
+
+### Richieste aggiuntive
+
+- Impostare un’architettura pulita e coerente con questi obiettivi.
+- Proporre eventuali miglioramenti su accessibilità, permalink e OpenGraph.
+
+### Proposta di architettura
+
+**Approccio generale**
+- **Build statica** con Astro e generazione delle pagine a build-time.
+- **Fonte contenuti** in Markdown (cartelle dedicate) con frontmatter per metadati.
+- **Layout e componenti** Astro; React solo per widget interattivi essenziali.
+- **Pipeline di build**: generazione sitemap, RSS/JSON feed (se utile), immagini OG.
+- **Deploy** su GitHub Pages con build CI (GitHub Actions).
+
+**Struttura contenuti (suggerita)**
+- `content/sedute/` → Markdown per seduta (frontmatter: numero, data, url_originale, url_video, odg_url, resoconto_url, tags)
+- `content/pagine/` → pagine statiche (About, Contatti, Note metodologiche)
+- `assets/og/` → immagini OpenGraph base e derivate
+
+**Routing**
+- Pagine sedute generate con slug leggibile e stabile:
+  - `/<anno>/<mese>/<giorno>/seduta-<numero>/`
+- Indici:
+  - `/sedute/` (lista completa)
+  - `/sedute/anno/<anno>/`
+  - `/sedute/legislatura/<numero>/` (se disponibile)
+
+**Accessibilità (miglioramenti proposti)**
+- Headings gerarchici e consistenti (H1 unico per pagina).
+- Skip link “Vai al contenuto” sempre visibile al focus.
+- Navigazione da tastiera garantita (menu, ricerca, filtri).
+- Componenti con stati focus visibili e contrasto AA.
+- ARIA solo per casi non risolvibili con semantic HTML.
+
+**Permalink (miglioramenti proposti)**
+- Slug derivato da data + numero seduta: stabile e prevedibile.
+- Redirect 301 (se mai necessari) gestiti a livello di Pages con file `redirects` o HTML statico.
+- Evitare slug basati su titoli variabili.
+
+**OpenGraph (miglioramenti proposti)**
+- Default globale con logo, titolo progetto, descrizione sintetica.
+- OG dedicati per seduta (data + numero, eventualmente mini-preview).
+- Twitter card summary_large_image.
+- Prevedere fallback se immagine per seduta non disponibile.
+
 ## Ripubblicare su YouTube le sedute assemblea
 
 Sedute pubblicate su https://www.ars.sicilia.it/agenda/lavori-aula
