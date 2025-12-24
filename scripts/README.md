@@ -11,6 +11,34 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `generate_rss.py` — Genera `public/feed.xml` dai video caricati.
 - `extract_odg_data.sh` — Estrae dati disegni legge dai PDF OdG e li salva in `data/disegni_legge.jsonl`.
 - `update_descriptions.py` — Aggiorna descrizioni (e opzionalmente titoli) dei video già pubblicati.
+- `generate_digests.sh` — Genera digest automatici dai video YouTube usando trascrizioni e template.
+
+### generate_digests.sh
+
+Genera un digest JSON per ogni video YouTube elencato in `data/anagrafica_video.csv`.
+Per ogni riga con `youtube_id` non vuoto:
+1) scarica la trascrizione con `qv`;
+2) passa la trascrizione al comando `llm` usando il template `config/digest.yaml`
+   e lo schema `config/digest-schema.json`;
+3) salva l’output in `data/digest/<youtube_id>.json`.
+
+Se il file di output esiste già, lo script salta il video. In caso di errori
+di download o generazione, il video viene conteggiato come fallito e l’elaborazione
+prosegue con il successivo. Tra una generazione e l’altra applica una pausa
+(configurata in `SLEEP_SECONDS` nello script).
+
+Requisiti: `qv`, `llm`, `mlr` e accesso al modello configurato (attualmente `gemini-2.5-flash`).
+
+Uso:
+```bash
+./scripts/generate_digests.sh
+```
+
+Modelli testati per la configurazione iniziale:
+- `gemini-2.5-flash` — scelto: senza costi e output accettabile.
+- `claude-sonnet-4.5`
+- `mistral-medium`
+- `gpt-5.2`
 
 ## Auth / Setup
 
