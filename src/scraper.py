@@ -102,30 +102,74 @@ def extract_seduta_date(html: BeautifulSoup) -> Optional[str]:
 
 def extract_document_urls(html: BeautifulSoup) -> dict:
     """
-    Estrae URL documenti OdG e Resoconto.
+    Estrae URL di tutti i documenti disponibili per la seduta.
+
+    Estrae 4 tipi di documenti:
+    - OdG e Comunicazioni (sempre presente)
+    - Resoconto provvisorio (temporaneo)
+    - Resoconto stenografico (finale, sostituisce il provvisorio)
+    - Allegato alla seduta (opzionale)
 
     Args:
         html: BeautifulSoup object
 
     Returns:
-        Dict con chiavi 'odg_url' e 'resoconto_url'
+        Dict con chiavi:
+        - odg_url: URL OdG e Comunicazioni
+        - resoconto_provvisorio_url: URL resoconto provvisorio (se presente)
+        - resoconto_stenografico_url: URL resoconto stenografico (se presente)
+        - allegato_url: URL allegato alla seduta (se presente)
+        - resoconto_url: [DEPRECATED] URL resoconto (preferisce stenografico > provvisorio)
     """
     result = {
         'odg_url': None,
-        'resoconto_url': None
+        'resoconto_provvisorio_url': None,
+        'resoconto_stenografico_url': None,
+        'allegato_url': None,
+        'resoconto_url': None  # Backward compatibility
     }
 
-    # Trova tutti i link
-    for link in html.find_all('a', href=True):
-        href = link['href']
+    # Pattern di ricerca per ogni tipo di documento
+    patterns = {
+        'odg_url': 'OdG e Comunicazioni',
+        'resoconto_provvisorio_url': 'Resoconto provvisorio',
+        'resoconto_stenografico_url': 'Resoconto stenografico',
+        'allegato_url': 'Allegato alla seduta'
+    }
 
-        # OdG e Comunicazioni
-        if 'ODG_PDF' in href or 'ODG' in href:
-            result['odg_url'] = href if href.startswith('http') else f"https://www.ars.sicilia.it{href}"
+    # Trova tutti gli elementi che potrebbero contenere documenti
+    elements = html.find_all(['p', 'h3', 'h4', 'div'])
 
-        # Resoconto
-        if 'ResSteno' in href or 'Resoconto' in link.get_text():
-            result['resoconto_url'] = href if href.startswith('http') else f"https://www.ars.sicilia.it{href}"
+    for el in elements:
+        text = el.get_text().strip()
+
+        # Verifica ogni pattern
+        for key, pattern in patterns.items():
+            if pattern in text:
+                # Cerca link dentro l'elemento o nei suoi figli/vicini
+                link = el.find('a', href=True)
+                if not link and el.next_sibling:
+                    # Prova nel sibling successivo
+                    next_el = el.next_sibling
+                    if hasattr(next_el, 'find'):
+                        link = next_el.find('a', href=True)
+                if not link and el.parent:
+                    # Prova nel parent
+                    link = el.parent.find('a', href=True)
+
+                if link and link.get('href'):
+                    href = link['href']
+                    # Normalizza URL (converti relativi in assoluti)
+                    if not href.startswith('http'):
+                        href = f"https://www.ars.sicilia.it{href}" if href.startswith('/') else f"https://www.ars.sicilia.it/{href}"
+                    result[key] = href
+
+    # Popola resoconto_url per backward compatibility
+    # Preferenza: stenografico > provvisorio
+    if result['resoconto_stenografico_url']:
+        result['resoconto_url'] = result['resoconto_stenografico_url']
+    elif result['resoconto_provvisorio_url']:
+        result['resoconto_url'] = result['resoconto_provvisorio_url']
 
     return result
 
@@ -320,7 +364,10 @@ def extract_seduta_info(html: BeautifulSoup, seduta_url: str) -> dict:
         'data_seduta': seduta_date,
         'url_pagina': seduta_url,
         'odg_url': documents['odg_url'],
-        'resoconto_url': documents['resoconto_url'],
+        'resoconto_url': documents['resoconto_url'],  # Backward compatibility
+        'resoconto_provvisorio_url': documents['resoconto_provvisorio_url'],
+        'resoconto_stenografico_url': documents['resoconto_stenografico_url'],
+        'allegato_url': documents['allegato_url'],
         'videos': videos
     }
 

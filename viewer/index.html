@@ -366,7 +366,9 @@
             data: row.data_seduta,
             url: row.url_pagina,
             odg: row.odg_url,
-            resoconto: row.resoconto_url,
+            resoconto_provvisorio: row.resoconto_provvisorio_url,
+            resoconto_stenografico: row.resoconto_stenografico_url,
+            allegato: row.allegato_url,
             videos: []
           };
         }
@@ -443,9 +445,11 @@
             </div>
             <div style="display: flex; align-items: center; gap: 20px;">
               <div class="seduta-links" onclick="event.stopPropagation()">
-                ${seduta.odg ? `<a href="${seduta.odg}" target="_blank">OdG</a>` : ''}
-                ${seduta.resoconto ? `<a href="${seduta.resoconto}" target="_blank">Resoconto</a>` : ''}
-                <a href="${seduta.url}" target="_blank">Pagina ARS</a>
+                ${seduta.odg ? `<a href="${seduta.odg}" target="_blank" title="OdG e Comunicazioni">📄 OdG</a>` : ''}
+                ${seduta.resoconto_stenografico ? `<a href="${seduta.resoconto_stenografico}" target="_blank" title="Resoconto stenografico">📋 Stenografico</a>` : ''}
+                ${seduta.resoconto_provvisorio ? `<a href="${seduta.resoconto_provvisorio}" target="_blank" title="Resoconto provvisorio">📝 Provvisorio</a>` : ''}
+                ${seduta.allegato ? `<a href="${seduta.allegato}" target="_blank" title="Allegato alla seduta">📎 Allegato</a>` : ''}
+                <a href="${seduta.url}" target="_blank" title="Pagina ARS">🔗 ARS</a>
               </div>
               <div class="toggle" id="toggle-${idx}">▼</div>
             </div>

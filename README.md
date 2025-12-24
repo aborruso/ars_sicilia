@@ -326,8 +326,11 @@ Campi:
 - `numero_seduta`: Numero seduta (es. "219")
 - `data_seduta`: Data seduta (YYYY-MM-DD)
 - `url_pagina`: URL pagina seduta ARS
-- `odg_url`: Link OdG PDF
-- `resoconto_url`: Link resoconto stenografico
+- `odg_url`: Link OdG e Comunicazioni PDF
+- `resoconto_url`: **[DEPRECATED]** Link resoconto (preferisce stenografico > provvisorio)
+- `resoconto_provvisorio_url`: Link resoconto provvisorio PDF (temporaneo)
+- `resoconto_stenografico_url`: Link resoconto stenografico PDF (finale)
+- `allegato_url`: Link allegato alla seduta PDF (opzionale)
 - `id_video`: ID univoco video ARS
 - `ora_video`: Ora inizio video (HH:MM)
 - `data_video`: Data video (YYYY-MM-DD)
@@ -337,6 +340,9 @@ Campi:
 - `last_check`: Timestamp ultimo controllo (ISO 8601)
 - `status`: Stato upload in anagrafica (es. `success`, `failed`)
 - `failure_reason`: Motivo fallimento (se `status=failed`)
+
+**Nota migrazione schema CSV:**
+Le colonne `resoconto_provvisorio_url`, `resoconto_stenografico_url` e `allegato_url` sono state aggiunte per estrarre tutti i documenti disponibili dalle pagine seduta. La colonna `resoconto_url` è mantenuta per retrocompatibilità e contiene il resoconto stenografico (se presente) o il provvisorio. Record esistenti hanno valori vuoti per le nuove colonne - verranno popolate al prossimo aggiornamento anagrafica.
 
 ## Indice Sedute
 
