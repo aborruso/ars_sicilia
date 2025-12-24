@@ -1,5 +1,25 @@
 # 2025-12-24
 
+## Generazione Automatica Digest Video con LLM
+
+- Sistema completo per generare digest AI da trascrizioni YouTube
+- Template prompt `config/digest.yaml` (in italiano)
+- JSON Schema `config/digest-schema.json`: digest (Markdown), categories, people
+- Script `scripts/generate_digests.sh`:
+  - Input: anagrafica CSV con youtube_id
+  - Estrazione ID con mlr: `--c2n cut -f youtube_id then filter '$youtube_id=~".+"`
+  - Download trascrizioni: `qv https://youtu.be/ID --text-only`
+  - Generazione: `llm -m gemini-2.5-flash -t digest.yaml --schema digest-schema.json`
+  - Output: `data/digest/{youtube_id}.json`
+  - Skip file esistenti, retry logic, pausa 5s tra chiamate
+- Test sperimentali modelli: Gemini 2.5 Flash, Claude Sonnet 4.5, Mistral Medium, GPT-5.2
+- Output JSON strutturato:
+  - digest: Markdown con ## headers, **bold**, liste
+  - categories: array temi parlamentari (Bilancio, Sanità, etc.)
+  - people: array {name, role}
+- Digest completi ~4-8KB, 200-500 parole
+- Logging automatico in `data/logs/digest_*.log`
+
 ## Estrazione Completa Documenti Seduta
 
 - Scraper estrae 4 tipi di documenti: OdG, Resoconto provvisorio, Resoconto stenografico, Allegato
