@@ -1,0 +1,134 @@
+OpenAI Chat: gpt-4o (aliases: 4o)
+OpenAI Chat: chatgpt-4o-latest (aliases: chatgpt-4o)
+OpenAI Chat: gpt-4o-mini (aliases: 4o-mini)
+OpenAI Chat: gpt-4o-audio-preview
+OpenAI Chat: gpt-4o-audio-preview-2024-12-17
+OpenAI Chat: gpt-4o-audio-preview-2024-10-01
+OpenAI Chat: gpt-4o-mini-audio-preview
+OpenAI Chat: gpt-4o-mini-audio-preview-2024-12-17
+OpenAI Chat: gpt-4.1 (aliases: 4.1)
+OpenAI Chat: gpt-4.1-mini (aliases: 4.1-mini)
+OpenAI Chat: gpt-4.1-nano (aliases: 4.1-nano)
+OpenAI Chat: gpt-3.5-turbo (aliases: 3.5, chatgpt)
+OpenAI Chat: gpt-3.5-turbo-16k (aliases: chatgpt-16k, 3.5-16k)
+OpenAI Chat: gpt-4 (aliases: 4, gpt4)
+OpenAI Chat: gpt-4-32k (aliases: 4-32k)
+OpenAI Chat: gpt-4-1106-preview
+OpenAI Chat: gpt-4-0125-preview
+OpenAI Chat: gpt-4-turbo-2024-04-09
+OpenAI Chat: gpt-4-turbo (aliases: gpt-4-turbo-preview, 4-turbo, 4t)
+OpenAI Chat: gpt-4.5-preview-2025-02-27
+OpenAI Chat: gpt-4.5-preview (aliases: gpt-4.5)
+OpenAI Chat: o1
+OpenAI Chat: o1-2024-12-17
+OpenAI Chat: o1-preview
+OpenAI Chat: o1-mini
+OpenAI Chat: o3-mini
+OpenAI Chat: o3
+OpenAI Chat: o4-mini
+OpenAI Chat: gpt-5
+OpenAI Chat: gpt-5-mini
+OpenAI Chat: gpt-5-nano
+OpenAI Chat: gpt-5-2025-08-07
+OpenAI Chat: gpt-5-mini-2025-08-07
+OpenAI Chat: gpt-5-nano-2025-08-07
+OpenAI Chat: gpt-5.1
+OpenAI Chat: gpt-5.1-chat-latest
+OpenAI Chat: gpt-5.2
+OpenAI Chat: gpt-5.2-chat-latest
+OpenAI Completion: gpt-3.5-turbo-instruct (aliases: 3.5-instruct, chatgpt-instruct)
+OpenAI Chat: groq-openai-llama3
+OpenAI Chat: groq-openai-llama3-8b
+GeminiPro: gemini/gemini-pro (aliases: gemini-pro)
+GeminiPro: gemini/gemini-1.5-pro-latest (aliases: gemini-1.5-pro-latest)
+GeminiPro: gemini/gemini-1.5-flash-latest (aliases: gemini-1.5-flash-latest)
+GeminiPro: gemini/gemini-1.5-pro-001 (aliases: gemini-1.5-pro-001)
+GeminiPro: gemini/gemini-1.5-flash-001 (aliases: gemini-1.5-flash-001)
+GeminiPro: gemini/gemini-1.5-pro-002 (aliases: gemini-1.5-pro-002)
+GeminiPro: gemini/gemini-1.5-flash-002 (aliases: gemini-1.5-flash-002)
+GeminiPro: gemini/gemini-1.5-flash-8b-latest (aliases: gemini-1.5-flash-8b-latest)
+GeminiPro: gemini/gemini-1.5-flash-8b-001 (aliases: gemini-1.5-flash-8b-001)
+GeminiPro: gemini/gemini-exp-1114 (aliases: gemini-exp-1114)
+GeminiPro: gemini/gemini-exp-1121 (aliases: gemini-exp-1121)
+GeminiPro: gemini/gemini-exp-1206 (aliases: gemini-exp-1206)
+GeminiPro: gemini/gemini-2.0-flash-exp (aliases: gemini-2.0-flash-exp)
+GeminiPro: gemini/learnlm-1.5-pro-experimental (aliases: learnlm-1.5-pro-experimental)
+GeminiPro: gemini/gemma-3-1b-it (aliases: gemma-3-1b-it)
+GeminiPro: gemini/gemma-3-4b-it (aliases: gemma-3-4b-it)
+GeminiPro: gemini/gemma-3-12b-it (aliases: gemma-3-12b-it)
+GeminiPro: gemini/gemma-3-27b-it (aliases: gemma-3-27b-it)
+GeminiPro: gemini/gemma-3n-e4b-it (aliases: gemma-3n-e4b-it)
+GeminiPro: gemini/gemini-2.0-flash-thinking-exp-1219 (aliases: gemini-2.0-flash-thinking-exp-1219)
+GeminiPro: gemini/gemini-2.0-flash-thinking-exp-01-21 (aliases: gemini-2.0-flash-thinking-exp-01-21)
+GeminiPro: gemini/gemini-2.0-flash (aliases: gemini-2.0-flash)
+GeminiPro: gemini/gemini-2.0-pro-exp-02-05 (aliases: gemini-2.0-pro-exp-02-05)
+GeminiPro: gemini/gemini-2.0-flash-lite (aliases: gemini-2.0-flash-lite)
+GeminiPro: gemini/gemini-2.5-pro-exp-03-25 (aliases: gemini-2.5-pro-exp-03-25)
+GeminiPro: gemini/gemini-2.5-pro-preview-03-25 (aliases: gemini-2.5-pro-preview-03-25)
+GeminiPro: gemini/gemini-2.5-flash-preview-04-17 (aliases: gemini-2.5-flash-preview-04-17)
+GeminiPro: gemini/gemini-2.5-pro-preview-05-06 (aliases: gemini-2.5-pro-preview-05-06)
+GeminiPro: gemini/gemini-2.5-flash-preview-05-20 (aliases: gemini-2.5-flash-preview-05-20)
+GeminiPro: gemini/gemini-2.5-pro-preview-06-05 (aliases: gemini-2.5-pro-preview-06-05)
+GeminiPro: gemini/gemini-2.5-flash (aliases: gemini-2.5-flash)
+GeminiPro: gemini/gemini-2.5-pro (aliases: gemini-2.5-pro)
+GeminiPro: gemini/gemini-2.5-flash-lite (aliases: gemini-2.5-flash-lite)
+GeminiPro: gemini/gemini-flash-latest (aliases: gemini-flash-latest)
+GeminiPro: gemini/gemini-flash-lite-latest (aliases: gemini-flash-lite-latest)
+GeminiPro: gemini/gemini-2.5-flash-preview-09-2025 (aliases: gemini-2.5-flash-preview-09-2025)
+GeminiPro: gemini/gemini-2.5-flash-lite-preview-09-2025 (aliases: gemini-2.5-flash-lite-preview-09-2025)
+GeminiPro: gemini/gemini-3-pro-preview (aliases: gemini-3-pro-preview)
+Mistral: mistral/ministral-3b-2410
+Mistral: mistral/ministral-3b-latest (aliases: ministral-3b)
+Mistral: mistral/ministral-8b-2410
+Mistral: mistral/ministral-8b-latest (aliases: ministral-8b)
+Mistral: mistral/open-mistral-7b
+Mistral: mistral/mistral-tiny (aliases: mistral-tiny)
+Mistral: mistral/mistral-tiny-2312
+Mistral: mistral/open-mistral-nemo (aliases: mistral-nemo)
+Mistral: mistral/open-mistral-nemo-2407
+Mistral: mistral/mistral-tiny-2407
+Mistral: mistral/mistral-tiny-latest
+Mistral: mistral/open-mixtral-8x7b
+Mistral: mistral/mistral-small
+Mistral: mistral/mistral-small-2312 (aliases: mistral-small-2312)
+Mistral: mistral/open-mixtral-8x22b
+Mistral: mistral/open-mixtral-8x22b-2404
+Mistral: mistral/mistral-small-2402 (aliases: mistral-small-2402)
+Mistral: mistral/mistral-small-2409 (aliases: mistral-small-2409)
+Mistral: mistral/mistral-small-latest (aliases: mistral-small)
+Mistral: mistral/mistral-medium-2312 (aliases: mistral-medium-2312)
+Mistral: mistral/mistral-medium
+Mistral: mistral/mistral-medium-latest (aliases: mistral-medium)
+Mistral: mistral/mistral-large-2402
+Mistral: mistral/mistral-large-2407
+Mistral: mistral/mistral-large-2411
+Mistral: mistral/mistral-large-latest (aliases: mistral-large)
+Mistral: mistral/pixtral-large-2411
+Mistral: mistral/pixtral-large-latest (aliases: pixtral-large)
+Mistral: mistral/codestral-2405
+Mistral: mistral/codestral-latest (aliases: codestral)
+Mistral: mistral/codestral-mamba-2407
+Mistral: mistral/open-codestral-mamba
+Mistral: mistral/codestral-mamba-latest (aliases: codestral-mamba)
+Mistral: mistral/pixtral-12b-2409
+Mistral: mistral/pixtral-12b
+Mistral: mistral/pixtral-12b-latest (aliases: pixtral-12b)
+Mistral: mistral/mistral-moderation-2411
+Mistral: mistral/mistral-moderation-latest
+Anthropic Messages: anthropic/claude-3-opus-20240229
+Anthropic Messages: anthropic/claude-3-opus-latest (aliases: claude-3-opus)
+Anthropic Messages: anthropic/claude-3-sonnet-20240229 (aliases: claude-3-sonnet)
+Anthropic Messages: anthropic/claude-3-haiku-20240307 (aliases: claude-3-haiku)
+Anthropic Messages: anthropic/claude-3-5-sonnet-20240620
+Anthropic Messages: anthropic/claude-3-5-sonnet-20241022
+Anthropic Messages: anthropic/claude-3-5-sonnet-latest (aliases: claude-3.5-sonnet, claude-3.5-sonnet-latest)
+Anthropic Messages: anthropic/claude-3-5-haiku-latest (aliases: claude-3.5-haiku)
+Anthropic Messages: anthropic/claude-3-7-sonnet-20250219
+Anthropic Messages: anthropic/claude-3-7-sonnet-latest (aliases: claude-3.7-sonnet, claude-3.7-sonnet-latest)
+Anthropic Messages: anthropic/claude-opus-4-0 (aliases: claude-4-opus)
+Anthropic Messages: anthropic/claude-sonnet-4-0 (aliases: claude-4-sonnet)
+Anthropic Messages: anthropic/claude-opus-4-1-20250805 (aliases: claude-opus-4.1)
+Anthropic Messages: anthropic/claude-sonnet-4-5 (aliases: claude-sonnet-4.5)
+Anthropic Messages: anthropic/claude-haiku-4-5-20251001 (aliases: claude-haiku-4.5)
+Anthropic Messages: anthropic/claude-opus-4-5-20251101 (aliases: claude-opus-4.5)
+Default: gemini/gemini-2.0-flash
