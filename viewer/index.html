@@ -300,8 +300,6 @@
 
     <div class="controls">
       <input type="text" id="searchBox" placeholder="Cerca seduta...">
-      <input type="file" id="csvFile" accept=".csv">
-      <button onclick="loadDefaultCSV()">Carica CSV Default</button>
       <button onclick="downloadData()">Scarica Dati</button>
     </div>
 
@@ -335,20 +333,6 @@
   <script>
     let allData = [];
     let sedute = [];
-
-    // Load CSV file
-    document.getElementById('csvFile').addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      Papa.parse(file, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (results) => {
-          processData(results.data);
-        }
-      });
-    });
 
     // Load default CSV from GitHub raw URL
     async function loadDefaultCSV() {
