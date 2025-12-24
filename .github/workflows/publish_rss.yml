@@ -63,8 +63,11 @@ jobs:
             git rm -rf .
           fi
 
+          # Preserva viewer/, rimuovi solo file root
+          find . -maxdepth 1 -type f -not -name '.nojekyll' -delete
           rm -rf .venv
-          rm -rf *
+
+          # Copia solo feed.xml preservando viewer/
           cp -R "$tmp_dir/public/"* .
           touch .nojekyll
 
