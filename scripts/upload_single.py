@@ -18,9 +18,11 @@ import csv
 import sys
 import yaml
 import argparse
+import time
+import ssl
 from pathlib import Path
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Callable, Any
 
 from src import scraper, downloader, uploader
 from src.metadata import build_youtube_metadata
@@ -28,6 +30,91 @@ from src.utils import extract_year
 
 
 ANAGRAFICA_EXTRA_FIELDS = ['status', 'failure_reason']
+
+
+def is_temporary_error(error: Exception) -> bool:
+    """
+    Verifica se un errore è temporaneo e può essere ritentato.
+
+    Args:
+        error: Eccezione da verificare
+
+    Returns:
+        True se l'errore sembra temporaneo
+    """
+    error_str = str(error).lower()
+    error_type = type(error).__name__.lower()
+
+    # Errori SSL/network temporanei
+    temporary_patterns = [
+        '_ssl.c',
+        'ssl error',
+        'eof occurred',
+        'connection reset',
+        'connection refused',
+        'timeout',
+        'timed out',
+        'temporary failure',
+        'broken pipe',
+        'network',
+        'socket',
+        'errno'
+    ]
+
+    return any(pattern in error_str or pattern in error_type for pattern in temporary_patterns)
+
+
+def retry_with_backoff(
+    func: Callable[[], Any],
+    max_retries: int = 3,
+    initial_delay: float = 2.0,
+    backoff_factor: float = 2.0,
+    operation_name: str = "operazione"
+) -> Any:
+    """
+    Esegue funzione con retry e backoff esponenziale.
+
+    Args:
+        func: Funzione da eseguire (senza argomenti)
+        max_retries: Numero massimo di tentativi
+        initial_delay: Delay iniziale in secondi
+        backoff_factor: Moltiplicatore per backoff esponenziale
+        operation_name: Nome operazione per log
+
+    Returns:
+        Risultato della funzione
+
+    Raises:
+        Exception: L'ultima eccezione se tutti i tentativi falliscono
+    """
+    last_error = None
+    delay = initial_delay
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            return func()
+        except Exception as e:
+            last_error = e
+
+            # Se è l'ultimo tentativo, propaga l'errore
+            if attempt == max_retries:
+                print(f"  ✗ {operation_name} fallita dopo {max_retries} tentativi")
+                raise
+
+            # Se errore non sembra temporaneo, non ritentare
+            if not is_temporary_error(e):
+                print(f"  ✗ Errore permanente rilevato, skip retry")
+                raise
+
+            # Errore temporaneo, ritenta con backoff
+            print(f"  ⚠ Tentativo {attempt}/{max_retries} fallito: {e}")
+            print(f"  ⏳ Attendo {delay:.1f}s prima di ritentare...")
+            time.sleep(delay)
+            delay *= backoff_factor
+
+    # Questo codice non dovrebbe mai essere raggiunto
+    if last_error:
+        raise last_error
 
 
 def _ensure_anagrafica_fields(fieldnames: list) -> list:
@@ -280,23 +367,24 @@ def main():
         video_path = temp_dir / video_filename
 
         try:
-            success = downloader.download_video(
-                video_row['video_page_url'],
-                str(video_path),
-                retries=config['download'].get('max_retries', 3),
-                max_height=config['download'].get('max_height')
-            )
-
-            if not success or not video_path.exists():
-                print(f"  ✗ Download fallito")
-                update_anagrafica_failure(
-                    anagrafica_path,
-                    video_row['id_video'],
-                    'Download fallito',
-                    numero_seduta=video_row.get('numero_seduta'),
-                    data_seduta=video_row.get('data_seduta')
+            # Download con retry automatico
+            def do_download():
+                success = downloader.download_video(
+                    video_row['video_page_url'],
+                    str(video_path),
+                    retries=config['download'].get('max_retries', 3),
+                    max_height=config['download'].get('max_height')
                 )
-                return 1
+                if not success or not video_path.exists():
+                    raise Exception("Download fallito (nessun file creato)")
+                return success
+
+            retry_with_backoff(
+                do_download,
+                max_retries=3,
+                initial_delay=2.0,
+                operation_name="Download video"
+            )
 
             print(f"  ✓ Video scaricato: {video_path}")
             print(f"  Dimensione: {video_path.stat().st_size / (1024*1024):.1f} MB")
@@ -353,23 +441,25 @@ def main():
     if not args.dry_run:
         print(f"\n⬆️  Upload su YouTube...")
         try:
-            youtube_id = uploader.upload_video(
-                youtube,
-                str(video_path),
-                metadata,
-                playlist_id=playlist_id
-            )
-
-            if not youtube_id:
-                print(f"  ✗ Upload fallito")
-                update_anagrafica_failure(
-                    anagrafica_path,
-                    video_row['id_video'],
-                    'Upload fallito (no ID)',
-                    numero_seduta=video_row.get('numero_seduta'),
-                    data_seduta=video_row.get('data_seduta')
+            # Upload con retry automatico (più aggressivo: 5 tentativi)
+            def do_upload():
+                result = uploader.upload_video(
+                    youtube,
+                    str(video_path),
+                    metadata,
+                    playlist_id=playlist_id
                 )
-                return 1
+                if not result:
+                    raise Exception("Upload fallito (nessun ID restituito)")
+                return result
+
+            youtube_id = retry_with_backoff(
+                do_upload,
+                max_retries=5,
+                initial_delay=3.0,
+                backoff_factor=2.0,
+                operation_name="Upload YouTube"
+            )
 
             print(f"\n✅ UPLOAD COMPLETATO!")
             print(f"  YouTube ID: {youtube_id}")
