@@ -1,5 +1,16 @@
 # 2025-12-24
 
+## Estrazione Completa Documenti Seduta
+
+- Scraper estrae 4 tipi di documenti: OdG, Resoconto provvisorio, Resoconto stenografico, Allegato
+- Schema CSV: aggiunte colonne `resoconto_provvisorio_url`, `resoconto_stenografico_url`, `allegato_url`
+- Backward compatibility: `resoconto_url` mantenuto (preferenza stenografico > provvisorio)
+- Metadata YouTube: descrizioni includono tutti documenti disponibili con emoji
+- Viewer: visualizza tutti documenti con tooltip e emoji (📄 📋 📝 📎)
+- Pattern HTML uniforme: `<h3>Label<a href>` per tutti documenti
+- Test: seduta 158 (stenografico+allegato), seduta 217 (provvisorio+allegato)
+- OpenSpec proposal: extract-seduta-documents validata e implementata
+
 ## Retry con Backoff Esponenziale per Upload
 
 - Aggiunto retry automatico per errori SSL/network temporanei (EOF occurred in violation of protocol)
