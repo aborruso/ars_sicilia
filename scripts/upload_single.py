@@ -325,7 +325,10 @@ def main():
         'data_seduta': video_row['data_seduta'],
         'url_pagina': video_row['url_pagina'],
         'odg_url': video_row.get('odg_url'),
-        'resoconto_url': video_row.get('resoconto_url')
+        'resoconto_url': video_row.get('resoconto_url'),
+        'resoconto_provvisorio_url': video_row.get('resoconto_provvisorio_url', ''),
+        'resoconto_stenografico_url': video_row.get('resoconto_stenografico_url', ''),
+        'allegato_url': video_row.get('allegato_url', '')
     }
     
     video_info = {

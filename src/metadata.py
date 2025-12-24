@@ -96,14 +96,26 @@ def build_description(seduta_info: dict, video_info: dict, config: dict = None) 
         description_parts.append("")
 
     # Aggiungi documenti se disponibili
-    if seduta_info.get('odg_url') or seduta_info.get('resoconto_url'):
+    has_documents = any([
+        seduta_info.get('odg_url'),
+        seduta_info.get('resoconto_provvisorio_url'),
+        seduta_info.get('resoconto_stenografico_url'),
+        seduta_info.get('allegato_url')
+    ])
+
+    if has_documents:
         description_parts.append("📄 Documenti:")
 
         if seduta_info.get('odg_url'):
             description_parts.append(f"- OdG e Comunicazioni: {seduta_info['odg_url']}")
 
-        if seduta_info.get('resoconto_url'):
-            description_parts.append(f"- Resoconto provvisorio: {seduta_info['resoconto_url']}")
+        if seduta_info.get('resoconto_stenografico_url'):
+            description_parts.append(f"- Resoconto stenografico: {seduta_info['resoconto_stenografico_url']}")
+        elif seduta_info.get('resoconto_provvisorio_url'):
+            description_parts.append(f"- Resoconto provvisorio: {seduta_info['resoconto_provvisorio_url']}")
+
+        if seduta_info.get('allegato_url'):
+            description_parts.append(f"- Allegato alla seduta: {seduta_info['allegato_url']}")
 
         description_parts.append("")
 

@@ -46,6 +46,9 @@ def init_anagrafica_csv(file_path: str) -> bool:
             'url_pagina',
             'odg_url',
             'resoconto_url',
+            'resoconto_provvisorio_url',
+            'resoconto_stenografico_url',
+            'allegato_url',
             'id_video',
             'ora_video',
             'data_video',
@@ -228,6 +231,9 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
             url_pagina = seduta_info['url_pagina']
             odg_url = seduta_info.get('odg_url', '')
             resoconto_url = seduta_info.get('resoconto_url', '')
+            resoconto_provvisorio_url = seduta_info.get('resoconto_provvisorio_url', '')
+            resoconto_stenografico_url = seduta_info.get('resoconto_stenografico_url', '')
+            allegato_url = seduta_info.get('allegato_url', '')
 
             # Scrivi una riga per ogni video
             for video in seduta_info['videos']:
@@ -249,6 +255,9 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                     url_pagina,
                     odg_url,
                     resoconto_url,
+                    resoconto_provvisorio_url,
+                    resoconto_stenografico_url,
+                    allegato_url,
                     video['id_video'],
                     ora_video,
                     data_video,
