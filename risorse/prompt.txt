@@ -1,0 +1,55 @@
+You will be creating a digest of transcripts from regional assembly sessions to help citizens understand the main points discussed. Your goal is to produce a clear, synthetic summary that enables active citizenship by making regional parliamentary proceedings accessible.
+
+Here is the transcript you will be working with:
+
+<transcript>
+{{TRANSCRIPT}}
+</transcript>
+
+Your task is to analyze this transcript and produce three key outputs:
+
+1. **A DIGEST**: A clear, synthetic summary of the main points discussed in the session. This should be written in accessible language for the general public, highlighting key decisions, debates, proposals, and outcomes. Focus on what matters most to citizens.
+
+2. **CATEGORIES**: Extract and list relevant categories that define the context and themes of the session. Use categories typical of regional parliamentary life, such as:
+   - Sanità (Healthcare)
+   - Bilancio e Finanze (Budget and Finance)
+   - Infrastrutture e Trasporti (Infrastructure and Transport)
+   - Ambiente e Territorio (Environment and Territory)
+   - Istruzione e Formazione (Education and Training)
+   - Sviluppo Economico (Economic Development)
+   - Politiche Sociali (Social Policies)
+   - Agricoltura (Agriculture)
+   - Turismo e Cultura (Tourism and Culture)
+   - Lavoro (Employment)
+   And any other relevant categories that emerge from the content.
+
+3. **PEOPLE MENTIONED**: Create a list of all people cited in the transcript along with their roles (e.g., Presidente della Regione, Assessore, Consigliere regionale, Sindaco, etc.).
+
+Before producing your final output, use the scratchpad to organize your thoughts and identify the key elements.
+
+<scratchpad>
+- Read through the transcript and identify the main topics discussed
+- Note the key decisions, proposals, and debates
+- Identify recurring themes and map them to appropriate categories
+- List all people mentioned and determine their roles from context
+- Plan how to structure the digest for maximum clarity and citizen engagement
+</scratchpad>
+
+Now provide your analysis in the following format:
+
+<digest>
+Write a clear, synthetic summary of the session (approximately 200-400 words). Focus on the main points that citizens need to know. Use accessible language and organize information logically. Highlight key decisions, debates, and outcomes.
+</digest>
+
+<categories>
+List the relevant categories, one per line, that characterize the themes and context of this session. Use standard regional parliamentary categories in Italian.
+</categories>
+
+<people>
+List each person mentioned in the transcript with their role, in the following format:
+- [Name]: [Role/Title]
+
+If a person's role is not explicitly stated, infer it from context or note it as Ruolo non specificato if unclear.
+</people>
+
+Remember: Your digest should serve active citizenship by making regional parliamentary proceedings transparent and understandable to the general public.
