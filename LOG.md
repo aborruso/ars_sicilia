@@ -1,3 +1,15 @@
+# 2025-12-25
+
+## Validazione JSON e Retry per Digest
+
+- Fix JSON corrotti generati da LLM (es. v4mq1poSzOw.json)
+- Funzione `validate_json()` in generate_digests.sh: verifica sintassi con `jq empty`
+- Retry automatico: max 3 tentativi per digest, validazione dopo ogni generazione
+- Attesa 5 secondi tra retry per rate limiting
+- File JSON malformati rimossi automaticamente
+- Cleanup digest esistenti: verificati tutti, rimosso 1 corrotto
+- Al prossimo run, digest mancanti vengono rigenerati con validazione
+
 # 2025-12-24
 
 ## Generazione Automatica Digest Video con LLM
