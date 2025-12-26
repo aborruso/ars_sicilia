@@ -1,5 +1,14 @@
 # 2025-12-26
 
+## Fix CSV Carriage Returns
+
+- Rimossi `\r` (carriage return) dai valori CSV in anagrafica
+- Bug introdotto quando aggiunta colonna `no_transcript`
+- `\r` nei valori causava display corrotto con `mlr --c2t`
+- Script `fix_csv_carriage_returns.py` pulisce 28 record
+- CSV ora valido: parsing corretto con miller e Python csv
+- Prevenzione: codice già usa `newline=''` correttamente
+
 ## Video Duration Tracking
 
 - Aggiunta colonna `duration_minutes` a anagrafica CSV
