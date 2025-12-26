@@ -69,6 +69,7 @@ jobs:
           rm -rf .venv
           find . -type d -name '__pycache__' -prune -exec rm -rf {} +
           find . -type f -name '*.pyc' -delete
+          rm -rf public
 
           # Copia solo feed.xml preservando viewer/
           cp "$tmp_dir/feed.xml" ./feed.xml
