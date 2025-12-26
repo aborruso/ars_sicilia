@@ -67,6 +67,8 @@ jobs:
           # Preserva viewer/, rimuovi solo file root
           find . -maxdepth 1 -type f -not -name '.nojekyll' -delete
           rm -rf .venv
+          find . -type d -name '__pycache__' -prune -exec rm -rf {} +
+          find . -type f -name '*.pyc' -delete
 
           # Copia solo feed.xml preservando viewer/
           cp -R "$tmp_dir/public/"* .
