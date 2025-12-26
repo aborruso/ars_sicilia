@@ -150,7 +150,8 @@ def update_anagrafica_youtube_id(
     id_video: str,
     youtube_id: str,
     numero_seduta: Optional[str] = None,
-    data_seduta: Optional[str] = None
+    data_seduta: Optional[str] = None,
+    duration_minutes: Optional[int] = None
 ) -> bool:
     """
     Aggiorna youtube_id per video in anagrafica.
@@ -161,6 +162,7 @@ def update_anagrafica_youtube_id(
         youtube_id: ID video YouTube
         numero_seduta: Numero seduta (opzionale per matching forte)
         data_seduta: Data seduta (opzionale per matching forte)
+        duration_minutes: Durata video in minuti (opzionale)
 
     Returns:
         True se aggiornato
@@ -184,6 +186,8 @@ def update_anagrafica_youtube_id(
                     row['last_check'] = datetime.now().isoformat()
                     row['status'] = 'success'
                     row['failure_reason'] = ''
+                    if duration_minutes is not None:
+                        row['duration_minutes'] = str(duration_minutes)
                 rows.append(row)
 
         with open(anagrafica_path, 'w', newline='', encoding='utf-8') as f:

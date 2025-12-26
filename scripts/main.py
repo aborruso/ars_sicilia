@@ -153,7 +153,7 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
 
         output_file = f"{config['download']['temp_dir']}/{video_id}.mp4"
 
-        success = downloader.download_video(
+        success, duration_mins = downloader.download_video(
             video_url,
             output_file,
             retries=config['download']['max_retries'],
@@ -194,7 +194,8 @@ def process_seduta(seduta_url: str, config: dict, youtube_client) -> dict:
                         video_id,
                         youtube_id,
                         numero_seduta=seduta_info.get('numero_seduta'),
-                        data_seduta=seduta_info.get('data_seduta')
+                        data_seduta=seduta_info.get('data_seduta'),
+                        duration_minutes=duration_mins
                     )
                 results['uploaded'] += 1
             else:

@@ -1,3 +1,17 @@
+# 2025-12-26
+
+## Video Duration Tracking
+
+- Aggiunta colonna `duration_minutes` a anagrafica CSV
+- Estrazione durata automatica da yt-dlp durante download (metadata JSON)
+- Durata salvata in minuti (arrotondata) per ogni video caricato
+- Preservation logic: re-crawl preserva durate esistenti
+- Script `scripts/backfill_durations.py`: backfill durate per video già su YouTube
+- Parser ISO 8601 (es. PT1H23M45S → 84 minuti)
+- Backfill completato: 20 video aggiornati via YouTube Data API v3 (<1 quota unit)
+- Range durate: 0-162 minuti
+- Nuovi upload ottengono durata automaticamente
+
 # 2025-12-25
 
 ## Validazione JSON e Retry per Digest
