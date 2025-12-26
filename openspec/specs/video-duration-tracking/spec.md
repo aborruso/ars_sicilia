@@ -1,7 +1,7 @@
 # video-duration-tracking Specification
 
 ## Purpose
-TBD - created by archiving change 2025-12-26-add-video-duration. Update Purpose after archive.
+Track video duration metadata in the anagrafica CSV to enable analytics, filtering, and no-transcript detection. Duration is extracted from yt-dlp during download and backfilled via YouTube API for already-uploaded videos.
 ## Requirements
 ### Requirement: Extract Duration from yt-dlp Metadata
 The downloader SHALL extract video duration from yt-dlp JSON metadata during the download phase.

@@ -1,7 +1,7 @@
 # ars-video-pipeline Specification
 
 ## Purpose
-TBD - created by archiving change update-ars-pipeline-reliability. Update Purpose after archive.
+Core video ingestion pipeline: scrape seduta pages, catalog videos, download streams, upload to YouTube, and maintain CSV logs. Implements idempotency, retry logic, and incremental processing.
 ## Requirements
 ### Requirement: Configurable HTTP timeouts and retries for scraping
 The system SHALL use timeout and retry settings from configuration when fetching ARS pages.

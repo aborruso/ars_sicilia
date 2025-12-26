@@ -1,7 +1,7 @@
 # Project Context
 
 ## Purpose
-Automate the collection and publication of Assemblea Regionale Siciliana (ARS) plenary videos: crawl seduta pages, catalog metadata, download streams, and upload to YouTube with searchable titles, descriptions, tags, and recording dates. Maintain a public CSV log to avoid duplicate uploads and enable auditing. Extract structured legislative bill data from agenda PDFs (OdG) for historical archiving and linkage to videos.
+Automate the collection and publication of Assemblea Regionale Siciliana (ARS) plenary videos: crawl seduta pages, catalog metadata, download streams, and upload to YouTube with searchable titles, descriptions, tags, and recording dates. Maintain a public CSV log to avoid duplicate uploads and enable auditing. Extract structured legislative bill data from agenda PDFs (OdG) for historical archiving and linkage to videos. Generate AI-powered video digests from transcripts and track video duration for analytics.
 
 ## Tech Stack
 - Python 3.10+
@@ -11,7 +11,7 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Bash wrapper (`scripts/run_daily.sh`) for cron with lock handling
 - GitHub Actions workflows for daily upload and RSS publish (`.github/workflows/*.yml`)
 - Package dependencies: `yt-dlp>=2024.0.0`, `google-api-python-client>=2.0.0`, `google-auth-oauthlib>=1.0.0`, `google-auth-httplib2>=0.1.0`, `beautifulsoup4>=4.12.0`, `requests>=2.31.0`, `pyyaml>=6.0`
-- CLI tools: `markitdown` (PDF to text conversion), `llm` (LLM-based structured extraction), `mlr` (miller, JSONL processing)
+- CLI tools: `markitdown` (PDF to text conversion), `llm` (LLM-based structured extraction), `mlr` (miller, JSONL/CSV processing), `qv` (yt-dlp wrapper for transcript download)
 
 ## Project Conventions
 
@@ -24,12 +24,15 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 
 ### Architecture Patterns
 - Modular pipeline: `scraper` (HTML fetch/parse) → `metadata` (title/description/tags) → `downloader` (yt-dlp HLS) → `uploader` (YouTube Data API) → `logger` (CSV log/index).
-- Script entrypoints live under `scripts/` (e.g., `scripts/main.py`, `scripts/build_anagrafica.py`, `scripts/extract_odg_data.sh`, `scripts/run_daily.sh`).
+- Script entrypoints live under `scripts/` (e.g., `scripts/main.py`, `scripts/build_anagrafica.py`, `scripts/extract_odg_data.sh`, `scripts/generate_digests.sh`, `scripts/run_daily.sh`).
 - Document extraction: scraper extracts 4 document types from seduta pages (OdG, resoconto provvisorio/stenografico, allegato) via pattern matching on HTML labels; maintains backward-compatible `resoconto_url` field (prefers stenographic over provisional).
 - OdG extraction pipeline: `extract_odg_data.sh` uses `markitdown` (PDF→text) + `llm` (text→JSON) to extract legislative bills from agenda PDFs; outputs to `data/disegni_legge.jsonl` with deduplication.
+- Video digest generation: `generate_digests.sh` downloads transcripts via `qv`, generates structured summaries using `llm` with JSON schema validation, and skips videos without spoken content (<100 bytes transcript) by marking them in anagrafica CSV.
+- Duration tracking: video length extracted from yt-dlp metadata during download and stored in `duration_minutes` column; backfill script uses YouTube Data API for already-uploaded videos.
+- Maintenance tools: `scripts/update_descriptions.py` for bulk YouTube metadata updates; supports dry-run mode.
 - RSS feed generation via `scripts/generate_rss.py`, published by GitHub Actions.
 - Configuration-driven behavior via `config/config.yaml`; defaults target seduta 219 (10/12/2025) onward.
-- Idempotency: skip uploads already logged as `success`; incremental crawler (`build_anagrafica.py`) updates `data/anagrafica_video.csv` and stops when no future sedute; OdG extraction tracks processed PDFs.
+- Idempotency: skip uploads already logged as `success`; incremental crawler (`build_anagrafica.py`) updates `data/anagrafica_video.csv` and stops when no future sedute; OdG extraction tracks processed PDFs; digest generation skips existing JSONs and videos marked `no_transcript=true`.
 - Shell automation (`run_daily.sh`) uses `set -euo pipefail` and lock file to prevent concurrent runs.
 
 ### Testing Strategy
