@@ -8,7 +8,7 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `build_anagrafica.py` — Crawler incrementale per aggiornare `data/anagrafica_video.csv`.
 - `upload_single.py` — Upload singolo video (primo senza `youtube_id`), con `--dry-run`.
 - `run_daily.sh` — Wrapper per esecuzione giornaliera con lock file.
-- `generate_rss.py` — Genera `public/feed.xml` dai video caricati.
+- `generate_rss.py` — Genera `feed.xml` dai video caricati.
 - `extract_odg_data.sh` — Estrae dati disegni legge dai PDF OdG e li salva in `data/disegni_legge.jsonl`.
 - `update_descriptions.py` — Aggiorna descrizioni (e opzionalmente titoli) dei video già pubblicati.
 - `generate_digests.sh` — Genera digest automatici dai video YouTube usando trascrizioni e template.

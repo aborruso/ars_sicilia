@@ -68,4 +68,4 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - YouTube Data API v3 for authentication, upload, and channel/quota info.
 - Google OAuth 2.0 desktop client secrets (`config/youtube_secrets.json`) and token cache (`config/token.json`).
 - `yt-dlp` binary for downloading HLS streams from ARS video pages.
-- GitHub Pages for hosting the public RSS feed (`public/feed.xml`, published from `gh-pages`).
+- GitHub Pages for hosting the public RSS feed (`feed.xml`, published from `gh-pages`).

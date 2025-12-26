@@ -36,20 +36,19 @@ jobs:
           python scripts/generate_rss.py \
             --base-url "$BASE_URL" \
             --limit 20 \
-            --output public/feed.xml
+            --output feed.xml
 
       - name: Publish to gh-pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ ! -d public ]; then
-            echo "public/ missing; RSS generation did not produce output"
+          if [ ! -f feed.xml ]; then
+            echo "feed.xml missing; RSS generation did not produce output"
             exit 1
           fi
 
           tmp_dir="$(mktemp -d)"
-          cp public/feed.xml "$tmp_dir/feed.xml"
-          rm -rf public
+          cp feed.xml "$tmp_dir/feed.xml"
 
           gh auth setup-git
           git config user.name "github-actions"

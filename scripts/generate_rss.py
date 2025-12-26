@@ -86,7 +86,7 @@ def main() -> int:
     parser.add_argument('--anagrafica', default='data/anagrafica_video.csv')
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--limit', type=int, default=20)
-    parser.add_argument('--output', default='public/feed.xml')
+    parser.add_argument('--output', default='feed.xml')
     args = parser.parse_args()
 
     config = load_config(args.config)
