@@ -40,22 +40,27 @@ The system SHALL store video duration in the anagrafica CSV as integer minutes (
 **Then** `duration_minutes` is set to `0` (rounded down from 0.08)
 
 ### Requirement: Anagrafica CSV Duration Column
-The anagrafica CSV SHALL include a `duration_minutes` column to store video duration.
+The anagrafica CSV SHALL include a `duration_minutes` column to store video duration and a `no_transcript` column to flag videos without spoken content.
 
 #### Scenario: CSV schema migration
-**Given** an existing anagrafica CSV without `duration_minutes` column
+**Given** an existing anagrafica CSV without `duration_minutes` and `no_transcript` columns
 **When** `init_anagrafica_csv()` runs
-**Then** the `duration_minutes` column is added with empty values for existing rows
+**Then** both columns are added with empty values for existing rows
 
 #### Scenario: New video cataloging with duration
 **Given** a video is downloaded and duration extracted
 **When** `save_seduta_to_anagrafica()` is called
-**Then** the CSV row contains the `duration_minutes` value
+**Then** the CSV row contains the `duration_minutes` value and `no_transcript` is empty (not yet checked)
 
 #### Scenario: Video cataloging without download
 **Given** a seduta is cataloged without downloading videos
 **When** `save_seduta_to_anagrafica()` is called
-**Then** `duration_minutes` is set to empty string (not yet known)
+**Then** `duration_minutes` and `no_transcript` are set to empty string (not yet known)
+
+#### Scenario: Video marked as no transcript
+**Given** digest generation detects empty transcript for a video
+**When** the CSV is updated
+**Then** `no_transcript` is set to `true` for that video row
 
 ### Requirement: Backfill Duration from YouTube API
 The system SHALL provide a script to backfill duration for videos already uploaded to YouTube.
