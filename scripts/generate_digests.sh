@@ -54,6 +54,7 @@ total=0
 skipped=0
 generated=0
 failed=0
+no_transcript=0
 
 # Estrai youtube_id non vuoti usando mlr
 while read -r youtube_id; do
@@ -66,6 +67,14 @@ while read -r youtube_id; do
     if [ -f "$OUTPUT_FILE" ]; then
         log "SKIP: $youtube_id (già esistente)"
         skipped=$((skipped + 1))
+        continue
+    fi
+
+    # Skip se già marcato come no_transcript
+    NO_TRANSCRIPT_FLAG=$(mlr --csv filter "\$youtube_id == \"$youtube_id\"" then cut -f no_transcript "$CSV_FILE" | tail -n1)
+    if [ "$NO_TRANSCRIPT_FLAG" = "true" ]; then
+        log "SKIP: $youtube_id (no transcript flagged)"
+        no_transcript=$((no_transcript + 1))
         continue
     fi
 
@@ -91,6 +100,16 @@ while read -r youtube_id; do
 
     TRANSCRIPT_SIZE=$(wc -c < "$TRANSCRIPT_FILE")
     log "  Trascrizione: $TRANSCRIPT_SIZE bytes"
+
+    # Verifica dimensione trascrizione (soglia 100 bytes)
+    if [ "$TRANSCRIPT_SIZE" -lt 100 ]; then
+        log "  SKIP: Trascrizione troppo piccola (<100 bytes), marcato come no_transcript"
+        # Marca video come no_transcript nel CSV
+        mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
+        rm -f "$TRANSCRIPT_FILE"
+        no_transcript=$((no_transcript + 1))
+        continue
+    fi
 
     # Genera digest con retry
     success=false
@@ -141,6 +160,7 @@ log ""
 log "=== Completato ==="
 log "Totale video: $total"
 log "Skipped (già esistenti): $skipped"
+log "Skipped (no transcript): $no_transcript"
 log "Generati: $generated"
 log "Falliti: $failed"
 # log "Log: $LOG_FILE"
