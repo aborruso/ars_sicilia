@@ -1,5 +1,6 @@
 """Downloader video HLS usando yt-dlp."""
 
+import json
 import subprocess
 import time
 from pathlib import Path
@@ -11,7 +12,7 @@ def download_video(
     output_path: str,
     retries: int = 3,
     max_height: int | None = None
-) -> bool:
+) -> tuple[bool, Optional[int]]:
     """
     Download video HLS usando yt-dlp.
 
@@ -21,7 +22,9 @@ def download_video(
         retries: Numero di tentativi
 
     Returns:
-        True se download riuscito, False altrimenti
+        Tuple (success, duration_minutes)
+        - success: True se download riuscito, False altrimenti
+        - duration_minutes: durata in minuti (arrotondata), None se non estratta
     """
     for attempt in range(retries):
         try:
@@ -57,16 +60,40 @@ def download_video(
                 if Path(output_path).exists():
                     file_size = Path(output_path).stat().st_size
                     print(f"  ✓ Download completato: {file_size / 1024 / 1024:.1f} MB")
-                    return True
+
+                    # Estrai durata da metadata
+                    duration_mins = None
+                    try:
+                        print(f"  Estrazione metadata durata...")
+                        metadata_result = subprocess.run(
+                            ['yt-dlp', '--dump-json', '--no-download', video_url],
+                            capture_output=True,
+                            text=True,
+                            timeout=30
+                        )
+                        if metadata_result.returncode == 0:
+                            metadata = json.loads(metadata_result.stdout)
+                            duration_secs = metadata.get('duration')
+                            if duration_secs:
+                                duration_mins = round(duration_secs / 60)
+                                print(f"  ✓ Durata: {duration_mins} minuti")
+                            else:
+                                print(f"  ⚠ Durata non trovata in metadata")
+                        else:
+                            print(f"  ⚠ Metadata extraction failed")
+                    except Exception as e:
+                        print(f"  ⚠ Duration extraction failed: {e}")
+
+                    return True, duration_mins
                 else:
                     print(f"  ✗ Errore: file non trovato dopo download")
-                    return False
+                    return False, None
             else:
                 print(f"  ✗ Download fallito (exit code {result.returncode})")
 
                 # Se ultimo tentativo fallito
                 if attempt == retries - 1:
-                    return False
+                    return False, None
 
                 # Backoff esponenziale
                 wait_time = 2 ** attempt
@@ -75,14 +102,14 @@ def download_video(
 
         except subprocess.TimeoutExpired:
             print(f"  Timeout download (>1h)")
-            return False
+            return False, None
         except Exception as e:
             print(f"  Errore download: {e}")
             if attempt == retries - 1:
-                return False
+                return False, None
             time.sleep(2 ** attempt)
 
-    return False
+    return False, None
 
 
 def get_video_stream_url(video_page_url: str) -> Optional[str]:

@@ -57,7 +57,8 @@ def init_anagrafica_csv(file_path: str) -> bool:
             'youtube_id',
             'last_check',
             'status',
-            'failure_reason'
+            'failure_reason',
+            'duration_minutes'
         ]
 
         if not path.exists():
@@ -158,7 +159,8 @@ def get_existing_youtube_ids(file_path: str, numero_seduta: str) -> dict:
                         'youtube_id': row.get('youtube_id', ''),
                         'last_check': row.get('last_check', ''),
                         'status': row.get('status', ''),
-                        'failure_reason': row.get('failure_reason', '')
+                        'failure_reason': row.get('failure_reason', ''),
+                        'duration_minutes': row.get('duration_minutes', '')
                     }
 
     except Exception as e:
@@ -246,6 +248,7 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                 youtube_id = existing.get('youtube_id', '')
                 status = existing.get('status', '')
                 failure_reason = existing.get('failure_reason', '')
+                duration_minutes = existing.get('duration_minutes', '')
                 # Preserva last_check se youtube_id esiste (non aggiornare timestamp per video già uploadati)
                 last_check = existing.get('last_check', '') if youtube_id else timestamp
 
@@ -266,7 +269,8 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                     youtube_id,  # Preservato da record esistente
                     last_check,  # Preservato per video uploadati, nuovo timestamp per video nuovi
                     status,
-                    failure_reason
+                    failure_reason,
+                    duration_minutes  # Preservato da record esistente
                 ])
                 video_count += 1
 

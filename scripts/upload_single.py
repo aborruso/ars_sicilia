@@ -175,7 +175,8 @@ def update_anagrafica_youtube_id(
     id_video: str,
     youtube_id: str,
     numero_seduta: str | None = None,
-    data_seduta: str | None = None
+    data_seduta: str | None = None,
+    duration_minutes: int | None = None
 ) -> bool:
     """
     Aggiorna youtube_id per video in anagrafica.
@@ -209,6 +210,8 @@ def update_anagrafica_youtube_id(
                     row['last_check'] = datetime.now().isoformat()
                     row['status'] = 'success'
                     row['failure_reason'] = ''
+                    if duration_minutes is not None:
+                        row['duration_minutes'] = str(duration_minutes)
                 rows.append(row)
         
         # Riscrivi anagrafica
@@ -371,8 +374,10 @@ def main():
 
         try:
             # Download con retry automatico
+            duration_mins = None
             def do_download():
-                success = downloader.download_video(
+                nonlocal duration_mins
+                success, duration_mins = downloader.download_video(
                     video_row['video_page_url'],
                     str(video_path),
                     retries=config['download'].get('max_retries', 3),
@@ -493,7 +498,8 @@ def main():
             video_row['id_video'],
             youtube_id,
             numero_seduta=video_row.get('numero_seduta'),
-            data_seduta=video_row.get('data_seduta')
+            data_seduta=video_row.get('data_seduta'),
+            duration_minutes=duration_mins
         ):
             print(f"  ✓ Anagrafica aggiornata: {anagrafica_path}")
             print(f"  Campo youtube_id impostato per video {video_row['id_video']}")
