@@ -1,7 +1,7 @@
 # ars-public-feed Specification
 
 ## Purpose
-TBD - created by archiving change add-public-rss-feed. Update Purpose after archive.
+Publish a public RSS feed of uploaded ARS videos to enable syndication, notifications, and third-party integrations. Feed is generated from anagrafica CSV and published to GitHub Pages.
 ## Requirements
 ### Requirement: RSS pubblico degli ultimi video
 Il sistema SHALL pubblicare un feed RSS con gli ultimi video caricati.

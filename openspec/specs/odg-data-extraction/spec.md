@@ -1,7 +1,7 @@
 # odg-data-extraction Specification
 
 ## Purpose
-TBD - created by archiving change add-odg-extraction. Update Purpose after archive.
+Extract structured legislative bill data from seduta agenda PDFs (Ordine del Giorno) using PDF-to-text conversion and LLM-based parsing. Outputs deduped JSONL records for historical archiving and linkage to videos.
 ## Requirements
 ### Requirement: Estrazione dati da PDF OdG
 Il sistema SHALL estrarre dai PDF OdG i seguenti campi per ogni disegno di legge: `titolo_disegno`, `numero_disegno` (solo parte numerica), `legislatura` (numero romano), `data_ora` (formato ISO 8601).

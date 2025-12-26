@@ -1,7 +1,7 @@
 # video-digest-generation Specification
 
 ## Purpose
-TBD - created by archiving change skip-no-transcript-videos. Update Purpose after archive.
+Generate AI-powered summaries (digests) of ARS plenary session videos using transcript analysis. Automatically detect videos without spoken content and skip them to optimize LLM quota usage.
 ## Requirements
 ### Requirement: Video Transcript Download
 The digest generation script SHALL download video transcripts using `qv` (yt-dlp wrapper) before processing.

@@ -1,7 +1,7 @@
 # ars-video-maintenance Specification
 
 ## Purpose
-TBD - created by archiving change add-description-updater. Update Purpose after archive.
+Maintain and update YouTube video metadata for already-uploaded videos. Supports bulk description updates to add missing seduta tokens and improve searchability.
 ## Requirements
 ### Requirement: Description updater tool
 The system SHALL provide a script that updates YouTube descriptions for videos missing the seduta token, based on anagrafica data.
