@@ -48,7 +48,7 @@ jobs:
           fi
 
           tmp_dir="$(mktemp -d)"
-          cp -R public "$tmp_dir/public"
+          cp public/feed.xml "$tmp_dir/feed.xml"
           rm -rf public
 
           gh auth setup-git
@@ -71,7 +71,7 @@ jobs:
           find . -type f -name '*.pyc' -delete
 
           # Copia solo feed.xml preservando viewer/
-          cp -R "$tmp_dir/public/"* .
+          cp "$tmp_dir/feed.xml" ./feed.xml
           touch .nojekyll
 
           git add -A
