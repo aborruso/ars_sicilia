@@ -84,6 +84,19 @@ def download_video(
                     except Exception as e:
                         print(f"  ⚠ Duration extraction failed: {e}")
 
+                    # Se durata non estratta da metadata, usa ffprobe sul file
+                    if duration_mins is None:
+                        try:
+                            print(f"  Estrazione durata da file MP4...")
+                            duration_secs = get_video_duration(output_path)
+                            if duration_secs:
+                                duration_mins = round(duration_secs / 60)
+                                print(f"  ✓ Durata (ffprobe): {duration_mins} minuti")
+                            else:
+                                print(f"  ⚠ Impossibile estrarre durata dal file")
+                        except Exception as e:
+                            print(f"  ⚠ ffprobe extraction failed: {e}")
+
                     return True, duration_mins
                 else:
                     print(f"  ✗ Errore: file non trovato dopo download")

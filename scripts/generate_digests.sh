@@ -84,17 +84,21 @@ while read -r youtube_id; do
     TRANSCRIPT_FILE="$DIGEST_DIR/.tmp_transcript_${youtube_id}.txt"
 
     if ! qv "https://youtu.be/$youtube_id" --text-only > "$TRANSCRIPT_FILE" 2>&1; then
-        log "  ERRORE: Impossibile scaricare trascrizione"
+        log "  ERRORE: Impossibile scaricare trascrizione, marcato come no_transcript"
+        # Marca video come no_transcript nel CSV
+        mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
         rm -f "$TRANSCRIPT_FILE"
-        failed=$((failed + 1))
+        no_transcript=$((no_transcript + 1))
         continue
     fi
 
     # Verifica trascrizione non vuota
     if [ ! -s "$TRANSCRIPT_FILE" ]; then
-        log "  ERRORE: Trascrizione vuota"
+        log "  ERRORE: Trascrizione vuota, marcato come no_transcript"
+        # Marca video come no_transcript nel CSV
+        mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
         rm -f "$TRANSCRIPT_FILE"
-        failed=$((failed + 1))
+        no_transcript=$((no_transcript + 1))
         continue
     fi
 
