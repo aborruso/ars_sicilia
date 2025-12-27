@@ -1,3 +1,15 @@
+# 2025-12-27
+
+## Fix Error Handling No Transcript
+
+- Script generate_digests.sh ora marca video con `no_transcript=true` quando:
+  - `qv` fallisce scaricamento trascrizione
+  - Trascrizione scaricata è vuota
+- Coerente con comportamento esistente per trascrizioni <100 bytes
+- Contatore `no_transcript` invece di `failed` per questi casi
+- Video Ec3zq1hXafw marcato manualmente (1 minuto, no transcript)
+- Skip automatico run successivi: video già marcati non vengono più ritentati
+
 # 2025-12-26
 
 ## Fix CSV Carriage Returns
