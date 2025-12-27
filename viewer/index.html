@@ -378,7 +378,8 @@
           data: row.data_video,
           youtube_id: row.youtube_id,
           video_url: row.video_page_url,
-          status: row.status || (row.youtube_id ? 'success' : 'pending')
+          status: row.status || (row.youtube_id ? 'success' : 'pending'),
+          duration_minutes: row.duration_minutes ? parseInt(row.duration_minutes) : null
         });
       });
 
@@ -470,21 +471,28 @@
         return dateA.localeCompare(dateB);
       });
 
-      return sorted.map(video => `
-        <div class="video-item">
-          <div class="video-time">${video.ora}</div>
-          <div class="video-info">
-            <div class="video-date">📅 ${formatDate(video.data)}</div>
+      return sorted.map(video => {
+        const duration = formatDuration(video.duration_minutes);
+        const dateInfo = duration ?
+          `📅 ${formatDate(video.data)} &middot; ⏱️ ${duration}` :
+          `📅 ${formatDate(video.data)}`;
+
+        return `
+          <div class="video-item">
+            <div class="video-time">${video.ora}</div>
+            <div class="video-info">
+              <div class="video-date">${dateInfo}</div>
+            </div>
+            <div class="video-actions">
+              ${video.youtube_id ?
+                `<a href="https://www.youtube.com/watch?v=${video.youtube_id}" target="_blank">▶ YouTube</a>` :
+                `<span class="badge pending">In attesa</span>`
+              }
+              <a href="${video.video_url}" target="_blank">ARS</a>
+            </div>
           </div>
-          <div class="video-actions">
-            ${video.youtube_id ?
-              `<a href="https://www.youtube.com/watch?v=${video.youtube_id}" target="_blank">▶ YouTube</a>` :
-              `<span class="badge pending">In attesa</span>`
-            }
-            <a href="${video.video_url}" target="_blank">ARS</a>
-          </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     }
 
     // Toggle seduta expansion
@@ -501,6 +509,21 @@
       if (!dateStr) return '';
       const [year, month, day] = dateStr.split('-');
       return `${day}/${month}/${year}`;
+    }
+
+    // Format duration
+    function formatDuration(minutes) {
+      if (!minutes || minutes === 0) return '';
+      const hours = Math.floor(minutes / 60);
+      const mins = minutes % 60;
+
+      if (hours > 0 && mins > 0) {
+        return `${hours}h ${mins}min`;
+      } else if (hours > 0) {
+        return `${hours}h`;
+      } else {
+        return `${mins}min`;
+      }
     }
 
     // Search functionality
