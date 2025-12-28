@@ -1,5 +1,17 @@
 # 2025-12-28
 
+## Disclaimer AI per Digest Video
+
+- Implementato disclaimer prominente prima contenuto digest
+- Box warning (bg-yellow-50, border-yellow-200) con icona ⚠️
+- Testo: "ATTENZIONE: Il testo di questo digest è stato generato automaticamente da un LLM..."
+- Appare solo quando digest disponibile (no disclaimer per "Sintesi non disponibile")
+- Accessibilità: semantic `<aside>` con `role="note"` e `aria-label`
+- Styling consistente con pattern warning esistenti
+- File modificato: src/components/sedute/DigestContent.astro
+- OpenSpec: change archiviato, spec creato in openspec/specs/digest-disclaimer/
+- Aggiornato openspec/project.md con menzione AI transparency
+
 ## Navigazione Video Precedente/Successivo
 
 - Implementata navigazione prev/next nella pagina single video
