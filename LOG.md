@@ -1,5 +1,19 @@
 # 2025-12-28
 
+## Ristrutturazione Completa README.md
+
+- README trasformato da "YouTube Uploader" a "Archivio Consultabile Sedute Assemblea"
+- Focus principale: piattaforma civic tech con sito web consultabile
+- Struttura 12 sezioni: Introduzione, Funzionalità, Architettura, Stack, Quick Start, Setup, Pipeline YouTube, Docs, Dati Aperti, Roadmap, Contributi, Contatti
+- **Sito web FIRST** (frontend Astro), pipeline YouTube SECOND (backend Python)
+- Audience ampliata: da sviluppatori Python a cittadini + sviluppatori
+- Setup tecnico YouTube collassato in `<details>` (ridotto da 500+ righe)
+- Aggiunta sezione Dati Aperti con schema CSV/JSONL
+- Aggiunta sezione Roadmap con sviluppi futuri
+- Più link a documentazione esistente (PRD, design-system, LOG, openspec)
+- Mantiene completezza tecnica ma con organizzazione user-friendly
+- File modificato: README.md (completa riscrittura)
+
 ## Redesign Completo "Editorial Civic"
 
 - Implementato nuovo design system con identità visiva distintiva
