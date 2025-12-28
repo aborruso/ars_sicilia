@@ -16,3 +16,24 @@ Use `@/openspec/AGENTS.md` to learn:
 Keep this managed block so 'openspec update' can refresh the instructions.
 
 <!-- OPENSPEC:END -->
+
+## Proposal Format
+
+When creating `proposal.md`, use this exact structure to avoid validation warnings:
+
+```markdown
+# Change: [Brief description]
+
+## Why
+[1-2 sentences on problem/opportunity]
+
+## What Changes
+- [Bullet list of changes]
+- [Mark breaking changes with **BREAKING**]
+
+## Impact
+- Affected specs: [list capabilities]
+- Affected code: [key files/systems]
+```
+
+Optional sections (add after required sections): Timeline, Trade-offs, Out of Scope, Related Changes
