@@ -10,30 +10,50 @@ const { seduta } = Astro.props;
 const sedutaUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}`;
 ---
 
-<article class="card overflow-hidden">
-  <div class="gradient-purple-blue text-white p-6">
-    <div class="flex justify-between items-start gap-4">
-      <div>
-        <h2 class="text-2xl font-bold mb-2">
-          <a href={sedutaUrl} class="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded">
+<article class="card group hover:border-l-navy-800 transition-all duration-300">
+  <!-- Header con titolo seduta -->
+  <div class="p-6 pb-4">
+    <div class="flex justify-between items-start gap-4 mb-4">
+      <div class="flex-1">
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-navy-800 mb-2 leading-tight">
+          <a
+            href={sedutaUrl}
+            class="hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded-sm transition-colors duration-200"
+          >
             Seduta n. {seduta.numero}
           </a>
         </h2>
-        <p class="text-white/90 text-sm">
-          {formatDateShort(seduta.dataSeduta)} · {seduta.videos.length} video
-        </p>
+        <div class="flex flex-wrap items-center gap-3 text-sm text-warm-600">
+          <span class="inline-flex items-center gap-1.5 font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            {formatDateShort(seduta.dataSeduta)}
+          </span>
+          <span class="text-warm-400">•</span>
+          <span class="inline-flex items-center gap-1.5 font-medium">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            {seduta.videos.length} video
+          </span>
+        </div>
       </div>
 
-      <div class="flex flex-wrap gap-2">
+      <!-- Link documenti -->
+      <div class="flex flex-wrap gap-2 items-start">
         {seduta.odgUrl && (
           <a
             href={seduta.odgUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xs px-3 py-1 bg-white/20 hover:bg-white/30 rounded transition-colors"
+            class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-navy-100 text-navy-800 hover:bg-navy-800 hover:text-white rounded-md transition-colors duration-200 border border-navy-200"
             title="Ordine del Giorno"
           >
-            📄 OdG
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            OdG
           </a>
         )}
         {(seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl) && (
@@ -41,44 +61,76 @@ const sedutaUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.year
             href={seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xs px-3 py-1 bg-white/20 hover:bg-white/30 rounded transition-colors"
+            class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-sage-100 text-sage-800 hover:bg-sage-800 hover:text-white rounded-md transition-colors duration-200 border border-sage-200"
             title="Resoconto"
           >
-            📋 Resoconto
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Resoconto
           </a>
         )}
         <a
           href={seduta.urlPagina}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-xs px-3 py-1 bg-white/20 hover:bg-white/30 rounded transition-colors"
+          class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-warm-100 text-warm-700 hover:bg-warm-200 rounded-md transition-colors duration-200 border border-warm-200"
           title="Pagina ARS"
         >
-          🔗 ARS
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+          ARS
         </a>
       </div>
     </div>
 
+    <!-- Categorie -->
     {seduta.categories.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mb-4">
         {seduta.categories.slice(0, 5).map((cat) => (
-          <span class="text-xs px-2 py-1 bg-white/10 rounded">
+          <span class="badge-amber text-xs">
             {cat}
           </span>
         ))}
         {seduta.categories.length > 5 && (
-          <span class="text-xs px-2 py-1 bg-white/10 rounded">
-            +{seduta.categories.length - 5}
+          <span class="badge-amber text-xs">
+            +{seduta.categories.length - 5} altre
           </span>
         )}
       </div>
     )}
 
+    <!-- Disegni di legge -->
     {seduta.disegniLegge.length > 0 && (
-      <div class="mt-3 text-sm text-white/90">
-        <span class="font-semibold">Disegni discussi:</span>
-        {seduta.disegniLegge.map((d) => d.numero).join(', ')}
+      <div class="pt-3 border-t border-warm-200">
+        <p class="text-sm text-warm-600 font-medium mb-1.5">Disegni di legge discussi:</p>
+        <div class="flex flex-wrap gap-2">
+          {seduta.disegniLegge.slice(0, 8).map((d) => (
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold text-navy-800 bg-navy-50 rounded border border-navy-200">
+              DDL {d.numero}
+            </span>
+          ))}
+          {seduta.disegniLegge.length > 8 && (
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold text-warm-600 bg-warm-100 rounded">
+              +{seduta.disegniLegge.length - 8}
+            </span>
+          )}
+        </div>
       </div>
     )}
+  </div>
+
+  <!-- Footer con call-to-action -->
+  <div class="bg-warm-50 border-t border-warm-200 px-6 py-3">
+    <a
+      href={sedutaUrl}
+      class="inline-flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-amber-600 transition-colors duration-200 group-hover:gap-3"
+    >
+      Vedi dettagli seduta
+      <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
+    </a>
   </div>
 </article>

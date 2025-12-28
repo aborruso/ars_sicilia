@@ -1,42 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   *:focus-visible {
-    @apply outline-2 outline-offset-2 outline-blue-600 rounded;
+    @apply outline-2 outline-offset-2 outline-navy-800 rounded;
   }
 
   body {
-    @apply antialiased;
+    @apply antialiased font-sans text-warm-800 bg-warm-50;
   }
 
   /* Skip link - accessibilità */
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded;
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy-800 focus:text-white focus:rounded-lg focus:font-semibold;
+  }
+
+  /* Headings con font display */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
 
 @layer components {
+  /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-navy-800 text-white font-semibold rounded-lg hover:bg-navy-900 active:bg-navy-900 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 shadow-sm hover:shadow;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 bg-gray-200 text-gray-900 font-semibold rounded-lg hover:bg-gray-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-warm-100 text-navy-800 font-semibold rounded-lg hover:bg-warm-200 active:bg-warm-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-navy-800 focus:ring-offset-2 border border-warm-200;
   }
 
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-5 py-2.5 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 active:bg-amber-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 shadow-sm hover:shadow;
+  }
+
+  /* Cards con bordo a sinistra caratteristico */
   .card {
-    @apply bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+    @apply bg-white border-l-4 border-l-amber-600 border border-warm-200 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden;
   }
 
+  .card-navy {
+    @apply bg-white border-l-4 border-l-navy-800 border border-warm-200 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden;
+  }
+
+  .card-sage {
+    @apply bg-white border-l-4 border-l-sage-800 border border-warm-200 rounded-r-lg shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden;
+  }
+
+  /* Container personalizzato */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Badge / Pills */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-navy {
+    @apply badge bg-navy-100 text-navy-800 border border-navy-200;
+  }
+
+  .badge-amber {
+    @apply badge bg-amber-100 text-amber-800 border border-amber-200;
+  }
+
+  .badge-sage {
+    @apply badge bg-sage-100 text-sage-800 border border-sage-200;
+  }
+
+  /* Link editoriale con underline colorato */
+  .link-editorial {
+    @apply text-navy-800 font-semibold underline decoration-amber-600 decoration-2 underline-offset-2 hover:text-amber-600 hover:decoration-navy-800 transition-colors duration-200;
+  }
+
+  /* Header sticky con backdrop blur */
+  .header-sticky {
+    @apply sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b-2 border-warm-200;
   }
 }
 
 @layer utilities {
-  .gradient-purple-blue {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Pattern di sfondo geometrico */
+  .bg-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M0 0h1v60H0zM60 0v1H0V0z' fill='%23e7e5e4' fill-opacity='0.4'/%3E%3C/svg%3E");
+  }
+
+  /* Gradient editoriale navy-to-warm */
+  .gradient-editorial {
+    background: linear-gradient(135deg, #1e3a5f 0%, #334e68 100%);
+  }
+
+  /* Gradient accent amber */
+  .gradient-accent {
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  }
+
+  /* Bordo decorativo a sinistra */
+  .border-accent-l {
+    @apply border-l-4 border-l-amber-600;
+  }
+
+  .border-navy-l {
+    @apply border-l-4 border-l-navy-800;
+  }
+
+  .border-sage-l {
+    @apply border-l-4 border-l-sage-800;
+  }
+
+  /* Text gradient per titoli speciali */
+  .text-gradient-editorial {
+    @apply bg-gradient-to-r from-navy-800 to-navy-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-amber-600 to-amber-500 bg-clip-text text-transparent;
   }
 }

@@ -2,40 +2,100 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-white border-t border-gray-200 mt-16">
-  <div class="container-custom py-8">
-    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
-      <p>
-        Sito per consultare le sedute dell'Assemblea Regionale Siciliana
-      </p>
-
-      <div class="flex gap-6">
-        <a
-          href="https://github.com/aborruso/ars_sicilia"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-blue-600 transition-colors"
-        >
-          Progetto GitHub
-          <span class="sr-only">(apre in una nuova finestra)</span>
-        </a>
-        <a
-          href="https://www.ars.sicilia.it"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-blue-600 transition-colors"
-        >
+<footer class="bg-white border-t-2 border-warm-200 mt-20">
+  <div class="container-custom py-10">
+    <!-- Main footer content -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- About section -->
+      <div>
+        <h3 class="font-display font-bold text-lg text-navy-800 mb-3">
           ARS Sicilia
-          <span class="sr-only">(apre in una nuova finestra)</span>
-        </a>
+        </h3>
+        <p class="text-sm text-warm-600 leading-relaxed">
+          Archivio video e documenti delle sedute dell'Assemblea Regionale Siciliana.
+          Un progetto di <strong class="text-navy-800">trasparenza civica</strong> per rendere
+          accessibili e ricercabili i lavori parlamentari.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="font-display font-bold text-lg text-navy-800 mb-3">
+          Collegamenti
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href="https://www.ars.sicilia.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-warm-600 hover:text-navy-800 font-medium transition-colors inline-flex items-center gap-1"
+            >
+              Sito ufficiale ARS
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/aborruso/ars_sicilia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-warm-600 hover:text-navy-800 font-medium transition-colors inline-flex items-center gap-1"
+            >
+              Codice sorgente (GitHub)
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ars_sicilia/rss.xml"
+              target="_blank"
+              rel="alternate"
+              type="application/rss+xml"
+              class="text-amber-600 hover:text-amber-700 font-medium transition-colors inline-flex items-center gap-1"
+            >
+              Feed RSS
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <h3 class="font-display font-bold text-lg text-navy-800 mb-3">
+          Informazioni
+        </h3>
+        <p class="text-xs text-warm-600 leading-relaxed mb-3">
+          I contenuti (video, documenti, trascrizioni) sono pubblicati dall'Assemblea Regionale Siciliana.
+          Questo sito li rende più <strong class="text-navy-800">accessibili, ricercabili e usabili</strong>
+          attraverso strumenti di trasparenza civica.
+        </p>
+        <p class="text-xs text-warm-500 italic">
+          Progetto civic tech · Open data · Trasparenza
+        </p>
       </div>
     </div>
 
-    <div class="mt-4 pt-4 border-t border-gray-200 text-center text-xs text-gray-500">
-      <p>
-        I contenuti sono pubblicati dall'Assemblea Regionale Siciliana.
-        Questo sito li rende più accessibili e ricercabili.
+    <!-- Bottom bar -->
+    <div class="pt-6 border-t border-warm-200 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-warm-500">
+        © {currentYear} ARS Sicilia Archive · Realizzato con impegno civico
       </p>
+      <div class="flex items-center gap-3">
+        <span class="text-xs text-warm-400">Costruito con:</span>
+        <div class="flex gap-2 text-xs">
+          <span class="px-2 py-0.5 bg-navy-100 text-navy-700 rounded font-medium">Astro</span>
+          <span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded font-medium">Tailwind</span>
+          <span class="px-2 py-0.5 bg-sage-100 text-sage-700 rounded font-medium">Python</span>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
