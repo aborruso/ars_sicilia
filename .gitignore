@@ -28,7 +28,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+/lib/
 lib64/
 parts/
 sdist/
@@ -58,7 +58,6 @@ logs/
 # Astro site
 .astro/
 node_modules/
-package-lock.json
 src/data/processed/
 
 # altro
