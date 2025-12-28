@@ -1,0 +1,24 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Pagina non trovata"
+  description="La pagina che stai cercando non esiste"
+>
+  <div class="flex flex-col items-center justify-center min-h-[60vh] text-center">
+    <h1 class="text-6xl font-bold text-gray-900 mb-4">404</h1>
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">
+      Pagina non trovata
+    </h2>
+    <p class="text-lg text-gray-600 mb-8 max-w-md">
+      La pagina che stai cercando non esiste o potrebbe essere stata spostata.
+    </p>
+    <a
+      href="/ars_sicilia/"
+      class="btn-primary"
+    >
+      Torna alla home
+    </a>
+  </div>
+</PageLayout>

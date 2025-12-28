@@ -1,0 +1,125 @@
+---
+import PageLayout from '../../../../../../layouts/PageLayout.astro';
+import Breadcrumb from '../../../../../../components/layout/Breadcrumb.astro';
+import VideoEmbed from '../../../../../../components/sedute/VideoEmbed.astro';
+import DigestContent from '../../../../../../components/sedute/DigestContent.astro';
+import CategoryBadge from '../../../../../../components/sedute/CategoryBadge.astro';
+import { loadSedute } from '../../../../../../lib/data-loader';
+import { formatDateShort, formatDuration, truncateText } from '../../../../../../lib/utils';
+
+export async function getStaticPaths() {
+  const sedute = await loadSedute();
+  const paths = [];
+
+  sedute.forEach((seduta) => {
+    seduta.videos.forEach((video) => {
+      paths.push({
+        params: {
+          anno: seduta.yearMonthDay.year,
+          mese: seduta.yearMonthDay.month,
+          giorno: seduta.yearMonthDay.day,
+          seduta: seduta.slug,
+          video: video.slug,
+        },
+        props: { seduta, video },
+      });
+    });
+  });
+
+  return paths;
+}
+
+const { seduta, video } = Astro.props;
+
+const sedutaUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}`;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/ars_sicilia/' },
+  { label: 'Sedute', href: '/ars_sicilia/sedute/1' },
+  { label: `Seduta ${seduta.numero}`, href: sedutaUrl },
+  { label: `Video ${video.oraVideo}`, href: '' },
+];
+
+const description = video.digest?.digest
+  ? truncateText(video.digest.digest.replace(/[#*\n]/g, ' '), 160)
+  : `Video della seduta ${seduta.numero} dell'Assemblea Regionale Siciliana del ${formatDateShort(video.dataVideo)} alle ore ${video.oraVideo}`;
+---
+
+<PageLayout
+  title={`Seduta ${seduta.numero} - Video ${video.oraVideo}`}
+  description={description}
+  ogType="article"
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <article>
+    <header class="mb-6">
+      <h1 class="text-3xl font-bold mb-2">
+        Seduta n. {seduta.numero}
+      </h1>
+      <p class="text-lg text-gray-600">
+        {formatDateShort(video.dataVideo)} - Ore {video.oraVideo}
+        {video.durationMinutes > 0 && (
+          <span class="text-sm text-gray-500 ml-2">
+            ({formatDuration(video.durationMinutes)})
+          </span>
+        )}
+      </p>
+    </header>
+
+    <!-- Video embed -->
+    <VideoEmbed
+      youtubeId={video.youtubeId}
+      title={`Seduta ${seduta.numero} del ${formatDateShort(video.dataVideo)} ore ${video.oraVideo}`}
+    />
+
+    <!-- Categorie -->
+    {video.digest?.categories && video.digest.categories.length > 0 && (
+      <div class="mb-8">
+        <h2 class="text-lg font-semibold mb-3">Categorie</h2>
+        <div class="flex flex-wrap gap-2">
+          {video.digest.categories.map((category) => (
+            <CategoryBadge category={category} />
+          ))}
+        </div>
+      </div>
+    )}
+
+    <!-- Digest -->
+    <DigestContent digest={video.digest?.digest || null} />
+
+    <!-- Persone citate -->
+    {video.digest?.people && video.digest.people.length > 0 && (
+      <section class="mt-8">
+        <h2 class="text-xl font-bold mb-4">Persone citate</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {video.digest.people.map((person) => (
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
+              <p class="font-semibold text-gray-900">{person.name}</p>
+              <p class="text-sm text-gray-600">{person.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Link torna alla seduta -->
+    <div class="mt-12 pt-6 border-t border-gray-200">
+      <a href={sedutaUrl} class="inline-flex items-center gap-2 text-blue-600 hover:underline font-medium">
+        ← Torna alla seduta {seduta.numero}
+      </a>
+    </div>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      name: `Seduta ${seduta.numero} - Video ${video.oraVideo}`,
+      uploadDate: video.dataVideo,
+      duration: `PT${video.durationMinutes}M`,
+      thumbnailUrl: `https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`,
+      embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
+      description: description,
+    })} />
+  </article>
+</PageLayout>

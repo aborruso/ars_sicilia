@@ -1,0 +1,84 @@
+---
+import type { Seduta } from '../../types/seduta';
+import { formatDateShort } from '../../lib/utils';
+
+interface Props {
+  seduta: Seduta;
+}
+
+const { seduta } = Astro.props;
+const sedutaUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}`;
+---
+
+<article class="card overflow-hidden">
+  <div class="gradient-purple-blue text-white p-6">
+    <div class="flex justify-between items-start gap-4">
+      <div>
+        <h2 class="text-2xl font-bold mb-2">
+          <a href={sedutaUrl} class="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded">
+            Seduta n. {seduta.numero}
+          </a>
+        </h2>
+        <p class="text-white/90 text-sm">
+          {formatDateShort(seduta.dataSeduta)} · {seduta.videos.length} video
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        {seduta.odgUrl && (
+          <a
+            href={seduta.odgUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs px-3 py-1 bg-white/20 hover:bg-white/30 rounded transition-colors"
+            title="Ordine del Giorno"
+          >
+            📄 OdG
+          </a>
+        )}
+        {(seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl) && (
+          <a
+            href={seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs px-3 py-1 bg-white/20 hover:bg-white/30 rounded transition-colors"
+            title="Resoconto"
+          >
+            📋 Resoconto
+          </a>
+        )}
+        <a
+          href={seduta.urlPagina}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs px-3 py-1 bg-white/20 hover:bg-white/30 rounded transition-colors"
+          title="Pagina ARS"
+        >
+          🔗 ARS
+        </a>
+      </div>
+    </div>
+
+    {seduta.categories.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2">
+        {seduta.categories.slice(0, 5).map((cat) => (
+          <span class="text-xs px-2 py-1 bg-white/10 rounded">
+            {cat}
+          </span>
+        ))}
+        {seduta.categories.length > 5 && (
+          <span class="text-xs px-2 py-1 bg-white/10 rounded">
+            +{seduta.categories.length - 5}
+          </span>
+        )}
+      </div>
+    )}
+
+    {seduta.disegniLegge.length > 0 && (
+      <div class="mt-3 text-sm text-white/90">
+        <span class="font-semibold">Disegni discussi:</span>
+        {seduta.disegniLegge.map((d) => d.numero).join(', ')}
+      </div>
+    )}
+  </div>
+</article>

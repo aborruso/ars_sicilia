@@ -55,6 +55,12 @@ Thumbs.db
 *.log
 logs/
 
+# Astro site
+.astro/
+node_modules/
+package-lock.json
+src/data/processed/
+
 # altro
 .xdgcache/
 tmp/

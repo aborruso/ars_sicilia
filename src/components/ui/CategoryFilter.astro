@@ -1,0 +1,28 @@
+---
+import type { Category } from '../../types/seduta';
+
+interface Props {
+  categories: Category[];
+}
+
+const { categories } = Astro.props;
+const topCategories = categories.slice(0, 10);
+---
+
+<section class="mb-8">
+  <h2 class="text-lg font-semibold mb-4">Filtra per categoria</h2>
+
+  <div class="flex flex-wrap gap-2">
+    {topCategories.map((cat) => (
+      <a
+        href={`/ars_sicilia/sedute/categoria/${cat.slug}`}
+        class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple-400 transition-colors"
+      >
+        <span class="font-medium text-gray-900">{cat.name}</span>
+        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+          {cat.count}
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

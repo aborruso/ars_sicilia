@@ -1,0 +1,33 @@
+---
+import type { Video } from '../../types/seduta';
+import { getYouTubeThumbnail, formatTime, formatDuration } from '../../lib/utils';
+
+interface Props {
+  video: Video;
+  videoUrl: string;
+}
+
+const { video, videoUrl } = Astro.props;
+const thumbnail = getYouTubeThumbnail(video.youtubeId);
+const durationText = formatDuration(video.durationMinutes);
+---
+
+<a href={videoUrl} class="group block">
+  <div class="relative overflow-hidden rounded-lg shadow-sm group-hover:shadow-md transition-shadow">
+    <img
+      src={thumbnail}
+      alt={`Video ore ${formatTime(video.oraVideo)}`}
+      loading="lazy"
+      decoding="async"
+      class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-200"
+    />
+    <div class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">
+      {formatTime(video.oraVideo)}
+    </div>
+    {durationText && (
+      <div class="absolute top-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">
+        {durationText}
+      </div>
+    )}
+  </div>
+</a>

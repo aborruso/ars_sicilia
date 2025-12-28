@@ -1,0 +1,67 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import Breadcrumb from '../../../components/layout/Breadcrumb.astro';
+import VideoThumbnail from '../../../components/sedute/VideoThumbnail.astro';
+import { loadCategories, getVideosByCategorySlug } from '../../../lib/data-loader';
+import { formatDateShort } from '../../../lib/utils';
+
+export async function getStaticPaths() {
+  const categories = await loadCategories();
+
+  return categories.map((category) => ({
+    params: { slug: category.slug },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props;
+const videos = await getVideosByCategorySlug(category.slug);
+
+// Sort by date DESC
+videos.sort((a, b) => b.dataVideo.localeCompare(a.dataVideo));
+
+const breadcrumbs = [
+  { label: 'Home', href: '/ars_sicilia/' },
+  { label: 'Categorie', href: '/ars_sicilia/' },
+  { label: category.name, href: '' },
+];
+---
+
+<PageLayout
+  title={`Categoria: ${category.name}`}
+  description={`${category.count} video dell'Assemblea Regionale Siciliana nella categoria ${category.name}`}
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold mb-2">
+      {category.name}
+    </h1>
+    <p class="text-lg text-gray-600">
+      {category.count} {category.count === 1 ? 'video' : 'video'}
+    </p>
+  </div>
+
+  {videos.length > 0 ? (
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {videos.map((video) => {
+        const videoUrl = `/ars_sicilia/sedute/${video.seduta.yearMonthDay.year}/${video.seduta.yearMonthDay.month}/${video.seduta.yearMonthDay.day}/${video.seduta.slug}/${video.slug}`;
+        return (
+          <div>
+            <VideoThumbnail video={video} videoUrl={videoUrl} />
+            <div class="mt-2">
+              <p class="text-sm font-medium text-gray-900">
+                Seduta {video.seduta.numero}
+              </p>
+              <p class="text-xs text-gray-600">
+                {formatDateShort(video.dataVideo)} - {video.oraVideo}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  ) : (
+    <p class="text-gray-600">Nessun video trovato per questa categoria.</p>
+  )}
+</PageLayout>

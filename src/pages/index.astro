@@ -1,0 +1,41 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import SedutaCard from '../components/sedute/SedutaCard.astro';
+import CategoryFilter from '../components/ui/CategoryFilter.astro';
+import Pagination from '../components/ui/Pagination.astro';
+import { loadSedute, loadCategories } from '../lib/data-loader';
+
+const ITEMS_PER_PAGE = 10;
+
+const sedute = await loadSedute();
+const categories = await loadCategories();
+
+const paginatedSedute = sedute.slice(0, ITEMS_PER_PAGE);
+const totalPages = Math.ceil(sedute.length / ITEMS_PER_PAGE);
+---
+
+<PageLayout
+  title="Sedute Assemblea Regionale Siciliana"
+  description="Archivio completo delle sedute dell'Assemblea Regionale Siciliana con video, trascrizioni automatiche e documenti ufficiali. Consulta ordini del giorno, resoconti stenografici e disegni di legge discussi."
+>
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Sedute Assemblea Regionale Siciliana
+    </h1>
+    <p class="text-lg text-gray-600">
+      Archivio video e documenti delle sedute dell'ARS con trascrizioni automatiche e sintesi.
+    </p>
+  </div>
+
+  <CategoryFilter categories={categories} />
+
+  <div class="space-y-6 mt-8">
+    {paginatedSedute.map((seduta) => (
+      <SedutaCard seduta={seduta} />
+    ))}
+  </div>
+
+  {totalPages > 1 && (
+    <Pagination currentPage={1} totalPages={totalPages} baseUrl="/ars_sicilia/sedute" />
+  )}
+</PageLayout>

@@ -1,0 +1,43 @@
+---
+import type { Seduta, Video } from '../../types/seduta';
+import { formatDateShort } from '../../lib/utils';
+import VideoThumbnail from './VideoThumbnail.astro';
+
+interface Props {
+  seduta: Seduta;
+}
+
+const { seduta } = Astro.props;
+
+// Group videos by dataVideo
+const videosByDate = seduta.videos.reduce((acc, video) => {
+  if (!acc[video.dataVideo]) {
+    acc[video.dataVideo] = [];
+  }
+  acc[video.dataVideo].push(video);
+  return acc;
+}, {} as Record<string, Video[]>);
+
+const dates = Object.keys(videosByDate).sort();
+---
+
+<section>
+  <h2 class="text-2xl font-bold mb-6">Video della seduta</h2>
+
+  {
+    dates.map((date) => (
+      <div class="mb-8">
+        <h3 class="text-lg font-semibold text-gray-700 mb-4">
+          {formatDateShort(date)}
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {videosByDate[date].map((video) => {
+            const videoUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}/${video.slug}`;
+            return <VideoThumbnail video={video} videoUrl={videoUrl} />;
+          })}
+        </div>
+      </div>
+    ))
+  }
+</section>
