@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARS Sicilia - Design System Preview</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (solo per preview) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#f0f4f8',
+              100: '#d9e2ec',
+              200: '#bcccdc',
+              300: '#9fb3c8',
+              400: '#829ab1',
+              500: '#627d98',
+              600: '#486581',
+              700: '#334e68',
+              800: '#1e3a5f',
+              900: '#102a43',
+            },
+            amber: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            sage: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#059669',
+              900: '#047857',
+            },
+            warm: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+            },
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+    .bg-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Cpath d='M0 0h1v60H0zM60 0v1H0V0z' fill='%23e7e5e4' fill-opacity='0.4'/%3E%3C/svg%3E");
+    }
+    .gradient-editorial {
+      background: linear-gradient(135deg, #1e3a5f 0%, #334e68 100%);
+    }
+  </style>
+</head>
+<body class="bg-warm-50 bg-pattern text-warm-800">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b-2 border-warm-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div class="flex items-center justify-between gap-6">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="block group">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-lg gradient-editorial flex items-center justify-center text-white font-display font-bold text-xl shadow-sm group-hover:shadow-md transition-shadow">
+                ARS
+              </div>
+              <div>
+                <h1 class="text-2xl md:text-3xl font-display font-bold text-navy-800 group-hover:text-amber-600 transition-colors leading-tight">
+                  ARS Sicilia
+                </h1>
+                <p class="text-xs md:text-sm text-warm-600 font-medium uppercase tracking-wide">
+                  Assemblea Regionale Siciliana
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Nav -->
+        <nav>
+          <ul class="flex gap-4 md:gap-6 items-center">
+            <li><a href="#" class="font-semibold text-sm md:text-base text-white bg-navy-800 shadow-sm px-3 py-1.5 rounded-md">Home</a></li>
+            <li><a href="#" class="font-semibold text-sm md:text-base text-navy-800 hover:bg-navy-100 hover:text-navy-900 transition-all px-3 py-1.5 rounded-md">Info</a></li>
+            <li><a href="#" class="font-semibold text-sm md:text-base text-amber-600 hover:text-amber-700 hover:bg-amber-50 transition-all px-3 py-1.5 rounded-md inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+              </svg>
+              RSS
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Hero -->
+    <div class="mb-12">
+      <div class="border-l-4 border-l-amber-600 pl-6 py-2 mb-6">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-navy-800 mb-4 leading-tight">
+          Archivio Sedute ARS
+        </h1>
+        <p class="text-lg md:text-xl text-warm-600 font-medium leading-relaxed max-w-3xl">
+          Trasparenza civica al servizio dei cittadini. Consulta video, trascrizioni automatiche e documenti
+          ufficiali delle sedute dell'Assemblea Regionale Siciliana.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="bg-white border-l-4 border-l-navy-800 rounded-r-lg p-4 shadow-sm">
+          <div class="text-3xl font-display font-bold text-navy-800 mb-1">42</div>
+          <div class="text-sm font-medium text-warm-600 uppercase tracking-wide">Sedute archiviate</div>
+        </div>
+        <div class="bg-white border-l-4 border-l-amber-600 rounded-r-lg p-4 shadow-sm">
+          <div class="text-3xl font-display font-bold text-amber-600 mb-1">156</div>
+          <div class="text-sm font-medium text-warm-600 uppercase tracking-wide">Video disponibili</div>
+        </div>
+        <div class="bg-white border-l-4 border-l-sage-800 rounded-r-lg p-4 shadow-sm">
+          <div class="text-3xl font-display font-bold text-sage-800 mb-1">28</div>
+          <div class="text-sm font-medium text-warm-600 uppercase tracking-wide">Categorie tematiche</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <section class="bg-white border-l-4 border-l-amber-600 rounded-r-lg p-6 shadow-sm mb-8">
+      <div class="flex items-center gap-2 mb-4">
+        <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+        </svg>
+        <h2 class="text-xl font-display font-bold text-navy-800">Esplora per categoria</h2>
+      </div>
+      <p class="text-sm text-warm-600 mb-5">Filtra le sedute per argomento tematico e scopri i lavori dell'assemblea</p>
+      <div class="flex flex-wrap gap-2">
+        <a href="#" class="group inline-flex items-center gap-2 px-4 py-2.5 bg-warm-50 border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 transition-all shadow-sm hover:shadow">
+          <span class="font-semibold text-sm text-navy-800 group-hover:text-white">Sanità</span>
+          <span class="text-xs font-bold text-warm-600 bg-white group-hover:bg-amber-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-warm-200 group-hover:border-amber-600">12</span>
+        </a>
+        <a href="#" class="group inline-flex items-center gap-2 px-4 py-2.5 bg-warm-50 border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 transition-all shadow-sm hover:shadow">
+          <span class="font-semibold text-sm text-navy-800 group-hover:text-white">Bilancio e Finanze</span>
+          <span class="text-xs font-bold text-warm-600 bg-white group-hover:bg-amber-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-warm-200 group-hover:border-amber-600">8</span>
+        </a>
+        <a href="#" class="group inline-flex items-center gap-2 px-4 py-2.5 bg-warm-50 border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 transition-all shadow-sm hover:shadow">
+          <span class="font-semibold text-sm text-navy-800 group-hover:text-white">Agricoltura</span>
+          <span class="text-xs font-bold text-warm-600 bg-white group-hover:bg-amber-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-warm-200 group-hover:border-amber-600">6</span>
+        </a>
+        <a href="#" class="group inline-flex items-center gap-2 px-4 py-2.5 bg-warm-50 border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 transition-all shadow-sm hover:shadow">
+          <span class="font-semibold text-sm text-navy-800 group-hover:text-white">Turismo e Cultura</span>
+          <span class="text-xs font-bold text-warm-600 bg-white group-hover:bg-amber-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-warm-200 group-hover:border-amber-600">5</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section Header -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-display font-bold text-navy-800 mb-2 flex items-center gap-2">
+        <span class="inline-block w-1 h-6 bg-amber-600 rounded"></span>
+        Ultime sedute
+      </h2>
+      <p class="text-sm text-warm-600 mb-6">
+        Elenco cronologico delle sedute più recenti con video e documenti allegati
+      </p>
+    </div>
+
+    <!-- Seduta Card Example -->
+    <article class="bg-white border-l-4 border-l-amber-600 border border-warm-200 rounded-r-lg shadow-sm hover:shadow-md hover:border-l-navy-800 transition-all group mb-6">
+      <div class="p-6 pb-4">
+        <div class="flex justify-between items-start gap-4 mb-4">
+          <div class="flex-1">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-navy-800 mb-2 leading-tight">
+              <a href="#" class="hover:text-amber-600 transition-colors">Seduta n. 220</a>
+            </h2>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-warm-600">
+              <span class="inline-flex items-center gap-1.5 font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                16/12/2025
+              </span>
+              <span class="text-warm-400">•</span>
+              <span class="inline-flex items-center gap-1.5 font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                16 video
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 items-start">
+            <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-navy-100 text-navy-800 hover:bg-navy-800 hover:text-white rounded-md transition-colors border border-navy-200">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              OdG
+            </a>
+            <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-sage-100 text-sage-800 hover:bg-sage-800 hover:text-white rounded-md transition-colors border border-sage-200">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Resoconto
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800 border border-amber-200">Sanità</span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800 border border-amber-200">Bilancio</span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800 border border-amber-200">Trasporti</span>
+        </div>
+
+        <div class="pt-3 border-t border-warm-200">
+          <p class="text-sm text-warm-600 font-medium mb-1.5">Disegni di legge discussi:</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold text-navy-800 bg-navy-50 rounded border border-navy-200">DDL 123</span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold text-navy-800 bg-navy-50 rounded border border-navy-200">DDL 124</span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold text-navy-800 bg-navy-50 rounded border border-navy-200">DDL 125</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-warm-50 border-t border-warm-200 px-6 py-3">
+        <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-amber-600 transition-colors group-hover:gap-3">
+          Vedi dettagli seduta
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- Buttons Example -->
+    <div class="bg-white border-l-4 border-l-navy-800 rounded-r-lg p-6 shadow-sm mb-8">
+      <h3 class="text-xl font-display font-bold text-navy-800 mb-4">Bottoni e Componenti</h3>
+      <div class="space-y-4">
+        <div class="flex flex-wrap gap-3">
+          <button class="inline-flex items-center justify-center px-5 py-2.5 bg-navy-800 text-white font-semibold rounded-lg hover:bg-navy-900 transition-all shadow-sm hover:shadow">
+            Bottone Primario
+          </button>
+          <button class="inline-flex items-center justify-center px-5 py-2.5 bg-warm-100 text-navy-800 font-semibold rounded-lg hover:bg-warm-200 transition-all border border-warm-200">
+            Bottone Secondario
+          </button>
+          <button class="inline-flex items-center justify-center px-5 py-2.5 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-all shadow-sm hover:shadow">
+            Bottone Accent
+          </button>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-navy-100 text-navy-800 border border-navy-200">Badge Navy</span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-100 text-amber-800 border border-amber-200">Badge Amber</span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-sage-100 text-sage-800 border border-sage-200">Badge Sage</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t-2 border-warm-200 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-display font-bold text-lg text-navy-800 mb-3">ARS Sicilia</h3>
+          <p class="text-sm text-warm-600 leading-relaxed">
+            Archivio video e documenti delle sedute dell'Assemblea Regionale Siciliana.
+            Un progetto di <strong class="text-navy-800">trasparenza civica</strong> per rendere
+            accessibili e ricercabili i lavori parlamentari.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-lg text-navy-800 mb-3">Collegamenti</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="text-warm-600 hover:text-navy-800 font-medium transition-colors">Sito ufficiale ARS</a></li>
+            <li><a href="#" class="text-warm-600 hover:text-navy-800 font-medium transition-colors">Codice sorgente (GitHub)</a></li>
+            <li><a href="#" class="text-amber-600 hover:text-amber-700 font-medium transition-colors">Feed RSS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display font-bold text-lg text-navy-800 mb-3">Informazioni</h3>
+          <p class="text-xs text-warm-600 leading-relaxed mb-3">
+            I contenuti (video, documenti, trascrizioni) sono pubblicati dall'Assemblea Regionale Siciliana.
+            Questo sito li rende più <strong class="text-navy-800">accessibili, ricercabili e usabili</strong>
+            attraverso strumenti di trasparenza civica.
+          </p>
+          <p class="text-xs text-warm-500 italic">Progetto civic tech · Open data · Trasparenza</p>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-warm-200 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-warm-500">© 2025 ARS Sicilia Archive · Realizzato con impegno civico</p>
+        <div class="flex items-center gap-3">
+          <span class="text-xs text-warm-400">Costruito con:</span>
+          <div class="flex gap-2 text-xs">
+            <span class="px-2 py-0.5 bg-navy-100 text-navy-700 rounded font-medium">Astro</span>
+            <span class="px-2 py-0.5 bg-amber-100 text-amber-700 rounded font-medium">Tailwind</span>
+            <span class="px-2 py-0.5 bg-sage-100 text-sage-700 rounded font-medium">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

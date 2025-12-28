@@ -37,48 +37,65 @@ const prevUrl = currentPage > 1 ? (currentPage === 2 ? baseUrl : `${baseUrl}/${c
 const nextUrl = currentPage < totalPages ? `${baseUrl}/${currentPage + 1}` : null;
 ---
 
-<nav aria-label="Paginazione" class="flex justify-center items-center gap-2 mt-8">
+<nav aria-label="Paginazione" class="flex justify-center items-center gap-3 py-8">
+  <!-- Previous button -->
   {prevUrl ? (
     <a
       href={prevUrl}
-      class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+      class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 hover:text-white transition-all duration-200 font-semibold text-sm text-navy-800 shadow-sm hover:shadow group"
       aria-label="Pagina precedente"
     >
-      ←
+      <svg class="w-4 h-4 transition-transform group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+      </svg>
+      <span class="hidden sm:inline">Precedente</span>
     </a>
   ) : (
-    <span class="px-4 py-2 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
-      ←
+    <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-warm-100 border border-warm-200 rounded-lg text-warm-400 cursor-not-allowed font-semibold text-sm">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+      </svg>
+      <span class="hidden sm:inline">Precedente</span>
     </span>
   )}
 
-  {showPages.map((page) => (
-    <a
-      href={page === 1 ? baseUrl : `${baseUrl}/${page}`}
-      class:list={[
-        'px-4 py-2 rounded-lg transition-colors',
-        page === currentPage
-          ? 'bg-blue-600 text-white font-semibold'
-          : 'border border-gray-300 hover:bg-gray-50',
-      ]}
-      aria-label={`Pagina ${page}`}
-      aria-current={page === currentPage ? 'page' : undefined}
-    >
-      {page}
-    </a>
-  ))}
+  <!-- Page numbers -->
+  <div class="flex gap-2">
+    {showPages.map((page) => (
+      <a
+        href={page === 1 ? baseUrl : `${baseUrl}/${page}`}
+        class:list={[
+          'px-4 py-2 rounded-lg transition-all duration-200 font-semibold text-sm min-w-[40px] text-center',
+          page === currentPage
+            ? 'bg-navy-800 text-white shadow-md border-2 border-navy-800'
+            : 'bg-white border border-warm-200 hover:bg-amber-50 hover:border-amber-600 hover:text-amber-700 text-navy-800 shadow-sm hover:shadow',
+        ]}
+        aria-label={`Pagina ${page}`}
+        aria-current={page === currentPage ? 'page' : undefined}
+      >
+        {page}
+      </a>
+    ))}
+  </div>
 
+  <!-- Next button -->
   {nextUrl ? (
     <a
       href={nextUrl}
-      class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+      class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 hover:text-white transition-all duration-200 font-semibold text-sm text-navy-800 shadow-sm hover:shadow group"
       aria-label="Pagina successiva"
     >
-      →
+      <span class="hidden sm:inline">Successiva</span>
+      <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
     </a>
   ) : (
-    <span class="px-4 py-2 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
-      →
+    <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-warm-100 border border-warm-200 rounded-lg text-warm-400 cursor-not-allowed font-semibold text-sm">
+      <span class="hidden sm:inline">Successiva</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      </svg>
     </span>
   )}
 </nav>

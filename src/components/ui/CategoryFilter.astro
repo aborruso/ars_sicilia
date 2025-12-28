@@ -6,23 +6,50 @@ interface Props {
 }
 
 const { categories } = Astro.props;
-const topCategories = categories.slice(0, 10);
+const topCategories = categories.slice(0, 12);
 ---
 
-<section class="mb-8">
-  <h2 class="text-lg font-semibold mb-4">Filtra per categoria</h2>
+<section class="bg-white border-l-4 border-l-amber-600 rounded-r-lg p-6 shadow-sm">
+  <div class="flex items-center gap-2 mb-4">
+    <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+    </svg>
+    <h2 class="text-xl font-display font-bold text-navy-800">
+      Esplora per categoria
+    </h2>
+  </div>
+
+  <p class="text-sm text-warm-600 mb-5">
+    Filtra le sedute per argomento tematico e scopri i lavori dell'assemblea
+  </p>
 
   <div class="flex flex-wrap gap-2">
     {topCategories.map((cat) => (
       <a
         href={`/ars_sicilia/sedute/categoria/${cat.slug}`}
-        class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-purple-400 transition-colors"
+        class="group inline-flex items-center gap-2 px-4 py-2.5 bg-warm-50 border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 transition-all duration-200 shadow-sm hover:shadow"
       >
-        <span class="font-medium text-gray-900">{cat.name}</span>
-        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
+        <span class="font-semibold text-sm text-navy-800 group-hover:text-white transition-colors">
+          {cat.name}
+        </span>
+        <span class="text-xs font-bold text-warm-600 bg-white group-hover:bg-amber-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-warm-200 group-hover:border-amber-600 transition-all">
           {cat.count}
         </span>
       </a>
     ))}
+
+    {categories.length > 12 && (
+      <a
+        href="/ars_sicilia/sedute/categoria"
+        class="inline-flex items-center gap-1 px-4 py-2.5 bg-amber-50 border border-amber-200 rounded-lg hover:bg-amber-600 hover:border-amber-600 transition-all duration-200 shadow-sm hover:shadow group"
+      >
+        <span class="font-semibold text-sm text-amber-700 group-hover:text-white transition-colors">
+          Vedi tutte
+        </span>
+        <svg class="w-4 h-4 text-amber-700 group-hover:text-white transition-all group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    )}
   </div>
 </section>
