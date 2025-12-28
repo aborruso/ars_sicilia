@@ -1,5 +1,17 @@
 # 2025-12-28
 
+## Link RSS Feed Visibile nell'Header
+
+- Aggiunto link RSS con icona 📡 nell'header di navigazione
+- Posizionato dopo link "Sito ARS"
+- Icona arancione (text-orange-600) per standard RSS
+- Link punta a /ars_sicilia/rss.xml
+- Attributi accessibilità: aria-label="Feed RSS", title tooltip
+- Attributi semantici: rel="alternate" type="application/rss+xml"
+- Apre in nuova tab (target="_blank")
+- File modificato: src/components/layout/Header.astro
+- OpenSpec: change archiviato, spec creato in openspec/specs/rss-visibility/
+
 ## Disclaimer AI per Digest Video
 
 - Implementato disclaimer prominente prima contenuto digest
