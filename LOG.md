@@ -1,3 +1,13 @@
+# 2025-12-28
+
+## Riorganizzazione scripts/
+
+- Creata `scripts/tests/` per file di test
+- Creata `scripts/archive/` per script obsoleti
+- Spostati test_youtube_auth.py e test_youtube_auth_manual.py in tests/
+- Archiviati: backfill_durations.py, check_playlist.py, fix_csv_carriage_returns.py, sync_youtube_ids.py
+- Aggiornati riferimenti in scripts/README.md e openspec/project.md
+
 # 2025-12-27
 
 ## Fix Error Handling No Transcript
