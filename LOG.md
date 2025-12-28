@@ -1,5 +1,23 @@
 # 2025-12-28
 
+## Navigazione Video Precedente/Successivo
+
+- Implementata navigazione prev/next nella pagina single video
+- Pulsanti ← → posizionati sopra video embed, dopo header
+- Calcolo automatico indici da array seduta.videos
+- Pulsanti disabilitati (gray) al primo/ultimo video
+- Styling coerente con componente Pagination
+- ARIA labels per accessibilità
+- Build test: 108 pagine OK, edge cases verificati (primo/ultimo video)
+- File modificato: src/pages/sedute/[anno]/[mese]/[giorno]/[seduta]/[video].astro
+
+## Analisi Search Engine
+
+- Valutate tecnologie search per sito statico: Pagefind, Fuse.js, FlexSearch, Lunr.js
+- Raccomandato Pagefind per compressione eccellente (~1% size) e integrazione Astro nativa
+- Dataset attuale: 343K JSON → indice stimato 10-15KB
+- Analisi salvata in docs/search-engine-analysis.md
+
 ## Sviluppo sito Astro completo
 
 - Implementato sito statico completo con Astro + Tailwind CSS
