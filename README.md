@@ -1,144 +1,238 @@
-# ARS YouTube Uploader
+# ARS Sicilia - Archivio Consultabile Sedute Assemblea
 
-Sistema automatizzato per scaricare video sedute Assemblea Regionale Siciliana e pubblicarli su YouTube con metadati ricercabili.
+**Piattaforma civic tech per trasparenza e consultazione sedute dell'Assemblea Regionale Siciliana**
 
-Questo progetto nasce da un'idea semplice da civic hacker: la trasparenza deve essere efficace. Non basta dire "i video sono online": chi vuole capire se e quando si è parlato di un argomento oggi ha davanti solo un elenco di video. Portarli su YouTube con metadati strutturati e trascrizione automatica cambia tutto: si può cercare nel testo, collegare sedute e video, e usare le trascrizioni come materia prima per analisi (anche con LLM e con gli strumenti basati sull'intelligenza artificiale). L'obiettivo è trasformare un archivio statico in uno strumento di ricerca e controllo civico.
+> Questo progetto nasce da un'idea semplice da civic hacker: la trasparenza deve essere efficace. Non basta dire "i video sono online": chi vuole capire se e quando si è parlato di un argomento oggi ha davanti solo un elenco di video. Portarli su YouTube con metadati strutturati e trascrizione automatica, e creare un sito consultabile con categorie e digest AI cambia tutto: si può cercare nel testo, collegare sedute e video, e usare le trascrizioni come materia prima per analisi civica.
 
-## Funzionalità
+**🌐 Consulta il sito:** [aborruso.github.io/ars_sicilia](https://aborruso.github.io/ars_sicilia/)
 
-### Anagrafica Video
-- **Script:** `scripts/build_anagrafica.py`
-- Crawler incrementale sedute dal 10/12/2025 in poi
-- Naviga usando `div.next_link` (freccia destra)
-- Estrae metadati senza scaricare video
-- Rileva aggiornamenti sedute (nuovi video)
-- Output CSV: `data/anagrafica_video.csv`
-- Wrapper per cron: `scripts/run_daily.sh`
+---
 
-### Upload YouTube
-- Scraping automatico pagine sedute da https://www.ars.sicilia.it
-- Download video HLS con yt-dlp
-- Upload su YouTube con metadati strutturati
-- **Playlist annuali**: aggiunta automatica a playlist anno
-- **Link ricerca seduta**: ogni video include link di ricerca globale basato su token univoco
-- Logging upload per evitare duplicati
-- Naming convention: `Lavori d'aula: seduta n. 219/A del 10 Dicembre 2025 - 11:30`
-- Recording date impostato su data effettiva video (distingue data seduta da data video)
-- Tags ottimizzati per ricerca: numero seduta, anno, mese
-- Link a OdG e resoconti nella descrizione
-- Token univoco in descrizione: `ARS_SEDUTA_<numero>-<YYYY-MM-DD>`
+## 🎯 Cosa Offre il Progetto
 
-## Requisiti
+- ✅ **Sito web consultabile** - 108+ pagine statiche generate con Astro
+- ✅ **Categorie tematiche** - Filtra sedute per argomento (Sanità, Bilancio, Lavoro, etc.)
+- ✅ **Video YouTube ricercabili** - Metadati strutturati, playlist annuali, token univoci
+- ✅ **Digest AI automatici** - Sintesi generate da trascrizioni video con LLM
+- ✅ **Estrazione disegni legge** - Dati legislativi estratti da PDF ordini del giorno
+- ✅ **Feed RSS pubblico** - Aggiornamenti automatici ultimi 20 video
+- ✅ **Design accessibile** - WCAG 2.1 AA, mobile-first, semantic HTML
+- ✅ **Dati aperti** - CSV, JSONL, JSON pubblicamente accessibili
 
-- Python 3.10+
-- yt-dlp
-- Account YouTube
-- Progetto Google Cloud con YouTube Data API v3 abilitata
+---
 
-## Setup Iniziale
+## 🏗️ Architettura Sistema
 
-### Installazione Dipendenze
+Il progetto è composto da tre livelli:
+
+### 1. Frontend - Sito Web Statico (Astro + Tailwind)
+
+Sito statico generato a build-time con design system "Editorial Civic":
+
+- **Tecnologie**: Astro 5.0, Tailwind CSS 3.4, TypeScript
+- **Pagine**: Homepage, lista sedute paginata, singola seduta, singolo video, categorie, About
+- **SEO**: Sitemap automatico, structured data (Schema.org VideoObject), OpenGraph
+- **Hosting**: GitHub Pages con deploy automatico
+- **Design**: Palette istituzionale (Navy, Ambra, Salvia), tipografia editoriale (Fraunces + Manrope)
+
+📖 **Documentazione design**: [docs/design-system.md](docs/design-system.md)
+
+### 2. Backend - Pipeline Automatizzata (Python)
+
+Sistema di acquisizione e pubblicazione video sedute:
+
+- **Crawler incrementale** - Estrae metadati sedute dal 10/12/2025 in poi
+- **Download video HLS** - yt-dlp per scaricare stream video ARS
+- **Upload YouTube** - API v3 con OAuth2, playlist annuali, metadati ricchi
+- **Generazione digest AI** - LLM (Gemini 2.5 Flash) per sintesi automatiche
+- **Estrazione disegni legge** - Pipeline PDF→testo→JSON strutturato
+
+**Script principali:**
+- `scripts/build_anagrafica.py` - Aggiorna anagrafica video
+- `scripts/upload_single.py` - Test upload singolo video
+- `scripts/generate_digests.sh` - Genera digest AI da trascrizioni
+- `scripts/extract_odg_data.sh` - Estrae disegni legge da PDF OdG
+- `scripts/generate_rss.py` - Genera feed RSS pubblico
+
+### 3. Data Layer - Dati Strutturati
+
+Dataset pubblici in formato aperto:
+
+- `data/anagrafica_video.csv` - Metadati completi sedute (35+ record)
+- `data/disegni_legge.jsonl` - Disegni di legge estratti da OdG
+- `data/digest/{youtube_id}.json` - Digest AI per ogni video
+- `rss.xml` - Feed RSS pubblico (ultimi 20 video)
+
+---
+
+## 🚀 Quick Start
+
+### Consultare il Sito
+
+Visita [aborruso.github.io/ars_sicilia](https://aborruso.github.io/ars_sicilia/) per:
+- Esplorare sedute per data o categoria
+- Guardare video direttamente dalla pagina
+- Leggere digest AI automatici
+- Accedere ai documenti ufficiali (OdG, Resoconti)
+
+### Accedere ai Dati Aperti
+
+Tutti i dataset sono pubblicamente accessibili nel repository:
 
 ```bash
-pip3 install -r requirements.txt
+# Clona repository
+git clone https://github.com/aborruso/ars_sicilia.git
+
+# Esplora dati
+cd ars_sicilia/data
+cat anagrafica_video.csv | head -20
+cat disegni_legge.jsonl | jq .
 ```
 
-### Setup Canale YouTube
+### Feed RSS
 
-1. Crea canale YouTube dedicato (es. "ARS Sicilia - Sedute Assemblea")
-2. Verifica canale per video >15 minuti: https://www.youtube.com/verify
-3. Annota Channel ID (opzionale)
+Abbonati al feed per ricevere aggiornamenti automatici:
+
+**URL feed**: [https://aborruso.github.io/ars_sicilia/rss.xml](https://aborruso.github.io/ars_sicilia/rss.xml)
+
+---
+
+## 💻 Setup Sviluppo Locale
+
+### Prerequisiti
+
+- Node.js 18+ e npm
+- Python 3.10+ (opzionale, solo per backend)
+- Git
+
+### Frontend - Sito Web
+
+```bash
+# Installa dipendenze
+npm install
+
+# Build data + sito (genera dist/)
+npm run build
+
+# Dev server con hot reload
+npm run dev
+# Apri http://localhost:4321
+```
+
+**Struttura generata:**
+- `dist/index.html` - Homepage
+- `dist/sedute/` - Lista sedute paginata
+- `dist/sedute/[anno]/[mese]/[giorno]/[seduta]/` - Pagine singole
+- `dist/sitemap-0.xml`, `dist/rss.xml` - SEO
+
+### Backend - Pipeline Python (Opzionale)
+
+Solo necessario se vuoi replicare la pipeline di acquisizione/pubblicazione:
+
+```bash
+# Crea virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# .venv\Scripts\activate   # Windows
+
+# Installa dipendenze
+pip3 install -r requirements.txt
+
+# Testa crawler
+python3 scripts/build_anagrafica.py
+
+# Genera digest AI (richiede configurazione LLM)
+./scripts/generate_digests.sh
+```
+
+---
+
+## 📊 Stack Tecnologico
+
+### Frontend
+- **Framework**: Astro 5.0 (generazione statica)
+- **Styling**: Tailwind CSS 3.4 + Typography plugin
+- **Language**: TypeScript
+- **Plugins**: @astrojs/sitemap, @astrojs/rss
+- **Build**: npm scripts + prebuild hook (build-data.mjs)
+- **Deploy**: GitHub Actions → GitHub Pages
+
+### Backend
+- **Language**: Python 3.10+
+- **Scraping**: BeautifulSoup4, requests
+- **Video**: yt-dlp (download HLS)
+- **YouTube API**: google-api-python-client, oauth2client
+- **AI**: LLM CLI (gemini-2.5-flash per digest)
+- **Data**: PyYAML, csv-parse, markitdown (PDF→text)
+- **CLI Tools**: miller (mlr), jq, qv (trascrizioni YouTube)
+
+---
+
+## 🤖 Pipeline YouTube - Setup Avanzato
+
+<details>
+<summary><strong>⚠️ Sezione tecnica - Solo per sviluppatori che vogliono replicare la pipeline YouTube</strong></summary>
+
+### Requisiti
+
+- Account YouTube verificato (per video >15 minuti)
+- Progetto Google Cloud con YouTube Data API v3 abilitata
+- Credenziali OAuth2 (client ID + secret)
 
 ### Setup Google Cloud e YouTube API
 
-#### Crea Progetto Google Cloud
+#### 1. Crea Progetto Google Cloud
 
-1. Vai su https://console.cloud.google.com/
-2. Clicca "Nuovo Progetto"
-3. Nome: `ars-youtube-uploader`
-4. Clicca "Crea"
+1. Vai su [Google Cloud Console](https://console.cloud.google.com/)
+2. Clicca "Nuovo Progetto" → Nome: `ars-youtube-uploader`
+3. Nel progetto, vai su "API & Services" → "Library"
+4. Cerca "YouTube Data API v3" → Clicca "Abilita"
 
-#### Abilita YouTube Data API v3
-
-1. Nel progetto, vai su "API & Services" → "Library"
-2. Cerca "YouTube Data API v3"
-3. Clicca "Abilita"
-
-#### Configura OAuth Consent Screen
+#### 2. Configura OAuth Consent Screen
 
 1. Vai su "API & Services" → "OAuth consent screen"
-2. Seleziona "External"
-3. Compila campi richiesti:
+2. Seleziona "External" → Compila:
    - App name: `ARS Video Uploader`
    - User support email: tua email
-   - Developer contact: tua email
-4. Clicca "Save and Continue"
-5. Scopes: clicca "Add or Remove Scopes"
-   - Cerca e seleziona: `https://www.googleapis.com/auth/youtube.upload`
-6. Clicca "Save and Continue"
-7. Test users: aggiungi email Google del canale YouTube
-8. Clicca "Save and Continue" → "Back to Dashboard"
+3. Scopes: aggiungi `https://www.googleapis.com/auth/youtube.upload`
+4. Test users: aggiungi email Google del canale YouTube
 
-#### Crea Credenziali OAuth 2.0
+#### 3. Crea Credenziali OAuth 2.0
 
 1. Vai su "API & Services" → "Credentials"
-2. Clicca "Create Credentials" → "OAuth client ID"
-3. Application type: "Desktop app"
-4. Name: `ARS Uploader Desktop`
-5. Clicca "Create"
-6. Nella finestra popup, clicca "Download JSON"
-7. Salva file scaricato come `config/youtube_secrets.json`
+2. "Create Credentials" → "OAuth client ID"
+3. Application type: "Desktop app" → Name: `ARS Uploader Desktop`
+4. Download JSON → Salva come `config/youtube_secrets.json`
 
-#### Verifica Quota
-
-1. Vai su "API & Services" → "YouTube Data API v3" → "Quotas"
-2. Verifica quota disponibili:
-   - Default: 10,000 units/day
-   - Upload video: ~1,600 units
-   - Max upload/giorno: ~6 video
-
-Se serve più quota, richiedi aumento su Google Cloud Console.
-
-### Prima Autenticazione
+#### 4. Prima Autenticazione
 
 ```bash
-python3 scripts/main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-219-del-10122025
-```
+# Esegui upload test
+python3 scripts/upload_single.py --dry-run
 
-Al primo avvio:
-1. Si aprirà browser
-2. Seleziona account Google del canale YouTube
-3. Clicca "Continua" per autorizzare
-4. Token salvato in `config/token.json` per riuso
+# Al primo avvio si apre browser per autorizzazione
+# Token salvato in config/token.json per riuso
+```
 
 ### Configurazione Playlist e Channel ID
 
 #### Ottieni Channel ID
 
-1. Vai su YouTube Studio: https://studio.youtube.com
-2. In alto a sinistra, clicca sull'icona del canale
-3. Clicca "Impostazioni" → "Canale"
-4. Copia l'ID canale (es. `UCxxxxxxxxxxxxxxxxxxx`) o handle (es. `@ARSSicilia`)
-5. Apri `config/config.yaml` e compila `youtube.channel_id`:
+1. Vai su [YouTube Studio](https://studio.youtube.com)
+2. Impostazioni → Canale → Copia ID canale (es. `UCxxx...` o `@ARSSicilia`)
+3. Apri `config/config.yaml`:
    ```yaml
    youtube:
      channel_id: "@ARSSicilia"  # O UCxxxxxxxxxxxxxxxxxxx
    ```
 
-**Nota:** Il channel_id resta opzionale; il link ricerca seduta usa una ricerca globale con token.
-
 #### Crea Playlist Annuali
 
-1. Vai su YouTube Studio → Playlist
-2. Crea nuova playlist:
+1. YouTube Studio → Playlist → Crea nuova playlist
    - Nome: `ARS 2025 - Sedute Assemblea`
    - Visibilità: Pubblica
-   - Descrizione: `Sedute Assemblea Regionale Siciliana - Anno 2025`
-3. Dalla pagina playlist, copia l'ID dall'URL:
-   - URL: `https://www.youtube.com/playlist?list=PLxxxxxxxxxxxxxxxxxxx`
-   - ID playlist: `PLxxxxxxxxxxxxxxxxxxx`
-4. Ripeti per anno 2026, 2027, etc.
-5. Apri `config/config.yaml` e compila playlist:
+2. Copia ID dall'URL: `https://www.youtube.com/playlist?list=PLxxx...`
+3. Apri `config/config.yaml`:
    ```yaml
    youtube:
      playlists:
@@ -146,348 +240,242 @@ Al primo avvio:
        "2026": "PLyyyyyyyyyyyyyyyyyy"
    ```
 
-**Nota:** I video verranno aggiunti automaticamente alla playlist dell'anno corrispondente.
+### Utilizzo
 
-## Utilizzo
-
-### Test Upload Singolo Video
-
-Prima di caricare tutti i video, testa l'upload del primo:
+#### Test Upload Singolo Video
 
 ```bash
-# Modalità dry-run (mostra cosa farebbe senza caricare)
+# Preview senza caricare
 python3 scripts/upload_single.py --dry-run
 
-# Upload reale del primo video
+# Upload reale primo video da anagrafica
 python3 scripts/upload_single.py
 ```
 
-Lo script:
-1. Trova primo video dall'anagrafica senza `youtube_id`
-2. Scarica il video
-3. Carica su YouTube con metadati completi
-4. Aggiunge a playlist anno (se configurata)
-5. **Aggiorna anagrafica** con `youtube_id` per evitare duplicati
-
-**Importante:** Dopo upload successo, il video non verrà ricaricato in esecuzioni successive.
-
-### Aggiornare Descrizioni Esistenti
-
-Se hai video già caricati e vuoi aggiungere/aggiornare il token e il link di ricerca:
+#### Build Anagrafica Video
 
 ```bash
-# Preview senza aggiornare
-.venv/bin/python3 scripts/update_descriptions.py --dry-run
-
-# Update reale delle descrizioni
-.venv/bin/python3 scripts/update_descriptions.py
-```
-
-Il link di ricerca generato usa questa forma:
-```
-https://www.youtube.com/results?search_query="ARS_SEDUTA_219-2025-12-10"+intitle:"Lavori d'aula"
-```
-
-Per aggiornare anche i titoli già pubblicati:
-```bash
-.venv/bin/python3 scripts/update_descriptions.py --update-titles
-```
-
-### Configurazione Avanzata (config.yaml)
-
-Opzioni utili per robustezza e metadati:
-```yaml
-scraping:
-  timeout: 30
-  retries: 3
-  backoff_factor: 0.5
-
-download:
-  max_height: 720
-
-youtube:
-  timezone: "Europe/Rome"
-```
-
-### Build Anagrafica Video
-
-Costruisce/aggiorna anagrafica sedute dal 10/12/2025:
-
-```bash
-# Manuale
+# Aggiorna metadati sedute (crawler incrementale)
 ./scripts/run_daily.sh
 
 # Con venv
 .venv/bin/python3 scripts/build_anagrafica.py
 ```
 
-**Output:**
-- `data/anagrafica_video.csv` - Metadati tutti video
-- `data/logs/build_anagrafica_YYYY-MM-DD.log` - Log esecuzione
-
-**Comportamento:**
-- Prima esecuzione: estrae tutte sedute dal 10/12/2025
-- Esecuzioni successive: solo nuove sedute o sedute con nuovi video
-- Si ferma quando non ci sono più sedute future (next_link assente)
-
-**Cron giornaliero:**
-```cron
-0 8 * * * /path/to/ars_sicilia/scripts/run_daily.sh
-```
-
-**GitHub Actions (01:37 UTC = 02:37 CET / 03:37 CEST):**
-Il workflow `daily_upload.yml` esegue ogni giorno fino a 4 upload, calcola quanti upload sono già stati fatti nel giorno (da `data/anagrafica_video.csv` via `last_check`) e si ferma se il limite è raggiunto, poi aggiorna l'anagrafica nel repo.
-
-**RSS pubblico (gh-pages):**
-Il feed è pubblicato su GitHub Pages: `https://aborruso.github.io/ars_sicilia/feed.xml`. Usa `data_video` + `ora_video` come `pubDate` e include gli ultimi 20 video caricati.
-
-### Processare Seduta Specifica
+#### Generazione Digest AI
 
 ```bash
-python3 scripts/main.py https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-XXX-del-DDMMYYYY
+# Genera digest per video con trascrizione
+./scripts/generate_digests.sh
 ```
 
-### Processare Ultima Seduta Disponibile
+#### Estrazione Disegni Legge
 
 ```bash
-python3 scripts/main.py
+# Estrai disegni da PDF ordini del giorno
+./scripts/extract_odg_data.sh
 ```
 
-Lo script cercherà automaticamente l'ultima seduta disponibile.
+### Automazione GitHub Actions
 
-### Esecuzione Automatica (Cron)
+Il progetto include workflow automatici:
 
-Crea cron job per esecuzione giornaliera:
+- **`daily_upload.yml`** - Esegue ogni giorno alle 01:37 UTC:
+  - Aggiorna anagrafica sedute
+  - Carica fino a 4 video/giorno (rispetta quota API)
+  - Commit anagrafica aggiornata
 
-```bash
-crontab -e
-```
+- **`publish_rss.yml`** - Genera e pubblica feed RSS su gh-pages
 
-Aggiungi:
+**Secret richiesti** (Settings → Secrets):
+- `YT_CLIENT_SECRET_JSON` - Contenuto `config/youtube_secrets.json`
+- `YT_TOKEN_JSON` - Contenuto `config/token.json`
 
-```cron
-# Ogni giorno alle 3:00 AM
-0 3 * * * cd /home/aborruso/git/idee/ars_sicilia && /usr/bin/python3 scripts/main.py >> data/logs/cron.log 2>&1
-```
+### Limiti e Quota YouTube API
 
-## Struttura File
+- **Quota giornaliera**: 10,000 units/day (default)
+- **Costo upload video**: ~1,600 units
+- **Costo playlist insert**: ~50 units
+- **Totale per video**: ~1,650 units
+- **Max upload/giorno**: ~6 video
+
+Se serve più quota, richiedi aumento su Google Cloud Console.
+
+### Troubleshooting
+
+#### Errore "File credenziali non trovato"
+Verifica che `config/youtube_secrets.json` esista con credenziali OAuth2 da Google Cloud.
+
+#### Errore "Quota exceeded"
+Hai superato limite giornaliero (10,000 units). Aspetta 24h o richiedi aumento quota.
+
+#### Token scaduto
+Elimina `config/token.json` e riavvia script per ri-autenticarsi.
+
+#### Download fallito
+- Verifica connessione internet
+- Controlla: `yt-dlp --version`
+- Prova download manuale: `yt-dlp [URL]`
+
+</details>
+
+---
+
+## 📚 Documentazione
+
+- 📋 [PRD.md](PRD.md) - Product Requirements Document completo
+- 🎨 [docs/design-system.md](docs/design-system.md) - Design system "Editorial Civic"
+- 📊 [LOG.md](LOG.md) - Changelog dettagliato progetto (aggiornato quotidianamente)
+- 🏗️ [openspec/project.md](openspec/project.md) - Specifica architettura backend + frontend
+- 🔍 [ars_sicilia_api/](ars_sicilia_api/) - Client Python per API disegni di legge ARS
+- 📖 [ars_sicilia_api/API_DOCUMENTATION.md](ars_sicilia_api/API_DOCUMENTATION.md) - Documentazione API ricerca legislativa
+- 🔎 [ars_sicilia_api/GUIDA_ALLA_RICERCA.md](ars_sicilia_api/GUIDA_ALLA_RICERCA.md) - Sintassi query avanzate
+
+---
+
+## 📂 Struttura Progetto
 
 ```
 ars_sicilia/
-├── src/
-│   ├── scraper.py          # Scraping pagine sedute
-│   ├── downloader.py       # Download video HLS
-│   ├── uploader.py         # Upload YouTube
-│   ├── metadata.py         # Costruzione metadati
-│   ├── logger.py           # Gestione log CSV
-│   └── utils.py            # Utility functions
-├── config/
-│   ├── config.yaml         # Configurazione
-│   ├── youtube_secrets.json # Credenziali OAuth2 (non committare!)
-│   └── token.json          # Token OAuth2 (auto-generato)
-├── data/
-│   ├── anagrafica_video.csv # Anagrafica completa video
-│   ├── logs/
-│   │   ├── build_anagrafica_*.log # Log build anagrafica
-│   │   ├── upload_log.csv  # Log upload video
-│   │   └── index.csv       # Indice sedute
-│   └── videos/             # Video temporanei (auto-cleanup)
-├── scripts/
-│   ├── build_anagrafica.py   # Script anagrafica incrementale
-│   ├── run_daily.sh          # Wrapper cron con lock
-│   ├── main.py               # Script upload YouTube
-│   ├── upload_single.py # Test upload singolo video
-│   ├── update_descriptions.py # Aggiorna descrizioni e metadati
-│   └── generate_rss.py       # Genera feed RSS pubblico
-├── requirements.txt
-└── README.md
+├── src/                          # Frontend Astro
+│   ├── pages/                    # Routing (index, sedute, video, about)
+│   ├── components/               # Componenti React/Astro
+│   ├── layouts/                  # Layout base
+│   └── lib/                      # Data loaders, utilities
+├── scripts/                      # Backend Python
+│   ├── build_anagrafica.py       # Crawler sedute
+│   ├── upload_single.py          # Test upload YouTube
+│   ├── generate_digests.sh       # Digest AI
+│   ├── extract_odg_data.sh       # Estrai disegni legge
+│   └── build-data.mjs            # Build data per Astro (JS)
+├── data/                         # Dataset pubblici
+│   ├── anagrafica_video.csv      # Metadati sedute
+│   ├── disegni_legge.jsonl       # Disegni legge estratti
+│   ├── digest/                   # Digest AI JSON
+│   └── logs/                     # Log upload, build
+├── config/                       # Configurazione
+│   ├── config.yaml               # Config backend Python
+│   ├── digest.yaml               # Template prompt LLM
+│   ├── digest-schema.json        # Schema JSON digest
+│   ├── youtube_secrets.json      # Credenziali OAuth2 (non versionato)
+│   └── token.json                # Token OAuth2 (auto-generato)
+├── docs/                         # Documentazione
+│   └── design-system.md          # Guida design system
+├── ars_sicilia_api/              # Client API disegni legge
+├── dist/                         # Output build Astro (GitHub Pages)
+├── package.json                  # Dipendenze frontend
+├── requirements.txt              # Dipendenze backend Python
+├── tailwind.config.mjs           # Config Tailwind CSS
+└── astro.config.mjs              # Config Astro
 ```
 
-## Log Upload
+---
 
-File: `data/logs/upload_log.csv`
+## 📊 Dati Aperti
 
-Campi:
-- `id_video`: ID univoco video ARS
-- `numero_seduta`: Numero seduta (es. "219/A")
-- `data_seduta`: Data seduta (YYYY-MM-DD)
-- `data_video`: Data video (YYYY-MM-DD)
-- `ora_video`: Ora video (HH:MM)
-- `video_id_youtube`: ID video YouTube
-- `upload_timestamp`: Timestamp upload (ISO 8601)
-- `status`: success | failed | pending
-- `error_message`: Dettaglio errore (se failed)
+Tutti i dataset sono pubblicamente accessibili e versionati su GitHub:
 
-## Anagrafica Video
+### Dataset Disponibili
 
-File: `data/anagrafica_video.csv`
+| File | Formato | Descrizione | Record |
+|------|---------|-------------|--------|
+| `data/anagrafica_video.csv` | CSV | Metadati completi sedute e video | 35+ |
+| `data/disegni_legge.jsonl` | JSONL | Disegni di legge estratti da OdG | Variabile |
+| `data/digest/{youtube_id}.json` | JSON | Digest AI generati da trascrizioni | 20+ |
+| `rss.xml` | RSS 2.0 | Feed pubblico ultimi 20 video | 20 |
 
-Campi:
-- `numero_seduta`: Numero seduta (es. "219")
-- `data_seduta`: Data seduta (YYYY-MM-DD)
-- `url_pagina`: URL pagina seduta ARS
-- `odg_url`: Link OdG e Comunicazioni PDF
-- `resoconto_url`: **[DEPRECATED]** Link resoconto (preferisce stenografico > provvisorio)
-- `resoconto_provvisorio_url`: Link resoconto provvisorio PDF (temporaneo)
-- `resoconto_stenografico_url`: Link resoconto stenografico PDF (finale)
-- `allegato_url`: Link allegato alla seduta PDF (opzionale)
-- `id_video`: ID univoco video ARS
-- `ora_video`: Ora inizio video (HH:MM)
-- `data_video`: Data video (YYYY-MM-DD)
-- `stream_url`: URL stream HLS (attualmente vuoto)
-- `video_page_url`: URL pagina video ARS
-- `youtube_id`: ID video YouTube (vuoto se non uploadato)
-- `last_check`: Timestamp ultimo controllo (ISO 8601)
-- `status`: Stato upload in anagrafica (es. `success`, `failed`)
-- `failure_reason`: Motivo fallimento (se `status=failed`)
+### Schema Anagrafica Video (CSV)
 
-**Nota migrazione schema CSV:**
-Le colonne `resoconto_provvisorio_url`, `resoconto_stenografico_url` e `allegato_url` sono state aggiunte per estrarre tutti i documenti disponibili dalle pagine seduta. La colonna `resoconto_url` è mantenuta per retrocompatibilità e contiene il resoconto stenografico (se presente) o il provvisorio. Record esistenti hanno valori vuoti per le nuove colonne - verranno popolate al prossimo aggiornamento anagrafica.
+Campi principali:
+- `numero_seduta` - Numero seduta (es. "219")
+- `data_seduta` - Data seduta (YYYY-MM-DD)
+- `data_video` - Data video effettiva (YYYY-MM-DD)
+- `ora_video` - Ora inizio video (HH:MM)
+- `youtube_id` - ID video YouTube (vuoto se non uploadato)
+- `odg_url` - Link PDF ordine del giorno
+- `resoconto_stenografico_url` - Link resoconto finale
+- `duration_minutes` - Durata video in minuti
+- `last_check` - Timestamp ultimo aggiornamento
 
-## Indice Sedute
+### Schema Disegni Legge (JSONL)
 
-File: `data/logs/index.csv`
+Campi per record:
+- `titolo_disegno` - Titolo completo
+- `numero_disegno` - Numero DDL (parte numerica)
+- `legislatura` - Numero romano (es. "XVIII")
+- `data_ora` - Data e ora seduta (ISO 8601)
+- `pdf_url` - URL PDF sorgente
+- `url_disegno` - URL ICARO generato
 
-Campi:
-- `numero_seduta`
-- `data_seduta`
-- `url_pagina`
-- `video_count`
+### Licenza Dati
 
-## Configurazione
+I dati estratti sono derivati da fonti pubbliche dell'Assemblea Regionale Siciliana. Il software di estrazione è open source.
 
-File: `config/config.yaml`
+---
 
-Parametri principali:
-- `scraping.start_date`: Data inizio crawling (default: 2025-12-01)
-- `download.cleanup_after_upload`: Elimina video dopo upload (default: true)
-- `youtube.privacy`: public | unlisted | private (default: public)
-- `youtube.tags`: Tags base applicati a tutti video
-- Playlist auto-create: se una playlist annuale non è configurata, l'ID viene salvato in `data/playlists.json` per riuso.
+## 🗺️ Roadmap
 
-## Segreti e credenziali (produzione)
+### In Sviluppo
+- [ ] Search engine full-text con Pagefind
+- [ ] Dashboard query disegni legge (legislatura, anno, firmatario)
+- [ ] Linkage automatico video↔disegni discussi
 
-Per i workflow GitHub Actions sono richiesti questi secret:
-- `YT_CLIENT_SECRET_JSON`: contenuto JSON di `config/youtube_secrets.json`
-- `YT_TOKEN_JSON`: contenuto JSON di `config/token.json`
+### Prossimi Passi
+- [ ] Trascrizione automatica: export testo per analisi
+- [ ] Dark mode per sito web
+- [ ] Pagina About con storytelling civic hacking
+- [ ] API pubblica per interrogare anagrafica
 
-Aggiornare i secret:
-1. Rigenera `config/token.json` in locale (vedi sezione OAuth / token scaduto).
-2. Copia i file JSON nei secret del repo GitHub (Settings → Secrets and variables → Actions).
-3. Verifica che i workflow `daily_upload.yml` e `publish_rss.yml` completino senza errori.
+### Idee Future
+- [ ] Notifiche Telegram/email per nuove sedute
+- [ ] Analisi sentiment discussioni parlamentari
+- [ ] Timeline legislativa per singolo DDL
+- [ ] Integrazione dati voti elettronici
 
-## Monitoraggio
+---
 
-### Verificare Log
+## 🤝 Contributi e Licenza
 
-```bash
-# Ultimi upload
-tail -20 data/logs/upload_log.csv
+### Come Contribuire
 
-# Upload falliti
-grep ",failed," data/logs/upload_log.csv
-```
+1. Fork repository
+2. Crea branch feature: `git checkout -b feature/nome-feature`
+3. Commit modifiche: `git commit -m 'Add: descrizione'`
+4. Push branch: `git push origin feature/nome-feature`
+5. Apri Pull Request
 
-### Statistiche
+### Linee Guida
 
-```python
-from src.logger import get_upload_stats
+- Segui convenzioni esistenti (Python PEP 8, Prettier per JS/TS)
+- Aggiungi test per nuove funzionalità
+- Aggiorna documentazione e LOG.md
+- Mantieni commit atomici e messaggi chiari
 
-stats = get_upload_stats('data/logs/upload_log.csv')
-print(stats)
-# {'total': 150, 'success': 145, 'failed': 5, 'pending': 0}
-```
+### Licenza
 
-### Verificare Quota YouTube
+Questo progetto è software libero sviluppato per rendere accessibili i lavori dell'Assemblea Regionale Siciliana.
 
-1. Vai su https://console.cloud.google.com/
-2. Seleziona progetto `ars-youtube-uploader`
-3. API & Services → YouTube Data API v3 → Quotas
-4. Verifica utilizzo giornaliero
+### Crediti
 
-## Troubleshooting
+**Sviluppo**: Civic hacker e contributor GitHub
 
-### Errore "File credenziali non trovato"
+**Tecnologie**: Astro, Tailwind CSS, Python, YouTube Data API, LLM CLI
 
-Verifica che `config/youtube_secrets.json` esista e contenga credenziali OAuth2 scaricate da Google Cloud Console.
+**Skill AI utilizzati**:
+- `frontend-design` - Design system "Editorial Civic"
+- `openspec` - Gestione proposte architetturali
 
-### Errore "Quota exceeded"
+**Fonti dati**: [Assemblea Regionale Siciliana](https://www.ars.sicilia.it)
 
-Hai superato limite giornaliero YouTube API (10,000 units). Aspetta 24h o richiedi aumento quota.
+---
 
-### Download fallito
+## 📞 Contatti
 
-- Verifica connessione internet
-- Controlla se yt-dlp è installato: `yt-dlp --version`
-- Prova download manuale: `yt-dlp [URL]`
+- **Issues GitHub**: [github.com/aborruso/ars_sicilia/issues](https://github.com/aborruso/ars_sicilia/issues)
+- **Feed RSS**: [aborruso.github.io/ars_sicilia/rss.xml](https://aborruso.github.io/ars_sicilia/rss.xml)
+- **Repository**: [github.com/aborruso/ars_sicilia](https://github.com/aborruso/ars_sicilia)
 
-### Upload fallito
+---
 
-- Verifica account YouTube verificato (per video >15 min)
-- Controlla quota API disponibile
-- Verifica token OAuth2 valido
-
-### Token scaduto
-
-Elimina `config/token.json` e riavvia script per ri-autenticarsi.
-
-## Note Importanti
-
-### Limiti YouTube API
-
-- **Quota giornaliera**: 10,000 units/day
-- **Costo upload video**: ~1,600 units
-- **Max upload/giorno**: ~6 video (con quota default)
-
-Se seduta ha >6 video, processare in 2 giorni o richiedere aumento quota.
-
-### Video Lunghi
-
-Account YouTube deve essere **verificato** per caricare video >15 minuti.
-
-Verifica account: https://www.youtube.com/verify
-
-### Sicurezza
-
-**NON committare** su git:
-- `config/youtube_secrets.json`
-- `config/token.json`
-
-Questi file sono già in `.gitignore`.
-
-### Bandwidth
-
-Stima: ~1 GB per ora di video (720p).
-
-Seduta con 4 video da 2 ore ciascuna = ~8 GB download.
-
-## Sviluppo
-
-### Test Singolo Video
-
-```python
-from src.downloader import download_video
-
-download_video(
-    'https://www.ars.sicilia.it/agenda/seduta/aula/video/2484769',
-    'test.mp4'
-)
-```
-
-### Test Scraping
-
-```python
-from src.scraper import get_seduta_page, extract_seduta_info
-
-html = get_seduta_page('https://www.ars.sicilia.it/agenda/sedute-aula/seduta-numero-219-del-10122025')
-info = extract_seduta_info(html, 'https://...')
-print(info)
-```
-
-## Licenza
-
-Progetto sviluppato per rendere accessibili i lavori dell'Assemblea Regionale Siciliana.
-
-## Contatti
-
-Per domande o problemi, apri issue su repository GitHub.
+**Progetto civic tech per trasparenza democratica**
+*Ultimo aggiornamento: 2025-12-28*
