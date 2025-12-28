@@ -1,30 +1,29 @@
-# TODO: JSON validation con retry in generate_digests.sh
+# Pulizia file di test in scripts
 
-## Fase 1: Modifica script
+## Todo
 
-- [x] Aggiungere funzione `validate_json` che verifica con `jq` se il JSON è valido
-- [x] Modificare logica generazione digest:
-  - Loop retry fino a 3 tentativi
-  - Dopo ogni generazione, validare JSON
-  - Se valido, salvare e uscire dal loop
-  - Se non valido, loggare errore e ritentare
-  - Se falliscono tutti i tentativi, incrementare counter `failed`
-- [x] Eliminare file JSON corrotto se tutti i tentativi falliscono
-
-## Fase 2: Fix file corrotto
-
-- [x] Rimuovere `data/digest/v4mq1poSzOw.json` corrotto
-- [x] Rigenerare digest per questo video (al prossimo run)
-
----
+- [x] Creare directory `scripts/tests/` per i file di test
+- [x] Spostare `test_youtube_auth.py` in `scripts/tests/`
+- [x] Spostare `test_youtube_auth_manual.py` in `scripts/tests/`
+- [x] Verificare se ci sono riferimenti a questi file da aggiornare (README, documentazione, workflow)
+- [x] Creare directory `scripts/archive/` per script obsoleti
+- [x] Identificare script obsoleti da archiviare
+- [x] Spostare script obsoleti in `scripts/archive/`
 
 ## Review
 
-Modifiche implementate in `scripts/generate_digests.sh`:
+**File spostati in `scripts/tests/`:**
+- test_youtube_auth.py
+- test_youtube_auth_manual.py
 
-1. **Funzione validazione** (righe 30-38): `validate_json()` usa `jq empty` per verificare sintassi JSON
-2. **Retry loop** (righe 95-136): max 3 tentativi per digest, validazione dopo ogni generazione
-3. **Attesa retry**: 5 secondi tra tentativi falliti
-4. **Cleanup**: verificati tutti i digest esistenti, rimosso 1 file corrotto (v4mq1poSzOw.json)
+**File spostati in `scripts/archive/`:**
+- backfill_durations.py
+- check_playlist.py
+- fix_csv_carriage_returns.py
+- sync_youtube_ids.py
 
-Il digest mancante verrà rigenerato automaticamente al prossimo run dello script con validazione attiva.
+**Riferimenti aggiornati:**
+- scripts/README.md:47-48
+- openspec/project.md:39
+
+La directory `scripts/` ora contiene solo gli script attivi, con test e obsoleti organizzati in sottodirectory.
