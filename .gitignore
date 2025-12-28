@@ -5,6 +5,7 @@ config/token.json
 
 # Virtual environment
 .venv/
+venv/
 
 # Generated data (exclude logs but keep anagrafica)
 data/logs/*.csv
