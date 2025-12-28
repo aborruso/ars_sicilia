@@ -44,11 +44,12 @@ Modelli testati per la configurazione iniziale:
 
 - `get_auth_url.py` — Avvia flusso OAuth e stampa URL di autorizzazione.
 - `complete_auth.py` — Completa OAuth e salva token.
-- `tests/test_youtube_auth.py` — Smoke test autenticazione e quota.
-- `tests/test_youtube_auth_manual.py` — Variante manuale per debug OAuth.
 - `setup_playlist.py` — Crea playlist annuale e (opzionalmente) aggiunge video esistenti.
 
 ## Note
+
+- Sottodirectory: `tests/` (smoke test auth), `archive/` (script obsoleti).
+
 
 - Config: `config/config.yaml`
 - Log/anagrafica: `data/`
