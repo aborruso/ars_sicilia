@@ -1,5 +1,24 @@
 # 2025-12-28
 
+## Redesign Completo "Editorial Civic"
+
+- Implementato nuovo design system con identità visiva distintiva
+- **Palette colori**: Navy istituzionale (#1e3a5f), Ambra siciliana (#d97706), Verde salvia (#059669), Grigi caldi
+- **Tipografia**: Fraunces (font display serif editoriale) + Manrope (sans geometrico)
+- **Visual language**: Bordi colorati a sinistra come elemento signature, pattern geometrico sfondo
+- **Componenti aggiornati**:
+  - Header: Logo stemma "ARS" in gradient, navigazione editoriale
+  - Footer: Layout 3 colonne informativo, badge tech stack
+  - SedutaCard: Tipografia grande, bordi animati hover, sezioni organizzate
+  - CategoryFilter: Badge interattivi con hover states
+  - Pagination: Bottoni con icone, responsive
+- **Homepage**: Hero editoriale con bordo ambra, stats cards con bordi colorati
+- **Accessibilità**: Contrasti WCAG 2.1 AA, focus states evidenti, ARIA labels
+- **Mobile-first**: Responsive design con breakpoints Tailwind
+- File modificati: tailwind.config.mjs, src/styles/global.css, tutti i layout/componenti principali
+- Documentazione: docs/design-system.md (guida completa), docs/design-preview.html (preview HTML)
+- Skill utilizzato: frontend-design per direzione estetica e implementazione
+
 ## Link RSS Feed Visibile nell'Header
 
 - Aggiunto link RSS con icona 📡 nell'header di navigazione
