@@ -1,0 +1,84 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+const showPages: number[] = [];
+const maxVisible = 5;
+
+// Logic to show pages around current page
+if (totalPages <= maxVisible) {
+  for (let i = 1; i <= totalPages; i++) {
+    showPages.push(i);
+  }
+} else {
+  if (currentPage <= 3) {
+    showPages.push(1, 2, 3, 4, 5);
+  } else if (currentPage >= totalPages - 2) {
+    for (let i = totalPages - 4; i <= totalPages; i++) {
+      showPages.push(i);
+    }
+  } else {
+    showPages.push(
+      currentPage - 2,
+      currentPage - 1,
+      currentPage,
+      currentPage + 1,
+      currentPage + 2
+    );
+  }
+}
+
+const prevUrl = currentPage > 1 ? (currentPage === 2 ? baseUrl : `${baseUrl}/${currentPage - 1}`) : null;
+const nextUrl = currentPage < totalPages ? `${baseUrl}/${currentPage + 1}` : null;
+---
+
+<nav aria-label="Paginazione" class="flex justify-center items-center gap-2 mt-8">
+  {prevUrl ? (
+    <a
+      href={prevUrl}
+      class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+      aria-label="Pagina precedente"
+    >
+      ←
+    </a>
+  ) : (
+    <span class="px-4 py-2 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
+      ←
+    </span>
+  )}
+
+  {showPages.map((page) => (
+    <a
+      href={page === 1 ? baseUrl : `${baseUrl}/${page}`}
+      class:list={[
+        'px-4 py-2 rounded-lg transition-colors',
+        page === currentPage
+          ? 'bg-blue-600 text-white font-semibold'
+          : 'border border-gray-300 hover:bg-gray-50',
+      ]}
+      aria-label={`Pagina ${page}`}
+      aria-current={page === currentPage ? 'page' : undefined}
+    >
+      {page}
+    </a>
+  ))}
+
+  {nextUrl ? (
+    <a
+      href={nextUrl}
+      class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+      aria-label="Pagina successiva"
+    >
+      →
+    </a>
+  ) : (
+    <span class="px-4 py-2 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed">
+      →
+    </span>
+  )}
+</nav>

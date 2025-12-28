@@ -1,5 +1,19 @@
 # 2025-12-28
 
+## Sviluppo sito Astro completo
+
+- Implementato sito statico completo con Astro + Tailwind CSS
+- Setup base: package.json, configs, TypeScript types, data-loader
+- Script build-data.mjs: processa CSV + JSONL + JSON digest a build-time
+- Layout: BaseLayout con accessibilità (skip link, semantic HTML), Header, Footer, Breadcrumb
+- Componenti sedute: SedutaCard, VideoThumbnail, VideosByDate, VideoEmbed, DigestContent, DisegniList, CategoryBadge
+- Componenti UI: Pagination classica, CategoryFilter
+- Pagine: Homepage, lista sedute paginata, single view seduta, single view video, categorie, About, 404
+- SEO: RSS feed, sitemap automatico, structured data (Schema.org VideoObject), robots.txt
+- Deploy: GitHub Actions workflow per deploy automatico su GitHub Pages
+- Build test: 108 pagine generate con successo in 2.14s
+- Piano salvato in docs/piano-sviluppo-sito.md
+
 ## Riorganizzazione scripts/
 
 - Creata `scripts/tests/` per file di test

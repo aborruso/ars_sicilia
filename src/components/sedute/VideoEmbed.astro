@@ -1,0 +1,19 @@
+---
+interface Props {
+  youtubeId: string;
+  title?: string;
+}
+
+const { youtubeId, title = 'Video seduta ARS' } = Astro.props;
+---
+
+<div class="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg mb-6">
+  <iframe
+    src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
+    title={title}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    class="absolute top-0 left-0 w-full h-full"
+    loading="lazy"
+  ></iframe>
+</div>

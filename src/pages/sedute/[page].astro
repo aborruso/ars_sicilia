@@ -1,0 +1,55 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import SedutaCard from '../../components/sedute/SedutaCard.astro';
+import CategoryFilter from '../../components/ui/CategoryFilter.astro';
+import Pagination from '../../components/ui/Pagination.astro';
+import { loadSedute, loadCategories } from '../../lib/data-loader';
+
+export async function getStaticPaths() {
+  const ITEMS_PER_PAGE = 10;
+  const sedute = await loadSedute();
+  const totalPages = Math.ceil(sedute.length / ITEMS_PER_PAGE);
+
+  return Array.from({ length: totalPages }, (_, i) => {
+    const page = i + 1;
+    const start = i * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+
+    return {
+      params: { page: String(page) },
+      props: {
+        sedute: sedute.slice(start, end),
+        currentPage: page,
+        totalPages,
+      },
+    };
+  });
+}
+
+const { sedute, currentPage, totalPages } = Astro.props;
+const categories = await loadCategories();
+---
+
+<PageLayout
+  title={`Sedute ARS - Pagina ${currentPage}`}
+  description={`Elenco sedute dell'Assemblea Regionale Siciliana - Pagina ${currentPage} di ${totalPages}`}
+>
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Sedute Assemblea Regionale Siciliana
+    </h1>
+    <p class="text-lg text-gray-600">
+      Pagina {currentPage} di {totalPages}
+    </p>
+  </div>
+
+  <CategoryFilter categories={categories} />
+
+  <div class="space-y-6 mt-8">
+    {sedute.map((seduta) => (
+      <SedutaCard seduta={seduta} />
+    ))}
+  </div>
+
+  <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/ars_sicilia/sedute" />
+</PageLayout>

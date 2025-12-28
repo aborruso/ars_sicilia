@@ -1,0 +1,49 @@
+---
+const currentPath = Astro.url.pathname;
+const isHome = currentPath === '/' || currentPath === '/ars_sicilia/' || currentPath === '/ars_sicilia';
+---
+
+<header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+  <div class="container-custom py-4">
+    <div class="flex items-center justify-between">
+      <div>
+        <a href="/ars_sicilia/" class="block group">
+          <h1 class="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+            ARS Sicilia
+          </h1>
+          <p class="text-sm text-gray-600">
+            Sedute Assemblea Regionale
+          </p>
+        </a>
+      </div>
+
+      <nav aria-label="Navigazione principale">
+        <ul class="flex gap-6 items-center">
+          <li>
+            <a
+              href="/ars_sicilia/"
+              class:list={[
+                'font-medium transition-colors',
+                isHome ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600',
+              ]}
+              aria-current={isHome ? 'page' : undefined}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.ars.sicilia.it/agenda/lavori-aula"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              Sito ARS
+              <span class="sr-only">(apre in una nuova finestra)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

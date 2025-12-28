@@ -1,0 +1,89 @@
+---
+import PageLayout from '../../../../../../layouts/PageLayout.astro';
+import Breadcrumb from '../../../../../../components/layout/Breadcrumb.astro';
+import VideosByDate from '../../../../../../components/sedute/VideosByDate.astro';
+import DisegniList from '../../../../../../components/sedute/DisegniList.astro';
+import { loadSedute } from '../../../../../../lib/data-loader';
+import { formatDate } from '../../../../../../lib/utils';
+
+export async function getStaticPaths() {
+  const sedute = await loadSedute();
+
+  return sedute.map((seduta) => ({
+    params: {
+      anno: seduta.yearMonthDay.year,
+      mese: seduta.yearMonthDay.month,
+      giorno: seduta.yearMonthDay.day,
+      seduta: seduta.slug,
+    },
+    props: { seduta },
+  }));
+}
+
+const { seduta } = Astro.props;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/ars_sicilia/' },
+  { label: 'Sedute', href: '/ars_sicilia/sedute/1' },
+  { label: `Seduta ${seduta.numero}`, href: '' },
+];
+---
+
+<PageLayout
+  title={`Seduta n. ${seduta.numero} del ${formatDate(seduta.dataSeduta)}`}
+  description={`Video, documenti e trascrizioni della seduta ${seduta.numero} dell'Assemblea Regionale Siciliana del ${formatDate(seduta.dataSeduta)}. ${seduta.videos.length} video disponibili${seduta.disegniLegge.length > 0 ? `, disegni di legge: ${seduta.disegniLegge.map(d => d.numero).join(', ')}` : ''}.`}
+  ogType="article"
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <article>
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">
+        Seduta n. {seduta.numero}
+      </h1>
+      <p class="text-lg text-gray-600">
+        {formatDate(seduta.dataSeduta)}
+      </p>
+    </header>
+
+    <!-- Link documenti -->
+    <div class="flex flex-wrap gap-3 mb-8">
+      <a href={seduta.urlPagina} class="btn-primary" target="_blank" rel="noopener noreferrer">
+        📄 Pagina ARS
+        <span class="sr-only">(apre in una nuova finestra)</span>
+      </a>
+
+      {seduta.odgUrl && (
+        <a href={seduta.odgUrl} class="btn-secondary" target="_blank" rel="noopener noreferrer">
+          📋 Ordine del Giorno (PDF)
+          <span class="sr-only">(apre in una nuova finestra)</span>
+        </a>
+      )}
+
+      {(seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl) && (
+        <a
+          href={seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl}
+          class="btn-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📝 Resoconto {seduta.resocontoStenograficoUrl ? 'Stenografico' : 'Provvisorio'} (PDF)
+          <span class="sr-only">(apre in una nuova finestra)</span>
+        </a>
+      )}
+
+      {seduta.allegatoUrl && (
+        <a href={seduta.allegatoUrl} class="btn-secondary" target="_blank" rel="noopener noreferrer">
+          📎 Allegato (PDF)
+          <span class="sr-only">(apre in una nuova finestra)</span>
+        </a>
+      )}
+    </div>
+
+    <!-- Disegni di legge -->
+    <DisegniList disegni={seduta.disegniLegge} />
+
+    <!-- Video raggruppati per data -->
+    <VideosByDate seduta={seduta} />
+  </article>
+</PageLayout>

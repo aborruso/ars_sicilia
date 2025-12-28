@@ -1,0 +1,64 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+}
+
+const {
+  title,
+  description,
+  ogImage = '/ars_sicilia/og-default.png',
+  ogType = 'website',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fullOgImage = new URL(ogImage, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/ars_sicilia/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <title>{title} | ARS Sicilia</title>
+    <meta name="description" content={description} />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="ARS Sicilia - Sedute Assemblea" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullOgImage} />
+
+    <ViewTransitions />
+  </head>
+  <body class="flex flex-col min-h-screen bg-gray-50">
+    <a href="#main-content" class="skip-link">
+      Vai al contenuto
+    </a>
+
+    <slot name="header" />
+
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+
+    <slot name="footer" />
+  </body>
+</html>
