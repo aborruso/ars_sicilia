@@ -36,7 +36,7 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Shell automation (`run_daily.sh`) uses `set -euo pipefail` and lock file to prevent concurrent runs.
 
 ### Testing Strategy
-- Manual smoke scripts: `scripts/test_youtube_auth.py` / `scripts/test_youtube_auth_manual.py` to validate OAuth tokens and quota.
+- Manual smoke scripts: `scripts/tests/test_youtube_auth.py` / `scripts/tests/test_youtube_auth_manual.py` to validate OAuth tokens and quota.
 - Single-upload smoke test: `scripts/upload_single.py` to validate the end-to-end flow on one video.
 - OAuth helper scripts: `scripts/get_auth_url.py` / `scripts/complete_auth.py` for manual authentication flow.
 - Functional verification by running `scripts/build_anagrafica.py` (catalog only) and `scripts/main.py [seduta_url]` for end-to-end upload.
