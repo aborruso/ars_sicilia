@@ -1,17 +1,27 @@
 # Project Context
 
 ## Purpose
-Automate the collection and publication of Assemblea Regionale Siciliana (ARS) plenary videos: crawl seduta pages, catalog metadata, download streams, and upload to YouTube with searchable titles, descriptions, tags, and recording dates. Maintain a public CSV log to avoid duplicate uploads and enable auditing. Extract structured legislative bill data from agenda PDFs (OdG) for historical archiving and linkage to videos. Generate AI-powered video digests from transcripts and track video duration for analytics.
+Automate the collection and publication of Assemblea Regionale Siciliana (ARS) plenary videos: crawl seduta pages, catalog metadata, download streams, and upload to YouTube with searchable titles, descriptions, tags, and recording dates. Maintain a public CSV log to avoid duplicate uploads and enable auditing. Extract structured legislative bill data from agenda PDFs (OdG) for historical archiving and linkage to videos. Generate AI-powered video digests from transcripts and track video duration for analytics. Provide a public static website to browse, search, and navigate sedute videos with enhanced accessibility and user experience features.
 
 ## Tech Stack
+
+### Backend Pipeline
 - Python 3.10+
 - Virtual environment: `.venv` (managed via `python3 -m venv`)
 - Core libraries: `requests`, `beautifulsoup4`, `yt-dlp`, `google-api-python-client`, `google-auth-oauthlib`, `google-auth-httplib2`, `pyyaml`
 - Data/config: YAML config file (`config/config.yaml`), CSV logs/indices under `data/`
 - Bash wrapper (`scripts/run_daily.sh`) for cron with lock handling
-- GitHub Actions workflows for daily upload and RSS publish (`.github/workflows/*.yml`)
 - Package dependencies: `yt-dlp>=2024.0.0`, `google-api-python-client>=2.0.0`, `google-auth-oauthlib>=1.0.0`, `google-auth-httplib2>=0.1.0`, `beautifulsoup4>=4.12.0`, `requests>=2.31.0`, `pyyaml>=6.0`
 - CLI tools: `markitdown` (PDF to text conversion), `llm` (LLM-based structured extraction), `mlr` (miller, JSONL/CSV processing), `qv` (yt-dlp wrapper for transcript download)
+
+### Frontend Website
+- Astro 5.0+ (static site generator)
+- Tailwind CSS 3.4+ with Typography plugin for content styling
+- TypeScript for type safety
+- Build-time data processing: `scripts/build-data.mjs` converts CSV/JSONL/JSON to static JSON bundles
+- Static hosting: GitHub Pages
+- Integrations: `@astrojs/tailwind`, `@astrojs/sitemap`, `@astrojs/rss`
+- GitHub Actions workflows for automated deployment
 
 ## Project Conventions
 
@@ -23,6 +33,8 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Project documentation: `README.md` (user guide), `PRD.md` (requirements), `LOG.md` (change log), `docs/` (additional docs).
 
 ### Architecture Patterns
+
+#### Backend Pipeline
 - Modular pipeline: `scraper` (HTML fetch/parse) → `metadata` (title/description/tags) → `downloader` (yt-dlp HLS) → `uploader` (YouTube Data API) → `logger` (CSV log/index).
 - Script entrypoints live under `scripts/` (e.g., `scripts/main.py`, `scripts/build_anagrafica.py`, `scripts/extract_odg_data.sh`, `scripts/generate_digests.sh`, `scripts/run_daily.sh`).
 - Document extraction: scraper extracts 4 document types from seduta pages (OdG, resoconto provvisorio/stenografico, allegato) via pattern matching on HTML labels; maintains backward-compatible `resoconto_url` field (prefers stenographic over provisional).
@@ -34,6 +46,16 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Configuration-driven behavior via `config/config.yaml`; defaults target seduta 219 (10/12/2025) onward.
 - Idempotency: skip uploads already logged as `success`; incremental crawler (`build_anagrafica.py`) updates `data/anagrafica_video.csv` and stops when no future sedute; OdG extraction tracks processed PDFs; digest generation skips existing JSONs and videos marked `no_transcript=true`.
 - Shell automation (`run_daily.sh`) uses `set -euo pipefail` and lock file to prevent concurrent runs.
+
+#### Frontend Website
+- Static site architecture: Astro generates HTML at build time from data files; no runtime server required.
+- File-based routing: pages under `src/pages/` map to URLs (e.g., `src/pages/sedute/[anno]/[mese]/[giorno]/[seduta]/[video].astro` → `/sedute/2025/12/16/seduta-220/video-1137/`).
+- Data flow: `scripts/build-data.mjs` (prebuild step) aggregates CSV/JSONL/digest JSON into consolidated `src/data/processed/*.json` files; Astro pages import these at build time via `data-loader.ts`.
+- Component structure: reusable Astro components in `src/components/` (layout, sedute, UI); layouts in `src/layouts/` (BaseLayout, PageLayout).
+- Video page navigation: prev/next buttons allow sequential navigation between videos of same seduta without returning to seduta overview; buttons disabled (grayed) at boundaries; chronological order based on `dataVideo` + `oraVideo`.
+- SEO: sitemap.xml auto-generated, RSS feed for latest sedute, Schema.org VideoObject structured data on video pages, OpenGraph tags.
+- Accessibility: skip links, semantic HTML, ARIA labels, keyboard navigation support.
+- Styling: Tailwind utility classes; Tailwind Typography for digest content rendering.
 
 ### Testing Strategy
 - Manual smoke scripts: `scripts/tests/test_youtube_auth.py` / `scripts/tests/test_youtube_auth_manual.py` to validate OAuth tokens and quota.
