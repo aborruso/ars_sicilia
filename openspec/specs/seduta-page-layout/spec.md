@@ -1,7 +1,7 @@
 # seduta-page-layout Specification
 
 ## Purpose
-TBD - created by archiving change reduce-video-preview-size. Update Purpose after archive.
+Ottimizzare la densità delle preview video nelle pagine seduta mantenendo proporzioni corrette e responsività.
 ## Requirements
 ### Requirement: Video preview grid density
 Il sistema SHALL mostrare le preview video in un grid responsive che massimizza il numero di video visibili per riga.
@@ -24,4 +24,3 @@ Il sistema SHALL mantenere aspect ratio 16:9 per tutte le preview video indipend
 #### Scenario: Ridimensionamento finestra
 - **WHEN** la finestra viene ridimensionata
 - **THEN** le thumbnail mantengono proporzioni 16:9 senza distorsioni
-

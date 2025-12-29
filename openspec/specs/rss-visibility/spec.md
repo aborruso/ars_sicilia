@@ -1,7 +1,7 @@
 # rss-visibility Specification
 
 ## Purpose
-TBD - created by archiving change add-rss-link. Update Purpose after archive.
+Rendere il feed RSS facilmente individuabile e accessibile dalla navigazione principale del sito.
 ## Requirements
 ### Requirement: RSS Link in Header Navigation
 
@@ -76,4 +76,3 @@ The RSS link MUST follow the existing header navigation design patterns.
 **Then** the icon uses orange (#FF6600 or similar RSS standard color)
 **Or** the icon uses the site's primary link color for consistency
 **And** the color provides sufficient contrast with the background (WCAG AA)
-
