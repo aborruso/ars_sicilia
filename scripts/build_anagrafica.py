@@ -58,7 +58,8 @@ def init_anagrafica_csv(file_path: str) -> bool:
             'last_check',
             'status',
             'failure_reason',
-            'duration_minutes'
+            'duration_minutes',
+            'no_transcript'
         ]
 
         if not path.exists():
@@ -160,7 +161,8 @@ def get_existing_youtube_ids(file_path: str, numero_seduta: str) -> dict:
                         'last_check': row.get('last_check', ''),
                         'status': row.get('status', ''),
                         'failure_reason': row.get('failure_reason', ''),
-                        'duration_minutes': row.get('duration_minutes', '')
+                        'duration_minutes': row.get('duration_minutes', ''),
+                        'no_transcript': row.get('no_transcript', '')
                     }
 
     except Exception as e:
@@ -249,6 +251,7 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                 status = existing.get('status', '')
                 failure_reason = existing.get('failure_reason', '')
                 duration_minutes = existing.get('duration_minutes', '')
+                no_transcript = existing.get('no_transcript', '')
                 # Preserva last_check se youtube_id esiste (non aggiornare timestamp per video già uploadati)
                 last_check = existing.get('last_check', '') if youtube_id else timestamp
 
@@ -270,7 +273,8 @@ def save_seduta_to_anagrafica(file_path: str, seduta_info: dict, existing_youtub
                     last_check,  # Preservato per video uploadati, nuovo timestamp per video nuovi
                     status,
                     failure_reason,
-                    duration_minutes  # Preservato da record esistente
+                    duration_minutes,  # Preservato da record esistente
+                    no_transcript  # Preservato da record esistente
                 ])
                 video_count += 1
 
