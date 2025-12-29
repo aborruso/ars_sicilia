@@ -1,3 +1,16 @@
+# 2025-12-29
+
+## Fix CSV Schema: campo no_transcript
+
+- **Problema**: build_anagrafica.py scriveva 18 campi ma header aveva 19 (mancava no_transcript)
+- Causava CSV corrotto quando generate_digests.sh aggiungeva il campo
+- **Fix**:
+  - Aggiunto 'no_transcript' a required_fields in init_anagrafica_csv()
+  - get_existing_youtube_ids() ora preserva no_transcript
+  - save_seduta_to_anagrafica() scrive no_transcript alla fine della row
+- CSV ora sempre valido con 19 campi in tutte le righe
+- File modificato: scripts/build_anagrafica.py
+
 # 2025-12-28
 
 ## Ristrutturazione Completa README.md
