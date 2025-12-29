@@ -62,6 +62,7 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Data flow: `scripts/build-data.mjs` (prebuild step) aggregates CSV/JSONL/digest JSON into consolidated `src/data/processed/*.json` files; Astro pages import these at build time via `data-loader.ts`.
 - Component structure: reusable Astro components in `src/components/` (layout, sedute, UI); layouts in `src/layouts/` (BaseLayout, PageLayout).
 - AI transparency: video digest pages display a prominent warning disclaimer before content, informing users that digests are AI-generated from transcripts and may contain errors or hallucinations; semantic HTML with accessibility attributes.
+- Seduta navigation: date headings on seduta pages expose linkable anchors to share and jump to specific days.
 - SEO: sitemap.xml auto-generated, RSS feed for latest sedute, Schema.org VideoObject structured data on video pages, OpenGraph tags.
 - Accessibility: skip links, semantic HTML, ARIA labels, keyboard navigation support.
 - Styling: Tailwind utility classes; Tailwind Typography for digest content rendering.
