@@ -31,7 +31,7 @@ const dates = Object.keys(videosByDate).sort();
           {formatDateShort(date)}
         </h3>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {videosByDate[date].map((video) => {
             const videoUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}/${video.slug}`;
             return <VideoThumbnail video={video} videoUrl={videoUrl} />;
