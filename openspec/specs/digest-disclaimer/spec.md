@@ -1,7 +1,7 @@
 # digest-disclaimer Specification
 
 ## Purpose
-TBD - created by archiving change add-digest-disclaimer. Update Purpose after archive.
+Garantire trasparenza sull'uso di contenuti generati da AI nei digest, con avvisi chiari e accessibili.
 ## Requirements
 ### Requirement: AI Disclaimer Display
 
@@ -88,4 +88,3 @@ The disclaimer MUST display correctly on all screen sizes.
 **When** the digest section is rendered
 **Then** the disclaimer box width matches digest content width
 **And** the box does not stretch unnecessarily wide
-
