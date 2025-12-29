@@ -358,6 +358,81 @@ class ARSClient:
             "content": content,
         }
 
+    def get_ddl_links(self, url: str) -> Dict[str, Any]:
+        """
+        Extract attachment and amendment PDF links from a DDL page.
+
+        Args:
+            url: Full DDL URL (e.g., https://dati.ars.sicilia.it/icaro/default.jsp?icaDB=221&icaQuery=...)
+
+        Returns:
+            Dict with 'allegati' and 'emendamenti' arrays containing PDF URLs
+
+        Note:
+            This method extracts only the direct PDF links for attachments and amendments.
+            Other metadata (CED ID, argomenti) require JavaScript execution and are not included.
+        """
+        # Step 1: Fetch the main page to extract icaQueryId
+        response = self.session.get(url)
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        # Extract query ID from footer (e.g., "QRY1")
+        query_id = None
+        footer = soup.find("footer")
+        if footer:
+            footer_text = footer.get_text()
+            qry_match = re.search(r"QRY(\d+)", footer_text)
+            if qry_match:
+                query_id = qry_match.group(1)
+
+        if not query_id:
+            return {
+                "allegati": [],
+                "emendamenti": [],
+                "error": "Could not extract icaQueryId from page"
+            }
+
+        # Step 2: Fetch AJAX content page
+        ajax_url = f"{self.BASE_URL}/icaro/doc221-1.jsp"
+        params = {
+            "icaQueryId": query_id,
+            "icaDocId": "1",
+            "_": self._get_timestamp()
+        }
+
+        ajax_response = self.session.get(
+            ajax_url,
+            params=params,
+            headers={"X-Requested-With": "XMLHttpRequest"}
+        )
+
+        ajax_soup = BeautifulSoup(ajax_response.text, "html.parser")
+
+        # Step 3: Parse links
+        allegati_links = []
+        emendamenti_links = []
+
+        # Find all anchor tags
+        for link in ajax_soup.find_all("a", href=True):
+            link_text = link.get_text(strip=True)
+            href = link["href"]
+
+            # Normalize scheme-less URLs
+            if href.startswith("//"):
+                href = "https:" + href
+
+            # Check link text
+            if "Vedi Atti Allegati" in link_text:
+                allegati_links.append(href)
+            elif "Vedi Fascicolo" in link_text:
+                emendamenti_links.append(href)
+
+        return {
+            "allegati": allegati_links,
+            "emendamenti": emendamenti_links,
+            "query_id": query_id
+        }
+
     def show_query(self, query_id: int) -> Dict[str, Any]:
         """Return to query results list."""
         params = {

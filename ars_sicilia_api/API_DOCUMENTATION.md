@@ -239,7 +239,57 @@ curl 'https://dati.ars.sicilia.it/icaro/doc221-1.jsp?icaQueryId=1&icaDocId=1&_=1
 
 ---
 
-### 6. Show Query (Return to Results)
+### 6. Extract DDL Attachment and Amendment Links
+
+**Method**: `get_ddl_links(url)`
+
+**Description**: Extracts attachment and amendment PDF links from a DDL page URL. Resolves the `icaQueryId` from the page footer and parses AJAX content to find "Vedi Atti Allegati" (attachments) and "Vedi Fascicolo" (amendments) links.
+
+**Arguments**:
+
+| Parameter | Type | Required | Description |
+|-----------|------|-----------|-------------|
+| `url` | string | Yes | Full DDL URL (e.g., `https://dati.ars.sicilia.it/icaro/default.jsp?icaDB=221&icaQuery=(18.LEGISL+E+1029.NUMDDL)`) |
+
+**Returns**:
+
+Dictionary with:
+- `allegati`: Array of attachment PDF URLs
+- `emendamenti`: Array of amendment PDF URLs
+- `query_id`: Extracted query ID
+
+**Example Usage**:
+
+```python
+from ars_sicilia_api.ars_api_client import ARSClient
+
+client = ARSClient()
+url = "https://dati.ars.sicilia.it/icaro/default.jsp?icaDB=221&icaQuery=(18.LEGISL+E+1029.NUMDDL)"
+result = client.get_ddl_links(url)
+
+print(f"Allegati: {result['allegati']}")
+print(f"Emendamenti: {result['emendamenti']}")
+```
+
+**Response Example**:
+
+```python
+{
+    "allegati": ["https://w3.ars.sicilia.it/ica_221/A18251106_01029.pdf"],
+    "emendamenti": ["https://w3.ars.sicilia.it/ica_221/E18251106_01029.pdf"],
+    "query_id": "1"
+}
+```
+
+**Notes**:
+- The method automatically normalizes scheme-less URLs (e.g., `//w3.ars.sicilia.it/...`) to HTTPS
+- If `icaQueryId` cannot be extracted, returns empty arrays with an error message
+- Parses link text to identify "Vedi Atti Allegati" and "Vedi Fascicolo"
+- Other metadata (CED ID, argomenti) require JavaScript execution and are not available through this method
+
+---
+
+### 7. Show Query (Return to Results)
 
 **URL**: `GET /icaro/default.jsp`
 
@@ -262,7 +312,7 @@ curl 'https://dati.ars.sicilia.it/icaro/default.jsp?icaAction=showQuery&id=1&doc
 
 ---
 
-### 7. Close Query
+### 8. Close Query
 
 **URL**: `GET /icaro/default.jsp`
 
@@ -284,7 +334,7 @@ curl 'https://dati.ars.sicilia.it/icaro/default.jsp?icaAction=closeQuery&id=1&_=
 
 ---
 
-### 8. Session Keep-alive
+### 9. Session Keep-alive
 
 **URL**: `GET /icaro/alive.jsp`
 

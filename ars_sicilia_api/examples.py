@@ -360,6 +360,47 @@ def example_10_exclude_terms():
     return result
 
 
+def example_11_extract_ddl_links():
+    """Esempio 11: Estrazione link PDF allegati ed emendamenti da un DDL."""
+    print_separator("ESEMPIO 11: Estrazione Link PDF Allegati ed Emendamenti")
+
+    client = ARSClient()
+
+    # URL di un DDL con allegati ed emendamenti
+    ddl_url = "https://dati.ars.sicilia.it/icaro/default.jsp?icaDB=221&icaQuery=(18.LEGISL+E+1029.NUMDDL)"
+
+    print(f"URL DDL: {ddl_url}")
+    print("\nEstrazione link PDF in corso...")
+
+    # Estrai i link
+    result = client.get_ddl_links(ddl_url)
+
+    # Mostra risultati
+    print(f"\n✓ Query ID estratto: {result.get('query_id', 'N/A')}")
+
+    # Allegati
+    if result.get("allegati"):
+        print(f"\n✓ PDF Allegati trovati ({len(result['allegati'])}):")
+        for i, link in enumerate(result["allegati"], 1):
+            print(f"  {i}. {link}")
+    else:
+        print("\n✗ Nessun PDF allegato trovato")
+
+    # Emendamenti
+    if result.get("emendamenti"):
+        print(f"\n✓ PDF Emendamenti trovati ({len(result['emendamenti'])}):")
+        for i, link in enumerate(result["emendamenti"], 1):
+            print(f"  {i}. {link}")
+    else:
+        print("\n✗ Nessun PDF emendamento trovato")
+
+    # Eventuali errori
+    if result.get("error"):
+        print(f"\n✗ Errore: {result['error']}")
+
+    return result
+
+
 def main():
     """Menu principale per selezionare l'esempio."""
 
@@ -379,12 +420,13 @@ Seleziona un esempio:
   8. Esportazione Completa in JSON
   9. Ricerca per Range (DDL 1050-1055)
   10. Ricerca con Esclusione (NOT)
+  11. Estrazione Link Allegati ed Emendamenti
   0. Esci
 
 """)
 
     try:
-        choice = input("\nInserisci numero (1-10) o '0' per uscire: ").strip()
+        choice = input("\nInserisci numero (1-11) o '0' per uscire: ").strip()
 
         if choice == "0":
             print("Uscita...")
@@ -403,13 +445,14 @@ Seleziona un esempio:
             8: example_8_export_all_bills,
             9: example_9_search_with_range,
             10: example_10_exclude_terms,
+            11: example_11_extract_ddl_links,
         }
 
         if choice_int in examples:
             result = examples[choice_int]()
             print(f"\n✓ Esempio {choice_int} completato con successo!")
         else:
-            print(f"\n✗ Scelta non valida. Inserisci un numero da 1 a 10.")
+            print(f"\n✗ Scelta non valida. Inserisci un numero da 1 a 11.")
 
     except KeyboardInterrupt:
         print("\n\nInterruzione da utente.")
