@@ -82,6 +82,10 @@
   .header-sticky {
     @apply sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b-2 border-warm-200;
   }
+
+  .scroll-offset-header {
+    scroll-margin-top: calc(6rem + 10px);
+  }
 }
 
 @layer utilities {

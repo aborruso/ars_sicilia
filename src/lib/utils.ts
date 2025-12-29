@@ -59,3 +59,12 @@ export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
   return text.substring(0, maxLength).trim() + '...';
 }
+
+export function createDateAnchor(dateStr: string): string {
+  if (!dateStr) return 'video-date';
+  const normalized = dateStr
+    .trim()
+    .replace(/[^0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+  return `video-${normalized || 'date'}`;
+}
