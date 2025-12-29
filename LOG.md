@@ -1,5 +1,14 @@
 # 2025-12-29
 
+## Riduzione Preview Video Seduta
+
+- Grid layout pagina seduta: da 1/2/3 a 1/3/6 colonne (mobile/tablet/desktop)
+- Dimensioni preview dimezzate su desktop: 6 colonne invece di 3
+- Più video visibili per riga, ridotto scrolling necessario
+- Aspect ratio 16:9 mantenuto, responsive design preservato
+- OpenSpec: change archiviato, spec creato in openspec/specs/seduta-page-layout/
+- File modificato: src/components/sedute/VideosByDate.astro:34
+
 ## Fix Logo Header: testo bianco su sfondo bianco
 
 - **Problema**: scritta "ARS" nel box header non visibile (testo bianco su sfondo bianco)
