@@ -12,9 +12,16 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Data/config: YAML config file (`config/config.yaml`), CSV logs/indices under `data/`
 - Bash wrapper (`scripts/run_daily.sh`) for cron with lock handling
 - Package dependencies: `yt-dlp>=2024.0.0`, `google-api-python-client>=2.0.0`, `google-auth-oauthlib>=1.0.0`, `google-auth-httplib2>=0.1.0`, `beautifulsoup4>=4.12.0`, `requests>=2.31.0`, `pyyaml>=6.0`
-- CLI tools: `markitdown` (PDF to text conversion), `llm` (LLM-based structured extraction), `mlr` (miller, JSONL/CSV processing), `qv` (yt-dlp wrapper for transcript download)
+- CLI tools: `markitdown` (PDF to text conversion), `llm` (LLM-based structured extraction), `mlr` (miller, JSONL/CSV processing), `qv` (yt-dlp wrapper for transcript download), `jq` (JSON processing), `ffmpeg` (yt-dlp post-processing)
+- LLM model used for digest generation: `gemini-2.5-flash` (via `llm` CLI)
+
+### API Client Utilities
+- `ars_sicilia_api/` Python client for ARS legislative database (`https://dati.ars.sicilia.it`)
+- Libraries: `requests`, `beautifulsoup4`
+- Docs: `ars_sicilia_api/API_DOCUMENTATION.md`, `ars_sicilia_api/GUIDA_ALLA_RICERCA.md`
 
 ### Frontend Website
+- Node.js 18+ and npm (frontend tooling)
 - Astro 5.0+ (static site generator)
 - Tailwind CSS 3.4+ with Typography plugin for content styling
 - TypeScript for type safety
@@ -22,6 +29,8 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Static hosting: GitHub Pages
 - Integrations: `@astrojs/tailwind`, `@astrojs/sitemap`, `@astrojs/rss`
 - GitHub Actions workflows for automated deployment
+- Data tooling libraries: `csv-parse`, `marked`
+- Design system: "Editorial Civic" (palette + typography; docs in `docs/design-system.md`)
 
 ## Project Conventions
 
@@ -52,7 +61,6 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - File-based routing: pages under `src/pages/` map to URLs (e.g., `src/pages/sedute/[anno]/[mese]/[giorno]/[seduta]/[video].astro` → `/sedute/2025/12/16/seduta-220/video-1137/`).
 - Data flow: `scripts/build-data.mjs` (prebuild step) aggregates CSV/JSONL/digest JSON into consolidated `src/data/processed/*.json` files; Astro pages import these at build time via `data-loader.ts`.
 - Component structure: reusable Astro components in `src/components/` (layout, sedute, UI); layouts in `src/layouts/` (BaseLayout, PageLayout).
-- Video page navigation: prev/next buttons allow sequential navigation between videos of same seduta without returning to seduta overview; buttons disabled (grayed) at boundaries; chronological order based on `dataVideo` + `oraVideo`.
 - AI transparency: video digest pages display a prominent warning disclaimer before content, informing users that digests are AI-generated from transcripts and may contain errors or hallucinations; semantic HTML with accessibility attributes.
 - SEO: sitemap.xml auto-generated, RSS feed for latest sedute, Schema.org VideoObject structured data on video pages, OpenGraph tags.
 - Accessibility: skip links, semantic HTML, ARIA labels, keyboard navigation support.
@@ -77,6 +85,7 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 - Seduta documents: 4 types extracted (OdG e Comunicazioni, Resoconto provvisorio, Resoconto stenografico, Allegato alla seduta); HTML pattern `<h3>Label<a href>` uniform across all types.
 - YouTube metadata pattern: title `Lavori d'aula: seduta n. {numero} del {data} - {ora}`; description includes all available documents (OdG, resoconto provvisorio/stenografico, allegato) with emoji indicators and seduta URL; tags add base list + seduta number/year/month.
 - Recording date uses video date/time (`YYYY-MM-DDTHH:MM:00Z`) when available; falls back to seduta date for titles/descriptions.
+- Legislative data source: `https://dati.ars.sicilia.it` (ICARO database), used to build per-bill URLs and power the `ars_sicilia_api/` client.
 
 ## Important Constraints
 - YouTube Data API quota 10,000 units/day; upload costs ~1,600 units ⇒ max ~6 uploads/day unless quota increased.

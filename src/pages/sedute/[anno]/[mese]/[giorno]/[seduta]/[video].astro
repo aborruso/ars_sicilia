@@ -44,13 +44,6 @@ const description = video.digest?.digest
   ? truncateText(video.digest.digest.replace(/[#*\n]/g, ' '), 160)
   : `Video della seduta ${seduta.numero} dell'Assemblea Regionale Siciliana del ${formatDateShort(video.dataVideo)} alle ore ${video.oraVideo}`;
 
-// Calculate prev/next video navigation
-const currentVideoIndex = seduta.videos.findIndex((v) => v.slug === video.slug);
-const prevVideo = currentVideoIndex > 0 ? seduta.videos[currentVideoIndex - 1] : null;
-const nextVideo = currentVideoIndex < seduta.videos.length - 1 ? seduta.videos[currentVideoIndex + 1] : null;
-
-const prevUrl = prevVideo ? `${sedutaUrl}/${prevVideo.slug}` : null;
-const nextUrl = nextVideo ? `${sedutaUrl}/${nextVideo.slug}` : null;
 ---
 
 <PageLayout
@@ -74,37 +67,6 @@ const nextUrl = nextVideo ? `${sedutaUrl}/${nextVideo.slug}` : null;
         )}
       </p>
     </header>
-
-    <!-- Video navigation -->
-    <nav aria-label="Navigazione video" class="flex justify-center items-center gap-2 mb-6">
-      {prevUrl ? (
-        <a
-          href={prevUrl}
-          class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-          aria-label="Video precedente"
-        >
-          ←
-        </a>
-      ) : (
-        <span class="px-4 py-2 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed" aria-disabled="true">
-          ←
-        </span>
-      )}
-
-      {nextUrl ? (
-        <a
-          href={nextUrl}
-          class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-          aria-label="Video successivo"
-        >
-          →
-        </a>
-      ) : (
-        <span class="px-4 py-2 border border-gray-200 rounded-lg text-gray-400 cursor-not-allowed" aria-disabled="true">
-          →
-        </span>
-      )}
-    </nav>
 
     <!-- Video embed -->
     <VideoEmbed

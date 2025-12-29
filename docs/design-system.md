@@ -216,7 +216,6 @@ Paginazione accessibile con navigazione chiara.
 **File**: `src/components/ui/Pagination.astro`
 
 **Caratteristiche**:
-- Bottoni "Precedente/Successiva" con icone
 - Numeri pagina con hover distintivo
 - Stato corrente evidenziato in navy
 - Mobile-responsive (nasconde testo su mobile)
