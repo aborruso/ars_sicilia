@@ -1,7 +1,7 @@
 # seduta-page-navigation Specification
 
 ## Purpose
-TBD - created by archiving change add-date-anchors. Update Purpose after archive.
+Consentire link diretti alle sezioni per data nelle pagine delle sedute, migliorando la navigazione e la condivisione.
 ## Requirements
 ### Requirement: Date anchors for video groups
 La pagina della seduta MUST esporre un'ancora URL per ogni gruppo di video aggregato per data.
@@ -16,4 +16,3 @@ I titoli delle date MUST essere cliccabili per aggiornare l'hash dell'URL alla r
 #### Scenario: User clicks a date heading
 - **WHEN** l'utente clicca sul titolo della data
 - **THEN** l'URL MUST aggiornarsi con l'hash dell'ancora della data senza cambiare pagina
-
