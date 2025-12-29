@@ -1,5 +1,15 @@
 # 2025-12-29
 
+## Fix Logo Header: testo bianco su sfondo bianco
+
+- **Problema**: scritta "ARS" nel box header non visibile (testo bianco su sfondo bianco)
+- Classe CSS `.gradient-editorial` non applicata (Header.astro usava `bg-gradient-editorial`)
+- **Fix**:
+  - Rinominata `.gradient-editorial` → `.bg-gradient-editorial` in global.css
+  - Rinominata `.gradient-accent` → `.bg-gradient-accent` per coerenza
+  - Ora gradiente navy applicato correttamente, testo bianco visibile
+- File modificato: src/styles/global.css:94,99
+
 ## Fix CSV Schema: campo no_transcript
 
 - **Problema**: build_anagrafica.py scriveva 18 campi ma header aveva 19 (mancava no_transcript)
