@@ -1,0 +1,61 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import Breadcrumb from '../../../components/layout/Breadcrumb.astro';
+import { loadCategories } from '../../../lib/data-loader';
+
+const categories = await loadCategories();
+
+// Sort categories by count (descending) then by name (ascending)
+categories.sort((a, b) => {
+  if (b.count !== a.count) {
+    return b.count - a.count;
+  }
+  return a.name.localeCompare(b.name);
+});
+
+const breadcrumbs = [
+  { label: 'Home', href: '/ars_sicilia/' },
+  { label: 'Categorie', href: '' },
+];
+---
+
+<PageLayout
+  title="Tutte le Categorie"
+  description={`Esplora tutte le ${categories.length} categorie tematiche delle sedute dell'Assemblea Regionale Siciliana`}
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <div class="mb-8">
+    <div class="border-l-4 border-l-amber-600 pl-6 py-2 mb-4">
+      <h1 class="text-3xl md:text-4xl font-display font-bold text-navy-800 mb-2">
+        Tutte le Categorie
+      </h1>
+      <p class="text-lg text-warm-600 font-medium">
+        Esplora le sedute dell'assemblea organizzate per argomento tematico
+      </p>
+    </div>
+    <p class="text-sm text-warm-600 mb-2">
+      {categories.length} {categories.length === 1 ? 'categoria disponibile' : 'categorie disponibili'}
+    </p>
+  </div>
+
+  {categories.length > 0 ? (
+    <div class="flex flex-wrap gap-3">
+      {categories.map((cat) => (
+        <a
+          href={`/ars_sicilia/sedute/categoria/${cat.slug}`}
+          class="group inline-flex items-center gap-2 px-4 py-2.5 bg-warm-50 border border-warm-200 rounded-lg hover:bg-navy-800 hover:border-navy-800 transition-all duration-200 shadow-sm hover:shadow"
+        >
+          <span class="font-semibold text-sm text-navy-800 group-hover:text-white transition-colors">
+            {cat.name}
+          </span>
+          <span class="text-xs font-bold text-warm-600 bg-white group-hover:bg-amber-600 group-hover:text-white px-2.5 py-0.5 rounded-full border border-warm-200 group-hover:border-amber-600 transition-all">
+            {cat.count}
+          </span>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <p class="text-warm-600">Nessuna categoria disponibile.</p>
+  )}
+</PageLayout>
