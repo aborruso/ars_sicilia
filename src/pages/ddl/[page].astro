@@ -1,0 +1,51 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import DDLCard from '../../components/ddl/DDLCard.astro';
+import Pagination from '../../components/ui/Pagination.astro';
+import { loadDDLs } from '../../lib/data-loader';
+
+export async function getStaticPaths() {
+  const ITEMS_PER_PAGE = 10;
+  const ddls = await loadDDLs();
+  const totalPages = Math.ceil(ddls.length / ITEMS_PER_PAGE);
+
+  return Array.from({ length: totalPages }, (_, i) => {
+    const page = i + 1;
+    const start = i * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+
+    return {
+      params: { page: String(page) },
+      props: {
+        ddls: ddls.slice(start, end),
+        currentPage: page,
+        totalPages,
+      },
+    };
+  });
+}
+
+const { ddls, currentPage, totalPages } = Astro.props;
+---
+
+<PageLayout
+  title={`DDL ARS - Pagina ${currentPage}`}
+  description={`Elenco disegni di legge dell'Assemblea Regionale Siciliana - Pagina ${currentPage} di ${totalPages}`}
+>
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Disegni di Legge
+    </h1>
+    <p class="text-lg text-gray-600">
+      Pagina {currentPage} di {totalPages}
+    </p>
+  </div>
+
+  <div class="space-y-6 mt-8">
+    {ddls.map((ddl) => (
+      <DDLCard ddl={ddl} />
+    ))}
+  </div>
+
+  <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/ars_sicilia/ddl" />
+</PageLayout>
