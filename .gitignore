@@ -63,6 +63,7 @@ src/data/processed/
 
 # altro
 .xdgcache/
+.npm-cache/
 tmp/
 data/videos/
 data/digest/.tmp_*
