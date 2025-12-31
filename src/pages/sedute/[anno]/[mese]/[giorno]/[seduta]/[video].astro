@@ -93,6 +93,11 @@ const description = video.digest?.digest
     {video.digest?.people && video.digest.people.length > 0 && (
       <section class="mt-8">
         <h2 class="text-xl font-bold mb-4">Persone citate</h2>
+        <aside class="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg" role="note" aria-label="Avviso: elenco persone generato automaticamente">
+          <p class="text-sm text-yellow-900">
+            ⚠️ <strong>ATTENZIONE:</strong> L'elenco delle persone citate e' stato estratto automaticamente da un LLM analizzando l'audio trascritto della seduta. Potrebbero esserci errori nel nome e cognome o nel ruolo.
+          </p>
+        </aside>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {video.digest.people.map((person) => (
             <div class="bg-gray-50 border border-gray-200 rounded-lg p-3">
