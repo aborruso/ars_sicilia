@@ -1,7 +1,8 @@
-import type { Seduta, VideoWithSeduta, Category } from '../types/seduta';
+import type { Seduta, VideoWithSeduta, Category, DDL } from '../types/seduta';
 import seduteData from '../data/processed/sedute.json';
 import videosData from '../data/processed/videos.json';
 import categoriesData from '../data/processed/categories.json';
+import ddlsData from '../data/processed/ddls.json';
 
 export async function loadSedute(): Promise<Seduta[]> {
   return seduteData as Seduta[];
@@ -13,6 +14,10 @@ export async function loadVideos(): Promise<VideoWithSeduta[]> {
 
 export async function loadCategories(): Promise<Category[]> {
   return categoriesData as Category[];
+}
+
+export async function loadDDLs(): Promise<DDL[]> {
+  return ddlsData as DDL[];
 }
 
 export async function getSedutaBySlugAndDate(

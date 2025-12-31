@@ -170,7 +170,42 @@ const categories = Array.from(categoryCount.entries())
   }))
   .sort((a, b) => b.count - a.count);
 
-// 9. Write output files
+// 9. Generate unique DDL list with linked sedute
+console.log('📜 Generating DDL list...');
+const ddlMap = new Map();
+
+sedute.forEach(seduta => {
+  seduta.disegniLegge.forEach(ddl => {
+    const key = `${ddl.numero}-${ddl.legislatura}`;
+
+    if (!ddlMap.has(key)) {
+      ddlMap.set(key, {
+        numero: ddl.numero,
+        legislatura: ddl.legislatura,
+        titolo: ddl.titolo,
+        urlDisegno: ddl.urlDisegno,
+        sedute: [],
+      });
+    }
+
+    const ddlEntry = ddlMap.get(key);
+    const sedutaLinked = ddlEntry.sedute.find(s => s.numero === seduta.numero);
+
+    if (!sedutaLinked) {
+      ddlEntry.sedute.push({
+        numero: seduta.numero,
+        dataSeduta: seduta.dataSeduta,
+        slug: seduta.slug,
+        yearMonthDay: seduta.yearMonthDay,
+      });
+    }
+  });
+});
+
+const ddls = Array.from(ddlMap.values()).sort((a, b) => parseInt(b.numero, 10) - parseInt(a.numero, 10));
+console.log(`   Found ${ddls.length} unique DDL`);
+
+// 10. Write output files
 console.log('💾 Writing processed data...');
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
@@ -189,7 +224,13 @@ fs.writeFileSync(
   JSON.stringify(categories, null, 2)
 );
 
+fs.writeFileSync(
+  path.join(OUTPUT_DIR, 'ddls.json'),
+  JSON.stringify(ddls, null, 2)
+);
+
 console.log('✅ Data processing completed!');
 console.log(`   - ${sedute.length} sedute → src/data/processed/sedute.json`);
 console.log(`   - ${allVideos.length} videos → src/data/processed/videos.json`);
 console.log(`   - ${categories.length} categories → src/data/processed/categories.json`);
+console.log(`   - ${ddls.length} DDL → src/data/processed/ddls.json`);

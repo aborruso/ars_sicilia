@@ -66,3 +66,22 @@ export interface Category {
   count: number;
   slug: string;
 }
+
+export interface DDL {
+  numero: string;
+  legislatura: string;
+  titolo: string;
+  urlDisegno: string;
+  sedute: DDLSeduta[];
+}
+
+export interface DDLSeduta {
+  numero: number;
+  dataSeduta: string;
+  slug: string;
+  yearMonthDay: {
+    year: string;
+    month: string;
+    day: string;
+  };
+}
