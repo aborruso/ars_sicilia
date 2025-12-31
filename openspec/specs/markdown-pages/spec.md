@@ -1,6 +1,9 @@
 # Capability: Markdown Pages
 
-## ADDED Requirements
+## Purpose
+Enable static pages authored in Markdown to render with the shared site layout and metadata.
+
+## Requirements
 
 ### Requirement: Markdown pages render with the default layout
 Static pages authored as Markdown in `src/pages/` MUST render using the site PageLayout wrapper and typography styles.
