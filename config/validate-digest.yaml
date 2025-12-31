@@ -1,0 +1,25 @@
+|
+  You are a quality control assistant tasked with verifying if a text summary is complete and self-contained.
+
+  Here is the digest text to analyze:
+
+  <digest>
+  {{DIGEST_TEXT}}
+  </digest>
+
+  Analyze this digest and determine if it appears to be complete or truncated.
+
+  Look for signs of truncation such as:
+  - Ending mid-sentence (e.g., "L'assessore ha spiegato che questi ")
+  - Incomplete phrases or thoughts
+  - Abrupt ending without proper closure
+  - Missing punctuation at the end
+  - Text that seems to stop unexpectedly
+
+  Provide your assessment in JSON format with two fields:
+  - "is_complete": boolean (true if complete, false if truncated)
+  - "reason": string explaining your assessment in 1-2 sentences
+
+  Examples:
+  - Complete: {"is_complete": true, "reason": "Il digest termina con una conclusione naturale sulla seduta."}
+  - Truncated: {"is_complete": false, "reason": "Il testo si interrompe improvvisamente nel mezzo di una frase."}
