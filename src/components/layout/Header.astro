@@ -1,6 +1,8 @@
 ---
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/' || currentPath === '/ars_sicilia/' || currentPath === '/ars_sicilia';
+const isSedute = currentPath.startsWith('/ars_sicilia/sedute/');
+const isDDL = currentPath.startsWith('/ars_sicilia/ddl/');
 ---
 
 <header class="header-sticky">
@@ -45,8 +47,28 @@ const isHome = currentPath === '/' || currentPath === '/ars_sicilia/' || current
           </li>
           <li>
             <a
+              href="/ars_sicilia/sedute/1"
+              class:list={[
+                'font-semibold text-sm md:text-base transition-all duration-200 px-3 py-1.5 rounded-md',
+                isSedute
+                  ? 'text-white bg-navy-800 shadow-sm'
+                  : 'text-navy-800 hover:bg-navy-100 hover:text-navy-900',
+              ]}
+              aria-current={isSedute ? 'page' : undefined}
+            >
+              Sedute
+            </a>
+          </li>
+          <li>
+            <a
               href="/ars_sicilia/ddl/1"
-              class="font-semibold text-sm md:text-base text-navy-800 hover:bg-navy-100 hover:text-navy-900 transition-all duration-200 px-3 py-1.5 rounded-md"
+              class:list={[
+                'font-semibold text-sm md:text-base transition-all duration-200 px-3 py-1.5 rounded-md',
+                isDDL
+                  ? 'text-white bg-navy-800 shadow-sm'
+                  : 'text-navy-800 hover:bg-navy-100 hover:text-navy-900',
+              ]}
+              aria-current={isDDL ? 'page' : undefined}
             >
               DDL
             </a>
