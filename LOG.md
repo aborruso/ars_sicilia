@@ -1,3 +1,13 @@
+# 2025-12-31
+
+## Normalizzazione numero DDL e flag reprocess per OdG
+
+- `extract_odg_data.sh` ora normalizza `numero_disegno` a soli numeri (regex) e scarta record senza match
+- Aggiunto flag `--reprocess` per rielaborare tutti i PDF (default: skip se `pdf_url` già presente)
+- Dedup finale mantiene `uniq -a` dopo normalizzazione e filtro
+- File modificato: scripts/extract_odg_data.sh
+- README aggiornato: uso `--reprocess` e nota su normalizzazione numero
+
 # 2025-12-29
 
 ## Riduzione Preview Video Seduta

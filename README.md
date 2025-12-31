@@ -274,6 +274,9 @@ python3 scripts/upload_single.py
 ```bash
 # Estrai disegni da PDF ordini del giorno
 ./scripts/extract_odg_data.sh
+
+# Forza rielaborazione di tutti i PDF (ignora dedup per pdf_url)
+./scripts/extract_odg_data.sh --reprocess
 ```
 
 ### Automazione GitHub Actions
@@ -401,11 +404,13 @@ Campi principali:
 
 Campi per record:
 - `titolo_disegno` - Titolo completo
-- `numero_disegno` - Numero DDL (parte numerica)
+- `numero_disegno` - Numero DDL (solo parte numerica)
 - `legislatura` - Numero romano (es. "XVIII")
 - `data_ora` - Data e ora seduta (ISO 8601)
 - `pdf_url` - URL PDF sorgente
 - `url_disegno` - URL ICARO generato
+
+Nota: lo script normalizza `numero_disegno` con regex `[0-9]+` e scarta record senza numero.
 
 ### Licenza Dati
 

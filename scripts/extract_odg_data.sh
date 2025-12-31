@@ -7,7 +7,7 @@
 # (OdG) delle sedute ARS.
 #
 # USAGE:
-#   ./scripts/extract_odg_data.sh
+#   ./scripts/extract_odg_data.sh [--reprocess]
 #
 # INPUT:
 #   - data/anagrafica_video.csv (campo odg_url)
@@ -21,7 +21,7 @@
 #
 # BEHAVIOR:
 #   - Legge URL PDF distinti dal campo odg_url
-#   - Salta PDF già elaborati (deduplicazione via JSONL)
+#   - Salta PDF già elaborati (deduplicazione via JSONL), a meno di --reprocess
 #   - Usa markitdown + llm per estrarre dati strutturati
 #   - Genera url_disegno (link ICARO) da legislatura + numero_disegno
 #   - Append risultati a data/disegni_legge.jsonl
@@ -116,9 +116,12 @@ process_pdf() {
         if .items then
             .items[] |
             . + {
+                numero_disegno: (
+                    (((.numero_disegno // "") | tostring | match("[0-9]+")?) | .string) // ""
+                ),
                 pdf_url: $pdf_url,
                 url_disegno: (
-                    if .legislatura and .numero_disegno then
+                    if .legislatura and ((.numero_disegno // "") | length) > 0 then
                         "https://dati.ars.sicilia.it/icaro/default.jsp?icaDB=221&icaQuery=(" +
                         (if .legislatura == "XVIII" then "18"
                          elif .legislatura == "XVII" then "17"
@@ -153,9 +156,19 @@ process_pdf() {
 
 # Main
 main() {
+    local reprocess=0
+    if [[ "${1:-}" == "--reprocess" ]]; then
+        reprocess=1
+    fi
+
     echo "=== Estrazione dati OdG PDF ===" >&2
     echo "Input: $CSV_FILE" >&2
     echo "Output: $OUTPUT_JSONL" >&2
+    if [[ "$reprocess" -eq 1 ]]; then
+        echo "Mode: reprocess all PDFs" >&2
+    else
+        echo "Mode: skip already processed PDFs" >&2
+    fi
     echo "" >&2
 
     # Crea file output se non esiste
@@ -179,7 +192,7 @@ main() {
 
         echo "[$count/$total] Checking: $pdf_url" >&2
 
-        if is_pdf_processed "$pdf_url"; then
+        if [[ "$reprocess" -eq 0 ]] && is_pdf_processed "$pdf_url"; then
             echo "  → Skipped (already processed)" >&2
             ((skipped++)) || true
         else
@@ -197,8 +210,10 @@ main() {
     echo "Skipped: $skipped" >&2
     echo "" >&2
 
-    # Rimuovi duplicati esatti
+    # Normalizza numero_disegno e rimuovi duplicati esatti
     if [[ -f "$OUTPUT_JSONL" && -s "$OUTPUT_JSONL" ]]; then
+        mlr -I --jsonl put '$numero_disegno = regextract_or_else($numero_disegno, "[0-9]+", "")' "$OUTPUT_JSONL"
+        mlr -I --jsonl filter '$numero_disegno != ""' "$OUTPUT_JSONL"
         mlr -I -S --jsonl uniq -a "$OUTPUT_JSONL"
         echo "Duplicates removed (if any)" >&2
     fi
