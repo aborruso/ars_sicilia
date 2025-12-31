@@ -11,6 +11,7 @@ CSV_FILE="$PROJECT_DIR/data/anagrafica_video.csv"
 DIGEST_DIR="$PROJECT_DIR/data/digest"
 TEMPLATE_FILE="$PROJECT_DIR/config/digest.yaml"
 SCHEMA_FILE="$PROJECT_DIR/config/digest-schema.json"
+VALIDATE_TEMPLATE="$PROJECT_DIR/config/validate-digest.yaml"
 # LOG_DIR="$PROJECT_DIR/data/logs"
 # LOG_FILE="$LOG_DIR/digest_$(date +%Y%m%d_%H%M%S).log"
 
@@ -33,6 +34,28 @@ validate_json() {
     if jq empty "$file" 2>/dev/null; then
         return 0
     else
+        return 1
+    fi
+}
+
+# Funzione validazione completezza digest
+validate_digest_completeness() {
+    local file="$1"
+
+    # Pausa per rate limiting API
+    sleep 5
+
+    # Estrai il digest e verifica con LLM
+    local validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" 2>/dev/null)
+
+    # Estrai is_complete dal JSON di risposta
+    local is_complete=$(echo "$validation_result" | grep -o '"is_complete"[[:space:]]*:[[:space:]]*[a-z]*' | grep -o '[a-z]*$')
+
+    if [ "$is_complete" = "true" ]; then
+        return 0
+    else
+        local reason=$(echo "$validation_result" | jq -r '.reason' 2>/dev/null || echo "Digest incompleto")
+        log "  ATTENZIONE: $reason"
         return 1
     fi
 }
@@ -123,11 +146,21 @@ while read -r youtube_id; do
         if cat "$TRANSCRIPT_FILE" | llm -m "$MODEL" -t "$TEMPLATE_FILE" --schema "$SCHEMA_FILE" > "$OUTPUT_FILE" 2>&1; then
             # Valida JSON
             if validate_json "$OUTPUT_FILE"; then
-                DIGEST_SIZE=$(stat -c%s "$OUTPUT_FILE")
-                log "  OK: Digest generato e validato ($DIGEST_SIZE bytes)"
-                generated=$((generated + 1))
-                success=true
-                break
+                # Valida completezza digest
+                if validate_digest_completeness "$OUTPUT_FILE"; then
+                    DIGEST_SIZE=$(stat -c%s "$OUTPUT_FILE")
+                    log "  OK: Digest generato e validato ($DIGEST_SIZE bytes)"
+                    generated=$((generated + 1))
+                    success=true
+                    break
+                else
+                    log "  ERRORE: Digest incompleto, rimozione file"
+                    rm -f "$OUTPUT_FILE"
+                    if [ $attempt -lt $MAX_RETRIES ]; then
+                        log "  Attesa prima del retry..."
+                        sleep 5
+                    fi
+                fi
             else
                 log "  ERRORE: JSON non valido, rimozione file"
                 rm -f "$OUTPUT_FILE"

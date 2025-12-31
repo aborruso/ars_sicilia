@@ -1,5 +1,14 @@
 # 2025-12-31
 
+## Validazione automatica digest con LLM
+
+- Creato template `config/validate-digest.yaml` per verificare completezza digest
+- Aggiunta funzione `validate_digest_completeness()` in `generate_digests.sh`
+- Lo script ora valida che i digest siano autoconcludenti (non troncati)
+- Retry automatico (max 3 tentativi) se digest incompleto
+- Test: rilevato e rigenerato correttamente digest troncato (hdBrcmGOUWM)
+- File modificati: scripts/generate_digests.sh, config/validate-digest.yaml (nuovo)
+
 ## Normalizzazione numero DDL e flag reprocess per OdG
 
 - `extract_odg_data.sh` ora normalizza `numero_disegno` a soli numeri (regex) e scarta record senza match
