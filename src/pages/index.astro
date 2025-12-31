@@ -26,7 +26,7 @@ const totalPages = Math.ceil(sedute.length / ITEMS_PER_PAGE);
         Archivio Sedute ARS
       </h1>
       <p class="text-lg md:text-xl text-warm-600 font-medium leading-relaxed max-w-3xl">
-        Trasparenza civica al servizio dei cittadini. Consulta video, trascrizioni automatiche e documenti
+        Trasparenza civica al servizio dei cittadini. Consulta video e documenti
         ufficiali delle sedute dell'Assemblea Regionale Siciliana.
       </p>
     </div>
@@ -60,11 +60,6 @@ const totalPages = Math.ceil(sedute.length / ITEMS_PER_PAGE);
     </div>
   </div>
 
-  <!-- Filtri categorie -->
-  <div class="mb-8">
-    <CategoryFilter categories={categories} />
-  </div>
-
   <!-- Lista sedute -->
   <div class="mb-6">
     <h2 class="text-2xl font-display font-bold text-navy-800 mb-2 flex items-center gap-2">
@@ -87,4 +82,9 @@ const totalPages = Math.ceil(sedute.length / ITEMS_PER_PAGE);
       <Pagination currentPage={1} totalPages={totalPages} baseUrl="/ars_sicilia/sedute" />
     </div>
   )}
+
+  <!-- Filtri categorie -->
+  <div class="mt-12">
+    <CategoryFilter categories={categories} />
+  </div>
 </PageLayout>
