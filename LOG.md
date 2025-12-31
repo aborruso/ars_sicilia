@@ -8,6 +8,15 @@
 - File modificato: scripts/extract_odg_data.sh
 - README aggiornato: uso `--reprocess` e nota su normalizzazione numero
 
+## Supporto Markdown per pagine statiche
+
+- Aggiunta integrazione `@astrojs/mdx` e layout predefinito per `.md` in `src/pages/`
+- Layout PageLayout ora usa frontmatter `title` e `description` quando non passati come props
+- Migrazione pagina About a Markdown (`src/pages/about.md`)
+- Guida autore: `docs/markdown-guide.md`
+- Spec creato: `openspec/specs/markdown-pages/spec.md`
+- File modificati: astro.config.mjs, src/lib/remark-default-layout.mjs, src/layouts/PageLayout.astro, README.md
+
 # 2025-12-29
 
 ## Riduzione Preview Video Seduta

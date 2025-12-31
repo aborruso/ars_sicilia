@@ -119,6 +119,11 @@ npm run dev
 # Apri http://localhost:4321
 ```
 
+### Creare nuove pagine in Markdown
+
+È possibile aggiungere pagine statiche in Markdown dentro `src/pages/`.  
+Consulta la guida completa: `docs/markdown-guide.md`.
+
 **Struttura generata:**
 - `dist/index.html` - Homepage
 - `dist/sedute/` - Lista sedute paginata
