@@ -28,24 +28,12 @@ function generateExportText(): string {
     agendaLine = `📄 Ordine del Giorno:\n${seduta.odgUrl}\n`;
   }
 
-  // Digest URL
-  let digestLine = '';
-  if (video.youtubeId) {
-    digestLine = `💬 Digest AI:\nhttps://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/digest/${video.youtubeId}.json\n`;
-  }
-
   // YouTube link
   const youtubeLine = `🎬 Video YouTube:\nhttps://www.youtube.com/watch?v=${video.youtubeId}\n`;
 
-  // Categories
-  let categoriesLine = '';
-  if (video.digest?.categories && video.digest.categories.length > 0) {
-    categoriesLine = `📊 Categorie: ${video.digest.categories.join(', ')}\n`;
-  }
-
   const text = `Seduta n. ${seduta.numero} | ${dateStr} | Ore ${video.oraVideo}${duration}
 
-${transcriptLine}${agendaLine}${digestLine}${youtubeLine}${categoriesLine}`;
+${transcriptLine}${agendaLine}${youtubeLine}`;
 
   return text.trim();
 }
