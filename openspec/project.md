@@ -59,13 +59,18 @@ Automate the collection and publication of Assemblea Regionale Siciliana (ARS) p
 #### Frontend Website
 - Static site architecture: Astro generates HTML at build time from data files; no runtime server required.
 - File-based routing: pages under `src/pages/` map to URLs (e.g., `src/pages/sedute/[anno]/[mese]/[giorno]/[seduta]/[video].astro` → `/sedute/2025/12/16/seduta-220/video-1137/`).
+- API endpoints: dynamic route handlers (e.g., `src/pages/sedute/[...]/[video].json.ts`) generate JSON at build time for machine-to-machine data access.
 - Markdown pages: `.md` files in `src/pages/` render with PageLayout and use frontmatter (`title`, `description`) for SEO metadata.
 - Data flow: `scripts/build-data.mjs` (prebuild step) aggregates CSV/JSONL/digest JSON into consolidated `src/data/processed/*.json` files; Astro pages import these at build time via `data-loader.ts`.
 - Component structure: reusable Astro components in `src/components/` (layout, sedute, UI); layouts in `src/layouts/` (BaseLayout, PageLayout).
+- Constants centralization: `src/lib/constants.ts` exports shared URLs (e.g., GitHub raw content base URL) for consistent resource linking across components and endpoints.
+- LLM resource export: video pages expose two export mechanisms:
+  1. **Copy-to-clipboard button** ("📋 Copia risorse per l'AI") with LLM prompt template, toast notification feedback, and fallback modal for older browsers.
+  2. **JSON endpoint** (⚙️ JSON link) exposing structured metadata, transcript URLs (text + SRT), agenda PDF, and video link for programmatic consumption by external scripts/services.
 - AI transparency: video digest pages display a prominent warning disclaimer before content, informing users that digests are AI-generated from transcripts and may contain errors or hallucinations; semantic HTML with accessibility attributes.
 - Seduta navigation: date headings on seduta pages expose linkable anchors to share and jump to specific days.
 - SEO: sitemap.xml auto-generated, RSS feed for latest sedute, Schema.org VideoObject structured data on video pages, OpenGraph tags.
-- Accessibility: skip links, semantic HTML, ARIA labels, keyboard navigation support.
+- Accessibility: skip links, semantic HTML, ARIA labels, keyboard navigation support, accessible export buttons with proper aria-labels.
 - Styling: Tailwind utility classes; Tailwind Typography for digest content rendering.
 
 ### Testing Strategy
