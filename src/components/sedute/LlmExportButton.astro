@@ -2,9 +2,10 @@
 interface Props {
   video: any;
   seduta: any;
+  baseUrl?: string;
 }
 
-const { video, seduta } = Astro.props;
+const { video, seduta, baseUrl = '/ars_sicilia' } = Astro.props;
 
 // Generate export text block
 function generateExportText(): string {
@@ -39,17 +40,27 @@ ${transcriptLine}${agendaLine}${youtubeLine}`;
 }
 
 const exportText = generateExportText();
+const jsonUrl = `${baseUrl}/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}/${video.slug}.json`;
 ---
 
 <div class="my-6">
-  <button
-    id="llm-export-button"
-    data-export-text={exportText}
-    class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
-    aria-label="Esporta risorse per assistente AI"
-  >
-    📋 Copia risorse per LLM
-  </button>
+  <div class="flex flex-wrap gap-3 items-center">
+    <button
+      id="llm-export-button"
+      data-export-text={exportText}
+      class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+      aria-label="Esporta risorse per assistente AI"
+    >
+      📋 Copia risorse per LLM
+    </button>
+    <a
+      href={jsonUrl}
+      class="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors font-medium"
+      title="Scarica risorsis in formato JSON per consumo machine-to-machine"
+    >
+      ⚙️ JSON
+    </a>
+  </div>
   <div id="export-toast" class="hidden fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg"></div>
   <div id="export-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg p-6 max-w-2xl max-h-96 overflow-auto">

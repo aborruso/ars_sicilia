@@ -6,7 +6,11 @@ LLM resource export UI for video pages—format and expose transcript, agenda, a
 
 ### Requirement: video-page-export-button
 
-The system SHALL display a clickable button on each video detail page (`/sedute/[anno]/[mese]/[giorno]/[seduta]/[video]/`) labeled "📋 Copia risorse per LLM" that exports video metadata, transcript, and agenda links for LLM consumption.
+The system SHALL display clickable controls on each video detail page (`/sedute/[anno]/[mese]/[giorno]/[seduta]/[video]/`):
+1. Button "📋 Copia risorse per LLM" - copy-to-clipboard text export
+2. Link "⚙️ JSON" - programmatic JSON endpoint
+
+Both exports expose video metadata, transcript, and agenda links for LLM consumption (human and machine).
 
 #### Scenario: user clicks export button on seduta 220 video
 
@@ -51,6 +55,33 @@ User clicks button. Toast appears briefly (2–3 sec) confirming copy. User open
 #### Scenario: clipboard fallback on older browser
 
 Clipboard API unavailable. Modal pops up with export text pre-selected and highlighted. Message reads "Testo copiato. Premi Ctrl+C per copiare se il bottone non ha funzionato." User manually copies.
+
+### Requirement: json-endpoint
+
+The system SHALL expose a JSON endpoint at `/sedute/[anno]/[mese]/[giorno]/[seduta]/[video].json` containing structured video metadata and resource URLs for machine-to-machine consumption.
+
+#### Scenario: programmatic access to video resources
+
+A script calls `/sedute/2025/12/16/seduta-220/video-1557.json` and receives:
+```json
+{
+  "seduta": {
+    "numero": 220,
+    "data": "2025-12-16"
+  },
+  "video": {
+    "ora": "15:57",
+    "data": "2025-12-16",
+    "durataMinuti": 50,
+    "youtubeId": "hdBrcmGOUWM"
+  },
+  "risorse": {
+    "trascrizione": "https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/hdBrcmGOUWM.it.txt",
+    "ordinedelgiorno": "https://w3.ars.sicilia.it/DocumentiEsterni/...",
+    "video": "https://www.youtube.com/watch?v=hdBrcmGOUWM"
+  }
+}
+```
 
 ### Requirement: handle-missing-resources
 
