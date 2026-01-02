@@ -1,0 +1,8 @@
+1
+00:00:00,120 --> 00:00:08,520
+comunicarvi che l'aula è riconvocata per
+
+2
+00:00:03,399 --> 00:00:08,520
+le ore 16. La seduta è sospesa.
+
