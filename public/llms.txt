@@ -1,0 +1,117 @@
+# ARS Sicilia - Archivio Consultabile Sedute Assemblea Regionale Siciliana
+
+> **Piattaforma civic tech per accedere a trascrizioni, digest AI e disegni di legge discussi in aula dell'Assemblea Regionale Siciliana**
+
+Fonte dati: Assemblea Regionale Siciliana dal 10 dicembre 2025
+
+## Dataset Pubblici
+
+I seguenti dataset sono disponibili in formato aperto e machine-readable:
+
+- `/data/anagrafica_video.csv` - Metadati completi sedute (35+ record con data, durata, YouTube ID, PDF OdG)
+- `/data/disegni_legge.jsonl` - Disegni di legge estratti dai PDF ordini del giorno (formato JSONL)
+- `/data/digest/` - Digest AI automatici per ogni video (formato JSON con schema strutturato)
+- `/data/trascrizioni/` - Trascrizioni testo grezze e formato SRT con timestamp
+
+## Accedere alle Risorse
+
+### 1. Metadati Sedute e Video
+
+**URL**: `/data/anagrafica_video.csv`
+
+**Descrizione**: CSV con tutti i metadati sedute inclusi:
+- `numero_seduta` - Numero identificativo seduta
+- `data_seduta` - Data della seduta (YYYY-MM-DD)
+- `youtube_id` - ID video su YouTube (se disponibile)
+- `odg_url` - Link PDF Ordine del Giorno
+- `resoconto_stenografico_url` - Link Resoconto Stenografico
+- `duration_minutes` - Durata video in minuti
+
+### 2. Disegni di Legge Discussi
+
+**URL**: `/data/disegni_legge.jsonl`
+
+**Descrizione**: Formato JSONL (una riga JSON per disegno) con:
+- `titolo_disegno` - Titolo completo
+- `numero_disegno` - Numero DDL (es. 123)
+- `legislatura` - Numero romano (es. XVIII)
+- `data_ora` - Data e ora seduta (ISO 8601)
+- `pdf_url` - URL PDF sorgente OdG
+- `url_disegno` - URL ricerca ICARO (banca dati ARS)
+
+### 3. Trascrizioni Video
+
+**URL Base**: `/data/trascrizioni/`
+
+**Formati disponibili**:
+- `{youtube_id}.it.txt` - Trascrizione in formato testo grezzo
+- `{youtube_id}.it.srt` - Trascrizione formato SRT con timestamp
+
+**Esempio**: Per il video `GpBg5U7H4Uw`:
+- Testo: `https://aborruso.github.io/ars_sicilia/data/trascrizioni/GpBg5U7H4Uw.it.txt`
+- SRT: `https://aborruso.github.io/ars_sicilia/data/trascrizioni/GpBg5U7H4Uw.it.srt`
+
+### 4. Digest AI Automatici
+
+**URL Base**: `/data/digest/`
+
+**Formato**: JSON con schema strutturato
+
+**Contenuto**: Sintesi AI generata da trascrizioni, incluso:
+- Sommario seduta
+- Argomenti discussi (categorizzati)
+- Disegni legge affrontati
+- Decisioni principali
+
+**Esempio**: `https://aborruso.github.io/ars_sicilia/data/digest/GpBg5U7H4Uw.json`
+
+### 5. Feed RSS
+
+**URL**: `/rss.xml`
+
+**Descrizione**: Feed RSS 2.0 con ultimi 20 video caricati. Contenente:
+- Titolo seduta
+- Data pubblicazione
+- Link video YouTube
+- Descrizione
+
+## Come Usare i Dati con LLM
+
+### Scenario 1: Cercare sedute su un argomento
+1. Scarica `/data/anagrafica_video.csv`
+2. Filtra per data o keywords nei metadati
+3. Recupera `youtube_id` dal record
+4. Accedi a trascrizione: `/data/trascrizioni/{youtube_id}.it.txt`
+
+### Scenario 2: Analizzare discussione di un disegno legge
+1. Scarica `/data/disegni_legge.jsonl`
+2. Filtra per `numero_disegno` o `titolo_disegno`
+3. Estrai `data_ora` e `youtube_id`
+4. Combina con trascrizione per context completo
+
+### Scenario 3: Ottenere digest di una seduta
+1. Identifica `youtube_id` da anagrafica
+2. Recupera JSON digest: `/data/digest/{youtube_id}.json`
+3. Usa il sommario per analisi veloce o approfondimenti
+
+## Informazioni Tecniche
+
+### Schema Anagrafica (CSV)
+Colonne: numero_seduta, data_seduta, data_video, ora_video, youtube_id, odg_url, resoconto_stenografico_url, duration_minutes, last_check, url_video_ars, categoria_principale, altri campi
+
+### Schema Digest (JSON)
+Campi: youtube_id, numero_seduta, data, argomenti (array), disegni_discussi (array), sommario, decisioni_principali, token_count
+
+### Licenza Dati
+I dati sono derivati da fonti pubbliche dell'Assemblea Regionale Siciliana. Il software di estrazione è open source.
+
+## Repository e Docs
+
+- **Repository GitHub**: https://github.com/aborruso/ars_sicilia
+- **Sito Web**: https://aborruso.github.io/ars_sicilia/
+- **Documentazione completa**: https://github.com/aborruso/ars_sicilia#readme
+- **Issues e feature requests**: https://github.com/aborruso/ars_sicilia/issues
+
+## Contatti
+
+Per domande su dati, metodologia o integrazioni, apri una GitHub issue nel repository.
