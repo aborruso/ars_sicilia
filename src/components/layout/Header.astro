@@ -134,7 +134,7 @@ const isDDL = currentPath.startsWith('/ars_sicilia/ddl/');
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initMobileMenu() {
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
@@ -168,5 +168,8 @@ const isDDL = currentPath.startsWith('/ars_sicilia/ddl/');
         });
       });
     }
-  });
+  }
+
+  // Initialize on first load and after ViewTransitions navigation
+  document.addEventListener('astro:page-load', initMobileMenu);
 </script>
