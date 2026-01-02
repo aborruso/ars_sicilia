@@ -4,6 +4,7 @@ import Breadcrumb from '../../../../../../components/layout/Breadcrumb.astro';
 import VideoEmbed from '../../../../../../components/sedute/VideoEmbed.astro';
 import DigestContent from '../../../../../../components/sedute/DigestContent.astro';
 import CategoryBadge from '../../../../../../components/sedute/CategoryBadge.astro';
+import LlmExportButton from '../../../../../../components/sedute/LlmExportButton.astro';
 import { loadSedute } from '../../../../../../lib/data-loader';
 import { formatDateShort, formatDuration, truncateText } from '../../../../../../lib/utils';
 
@@ -85,6 +86,9 @@ const description = video.digest?.digest
         </div>
       </div>
     )}
+
+    <!-- LLM Export Button -->
+    <LlmExportButton video={video} seduta={seduta} />
 
     <!-- Digest -->
     <DigestContent digest={video.digest?.digest || null} />

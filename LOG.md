@@ -1,5 +1,19 @@
 # 2026-01-02
 
+## Export risorse per LLM su video page
+
+- Implementato bottone "📋 Copia risorse per LLM" su ogni pagina video
+- Nuovo componente `src/components/sedute/LlmExportButton.astro` con export text generator
+- Export contiene: metadata seduta, link trascrizione (GitHub raw), OdG (ARS CDN), digest JSON, YouTube link, categorie
+- Copy-to-clipboard con toast notification "✓ Risorse copiate negli appunti" (fade 3s)
+- Fallback modal se Clipboard API non disponibile (per browser vecchi)
+- Accessibilità: ARIA label "Esporta risorse per assistente AI", keyboard navigabile
+- Formatting human-readable con emoji per sezioni: 📚 📄 💬 🎬 📊
+- Integrato in video.astro dopo section categorie, prima digest content
+- Build: 93 pagine OK, zero errors
+- Test funzionale: button click copia testo corretto, toast appears, text pre-formatted per LLM
+- Responsive: button adattato su mobile/tablet, modal scalabile
+
 ## Fix Menu Mobile Hamburger dopo ViewTransitions
 
 - **Problema**: Menu hamburger su mobile funzionava solo su homepage, non su altre pagine
