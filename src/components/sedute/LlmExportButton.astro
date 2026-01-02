@@ -7,7 +7,7 @@ interface Props {
 
 const { video, seduta, baseUrl = '/ars_sicilia' } = Astro.props;
 
-// Generate export text block
+// Generate export text block with LLM prompt
 function generateExportText(): string {
   const dateStr = new Date(video.dataVideo).toLocaleDateString('it-IT', {
     year: 'numeric',
@@ -17,24 +17,45 @@ function generateExportText(): string {
 
   const duration = video.durationMinutes > 0 ? ` (${video.durationMinutes} minuti)` : '';
 
-  // Transcript URL (if transcript exists)
-  let transcriptLine = '';
+  // Build resource URLs
+  let transcriptUrl = '';
   if (video.youtubeId) {
-    transcriptLine = `📚 Trascrizione automatica:\nhttps://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.txt\n`;
+    transcriptUrl = `https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.txt`;
   }
 
-  // Agenda URL
-  let agendaLine = '';
-  if (seduta.odgUrl) {
-    agendaLine = `📄 Ordine del giorno seduta correlata:\n${seduta.odgUrl}\n`;
+  let agendaUrl = seduta.odgUrl || '';
+
+  const videoUrl = `https://www.youtube.com/watch?v=${video.youtubeId}`;
+
+  // Build the prompt template
+  let resourceList = '';
+  if (transcriptUrl) {
+    resourceList += `Trascrizione: ${transcriptUrl}\n\n`;
   }
+  if (agendaUrl) {
+    resourceList += `Ordine del giorno: ${agendaUrl}\n\n`;
+  }
+  resourceList += `Video: ${videoUrl}`;
 
-  // YouTube link
-  const youtubeLine = `🎬 Video YouTube:\nhttps://www.youtube.com/watch?v=${video.youtubeId}\n`;
+  const text = `Analizza la seduta dell'Assemblea Regionale Siciliana indicata sotto usando tutte le risorse fornite (trascrizione, ordine del giorno e video).
 
-  const text = `Seduta n. ${seduta.numero} | ${dateStr} | Ore ${video.oraVideo}${duration}
+Produci una sintesi chiara e comprensibile per le persone, in italiano semplice.
 
-${transcriptLine}${agendaLine}${youtubeLine}`;
+La sintesi deve:
+- spiegare di cosa si è parlato
+- indicare le decisioni prese (se ci sono)
+- segnalare temi rilevanti o controversi
+- evitare linguaggio tecnico o burocratico
+
+Se usi titoli o sezioni, usa sentence case italiano (es. "Temi principali", non "Temi Principali").
+
+---
+
+SEDUTA N. ${seduta.numero} | ${dateStr} | ORE ${video.oraVideo}${duration}
+
+Risorse:
+
+${resourceList}`;
 
   return text.trim();
 }
