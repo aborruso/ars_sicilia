@@ -1,4 +1,6 @@
 ---
+import { getTranscriptTxtUrl } from '../../lib/constants';
+
 interface Props {
   video: any;
   seduta: any;
@@ -20,7 +22,7 @@ function generateExportText(): string {
   // Build resource URLs
   let transcriptUrl = '';
   if (video.youtubeId) {
-    transcriptUrl = `https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.txt`;
+    transcriptUrl = getTranscriptTxtUrl(video.youtubeId);
   }
 
   let agendaUrl = seduta.odgUrl || '';

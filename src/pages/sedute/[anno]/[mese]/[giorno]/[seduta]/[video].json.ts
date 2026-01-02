@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { loadSedute } from '../../../../../../lib/data-loader';
+import { getTranscriptTxtUrl, getTranscriptSrtUrl } from '../../../../../../lib/constants';
 
 export async function getStaticPaths() {
   const sedute = await loadSedute();
@@ -44,12 +45,8 @@ export const GET: APIRoute = async ({ props }) => {
       youtubeId: video.youtubeId,
     },
     risorse: {
-      trascrizione: video.youtubeId
-        ? `https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.txt`
-        : null,
-      trascrizione_srt: video.youtubeId
-        ? `https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.srt`
-        : null,
+      trascrizione: video.youtubeId ? getTranscriptTxtUrl(video.youtubeId) : null,
+      trascrizione_srt: video.youtubeId ? getTranscriptSrtUrl(video.youtubeId) : null,
       ordinedelgiorno: seduta.odgUrl || null,
       video: `https://www.youtube.com/watch?v=${video.youtubeId}`,
     },
