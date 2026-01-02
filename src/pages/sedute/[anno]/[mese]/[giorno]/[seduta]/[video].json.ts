@@ -47,6 +47,9 @@ export const GET: APIRoute = async ({ props }) => {
       trascrizione: video.youtubeId
         ? `https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.txt`
         : null,
+      trascrizione_srt: video.youtubeId
+        ? `https://raw.githubusercontent.com/aborruso/ars_sicilia/main/data/trascrizioni/${video.youtubeId}.it.srt`
+        : null,
       ordinedelgiorno: seduta.odgUrl || null,
       video: `https://www.youtube.com/watch?v=${video.youtubeId}`,
     },
