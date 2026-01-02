@@ -1,0 +1,1152 @@
+1
+00:00:02,679 --> 00:00:06,879
+Avverto che il processo verbale della
+
+2
+00:00:04,799 --> 00:00:09,000
+seduta precedente è posto a disposizione
+
+3
+00:00:06,879 --> 00:00:10,679
+degli onorevoli deputati che intendano
+
+4
+00:00:09,000 --> 00:00:12,880
+prenderne visione ed è considerato
+
+5
+00:00:10,679 --> 00:00:17,920
+approvato in assenza di osservazione in
+
+6
+00:00:12,880 --> 00:00:17,920
+contrario nella presente seduta.
+
+7
+00:00:19,119 --> 00:00:27,800
+Comunico il congedo dell'onorevole
+
+8
+00:00:21,760 --> 00:00:27,800
+Burtone dal 16 al 20 dicembre.
+
+9
+00:00:27,880 --> 00:00:33,040
+Ai sensi del comma9 dell'articolo 127
+
+10
+00:00:30,679 --> 00:00:35,840
+del regolamento interno, do il preavviso
+
+11
+00:00:33,040 --> 00:00:37,559
+di 30 minuti al fine delle eventuali
+
+12
+00:00:35,840 --> 00:00:39,800
+votazioni mediante procedimento
+
+13
+00:00:37,559 --> 00:00:42,559
+elettronico che dovessero aver luogo nel
+
+14
+00:00:39,800 --> 00:00:45,120
+corso della presente seduta. Invito per
+
+15
+00:00:42,559 --> 00:00:47,520
+tanti deputati a munirsi per tempo della
+
+16
+00:00:45,120 --> 00:00:49,160
+tessera personale di voto. Ricordo che
+
+17
+00:00:47,520 --> 00:00:50,960
+anche la richiesta di verifica del
+
+18
+00:00:49,160 --> 00:00:52,520
+numero legale, ovvero la domanda di
+
+19
+00:00:50,960 --> 00:00:55,199
+scrutinio nominale o di scrutinio
+
+20
+00:00:52,520 --> 00:00:57,480
+segreto, sono effettuate mediante
+
+21
+00:00:55,199 --> 00:00:59,359
+procedimento elettronico.
+
+22
+00:00:57,480 --> 00:01:01,359
+>> Allora, si passa al primo punto
+
+23
+00:00:59,359 --> 00:01:04,359
+>> si passa al primo punto dell'ordine del
+
+24
+00:01:01,359 --> 00:01:04,359
+giorno.
+
+25
+00:01:05,159 --> 00:01:08,640
+Aspetta un attimo.
+
+26
+00:01:09,479 --> 00:01:13,720
+Schema di bilancio di previsione
+
+27
+00:01:11,000 --> 00:01:16,040
+triennio 2026-27-28
+
+28
+00:01:13,720 --> 00:01:18,320
+dell'Assemblea Regionale Siciliana. Ha
+
+29
+00:01:16,040 --> 00:01:21,119
+facoltà di parlare il deputato questore
+
+30
+00:01:18,320 --> 00:01:23,920
+onorevole Lombardo Giuseppe Geremia per
+
+31
+00:01:21,119 --> 00:01:25,840
+svolgere la relazione. Prego onorevole.
+
+32
+00:01:23,920 --> 00:01:27,360
+>> Sì, presidente. Do lettura della
+
+33
+00:01:25,840 --> 00:01:30,119
+relazione illustrativa allo schema di
+
+34
+00:01:27,360 --> 00:01:31,240
+bilancio dell'assemblea 2026-2028. Il
+
+35
+00:01:30,119 --> 00:01:32,720
+sugetto progetto di bilancio di
+
+36
+00:01:31,240 --> 00:01:35,079
+previsione è stato redatto secondo le
+
+37
+00:01:32,720 --> 00:01:37,240
+modalità introdotte nell'ordinamento
+
+38
+00:01:35,079 --> 00:01:40,079
+regionale dell'articolo 11 comma5 della
+
+39
+00:01:37,240 --> 00:01:42,360
+legge regionale 13 gennaio numero 3/2015
+
+40
+00:01:40,079 --> 00:01:43,720
+con cui l'assemblea regionale siciliana
+
+41
+00:01:42,360 --> 00:01:45,479
+ha adeguato il proprio ordinamento
+
+42
+00:01:43,720 --> 00:01:47,920
+contabile ai principi di cui al decreto
+
+43
+00:01:45,479 --> 00:01:50,680
+legislativo numero 118/2011 successive
+
+44
+00:01:47,920 --> 00:01:51,880
+modificazioni ed integrazioni. Nel
+
+45
+00:01:50,680 --> 00:01:53,000
+rispetto alle suddette normative il
+
+46
+00:01:51,880 --> 00:01:54,600
+bilancio di previsione è almeno
+
+47
+00:01:53,000 --> 00:01:56,159
+triennale, formulato in termini di
+
+48
+00:01:54,600 --> 00:01:58,640
+competenza finanziaria potenziata
+
+49
+00:01:56,159 --> 00:02:00,399
+secondo regole contabili uniformi e a
+
+50
+00:01:58,640 --> 00:02:01,799
+carattere autorizzatorio degli
+
+51
+00:02:00,399 --> 00:02:03,399
+stanziamenti di cassa per la prima
+
+52
+00:02:01,799 --> 00:02:06,119
+annualità di esercizio, in conformità a
+
+53
+00:02:03,399 --> 00:02:09,000
+quanto previsto alle leggato numero 4/2
+
+54
+00:02:06,119 --> 00:02:10,599
+al decreto legislativo 118/2011.
+
+55
+00:02:09,000 --> 00:02:12,160
+Le previsioni di entrate e di spesa sono
+
+56
+00:02:10,599 --> 00:02:14,040
+elaborate distintamente per ciascun
+
+57
+00:02:12,160 --> 00:02:15,480
+esercizio finanziario in coerenza con i
+
+58
+00:02:14,040 --> 00:02:17,000
+documenti di programmazione. La
+
+59
+00:02:15,480 --> 00:02:20,840
+dotazione annuale a carico di bilancio
+
+60
+00:02:17,000 --> 00:02:23,440
+regionale per il 2026 ammonta ad euro
+
+61
+00:02:20,840 --> 00:02:25,200
+133.400.000.
+
+62
+00:02:23,440 --> 00:02:26,440
+Le riduzioni dado ordinaria a carico
+
+63
+00:02:25,200 --> 00:02:27,879
+della Regione Siciliana operate a
+
+64
+00:02:26,440 --> 00:02:31,480
+partire da 2013 sono state
+
+65
+00:02:27,879 --> 00:02:35,920
+complessivamente pari ad eur28.700.000
+
+66
+00:02:31,480 --> 00:02:39,920
+in 13 anni da eur.200.000
+
+67
+00:02:35,920 --> 00:02:41,840
+dell'anno 2012 agli attuali 133 e400
+
+68
+00:02:39,920 --> 00:02:45,959
+previsti nel 2026 con una diminuzione
+
+69
+00:02:41,840 --> 00:02:47,599
+percentuale complessiva del 17,7%.
+
+70
+00:02:45,959 --> 00:02:50,400
+Incremento ISTA del costo della vita del
+
+71
+00:02:47,599 --> 00:02:53,360
+medesimo periodo temporale 2013-2025 è
+
+72
+00:02:50,400 --> 00:02:55,599
+stato del 21,40%
+
+73
+00:02:53,360 --> 00:02:58,280
+focalizzando l'attenzione nel triennio
+
+74
+00:02:55,599 --> 00:03:01,319
+22-25 dove si è registrato un aumento
+
+75
+00:02:58,280 --> 00:03:03,040
+pari al 13%. L'incremento di varie voci
+
+76
+00:03:01,319 --> 00:03:04,799
+dovuto alla forte spinta al rialzo
+
+77
+00:03:03,040 --> 00:03:06,560
+dell'indice ISAT agli ultimi anni in
+
+78
+00:03:04,799 --> 00:03:08,239
+costanza della dazione annuale al netto
+
+79
+00:03:06,560 --> 00:03:09,720
+della prodotazione inflazionistica, ha
+
+80
+00:03:08,239 --> 00:03:11,840
+reso necessario l'avvio di un processo
+
+81
+00:03:09,720 --> 00:03:14,319
+di razionalizzazione e riduzione della
+
+82
+00:03:11,840 --> 00:03:16,799
+spesa che che comunque per l'anno 2026
+
+83
+00:03:14,319 --> 00:03:18,080
+consente di adempiere al soddisfacimento
+
+84
+00:03:16,799 --> 00:03:20,120
+le spese obbligatorie a carico
+
+85
+00:03:18,080 --> 00:03:22,000
+dell'ASARS destinate all'ordinario
+
+86
+00:03:20,120 --> 00:03:24,200
+svolgimento delle funzioni istituzionali
+
+87
+00:03:22,000 --> 00:03:25,959
+dell'amministrazione, nonché la tutela
+
+88
+00:03:24,200 --> 00:03:27,360
+delle esigenze di conservazione del
+
+89
+00:03:25,959 --> 00:03:28,760
+patrimonio monumentale gestito
+
+90
+00:03:27,360 --> 00:03:30,840
+dall'Assemblea Regione Siciliana
+
+91
+00:03:28,760 --> 00:03:32,680
+costituito dal Palazzo Ormani, nonché
+
+92
+00:03:30,840 --> 00:03:35,640
+dal Palazzo ex ministeri della Chiesa
+
+93
+00:03:32,680 --> 00:03:36,920
+dei Santissimi Erena e Costantino. In
+
+94
+00:03:35,640 --> 00:03:38,159
+particolare segnalano alcune delle
+
+95
+00:03:36,920 --> 00:03:40,000
+operazioni di risparmio più
+
+96
+00:03:38,159 --> 00:03:41,480
+significative. Lo stanziamento di
+
+97
+00:03:40,000 --> 00:03:43,760
+competenza relativo alle spese in conto
+
+98
+00:03:41,480 --> 00:03:46,200
+capitale del programma 5 gestione dei
+
+99
+00:03:43,760 --> 00:03:50,760
+beni patrimoniali demiali per il 2026
+
+100
+00:03:46,200 --> 00:03:50,760
+registra una diminuzione di eur7.1.000
+
+101
+00:03:52,280 --> 00:03:55,519
+e lo stanziamento di competenza relativo
+
+102
+00:03:54,000 --> 00:03:57,319
+alle spese correnti del programma 1
+
+103
+00:03:55,519 --> 00:04:02,239
+organi istituzionali per l'anno 2026
+
+104
+00:03:57,319 --> 00:04:02,239
+regista una diminuzione di euro 1.66.000
+
+105
+00:04:03,680 --> 00:04:06,680
+lo stanziamento di competenza relativo
+
+106
+00:04:05,239 --> 00:04:08,000
+alle spese correnti del programma 8
+
+107
+00:04:06,680 --> 00:04:10,200
+statistiche e sistemi informativi
+
+108
+00:04:08,000 --> 00:04:12,239
+regista una contrazione di eur.000
+
+109
+00:04:10,200 --> 00:04:14,680
+rispetto al dato di competenza dell'anno
+
+110
+00:04:12,239 --> 00:04:16,160
+2025. Nel rispetto delle esigenze di
+
+111
+00:04:14,680 --> 00:04:17,440
+contenimento dei costi della politica,
+
+112
+00:04:16,160 --> 00:04:19,400
+secondo quanto previsto la legge
+
+113
+00:04:17,440 --> 00:04:20,400
+regionale 82013, nel 2026 lo
+
+114
+00:04:19,400 --> 00:04:21,680
+stanziamento di bilancio per
+
+115
+00:04:20,400 --> 00:04:23,520
+l'erogazione di indenità parlamentare
+
+116
+00:04:21,680 --> 00:04:25,919
+rimane invariato rispetto allo
+
+117
+00:04:23,520 --> 00:04:29,400
+stanziamento 2025. Per il resto mi
+
+118
+00:04:25,919 --> 00:04:29,400
+rimetto al testo.
+
+119
+00:04:29,720 --> 00:04:34,600
+>> Grazie. Interventi.
+
+120
+00:04:31,960 --> 00:04:37,199
+>> Allora, onorevoli colleghi, dichiaro
+
+121
+00:04:34,600 --> 00:04:40,520
+aperta la discussione generale.
+
+122
+00:04:37,199 --> 00:04:42,840
+Non avendo alcun deputato chiesto di
+
+123
+00:04:40,520 --> 00:04:45,720
+parlare, dichiaro chiusa la discussione
+
+124
+00:04:42,840 --> 00:04:48,440
+generale e pongo in votazione il
+
+125
+00:04:45,720 --> 00:04:51,840
+passaggio all'esame contabile, all'esame
+
+126
+00:04:48,440 --> 00:04:54,160
+del documento contabile numero 171.
+
+127
+00:04:51,840 --> 00:04:58,039
+Chi è favorevole resti seduto, chi è
+
+128
+00:04:54,160 --> 00:05:00,919
+contrario si alzi. E approvato. Si passa
+
+129
+00:04:58,039 --> 00:05:02,919
+all'entrata. Si dà lettura del fondo
+
+130
+00:05:00,919 --> 00:05:06,120
+pluriennale vincolato per spese
+
+131
+00:05:02,919 --> 00:05:08,800
+correnti. Lo pongo in votazione. Chi è
+
+132
+00:05:06,120 --> 00:05:12,400
+favorevole resti seduto. Chi è contrario
+
+133
+00:05:08,800 --> 00:05:14,720
+si alzi e approvato.
+
+134
+00:05:12,400 --> 00:05:17,800
+Si dà lettura del fondo pluriennale
+
+135
+00:05:14,720 --> 00:05:20,520
+vincolato per spese in conto capitale.
+
+136
+00:05:17,800 --> 00:05:24,160
+Lo pongo in votazione. Chi è favorevole
+
+137
+00:05:20,520 --> 00:05:25,800
+ressi seduto. Chi è contrario si alzi. È
+
+138
+00:05:24,160 --> 00:05:29,199
+approvato.
+
+139
+00:05:25,800 --> 00:05:32,280
+Si dà lettura dell'utilizzo avanzo di
+
+140
+00:05:29,199 --> 00:05:34,720
+amministrazione. Lo pongo in votazione.
+
+141
+00:05:32,280 --> 00:05:38,960
+Chi è favorevole ressi seduto. Chi è
+
+142
+00:05:34,720 --> 00:05:42,000
+contrario si alzi. È approvato.
+
+143
+00:05:38,960 --> 00:05:46,360
+Si dà lettura del fondo di cassa all'1
+
+144
+00:05:42,000 --> 00:05:48,639
+gennaio 2026. Lo pongo in votazione. Chi
+
+145
+00:05:46,360 --> 00:05:52,919
+è favorevole ressi seduto. Chi è
+
+146
+00:05:48,639 --> 00:05:56,120
+contrario si alzi. È approvato. Si passa
+
+147
+00:05:52,919 --> 00:05:58,960
+al titolo du, trasferimenti correnti. Si
+
+148
+00:05:56,120 --> 00:06:00,639
+dà lettura della tipologia 101,
+
+149
+00:05:58,960 --> 00:06:03,680
+trasferimenti correnti da
+
+150
+00:06:00,639 --> 00:06:06,199
+amministrazioni pubbliche. La pongo in
+
+151
+00:06:03,680 --> 00:06:09,680
+votazione. Chi è favorevole ressi
+
+152
+00:06:06,199 --> 00:06:11,360
+seduto. Chi è contrario si alzi. È
+
+153
+00:06:09,680 --> 00:06:13,840
+approvato.
+
+154
+00:06:11,360 --> 00:06:17,199
+Si dà lettura della tipologia 103,
+
+155
+00:06:13,840 --> 00:06:19,720
+trasferimenti correnti da imprese. La
+
+156
+00:06:17,199 --> 00:06:23,160
+pongo in votazione. Chi è favorevole
+
+157
+00:06:19,720 --> 00:06:24,880
+ressi seduto. Chi è contrario si alzi. È
+
+158
+00:06:23,160 --> 00:06:29,000
+approvato.
+
+159
+00:06:24,880 --> 00:06:29,000
+Andiamo al titolo du trasferimenti.
+
+160
+00:06:29,039 --> 00:06:32,199
+Il titolo du trasferimenti correnti è
+
+161
+00:06:30,560 --> 00:06:35,400
+approvato. Si passa al titolo 3,
+
+162
+00:06:32,199 --> 00:06:38,639
+scusate. Entrate extraributarie. Si dà
+
+163
+00:06:35,400 --> 00:06:41,199
+lettura della tipologia 300 interessi
+
+164
+00:06:38,639 --> 00:06:43,680
+attivi. La pongo in votazione. Chi è
+
+165
+00:06:41,199 --> 00:06:47,440
+favorevole resti seduto. Che è contrario
+
+166
+00:06:43,680 --> 00:06:51,319
+si alzi. È approvato. Si dà lettura
+
+167
+00:06:47,440 --> 00:06:54,520
+della tipologia 500, rimborsi e altre
+
+168
+00:06:51,319 --> 00:06:56,960
+entrate correnti. La pongo in votazione.
+
+169
+00:06:54,520 --> 00:07:00,360
+Chi è favorevole resti seduto. Chi è
+
+170
+00:06:56,960 --> 00:07:03,319
+contrario si alzi. È approvata.
+
+171
+00:07:00,360 --> 00:07:05,599
+Il titolo tre, entrate extratributarie.
+
+172
+00:07:03,319 --> 00:07:09,039
+Pertanto è approvato. Si passa al titolo
+
+173
+00:07:05,599 --> 00:07:11,680
+4, entrate in conto capitale. Si dà
+
+174
+00:07:09,039 --> 00:07:13,639
+lettura della tipologia 200, contributi
+
+175
+00:07:11,680 --> 00:07:16,039
+agli investimenti. La pongo in
+
+176
+00:07:13,639 --> 00:07:19,160
+votazione. Chi è favorevole resti
+
+177
+00:07:16,039 --> 00:07:22,759
+seduto. Chi è contrario si alzi. È
+
+178
+00:07:19,160 --> 00:07:26,360
+approvata. Il titolo 4, entrata in conto
+
+179
+00:07:22,759 --> 00:07:29,199
+capitale, è approvato.
+
+180
+00:07:26,360 --> 00:07:31,759
+Si passa al titolo 9. Entrate per conto
+
+181
+00:07:29,199 --> 00:07:34,639
+terzi e partite di giro. Si dà lettura
+
+182
+00:07:31,759 --> 00:07:37,080
+della tipologia 100 entrate per partite
+
+183
+00:07:34,639 --> 00:07:39,759
+di giro. La pongo in votazione. Chi è
+
+184
+00:07:37,080 --> 00:07:42,759
+favorevole ressi seduto. Chi è contrario
+
+185
+00:07:39,759 --> 00:07:45,560
+si alzi. È approvata.
+
+186
+00:07:42,759 --> 00:07:48,360
+Si dà lettura della tipologia 200.
+
+187
+00:07:45,560 --> 00:07:50,599
+Entrate per conto terzi. La pongo in
+
+188
+00:07:48,360 --> 00:07:53,400
+votazione. Chi è favorevole resti
+
+189
+00:07:50,599 --> 00:07:56,440
+seduto. Chi è contrario si alzi. E
+
+190
+00:07:53,400 --> 00:07:58,800
+approvata. Il titolo 9, entrate per
+
+191
+00:07:56,440 --> 00:08:00,400
+conto terzi e partite di giro è
+
+192
+00:07:58,800 --> 00:08:02,159
+approvato.
+
+193
+00:08:00,400 --> 00:08:04,759
+Approvato il totale delle entrate, si
+
+194
+00:08:02,159 --> 00:08:07,599
+passa alla spesa. Missione 1,
+
+195
+00:08:04,759 --> 00:08:10,120
+istituzionali generali e di gestione. Si
+
+196
+00:08:07,599 --> 00:08:12,960
+dà lettura del programma 1 organi
+
+197
+00:08:10,120 --> 00:08:15,520
+istituzionali. Lo pongo in votazione.
+
+198
+00:08:12,960 --> 00:08:19,800
+Chi è favorevole ressi seduto. Chi è
+
+199
+00:08:15,520 --> 00:08:21,479
+contrario si alzi. È approvato.
+
+200
+00:08:19,800 --> 00:08:23,360
+Si dà lettura del programma due.
+
+201
+00:08:21,479 --> 00:08:25,919
+Segreteria generale. Lo pongo in
+
+202
+00:08:23,360 --> 00:08:28,960
+votazione. Chi è favorevole ressi
+
+203
+00:08:25,919 --> 00:08:30,919
+seduto. Chi è contrario si alzi. È
+
+204
+00:08:28,960 --> 00:08:33,599
+approvato.
+
+205
+00:08:30,919 --> 00:08:36,000
+Si dà lettura del programma 3, gestione
+
+206
+00:08:33,599 --> 00:08:38,680
+economica finanziaria programmazione
+
+207
+00:08:36,000 --> 00:08:40,880
+provveditorato. Lo pongo in votazione.
+
+208
+00:08:38,680 --> 00:08:44,399
+Chi è favorevole resti seduto. Chi è
+
+209
+00:08:40,880 --> 00:08:47,040
+contrario si alzi. È approvato.
+
+210
+00:08:44,399 --> 00:08:49,480
+Si dà lettura del programma 5, gestione
+
+211
+00:08:47,040 --> 00:08:51,880
+dei beni demaniali e patrimoniali. Lo
+
+212
+00:08:49,480 --> 00:08:55,160
+pongo in votazione. Chi è favorevole
+
+213
+00:08:51,880 --> 00:08:57,440
+resti seduto. Chi è contrario si alzi. È
+
+214
+00:08:55,160 --> 00:08:59,560
+approvato.
+
+215
+00:08:57,440 --> 00:09:01,839
+Si dà lettura del programma 8.
+
+216
+00:08:59,560 --> 00:09:04,079
+Statistica e sistemi informativi. Lo
+
+217
+00:09:01,839 --> 00:09:07,279
+pongo in votazione. Chi è favorevole
+
+218
+00:09:04,079 --> 00:09:09,120
+resti seduto. Chi è contrario si alzi. È
+
+219
+00:09:07,279 --> 00:09:12,120
+approvato.
+
+220
+00:09:09,120 --> 00:09:14,760
+Si dà lettura del programma 10 risorse
+
+221
+00:09:12,120 --> 00:09:17,600
+umane. Lo pongo in votazione. Chi è
+
+222
+00:09:14,760 --> 00:09:21,440
+favorevole resti seduto. Chi è contrario
+
+223
+00:09:17,600 --> 00:09:24,399
+si alzi. È approvato.
+
+224
+00:09:21,440 --> 00:09:27,839
+Si dà lettura del programma 11, altri
+
+225
+00:09:24,399 --> 00:09:30,279
+servizi generali. Lo pongo in votazione.
+
+226
+00:09:27,839 --> 00:09:34,000
+Chi è favorevole ressi seduto. Chi è
+
+227
+00:09:30,279 --> 00:09:36,600
+contrario si alzi. È approvato
+
+228
+00:09:34,000 --> 00:09:40,079
+la missione 1. Servizi istituzionali
+
+229
+00:09:36,600 --> 00:09:42,839
+generali e di gestione è approvata.
+
+230
+00:09:40,079 --> 00:09:45,440
+Si passa alla missione 20, fondi e
+
+231
+00:09:42,839 --> 00:09:49,480
+accantonamenti. Si dà lettura del
+
+232
+00:09:45,440 --> 00:09:52,120
+programma 1 fondo di riserva. Lo pongo
+
+233
+00:09:49,480 --> 00:09:53,839
+in votazione. Chi è favorevole resti
+
+234
+00:09:52,120 --> 00:09:57,760
+seduto.
+
+235
+00:09:53,839 --> 00:10:01,200
+Chi è contrario si alzi e approvato. Si
+
+236
+00:09:57,760 --> 00:10:03,600
+dà lettura del programma 2 fondi crediti
+
+237
+00:10:01,200 --> 00:10:06,360
+di dubbia esigibilità. Lo pongo in
+
+238
+00:10:03,600 --> 00:10:07,959
+votazione. Chi è l'ho capito, lo dico
+
+239
+00:10:06,360 --> 00:10:11,279
+alla fine, è inutile che lo dico. Già è
+
+240
+00:10:07,959 --> 00:10:13,600
+difficile farlo. Eh,
+
+241
+00:10:11,279 --> 00:10:15,920
+si dà lettura del programma 2 fondo
+
+242
+00:10:13,600 --> 00:10:18,079
+crediti di dubbia esigibilità. Lo pongo
+
+243
+00:10:15,920 --> 00:10:20,880
+in votazione. Chi è favorevole ressi
+
+244
+00:10:18,079 --> 00:10:23,880
+seduto. Chi è contrario si alzi. È
+
+245
+00:10:20,880 --> 00:10:23,880
+approvato.
+
+246
+00:10:25,680 --> 00:10:31,680
+>> In tutte le votazioni. In tutte le
+
+247
+00:10:28,560 --> 00:10:33,680
+votazioni eh
+
+248
+00:10:31,680 --> 00:10:36,279
+fatte sino a questo momento e sino alla
+
+249
+00:10:33,680 --> 00:10:38,760
+fine. L'onorevole Lavardera si astiene.
+
+250
+00:10:36,279 --> 00:10:40,839
+Benissimo.
+
+251
+00:10:38,760 --> 00:10:42,800
+Dove siamo arrivati?
+
+252
+00:10:40,839 --> 00:10:45,480
+È approvato al programma du. Siamo al
+
+253
+00:10:42,800 --> 00:10:48,800
+programma 3. Si dà lettura del programma
+
+254
+00:10:45,480 --> 00:10:51,160
+3, altri fondi. Lo pongo in votazione.
+
+255
+00:10:48,800 --> 00:10:54,560
+Chi è favorevole resti seduto. Chi è
+
+256
+00:10:51,160 --> 00:10:58,079
+contrario si alzi. È approvato. La
+
+257
+00:10:54,560 --> 00:11:01,680
+missione 20 fondi e accantonamenti è
+
+258
+00:10:58,079 --> 00:11:04,959
+approvata. Si passa alla missione 99,
+
+259
+00:11:01,680 --> 00:11:07,800
+servizi per conto terzi. Si dà lettura
+
+260
+00:11:04,959 --> 00:11:10,480
+del programma 1, per conto terzi e
+
+261
+00:11:07,800 --> 00:11:12,399
+partite di giro. Lo pongo in votazione.
+
+262
+00:11:10,480 --> 00:11:16,240
+Chi è favorevole resti seduto, chi è
+
+263
+00:11:12,399 --> 00:11:19,680
+contrario si alzi. È approvato.
+
+264
+00:11:16,240 --> 00:11:22,920
+La missione 99, servizio per servizi per
+
+265
+00:11:19,680 --> 00:11:25,959
+conto terzi è approvata.
+
+266
+00:11:22,920 --> 00:11:27,839
+Si passa ai riepiloghi. Si dà lettura
+
+267
+00:11:25,959 --> 00:11:30,160
+del riepilogo generale, entrate per
+
+268
+00:11:27,839 --> 00:11:33,839
+titolle del riepilogo generale delle
+
+269
+00:11:30,160 --> 00:11:36,560
+spese per titoli, del riepilogo generale
+
+270
+00:11:33,839 --> 00:11:39,680
+delle spese per missioni, del quadro
+
+271
+00:11:36,560 --> 00:11:42,560
+generale riassuntivo del prospetto degli
+
+272
+00:11:39,680 --> 00:11:44,839
+equilibri di bilancio e degli allegati,
+
+273
+00:11:42,560 --> 00:11:47,040
+nonché degli allegati bilanci della
+
+274
+00:11:44,839 --> 00:11:49,639
+Cassa di Quiescenza dei deputati
+
+275
+00:11:47,040 --> 00:11:51,839
+dell'Assemblea regionale siciliana e
+
+276
+00:11:49,639 --> 00:11:53,839
+della Cassa di Quiesccienza del
+
+277
+00:11:51,839 --> 00:11:57,320
+personale dell'Assemblea regionale
+
+278
+00:11:53,839 --> 00:11:59,760
+siciliana. come approvati dai rispettivi
+
+279
+00:11:57,320 --> 00:12:04,320
+organi, ponendo in votazione l'intero
+
+280
+00:11:59,760 --> 00:12:07,680
+documento numero 171 con gli anni ed
+
+281
+00:12:04,320 --> 00:12:11,040
+allegati. Chi è favorevole ressi seduto,
+
+282
+00:12:07,680 --> 00:12:14,040
+chi è contrario si alzi, è approvato.
+
+283
+00:12:11,040 --> 00:12:14,040
+Benissimo.
+
+284
+00:12:41,880 --> 00:12:45,760
+Benissimo, colleghi. Allora, adesso,
+
+285
+00:12:43,839 --> 00:12:48,880
+avendo votato il bilancio interno
+
+286
+00:12:45,760 --> 00:12:52,639
+dell'Assemblea Regionale Siciliana,
+
+287
+00:12:48,880 --> 00:12:55,519
+rinviamo la seduta alle ore 15:30. La
+
+288
+00:12:52,639 --> 00:12:55,519
+seduta è sospesa.
+
