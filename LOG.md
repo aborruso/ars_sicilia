@@ -1,3 +1,14 @@
+# 2026-01-02
+
+## Fix Menu Mobile Hamburger dopo ViewTransitions
+
+- **Problema**: Menu hamburger su mobile funzionava solo su homepage, non su altre pagine
+- **Root cause**: Script utilizzava `DOMContentLoaded` che non si triggera dopo Astro ViewTransitions navigation
+- **Soluzione**: Cambiato a `astro:page-load` event che si triggera sia al caricamento iniziale che dopo ogni navigazione ViewTransitions
+- **Refactoring**: Estratta logica `initMobileMenu()` in funzione riutilizzabile
+- **File modificato**: src/components/layout/Header.astro (script tag, righe 136-174)
+- **Test**: Build completato con successo, 93 pagine generate
+
 # 2025-12-31
 
 ## Validazione automatica digest con LLM
