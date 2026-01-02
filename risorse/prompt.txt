@@ -38,7 +38,9 @@ Before producing your final output, use the scratchpad to organize your thoughts
 Now provide your analysis in the following format:
 
 <digest>
-Write a clear, synthetic summary of the session (approximately 200-400 words). Focus on the main points that citizens need to know. Use accessible language and organize information logically. Highlight key decisions, debates, and outcomes.
+Write a clear, concise summary of the session (about 200–400 words), focusing on the main points citizens need to know. Use accessible language and organize the information logically. Highlight key decisions, debates, and outcomes.
+
+If you add headings, use Italian sentence case (capital letter only on the first word and on proper nouns). For example: "Esito delle votazioni", not "Esito delle Votazioni".
 </digest>
 
 <categories>
