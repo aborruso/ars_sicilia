@@ -14,6 +14,7 @@
 #
 # OUTPUT:
 #   - data/disegni_legge.jsonl (formato JSONL incrementale)
+#   - data/logs/odg_pdfs_processed.txt (lista PDF già processati)
 #
 # DEPENDENCIES:
 #   - markitdown (pip install markitdown)
@@ -21,7 +22,7 @@
 #
 # BEHAVIOR:
 #   - Legge URL PDF distinti dal campo odg_url
-#   - Salta PDF già elaborati (deduplicazione via JSONL), a meno di --reprocess
+#   - Salta PDF già elaborati (lista in data/logs/odg_pdfs_processed.txt), a meno di --reprocess
 #   - Usa markitdown + llm per estrarre dati strutturati
 #   - Genera url_disegno (link ICARO) da legislatura + numero_disegno
 #   - Append risultati a data/disegni_legge.jsonl
@@ -34,6 +35,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 CSV_FILE="$PROJECT_DIR/data/anagrafica_video.csv"
 OUTPUT_JSONL="$PROJECT_DIR/data/disegni_legge.jsonl"
+PROCESSED_LOG="$PROJECT_DIR/data/logs/odg_pdfs_processed.txt"
 
 # Schema LLM per estrazione dati
 SCHEMA='
@@ -53,6 +55,10 @@ get_distinct_odg_urls() {
 # Funzione per controllare se un PDF è già stato processato
 is_pdf_processed() {
     local pdf_url="$1"
+    if [[ -f "$PROCESSED_LOG" ]]; then
+        grep -qFx "$pdf_url" "$PROCESSED_LOG"
+        return
+    fi
     if [[ ! -f "$OUTPUT_JSONL" ]]; then
         return 1  # File non esiste, PDF non processato
     fi
@@ -175,8 +181,13 @@ main() {
     fi
     echo "" >&2
 
-    # Crea file output se non esiste
+    # Crea file output e log se non esistono
     touch "$OUTPUT_JSONL"
+    mkdir -p "$(dirname "$PROCESSED_LOG")"
+    touch "$PROCESSED_LOG"
+    if [[ "$reprocess" -eq 1 ]]; then
+        : > "$PROCESSED_LOG"
+    fi
 
     local pdf_urls
     pdf_urls=$(get_distinct_odg_urls)
@@ -201,6 +212,9 @@ main() {
             ((skipped++)) || true
         else
             process_pdf "$pdf_url"
+            if ! grep -qFx "$pdf_url" "$PROCESSED_LOG"; then
+                echo "$pdf_url" >> "$PROCESSED_LOG"
+            fi
             echo "  → Processed" >&2
             ((processed++)) || true
         fi
