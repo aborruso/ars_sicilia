@@ -185,6 +185,9 @@ main() {
     touch "$OUTPUT_JSONL"
     mkdir -p "$(dirname "$PROCESSED_LOG")"
     touch "$PROCESSED_LOG"
+    if [[ "$reprocess" -eq 0 ]] && [[ ! -s "$PROCESSED_LOG" ]] && [[ -s "$OUTPUT_JSONL" ]]; then
+        jq -r '.pdf_url' "$OUTPUT_JSONL" | sort -u > "$PROCESSED_LOG"
+    fi
     if [[ "$reprocess" -eq 1 ]]; then
         : > "$PROCESSED_LOG"
     fi
