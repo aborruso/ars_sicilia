@@ -115,34 +115,38 @@ process_pdf() {
     echo "$json_output" | jq -c --arg pdf_url "$pdf_url" '
         if .items then
             .items[] |
-            . + {
-                numero_disegno: (
-                    (((.numero_disegno // "") | tostring | match("[0-9]+")?) | .string) // ""
-                ),
+            . as $item |
+            ($item.numero_disegno // "" | tostring | match("[0-9]+")? | .string) as $clean_num |
+            ($item.legislatura // "") as $leg |
+            ($clean_num // "") as $num |
+            ($leg |
+                if . == "XVIII" then "18"
+                elif . == "XVII" then "17"
+                elif . == "XVI" then "16"
+                elif . == "XV" then "15"
+                elif . == "XIV" then "14"
+                elif . == "XIII" then "13"
+                elif . == "XII" then "12"
+                elif . == "XI" then "11"
+                elif . == "X" then "10"
+                elif . == "IX" then "9"
+                elif . == "VIII" then "8"
+                elif . == "VII" then "7"
+                elif . == "VI" then "6"
+                elif . == "V" then "5"
+                elif . == "IV" then "4"
+                elif . == "III" then "3"
+                elif . == "II" then "2"
+                elif . == "I" then "1"
+                else "" end
+            ) as $leg_num |
+            $item + {
+                numero_disegno: ($num // ""),
                 pdf_url: $pdf_url,
                 url_disegno: (
-                    if .legislatura and ((.numero_disegno // "") | length) > 0 then
+                    if ($leg_num | length) > 0 and ($num | length) > 0 then
                         "https://dati.ars.sicilia.it/icaro/default.jsp?icaDB=221&icaQuery=(" +
-                        (if .legislatura == "XVIII" then "18"
-                         elif .legislatura == "XVII" then "17"
-                         elif .legislatura == "XVI" then "16"
-                         elif .legislatura == "XV" then "15"
-                         elif .legislatura == "XIV" then "14"
-                         elif .legislatura == "XIII" then "13"
-                         elif .legislatura == "XII" then "12"
-                         elif .legislatura == "XI" then "11"
-                         elif .legislatura == "X" then "10"
-                         elif .legislatura == "IX" then "9"
-                         elif .legislatura == "VIII" then "8"
-                         elif .legislatura == "VII" then "7"
-                         elif .legislatura == "VI" then "6"
-                         elif .legislatura == "V" then "5"
-                         elif .legislatura == "IV" then "4"
-                         elif .legislatura == "III" then "3"
-                         elif .legislatura == "II" then "2"
-                         elif .legislatura == "I" then "1"
-                         else "" end) +
-                        ".LEGISL+E+" + .numero_disegno + ".NUMDDL)"
+                        $leg_num + ".LEGISL+E+" + $num + ".NUMDDL)"
                     else
                         null
                     end
