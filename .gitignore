@@ -10,6 +10,7 @@ venv/
 # Generated data (exclude logs but keep anagrafica)
 data/logs/*.csv
 data/logs/*.log
+!data/logs/odg_pdfs_processed.txt
 data/.anagrafica.lock
 
 # Video temporanei
@@ -55,6 +56,7 @@ Thumbs.db
 # Logs
 *.log
 logs/
+!data/logs/
 
 # Astro site
 .astro/
