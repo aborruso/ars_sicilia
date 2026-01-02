@@ -75,6 +75,9 @@ const description = video.digest?.digest
       title={`Seduta ${seduta.numero} del ${formatDateShort(video.dataVideo)} ore ${video.oraVideo}`}
     />
 
+    <!-- LLM Export Button -->
+    <LlmExportButton video={video} seduta={seduta} />
+
     <!-- Categorie -->
     {video.digest?.categories && video.digest.categories.length > 0 && (
       <div class="mb-8">
@@ -86,9 +89,6 @@ const description = video.digest?.digest
         </div>
       </div>
     )}
-
-    <!-- LLM Export Button -->
-    <LlmExportButton video={video} seduta={seduta} />
 
     <!-- Digest -->
     <DigestContent digest={video.digest?.digest || null} />
