@@ -1,3 +1,22 @@
+# 2026-01-11
+
+## Valutazione progetto
+
+- Creata valutazione sintetica progetto in `docs/evaluation.md`
+- Aggiunte note ricerca con ipotesi e confidenza in `docs/research-notes.md`
+
+# 2026-01-09
+
+## Valutazione applicabilità sistema RAG per trascrizioni ARS
+
+- Analizzato dataset: 26 video, 34.309 righe, 3.6MB trascrizioni dibattiti parlamentari
+- Valutata architettura RAG (MarkItDown + LangChain + ChromaDB + Ollama + Gradio)
+- **Verdict**: Sistema altamente applicabile con modifiche minori
+- Adattamenti necessari: parser .txt/.srt custom, embeddings multilingua italiano, metadati speaker
+- Modelli consigliati: `paraphrase-multilingual-mpnet-base-v2` (embeddings), `gemma2:9b` o `qwen2.5:14b` (LLM)
+- Stima effort MVP: 6-9 ore per sistema funzionante
+- Output: docs/rag/evaluation.md con analisi dettagliata componenti, criticità, architettura proposta
+
 # 2026-01-02
 
 ## Export risorse per LLM su video page
