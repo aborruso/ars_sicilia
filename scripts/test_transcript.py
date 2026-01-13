@@ -7,7 +7,7 @@ Scarica la trascrizione del primo video con youtube_id nell'anagrafica
 import csv
 import sys
 from pathlib import Path
-from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api import YouTubeTranscriptApi as yt_api
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent
@@ -35,8 +35,15 @@ def main():
     # Scarica trascrizione
     print(f"Downloading transcript for: {youtube_id}")
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(youtube_id, languages=['it', 'en'])
-        text = ' '.join([entry['text'] for entry in transcript])
+        transcript_list = yt_api().list_transcripts(youtube_id)
+        # Prova italiano, poi inglese
+        try:
+            transcript = transcript_list.find_transcript(['it'])
+        except:
+            transcript = transcript_list.find_transcript(['en'])
+        
+        transcript_data = transcript.fetch()
+        text = ' '.join([entry['text'] for entry in transcript_data])
         
         # Salva in root del repo
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
@@ -45,7 +52,7 @@ def main():
         
         print(f"✓ SUCCESS: Transcript saved to {OUTPUT_FILE}")
         print(f"  Size: {len(text)} characters")
-        print(f"  Entries: {len(transcript)}")
+        print(f"  Entries: {len(transcript_data)}")
         
     except Exception as e:
         print(f"✗ ERROR: {e}")
