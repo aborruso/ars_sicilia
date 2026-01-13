@@ -1,0 +1,51 @@
+name: Test Transcript Download
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install youtube-transcript-api
+        run: |
+          pip install youtube-transcript-api
+
+      - name: Run test script
+        run: |
+          python scripts/test_transcript.py
+
+      - name: Check output file
+        run: |
+          if [ -f test_transcript_output.txt ]; then
+            echo "✓ Output file created"
+            ls -lh test_transcript_output.txt
+            echo ""
+            echo "=== First 500 characters ==="
+            head -c 500 test_transcript_output.txt
+          else
+            echo "✗ Output file NOT found"
+            exit 1
+          fi
+
+      - name: Commit test output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add test_transcript_output.txt
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "test: transcript download output"
+            git push
+          fi
