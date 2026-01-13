@@ -35,15 +35,9 @@ def main():
     # Scarica trascrizione
     print(f"Downloading transcript for: {youtube_id}")
     try:
-        transcript_list = yt_api().list_transcripts(youtube_id)
-        # Prova italiano, poi inglese
-        try:
-            transcript = transcript_list.find_transcript(['it'])
-        except:
-            transcript = transcript_list.find_transcript(['en'])
-        
-        transcript_data = transcript.fetch()
-        text = ' '.join([entry['text'] for entry in transcript_data])
+        # Usa il metodo fetch() con fallback italiano -> inglese
+        transcript = yt_api().fetch(youtube_id, languages=['it', 'en'])
+        text = ' '.join([snippet.text for snippet in transcript])
         
         # Salva in root del repo
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
@@ -52,7 +46,7 @@ def main():
         
         print(f"✓ SUCCESS: Transcript saved to {OUTPUT_FILE}")
         print(f"  Size: {len(text)} characters")
-        print(f"  Entries: {len(transcript_data)}")
+        print(f"  Entries: {len(transcript)}")
         
     except Exception as e:
         print(f"✗ ERROR: {e}")
