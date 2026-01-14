@@ -286,18 +286,77 @@ python3 scripts/upload_single.py
 
 ### Automazione GitHub Actions
 
-Il progetto include workflow automatici:
+Il progetto include workflow automatici che girano ogni notte:
 
-- **`daily_upload.yml`** - Esegue ogni giorno alle 01:37 UTC:
-  - Aggiorna anagrafica sedute
-  - Carica fino a 4 video/giorno (rispetta quota API)
-  - Commit anagrafica aggiornata
+- **`daily_upload.yml`** - 🕐 01:37 UTC ogni giorno:
+  - Aggiorna anagrafica sedute con crawler incrementale
+  - Carica fino a 4 video/giorno su YouTube (rispetta quota API)
+  - Commit automatico di `data/anagrafica_video.csv`
+  - **Triggera automaticamente il deploy del sito** (grazie a `WORKFLOW_PAT`)
 
-- **`publish_rss.yml`** - Genera e pubblica feed RSS su gh-pages
+- **`extract_odg.yml`** - 🕐 03:47 UTC ogni giorno:
+  - Estrae disegni di legge dai PDF ordini del giorno
+  - Salva in `data/disegni_legge.jsonl`
+  - **Triggera automaticamente il deploy del sito**
+
+- **`publish_rss.yml`** - 🕐 02:17 UTC ogni giorno:
+  - Genera feed RSS aggiornato
+  - Pubblica `feed.xml` su branch gh-pages
+
+- **`deploy-site.yml`** - 🔄 Automatico al push su `data/` o `src/`:
+  - Build sito statico Astro con `npm run build`
+  - Deploy su GitHub Pages
 
 **Secret richiesti** (Settings → Secrets):
 - `YT_CLIENT_SECRET_JSON` - Contenuto `config/youtube_secrets.json`
 - `YT_TOKEN_JSON` - Contenuto `config/token.json`
+- `WORKFLOW_PAT` - Personal Access Token con scope `repo` e `workflow` (per triggerare deploy automatico)
+- `GEMINI_API_KEY` - API key per Gemini (generazione digest)
+
+### 🔄 Workflow Manuale Post-Upload (Temporaneo)
+
+**⚠️ IMPORTANTE**: Fino a completa automazione, dopo che i workflow notturni hanno uploadato nuovi video su YouTube, è necessario eseguire manualmente:
+
+#### 1. Download Trascrizioni
+
+```bash
+# Scarica sottotitoli automatici da YouTube (SRT + TXT)
+./scripts/download_transcripts.sh
+```
+
+**Perché manuale?** YouTube blocca gli IP di GitHub Actions, impedendo il download automatico delle trascrizioni.
+
+#### 2. Generazione Digest AI
+
+```bash
+# Genera sintesi JSON da trascrizioni usando Gemini 2.5 Flash
+./scripts/generate_digests.sh
+```
+
+**Richiede**: trascrizioni già scaricate (step 1).  
+**Output**: `data/digest/{youtube_id}.json` per ogni video.
+
+#### 3. Commit e Deploy
+
+```bash
+# Aggiungi trascrizioni e digest al repository
+git add data/trascrizioni/ data/digest/
+git commit -m "chore: add transcripts and AI digests"
+git push
+```
+
+**Il deploy del sito avverrà automaticamente** grazie al workflow `deploy-site.yml` che si triggera automaticamente sui push in `data/` (usa `WORKFLOW_PAT` per bypassare la limitazione di GitHub Actions).
+
+#### Frequenza Consigliata
+
+- **Giornaliera**: Dopo il workflow notturno `daily_upload.yml` (02:30 UTC circa)
+- **Verificare**: Se ci sono nuovi video con `youtube_id` ma senza trascrizione in `data/trascrizioni/`
+
+#### Automazione Futura
+
+Questi step manuali saranno automatizzati quando:
+- [ ] Trascrizioni: usare servizio esterno o self-hosted per bypassare blocco GitHub Actions
+- [ ] Digest: integrare nel workflow notturno dopo download trascrizioni
 
 ### Limiti e Quota YouTube API
 
