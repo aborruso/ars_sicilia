@@ -70,3 +70,6 @@ tmp/
 data/videos/
 data/digest/.tmp_*
 appunti.md
+
+# EuroVoc dump (local cache)
+data/eurovoc/
