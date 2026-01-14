@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,7 +42,7 @@ jobs:
 
       - name: Publish to gh-pages
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
         run: |
           if [ ! -f feed.xml ]; then
             echo "feed.xml missing; RSS generation did not produce output"
@@ -52,8 +54,8 @@ jobs:
           rm feed.xml
 
           gh auth setup-git
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git fetch origin gh-pages || true
           if git show-ref --verify --quiet refs/remotes/origin/gh-pages; then
@@ -81,7 +83,7 @@ jobs:
 
       - name: Enable Pages (idempotent)
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
         run: |
           gh api -X PUT repos/${{ github.repository }}/pages \
             -f source[branch]=gh-pages \
