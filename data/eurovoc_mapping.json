@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "source": "http://publications.europa.eu/resource/dataset/eurovoc",
+    "dump_url": "http://publications.europa.eu/resource/distribution/eurovoc/20250702-0/zip/skos_core/eurovoc_in_skos_core_concepts.zip",
+    "dump_version": "20250702-0",
+    "dump_path": "data/eurovoc/eurovoc_in_skos_core_concepts_20250702-0.rdf",
+    "model": "gemini-2.5-flash",
+    "review_threshold": 0.75,
+    "updated_at": "2026-01-14T08:17:45.837Z"
+  },
+  "mappings": [
+    {
+      "category": "Procedure Parlamentari",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2703",
+      "eurovoc_label_it": "procedura parlamentare",
+      "eurovoc_label_en": "parliamentary procedure",
+      "confidence": 1,
+      "status": "accepted",
+      "updated_at": "2026-01-14T08:17:17.514Z"
+    },
+    {
+      "category": "Bilancio e Finanze",
+      "eurovoc_uri": "http://eurovoc.europa.eu/100204",
+      "eurovoc_label_it": "2436 finanze pubbliche e politica di bilancio",
+      "eurovoc_label_en": "2436 public finance and budget policy",
+      "confidence": 1,
+      "status": "accepted",
+      "updated_at": "2026-01-14T08:17:21.439Z"
+    },
+    {
+      "category": "Politiche Sociali",
+      "eurovoc_uri": "http://eurovoc.europa.eu/100149",
+      "eurovoc_label_it": "28 QUESTIONI SOCIALI",
+      "eurovoc_label_en": "28 SOCIAL QUESTIONS",
+      "confidence": 0.75,
+      "status": "accepted",
+      "updated_at": "2026-01-14T08:17:37.026Z"
+    },
+    {
+      "category": "Enti Locali e Autonomie",
+      "eurovoc_uri": "http://eurovoc.europa.eu/7346",
+      "eurovoc_label_it": "Congresso dei poteri locali e regionali d'Europa",
+      "eurovoc_label_en": "Congress of Local and Regional Authorities of Europe",
+      "confidence": 0.9,
+      "status": "accepted",
+      "updated_at": "2026-01-14T08:17:42.224Z"
+    },
+    {
+      "category": "Lavoro",
+      "eurovoc_uri": "http://eurovoc.europa.eu/4543",
+      "eurovoc_label_it": "lavoro",
+      "eurovoc_label_en": "work",
+      "confidence": 1,
+      "status": "accepted",
+      "updated_at": "2026-01-14T08:17:45.837Z"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "eurovoc_uri": { "type": "string" },
+    "eurovoc_label_it": { "type": "string" },
+    "eurovoc_label_en": { "type": "string" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "required": [
+    "eurovoc_uri",
+    "eurovoc_label_it",
+    "eurovoc_label_en",
+    "confidence"
+  ]
+}
