@@ -93,3 +93,9 @@ Concrete user story showing the requirement in action.
 4. **Use `#### Scenario:` header** for scenario examples (under requirement)
 5. **Cross-reference related specs** at end of spec file
 6. **Keep tasks small and verifiable** — one task = one user-visible change
+
+## Script Creation Guidelines
+
+- Always resolve paths from repo root, not the current working directory.
+- Use `REPO_ROOT = Path(__file__).resolve().parents[1]` (or `.parents[2]` for `scripts/archive`) and build config/data paths from it.
+- Avoid hard-coded relative paths like `./config/config.yaml` or `data/playlists.json`.

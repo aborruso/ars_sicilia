@@ -14,6 +14,7 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 from src import uploader
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 def parse_iso_duration(iso_str: str) -> int:
     """
@@ -195,7 +196,7 @@ def main():
     import yaml
 
     # Carica config
-    config_path = './config/config.yaml'
+    config_path = str(REPO_ROOT / 'config' / 'config.yaml')
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
             config = yaml.safe_load(f)

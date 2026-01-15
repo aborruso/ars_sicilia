@@ -29,6 +29,7 @@ from src.metadata import build_youtube_metadata
 from src.utils import extract_year
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
 ANAGRAFICA_EXTRA_FIELDS = ['status', 'failure_reason']
 
 
@@ -127,8 +128,10 @@ def _ensure_anagrafica_fields(fieldnames: list) -> list:
     return fieldnames
 
 
-def load_config(config_path: str = './config/config.yaml') -> dict:
+def load_config(config_path: str = None) -> dict:
     """Carica configurazione."""
+    if not config_path:
+        config_path = str(REPO_ROOT / 'config' / 'config.yaml')
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 

@@ -19,7 +19,8 @@ SCOPES = [
     'https://www.googleapis.com/auth/youtube'  # Gestione completa canale (include playlist)
 ]
 
-DEFAULT_PLAYLIST_STATE_PATH = Path("data/playlists.json")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_PLAYLIST_STATE_PATH = REPO_ROOT / "data/playlists.json"
 
 
 def _load_playlist_state(path: Path) -> dict:
