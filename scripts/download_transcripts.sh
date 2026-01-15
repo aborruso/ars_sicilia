@@ -37,4 +37,8 @@ while IFS= read -r line; do
 
 done < <(tail -n +2 "$CSV_FILE")
 
+if [ -f "$OUTPUT_DIR/no_transcript.txt" ]; then
+	sort -u "$OUTPUT_DIR/no_transcript.txt" -o "$OUTPUT_DIR/no_transcript.txt"
+fi
+
 echo "Done!"
