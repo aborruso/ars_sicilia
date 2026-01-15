@@ -1,3 +1,13 @@
+# 2026-01-15
+
+## Fix path assoluti per config e stato playlist YouTube
+
+- Impostata playlist 2026 in `config/config.yaml`
+- Stato playlist ora risolto sempre su root repo (`data/playlists.json`) per evitare duplicati
+- Config path reso assoluto negli script principali e in `scripts/archive`
+- Default assoluti per config/anagrafica in `scripts/generate_rss.py`
+- File modificati: src/uploader.py, scripts/upload_single.py, scripts/main.py, scripts/build_anagrafica.py, scripts/update_descriptions.py, scripts/setup_playlist.py, scripts/archive/sync_youtube_ids.py, scripts/archive/check_playlist.py, scripts/archive/backfill_durations.py, scripts/generate_rss.py, config/config.yaml
+
 # 2026-01-11
 
 ## Valutazione progetto

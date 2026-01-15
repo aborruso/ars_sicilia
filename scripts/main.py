@@ -15,11 +15,13 @@ from datetime import datetime
 from pathlib import Path
 import re
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
 # Import moduli locali
 from src import scraper, downloader, uploader, metadata, logger
 
 
-def load_config(config_path: str = './config/config.yaml') -> dict:
+def load_config(config_path: str = None) -> dict:
     """
     Carica configurazione da file YAML.
 
@@ -29,6 +31,8 @@ def load_config(config_path: str = './config/config.yaml') -> dict:
     Returns:
         Dict configurazione
     """
+    if not config_path:
+        config_path = str(REPO_ROOT / 'config' / 'config.yaml')
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 

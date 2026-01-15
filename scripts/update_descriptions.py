@@ -28,9 +28,13 @@ import yaml
 from src import uploader
 from src.metadata import build_description, build_seduta_token, build_recording_date
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
-def load_config(config_path: str = './config/config.yaml') -> dict:
+
+def load_config(config_path: str = None) -> dict:
     """Carica configurazione."""
+    if not config_path:
+        config_path = str(REPO_ROOT / 'config' / 'config.yaml')
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 

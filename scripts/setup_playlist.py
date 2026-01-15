@@ -17,6 +17,8 @@ from pathlib import Path
 from src import uploader
 from src.utils import extract_year
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
 
 def main():
     print("\n" + "="*70)
@@ -24,7 +26,8 @@ def main():
     print("="*70 + "\n")
 
     # Carica config
-    with open('./config/config.yaml', 'r', encoding='utf-8') as f:
+    config_path = REPO_ROOT / 'config' / 'config.yaml'
+    with open(config_path, 'r', encoding='utf-8') as f:
         config = yaml.safe_load(f)
 
     # Autenticazione YouTube

@@ -15,6 +15,7 @@ import yaml
 from datetime import datetime
 from src import uploader
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 def parse_video_title(title: str) -> tuple:
     """Estrae numero seduta e data dal titolo YouTube."""
@@ -33,7 +34,8 @@ def main():
     print("="*70 + "\n")
 
     # Carica config
-    with open('./config/config.yaml', 'r', encoding='utf-8') as f:
+    config_path = REPO_ROOT / 'config' / 'config.yaml'
+    with open(config_path, 'r', encoding='utf-8') as f:
         config = yaml.safe_load(f)
 
     anagrafica_path = config['logging']['anagrafica_file']

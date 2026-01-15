@@ -9,6 +9,7 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 import yaml
 from src import uploader
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 def get_playlist_videos(youtube, playlist_id: str, max_results: int = 10):
     """Recupera gli ultimi video dalla playlist."""
@@ -47,7 +48,8 @@ def main():
     print("="*70 + "\n")
 
     # Carica config
-    with open('./config/config.yaml', 'r', encoding='utf-8') as f:
+    config_path = REPO_ROOT / 'config' / 'config.yaml'
+    with open(config_path, 'r', encoding='utf-8') as f:
         config = yaml.safe_load(f)
 
     # Autenticazione

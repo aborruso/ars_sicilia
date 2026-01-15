@@ -15,6 +15,7 @@ import yaml
 
 from src.metadata import build_title
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 def load_config(path: str) -> dict:
     with open(path, 'r', encoding='utf-8') as f:
@@ -82,8 +83,8 @@ def build_rss(base_url: str, rows: list[dict], tz_name: str, limit: int) -> Elem
 
 def main() -> int:
     parser = argparse.ArgumentParser(description='Generate RSS feed for latest videos')
-    parser.add_argument('--config', default='config/config.yaml')
-    parser.add_argument('--anagrafica', default='data/anagrafica_video.csv')
+    parser.add_argument('--config', default=str(REPO_ROOT / 'config' / 'config.yaml'))
+    parser.add_argument('--anagrafica', default=str(REPO_ROOT / 'data' / 'anagrafica_video.csv'))
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--limit', type=int, default=20)
     parser.add_argument('--output', default='feed.xml')

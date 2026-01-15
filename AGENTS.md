@@ -16,3 +16,9 @@ Use `@/openspec/AGENTS.md` to learn:
 Keep this managed block so 'openspec update' can refresh the instructions.
 
 <!-- OPENSPEC:END -->
+
+## Script Creation Guidelines
+
+- Always resolve paths from repo root, not the current working directory.
+- Use `REPO_ROOT = Path(__file__).resolve().parents[1]` (or `.parents[2]` for `scripts/archive`) and build config/data paths from it.
+- Avoid hard-coded relative paths like `./config/config.yaml` or `data/playlists.json`.
