@@ -7,7 +7,8 @@
   <title>ARS Sicilia - Elenco Sedute</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -15,6 +16,8 @@
       color: #333;
       background: #f5f5f5;
       padding: 20px;
+      touch-action: manipulation;
+      overscroll-behavior: contain;
     }
 
     .container {
@@ -51,12 +54,17 @@
       border: 2px solid #ddd;
       border-radius: 5px;
       font-size: 14px;
-      transition: border-color 0.3s;
+      transition: border-color 0.3s ease;
     }
 
-    input[type="text"]:focus {
-      outline: none;
+    input[type="text"]:focus-visible {
+      outline: 2px solid #3498db;
+      outline-offset: 2px;
       border-color: #3498db;
+    }
+
+    input[type="text"]::placeholder {
+      opacity: 0.7;
     }
 
     #searchBox {
@@ -73,10 +81,14 @@
       cursor: pointer;
       font-size: 14px;
       font-weight: 600;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     button:hover { background: #2980b9; }
+    button:focus-visible {
+      outline: 2px solid #2980b9;
+      outline-offset: 2px;
+    }
 
     .stats {
       background: #ecf0f1;
@@ -111,7 +123,7 @@
       border-radius: 8px;
       margin-bottom: 20px;
       overflow: hidden;
-      transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s ease;
     }
 
     .seduta-card:hover {
@@ -127,6 +139,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      touch-action: manipulation;
     }
 
     .seduta-title {
@@ -152,7 +165,7 @@
       border-radius: 4px;
       text-decoration: none;
       font-size: 0.85em;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .seduta-links a:hover {
@@ -161,7 +174,7 @@
 
     .toggle {
       font-size: 1.5em;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
 
     .toggle.open {
@@ -219,7 +232,7 @@
       text-decoration: none;
       font-size: 0.85em;
       font-weight: 600;
-      transition: opacity 0.3s;
+      transition: opacity 0.3s ease;
     }
 
     .video-actions a {
@@ -229,6 +242,12 @@
 
     .video-actions a:hover {
       opacity: 0.8;
+    }
+
+    .video-actions a:focus-visible,
+    .seduta-links a:focus-visible {
+      outline: 2px solid #3498db;
+      outline-offset: 2px;
     }
 
     .badge {
@@ -273,6 +292,11 @@
       text-decoration: underline;
     }
 
+    footer a:focus-visible {
+      outline: 2px solid #3498db;
+      outline-offset: 2px;
+    }
+
     @media (max-width: 768px) {
       .seduta-header {
         flex-direction: column;
@@ -299,7 +323,8 @@
     <p class="subtitle">Assemblea Regionale Siciliana - Archivio Video</p>
 
     <div class="controls">
-      <input type="text" id="searchBox" placeholder="Cerca seduta...">
+      <label for="searchBox" class="sr-only">Cerca sedute</label>
+      <input type="text" id="searchBox" placeholder="Cerca sedute…" aria-label="Cerca sedute">
       <button onclick="downloadData()">Scarica Dati</button>
     </div>
 
@@ -446,11 +471,11 @@
             </div>
             <div style="display: flex; align-items: center; gap: 20px;">
               <div class="seduta-links" onclick="event.stopPropagation()">
-                ${seduta.odg ? `<a href="${seduta.odg}" target="_blank" title="OdG e Comunicazioni">📄 OdG</a>` : ''}
-                ${seduta.resoconto_stenografico ? `<a href="${seduta.resoconto_stenografico}" target="_blank" title="Resoconto stenografico">📋 Stenografico</a>` : ''}
-                ${seduta.resoconto_provvisorio ? `<a href="${seduta.resoconto_provvisorio}" target="_blank" title="Resoconto provvisorio">📝 Provvisorio</a>` : ''}
-                ${seduta.allegato ? `<a href="${seduta.allegato}" target="_blank" title="Allegato alla seduta">📎 Allegato</a>` : ''}
-                <a href="${seduta.url}" target="_blank" title="Pagina ARS">🔗 ARS</a>
+                ${seduta.odg ? `<a href="${seduta.odg}" target="_blank" aria-label="Scarica Ordine del Giorno">📄 OdG</a>` : ''}
+                ${seduta.resoconto_stenografico ? `<a href="${seduta.resoconto_stenografico}" target="_blank" aria-label="Scarica Resoconto Stenografico">📋 Stenografico</a>` : ''}
+                ${seduta.resoconto_provvisorio ? `<a href="${seduta.resoconto_provvisorio}" target="_blank" aria-label="Scarica Resoconto Provvisorio">📝 Provvisorio</a>` : ''}
+                ${seduta.allegato ? `<a href="${seduta.allegato}" target="_blank" aria-label="Scarica Allegato">📎 Allegato</a>` : ''}
+                <a href="${seduta.url}" target="_blank" aria-label="Vai alla pagina ARS">🔗 ARS</a>
               </div>
               <div class="toggle" id="toggle-${idx}">▼</div>
             </div>
@@ -508,7 +533,8 @@
     function formatDate(dateStr) {
       if (!dateStr) return '';
       const [year, month, day] = dateStr.split('-');
-      return `${day}/${month}/${year}`;
+      const date = new Date(year, month - 1, day);
+      return new Intl.DateTimeFormat('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(date);
     }
 
     // Format duration
