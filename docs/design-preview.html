@@ -121,8 +121,8 @@
           <ul class="flex gap-4 md:gap-6 items-center">
             <li><a href="#" class="font-semibold text-sm md:text-base text-white bg-navy-800 shadow-sm px-3 py-1.5 rounded-md">Home</a></li>
             <li><a href="#" class="font-semibold text-sm md:text-base text-navy-800 hover:bg-navy-100 hover:text-navy-900 transition-all px-3 py-1.5 rounded-md">Info</a></li>
-            <li><a href="#" class="font-semibold text-sm md:text-base text-amber-600 hover:text-amber-700 hover:bg-amber-50 transition-all px-3 py-1.5 rounded-md inline-flex items-center gap-1.5">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <li><a href="#" class="font-semibold text-sm md:text-base text-amber-600 hover:text-amber-700 hover:bg-amber-50 transition-colors px-3 py-1.5 rounded-md inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
               </svg>
               RSS
@@ -139,7 +139,7 @@
     <!-- Hero -->
     <div class="mb-12">
       <div class="border-l-4 border-l-amber-600 pl-6 py-2 mb-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-navy-800 mb-4 leading-tight">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-navy-800 mb-4 leading-tight scroll-offset-header">
           Archivio Sedute ARS
         </h1>
         <p class="text-lg md:text-xl text-warm-600 font-medium leading-relaxed max-w-3xl">
@@ -168,10 +168,10 @@
     <!-- Category Filter -->
     <section class="bg-white border-l-4 border-l-amber-600 rounded-r-lg p-6 shadow-sm mb-8">
       <div class="flex items-center gap-2 mb-4">
-        <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 text-amber-600" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
         </svg>
-        <h2 class="text-xl font-display font-bold text-navy-800">Esplora per categoria</h2>
+        <h2 class="text-xl font-display font-bold text-navy-800 scroll-offset-header">Esplora per categoria</h2>
       </div>
       <p class="text-sm text-warm-600 mb-5">Filtra le sedute per argomento tematico e scopri i lavori dell'assemblea</p>
       <div class="flex flex-wrap gap-2">
@@ -196,7 +196,7 @@
 
     <!-- Section Header -->
     <div class="mb-6">
-      <h2 class="text-2xl font-display font-bold text-navy-800 mb-2 flex items-center gap-2">
+      <h2 class="text-2xl font-display font-bold text-navy-800 mb-2 flex items-center gap-2 scroll-offset-header">
         <span class="inline-block w-1 h-6 bg-amber-600 rounded"></span>
         Ultime sedute
       </h2>
@@ -215,14 +215,14 @@
             </h2>
             <div class="flex flex-wrap items-center gap-3 text-sm text-warm-600">
               <span class="inline-flex items-center gap-1.5 font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 16/12/2025
               </span>
               <span class="text-warm-400">•</span>
               <span class="inline-flex items-center gap-1.5 font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
                 16 video
@@ -232,13 +232,13 @@
 
           <div class="flex flex-wrap gap-2 items-start">
             <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-navy-100 text-navy-800 hover:bg-navy-800 hover:text-white rounded-md transition-colors border border-navy-200">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               OdG
             </a>
             <a href="#" class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 bg-sage-100 text-sage-800 hover:bg-sage-800 hover:text-white rounded-md transition-colors border border-sage-200">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Resoconto
@@ -265,7 +265,7 @@
       <div class="bg-warm-50 border-t border-warm-200 px-6 py-3">
         <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-navy-800 hover:text-amber-600 transition-colors group-hover:gap-3">
           Vedi dettagli seduta
-          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
