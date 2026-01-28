@@ -75,3 +75,14 @@ Opzioni principali:
 - Log/anagrafica: `data/`
 - Stato playlist auto-create: `data/playlists.json`
 - Per dettagli completi, vedi `README.md` principale.
+
+## Esecuzione manuale (non gestita da workflow)
+
+Questi step vanno eseguiti **in locale**. Inizia sempre da un repo aggiornato:
+
+1) `git pull`
+2) `./scripts/download_transcripts.sh`
+3) `./scripts/generate_digests.sh`
+4) `git add data/trascrizioni/ data/digest/`
+5) `git commit -m "chore: add transcripts and AI digests"`
+6) `git push`
