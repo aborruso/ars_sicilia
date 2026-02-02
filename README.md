@@ -317,6 +317,13 @@ Il progetto include workflow automatici che girano ogni notte:
 
 **⚠️ IMPORTANTE**: Fino a completa automazione, dopo che i workflow notturni hanno uploadato nuovi video su YouTube, è necessario eseguire manualmente:
 
+#### 0. Aggiorna la repository
+
+```bash
+# Allinea la working copy con l'ultimo stato del repository
+git pull
+```
+
 #### 1. Download Trascrizioni
 
 ```bash
