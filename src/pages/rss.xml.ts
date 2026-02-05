@@ -5,6 +5,11 @@ import { formatDateShort, truncateText } from '../lib/utils';
 
 export async function GET(context: APIContext) {
   const videos = await loadVideos();
+  const baseUrl = import.meta.env.BASE_URL;
+  const basePath = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const siteUrl = context.site
+    ? new URL(basePath, context.site).toString().replace(/\/$/, '')
+    : `https://aborruso.github.io${baseUrl}`;
 
   // Sort by date DESC and take last 20
   videos.sort((a, b) => {
@@ -17,9 +22,10 @@ export async function GET(context: APIContext) {
   return rss({
     title: 'ARS Sicilia - Sedute Assemblea',
     description: 'Ultimi video e trascrizioni delle sedute dell\'Assemblea Regionale Siciliana',
-    site: context.site || 'https://aborruso.github.io/ars_sicilia',
+    site: siteUrl,
     items: recentVideos.map((video) => {
-      const videoUrl = `/sedute/${video.seduta.yearMonthDay.year}/${video.seduta.yearMonthDay.month}/${video.seduta.yearMonthDay.day}/${video.seduta.slug}/${video.slug}`;
+      const videoPath = `${basePath}sedute/${video.seduta.yearMonthDay.year}/${video.seduta.yearMonthDay.month}/${video.seduta.yearMonthDay.day}/${video.seduta.slug}/${video.slug}/`;
+      const videoUrl = context.site ? new URL(videoPath, context.site).toString() : videoPath;
       const description = video.digest?.digest
         ? truncateText(video.digest.digest.replace(/[#*\n]/g, ' '), 300)
         : `Video della seduta ${video.seduta.numero} del ${formatDateShort(video.dataVideo)} alle ore ${video.oraVideo}`;
