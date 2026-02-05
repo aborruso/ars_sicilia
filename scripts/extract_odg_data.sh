@@ -16,6 +16,10 @@
 #   - data/disegni_legge.jsonl (formato JSONL incrementale)
 #   - data/logs/odg_pdfs_processed.txt (lista PDF già processati)
 #
+# DEBUG OPTIONS:
+#   --pdf-url <url>     processa solo un PDF specifico
+#   --output-dir <dir>  cartella di output (relativa al repo root o assoluta)
+#
 # DEPENDENCIES:
 #   - markitdown (pip install markitdown)
 #   - llm CLI (pip install llm)
@@ -34,8 +38,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 CSV_FILE="$PROJECT_DIR/data/anagrafica_video.csv"
-OUTPUT_JSONL="$PROJECT_DIR/data/disegni_legge.jsonl"
-PROCESSED_LOG="$PROJECT_DIR/data/logs/odg_pdfs_processed.txt"
+OUTPUT_DIR="$PROJECT_DIR/data"
+OUTPUT_JSONL="$OUTPUT_DIR/disegni_legge.jsonl"
+PROCESSED_LOG="$OUTPUT_DIR/logs/odg_pdfs_processed.txt"
 
 # Schema LLM per estrazione dati
 SCHEMA='
@@ -44,7 +49,15 @@ numero_disegno: il numero del disegno di legge, solo la parte numerica,
 legislatura: il numero romano della legislatura,
 data_ora: data e ora della seduta in formato ISO 8601: YYYY-MM-DD HH:MM'
 
-SYSTEM_PROMPT="estrai se presenti, i dati citati nell'ordine del giorno"
+SYSTEM_PROMPT="Estrai SOLO i disegni di legge elencati nella sezione
+\"DISCUSSIONE DEI DISEGNI DI LEGGE\" dell'ORDINE DEL GIORNO.
+
+Regole:
+- Considera solo l'elenco numerato immediatamente sotto quel titolo.
+- Interrompi quando finisce l'elenco, o se compare una nuova sezione,
+  \"ALLEGATO\", \"COMUNICAZIONI\", \"INDICE\", o \"DISEGNI DI LEGGE PRESENTATI ED INVIATI\".
+- Ignora qualsiasi DDL citato in allegati o comunicazioni.
+- Se la sezione non è presente, restituisci zero item."
 
 # Funzione per estrarre URL distinti da CSV
 get_distinct_odg_urls() {
@@ -167,8 +180,38 @@ process_pdf() {
 # Main
 main() {
     local reprocess=0
-    if [[ "${1:-}" == "--reprocess" ]]; then
-        reprocess=1
+    local pdf_url_arg=""
+    local output_dir_arg=""
+
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            --reprocess)
+                reprocess=1
+                shift
+                ;;
+            --pdf-url)
+                pdf_url_arg="${2:-}"
+                shift 2
+                ;;
+            --output-dir)
+                output_dir_arg="${2:-}"
+                shift 2
+                ;;
+            *)
+                echo "Unknown option: $1" >&2
+                exit 1
+                ;;
+        esac
+    done
+
+    if [[ -n "$output_dir_arg" ]]; then
+        if [[ "$output_dir_arg" = /* ]]; then
+            OUTPUT_DIR="$output_dir_arg"
+        else
+            OUTPUT_DIR="$PROJECT_DIR/$output_dir_arg"
+        fi
+        OUTPUT_JSONL="$OUTPUT_DIR/disegni_legge.jsonl"
+        PROCESSED_LOG="$OUTPUT_DIR/logs/odg_pdfs_processed.txt"
     fi
 
     echo "=== Estrazione dati OdG PDF ===" >&2
@@ -182,8 +225,9 @@ main() {
     echo "" >&2
 
     # Crea file output e log se non esistono
-    touch "$OUTPUT_JSONL"
+    mkdir -p "$OUTPUT_DIR"
     mkdir -p "$(dirname "$PROCESSED_LOG")"
+    touch "$OUTPUT_JSONL"
     touch "$PROCESSED_LOG"
     if [[ "$reprocess" -eq 0 ]] && [[ ! -s "$PROCESSED_LOG" ]] && [[ -s "$OUTPUT_JSONL" ]]; then
         jq -r '.pdf_url' "$OUTPUT_JSONL" | sort -u > "$PROCESSED_LOG"
@@ -193,10 +237,14 @@ main() {
     fi
 
     local pdf_urls
-    pdf_urls=$(get_distinct_odg_urls)
+    if [[ -n "$pdf_url_arg" ]]; then
+        pdf_urls="$pdf_url_arg"
+    else
+        pdf_urls=$(get_distinct_odg_urls)
+    fi
 
     local total
-    total=$(echo "$pdf_urls" | wc -l)
+    total=$(echo "$pdf_urls" | wc -l | tr -d ' ')
 
     echo "Trovati $total PDF OdG distinti" >&2
     echo "" >&2
