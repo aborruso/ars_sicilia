@@ -46,7 +46,7 @@ validate_digest_completeness() {
     sleep 5
 
     # Estrai il digest e verifica con LLM
-    local validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" 2>/dev/null)
+    local validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" --no-log 2>/dev/null)
 
     # Estrai is_complete dal JSON di risposta
     local is_complete=$(echo "$validation_result" | grep -o '"is_complete"[[:space:]]*:[[:space:]]*[a-z]*' | grep -o '[a-z]*$')
@@ -143,7 +143,7 @@ while read -r youtube_id; do
     for attempt in $(seq 1 $MAX_RETRIES); do
         log "  Tentativo $attempt/$MAX_RETRIES..."
 
-        if cat "$TRANSCRIPT_FILE" | llm -m "$MODEL" -t "$TEMPLATE_FILE" --schema "$SCHEMA_FILE" > "$OUTPUT_FILE" 2>&1; then
+        if cat "$TRANSCRIPT_FILE" | llm -m "$MODEL" -t "$TEMPLATE_FILE" --schema "$SCHEMA_FILE" --no-log > "$OUTPUT_FILE" 2>&1; then
             # Valida JSON
             if validate_json "$OUTPUT_FILE"; then
                 # Valida completezza digest
