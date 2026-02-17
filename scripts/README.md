@@ -10,6 +10,7 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `run_daily.sh` — Wrapper per esecuzione giornaliera con lock file.
 - `generate_rss.py` — Genera `feed.xml` dai video caricati.
 - `extract_odg_data.sh` — Estrae dati disegni legge dai PDF OdG e li salva in `data/disegni_legge.jsonl`.
+- `scrape_studi_pubblicazioni.py` — Scraper incrementale delle sezioni correnti di "Studi e Pubblicazioni" (archivio escluso), output JSONL.
 - `update_descriptions.py` — Aggiorna descrizioni (e opzionalmente titoli) dei video già pubblicati.
 - `generate_digests.sh` — Genera digest automatici dai video YouTube usando trascrizioni e template.
 - `normalize_eurovoc_categories.mjs` — Normalizza le categorie su EuroVoc e aggiorna `data/eurovoc_mapping.json`.
@@ -59,6 +60,29 @@ Opzioni principali:
 - `--refresh-dump` per riscaricare ed estrarre il dump
 - `--limit` per limitare il numero di categorie processate (test)
 - `--timeout-ms` timeout per singola richiesta LLM (default 120000)
+
+### scrape_studi_pubblicazioni.py
+
+Estrae i documenti dalle sezioni tematiche correnti di:
+`https://www.ars.sicilia.it/studi-e-pubblicazioni`
+
+Esclude volutamente `Archivio`, estrae eventuali numeri DDL dal titolo e salva in JSONL:
+- `titolo`
+- `url`
+- `data_pubblicazione` (formato `YYYY-MM` quando deducibile dalla URL download)
+- `numeri_ddl_estratti`
+- `fonte`
+
+Modalità operative:
+- `append` (default): aggiunge solo nuovi record (dedup su `url`)
+- `snapshot`: rigenera interamente il file output
+
+Uso:
+```bash
+python3 scripts/scrape_studi_pubblicazioni.py
+python3 scripts/scrape_studi_pubblicazioni.py --mode snapshot
+python3 scripts/scrape_studi_pubblicazioni.py --output data/studi_pubblicazioni.jsonl
+```
 
 ## Auth / Setup
 

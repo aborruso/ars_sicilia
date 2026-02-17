@@ -543,6 +543,8 @@ Questo progetto è software libero sviluppato per rendere accessibili i lavori d
 
 **Fonti dati**: [Assemblea Regionale Siciliana](https://www.ars.sicilia.it)
 
+Fonte utile di approfondimento (slegata dalle pagine sedute ARS e dal motore di ricerca DDL): [Studi e pubblicazioni](https://www.ars.sicilia.it/studi-e-pubblicazioni), dove sono pubblicati dossier, note di lettura e altri documenti elaborati dal Servizio Studi e dal Servizio Bilancio a supporto dei lavori parlamentari delle Commissioni e dell'Aula.
+
 ---
 
 ## 📞 Contatti
