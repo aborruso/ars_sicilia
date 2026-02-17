@@ -73,3 +73,6 @@ appunti.md
 
 # EuroVoc dump (local cache)
 data/eurovoc/
+
+# Local generated/API subtree to keep out of this repo
+ars_sicilia_api/
