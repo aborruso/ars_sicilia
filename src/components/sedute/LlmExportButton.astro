@@ -89,14 +89,26 @@ const jsonUrl = `${baseUrl}/sedute/${seduta.yearMonthDay.year}/${seduta.yearMont
   <div id="export-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg p-6 max-w-2xl max-h-96 overflow-auto">
       <h3 class="text-lg font-bold mb-3">Risorse per LLM</h3>
-      <pre class="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded border border-gray-200 mb-4">{exportText}</pre>
-      <p class="text-sm text-gray-600 mb-4">Testo selezionato. Premi Ctrl+C per copiare se il bottone non ha funzionato.</p>
-      <button
-        id="modal-close-button"
-        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-      >
-        Chiudi
-      </button>
+      <textarea
+        id="modal-export-text"
+        readonly
+        class="w-full min-h-44 whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded border border-gray-200 mb-4 font-mono"
+      >{exportText}</textarea>
+      <p class="text-sm text-gray-600 mb-4">Se la copia automatica non riesce, il testo è già selezionabile qui.</p>
+      <div class="flex gap-2">
+        <button
+          id="modal-copy-button"
+          class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+        >
+          Copia ora
+        </button>
+        <button
+          id="modal-close-button"
+          class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+        >
+          Chiudi
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -106,19 +118,17 @@ const jsonUrl = `${baseUrl}/sedute/${seduta.yearMonthDay.year}/${seduta.yearMont
   const toast = document.getElementById('export-toast');
   const modal = document.getElementById('export-modal');
   const modalClose = document.getElementById('modal-close-button');
+  const modalCopy = document.getElementById('modal-copy-button');
+  const modalText = document.getElementById('modal-export-text');
 
   if (button) {
     button.addEventListener('click', async () => {
       const text = button.dataset.exportText || '';
 
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(text);
-          showToast('✓ Risorse copiate negli appunti');
-        } else {
-          showModal(text);
-        }
-      } catch (err) {
+      const copied = await copyText(text);
+      if (copied) {
+        showToast('✓ Risorse copiate negli appunti');
+      } else {
         showModal(text);
       }
     });
@@ -138,6 +148,52 @@ const jsonUrl = `${baseUrl}/sedute/${seduta.yearMonthDay.year}/${seduta.yearMont
     });
   }
 
+  if (modalCopy) {
+    modalCopy.addEventListener('click', async () => {
+      const text = modalText && 'value' in modalText ? modalText.value : '';
+      const copied = await copyText(text);
+      if (copied) {
+        showToast('✓ Risorse copiate negli appunti');
+      } else {
+        showToast('⚠️ Copia automatica non disponibile: usa Ctrl+C');
+      }
+    });
+  }
+
+  async function copyText(text: string): Promise<boolean> {
+    if (!text) return false;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (err) {
+        // Fall through to legacy copy path.
+      }
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', 'true');
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch (err) {
+      copied = false;
+    } finally {
+      document.body.removeChild(textarea);
+    }
+    return copied;
+  }
+
   function showToast(message: string) {
     if (toast) {
       toast.textContent = message;
@@ -151,15 +207,11 @@ const jsonUrl = `${baseUrl}/sedute/${seduta.yearMonthDay.year}/${seduta.yearMont
   function showModal(text: string) {
     if (modal) {
       modal.classList.remove('hidden');
-      const pre = modal.querySelector('pre');
-      if (pre) {
-        pre.textContent = text;
-        pre.select?.();
-        try {
-          document.execCommand('copy');
-        } catch (err) {
-          console.error('Copy failed:', err);
-        }
+      if (modalText && 'value' in modalText) {
+        modalText.value = text;
+        modalText.focus();
+        modalText.select();
+        modalText.setSelectionRange(0, modalText.value.length);
       }
     }
   }
