@@ -3,6 +3,7 @@ import PageLayout from '../../../../../../layouts/PageLayout.astro';
 import Breadcrumb from '../../../../../../components/layout/Breadcrumb.astro';
 import VideosByDate from '../../../../../../components/sedute/VideosByDate.astro';
 import DisegniList from '../../../../../../components/sedute/DisegniList.astro';
+import SedutaLlmExportButton from '../../../../../../components/sedute/SedutaLlmExportButton.astro';
 import { loadSedute } from '../../../../../../lib/data-loader';
 import { formatDate } from '../../../../../../lib/utils';
 
@@ -59,6 +60,8 @@ const breadcrumbs = [
           <span class="sr-only">(apre in una nuova finestra)</span>
         </a>
       )}
+
+      <SedutaLlmExportButton seduta={seduta} />
 
       {(seduta.resocontoStenograficoUrl || seduta.resocontoProvvisorioUrl) && (
         <a

@@ -1,0 +1,235 @@
+---
+import { getTranscriptTxtUrl } from '../../lib/constants';
+
+interface Props {
+  seduta: any;
+  baseUrl?: string;
+  siteOrigin?: string;
+  wrapperClass?: string;
+}
+
+const {
+  seduta,
+  baseUrl = '/ars_sicilia',
+  siteOrigin = 'https://aborruso.github.io',
+  wrapperClass = '',
+} = Astro.props;
+
+function normalizeBaseUrl(url: string): string {
+  if (!url) return '';
+  return url.endsWith('/') ? url.slice(0, -1) : url;
+}
+
+function formatDateLabel(dateInput: string): string {
+  return new Date(dateInput).toLocaleDateString('it-IT', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+function makeAbsolute(path: string): string {
+  return `${siteOrigin}${normalizeBaseUrl(baseUrl)}${path}`;
+}
+
+function generateExportText(): string {
+  const sedutaDate = formatDateLabel(seduta.dataSeduta);
+  const videos = seduta.videos || [];
+
+  const sedutaResources = [
+    `Pagina seduta ARS: ${seduta.urlPagina}`,
+    seduta.odgUrl ? `Ordine del giorno (PDF): ${seduta.odgUrl}` : 'Ordine del giorno (PDF): ⚠️ Non disponibile',
+    seduta.resocontoStenograficoUrl
+      ? `Resoconto stenografico (PDF): ${seduta.resocontoStenograficoUrl}`
+      : seduta.resocontoProvvisorioUrl
+        ? `Resoconto provvisorio (PDF): ${seduta.resocontoProvvisorioUrl}`
+        : 'Resoconto (PDF): ⚠️ Non disponibile',
+    seduta.allegatoUrl ? `Allegato (PDF): ${seduta.allegatoUrl}` : 'Allegato (PDF): ⚠️ Non disponibile',
+  ];
+
+  const videosBlock = videos.length
+    ? videos
+        .map((video: any, index: number) => {
+          const duration = video.durationMinutes > 0 ? ` (${video.durationMinutes} minuti)` : '';
+          const videoPath = `/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}/${video.slug}`;
+          const videoPageUrl = makeAbsolute(videoPath);
+          const jsonUrl = makeAbsolute(`${videoPath}.json`);
+          const youtubeUrl = video.youtubeId ? `https://www.youtube.com/watch?v=${video.youtubeId}` : '⚠️ Non disponibile';
+          const transcriptUrl = video.youtubeId ? getTranscriptTxtUrl(video.youtubeId) : '⚠️ Non disponibile';
+          return `${index + 1}. Video ore ${video.oraVideo} | ${formatDateLabel(video.dataVideo)}${duration}
+- Pagina video: ${videoPageUrl}
+- JSON: ${jsonUrl}
+- YouTube: ${youtubeUrl}
+- Trascrizione: ${transcriptUrl}`;
+        })
+        .join('\n\n')
+    : '⚠️ Nessun filmato disponibile per questa seduta.';
+
+  return `Analizza in modo complessivo la seguente seduta dell'Assemblea Regionale Siciliana, usando solo le risorse elencate.
+
+Produci una sintesi in italiano semplice che evidenzi:
+- temi discussi
+- decisioni e votazioni (se presenti)
+- punti controversi
+- collegamenti tra i vari interventi nei diversi filmati
+
+NON USARE ALTRE FONTI MA SOLTANTO LE SOTTOSTANTI RISORSE.
+
+---
+
+SEDUTA N. ${seduta.numero} | ${sedutaDate} | ${videos.length} filmati
+
+Risorse seduta:
+${sedutaResources.join('\n')}
+
+Filmati della seduta:
+
+${videosBlock}`.trim();
+}
+
+const exportText = generateExportText();
+---
+
+<div class={wrapperClass}>
+  <button
+    id="llm-export-seduta-button"
+    data-export-text={exportText}
+    class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+    aria-label="Copia risorse complessive della seduta per assistente AI"
+  >
+    📋 Copia risorse seduta per l'AI
+  </button>
+
+  <div id="seduta-export-toast" class="hidden fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg"></div>
+  <div id="seduta-export-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 max-w-2xl max-h-96 overflow-auto">
+      <h3 class="text-lg font-bold mb-3">Risorse seduta per LLM</h3>
+      <textarea
+        id="seduta-modal-export-text"
+        readonly
+        class="w-full min-h-44 whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded border border-gray-200 mb-4 font-mono"
+      >{exportText}</textarea>
+      <p class="text-sm text-gray-600 mb-4">Se la copia automatica non riesce, il testo è già selezionabile qui.</p>
+      <div class="flex gap-2">
+        <button
+          id="seduta-modal-copy-button"
+          class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+        >
+          Copia ora
+        </button>
+        <button
+          id="seduta-modal-close-button"
+          class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+        >
+          Chiudi
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const button = document.getElementById('llm-export-seduta-button');
+  const toast = document.getElementById('seduta-export-toast');
+  const modal = document.getElementById('seduta-export-modal');
+  const modalClose = document.getElementById('seduta-modal-close-button');
+  const modalCopy = document.getElementById('seduta-modal-copy-button');
+  const modalText = document.getElementById('seduta-modal-export-text');
+
+  if (button) {
+    button.addEventListener('click', async () => {
+      const text = button.dataset.exportText || '';
+      const copied = await copyText(text);
+
+      if (copied) {
+        showToast('✓ Risorse seduta copiate negli appunti');
+      } else {
+        showModal(text);
+      }
+    });
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', () => {
+      if (modal) modal.classList.add('hidden');
+    });
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  }
+
+  if (modalCopy) {
+    modalCopy.addEventListener('click', async () => {
+      const text = modalText && 'value' in modalText ? modalText.value : '';
+      const copied = await copyText(text);
+
+      if (copied) {
+        showToast('✓ Risorse seduta copiate negli appunti');
+      } else {
+        showToast('⚠️ Copia automatica non disponibile: usa Ctrl+C');
+      }
+    });
+  }
+
+  async function copyText(text: string): Promise<boolean> {
+    if (!text) return false;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (err) {
+        // Fall through to legacy copy path.
+      }
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', 'true');
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch (err) {
+      copied = false;
+    } finally {
+      document.body.removeChild(textarea);
+    }
+
+    return copied;
+  }
+
+  function showToast(message: string) {
+    if (toast) {
+      toast.textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+  }
+
+  function showModal(text: string) {
+    if (modal) {
+      modal.classList.remove('hidden');
+      if (modalText && 'value' in modalText) {
+        modalText.value = text;
+        modalText.focus();
+        modalText.select();
+        modalText.setSelectionRange(0, modalText.value.length);
+      }
+    }
+  }
+</script>
