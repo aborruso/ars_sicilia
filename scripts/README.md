@@ -8,12 +8,31 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `build_anagrafica.py` — Crawler incrementale per aggiornare `data/anagrafica_video.csv`.
 - `upload_single.py` — Upload singolo video (primo senza `youtube_id`), con `--dry-run`.
 - `run_daily.sh` — Wrapper per esecuzione giornaliera con lock file.
+- `download_transcripts.sh` — Scarica trascrizioni archiviate (`.it.srt` + `.it.txt`) via YouTube Data API.
 - `generate_rss.py` — Genera `feed.xml` dai video caricati.
 - `extract_odg_data.sh` — Estrae dati disegni legge dai PDF OdG e li salva in `data/disegni_legge.jsonl`.
 - `scrape_studi_pubblicazioni.py` — Scraper incrementale delle sezioni correnti di "Studi e Pubblicazioni" (archivio escluso), output JSONL.
 - `update_descriptions.py` — Aggiorna descrizioni (e opzionalmente titoli) dei video già pubblicati.
 - `generate_digests.sh` — Genera digest automatici dai video YouTube usando trascrizioni e template.
 - `normalize_eurovoc_categories.mjs` — Normalizza le categorie su EuroVoc e aggiorna `data/eurovoc_mapping.json`.
+
+### download_transcripts.sh
+
+Scarica le trascrizioni per i video presenti in `data/anagrafica_video.csv` usando
+YouTube Data API (`captions.list` + `captions.download`) tramite OAuth locale.
+
+Output per ciascun `youtube_id`:
+1) `data/trascrizioni/<youtube_id>.it.srt`
+2) `data/trascrizioni/<youtube_id>.it.txt` (testo estratto dal file SRT)
+
+Prerequisiti:
+- `config/youtube_secrets.json`
+- `config/token.json` con scope `youtube.readonly` e `youtube.force-ssl`
+
+Uso:
+```bash
+./scripts/download_transcripts.sh
+```
 
 ### generate_digests.sh
 

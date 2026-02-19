@@ -3,8 +3,15 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CSV_FILE="$SCRIPT_DIR/../data/anagrafica_video.csv"
-OUTPUT_DIR="$SCRIPT_DIR/../data/trascrizioni"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+CSV_FILE="${CSV_FILE:-$REPO_ROOT/data/anagrafica_video.csv}"
+OUTPUT_DIR="${OUTPUT_DIR:-$REPO_ROOT/data/trascrizioni}"
+API_HELPER="$REPO_ROOT/scripts/download_caption_api.py"
+if [ -x "$REPO_ROOT/.venv/bin/python3" ]; then
+	PYTHON_BIN="${PYTHON_BIN:-$REPO_ROOT/.venv/bin/python3}"
+else
+	PYTHON_BIN="${PYTHON_BIN:-python3}"
+fi
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -25,14 +32,22 @@ while IFS= read -r line; do
 		continue
 	fi
 
-	yt-dlp --write-auto-subs --sub-lang it --sub-format srt --skip-download --output "$OUTPUT_DIR/%(id)s.%(ext)s" "https://youtu.be/${youtube_id}" --no-update
+	if "$PYTHON_BIN" "$API_HELPER" --youtube-id "$youtube_id" --output-file "$srt_file" --lang it; then
+		:
+	else
+		rc=$?
+		if [ "$rc" -eq 2 ]; then
+			echo "  Warning: no subtitles found for $youtube_id"
+			echo "$youtube_id" >>"$OUTPUT_DIR/no_transcript.txt"
+			continue
+		fi
+		echo "  Error: API transcript download failed for $youtube_id"
+		exit "$rc"
+	fi
 
 	if [ -f "$srt_file" ]; then
 		grep -E '^[0-9]+$' -v "$srt_file" | grep -E '^[0-9]' -v | grep -E '^$' -v | sed 's/^-->.*$//g' | sed 's/^[[:space:]]*//g' | sed '/^$/d' >"$txt_file"
 		echo "  Created: $srt_file, $txt_file"
-	else
-		echo "  Warning: no subtitles found for $youtube_id"
-		echo "$youtube_id" >>"$OUTPUT_DIR/no_transcript.txt"
 	fi
 
 done < <(tail -n +2 "$CSV_FILE")
