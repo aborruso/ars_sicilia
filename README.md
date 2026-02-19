@@ -15,7 +15,7 @@
 - ✅ **Video YouTube ricercabili** - Metadati strutturati, playlist annuali, token univoci
 - ✅ **Digest AI automatici** - Sintesi generate da trascrizioni video con LLM
 - ✅ **Estrazione disegni legge** - Dati legislativi estratti da PDF ordini del giorno
-- ✅ **Feed RSS pubblico** - Aggiornamenti automatici ultimi 20 video
+- ✅ **Feed RSS pubblico** - Aggiornamenti automatici ultimi 20 video con digest disponibile
 - ✅ **Design accessibile** - WCAG 2.1 AA, mobile-first, semantic HTML
 - ✅ **Dati aperti** - CSV, JSONL, JSON pubblicamente accessibili
 
@@ -61,7 +61,7 @@ Dataset pubblici in formato aperto:
 - `data/anagrafica_video.csv` - Metadati completi sedute (35+ record)
 - `data/disegni_legge.jsonl` - Disegni di legge estratti da OdG
 - `data/digest/{youtube_id}.json` - Digest AI per ogni video
-- `rss.xml` - Feed RSS pubblico (ultimi 20 video)
+- `rss.xml` - Feed RSS pubblico (ultimi 20 video con digest disponibile)
 
 ---
 
@@ -94,6 +94,8 @@ cat disegni_legge.jsonl | jq .
 Abbonati al feed per ricevere aggiornamenti automatici:
 
 **URL feed**: [https://aborruso.github.io/ars_sicilia/rss.xml](https://aborruso.github.io/ars_sicilia/rss.xml)
+
+Il feed ufficiale include solo video con digest generato e non vuoto.
 
 ---
 
@@ -331,7 +333,7 @@ git pull
 ./scripts/download_transcripts.sh
 ```
 
-**Perché manuale?** YouTube blocca gli IP di GitHub Actions, impedendo il download automatico delle trascrizioni.
+**Perché manuale?** Il download trascrizioni usa YouTube Data API con OAuth locale (`config/youtube_secrets.json` + `config/token.json`), non disponibile nei workflow standard.
 
 #### 2. Generazione Digest AI
 
@@ -388,8 +390,8 @@ Elimina `config/token.json` e riavvia script per ri-autenticarsi.
 
 #### Download fallito
 - Verifica connessione internet
-- Controlla: `yt-dlp --version`
-- Prova download manuale: `yt-dlp [URL]`
+- Verifica che `config/youtube_secrets.json` e `config/token.json` siano validi
+- Rigenera il token OAuth se necessario (scope: `youtube.readonly` e `youtube.force-ssl`)
 
 </details>
 
@@ -456,7 +458,7 @@ Tutti i dataset sono pubblicamente accessibili e versionati su GitHub:
 | `data/anagrafica_video.csv` | CSV | Metadati completi sedute e video | 35+ |
 | `data/disegni_legge.jsonl` | JSONL | Disegni di legge estratti da OdG | Variabile |
 | `data/digest/{youtube_id}.json` | JSON | Digest AI generati da trascrizioni | 20+ |
-| `rss.xml` | RSS 2.0 | Feed pubblico ultimi 20 video | 20 |
+| `rss.xml` | RSS 2.0 | Feed pubblico ultimi 20 video con digest disponibile | 20 |
 
 ### Schema Anagrafica Video (CSV)
 
