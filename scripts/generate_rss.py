@@ -6,6 +6,7 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import argparse
 import csv
+import json
 from datetime import datetime
 from email.utils import format_datetime
 from zoneinfo import ZoneInfo
@@ -33,7 +34,22 @@ def parse_datetime(date_str: str | None, time_str: str | None, tz_name: str) -> 
         return None
 
 
-def build_rss(base_url: str, rows: list[dict], tz_name: str, limit: int) -> Element:
+def has_valid_digest(youtube_id: str | None, digest_dir: Path) -> bool:
+    if not youtube_id:
+        return False
+    digest_file = digest_dir / f"{youtube_id}.json"
+    if not digest_file.exists():
+        return False
+    try:
+        with digest_file.open('r', encoding='utf-8') as f:
+            payload = json.load(f)
+        digest_text = payload.get('digest')
+        return isinstance(digest_text, str) and len(digest_text.strip()) > 0
+    except Exception:
+        return False
+
+
+def build_rss(base_url: str, rows: list[dict], tz_name: str, limit: int, digest_dir: Path) -> Element:
     rss = Element('rss', version='2.0')
     channel = SubElement(rss, 'channel')
 
@@ -44,7 +60,8 @@ def build_rss(base_url: str, rows: list[dict], tz_name: str, limit: int) -> Elem
 
     items = []
     for row in rows:
-        if not row.get('youtube_id'):
+        youtube_id = row.get('youtube_id')
+        if not youtube_id or not has_valid_digest(youtube_id, digest_dir):
             continue
         dt = parse_datetime(row.get('data_video'), row.get('ora_video'), tz_name)
         items.append((dt, row))
@@ -85,6 +102,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description='Generate RSS feed for latest videos')
     parser.add_argument('--config', default=str(REPO_ROOT / 'config' / 'config.yaml'))
     parser.add_argument('--anagrafica', default=str(REPO_ROOT / 'data' / 'anagrafica_video.csv'))
+    parser.add_argument('--digest-dir', default=str(REPO_ROOT / 'data' / 'digest'))
     parser.add_argument('--base-url', required=True)
     parser.add_argument('--limit', type=int, default=20)
     parser.add_argument('--output', default='feed.xml')
@@ -98,7 +116,7 @@ def main() -> int:
         reader = csv.DictReader(f)
         rows = list(reader)
 
-    rss = build_rss(args.base_url, rows, tz_name, args.limit)
+    rss = build_rss(args.base_url, rows, tz_name, args.limit, Path(args.digest_dir))
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     tree = ElementTree(rss)
