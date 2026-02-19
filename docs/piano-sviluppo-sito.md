@@ -219,6 +219,7 @@ integrations: [tailwind(), sitemap()]
 
 Endpoint Astro che genera RSS:
 - Ultimi 20 video
+- Solo video con digest disponibile (non vuoto)
 - Item: titolo, link, pubDate, description (digest substring)
 
 ### 5.3 Structured Data
