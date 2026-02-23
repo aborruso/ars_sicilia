@@ -130,107 +130,115 @@ const exportText = generateExportText();
 </div>
 
 <script>
-  const button = document.getElementById('llm-export-seduta-button');
-  const toast = document.getElementById('seduta-export-toast');
-  const modal = document.getElementById('seduta-export-modal');
-  const modalClose = document.getElementById('seduta-modal-close-button');
-  const modalCopy = document.getElementById('seduta-modal-copy-button');
-  const modalText = document.getElementById('seduta-modal-export-text');
+  function initSedutaLlmExport() {
+    const button = document.getElementById('llm-export-seduta-button');
+    const toast = document.getElementById('seduta-export-toast');
+    const modal = document.getElementById('seduta-export-modal');
+    const modalClose = document.getElementById('seduta-modal-close-button');
+    const modalCopy = document.getElementById('seduta-modal-copy-button');
+    const modalText = document.getElementById('seduta-modal-export-text');
 
-  if (button) {
-    button.addEventListener('click', async () => {
-      const text = button.dataset.exportText || '';
-      const copied = await copyText(text);
+    if (button && button.dataset.bound !== 'true') {
+      button.dataset.bound = 'true';
+      button.addEventListener('click', async () => {
+        const text = button.dataset.exportText || '';
+        const copied = await copyText(text);
 
-      if (copied) {
-        showToast('✓ Risorse seduta copiate negli appunti');
-      } else {
-        showModal(text);
+        if (copied) {
+          showToast('✓ Risorse seduta copiate negli appunti');
+        } else {
+          showModal(text);
+        }
+      });
+    }
+
+    if (modalClose && modalClose.dataset.bound !== 'true') {
+      modalClose.dataset.bound = 'true';
+      modalClose.addEventListener('click', () => {
+        if (modal) modal.classList.add('hidden');
+      });
+    }
+
+    if (modal && modal.dataset.bound !== 'true') {
+      modal.dataset.bound = 'true';
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+    }
+
+    if (modalCopy && modalCopy.dataset.bound !== 'true') {
+      modalCopy.dataset.bound = 'true';
+      modalCopy.addEventListener('click', async () => {
+        const text = modalText && 'value' in modalText ? modalText.value : '';
+        const copied = await copyText(text);
+
+        if (copied) {
+          showToast('✓ Risorse seduta copiate negli appunti');
+        } else {
+          showToast('⚠️ Copia automatica non disponibile: usa Ctrl+C');
+        }
+      });
+    }
+
+    async function copyText(text: string): Promise<boolean> {
+      if (!text) return false;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch (err) {
+          // Fall through to legacy copy path.
+        }
       }
-    });
-  }
 
-  if (modalClose) {
-    modalClose.addEventListener('click', () => {
-      if (modal) modal.classList.add('hidden');
-    });
-  }
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', 'true');
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      textarea.style.top = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      textarea.setSelectionRange(0, textarea.value.length);
 
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-  }
-
-  if (modalCopy) {
-    modalCopy.addEventListener('click', async () => {
-      const text = modalText && 'value' in modalText ? modalText.value : '';
-      const copied = await copyText(text);
-
-      if (copied) {
-        showToast('✓ Risorse seduta copiate negli appunti');
-      } else {
-        showToast('⚠️ Copia automatica non disponibile: usa Ctrl+C');
-      }
-    });
-  }
-
-  async function copyText(text: string): Promise<boolean> {
-    if (!text) return false;
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
+      let copied = false;
       try {
-        await navigator.clipboard.writeText(text);
-        return true;
+        copied = document.execCommand('copy');
       } catch (err) {
-        // Fall through to legacy copy path.
+        copied = false;
+      } finally {
+        document.body.removeChild(textarea);
+      }
+
+      return copied;
+    }
+
+    function showToast(message: string) {
+      if (toast) {
+        toast.textContent = message;
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 3000);
       }
     }
 
-    const textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.setAttribute('readonly', 'true');
-    textarea.style.position = 'fixed';
-    textarea.style.left = '-9999px';
-    textarea.style.top = '0';
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    textarea.setSelectionRange(0, textarea.value.length);
-
-    let copied = false;
-    try {
-      copied = document.execCommand('copy');
-    } catch (err) {
-      copied = false;
-    } finally {
-      document.body.removeChild(textarea);
-    }
-
-    return copied;
-  }
-
-  function showToast(message: string) {
-    if (toast) {
-      toast.textContent = message;
-      toast.classList.remove('hidden');
-      setTimeout(() => {
-        toast.classList.add('hidden');
-      }, 3000);
-    }
-  }
-
-  function showModal(text: string) {
-    if (modal) {
-      modal.classList.remove('hidden');
-      if (modalText && 'value' in modalText) {
-        modalText.value = text;
-        modalText.focus();
-        modalText.select();
-        modalText.setSelectionRange(0, modalText.value.length);
+    function showModal(text: string) {
+      if (modal) {
+        modal.classList.remove('hidden');
+        if (modalText && 'value' in modalText) {
+          modalText.value = text;
+          modalText.focus();
+          modalText.select();
+          modalText.setSelectionRange(0, modalText.value.length);
+        }
       }
     }
   }
+
+  document.addEventListener('astro:page-load', initSedutaLlmExport);
 </script>
