@@ -123,9 +123,7 @@ python3 scripts/scrape_studi_pubblicazioni.py --output data/studi_pubblicazioni.
 
 Questi step vanno eseguiti **in locale**. Inizia sempre da un repo aggiornato:
 
-1) `git pull`
-2) `./scripts/download_transcripts.sh`
-3) `./scripts/generate_digests.sh`
-4) `git add data/trascrizioni/ data/digest/`
-5) `git commit -m "chore: add transcripts and AI digests"`
-6) `git push`
+1) `scripts/run_transcripts_and_digests.sh`
+2) `git add data/trascrizioni/ data/digest/`
+3) `git commit -m "chore: add transcripts and AI digests"`
+4) `git push`
