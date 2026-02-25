@@ -1,0 +1,42 @@
+{
+  "digest": "## Rinvio della Seduta e Tensioni in Aula\n\nLa seduta odierna dell'Assemblea Regionale è stata caratterizzata da un **rinvio e da forti polemiche** riguardo all'assenza di membri del governo e alla lentezza dei lavori parlamentari. La sessione è stata **rinviata a domani, alle ore 14:00**, a causa della mancata presenza del Presidente della Regione o del suo Vicepresidente, la cui relazione era attesa e ritenuta necessaria per i lavori.\n\n### Punti all'Ordine del Giorno Ripianificati\n\nPer la seduta di domani, l'agenda prevede la votazione del **disegno di legge \"Comisso Città della Pace\"**, con previsione di voto unanime. Seguirà la rubrica dell'**Assessore Dannino** per rispondere alle interrogazioni relative all'economia. Sono state inoltre programmate future sedute con l'**Assessore Amata** il 3 marzo e l'**Assessore Colianni** il 4 marzo per le interrogazioni.\n\n### Forti Critiche sui Lavori Parlamentari\n\nL'Onorevole **La Vardera** ha espresso un **profondo disappunto** per l'inefficacia della seduta, sottolineando come il Parlamento si sia riunito per 40 minuti senza produrre nulla. Ha criticato l'assenza dell'**Assessore Scarpinato** e l'incapacità dell'Assemblea di affrontare \"problemi reali\" dei cittadini. Ha citato il caso di **Niscemi**, dove attende risposte per ristori ai commercianti, e la vicenda della **TAC da 1 milione di euro rimasta inutilizzata per un anno e mezzo** all'Ospedale Civico di Palermo, riattivata solo dopo una sua denuncia. Ha difeso la legittimità del \"metodo di mera protesta\" se questo produce risultati concreti. Il Presidente ha risposto a La Vardera spiegando che i disegni di legge di legge di spesa sono stati accantonati per emergenze e che l'assenza dell'Assessore Scarpinato potrebbe essere stata dovuta a un malinteso sulla data.\n\n### Richiesta Urgente della Presenza del Presidente Schifani\n\nL'Onorevole **Lombardo** è intervenuto per contestare energicamente l'assenza del Presidente della Regione, **Presidente Schifani**, nella sua veste di **Commissario delegato** ai sensi dell'ordinanza di protezione civile nazionale numero 1180. Ha giudicato inaccettabile non avere un dibattito in aula con Schifani prima del 10 marzo, evidenziando la mancanza di trasparenza sulla gestione delle risorse (fondi FESR) e dei ristori per privati e attività produttive, la cui erogazione è a rischio di ulteriori ritardi. Ha sollecitato la convocazione urgente del Presidente Schifani, anche in giorni non canonici, minacciando \"proteste sia in aula che fuori\" in caso contrario. Il Presidente ha ribadito la disponibilità a riunirsi in qualsiasi giorno, ma ha sottolineato la necessità di coordinarsi con il relatore. La seduta è stata quindi rinviata a domani alle ore 14:00."
+  ,
+  "categories": [
+    "Procedure Parlamentari",
+    "Bilancio e Finanze",
+    "Sanità",
+    "Sviluppo Economico",
+    "Enti Locali e Autonomie",
+    "Protezione Civile"
+  ],
+  "people": [
+    {
+      "name": "Amata",
+      "role": "Assessore regionale"
+    },
+    {
+      "name": "Colianni",
+      "role": "Assessore regionale"
+    },
+    {
+      "name": "Dannino",
+      "role": "Assessore all'Economia"
+    },
+    {
+      "name": "La Vardera",
+      "role": "Consigliere regionale"
+    },
+    {
+      "name": "Lombardo",
+      "role": "Consigliere regionale"
+    },
+    {
+      "name": "Scarpinato",
+      "role": "Assessore regionale"
+    },
+    {
+      "name": "Schifani",
+      "role": "Presidente della Regione, Commissario delegato ai sensi dell'ordinanza di protezione civile nazionale numero 1180"
+    }
+  ]
+}
