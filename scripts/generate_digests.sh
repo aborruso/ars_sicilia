@@ -9,6 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 CSV_FILE="$PROJECT_DIR/data/anagrafica_video.csv"
 DIGEST_DIR="$PROJECT_DIR/data/digest"
+TRANSCRIPT_DIR="$PROJECT_DIR/data/trascrizioni"
 TEMPLATE_FILE="$PROJECT_DIR/config/digest.yaml"
 SCHEMA_FILE="$PROJECT_DIR/config/digest-schema.json"
 VALIDATE_TEMPLATE="$PROJECT_DIR/config/validate-digest.yaml"
@@ -18,6 +19,12 @@ VALIDATE_TEMPLATE="$PROJECT_DIR/config/validate-digest.yaml"
 MODEL="gemini-2.5-flash"
 SLEEP_SECONDS=5
 MAX_RETRIES=3
+
+# Fonte trascrizioni:
+#   false (default, locale) -> scarica con qv da youtu.be e marca no_transcript sui fallimenti
+#   true  (CI)              -> usa SOLO i .txt in data/trascrizioni/ (scaricati via API ufficiale);
+#                             se mancano salta e riprova al prossimo run. Mai qv, mai no_transcript.
+USE_LOCAL_TRANSCRIPTS="${USE_LOCAL_TRANSCRIPTS:-false}"
 
 # Crea directory se non esistono
 mkdir -p "$DIGEST_DIR"
@@ -93,35 +100,43 @@ while read -r youtube_id; do
         continue
     fi
 
-    # Skip se già marcato come no_transcript
-    NO_TRANSCRIPT_FLAG=$(mlr --csv filter "\$youtube_id == \"$youtube_id\"" then cut -f no_transcript "$CSV_FILE" | tail -n1)
-    if [ "$NO_TRANSCRIPT_FLAG" = "true" ]; then
-        log "SKIP: $youtube_id (no transcript flagged)"
-        no_transcript=$((no_transcript + 1))
-        continue
-    fi
-
     log "PROCESSO: $youtube_id"
 
-    # Scarica trascrizione
     TRANSCRIPT_FILE="$DIGEST_DIR/.tmp_transcript_${youtube_id}.txt"
 
-    if ! qv "https://youtu.be/$youtube_id" --text-only > "$TRANSCRIPT_FILE" 2>&1; then
-        log "  ERRORE: Impossibile scaricare trascrizione, marcato come no_transcript"
-        # Marca video come no_transcript nel CSV
-        mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
-        rm -f "$TRANSCRIPT_FILE"
-        no_transcript=$((no_transcript + 1))
-        continue
+    if [ "$USE_LOCAL_TRANSCRIPTS" = "true" ]; then
+        # Modalità CI: usa SOLO la trascrizione locale (API ufficiale).
+        # Se manca, salta e riprova al prossimo run (self-healing). Mai qv, mai no_transcript.
+        LOCAL_TXT="$TRANSCRIPT_DIR/${youtube_id}.it.txt"
+        if [ ! -s "$LOCAL_TXT" ]; then
+            log "  SKIP: nessuna trascrizione locale (riprovo al prossimo run)"
+            skipped=$((skipped + 1))
+            continue
+        fi
+        cp "$LOCAL_TXT" "$TRANSCRIPT_FILE"
+    else
+        # Modalità locale: scarica con qv e marca no_transcript sui fallimenti.
+        NO_TRANSCRIPT_FLAG=$(mlr --csv filter "\$youtube_id == \"$youtube_id\"" then cut -f no_transcript "$CSV_FILE" | tail -n1)
+        if [ "$NO_TRANSCRIPT_FLAG" = "true" ]; then
+            log "SKIP: $youtube_id (no transcript flagged)"
+            no_transcript=$((no_transcript + 1))
+            continue
+        fi
+
+        if ! qv "https://youtu.be/$youtube_id" --text-only > "$TRANSCRIPT_FILE" 2>&1; then
+            log "  ERRORE: Impossibile scaricare trascrizione, marcato come no_transcript"
+            mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
+            rm -f "$TRANSCRIPT_FILE"
+            no_transcript=$((no_transcript + 1))
+            continue
+        fi
     fi
 
     # Verifica trascrizione non vuota
     if [ ! -s "$TRANSCRIPT_FILE" ]; then
-        log "  ERRORE: Trascrizione vuota, marcato come no_transcript"
-        # Marca video come no_transcript nel CSV
-        mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
+        log "  SKIP: Trascrizione vuota"
         rm -f "$TRANSCRIPT_FILE"
-        no_transcript=$((no_transcript + 1))
+        skipped=$((skipped + 1))
         continue
     fi
 
@@ -130,11 +145,9 @@ while read -r youtube_id; do
 
     # Verifica dimensione trascrizione (soglia 100 bytes)
     if [ "$TRANSCRIPT_SIZE" -lt 100 ]; then
-        log "  SKIP: Trascrizione troppo piccola (<100 bytes), marcato come no_transcript"
-        # Marca video come no_transcript nel CSV
-        mlr --csv put "\$no_transcript = (\$youtube_id == \"$youtube_id\" ? \"true\" : \$no_transcript)" "$CSV_FILE" > "$CSV_FILE.tmp" && mv "$CSV_FILE.tmp" "$CSV_FILE"
+        log "  SKIP: Trascrizione troppo piccola (<100 bytes)"
         rm -f "$TRANSCRIPT_FILE"
-        no_transcript=$((no_transcript + 1))
+        skipped=$((skipped + 1))
         continue
     fi
 

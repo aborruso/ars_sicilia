@@ -105,9 +105,25 @@ python3 scripts/scrape_studi_pubblicazioni.py --output data/studi_pubblicazioni.
 
 ## Auth / Setup
 
-- `get_auth_url.py` — Avvia flusso OAuth e stampa URL di autorizzazione.
-- `complete_auth.py` — Completa OAuth e salva token.
+- `auth_captions.py` — **Rigenera il token OAuth del progetto captions** (`config/token.json`) con gli scope corretti per scaricare i sottotitoli (`youtube.readonly` + `youtube.force-ssl`). Apre un server locale e il browser per il consenso; salva un `refresh_token` valido. Da usare quando il refresh token è scaduto o gli scope cambiano.
+  ```bash
+  .venv/bin/python3 scripts/auth_captions.py
+  ```
+  Note:
+  - L'app OAuth deve essere **In production** (non Testing), altrimenti il refresh token scade dopo 7 giorni.
+  - In WSL, se il browser non si apre da solo, copiare l'URL stampato nel browser Windows.
+  - Comparirà l'avviso "Google non ha verificato questa app" → Avanzate → Continua (app a uso personale).
+  - Dopo la rigenerazione aggiornare i secret del repo (vedi sotto).
+- `get_auth_url.py` / `complete_auth.py` — Flusso OAuth a due passi per il client di **upload** (scope `youtube.upload` + `youtube.readonly`). Non usare per le captions: mancherebbe `force-ssl`.
 - `setup_playlist.py` — Crea playlist annuale e (opzionalmente) aggiunge video esistenti.
+
+### Aggiornare i secret GitHub dopo la rigenerazione del token captions
+
+```bash
+jq -r '.refresh_token'         config/token.json          | gh secret set YOUTUBE_REFRESH_TOKEN
+jq -r '.installed.client_id'   config/youtube_secrets.json | gh secret set YOUTUBE_CLIENT_ID
+jq -r '.installed.client_secret' config/youtube_secrets.json | gh secret set YOUTUBE_CLIENT_SECRET
+```
 
 ## Note
 

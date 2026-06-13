@@ -1,3 +1,14 @@
+# 2026-06-13
+
+## Automazione trascrizioni + digest in CI
+
+- App OAuth captions (`youtube-captions-downloader`) portata da Testing a **In production**: il refresh token non scade più ogni 7 giorni (causa dei blocchi ricorrenti).
+- Test diagnostico da runner GitHub: **API ufficiale `captions.download` funziona** (autenticata, non bloccata per IP); **yt-dlp/qv falliscono** ("Sign in to confirm you're not a bot").
+- `scripts/auth_captions.py`: nuovo helper per rigenerare `config/token.json` con scope corretti (`youtube.readonly` + `youtube.force-ssl`).
+- `scripts/generate_digests.sh`: nuova modalità `USE_LOCAL_TRANSCRIPTS=true` — in CI usa solo i `.txt` locali; se mancano salta e ritenta al run successivo (self-healing), mai `qv`, mai marcatura `no_transcript`.
+- `.github/workflows/transcripts_digests.yml`: nuovo workflow schedulato (04:30 UTC) che scarica trascrizioni via API e genera digest con Gemini, poi committa e triggera il deploy.
+- Secret aggiornati: `YOUTUBE_REFRESH_TOKEN`, `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`.
+
 # 2026-01-15
 
 ## Fix path assoluti per config e stato playlist YouTube

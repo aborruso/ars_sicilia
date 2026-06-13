@@ -1,0 +1,71 @@
+name: Transcripts and digests
+
+# Scarica le trascrizioni via API ufficiale YouTube (OAuth, non bloccata per IP)
+# e genera i digest AI con Gemini. Committa su main -> triggera il deploy del sito.
+# Sostituisce il vecchio passaggio manuale locale.
+
+on:
+  schedule:
+    - cron: "30 4 * * *" # 04:30 UTC, dopo daily_upload (01:37) ed extract_odg (03:47)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  transcripts-digests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.WORKFLOW_PAT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system deps (miller, jq)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y miller jq
+
+      - name: Install Python deps + llm
+        run: |
+          python -m venv .venv
+          . .venv/bin/activate
+          pip install -r requirements.txt
+          pip install llm llm-gemini
+
+      - name: Ricostruisci credenziali captions (jq)
+        env:
+          CID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          CSEC: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          RT: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          mkdir -p config
+          jq -n --arg id "$CID" --arg sec "$CSEC" \
+            '{installed:{client_id:$id,client_secret:$sec,token_uri:"https://oauth2.googleapis.com/token",auth_uri:"https://accounts.google.com/o/oauth2/auth",redirect_uris:["http://localhost"]}}' \
+            > config/youtube_secrets.json
+          jq -n --arg rt "$RT" '{refresh_token:$rt}' > config/token.json
+
+      - name: Download trascrizioni (API ufficiale)
+        run: |
+          . .venv/bin/activate
+          ./scripts/download_transcripts.sh
+
+      - name: Genera digest (Gemini, da trascrizioni locali)
+        env:
+          USE_LOCAL_TRANSCRIPTS: "true"
+          LLM_GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          . .venv/bin/activate
+          ./scripts/generate_digests.sh
+
+      - name: Commit trascrizioni e digest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/trascrizioni/ data/digest/
+          git commit -m "chore: update transcripts and AI digests" || exit 0
+          git push
