@@ -56,7 +56,8 @@ jobs:
 
       - name: Download trascrizioni (API ufficiale)
         env:
-          MAX_DOWNLOADS: ${{ github.event.inputs.limit || '3' }}
+          # schedule notturno: 10 (recupero arretrati). dispatch manuale: usa l'input (default 3).
+          MAX_DOWNLOADS: ${{ github.event.inputs.limit || '10' }}
         run: |
           . .venv/bin/activate
           ./scripts/download_transcripts.sh
@@ -64,7 +65,8 @@ jobs:
       - name: Genera digest (Gemini, da trascrizioni locali)
         env:
           USE_LOCAL_TRANSCRIPTS: "true"
-          MAX_DIGESTS: ${{ github.event.inputs.limit || '3' }}
+          # schedule notturno: 10 (recupero arretrati). dispatch manuale: usa l'input (default 3).
+          MAX_DIGESTS: ${{ github.event.inputs.limit || '10' }}
           LLM_GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           . .venv/bin/activate
