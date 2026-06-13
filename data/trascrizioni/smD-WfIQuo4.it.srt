@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:04,359
+L'aula è rinviata domani alle ore 15:00
+
+2
+00:00:02,159 --> 00:00:08,040
+con il seguito dell'ordine del giorno.
+
+3
+00:00:04,359 --> 00:00:08,040
+La seduta è rinviata.
+
