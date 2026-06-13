@@ -13,6 +13,10 @@ else
 	PYTHON_BIN="${PYTHON_BIN:-python3}"
 fi
 
+# Numero massimo di trascrizioni nuove da scaricare per run (0 = illimitato).
+MAX_DOWNLOADS="${MAX_DOWNLOADS:-0}"
+downloaded=0
+
 mkdir -p "$OUTPUT_DIR"
 
 while IFS= read -r line; do
@@ -48,6 +52,11 @@ while IFS= read -r line; do
 	if [ -f "$srt_file" ]; then
 		grep -E '^[0-9]+$' -v "$srt_file" | grep -E '^[0-9]' -v | grep -E '^$' -v | sed 's/^-->.*$//g' | sed 's/^[[:space:]]*//g' | sed '/^$/d' >"$txt_file"
 		echo "  Created: $srt_file, $txt_file"
+		downloaded=$((downloaded + 1))
+		if [ "$MAX_DOWNLOADS" -gt 0 ] && [ "$downloaded" -ge "$MAX_DOWNLOADS" ]; then
+			echo "Raggiunto limite download ($MAX_DOWNLOADS), stop."
+			break
+		fi
 	fi
 
 done < <(tail -n +2 "$CSV_FILE")

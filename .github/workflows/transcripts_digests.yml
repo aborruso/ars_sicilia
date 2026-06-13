@@ -7,7 +7,12 @@ name: Transcripts and digests
 on:
   schedule:
     - cron: "30 4 * * *" # 04:30 UTC, dopo daily_upload (01:37) ed extract_odg (03:47)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max trascrizioni+digest per run (0 = illimitato)"
+        required: false
+        default: "3"
 
 permissions:
   contents: write
@@ -50,6 +55,8 @@ jobs:
           jq -n --arg rt "$RT" '{refresh_token:$rt}' > config/token.json
 
       - name: Download trascrizioni (API ufficiale)
+        env:
+          MAX_DOWNLOADS: ${{ github.event.inputs.limit || '3' }}
         run: |
           . .venv/bin/activate
           ./scripts/download_transcripts.sh
@@ -57,6 +64,7 @@ jobs:
       - name: Genera digest (Gemini, da trascrizioni locali)
         env:
           USE_LOCAL_TRANSCRIPTS: "true"
+          MAX_DIGESTS: ${{ github.event.inputs.limit || '3' }}
           LLM_GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           . .venv/bin/activate

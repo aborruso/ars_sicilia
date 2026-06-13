@@ -26,6 +26,9 @@ MAX_RETRIES=3
 #                             se mancano salta e riprova al prossimo run. Mai qv, mai no_transcript.
 USE_LOCAL_TRANSCRIPTS="${USE_LOCAL_TRANSCRIPTS:-false}"
 
+# Numero massimo di digest da generare per run (0 = illimitato). Utile per debug e limiti quota.
+MAX_DIGESTS="${MAX_DIGESTS:-0}"
+
 # Crea directory se non esistono
 mkdir -p "$DIGEST_DIR"
 # mkdir -p "$LOG_DIR"
@@ -202,6 +205,11 @@ while read -r youtube_id; do
         log "  ERRORE: Tutti i $MAX_RETRIES tentativi falliti"
         rm -f "$OUTPUT_FILE" "$TRANSCRIPT_FILE"
         failed=$((failed + 1))
+    fi
+
+    if [ "$MAX_DIGESTS" -gt 0 ] && [ "$generated" -ge "$MAX_DIGESTS" ]; then
+        log "Raggiunto limite digest ($MAX_DIGESTS), stop."
+        break
     fi
 
 done < <(mlr --c2n cut -f youtube_id then filter '$youtube_id=~".+"' "$CSV_FILE")
