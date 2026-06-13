@@ -42,21 +42,30 @@ OUTPUT_DIR="$PROJECT_DIR/data"
 OUTPUT_JSONL="$OUTPUT_DIR/disegni_legge.jsonl"
 PROCESSED_LOG="$OUTPUT_DIR/logs/odg_pdfs_processed.txt"
 
+# Modello LLM esplicito (override con env ODG_MODEL). Evita dipendenza dal default di llm cli.
+MODEL="${ODG_MODEL:-gemini-2.5-flash}"
+
 # Schema LLM per estrazione dati
 SCHEMA='
-titolo_disegno: il titolo del disegno di legge,
-numero_disegno: il numero del disegno di legge, solo la parte numerica,
-legislatura: il numero romano della legislatura,
+titolo_disegno: il titolo esatto del disegno di legge come riportato, senza testo aggiuntivo,
+numero_disegno: solo la parte numerica principale; per disegni abbinati tipo 779-3-26-70-88/A usa solo il primo numero 779,
+legislatura: solo il numero romano della legislatura senza la parola Legislatura, esempio XVIII,
 data_ora: data e ora della seduta in formato ISO 8601: YYYY-MM-DD HH:MM'
 
 SYSTEM_PROMPT="Estrai SOLO i disegni di legge elencati nella sezione
 \"DISCUSSIONE DEI DISEGNI DI LEGGE\" dell'ORDINE DEL GIORNO.
 
-Regole:
-- Considera solo l'elenco numerato immediatamente sotto quel titolo.
+Regole RIGIDE:
+- Considera solo l'elenco puntato/numerato immediatamente sotto quel titolo di sezione.
+- Ogni voce dell'elenco è UN item. NON spezzare una voce in più item.
+- NON includere frammenti di testo, righe di intestazione, date, numeri di pagina,
+  allegati, comunicazioni, indice.
 - Interrompi quando finisce l'elenco, o se compare una nuova sezione,
   \"ALLEGATO\", \"COMUNICAZIONI\", \"INDICE\", o \"DISEGNI DI LEGGE PRESENTATI ED INVIATI\".
 - Ignora qualsiasi DDL citato in allegati o comunicazioni.
+- numero_disegno: SOLO la parte numerica principale (primo numero). Per abbinati
+  come '779-3-26-70-88/A' estrai 779. Per stralci come '1030/A Stralcio I/A' estrai 1030.
+- legislatura: solo il numero romano (es. XVIII), MAI \"XVIII Legislatura\".
 - Se la sezione non è presente, restituisci zero item."
 
 # Funzione per estrarre URL distinti da CSV
@@ -65,17 +74,11 @@ get_distinct_odg_urls() {
     tail -n +2 "$CSV_FILE" | cut -d',' -f4 | grep -v '^$' | sort -u
 }
 
-# Funzione per controllare se un PDF è già stato processato
+# Funzione per controllare se un PDF è già stato processato (col prompt corrente).
+# Fonte di verità: PROCESSED_LOG. Per rielaborare tutto, svuotare il log.
 is_pdf_processed() {
     local pdf_url="$1"
-    if [[ -f "$PROCESSED_LOG" ]]; then
-        grep -qFx "$pdf_url" "$PROCESSED_LOG"
-        return
-    fi
-    if [[ ! -f "$OUTPUT_JSONL" ]]; then
-        return 1  # File non esiste, PDF non processato
-    fi
-    grep -qF "\"pdf_url\":\"$pdf_url\"" "$OUTPUT_JSONL"
+    [[ -f "$PROCESSED_LOG" ]] && grep -qFx "$pdf_url" "$PROCESSED_LOG"
 }
 
 # Funzione per convertire legislatura romana in numero
@@ -126,9 +129,20 @@ process_pdf() {
 
     echo "Processing: $pdf_url" >&2
 
-    # Estrai dati con markitdown + llm
-    local json_output
-    json_output=$(markitdown "$pdf_url" | llm --schema-multi "$SCHEMA" --system "$SYSTEM_PROMPT" 2>/dev/null || echo '{"items":[]}')
+    # Estrai testo dal PDF
+    local text
+    text=$(markitdown "$pdf_url" 2>/dev/null) || { echo "  ERRORE: markitdown fallito" >&2; return 1; }
+    if [[ -z "$text" ]]; then echo "  ERRORE: testo vuoto" >&2; return 1; fi
+
+    # Estrai dati con llm, con retry e backoff sui rate limit (free tier ~10 RPM, 429)
+    local json_output="" attempt
+    for attempt in 1 2 3; do
+        json_output=$(printf '%s' "$text" | llm -m "$MODEL" --schema-multi "$SCHEMA" --system "$SYSTEM_PROMPT" 2>/dev/null) && break
+        echo "  Tentativo $attempt fallito (rate limit?), attendo $((attempt * 15))s..." >&2
+        sleep $((attempt * 15))
+        json_output=""
+    done
+    if [[ -z "$json_output" ]]; then echo "  ERRORE: llm fallito dopo i retry" >&2; return 1; fi
 
     # Parse JSON e aggiungi campi pdf_url e url_disegno
     echo "$json_output" | jq -c --arg pdf_url "$pdf_url" '
@@ -136,7 +150,7 @@ process_pdf() {
             .items[] |
             . as $item |
             ($item.numero_disegno // "" | tostring | match("[0-9]+")? | .string) as $clean_num |
-            ($item.legislatura // "") as $leg |
+            (($item.legislatura // "") | ascii_upcase | ((match("[IVXLC]+")? | .string) // "")) as $leg |
             ($clean_num // "") as $num |
             ($leg |
                 if . == "XVIII" then "18"
@@ -161,6 +175,7 @@ process_pdf() {
             ) as $leg_num |
             $item + {
                 numero_disegno: ($num // ""),
+                legislatura: $leg,
                 pdf_url: $pdf_url,
                 url_disegno: (
                     if ($leg_num | length) > 0 and ($num | length) > 0 then
@@ -175,6 +190,9 @@ process_pdf() {
             empty
         end
     ' >> "$OUTPUT_JSONL"
+
+    # Throttle per rispettare il limite RPM del free tier (~10 RPM)
+    sleep "${ODG_SLEEP:-7}"
 }
 
 # Main
@@ -182,12 +200,17 @@ main() {
     local reprocess=0
     local pdf_url_arg=""
     local output_dir_arg=""
+    local limit="${ODG_LIMIT:-0}"   # max PDF da processare per lancio (0 = illimitato)
 
     while [[ $# -gt 0 ]]; do
         case "$1" in
             --reprocess)
                 reprocess=1
                 shift
+                ;;
+            --limit)
+                limit="${2:-0}"
+                shift 2
                 ;;
             --pdf-url)
                 pdf_url_arg="${2:-}"
@@ -229,11 +252,14 @@ main() {
     mkdir -p "$(dirname "$PROCESSED_LOG")"
     touch "$OUTPUT_JSONL"
     touch "$PROCESSED_LOG"
-    if [[ "$reprocess" -eq 0 ]] && [[ ! -s "$PROCESSED_LOG" ]] && [[ -s "$OUTPUT_JSONL" ]]; then
-        jq -r '.pdf_url' "$OUTPUT_JSONL" | sort -u > "$PROCESSED_LOG"
-    fi
     if [[ "$reprocess" -eq 1 ]]; then
         : > "$PROCESSED_LOG"
+        # Rigenerazione totale: backup e ricostruzione da zero (evita append su dati vecchi).
+        if [[ -s "$OUTPUT_JSONL" ]]; then
+            cp "$OUTPUT_JSONL" "$OUTPUT_JSONL.bak"
+            echo "Backup creato: $OUTPUT_JSONL.bak" >&2
+        fi
+        : > "$OUTPUT_JSONL"
     fi
 
     local pdf_urls
@@ -262,12 +288,26 @@ main() {
             echo "  → Skipped (already processed)" >&2
             ((skipped++)) || true
         else
-            process_pdf "$pdf_url"
+            # In modalità incrementale, rimuovi eventuali record preesistenti di questo PDF
+            # prima di ri-aggiungerli (idempotenza, evita duplicati su ri-elaborazione).
+            if [[ "$reprocess" -eq 0 && -s "$OUTPUT_JSONL" ]]; then
+                grep -vF "\"pdf_url\":\"$pdf_url\"" "$OUTPUT_JSONL" > "$OUTPUT_JSONL.flt" || true
+                mv "$OUTPUT_JSONL.flt" "$OUTPUT_JSONL"
+            fi
+            if ! process_pdf "$pdf_url"; then
+                echo "  → ERRORE su $pdf_url (continuo)" >&2
+            fi
             if ! grep -qFx "$pdf_url" "$PROCESSED_LOG"; then
                 echo "$pdf_url" >> "$PROCESSED_LOG"
             fi
             echo "  → Processed" >&2
             ((processed++)) || true
+
+            if [[ "$limit" -gt 0 && "$processed" -ge "$limit" ]]; then
+                echo "" >&2
+                echo "Raggiunto limite di $limit PDF per questo lancio." >&2
+                break
+            fi
         fi
 
         echo "" >&2
@@ -279,12 +319,26 @@ main() {
     echo "Skipped: $skipped" >&2
     echo "" >&2
 
-    # Normalizza numero_disegno e rimuovi duplicati esatti
+    # Normalizzazione difensiva, scarto spazzatura e dedup
     if [[ -f "$OUTPUT_JSONL" && -s "$OUTPUT_JSONL" ]]; then
+        # numero_disegno: solo il primo gruppo di cifre; legislatura: solo il romano
         mlr -I --jsonl put '$numero_disegno = regextract_or_else($numero_disegno, "[0-9]+", "")' "$OUTPUT_JSONL"
-        mlr -I --jsonl filter '$numero_disegno != ""' "$OUTPUT_JSONL"
-        mlr -I -S --jsonl uniq -a "$OUTPUT_JSONL"
-        echo "Duplicates removed (if any)" >&2
+        mlr -I --jsonl put '$legislatura = regextract_or_else($legislatura, "[IVXLC]+", "")' "$OUTPUT_JSONL"
+        # scarta record senza numero o con titolo mancante/troppo corto (frammenti/spazzatura)
+        mlr -I --jsonl filter '$numero_disegno != "" && is_present($titolo_disegno) && strlen($titolo_disegno) > 5' "$OUTPUT_JSONL"
+        # dedup per (pdf_url, numero_disegno, titolo_disegno): tiene il primo di ogni gruppo
+        mlr -I --jsonl head -n 1 -g pdf_url,numero_disegno,titolo_disegno "$OUTPUT_JSONL"
+        echo "Normalizzato e deduplicato. Record finali: $(wc -l < "$OUTPUT_JSONL")" >&2
+
+        # Sanity check: PDF processati ma con 0 record nell'output finale
+        local empty_pdfs
+        empty_pdfs=$(comm -23 \
+            <(sort -u "$PROCESSED_LOG") \
+            <(jq -r '.pdf_url' "$OUTPUT_JSONL" | sort -u) 2>/dev/null || true)
+        if [[ -n "$empty_pdfs" ]]; then
+            echo "ATTENZIONE: PDF senza disegni estratti (verificare):" >&2
+            echo "$empty_pdfs" | sed 's/^/  - /' >&2
+        fi
     fi
 
     echo "Output saved to: $OUTPUT_JSONL" >&2

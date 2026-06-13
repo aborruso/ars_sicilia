@@ -41,12 +41,12 @@ jobs:
 
       - name: Extract OdG data
         run: |
-          ./scripts/extract_odg_data.sh
+          ./scripts/extract_odg_data.sh --limit 10
 
       - name: Commit extracted data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/disegni_legge.jsonl
+          git add data/disegni_legge.jsonl data/logs/odg_pdfs_processed.txt
           git commit -m "chore: update disegni_legge data" || exit 0
           git push

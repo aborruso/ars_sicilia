@@ -1,3 +1,14 @@
+# 2026-06-14
+
+## Fix estrazione disegni di legge da OdG
+
+- Causa dati sporchi (`disegni_legge.jsonl`): prompt LLM debole + `--reprocess` in append + dedup solo esatto → duplicati massivi (stesso DDL ×10), record con titolo=frammenti di PDF, legislatura `XVIII Legislatura`, numero corrotto (es. `7793267088` da `779-3-26-70-88/A`).
+- Verifica estrattori testo (`lit`/liteparse, markitdown, pdftotext): equivalenti → mantenuto markitdown. Il collo di bottiglia era il **prompt**, non il testo.
+- `extract_odg_data.sh` riscritto: prompt/schema rigoroso (testato su 233 e 237), normalizzazione numero+legislatura, dedup per `(pdf_url, numero, titolo)`, scarto titoli vuoti.
+- **Idempotente e progressivo**: `--limit N` (default env `ODG_LIMIT`), sostituzione in-place dei record per PDF, throttle (`ODG_SLEEP`, 7s) + retry/backoff sui 429 del free tier Gemini (10 RPM / 250 RPD).
+- `extract_odg.yml`: gira con `--limit 10` e committa anche il log di avanzamento. Svuotato il log per ripulire i 37 PDF storici (~4 notti).
+- `1030/A Stralcio I/VI/...`: confermato che sono stralci legittimi dello stesso DDL 1030 (non un errore).
+
 # 2026-06-13
 
 ## Automazione trascrizioni + digest in CI

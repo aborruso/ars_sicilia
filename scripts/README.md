@@ -103,6 +103,31 @@ python3 scripts/scrape_studi_pubblicazioni.py --mode snapshot
 python3 scripts/scrape_studi_pubblicazioni.py --output data/studi_pubblicazioni.jsonl
 ```
 
+### extract_odg_data.sh
+
+Estrae i disegni di legge dalla sezione "DISCUSSIONE DEI DISEGNI DI LEGGE" dei PDF OdG
+(`markitdown` + `llm`, modello `gemini-2.5-flash`) e li salva in `data/disegni_legge.jsonl`.
+
+Caratteristiche:
+- **Idempotente e progressivo**: salta i PDF già nel log `data/logs/odg_pdfs_processed.txt`;
+  per ogni PDF lavorato rimuove i vecchi record e li sostituisce (in-place, nessun buco).
+- **`--limit N`**: processa al massimo N PDF per lancio (rispetta il free tier Gemini: ~10 RPM, 250 RPD).
+- **Throttle + retry**: `sleep` tra i PDF (env `ODG_SLEEP`, default 7s) e retry con backoff sui 429.
+- **Normalizzazione**: numero (primo gruppo di cifre), legislatura (solo romano), dedup per
+  `(pdf_url, numero_disegno, titolo_disegno)`, scarto record con titolo mancante.
+- **`--reprocess`**: ricostruisce tutto da zero (backup `.bak`).
+
+```bash
+# avanza di 10 PDF per volta (idempotente: rilancia finché finisce)
+./scripts/extract_odg_data.sh --limit 10
+
+# rielabora TUTTI i PDF da capo col prompt corrente: svuota il log una volta, poi lancia a batch
+: > data/logs/odg_pdfs_processed.txt
+./scripts/extract_odg_data.sh --limit 10   # ripeti finché il log contiene tutti i PDF
+```
+
+In CI (`extract_odg.yml`) gira ogni notte con `--limit 10`.
+
 ## Auth / Setup
 
 - `auth_captions.py` — **Rigenera il token OAuth del progetto captions** (`config/token.json`) con gli scope corretti per scaricare i sottotitoli (`youtube.readonly` + `youtube.force-ssl`). Apre un server locale e il browser per il consenso; salva un `refresh_token` valido. Da usare quando il refresh token è scaduto o gli scope cambiano.
