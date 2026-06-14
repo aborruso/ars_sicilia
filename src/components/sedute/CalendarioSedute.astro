@@ -121,23 +121,43 @@ const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
         next!.disabled = idx === months.length - 1;
       }
 
+      function syncURL() {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('giorno');
+        url.searchParams.delete('mese');
+        if (filter.type === 'day') url.searchParams.set('giorno', filter.value!);
+        else if (filter.type === 'month') url.searchParams.set('mese', filter.value!);
+        history.replaceState(null, '', url.toString());
+      }
+
       grid.addEventListener('click', (e) => {
         const cell = (e.target as HTMLElement).closest('[data-date]') as HTMLElement | null;
         if (!cell) return;
         filter = { type: 'day', value: cell.dataset.date };
-        render();
-        applyFilter();
+        render(); applyFilter(); syncURL();
       });
       prev.addEventListener('click', () => {
-        if (idx > 0) { idx--; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); }
+        if (idx > 0) { idx--; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); syncURL(); }
       });
       next.addEventListener('click', () => {
-        if (idx < months.length - 1) { idx++; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); }
+        if (idx < months.length - 1) { idx++; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); syncURL(); }
       });
       reset?.addEventListener('click', () => {
-        filter = { type: 'all' }; render(); applyFilter();
+        filter = { type: 'all' }; render(); applyFilter(); syncURL();
       });
 
+      // Stato iniziale da URL (?giorno=YYYY-MM-DD / ?mese=YYYY-MM) per link condivisibili
+      const params = new URLSearchParams(window.location.search);
+      const qGiorno = params.get('giorno');
+      const qMese = params.get('mese');
+      if (qGiorno) {
+        const mk = qGiorno.slice(0, 7);
+        if (months.includes(mk)) idx = months.indexOf(mk);
+        filter = { type: 'day', value: qGiorno };
+      } else if (qMese && months.includes(qMese)) {
+        idx = months.indexOf(qMese);
+        filter = { type: 'month', value: qMese };
+      }
       render();
       applyFilter();
     }

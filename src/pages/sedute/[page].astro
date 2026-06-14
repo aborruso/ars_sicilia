@@ -45,12 +45,18 @@ const categories = await loadCategories();
     </p>
   </div>
 
-  <CalendarioSedute sedute={allSedute} />
+  <!-- Calendario + categorie affiancati su desktop -->
+  <div class="flex flex-col lg:flex-row gap-6 items-start mb-8">
+    <div class="lg:flex-shrink-0">
+      <CalendarioSedute sedute={allSedute} />
+    </div>
+    <div class="flex-1 w-full">
+      <CategoryFilter categories={categories} />
+    </div>
+  </div>
 
   <!-- Vista paginata di default (nascosta quando il calendario filtra) -->
   <div id="sedute-paginated">
-    <CategoryFilter categories={categories} />
-
     <div class="space-y-6 mt-8">
       {sedute.map((seduta) => (
         <SedutaCard seduta={seduta} />

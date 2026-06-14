@@ -1,3 +1,17 @@
+## Requisito: deep linking (URL condivisibili)
+
+Il sito nasce per **condividere link puntuali** ("guarda qui"). Quindi è un **requisito**, non un optional:
+ogni stato navigabile o filtrabile DEVE essere indirizzabile via URL e ripristinabile al caricamento.
+
+- **Routing** (path → pagina): sedute, video, categoria, `/ddl/N`, `/sedute/N`.
+- **Stato nell'URL** (query param, per filtri client-side): ricerca DDL `?q=`, calendario sedute `?giorno=YYYY-MM-DD` / `?mese=YYYY-MM`.
+
+Regola per nuove feature con stato: aggiungere sempre sync dell'URL + ripristino da URL su `astro:page-load`
+(il sito usa ViewTransitions). Distinzione terminologica: il *routing* mappa URL→vista; il *deep linking*
+è l'obiettivo di linkare uno stato specifico (incluso un filtro applicato).
+
+---
+
 ## Idee future per il sito
 
 Annotazioni di prodotto emerse navigando il sito. Da prioritizzare/valutare prima di implementare.
