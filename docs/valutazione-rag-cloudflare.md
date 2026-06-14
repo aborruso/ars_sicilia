@@ -3,6 +3,21 @@ Valutazione: search RAG su trascrizioni e PDF con Cloudflare AI Search
 Data: 2026-06-14. Stato: valutazione (nessuna implementazione).
 Domanda: ha senso aggiungere al sito un search che fa RAG su trascrizioni e testi dei PDF? Cloudflare AI Search è adeguato e a che costi?
 
+## I 3 livelli di ricerca (scegliere il livello giusto)
+
+"Trova dove si parla di X" ha due sfumature: per **nome/entità esatta** (es. *Mondello*, un toponimo: la parola compare letteralmente) e per **concetto/sinonimi** (es. "sanità" → testi che dicono "ospedali", "ASP", "pronto soccorso" senza la parola "sanità"). La keyword pura copre la prima, non la seconda.
+
+| Livello | "Mondello" (entità) | "sanità" → ospedali (concetto) | Risposta sintetizzata | Costo / infra |
+|---|---|---|---|---|
+| **1. Lessicale** (Pagefind, Algolia base) | sì | no | no | €0 / statico |
+| **2. Semantico / ibrido — retrieval only** (Cloudflare AI Search *search mode*, Algolia NeuralSearch, Typesense/Meilisearch/Orama hybrid) | sì | sì | no (restituisce passaggi + link) | backend o SaaS |
+| **3. RAG** (semantico + LLM) | sì | sì | sì | + costo LLM + rischio allucinazioni |
+
+Note:
+- Il **livello 2** è il *retrieval* del RAG usato **da solo**: trova per significato, restituisce link alle sedute, **niente allucinazioni e niente costo di generazione**. È spesso il punto giusto per "dove si parla di X".
+- Il semantico (liv. 2-3) richiede **embeddings** sia sui testi (a build) sia sulla query (a runtime) → serve un servizio/backend, oppure un modello WASM in-browser (es. transformers.js con Orama). Pagefind (liv. 1) non fa semantico.
+- I livelli sono **complementari**: si può fare lessicale/semantico per "trova dove" + RAG per "rispondi su".
+
 ## Cos'è Cloudflare AI Search
 
 Servizio RAG **gestito** di Cloudflare (ex **AutoRAG**, rinominato AI Search): ingestione → chunking → embedding → vector store → retrieval (ibrido semantico + keyword, con metadata filtering) → generazione della risposta. Tutto managed: niente vector DB o orchestrazione da gestire.
@@ -58,6 +73,11 @@ Full-text classico, **100% statico, €0, nessun backend** (vedi `search-engine-
 
 ## Raccomandazione
 
-Il RAG ha senso e Cloudflare AI Search è un buon candidato, ma introduce un backend (Worker) e una dipendenza con pricing futuro incerto. Mossa pragmatica: **pilot gratuito durante la beta, solo sulle trascrizioni** (già pronte), per misurare la qualità in italiano prima di investire nell'estrazione dei testi PDF. In assenza di budget/voglia di backend, **Pagefind** copre gran parte del bisogno a costo zero.
+Scegliere il **livello** prima del prodotto (vedi tabella in alto):
+- Se basta cercare nomi/entità (es. *Mondello*): **livello 1 lessicale** → **Pagefind**, €0 e statico.
+- Per "dove si parla di X" anche concettuale (sinonimi/parafrasi): serve **livello 2 semantico/ibrido, retrieval-only** — restituisce passaggi + link senza generare risposte (niente allucinazioni, niente costo LLM). Candidati: Cloudflare AI Search in *search mode*, oppure Orama in-browser (€0 ma più lavoro), o Typesense/Meilisearch self-host.
+- Solo se serve la **risposta sintetizzata** in linguaggio naturale: **livello 3 RAG** (Cloudflare AI Search completo), con i caveat di backend/costo/allucinazioni.
+
+Mossa pragmatica: **pilot gratuito durante la beta** (Cloudflare AI Search) **sulle sole trascrizioni** già pronte, provando prima la **modalità search (liv. 2)** e poi eventualmente la generazione (liv. 3), per misurare la qualità in italiano prima di investire nell'estrazione dei testi PDF. Per partire subito a costo/rischio zero sul caso "trova entità", **Pagefind** (liv. 1).
 
 Collegamenti: [search-engine-analysis.md](search-engine-analysis.md) · [future-ideas.md](future-ideas.md)
