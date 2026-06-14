@@ -1,49 +1,42 @@
 ---
-// Calendario mensile sfogliabile delle sedute: i giorni con seduta sono
-// evidenziati e cliccabili (portano alla pagina della seduta). Tutto client-side.
+// Calendario mensile compatto che FILTRA la lista delle sedute.
+// - click su un giorno con seduta -> mostra le sedute di quel giorno (anche più di una)
+// - cambio mese -> mostra le sedute di quel mese
+// - "mostra tutte" -> ripristina la lista paginata
+// Agisce sugli elementi .seduta-item resi dalla pagina (id #sedute-all / #sedute-paginated).
 interface Props {
   sedute: any[];
 }
 const { sedute } = Astro.props;
-
-const calData = sedute.map((s) => ({
-  date: s.dataSeduta,
-  numero: s.numero,
-  url: `/ars_sicilia/sedute/${s.yearMonthDay.year}/${s.yearMonthDay.month}/${s.yearMonthDay.day}/${s.slug}`,
-}));
+const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
 ---
 
 <section class="mb-8" aria-label="Calendario delle sedute">
-  <div class="card p-5">
-    <div class="flex items-center justify-between mb-4">
-      <button
-        id="cal-prev"
-        type="button"
-        aria-label="Mese precedente"
-        class="w-9 h-9 flex items-center justify-center rounded-md border border-warm-300 text-navy-800 hover:bg-navy-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+  <div class="card p-5 max-w-md">
+    <div class="flex items-center justify-between mb-3">
+      <button id="cal-prev" type="button" aria-label="Mese precedente"
+        class="w-8 h-8 flex items-center justify-center rounded-md border border-warm-300 text-navy-800 hover:bg-navy-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
       </button>
-      <h2 id="cal-title" class="text-lg md:text-xl font-display font-bold text-navy-800"></h2>
-      <button
-        id="cal-next"
-        type="button"
-        aria-label="Mese successivo"
-        class="w-9 h-9 flex items-center justify-center rounded-md border border-warm-300 text-navy-800 hover:bg-navy-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
-      >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      <h2 id="cal-title" class="text-base font-display font-bold text-navy-800"></h2>
+      <button id="cal-next" type="button" aria-label="Mese successivo"
+        class="w-8 h-8 flex items-center justify-center rounded-md border border-warm-300 text-navy-800 hover:bg-navy-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
       </button>
     </div>
 
-    <div class="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-warm-500 mb-1">
+    <div class="grid grid-cols-7 gap-1 text-center text-[11px] font-semibold text-warm-500 mb-1">
       <div>LU</div><div>MA</div><div>ME</div><div>GI</div><div>VE</div><div>SA</div><div>DO</div>
     </div>
-    <div id="cal-grid" class="grid grid-cols-7 gap-1"></div>
+    <div id="cal-grid" class="grid grid-cols-7 gap-1 text-sm"></div>
+  </div>
 
-    <p class="text-xs text-warm-500 mt-3 flex items-center gap-2">
-      <span class="inline-block w-4 h-4 rounded bg-navy-100 border border-navy-200"></span>
-      I giorni evidenziati hanno una seduta: clicca per aprirla.
-    </p>
+  <div id="cal-filter-bar" class="hidden flex items-center gap-3 mt-4">
+    <span id="cal-filter-label" class="text-sm font-medium text-navy-800"></span>
+    <button id="cal-reset" type="button"
+      class="text-sm font-semibold text-amber-700 hover:text-amber-800 underline underline-offset-2">
+      Mostra tutte
+    </button>
   </div>
 
   <script type="application/json" id="cal-data" set:html={JSON.stringify(calData)}></script>
@@ -55,31 +48,72 @@ const calData = sedute.map((s) => ({
       const title = document.getElementById('cal-title');
       const prev = document.getElementById('cal-prev') as HTMLButtonElement | null;
       const next = document.getElementById('cal-next') as HTMLButtonElement | null;
-      if (!dataEl || !grid || !title || !prev || !next) return;
+      const paginated = document.getElementById('sedute-paginated');
+      const allWrap = document.getElementById('sedute-all');
+      const filterBar = document.getElementById('cal-filter-bar');
+      const filterLabel = document.getElementById('cal-filter-label');
+      const reset = document.getElementById('cal-reset');
+      if (!dataEl || !grid || !title || !prev || !next || !paginated || !allWrap) return;
 
       const data = JSON.parse(dataEl.textContent || '[]');
       const MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+      const items = Array.from(allWrap.querySelectorAll('.seduta-item')) as HTMLElement[];
 
-      const byDate: Record<string, any> = {};
-      data.forEach((s: any) => { byDate[s.date] = s; });
+      const seduteByDate: Record<string, boolean> = {};
+      data.forEach((s: any) => { seduteByDate[s.date] = true; });
       const months = [...new Set(data.map((s: any) => s.date.slice(0, 7)))].sort() as string[];
       if (!months.length) return;
-      let idx = months.length - 1; // parte dal mese più recente
+
+      let idx = months.length - 1;        // mese mostrato nel calendario
+      let filter: { type: string; value?: string } = { type: 'all' };
+
+      function fmtDay(iso: string): string {
+        const [y, m, d] = iso.split('-').map(Number);
+        return `${d} ${MESI[m - 1]} ${y}`;
+      }
+
+      function applyFilter() {
+        if (filter.type === 'all') {
+          paginated!.classList.remove('hidden');
+          allWrap!.classList.add('hidden');
+          filterBar!.classList.add('hidden');
+          return;
+        }
+        paginated!.classList.add('hidden');
+        allWrap!.classList.remove('hidden');
+        let n = 0;
+        items.forEach((it) => {
+          const show = filter.type === 'day'
+            ? it.dataset.date === filter.value
+            : it.dataset.month === filter.value;
+          it.classList.toggle('hidden', !show);
+          if (show) n++;
+        });
+        const [y, m] = (months[idx]).split('-').map(Number);
+        filterLabel!.textContent = filter.type === 'day'
+          ? `${n} sedut${n === 1 ? 'a' : 'e'} del ${fmtDay(filter.value!)}`
+          : `${n} sedut${n === 1 ? 'a' : 'e'} di ${MESI[m - 1]} ${y}`;
+        filterBar!.classList.remove('hidden');
+      }
 
       function render() {
         const [y, m] = months[idx].split('-').map(Number);
         title!.textContent = `${MESI[m - 1]} ${y}`;
-        const firstDow = (new Date(y, m - 1, 1).getDay() + 6) % 7; // settimana lunedì-based
+        const firstDow = (new Date(y, m - 1, 1).getDay() + 6) % 7;
         const days = new Date(y, m, 0).getDate();
         let html = '';
         for (let i = 0; i < firstDow; i++) html += '<div></div>';
         for (let d = 1; d <= days; d++) {
           const key = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-          const s = byDate[key];
-          if (s) {
-            html += `<a href="${s.url}" title="Seduta ${s.numero}" class="aspect-square flex items-center justify-center rounded-md bg-navy-100 text-navy-800 font-bold hover:bg-amber-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors">${d}</a>`;
+          const hasSeduta = seduteByDate[key];
+          const selected = filter.type === 'day' && filter.value === key;
+          if (hasSeduta) {
+            const cls = selected
+              ? 'bg-amber-500 text-white'
+              : 'bg-navy-100 text-navy-800 hover:bg-amber-500 hover:text-white';
+            html += `<button type="button" data-date="${key}" title="Vedi sedute del ${d}" class="h-9 flex items-center justify-center rounded-md font-bold ${cls} focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors">${d}</button>`;
           } else {
-            html += `<div class="aspect-square flex items-center justify-center text-warm-400 text-sm">${d}</div>`;
+            html += `<div class="h-9 flex items-center justify-center text-warm-400">${d}</div>`;
           }
         }
         grid!.innerHTML = html;
@@ -87,9 +121,25 @@ const calData = sedute.map((s) => ({
         next!.disabled = idx === months.length - 1;
       }
 
-      prev.addEventListener('click', () => { if (idx > 0) { idx--; render(); } });
-      next.addEventListener('click', () => { if (idx < months.length - 1) { idx++; render(); } });
+      grid.addEventListener('click', (e) => {
+        const cell = (e.target as HTMLElement).closest('[data-date]') as HTMLElement | null;
+        if (!cell) return;
+        filter = { type: 'day', value: cell.dataset.date };
+        render();
+        applyFilter();
+      });
+      prev.addEventListener('click', () => {
+        if (idx > 0) { idx--; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); }
+      });
+      next.addEventListener('click', () => {
+        if (idx < months.length - 1) { idx++; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); }
+      });
+      reset?.addEventListener('click', () => {
+        filter = { type: 'all' }; render(); applyFilter();
+      });
+
       render();
+      applyFilter();
     }
 
     document.addEventListener('astro:page-load', initCalendarioSedute);
