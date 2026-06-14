@@ -36,9 +36,15 @@ export async function getStaticPaths() {
 
 const { seduta, prev, next } = Astro.props;
 
+const MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
+const ymd = seduta.yearMonthDay;
+const meseNome = MESI[parseInt(ymd.month, 10) - 1] ?? ymd.month;
+
 const breadcrumbs = [
   { label: 'Home', href: '/ars_sicilia/' },
   { label: 'Sedute', href: '/ars_sicilia/sedute/1' },
+  { label: ymd.year, href: `/ars_sicilia/sedute/${ymd.year}` },
+  { label: meseNome, href: `/ars_sicilia/sedute/${ymd.year}/${ymd.month}` },
   { label: `Seduta ${seduta.numero}`, href: '' },
 ];
 ---
