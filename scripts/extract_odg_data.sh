@@ -48,7 +48,7 @@ MODEL="${ODG_MODEL:-gemini-2.5-flash}"
 # Schema LLM per estrazione dati
 SCHEMA='
 titolo_disegno: il titolo esatto del disegno di legge come riportato, senza testo aggiuntivo,
-numero_disegno: solo la parte numerica principale; per disegni abbinati tipo 779-3-26-70-88/A usa solo il primo numero 779,
+numero_disegno: solo il primo numero del disegno. Per abbinati come 779-3-26-70-88/A restituisci SOLO 779. MAI rimuovere i trattini concatenando le cifre: 779-3-26-70-88 NON deve MAI diventare 7793267088,
 legislatura: solo il numero romano della legislatura senza la parola Legislatura, esempio XVIII,
 data_ora: data e ora della seduta in formato ISO 8601: YYYY-MM-DD HH:MM'
 
@@ -65,6 +65,8 @@ Regole RIGIDE:
 - Ignora qualsiasi DDL citato in allegati o comunicazioni.
 - numero_disegno: SOLO la parte numerica principale (primo numero). Per abbinati
   come '779-3-26-70-88/A' estrai 779. Per stralci come '1030/A Stralcio I/A' estrai 1030.
+- DIVIETO ASSOLUTO: MAI rimuovere i trattini concatenando le cifre.
+  '779-3-26-70-88' NON deve MAI diventare '7793267088'. Restituisci esclusivamente '779'.
 - legislatura: solo il numero romano (es. XVIII), MAI \"XVIII Legislatura\".
 - Se la sezione non è presente, restituisci zero item."
 
