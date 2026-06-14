@@ -9,7 +9,23 @@ interface Props {
 }
 
 const { items } = Astro.props;
+
+// Dati strutturati BreadcrumbList (rich snippet su Google), con URL assoluti
+const toAbs = (href: string) =>
+  href ? new URL(href, Astro.site).href : new URL(Astro.url.pathname, Astro.site).href;
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.label,
+    item: toAbs(item.href),
+  })),
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
 
 <nav aria-label="Breadcrumb" class="mb-6">
   <ol class="flex flex-wrap items-center gap-2 text-sm">

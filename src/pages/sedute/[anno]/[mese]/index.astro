@@ -30,6 +30,18 @@ const breadcrumbs = [
   { label: anno, href: `/ars_sicilia/sedute/${anno}` },
   { label: meseTitolo, href: '' },
 ];
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `Sedute ARS · ${meseTitolo} ${anno}`,
+  itemListElement: sedute.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: `Seduta n. ${s.numero}`,
+    url: new URL(`/ars_sicilia/sedute/${s.yearMonthDay.year}/${s.yearMonthDay.month}/${s.yearMonthDay.day}/${s.slug}`, Astro.site).href,
+  })),
+};
 ---
 
 <PageLayout
@@ -37,6 +49,7 @@ const breadcrumbs = [
   description={`Le ${sedute.length} sedute dell'Assemblea Regionale Siciliana di ${meseNome} ${anno}: video, documenti e disegni di legge.`}
 >
   <Breadcrumb items={breadcrumbs} />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
 
   <div class="mb-8">
     <h1 class="text-3xl md:text-4xl font-display font-bold text-navy-800 mb-2">
