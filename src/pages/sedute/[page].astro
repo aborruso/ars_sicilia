@@ -1,6 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import SedutaCard from '../../components/sedute/SedutaCard.astro';
+import CalendarioSedute from '../../components/sedute/CalendarioSedute.astro';
 import CategoryFilter from '../../components/ui/CategoryFilter.astro';
 import Pagination from '../../components/ui/Pagination.astro';
 import { loadSedute, loadCategories } from '../../lib/data-loader';
@@ -21,12 +22,13 @@ export async function getStaticPaths() {
         sedute: sedute.slice(start, end),
         currentPage: page,
         totalPages,
+        allSedute: sedute,
       },
     };
   });
 }
 
-const { sedute, currentPage, totalPages } = Astro.props;
+const { sedute, currentPage, totalPages, allSedute } = Astro.props;
 const categories = await loadCategories();
 ---
 
@@ -42,6 +44,8 @@ const categories = await loadCategories();
       Pagina {currentPage} di {totalPages}
     </p>
   </div>
+
+  <CalendarioSedute sedute={allSedute} />
 
   <CategoryFilter categories={categories} />
 
