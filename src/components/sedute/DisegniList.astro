@@ -6,15 +6,19 @@ interface Props {
 }
 
 const { disegni } = Astro.props;
+const SOGLIA = 3; // quanti DDL mostrare prima del "mostra tutti"
 ---
 
 {disegni.length > 0 && (
-  <section class="mb-8">
-    <h2 class="text-xl font-bold mb-4">Disegni di legge in ordine del giorno</h2>
+  <section class="mb-8" data-ddl-section>
+    <h2 class="text-xl font-bold mb-4">
+      Disegni di legge in ordine del giorno
+      <span class="text-warm-500 font-normal">({disegni.length})</span>
+    </h2>
 
     <ul class="space-y-3">
-      {disegni.map((disegno) => (
-        <li class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+      {disegni.map((disegno, i) => (
+        <li class:list={["bg-blue-50 border border-blue-200 rounded-lg p-4", { "ddl-extra hidden": i >= SOGLIA }]}>
           <div class="flex items-start justify-between gap-4">
             <div class="flex-1">
               <h3 class="font-semibold text-gray-900 mb-1">
@@ -37,5 +41,41 @@ const { disegni } = Astro.props;
         </li>
       ))}
     </ul>
+
+    {disegni.length > SOGLIA && (
+      <button
+        type="button"
+        data-ddl-toggle
+        aria-expanded="false"
+        class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy-800 hover:text-amber-600 transition-colors"
+      >
+        <svg data-ddl-icon class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        <span data-ddl-more>Mostra tutti i {disegni.length} disegni</span>
+        <span data-ddl-less class="hidden">Mostra meno</span>
+      </button>
+    )}
+
+    <script>
+      function initDDLToggle() {
+        document.querySelectorAll('[data-ddl-section]').forEach((sec) => {
+          const btn = sec.querySelector('[data-ddl-toggle]') as HTMLButtonElement | null;
+          if (!btn || btn.dataset.bound) return;
+          btn.dataset.bound = '1';
+          const extras = sec.querySelectorAll('.ddl-extra');
+          const more = btn.querySelector('[data-ddl-more]');
+          const less = btn.querySelector('[data-ddl-less]');
+          const icon = btn.querySelector('[data-ddl-icon]');
+          btn.addEventListener('click', () => {
+            const willShow = extras[0]?.classList.contains('hidden');
+            extras.forEach((e) => e.classList.toggle('hidden', !willShow));
+            more?.classList.toggle('hidden', willShow);
+            less?.classList.toggle('hidden', !willShow);
+            icon?.classList.toggle('rotate-180', willShow);
+            btn.setAttribute('aria-expanded', String(willShow));
+          });
+        });
+      }
+      document.addEventListener('astro:page-load', initDDLToggle);
+    </script>
   </section>
 )}
