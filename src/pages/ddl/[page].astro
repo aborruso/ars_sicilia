@@ -172,6 +172,24 @@ const searchData = allDDLs.map((d) => ({
       pageInfo?.classList.add('hidden');
     }
 
-    input?.addEventListener('input', (e) => search((e.target as HTMLInputElement).value));
+    function syncURL(q: string) {
+      const url = new URL(window.location.href);
+      if (q.trim()) url.searchParams.set('q', q.trim());
+      else url.searchParams.delete('q');
+      history.replaceState(null, '', url.toString());
+    }
+
+    input?.addEventListener('input', (e) => {
+      const v = (e.target as HTMLInputElement).value;
+      search(v);
+      syncURL(v);
+    });
+
+    // Ricerca pre-attivata da ?q= (link condivisibili)
+    const initialQ = new URLSearchParams(window.location.search).get('q');
+    if (initialQ && input) {
+      input.value = initialQ;
+      search(initialQ);
+    }
   </script>
 </PageLayout>
