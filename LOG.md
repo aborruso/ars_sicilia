@@ -1,5 +1,21 @@
 # 2026-06-14
 
+## Coerenza UX + deep linking + SEO delle sedute
+
+- Diagnosi: tre paradigmi incoerenti (categorie = pagina, calendario e ricerca = filtro live). Analisi in `docs/revisione-ux-seo.md`.
+- Modello adottato: **stati enumerabili → pagine dedicate (path); ricerca libera → live `?q=`**. Comportamento unico: clic → pagina, digitazione → ricerca.
+- Nuove pagine periodo `/sedute/[anno]` e `/sedute/[anno]/[mese]` (server-rendered, in sitemap).
+- Calendario reso **navigante**: titolo → pagina mese, giorno → seduta (o mese se più d'una); frecce sfogliano client-side. Rimosso il filtro-live e `?giorno`/`?mese`.
+- Breadcrumb seduta collega anno/mese; layout calendario+categorie affiancati su desktop.
+- SEO: JSON-LD `BreadcrumbList` (componente Breadcrumb) + `ItemList` (pagine periodo).
+- Deep linking registrato come **requisito** di prodotto ([[deep-linking-requisito]], `docs/future-ideas.md`).
+
+## Altre migliorie sito
+
+- Ricerca DDL per numero/descrizione, condivisibile via `?q=` (`/ddl/[page]`).
+- Navigazione precedente/successiva tra sedute.
+- Lista DDL nella seduta collassabile (primi 3 + "Mostra tutti").
+
 ## Fix rimozione in-place record OdG (formato)
 
 - Audit notturno: la rimozione in-place dei vecchi record falliva (`grep -F` cercava `"pdf_url":"..."` ma `mlr` scrive `"pdf_url": "..."` con spazio) → i PDF "ripuliti" mantenevano i vecchi record (es. ODG 237: 96 invece di 12).
