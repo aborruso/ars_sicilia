@@ -291,8 +291,12 @@ main() {
             # In modalità incrementale, rimuovi eventuali record preesistenti di questo PDF
             # prima di ri-aggiungerli (idempotenza, evita duplicati su ri-elaborazione).
             if [[ "$reprocess" -eq 0 && -s "$OUTPUT_JSONL" ]]; then
-                grep -vF "\"pdf_url\":\"$pdf_url\"" "$OUTPUT_JSONL" > "$OUTPUT_JSONL.flt" || true
-                mv "$OUTPUT_JSONL.flt" "$OUTPUT_JSONL"
+                # Rimozione robusta per chiave (jq parsa il JSON, indipendente dal formato/spazi)
+                if jq -c --arg u "$pdf_url" 'select(.pdf_url != $u)' "$OUTPUT_JSONL" > "$OUTPUT_JSONL.flt" 2>/dev/null; then
+                    mv "$OUTPUT_JSONL.flt" "$OUTPUT_JSONL"
+                else
+                    rm -f "$OUTPUT_JSONL.flt"
+                fi
             fi
             if ! process_pdf "$pdf_url"; then
                 echo "  → ERRORE su $pdf_url (continuo)" >&2

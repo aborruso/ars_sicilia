@@ -1,5 +1,11 @@
 # 2026-06-14
 
+## Fix rimozione in-place record OdG (formato)
+
+- Audit notturno: la rimozione in-place dei vecchi record falliva (`grep -F` cercava `"pdf_url":"..."` ma `mlr` scrive `"pdf_url": "..."` con spazio) → i PDF "ripuliti" mantenevano i vecchi record (es. ODG 237: 96 invece di 12).
+- Fix: rimozione con `jq` per chiave (`select(.pdf_url != $u)`), robusta al formato. Verificato: 237 → 12 record.
+- Log svuotato per ri-migrare i PDF con la rimozione corretta.
+
 ## Fix estrazione disegni di legge da OdG
 
 - Causa dati sporchi (`disegni_legge.jsonl`): prompt LLM debole + `--reprocess` in append + dedup solo esatto → duplicati massivi (stesso DDL ×10), record con titolo=frammenti di PDF, legislatura `XVIII Legislatura`, numero corrotto (es. `7793267088` da `779-3-26-70-88/A`).
