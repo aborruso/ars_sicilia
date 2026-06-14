@@ -5,23 +5,36 @@ import VideosByDate from '../../../../../../components/sedute/VideosByDate.astro
 import DisegniList from '../../../../../../components/sedute/DisegniList.astro';
 import SedutaLlmExportButton from '../../../../../../components/sedute/SedutaLlmExportButton.astro';
 import { loadSedute } from '../../../../../../lib/data-loader';
-import { formatDate } from '../../../../../../lib/utils';
+import { formatDate, formatDateShort } from '../../../../../../lib/utils';
 
 export async function getStaticPaths() {
   const sedute = await loadSedute();
+  // sedute è ordinato per data DESC: indice minore = più recente
+  const navInfo = (s) =>
+    s
+      ? {
+          numero: s.numero,
+          dataSeduta: s.dataSeduta,
+          url: `/ars_sicilia/sedute/${s.yearMonthDay.year}/${s.yearMonthDay.month}/${s.yearMonthDay.day}/${s.slug}`,
+        }
+      : null;
 
-  return sedute.map((seduta) => ({
+  return sedute.map((seduta, i) => ({
     params: {
       anno: seduta.yearMonthDay.year,
       mese: seduta.yearMonthDay.month,
       giorno: seduta.yearMonthDay.day,
       seduta: seduta.slug,
     },
-    props: { seduta },
+    props: {
+      seduta,
+      prev: navInfo(sedute[i + 1]), // seduta precedente (più vecchia)
+      next: navInfo(sedute[i - 1]), // seduta successiva (più recente)
+    },
   }));
 }
 
-const { seduta } = Astro.props;
+const { seduta, prev, next } = Astro.props;
 
 const breadcrumbs = [
   { label: 'Home', href: '/ars_sicilia/' },
@@ -89,4 +102,32 @@ const breadcrumbs = [
     <!-- Video raggruppati per data -->
     <VideosByDate seduta={seduta} />
   </article>
+
+  <!-- Navigazione tra sedute (precedente / successiva) -->
+  <nav class="flex items-stretch gap-4 mt-12 pt-6 border-t border-warm-200" aria-label="Naviga tra le sedute">
+    {prev ? (
+      <a href={prev.url} class="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-warm-200 hover:border-navy-800 hover:bg-navy-50 transition-colors">
+        <span class="text-xs font-semibold text-warm-500 inline-flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+          Seduta precedente
+        </span>
+        <span class="font-display font-bold text-navy-800">Seduta {prev.numero}</span>
+        <span class="text-sm text-warm-600">{formatDateShort(prev.dataSeduta)}</span>
+      </a>
+    ) : (
+      <div class="flex-1"></div>
+    )}
+    {next ? (
+      <a href={next.url} class="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-warm-200 hover:border-navy-800 hover:bg-navy-50 transition-colors text-right items-end">
+        <span class="text-xs font-semibold text-warm-500 inline-flex items-center gap-1">
+          Seduta successiva
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </span>
+        <span class="font-display font-bold text-navy-800">Seduta {next.numero}</span>
+        <span class="text-sm text-warm-600">{formatDateShort(next.dataSeduta)}</span>
+      </a>
+    ) : (
+      <div class="flex-1"></div>
+    )}
+  </nav>
 </PageLayout>
