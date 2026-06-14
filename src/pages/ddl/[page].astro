@@ -94,12 +94,6 @@ const searchData = allDDLs.map((d) => ({
 
   <script>
     const BASE = '/ars_sicilia';
-    const data = JSON.parse(document.getElementById('ddl-search-data')?.textContent || '[]');
-    const input = document.getElementById('ddl-search') as HTMLInputElement | null;
-    const listEl = document.getElementById('ddl-list');
-    const resultsEl = document.getElementById('ddl-search-results');
-    const countEl = document.getElementById('ddl-search-count');
-    const pageInfo = document.getElementById('ddl-page-info');
 
     function esc(s: string): string {
       return String(s).replace(/[&<>"']/g, (c) => (
@@ -145,7 +139,16 @@ const searchData = allDDLs.map((d) => ({
       return (s || '').toLowerCase().trim();
     }
 
-    function search(q: string) {
+    function initDDLSearch() {
+      const data = JSON.parse(document.getElementById('ddl-search-data')?.textContent || '[]');
+      const input = document.getElementById('ddl-search') as HTMLInputElement | null;
+      const listEl = document.getElementById('ddl-list');
+      const resultsEl = document.getElementById('ddl-search-results');
+      const countEl = document.getElementById('ddl-search-count');
+      const pageInfo = document.getElementById('ddl-page-info');
+      if (!input || !resultsEl) return;
+
+      function search(q: string) {
       const query = normalize(q);
       if (!query) {
         listEl?.classList.remove('hidden');
@@ -167,29 +170,33 @@ const searchData = allDDLs.map((d) => ({
         countEl.textContent = `${matches.length} risultat${matches.length === 1 ? 'o' : 'i'} per "${q.trim()}"`;
         countEl.classList.remove('hidden');
       }
-      listEl?.classList.add('hidden');
-      resultsEl?.classList.remove('hidden');
-      pageInfo?.classList.add('hidden');
+        listEl?.classList.add('hidden');
+        resultsEl?.classList.remove('hidden');
+        pageInfo?.classList.add('hidden');
+      }
+
+      function syncURL(q: string) {
+        const url = new URL(window.location.href);
+        if (q.trim()) url.searchParams.set('q', q.trim());
+        else url.searchParams.delete('q');
+        history.replaceState(null, '', url.toString());
+      }
+
+      input.addEventListener('input', (e) => {
+        const v = (e.target as HTMLInputElement).value;
+        search(v);
+        syncURL(v);
+      });
+
+      // Ricerca pre-attivata da ?q= (link condivisibili)
+      const initialQ = new URLSearchParams(window.location.search).get('q');
+      if (initialQ) {
+        input.value = initialQ;
+        search(initialQ);
+      }
     }
 
-    function syncURL(q: string) {
-      const url = new URL(window.location.href);
-      if (q.trim()) url.searchParams.set('q', q.trim());
-      else url.searchParams.delete('q');
-      history.replaceState(null, '', url.toString());
-    }
-
-    input?.addEventListener('input', (e) => {
-      const v = (e.target as HTMLInputElement).value;
-      search(v);
-      syncURL(v);
-    });
-
-    // Ricerca pre-attivata da ?q= (link condivisibili)
-    const initialQ = new URLSearchParams(window.location.search).get('q');
-    if (initialQ && input) {
-      input.value = initialQ;
-      search(initialQ);
-    }
+    // Esegue al primo load e dopo ogni navigazione con ViewTransitions
+    document.addEventListener('astro:page-load', initDDLSearch);
   </script>
 </PageLayout>
