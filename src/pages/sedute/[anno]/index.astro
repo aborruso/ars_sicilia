@@ -1,0 +1,48 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import SedutaCard from '../../../components/sedute/SedutaCard.astro';
+import Breadcrumb from '../../../components/layout/Breadcrumb.astro';
+import { loadSedute } from '../../../lib/data-loader';
+
+export async function getStaticPaths() {
+  const sedute = await loadSedute();
+  const byYear = new Map();
+  for (const s of sedute) {
+    const y = s.yearMonthDay.year;
+    if (!byYear.has(y)) byYear.set(y, []);
+    byYear.get(y).push(s);
+  }
+  return Array.from(byYear.entries()).map(([anno, lista]) => ({
+    params: { anno },
+    props: { anno, sedute: lista },
+  }));
+}
+
+const { anno, sedute } = Astro.props;
+
+const breadcrumbs = [
+  { label: 'Home', href: '/ars_sicilia/' },
+  { label: 'Sedute', href: '/ars_sicilia/sedute/1' },
+  { label: anno, href: '' },
+];
+---
+
+<PageLayout
+  title={`Sedute ARS · ${anno}`}
+  description={`Le ${sedute.length} sedute dell'Assemblea Regionale Siciliana del ${anno}: video, documenti e disegni di legge.`}
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-display font-bold text-navy-800 mb-2">
+      Sedute {anno}
+    </h1>
+    <p class="text-warm-600">{sedute.length} sedut{sedute.length === 1 ? 'a' : 'e'}</p>
+  </div>
+
+  <div class="space-y-6">
+    {sedute.map((seduta) => (
+      <SedutaCard seduta={seduta} />
+    ))}
+  </div>
+</PageLayout>

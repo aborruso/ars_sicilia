@@ -55,23 +55,11 @@ const categories = await loadCategories();
     </div>
   </div>
 
-  <!-- Vista paginata di default (nascosta quando il calendario filtra) -->
-  <div id="sedute-paginated">
-    <div class="space-y-6 mt-8">
-      {sedute.map((seduta) => (
-        <SedutaCard seduta={seduta} />
-      ))}
-    </div>
-
-    <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/ars_sicilia/sedute" />
-  </div>
-
-  <!-- Tutte le sedute, filtrate client-side dal calendario -->
-  <div id="sedute-all" class="space-y-6 mt-8 hidden">
-    {allSedute.map((seduta) => (
-      <div class="seduta-item" data-date={seduta.dataSeduta} data-month={seduta.dataSeduta.slice(0, 7)}>
-        <SedutaCard seduta={seduta} />
-      </div>
+  <div class="space-y-6 mt-8">
+    {sedute.map((seduta) => (
+      <SedutaCard seduta={seduta} />
     ))}
   </div>
+
+  <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/ars_sicilia/sedute" />
 </PageLayout>

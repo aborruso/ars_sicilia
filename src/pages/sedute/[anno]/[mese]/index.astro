@@ -1,0 +1,53 @@
+---
+import PageLayout from '../../../../layouts/PageLayout.astro';
+import SedutaCard from '../../../../components/sedute/SedutaCard.astro';
+import Breadcrumb from '../../../../components/layout/Breadcrumb.astro';
+import { loadSedute } from '../../../../lib/data-loader';
+
+const MESI = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+
+export async function getStaticPaths() {
+  const sedute = await loadSedute();
+  const byMonth = new Map();
+  for (const s of sedute) {
+    const key = `${s.yearMonthDay.year}-${s.yearMonthDay.month}`;
+    if (!byMonth.has(key)) byMonth.set(key, []);
+    byMonth.get(key).push(s);
+  }
+  return Array.from(byMonth.entries()).map(([key, lista]) => {
+    const [anno, mese] = key.split('-');
+    return { params: { anno, mese }, props: { anno, mese, sedute: lista } };
+  });
+}
+
+const { anno, mese, sedute } = Astro.props;
+const meseNome = MESI[parseInt(mese, 10) - 1] ?? mese;
+const meseTitolo = meseNome.charAt(0).toUpperCase() + meseNome.slice(1);
+
+const breadcrumbs = [
+  { label: 'Home', href: '/ars_sicilia/' },
+  { label: 'Sedute', href: '/ars_sicilia/sedute/1' },
+  { label: anno, href: `/ars_sicilia/sedute/${anno}` },
+  { label: meseTitolo, href: '' },
+];
+---
+
+<PageLayout
+  title={`Sedute ARS · ${meseTitolo} ${anno}`}
+  description={`Le ${sedute.length} sedute dell'Assemblea Regionale Siciliana di ${meseNome} ${anno}: video, documenti e disegni di legge.`}
+>
+  <Breadcrumb items={breadcrumbs} />
+
+  <div class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-display font-bold text-navy-800 mb-2">
+      Sedute di {meseTitolo} {anno}
+    </h1>
+    <p class="text-warm-600">{sedute.length} sedut{sedute.length === 1 ? 'a' : 'e'}</p>
+  </div>
+
+  <div class="space-y-6">
+    {sedute.map((seduta) => (
+      <SedutaCard seduta={seduta} />
+    ))}
+  </div>
+</PageLayout>

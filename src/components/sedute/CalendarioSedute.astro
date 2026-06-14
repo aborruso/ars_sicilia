@@ -1,14 +1,18 @@
 ---
-// Calendario mensile compatto che FILTRA la lista delle sedute.
-// - click su un giorno con seduta -> mostra le sedute di quel giorno (anche più di una)
-// - cambio mese -> mostra le sedute di quel mese
-// - "mostra tutte" -> ripristina la lista paginata
-// Agisce sugli elementi .seduta-item resi dalla pagina (id #sedute-all / #sedute-paginated).
+// Calendario mensile NAVIGANTE (coerente col modello a pagine dedicate):
+// - frecce: sfogliano i mesi nel calendario (client-side, senza ricaricare)
+// - titolo del mese: link alla pagina del mese (/sedute/AAAA/MM)
+// - giorno con seduta: link alla seduta (se unica) o alla pagina del mese (se più d'una)
 interface Props {
   sedute: any[];
 }
 const { sedute } = Astro.props;
-const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
+
+const calData = sedute.map((s) => ({
+  date: s.dataSeduta,
+  url: `/ars_sicilia/sedute/${s.yearMonthDay.year}/${s.yearMonthDay.month}/${s.yearMonthDay.day}/${s.slug}`,
+  numero: s.numero,
+}));
 ---
 
 <section class="mb-8" aria-label="Calendario delle sedute">
@@ -18,7 +22,8 @@ const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
         class="w-8 h-8 flex items-center justify-center rounded-md border border-warm-300 text-navy-800 hover:bg-navy-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors shrink-0">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
       </button>
-      <h2 id="cal-title" class="text-base font-display font-bold text-navy-800 px-3 text-center"></h2>
+      <a id="cal-title" href="#"
+        class="text-base font-display font-bold text-navy-800 px-3 text-center hover:text-amber-600 underline-offset-4 hover:underline transition-colors"></a>
       <button id="cal-next" type="button" aria-label="Mese successivo"
         class="w-8 h-8 flex items-center justify-center rounded-md border border-warm-300 text-navy-800 hover:bg-navy-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors shrink-0">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
@@ -29,14 +34,11 @@ const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
       <div>LU</div><div>MA</div><div>ME</div><div>GI</div><div>VE</div><div>SA</div><div>DO</div>
     </div>
     <div id="cal-grid" class="grid grid-cols-7 gap-1 text-sm"></div>
-  </div>
 
-  <div id="cal-filter-bar" class="hidden flex items-center gap-3 mt-4">
-    <span id="cal-filter-label" class="text-sm font-medium text-navy-800"></span>
-    <button id="cal-reset" type="button"
-      class="text-sm font-semibold text-amber-700 hover:text-amber-800 underline underline-offset-2">
-      Mostra tutte
-    </button>
+    <p class="text-xs text-warm-500 mt-3 flex items-center gap-2">
+      <span class="inline-block w-4 h-4 rounded bg-navy-100 border border-navy-200"></span>
+      Giorni con seduta: clicca per aprirla. Il mese apre l'elenco del periodo.
+    </p>
   </div>
 
   <script type="application/json" id="cal-data" set:html={JSON.stringify(calData)}></script>
@@ -45,73 +47,38 @@ const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
     function initCalendarioSedute() {
       const dataEl = document.getElementById('cal-data');
       const grid = document.getElementById('cal-grid');
-      const title = document.getElementById('cal-title');
+      const title = document.getElementById('cal-title') as HTMLAnchorElement | null;
       const prev = document.getElementById('cal-prev') as HTMLButtonElement | null;
       const next = document.getElementById('cal-next') as HTMLButtonElement | null;
-      const paginated = document.getElementById('sedute-paginated');
-      const allWrap = document.getElementById('sedute-all');
-      const filterBar = document.getElementById('cal-filter-bar');
-      const filterLabel = document.getElementById('cal-filter-label');
-      const reset = document.getElementById('cal-reset');
-      if (!dataEl || !grid || !title || !prev || !next || !paginated || !allWrap) return;
+      if (!dataEl || !grid || !title || !prev || !next) return;
 
       const data = JSON.parse(dataEl.textContent || '[]');
       const MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
-      const items = Array.from(allWrap.querySelectorAll('.seduta-item')) as HTMLElement[];
 
-      const seduteByDate: Record<string, boolean> = {};
-      data.forEach((s: any) => { seduteByDate[s.date] = true; });
+      // data giorno -> elenco url sedute
+      const byDate: Record<string, string[]> = {};
+      data.forEach((s: any) => { (byDate[s.date] ||= []).push(s.url); });
       const months = [...new Set(data.map((s: any) => s.date.slice(0, 7)))].sort() as string[];
       if (!months.length) return;
+      let idx = months.length - 1;
 
-      let idx = months.length - 1;        // mese mostrato nel calendario
-      let filter: { type: string; value?: string } = { type: 'all' };
-
-      function fmtDay(iso: string): string {
-        const [y, m, d] = iso.split('-').map(Number);
-        return `${d} ${MESI[m - 1]} ${y}`;
-      }
-
-      function applyFilter() {
-        if (filter.type === 'all') {
-          paginated!.classList.remove('hidden');
-          allWrap!.classList.add('hidden');
-          filterBar!.classList.add('hidden');
-          return;
-        }
-        paginated!.classList.add('hidden');
-        allWrap!.classList.remove('hidden');
-        let n = 0;
-        items.forEach((it) => {
-          const show = filter.type === 'day'
-            ? it.dataset.date === filter.value
-            : it.dataset.month === filter.value;
-          it.classList.toggle('hidden', !show);
-          if (show) n++;
-        });
-        const [y, m] = (months[idx]).split('-').map(Number);
-        filterLabel!.textContent = filter.type === 'day'
-          ? `${n} sedut${n === 1 ? 'a' : 'e'} del ${fmtDay(filter.value!)}`
-          : `${n} sedut${n === 1 ? 'a' : 'e'} di ${MESI[m - 1]} ${y}`;
-        filterBar!.classList.remove('hidden');
-      }
+      const monthPath = (ym: string) => `/ars_sicilia/sedute/${ym.slice(0, 4)}/${ym.slice(5, 7)}`;
 
       function render() {
         const [y, m] = months[idx].split('-').map(Number);
         title!.textContent = `${MESI[m - 1]} ${y}`;
+        title!.href = monthPath(months[idx]);
         const firstDow = (new Date(y, m - 1, 1).getDay() + 6) % 7;
         const days = new Date(y, m, 0).getDate();
         let html = '';
         for (let i = 0; i < firstDow; i++) html += '<div></div>';
         for (let d = 1; d <= days; d++) {
           const key = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-          const hasSeduta = seduteByDate[key];
-          const selected = filter.type === 'day' && filter.value === key;
-          if (hasSeduta) {
-            const cls = selected
-              ? 'bg-amber-500 text-white'
-              : 'bg-navy-100 text-navy-800 hover:bg-amber-500 hover:text-white';
-            html += `<button type="button" data-date="${key}" title="Vedi sedute del ${d}" class="h-9 flex items-center justify-center rounded-md font-bold ${cls} focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors">${d}</button>`;
+          const urls = byDate[key];
+          if (urls && urls.length) {
+            const href = urls.length === 1 ? urls[0] : monthPath(months[idx]);
+            const label = urls.length === 1 ? `Vai alla seduta del ${d}` : `${urls.length} sedute il ${d}`;
+            html += `<a href="${href}" title="${label}" class="h-9 flex items-center justify-center rounded-md font-bold bg-navy-100 text-navy-800 hover:bg-amber-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors">${d}</a>`;
           } else {
             html += `<div class="h-9 flex items-center justify-center text-warm-400">${d}</div>`;
           }
@@ -121,45 +88,11 @@ const calData = sedute.map((s) => ({ date: s.dataSeduta, numero: s.numero }));
         next!.disabled = idx === months.length - 1;
       }
 
-      function syncURL() {
-        const url = new URL(window.location.href);
-        url.searchParams.delete('giorno');
-        url.searchParams.delete('mese');
-        if (filter.type === 'day') url.searchParams.set('giorno', filter.value!);
-        else if (filter.type === 'month') url.searchParams.set('mese', filter.value!);
-        history.replaceState(null, '', url.toString());
-      }
+      // frecce: sfogliano i mesi nel calendario (no navigazione)
+      prev.addEventListener('click', () => { if (idx > 0) { idx--; render(); } });
+      next.addEventListener('click', () => { if (idx < months.length - 1) { idx++; render(); } });
 
-      grid.addEventListener('click', (e) => {
-        const cell = (e.target as HTMLElement).closest('[data-date]') as HTMLElement | null;
-        if (!cell) return;
-        filter = { type: 'day', value: cell.dataset.date };
-        render(); applyFilter(); syncURL();
-      });
-      prev.addEventListener('click', () => {
-        if (idx > 0) { idx--; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); syncURL(); }
-      });
-      next.addEventListener('click', () => {
-        if (idx < months.length - 1) { idx++; filter = { type: 'month', value: months[idx] }; render(); applyFilter(); syncURL(); }
-      });
-      reset?.addEventListener('click', () => {
-        filter = { type: 'all' }; render(); applyFilter(); syncURL();
-      });
-
-      // Stato iniziale da URL (?giorno=YYYY-MM-DD / ?mese=YYYY-MM) per link condivisibili
-      const params = new URLSearchParams(window.location.search);
-      const qGiorno = params.get('giorno');
-      const qMese = params.get('mese');
-      if (qGiorno) {
-        const mk = qGiorno.slice(0, 7);
-        if (months.includes(mk)) idx = months.indexOf(mk);
-        filter = { type: 'day', value: qGiorno };
-      } else if (qMese && months.includes(qMese)) {
-        idx = months.indexOf(qMese);
-        filter = { type: 'month', value: qMese };
-      }
       render();
-      applyFilter();
     }
 
     document.addEventListener('astro:page-load', initCalendarioSedute);
