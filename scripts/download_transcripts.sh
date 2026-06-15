@@ -45,6 +45,11 @@ while IFS= read -r line; do
 			echo "$youtube_id" >>"$OUTPUT_DIR/no_transcript.txt"
 			continue
 		fi
+		if [ "$rc" -eq 3 ]; then
+			echo "  Warning: video not found (404), skipping $youtube_id"
+			echo "$youtube_id" >>"$OUTPUT_DIR/no_transcript.txt"
+			continue
+		fi
 		echo "  Error: API transcript download failed for $youtube_id"
 		exit "$rc"
 	fi

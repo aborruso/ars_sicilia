@@ -100,6 +100,8 @@ def main() -> int:
         return download_caption(args.youtube_id, Path(args.output_file), args.lang)
     except HttpError as exc:
         print(f"ERROR: YouTube API HTTP {exc.resp.status}: {exc}", file=sys.stderr)
+        if exc.resp.status == 404:
+            return 3
         return 1
     except Exception as exc:  # noqa: BLE001
         print(f"ERROR: {exc}", file=sys.stderr)
