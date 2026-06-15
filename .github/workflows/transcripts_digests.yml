@@ -12,7 +12,7 @@ on:
       limit:
         description: "Max trascrizioni+digest per run (0 = illimitato)"
         required: false
-        default: "3"
+        default: "10"
 
 permissions:
   contents: write
