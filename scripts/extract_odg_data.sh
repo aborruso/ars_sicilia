@@ -330,10 +330,29 @@ main() {
         # numero_disegno: solo il primo gruppo di cifre; legislatura: solo il romano
         mlr -I --jsonl put '$numero_disegno = regextract_or_else($numero_disegno, "[0-9]+", "")' "$OUTPUT_JSONL"
         mlr -I --jsonl put '$legislatura = regextract_or_else($legislatura, "[IVXLC]+", "")' "$OUTPUT_JSONL"
-        # scarta record senza numero o con titolo mancante/troppo corto (frammenti/spazzatura)
-        mlr -I --jsonl filter '$numero_disegno != "" && is_present($titolo_disegno) && strlen($titolo_disegno) > 5' "$OUTPUT_JSONL"
-        # dedup per (pdf_url, numero_disegno, titolo_disegno): tiene il primo di ogni gruppo
-        mlr -I --jsonl head -n 1 -g pdf_url,numero_disegno,titolo_disegno "$OUTPUT_JSONL"
+        # Normalizza titolo_disegno: deescape unicode letterale, togli annotazione "(n. …)"
+        # finale, virgolette di apertura/chiusura, punto finale; canonicalizza apostrofo e
+        # virgolette curve; collassa spazi. Rende coerenti le varianti cosmetiche tra PDF.
+        local norm_expr
+        norm_expr="$(mktemp)"
+        cat > "$norm_expr" <<'MLR'
+$titolo_disegno = gsub($titolo_disegno, "\\u2019", "'");
+$titolo_disegno = sub($titolo_disegno, "\s*\(n\.\s*[0-9].*$", "");
+$titolo_disegno = clean_whitespace($titolo_disegno);
+$titolo_disegno = sub($titolo_disegno, "^[\x{0022}\x{201C}\x{201D}]+", "");
+$titolo_disegno = sub($titolo_disegno, "[\x{0022}\x{201C}\x{201D}.]+$", "");
+$titolo_disegno = gsub($titolo_disegno, "[\x{2018}\x{2019}]", "'");
+$titolo_disegno = gsub($titolo_disegno, "[\x{201C}\x{201D}]", "\"");
+$titolo_disegno = clean_whitespace($titolo_disegno);
+MLR
+        mlr -I --jsonl put -f "$norm_expr" "$OUTPUT_JSONL"
+        rm -f "$norm_expr"
+        # scarta record senza numero, titolo mancante/troppo corto, o spazzatura
+        # (titoli legittimi max ~264 char; estrazioni corrotte hanno graffe o lunghezze assurde)
+        mlr -I --jsonl filter '$numero_disegno != "" && is_present($titolo_disegno) && strlen($titolo_disegno) > 5 && strlen($titolo_disegno) < 400 && $titolo_disegno !=~ "[{}]"' "$OUTPUT_JSONL"
+        # dedup per (pdf_url, numero_disegno): tiene il primo. Gli stralci dello stesso
+        # disegno padre (es. 1030/A Stralcio I/V/VI) collassano in un'unica voce per PDF.
+        mlr -I --jsonl head -n 1 -g pdf_url,numero_disegno "$OUTPUT_JSONL"
         echo "Normalizzato e deduplicato. Record finali: $(wc -l < "$OUTPUT_JSONL")" >&2
 
         # Sanity check: PDF processati ma con 0 record nell'output finale

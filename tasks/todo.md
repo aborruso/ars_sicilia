@@ -1,236 +1,58 @@
-# Piano Aggiornamento README.md
-
-## Problema
-README attuale descrive solo la pipeline Python/YouTube uploader (OAuth, cron, quota API), ma ignora completamente:
-- Sito web Astro (108+ pagine statiche)
-- Frontend "Editorial Civic" con design system
-- Categorie tematiche, paginazione, navigazione
-- Digest AI generati da LLM
-- Estrazione disegni legge da PDF OdG
-- Feed RSS pubblico
-- Piattaforma consultazione civica
-
-Il progetto è evoluto da semplice uploader a piattaforma completa di civic engagement.
+# Fix duplicati / qualità dati disegni di legge
 
 ## Obiettivo
-Ristrutturare README per presentare il progetto come piattaforma civic tech con due componenti principali:
-1. **Sito web statico** per consultare sedute (frontend)
-2. **Pipeline automatizzata** per acquisizione e pubblicazione (backend)
+Eliminare i "duplicati" apparenti dei DDL nel sito, senza perdere informazione reale.
 
-## Struttura Proposta
+## Diagnosi (verificata sui PDF reali, niente OCR — sono PDF testo)
 
-### Sezione 1: Introduzione
-- Titolo: "ARS Sicilia - Archivio Consultabile Sedute Assemblea"
-- Sottotitolo: "Piattaforma civic tech per trasparenza e consultazione sedute ARS"
-- Descrizione breve del progetto (civic hacking, trasparenza, ricerca)
-- Screenshot o link demo: https://aborruso.github.io/ars_sicilia/
+Due cause radice distinte:
 
-### Sezione 2: Cosa Offre il Progetto
-Lista funzionalità principali:
-- ✅ Sito web con 108+ pagine sedute consultabili
-- ✅ Categorie tematiche per filtrare sedute
-- ✅ Video su YouTube con metadati ricercabili
-- ✅ Digest AI automatici da trascrizioni
-- ✅ Estrazione disegni legge da PDF OdG
-- ✅ Feed RSS pubblico per aggiornamenti
-- ✅ Design accessibile WCAG 2.1 AA
+1. **Stralci collassati al numero padre.** Il PDF elenca voci distinte
+   `(n. 1030/A Stralcio I/A)`, `V/A`, `VI/A` con titoli e relatori diversi
+   (sanità / personale / lavoro). Il prompt impone `numero_disegno = 1030` per tutti.
+   `build-data.mjs` poi dedup per `numero` per seduta (riga 103) e aggrega per
+   `${numero}-${legislatura}` (riga 179) → **tiene 1 stralcio su 3, scarta gli altri**.
+   - Il numero 1030 (padre) è CORRETTO e non va cambiato (URL ICARO = padre).
+   - Va preservato lo **stralcio** come campo distinto, e incluso nelle chiavi di build-data.
 
-### Sezione 3: Architettura Sistema
-Descrizione componenti:
-1. **Frontend (Astro + Tailwind)**
-   - Sito statico generato a build-time
-   - Design system "Editorial Civic"
-   - GitHub Pages hosting
-   - Link: docs/design-system.md
+2. **Titolo non normalizzato.** Stesso disegno (es. 993) esce con 7 forme: virgolette
+   curve/dritte, apostrofo `'`/`'`, spazi doppi (testo giustificato), punto finale,
+   annotazione `(n. 993/A)`, escape `’`. Verificato: i PDF stessi differiscono
+   (249 dritte/spazi singoli, 250+253 curve/spazi doppi) → la variazione non è solo
+   l'LLM, serve normalizzazione deterministica a valle.
 
-2. **Backend Pipeline (Python)**
-   - Crawler incrementale sedute ARS
-   - Download video HLS (yt-dlp)
-   - Upload YouTube con API v3
-   - Generazione digest AI (LLM)
-   - Estrazione disegni legge (PDF → JSONL)
+## Non è un bug
+- 993 (giugno) e 974 (maggio) sono disegni DIVERSI realmente presenti negli stessi
+  OdG → sedute sovrapposte = corretto. NON si "risolve".
 
-3. **Data Layer**
-   - anagrafica_video.csv (metadati sedute)
-   - disegni_legge.jsonl (dati legislativi)
-   - digest/{youtube_id}.json (sintesi AI)
-   - rss.xml (feed pubblico)
+## Cosa rende DAVVERO il sito (ddls.json) — verificato
+- 22-record-per-DDL → 1 voce ciascuno. Corretto.
+- 947 spazzatura (`{`, 6566 char) NON vince il display: rende "Comiso 'Città della pace'". OK in pagina, sporco solo nel JSONL.
+- 1030 rende uno stralcio arbitrario ("transizione energetica") → fuorviante, ma utente ha scelto COLLASSARE.
+- 738 rende con virgolette curve residue → cosmetico.
 
-### Sezione 4: Stack Tecnologico
-**Frontend:**
-- Astro 5.0, Tailwind CSS 3.4, TypeScript
-- @astrojs/sitemap, @astrojs/rss
-- GitHub Pages + GitHub Actions deploy
+## Decisione presa
+- **Stralci 1030: COLLASSARE a uno** (scelta utente, informata). Solo cambio chiave dedup, nessun campo stralcio, nessuna modifica a build-data.mjs.
+- **NIENTE reprocess**: 947 rende già pulito; basta scartare il record-spazzatura.
 
-**Backend:**
-- Python 3.10+, yt-dlp, google-api-python-client
-- BeautifulSoup4, pyyaml, csv-parse
-- LLM CLI (gemini-2.5-flash per digest)
-- markitdown (PDF→text), miller (CSV ops)
+## Fasi (tutto nel post-processing di extract_odg_data.sh, righe ~328-337)
 
-### Sezione 5: Quick Start
-**Consultare il sito:**
-- Visita https://aborruso.github.io/ars_sicilia/
-- Filtra per categoria, naviga sedute, leggi digest AI
+### Fase 1 — Normalizzazione titolo (su JSONL esistente, no LLM)
+- [ ] Step mlr: deescape `\\u2019` (DUE backslash!), togli annotazione finale `(n. …)`,
+      togli virgolette apertura/chiusura + punto finale, canonicalizza apostrofo `’`→`'`
+      e virgolette `“”`→`"`, collassa spazi (`clean_whitespace`).
 
-**Contribuire al progetto:**
-- Fork repository, setup locale, submit PR
-- Link: CONTRIBUTING.md (se esiste)
+### Fase 2 — Guard anti-spazzatura
+- [ ] Filtro: scarta titoli con `{`/`}` o lunghezza > 400 (legittimi max 264). Elimina 947 corrotto.
 
-### Sezione 6: Setup Sviluppo Locale
-**Frontend:**
-```bash
-npm install
-npm run build  # Genera sito in dist/
-npm run dev    # Dev server localhost:4321
-```
+### Fase 3 — Collasso stralci
+- [ ] Dedup finale: chiave `pdf_url,numero_disegno` (era `+titolo_disegno`).
 
-**Backend (opzionale):**
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip3 install -r requirements.txt
-```
+### Fase 4 — Applicare e verificare
+- [ ] Eseguire script (skippa i PDF, riapplica post-processing al JSONL esistente).
+- [ ] `node scripts/build-data.mjs` + check: 993 un titolo pulito, 947 niente spazzatura, 1030 un record/PDF.
+- [ ] commit + LOG.md.
 
-### Sezione 7: Pipeline YouTube (Per Sviluppatori)
-**⚠️ Sezione tecnica avanzata - solo per chi vuole replicare pipeline**
-
-Collassare o spostare in documento separato:
-- Setup Google Cloud e YouTube API
-- OAuth2 configuration
-- Credenziali secrets
-- Cron jobs, GitHub Actions
-- Quota management
-- Troubleshooting
-
-Oppure linkare a docs/youtube-setup.md (nuovo file)
-
-### Sezione 8: Documentazione
-Link a documenti esistenti:
-- 📋 PRD.md - Product Requirements Document
-- 🎨 docs/design-system.md - Design system "Editorial Civic"
-- 📊 LOG.md - Changelog dettagliato progetto
-- 🏗️ openspec/project.md - Specifica architettura
-- 🔍 ars_sicilia_api/ - Client API disegni legge
-
-### Sezione 9: Dati Aperti
-**Dataset pubblici disponibili:**
-- data/anagrafica_video.csv (metadati sedute)
-- data/disegni_legge.jsonl (disegni legge estratti)
-- data/digest/{youtube_id}.json (sintesi AI)
-- feed pubblico: rss.xml
-
-**Licenza dati:** (specificare se CC0, CC-BY, etc)
-
-### Sezione 10: Roadmap e Prossimi Passi
-- [ ] Trascrizione automatica export per analisi
-- [ ] Dashboard query disegni legge
-- [ ] Linkage video↔disegni discussi
-- [ ] Search engine Pagefind (full-text)
-- [ ] Dark mode
-
-### Sezione 11: Contributi e Licenza
-- Come contribuire
-- Licenza progetto (MIT, Apache, GPL?)
-- Crediti: ARS Sicilia, civic hackers, skill utilizzati
-
-### Sezione 12: Contatti
-- Issues GitHub per bug/feature request
-- Link canale YouTube (se pubblico)
-- Link feed RSS
-
-## Cambiamenti Chiave
-1. **Titolo e focus**: da "YouTube Uploader" a "Archivio Consultabile Sedute"
-2. **Struttura**: sito web FIRST, pipeline YouTube SECOND (invertito)
-3. **Audience**: da sviluppatori Python a cittadini + sviluppatori
-4. **Lunghezza**: ridurre parte tecnica YouTube (collassare o spostare in docs/)
-5. **Link esterni**: più link a docs esistenti invece di duplicare contenuto
-
-## Sezioni da Mantenere (Spostate)
-Dal README attuale, preservare ma riorganizzare:
-- ✅ Setup YouTube API (spostare in docs/youtube-setup.md o collassare)
-- ✅ OAuth2 configuration (idem)
-- ✅ Anagrafica video (descrivere brevemente, dettagli in docs/)
-- ✅ Upload workflow (idem)
-- ✅ Troubleshooting (spostare in docs/troubleshooting.md)
-
-## Todo
-
-- [x] Leggere file chiave (PRD.md, LOG.md, design-system.md, package.json)
-- [x] Verificare piano con utente
-- [x] Approvazione utente
-- [x] Scrivere nuovo README.md con struttura approvata
-- [x] Aggiornare LOG.md con entry nuovo README
-
-## Review
-
-### Completato
-
-README.md completamente ristrutturato con successo.
-
-### Cambiamenti Implementati
-
-**Titolo e posizionamento:**
-- Titolo cambiato: "YouTube Uploader" → "Archivio Consultabile Sedute Assemblea"
-- Sottotitolo: "Piattaforma civic tech per trasparenza e consultazione"
-- Link demo prominente: https://aborruso.github.io/ars_sicilia/
-
-**Struttura finale (12 sezioni):**
-1. ✅ Introduzione - Quote civic hacking, link demo
-2. ✅ Cosa Offre - 8 funzionalità chiave con emoji
-3. ✅ Architettura - 3 livelli (Frontend, Backend, Data)
-4. ✅ Quick Start - Consultare sito, dati aperti, RSS
-5. ✅ Setup Sviluppo - Frontend (npm), Backend (Python opzionale)
-6. ✅ Stack Tecnologico - Frontend + Backend dettagliato
-7. ✅ Pipeline YouTube - Collassato in `<details>` tag
-8. ✅ Documentazione - Link a PRD, design-system, LOG, openspec, API
-9. ✅ Struttura Progetto - Tree ASCII completo
-10. ✅ Dati Aperti - Tabella dataset, schema CSV/JSONL
-11. ✅ Roadmap - In sviluppo, prossimi passi, idee future
-12. ✅ Contributi e Licenza - How to contribute, crediti, contatti
-
-**Priorità invertita:**
-- Frontend/sito web NOW in sezioni 1-5 (prominente)
-- Backend/YouTube NOW in sezione 7 (collassato, tecnico)
-- Audience: cittadini + sviluppatori (era solo sviluppatori)
-
-**Riduzione complessità:**
-- Setup YouTube: da ~500 righe standalone → ~150 righe collapsate in `<details>`
-- Informazioni tecniche preservate ma organizzate meglio
-- Più link a docs/ esistenti invece duplicare contenuto
-
-**Aggiunte nuove:**
-- Sezione Dati Aperti (tabella dataset, schema campi)
-- Sezione Roadmap (in sviluppo, prossimi passi, idee future)
-- Sezione Struttura Progetto (tree ASCII completo)
-- Quick Start per cittadini (non solo dev)
-
-**Miglioramenti SEO/UX:**
-- Emoji strategici per scansionabilità
-- Link diretti a demo sito (3 occorrenze)
-- Feed RSS prominente
-- Code blocks con syntax highlighting
-- Tabelle Markdown per dati strutturati
-
-### File Modificati
-
-- `README.md` - Completa riscrittura (494 righe)
-- `LOG.md` - Aggiunta entry 2025-12-28
-- `tasks/todo.md` - Questo file (piano + review)
-
-### Completezza
-
-Tutti gli obiettivi del piano sono stati raggiunti:
-- ✅ Titolo e focus aggiornati
-- ✅ Struttura invertita (sito first, YouTube second)
-- ✅ Audience ampliata (cittadini + dev)
-- ✅ Setup tecnico collassato/organizzato
-- ✅ Più link a docs esistenti
-- ✅ Sezioni dati aperti e roadmap aggiunte
-
-### Note Opzionali Non Implementate
-
-- **docs/youtube-setup.md** - Non creato (le info sono già complete e ben organizzate nel `<details>` tag del README)
-- **docs/troubleshooting.md** - Non creato (troubleshooting già nel `<details>` YouTube)
-
-Queste sezioni possono essere estratte in futuro se il README diventa troppo lungo, ma per ora la struttura collassabile `<details>` è sufficiente.
+## Non è un bug (non toccare)
+- 953/974/993/930 = debiti fuori bilancio mesi diversi (marzo/maggio/giugno/…), stesse sedute = corretto (voci ricorrenti in OdG finché non votate).
+- 993 vs 974 = disegni diversi.

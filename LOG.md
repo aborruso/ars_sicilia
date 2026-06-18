@@ -1,3 +1,14 @@
+# 2026-06-18
+
+## Qualità dati disegni di legge (titoli + stralci)
+
+- Diagnosi (verificata sui PDF reali, niente OCR — sono PDF testo): due cause dei "duplicati".
+- **Titolo non normalizzato**: stesso disegno con 7 forme (virgolette curve/dritte, apostrofo `'`/`’`/`‘`, spazi doppi da testo giustificato, punto finale, annotazione `(n. …)`, escape letterale `’`). I PDF stessi differiscono tra sedute → serve normalizzazione deterministica.
+- **Stralci collassati al numero padre**: 1030/A Stralcio I/V/VI sono voci OdG distinte ma con numero 1030; apparivano come record ripetuti. Scelta: collassarli a una voce per PDF.
+- **Estrazione corrotta**: un record 947 con flood di newline + `{` (6566 char). Scartato via guard (no graffe, lunghezza < 400; legittimi max 264).
+- Fix in `extract_odg_data.sh` (post-processing mlr): normalizza titolo, guard anti-spazzatura, dedup per `(pdf_url, numero_disegno)`. Applicato al JSONL esistente: 188 → 160 record, 15 DDL tutti con titolo pulito. Nessun reprocess LLM.
+- Non bug: 953/974/993/930 = debiti fuori bilancio mesi diversi, stesse sedute = corretto (voci ricorrenti in OdG finché non votate).
+
 # 2026-06-14
 
 ## Coerenza UX + deep linking + SEO delle sedute
