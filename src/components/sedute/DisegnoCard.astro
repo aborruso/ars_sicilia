@@ -1,0 +1,29 @@
+---
+import type { DisegnoLegge } from '../../types/seduta';
+
+interface Props {
+  disegno: DisegnoLegge;
+}
+
+const { disegno } = Astro.props;
+---
+
+<div class="flex items-start justify-between gap-4">
+  <div class="flex-1">
+    <h3 class="font-semibold text-gray-900 mb-1">
+      {disegno.titolo}
+    </h3>
+    <p class="text-sm text-gray-600">
+      Disegno n. {disegno.numero} · Legislatura {disegno.legislatura}
+    </p>
+  </div>
+  <a
+    href={disegno.urlDisegno}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn-secondary text-sm flex-shrink-0"
+  >
+    Leggi il testo
+    <span class="sr-only">(apre in una nuova finestra)</span>
+  </a>
+</div>

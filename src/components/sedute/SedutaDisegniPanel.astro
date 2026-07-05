@@ -1,0 +1,27 @@
+---
+import type { DisegnoLegge } from '../../types/seduta';
+import DisegnoCard from './DisegnoCard.astro';
+
+interface Props {
+  disegni: DisegnoLegge[];
+}
+
+const { disegni } = Astro.props;
+---
+
+{disegni.length > 0 && (
+  <details class="group mb-8 rounded-lg border border-warm-200 bg-warm-50">
+    <summary class="flex cursor-pointer select-none items-center gap-2 px-4 py-3 font-semibold text-navy-800 hover:text-amber-600 transition-colors marker:content-none">
+      <svg class="w-4 h-4 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+      Disegni di legge della seduta
+      <span class="text-warm-500 font-normal">({disegni.length})</span>
+    </summary>
+    <ul class="space-y-3 px-4 pb-4">
+      {disegni.map((disegno) => (
+        <li class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <DisegnoCard disegno={disegno} />
+        </li>
+      ))}
+    </ul>
+  </details>
+)}

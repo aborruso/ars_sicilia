@@ -1,0 +1,22 @@
+---
+interface Props {
+  href?: string | null;
+  direction: 'prev' | 'next';
+  label: string;
+}
+
+const { href, direction, label } = Astro.props;
+const path = direction === 'prev' ? 'M15 19l-7-7 7-7' : 'M9 5l7 7-7 7';
+// Touch target 44px su mobile, 36px da sm in su
+const base = 'inline-flex items-center justify-center w-11 h-11 sm:w-9 sm:h-9 flex-shrink-0 rounded-full border transition-colors';
+---
+
+{href ? (
+  <a href={href} aria-label={label} class:list={[base, 'border-warm-200 text-navy-800 hover:border-navy-800 hover:bg-navy-50']}>
+    <svg class="w-6 h-6 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={path} /></svg>
+  </a>
+) : (
+  <span aria-hidden="true" class:list={[base, 'border-warm-100 text-warm-300 cursor-not-allowed']}>
+    <svg class="w-6 h-6 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={path} /></svg>
+  </span>
+)}

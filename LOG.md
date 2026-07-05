@@ -1,3 +1,13 @@
+# 2026-07-05
+
+## Navigazione a frecce + DDL nella pagina video
+
+- Pagina video: pannello a comparsa (`<details>`, zero JS) con i disegni di legge della seduta, sotto il player — il digest li cita, ora sono a un click.
+- Sedute multi-video: nel titolo `‹ Seduta n. N (video X di N) ›`, frecce per saltare tra i video della stessa seduta (`seduta.videos` già ordinato).
+- Pagina seduta: stesse frecce ai lati del titolo per seduta precedente/successiva (riusa i props `prev`/`next` già esistenti).
+- Frecce estratte in `NavArrow.astro` (prev/next, stato disabilitato ai bordi); touch target 44px su mobile, 36px da `sm`. Card DDL estratta in `DisegnoCard.astro`, riusata da `DisegniList` e dal nuovo pannello.
+- README: rimosso conteggio hardcoded "108+ pagine statiche".
+
 # 2026-06-18
 
 ## Qualità dati disegni di legge (titoli + stralci)

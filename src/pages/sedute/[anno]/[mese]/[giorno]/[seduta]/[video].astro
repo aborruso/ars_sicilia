@@ -5,6 +5,8 @@ import VideoEmbed from '../../../../../../components/sedute/VideoEmbed.astro';
 import DigestContent from '../../../../../../components/sedute/DigestContent.astro';
 import CategoryBadge from '../../../../../../components/sedute/CategoryBadge.astro';
 import LlmExportButton from '../../../../../../components/sedute/LlmExportButton.astro';
+import SedutaDisegniPanel from '../../../../../../components/sedute/SedutaDisegniPanel.astro';
+import NavArrow from '../../../../../../components/sedute/NavArrow.astro';
 import { loadSedute } from '../../../../../../lib/data-loader';
 import { formatDateShort, formatDuration, truncateText } from '../../../../../../lib/utils';
 
@@ -34,6 +36,14 @@ const { seduta, video } = Astro.props;
 
 const sedutaUrl = `/ars_sicilia/sedute/${seduta.yearMonthDay.year}/${seduta.yearMonthDay.month}/${seduta.yearMonthDay.day}/${seduta.slug}`;
 
+// Navigazione tra i video della stessa seduta (seduta.videos è già ordinato per data+ora)
+const videoIndex = seduta.videos.findIndex((v) => v.slug === video.slug);
+const totalVideos = seduta.videos.length;
+const isMultiVideo = totalVideos > 1;
+const videoHref = (v) => `${sedutaUrl}/${v.slug}`;
+const prevVideo = videoIndex > 0 ? seduta.videos[videoIndex - 1] : null;
+const nextVideo = videoIndex < totalVideos - 1 ? seduta.videos[videoIndex + 1] : null;
+
 const breadcrumbs = [
   { label: 'Home', href: '/ars_sicilia/' },
   { label: 'Sedute', href: '/ars_sicilia/sedute/1' },
@@ -56,9 +66,28 @@ const description = video.digest?.digest
 
   <article>
     <header class="mb-6">
-      <h1 class="text-3xl font-bold mb-2">
-        Seduta n. {seduta.numero}
-      </h1>
+      <div class="flex items-center gap-3 mb-2">
+        {isMultiVideo && (
+          <NavArrow
+            direction="prev"
+            href={prevVideo ? videoHref(prevVideo) : null}
+            label={prevVideo ? `Video precedente (ore ${prevVideo.oraVideo})` : 'Video precedente'}
+          />
+        )}
+        <h1 class="text-3xl font-bold">
+          Seduta n. {seduta.numero}
+          {isMultiVideo && (
+            <span class="text-xl font-normal text-warm-500"> (video {videoIndex + 1} di {totalVideos})</span>
+          )}
+        </h1>
+        {isMultiVideo && (
+          <NavArrow
+            direction="next"
+            href={nextVideo ? videoHref(nextVideo) : null}
+            label={nextVideo ? `Video successivo (ore ${nextVideo.oraVideo})` : 'Video successivo'}
+          />
+        )}
+      </div>
       <p class="text-lg text-gray-600">
         {formatDateShort(video.dataVideo)} - Ore {video.oraVideo}
         {video.durationMinutes > 0 && (
@@ -74,6 +103,9 @@ const description = video.digest?.digest
       youtubeId={video.youtubeId}
       title={`Seduta ${seduta.numero} del ${formatDateShort(video.dataVideo)} ore ${video.oraVideo}`}
     />
+
+    <!-- Disegni di legge della seduta (pannello a comparsa) -->
+    <SedutaDisegniPanel disegni={seduta.disegniLegge} />
 
     <!-- LLM Export Button -->
     <LlmExportButton video={video} seduta={seduta} />

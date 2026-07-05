@@ -10,7 +10,7 @@
 
 ## 🎯 Cosa Offre il Progetto
 
-- ✅ **Sito web consultabile** - 108+ pagine statiche generate con Astro
+- ✅ **Sito web consultabile** - pagine statiche generate con Astro
 - ✅ **Categorie tematiche** - Filtra sedute per argomento (Sanità, Bilancio, Lavoro, etc.)
 - ✅ **Video YouTube ricercabili** - Metadati strutturati, playlist annuali, token univoci
 - ✅ **Digest AI automatici** - Sintesi generate da trascrizioni video con LLM
