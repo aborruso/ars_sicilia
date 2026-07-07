@@ -1,3 +1,69 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+Civic-tech platform that makes the sessions of the Sicilian Regional Assembly (ARS) consultable. It crawls session metadata, uploads session videos to YouTube, generates AI digests from transcripts, extracts draft laws (disegni di legge) from agenda PDFs, and publishes a static Astro site to GitHub Pages.
+
+The system has three layers that meet through the `data/` directory:
+
+- **Backend (Python, `scripts/`)** — acquisition/publication pipeline. Writes datasets into `data/`.
+- **Data layer (`data/`)** — public open datasets, the contract between backend and frontend.
+- **Frontend (Astro, `src/`)** — static site generated at build time from `data/`.
+
+## Architecture
+
+The build is **data-driven**: `scripts/build-data.mjs` runs as Astro's `prebuild` hook. It reads the raw datasets and emits aggregated JSON into `src/data/processed/`, which the Astro pages consume. Editing `data/` is not enough to see changes locally — `prebuild` must regenerate the processed JSON.
+
+Data flow:
+
+1. `data/anagrafica_video.csv` — session/video metadata (one row per video; sessions aggregate rows by `numero_seduta` + `data_seduta`).
+2. `data/disegni_legge.jsonl` — draft laws extracted from agenda (OdG) PDFs.
+3. `data/digest/{youtube_id}.json` — per-video AI digests (digests with body ≤10 chars are dropped as empty).
+4. `build-data.mjs` joins these → `src/data/processed/{sedute,videos,ddls,categories}.json`.
+5. Astro renders pages from the processed JSON; `src/lib/data-loader.ts` is the typed loader.
+
+Astro config (`astro.config.mjs`): static output, `site: https://aborruso.github.io`, `base: /ars_sicilia` — all internal links must respect the base path. Markdown pages in `src/pages/` get a default layout via the `remark-default-layout.mjs` remark plugin.
+
+`ars_sicilia_api/` is a standalone Python client for the ARS legislative search API — independent of the site build, with its own README and OpenSpec.
+
+## Common Commands
+
+Frontend (run from repo root):
+
+```bash
+npm install            # install deps
+npm run dev            # prebuild (build-data.mjs) + astro dev → http://localhost:4321
+npm run build          # prebuild + astro build → dist/
+npm run preview        # preview built site
+node scripts/build-data.mjs   # regenerate src/data/processed/ only
+```
+
+Backend pipeline (Python; use `.venv`):
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate && pip3 install -r requirements.txt
+python3 scripts/build_anagrafica.py     # incremental crawler → anagrafica_video.csv
+python3 scripts/upload_single.py --dry-run   # YouTube upload (OAuth)
+./scripts/extract_odg_data.sh           # draft laws from OdG PDFs → disegni_legge.jsonl
+./scripts/run_transcripts_and_digests.sh   # git pull + download transcripts + generate digests
+```
+
+The digest pipeline (`generate_digests.sh`) requires external CLIs: `qv` (transcripts), `llm` (Gemini 2.5 Flash), `mlr`. Transcript download + digest generation run **manually/locally** (OAuth not available in CI). See `scripts/README.md` for the full script catalog.
+
+Backend tests live in `scripts/tests/` (YouTube auth smoke tests) — run a single one with `python3 scripts/tests/test_youtube_auth.py`.
+
+## CI / Deploy
+
+GitHub Actions run nightly and on push:
+
+- `deploy-site.yml` — on push to `main` touching `data/**`, `src/**`, `build-data.mjs`, or config → builds and deploys to GitHub Pages.
+- `daily_upload.yml` — crawls sessions, uploads up to ~4 videos/day, commits `anagrafica_video.csv` (triggers deploy via `WORKFLOW_PAT`).
+- `extract_odg.yml` — extracts draft laws nightly.
+- `publish_rss.yml` — regenerates the RSS feed.
+
+A push to `data/` triggers the deploy, so committing new digests/transcripts is enough to publish.
 
 ## Working with OpenSpec
 
