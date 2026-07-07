@@ -54,15 +54,16 @@ export default {
               {
                 role: 'system',
                 content:
-                  'Estrai dalla domanda il tema di ricerca: 1 o 2 parole AL MASSIMO, prese SOLO tra le ' +
-                  'parole della domanda (o la loro forma base). NON aggiungere nomi, luoghi, date o ' +
-                  'concetti non presenti nella domanda. Niente parole interrogative né verbi generici. ' +
-                  'Rispondi SOLO con le parole scelte.',
+                  'Estrai dalla domanda i termini di ricerca: da 1 a 4 parole, prese SOLO tra le parole ' +
+                  'della domanda (o la loro forma base). Scegli i termini più specifici e distintivi del ' +
+                  'tema (es. da "cosa è successo col voto segreto sul terzo mandato dei sindaci?" estrai ' +
+                  '"terzo mandato sindaci"). NON aggiungere nomi, luoghi, date o concetti non presenti ' +
+                  'nella domanda. Niente parole interrogative né verbi generici. Rispondi SOLO con le parole scelte.',
               },
               { role: 'user', content: q },
             ],
           });
-          const kw = (rw?.response || '').replace(/["'.,;:!?]/g, ' ').trim().split(/\s+/).slice(0, 2).join(' ');
+          const kw = (rw?.response || '').replace(/["'.,;:!?]/g, ' ').trim().split(/\s+/).slice(0, 4).join(' ');
           if (kw.length >= 2) effective = kw;
         } catch {
           // riscrittura fallita: si usa la query originale
@@ -118,23 +119,35 @@ export default {
       // con le stesse opzioni di retrieval che hanno prodotto i risultati.
       let answer = null;
       if (ai && chunks.length) {
+        // Meno passaggi al generatore = risposta più focalizzata.
+        const genOptions = {
+          ...usedOptions,
+          retrieval: { ...(usedOptions.retrieval || {}), max_num_results: 8 },
+          // La similarity cache può servire una vecchia risposta ("non ci sono
+          // informazioni") a query simili: per la generazione conta la freschezza.
+          cache: { enabled: false },
+        };
+        // Il retrieval interno di chatCompletions usa l'ultimo messaggio user:
+        // gli si passa la query riscritta (efficace), mentre la domanda
+        // originale a cui rispondere viene data nel messaggio di sistema.
         const aiResult = await env.SEARCH.chatCompletions({
           messages: [
             {
               role: 'system',
               content:
                 "I passaggi forniti sono trascrizioni di sedute dell'Assemblea Regionale Siciliana. " +
-                'Rispondi in italiano, in modo conciso, basandoti ESCLUSIVAMENTE su quei passaggi. ' +
-                'Se i passaggi non contengono informazioni pertinenti, rispondi SOLO con: ' +
-                '"Le trascrizioni disponibili non contengono informazioni su questo tema." ' +
-                'NON usare MAI conoscenze generali esterne ai passaggi, nemmeno per spiegare i concetti. ' +
-                'Per citare una fonte scrivi SOLO il segnaposto [fonte: NOMEFILE] (mai la parola "documento" ' +
-                "né il nome file nudo), e se disponibile indica il minuto (es. 'al minuto 00:37:39').",
+                `La richiesta dell'utente è: "${q}". Rispondi in italiano a quella richiesta seguendo queste regole, in ordine:\n` +
+                '1. Usa SOLO le informazioni contenute nei passaggi. Mai conoscenza esterna, mai spiegazioni generali.\n' +
+                '2. Se i passaggi contengono informazioni pertinenti: scrivi una sintesi di massimo 150 parole, ' +
+                'citando nel testo SOLO le 2-4 fonti più rilevanti, ciascuna nel formato [fonte: NOMEFILE], ' +
+                "seguita dal minuto se noto (es. 'al minuto 00:37:39'). Non elencare le fonti che non citi.\n" +
+                '3. Se i passaggi NON contengono informazioni pertinenti: scrivi SOLO la frase ' +
+                '"Le trascrizioni disponibili non contengono informazioni su questo tema.", senza citazioni né altro.',
             },
-            { role: 'user', content: q },
+            { role: 'user', content: effective },
           ],
           model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-          ai_search_options: usedOptions,
+          ai_search_options: genOptions,
         }).catch(() => null);
         answer = aiResult?.choices?.[0]?.message?.content || null;
       }

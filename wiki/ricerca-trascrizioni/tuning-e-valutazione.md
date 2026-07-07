@@ -111,6 +111,33 @@ trasparenza. Nota misurata: il reranker `bge-reranker-base` produce
 punteggi non discriminanti (0.03-0.07) su QUALSIASI query italiana di
 1-2 parole — non è un problema solo delle monoparola.
 
+## 6. Test "da giornalista" e ultimi difetti della generazione
+
+Validazione con temi reali dalle cronache ARS 2026 (trovati via ricerca
+web): voto segreto, terzo mandato dei sindaci, quote rosa nelle giunte,
+indennità ex Province, manovrina, sblocca assunzioni. Esiti e fix:
+
+* Recall buono sui temi d'aula (voto segreto 6 sedute, consigliere
+  supplente 7, terzo mandato 5); onesti 0 sul lessico giornalistico
+  assente dal parlato d'aula ("manovrina", "grano duro" — verificato col
+  grep: non nel corpus; in aula si dice "variazione di bilancio").
+* La riscrittura delle domande limitata a 2 parole perdeva il tema
+  distintivo ("voto segreto sul terzo mandato" → "Voto segreto"):
+  allargata a 1-4 parole con prompt che privilegia i termini specifici.
+* `chatCompletions` fa un retrieval interno guidato dall'ultimo
+  messaggio user: passandogli la domanda originale, il reranker la
+  uccideva e il modello rispondeva "nessuna informazione" anche con
+  sedute trovate. Fix: al retrieval va la query riscritta (messaggio
+  user), la domanda originale sta nel system prompt.
+* La similarity cache serviva vecchie risposte negative a domande
+  simili: cache disabilitata per la sola generazione (opt-in e rara);
+  resta attiva per la ricerca.
+* Prompt di generazione ristrutturato in regole ordinate (sintesi max
+  150 parole, cita solo 2-4 fonti nel formato [fonte: FILE], frase fissa
+  senza citazioni se non pertinente) e retrieval del generatore limitato
+  a 8 passaggi: prima produceva risposte contraddittorie con decine di
+  segnaposto.
+
 # Configurazione applicata (istanza `ars-sicilia-trascrizioni`)
 
 | Parametro | Valore | Perché |
