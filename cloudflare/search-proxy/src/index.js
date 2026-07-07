@@ -67,6 +67,11 @@ export default {
         q.includes('?') ||
         /^(chi|che|cosa|com[e']|dove|quando|perch[eé]|quale|quali|quant[oaie])\b/i.test(q);
       let effective = q;
+      // Esposto al frontend quando la riscrittura era dovuta ma non è
+      // riuscita, così l'utente sa che la ricerca ha usato la domanda così
+      // com'è invece di parole chiave estratte (comportamento diverso dal
+      // solito, non un bug silenzioso).
+      let notice = null;
       if (isQuestion) {
         try {
           const rw = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
@@ -85,8 +90,11 @@ export default {
           });
           const kw = (rw?.response || '').replace(/["'.,;:!?]/g, ' ').trim().split(/\s+/).slice(0, 4).join(' ');
           if (kw.length >= 2) effective = kw;
-        } catch {
-          // riscrittura fallita: si usa la query originale
+        } catch (err) {
+          const msg = String(err?.message || '');
+          notice = /neuron|4006/i.test(msg)
+            ? 'La riformulazione automatica delle domande in parole chiave non è disponibile in questo momento (limite giornaliero di utilizzo AI raggiunto, si ripristina a mezzanotte UTC). La ricerca ha usato la domanda così com\'è, con risultati meno mirati del solito.'
+            : 'La riformulazione automatica delle domande in parole chiave non è riuscita. La ricerca ha usato la domanda così com\'è.';
         }
       }
 
@@ -164,31 +172,39 @@ export default {
         // Il retrieval interno di chatCompletions usa l'ultimo messaggio user:
         // gli si passa la query riscritta (efficace), mentre la domanda
         // originale a cui rispondere viene data nel messaggio di sistema.
-        const aiResult = await env.SEARCH.chatCompletions({
-          messages: [
-            {
-              role: 'system',
-              content:
-                "I passaggi forniti sono trascrizioni di sedute dell'Assemblea Regionale Siciliana. " +
-                `La richiesta dell'utente è: "${q}". Rispondi in italiano a quella richiesta seguendo queste regole, in ordine:\n` +
-                '1. Usa SOLO le informazioni contenute nei passaggi. Mai conoscenza esterna, mai spiegazioni generali.\n' +
-                '2. Se i passaggi contengono informazioni pertinenti: scrivi una sintesi di massimo 150 parole, ' +
-                'citando nel testo SOLO le 2-4 fonti più rilevanti, ciascuna nel formato [fonte: NOMEFILE], ' +
-                "seguita dal minuto se noto (es. 'al minuto 00:37:39'). Non elencare le fonti che non citi.\n" +
-                '3. Se i passaggi NON contengono informazioni pertinenti: scrivi SOLO la frase ' +
-                '"Le trascrizioni disponibili non contengono informazioni su questo tema.", senza citazioni né altro.',
-            },
-            { role: 'user', content: effective },
-          ],
-          model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-          ai_search_options: genOptions,
-        }).catch(() => null);
-        answer = aiResult?.choices?.[0]?.message?.content || null;
+        try {
+          const aiResult = await env.SEARCH.chatCompletions({
+            messages: [
+              {
+                role: 'system',
+                content:
+                  "I passaggi forniti sono trascrizioni di sedute dell'Assemblea Regionale Siciliana. " +
+                  `La richiesta dell'utente è: "${q}". Rispondi in italiano a quella richiesta seguendo queste regole, in ordine:\n` +
+                  '1. Usa SOLO le informazioni contenute nei passaggi. Mai conoscenza esterna, mai spiegazioni generali.\n' +
+                  '2. Se i passaggi contengono informazioni pertinenti: scrivi una sintesi di massimo 150 parole, ' +
+                  'citando nel testo SOLO le 2-4 fonti più rilevanti, ciascuna nel formato [fonte: NOMEFILE], ' +
+                  "seguita dal minuto se noto (es. 'al minuto 00:37:39'). Non elencare le fonti che non citi.\n" +
+                  '3. Se i passaggi NON contengono informazioni pertinenti: scrivi SOLO la frase ' +
+                  '"Le trascrizioni disponibili non contengono informazioni su questo tema.", senza citazioni né altro.',
+              },
+              { role: 'user', content: effective },
+            ],
+            model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+            ai_search_options: genOptions,
+          });
+          answer = aiResult?.choices?.[0]?.message?.content || null;
+        } catch (err) {
+          const msg = String(err?.message || '');
+          notice = /neuron|4006/i.test(msg)
+            ? 'La generazione della risposta AI non è disponibile in questo momento (limite giornaliero di utilizzo AI raggiunto, si ripristina a mezzanotte UTC). Sotto trovi comunque i passaggi della ricerca.'
+            : 'La generazione della risposta AI non è riuscita. Sotto trovi comunque i passaggi della ricerca.';
+        }
       }
       return new Response(
         JSON.stringify({
           chunks,
           ...(effective !== q ? { query_used: effective } : {}),
+          ...(notice ? { notice } : {}),
           ...(ai ? { answer } : {}),
         }),
         { headers }
