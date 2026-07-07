@@ -11,6 +11,14 @@
 - Fix back del browser: `VideoEmbed` ora sostituisce il nodo iframe invece di riassegnare `src` (cambiare src a iframe caricato aggiunge una voce di history: il back restava sulla pagina video).
 - Quarto fix (post-rilascio): il reranker azzera le query italiane di una sola parola → euristica nel Worker (monoparola = BM25 puro senza reranker, soglia 0.1): "siccità" da 0-1 a 10/10 sedute. Header del corpus ridotto al solo titolo: URL/ID nei metadati matchavano query spurie (scoperto incollando l'URL della pagina nel campo di ricerca: 10 falsi risultati al 74%). Suggerimenti in pagina riscritti: parole chiave, non domande.
 
+# 2026-07-08 (sera)
+
+## Bug critico: ricerca non funzionava dopo rimozione checkbox AI
+
+- Rimuovendo il checkbox "Risposta AI" (esaurita franchigia Workers AI a metà giornata, fallimento silenzioso — vedi `wiki/decisioni/`) sono rimasti 3 riferimenti orfani a `aiCheckbox` non più dichiarata: `ReferenceError` silenzioso nel submit handler, ricerca completamente bloccata senza alcun feedback. Fix verificato in locale con agent-browser prima del push (lezione: da ora, verifica end-to-end locale prima di ogni push su questa pagina).
+- Aggiunto uno spinner di caricamento (SVG animato) + disabilitazione del pulsante "Cerca" durante la richiesta, per dare un riscontro visivo immediato.
+- Confronto costi Risposta AI: Cloudflare llama-3.3-70b ~$0.0016/richiesta con franchigia gratuita ~60-70/giorno; DeepSeek V3.2 Exp via OpenRouter ~$0.0011/richiesta ma senza franchigia gratuita — per il traffico atteso del sito, Cloudflare resta preferibile. Dettagli e istruzioni per riattivare la feature (Worker intatto, solo UI da reintegrare) in `wiki/decisioni/index.md`.
+
 # 2026-07-07
 
 ## Ricerca semantica trascrizioni (beta, Cloudflare AI Search)

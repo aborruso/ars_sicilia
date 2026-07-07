@@ -42,6 +42,38 @@ feature pubblica da subito.
   della configurazione. Il meccanismo "labs" (filtro sitemap + prop
   `noindex`) resta disponibile per futuri esperimenti.
 
+# Risposta AI generata: rimossa dalla UI pubblica, Worker intatto
+
+La feature "Risposta AI (sperimentale)" (checkbox, sintesi generata con
+`chatCompletions`) è stata rimossa dalla pagina il giorno stesso del
+rilascio.
+
+* **Perché**: la franchigia gratuita giornaliera di Workers AI (10.000
+  neurons) può esaurirsi con poco traffico — e il fallimento era
+  **silenzioso**: checkbox spuntato, nessuna risposta, nessuna
+  spiegazione. Un elemento visibile che smette di funzionare a metà
+  giornata senza preavviso è peggio che non averlo.
+* **Cosa resta**: la ricerca normale (retrieval, non generazione) non
+  usa modelli costosi per la generazione e non ne risente. Il Worker
+  (`cloudflare/search-proxy/src/index.js`) mantiene intatta tutta la
+  logica di generazione, guardrail anti-allucinazione e riscrittura
+  delle domande — nessun codice è stato tolto lato Worker, solo
+  l'interruttore lato pagina (~20 righe di HTML/JS: checkbox, box
+  risposta, invio del parametro `ai`).
+* **Costo stimato se riattivata**: ~$0.0016/richiesta con
+  `llama-3.3-70b-instruct-fp8-fast` (Workers AI); la franchigia gratuita
+  copre ~60-70 richieste/giorno. Un modello via OpenRouter (es. DeepSeek
+  V3.2 Exp, ~$0.0011/richiesta) costerebbe meno per unità ma non ha
+  franchigia gratuita — per il traffico atteso di questo sito, il piano
+  free di Cloudflare resta probabilmente più economico in assoluto.
+* **Come riattivarla**: recuperare da `git show a89baad:src/pages/ricerca/index.astro`
+  il blocco checkbox/box-risposta e le relative funzioni JS
+  (`setAnswer`, `sourceLink`, gestione del parametro `ai` in `search()`
+  e `syncURL()`), reintegrandoli nella pagina attuale. Consigliato
+  aggiungere, in quell'occasione, un limite giornaliero lato Worker
+  (contatore su KV) per mostrare "quota esaurita per oggi" invece di un
+  fallimento silenzioso.
+
 # Corpus RAG dentro il workflow esistente, non uno separato
 
 La generazione e sincronizzazione del corpus RAG (`data/rag_corpus/`)
