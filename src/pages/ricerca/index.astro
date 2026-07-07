@@ -136,13 +136,13 @@ const videoMap = Object.fromEntries(
         <article class="card p-6">
           <div class="flex flex-wrap items-center gap-2 mb-3">
             ${pageHref
-              ? `<a href="${esc(pageHref)}" class="text-lg font-display font-bold text-navy-800 hover:text-amber-600 transition-colors">${esc(label)}</a>`
+              ? `<a href="${esc(pageHref)}" data-astro-reload class="text-lg font-display font-bold text-navy-800 hover:text-amber-600 transition-colors">${esc(label)}</a>`
               : `<span class="text-lg font-display font-bold text-navy-800">${esc(label)}</span>`}
             ${tsBadge} ${score}
           </div>
           <p class="text-warm-700 leading-relaxed mb-3">${esc(excerpt(chunk.text || ''))}</p>
           <div class="flex flex-wrap gap-3 text-sm">
-            ${pageHref ? `<a href="${esc(pageHref)}" class="text-navy-800 hover:text-amber-600 underline underline-offset-2">Guarda sul sito</a>` : ''}
+            ${pageHref ? `<a href="${esc(pageHref)}" data-astro-reload class="text-navy-800 hover:text-amber-600 underline underline-offset-2">Guarda sul sito</a>` : ''}
             <a href="${esc(ytHref)}" target="_blank" rel="noopener noreferrer" class="text-navy-800 hover:text-amber-600 underline underline-offset-2">Apri su YouTube</a>
           </div>
         </article>`;
@@ -175,7 +175,7 @@ const videoMap = Object.fromEntries(
         const sourceLink = (m: string, id: string) => {
           const v = videoMap[id];
           if (!v) return m;
-          return `<a href="${esc(v.url)}" class="text-navy-800 font-semibold underline underline-offset-2 hover:text-amber-600">seduta n. ${esc(String(v.numero))} del ${fmtDate(v.data)}</a>`;
+          return `<a href="${esc(v.url)}" data-astro-reload class="text-navy-800 font-semibold underline underline-offset-2 hover:text-amber-600">seduta n. ${esc(String(v.numero))} del ${fmtDate(v.data)}</a>`;
         };
         const html = esc(text || '')
           .replace(/\[fonte:\s*([A-Za-z0-9_-]{11})\.md\]/g, (m: string, id: string) => `(${sourceLink(m, id)})`)
