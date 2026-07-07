@@ -66,13 +66,15 @@ rilascio.
   V3.2 Exp, ~$0.0011/richiesta) costerebbe meno per unità ma non ha
   franchigia gratuita — per il traffico atteso di questo sito, il piano
   free di Cloudflare resta probabilmente più economico in assoluto.
-* **Come riattivarla**: recuperare da `git show a89baad:src/pages/ricerca/index.astro`
-  il blocco checkbox/box-risposta e le relative funzioni JS
-  (`setAnswer`, `sourceLink`, gestione del parametro `ai` in `search()`
-  e `syncURL()`), reintegrandoli nella pagina attuale. Consigliato
-  aggiungere, in quell'occasione, un limite giornaliero lato Worker
-  (contatore su KV) per mostrare "quota esaurita per oggi" invece di un
-  fallimento silenzioso.
+* **Come riattivarla**: un flag, non più un recupero da git. In
+  `src/pages/ricerca/index.astro` c'è `const AI_ANSWER_ENABLED = false`
+  in cima al frontmatter — checkbox, box risposta e tutta la logica JS
+  restano nel codice, gated da quella costante (verificato: a `false`
+  zero markup generato nel build). Riattivare = cambiare `false` in
+  `true`. Prima di farlo in modo permanente, valutare un limite
+  giornaliero lato Worker (contatore su KV) per mostrare "quota esaurita
+  per oggi" invece di un fallimento silenzioso in caso di esaurimento
+  della franchigia Workers AI.
 
 # Corpus RAG dentro il workflow esistente, non uno separato
 
