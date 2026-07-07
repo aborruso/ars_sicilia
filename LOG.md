@@ -5,6 +5,7 @@
 - Caso "siccità" (10 sedute nel corpus, 1 restituita) → indagine con `scoring_details`: tre fix. (1) Hybrid search attivato (BM25+vettoriale, fusione RRF) — il solo vettoriale ha recall pessimo sui termini esatti. (2) `chunk_size` 1024→512 token: il reranker `bge-reranker-base` ha finestra di 512 token e vedeva solo metà chunk, azzerando i match nella seconda metà. (3) `keyword_match_mode: "or"` per-request nel Worker — il default "and" azzerava il recall delle query naturali multi-parola. Insidie documentate: similarity cache nei test A/B, accenti non normalizzati dal tokenizer keyword.
 - Rilascio pubblico: pagina spostata da `/labs/ricerca-<random>/` a `/ricerca/`, tolto noindex (ora in sitemap), voce "Cerca" con icona nel menu principale, suggerimenti d'uso sotto il campo (più parole = meglio, accenti richiesti), testo aggiornato (corpus completo, aggiornamento notturno).
 - Wiki aggiornato: `ricerca-trascrizioni/tuning-e-valutazione.md` riscritto con la storia dei tre problemi e le lezioni per test futuri.
+- Quarto fix (post-rilascio): il reranker azzera le query italiane di una sola parola → euristica nel Worker (monoparola = BM25 puro senza reranker, soglia 0.1): "siccità" da 0-1 a 10/10 sedute. Header del corpus ridotto al solo titolo: URL/ID nei metadati matchavano query spurie (scoperto incollando l'URL della pagina nel campo di ricerca: 10 falsi risultati al 74%). Suggerimenti in pagina riscritti: parole chiave, non domande.
 
 # 2026-07-07
 
