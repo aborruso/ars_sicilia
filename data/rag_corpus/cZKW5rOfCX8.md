@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 11:39)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: cZKW5rOfCX8
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1139/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] riprende. Chiedo all'assessore di prendere posto. Chiedo al presidente di Paola di sostituirmi. Buongiorno assessore. Avete già detto che siete al 20? Avete già detto che siamo al 20? Siamo al 20. Dov'è Dannino? C'è dannino. Ben

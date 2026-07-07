@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 248 del 6 maggio 2026 (video delle ore 15:05)
 
-- Seduta: 248
-- Data: 2026-05-06
-- Video YouTube: pPb8S7qST_o
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/06/seduta-248/video-1505/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] è aperta. Si passa al primo punto dell'ordine del giorno che reca giuramento di assessori regionali. Comunico che con PEC del 30 aprile 2026 rispettivamente protocollate ai numeri 14.758 DIG del 2026, 14.759 e 14.760 60 di pari data la segreteria generale della presidenza della regione ai sensi dell'articolo 13 della legge regionale 28 ottobre 2020 numero 26 legge statutaria ha trasmesso copia dei decreti presidenziali numero 99 area 1g 100 area 1g e 101 area 1g tutti del 29 aprile 2026 aventi ad oggetto la nomina ad assessore regionale. Invito il deputato segretario a darne lettura, ma leggo direttamente, leggo

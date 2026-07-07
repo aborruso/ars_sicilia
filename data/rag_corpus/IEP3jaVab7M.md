@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 01:17)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: IEP3jaVab7M
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-0117/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:02] Allora, colleghi, dopo lunghissime interlocuzioni, in funzione del fatto che debba prevalere il raggiungimento della legge di stabilità e che quindi possa partorire, alcuni articoli rimarranno al testo, altri verranno rinviati in via assolutamente prioritaria in due disegni di legge differenti, uno di natura economica e un altro di natura strettamente ordinamentale. Preciso che tutti gli articoli che verranno stralciati, che non sono passati dalle commissioni di merito, dovranno fare il passaggio. Tutte quelle che invece questo passaggio l'hanno già fatto non avranno lo stesso eh percorso. Pertanto, gli articoli che verranno trattati saranno l'8, l'11, il 15, il

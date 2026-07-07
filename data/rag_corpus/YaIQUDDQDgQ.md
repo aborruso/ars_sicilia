@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 235 del 10 marzo 2026 (video delle ore 15:39)
 
-- Seduta: 235
-- Data: 2026-03-10
-- Video YouTube: YaIQUDDQDgQ
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/10/seduta-235/video-1539/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato, approvato in assenza di osservazione in contrario nella presente seduta. L'onorevole Il congedo dell'onorevole Primavera. Avverto che le comunicazioni di rito di cui all'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato a al resoconto dell'odierna seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanti i deputati a ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di

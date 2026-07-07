@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 20:15)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: QiKb8qsQuuM
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-2015/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] Colleghi, sono stati presentati degli emendamenti che troverete all'interno della cartella Fuorisacco. Naturalmente, dopo il lavoro fatto per cercare di trovare una sintesi sull'articolo 1, tutti gli emendamenti all'articolo 1 li considero ritirati e iniziamo con >> onorevole Schillaci, lei deve intervenire. Prego. >> Qual è l'emendamento? >> Prego, onorevole Schillacci. >> Grazie presidente. >> Qual è? colleghi,

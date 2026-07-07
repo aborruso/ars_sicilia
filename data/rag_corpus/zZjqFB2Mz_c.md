@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 243 del 14 aprile 2026 (video delle ore 15:04)
 
-- Seduta: 243
-- Data: 2026-04-14
-- Video YouTube: zZjqFB2Mz_c
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/14/seduta-243/video-1504/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Comunico il congedo dell'onorevole L'Accoto. Comunico che l'onorevole Chinnici sarà in ammissione dal 16 al 17 aprile 2026. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante

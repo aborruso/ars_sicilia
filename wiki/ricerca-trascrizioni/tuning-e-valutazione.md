@@ -76,6 +76,23 @@ override per-request (scelta versionata nel repo, non nella config
 dell'istanza — l'endpoint REST per aggiornare `retrieval_options`
 dell'istanza non è risultato disponibile).
 
+## 4. Query di una sola parola: il reranker le azzera
+
+Anche a configurazione sistemata, "caccia" o "siccità" da sole davano 0
+risultati: il cross-encoder `bge-reranker-base` (addestrato
+prevalentemente su inglese) assegna punteggi quasi nulli a una singola
+parola italiana confrontata con un chunk lungo — nemmeno con soglia
+0.05 passava qualcosa, mentre le query multi-parola escono a 0.7-0.9.
+**Fix (euristica nel Worker)**: se la query è una parola sola →
+`retrieval_type: "keyword"` (BM25 puro), reranking disattivato, soglia
+0.1, pool 20 — il match keyword è già autorevole (il chunk contiene la
+parola = è pertinente) e il recall torna completo ("siccità": 10 sedute
+su 10, verificato col grep). Query multi-parola → hybrid + reranker come
+prima. Nota: anche l'header del corpus è stato ridotto al solo titolo —
+URL e ID nei metadati facevano da esca per query contenenti quei token
+(scoperto incollando per sbaglio l'URL della pagina nel campo di
+ricerca: 10 "risultati" al 74%).
+
 # Configurazione applicata (istanza `ars-sicilia-trascrizioni`)
 
 | Parametro | Valore | Perché |
@@ -84,6 +101,7 @@ dell'istanza non è risultato disponibile).
 | `index_method` | vector + keyword (**hybrid**, fusione RRF) | Il solo vettoriale ha recall pessimo su termini esatti e nomi propri |
 | `reranking` | Attivo, `@cf/baai/bge-reranker-base` | Separa nettamente match veri da rumore (0.77-0.97 vs sotto soglia) |
 | `keyword_match_mode` | "or" (override nel Worker, per request) | "and" azzera il recall delle query naturali multi-parola |
+| Query monoparola | keyword-only, no rerank, soglia 0.1 (euristica nel Worker) | Il reranker azzera le query italiane di una parola; BM25 è già autorevole |
 | `score_threshold` | 0.4 | Default; con reranking efficace taglia bene il rumore |
 | `max_num_results` | 20 | Pool più ampio per la fusione/reranking |
 | similarity cache | Attiva, "strong" | Risparmia quota; da tenere presente nei test (stessa query = risposta cache) |

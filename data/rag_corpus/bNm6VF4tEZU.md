@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 254 del 9 giugno 2026 (video delle ore 15:37)
 
-- Seduta: 254
-- Data: 2026-06-09
-- Video YouTube: bNm6VF4tEZU
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/09/seduta-254/video-1537/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso ai 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanti i deputati a ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Avverto che le comunicazioni di rito di cui è l'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato A resoconto dell'odierna seduta. Inverto che l'onorevole Riccardo Antonio

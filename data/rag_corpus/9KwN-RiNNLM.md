@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 246 del 22 aprile 2026 (video delle ore 15:40)
 
-- Seduta: 246
-- Data: 2026-04-22
-- Video YouTube: 9KwN-RiNNLM
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/22/seduta-246/video-1540/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posta a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerata approvato in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanti i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Qui abbiamo il congedo dell'onorevole Pace Auteri Albano Marchetta. Benissimo, colleghi. La conferenza dei capigruppo riunitasi oggi 22 aprile alla presenza

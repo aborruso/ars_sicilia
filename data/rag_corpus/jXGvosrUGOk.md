@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 241 del 7 aprile 2026 (video delle ore 15:24)
 
-- Seduta: 241
-- Data: 2026-04-07
-- Video YouTube: jXGvosrUGOk
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/07/seduta-241/video-1524/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] La seduta è aperta. Lettura do lettura del decreto del presidente del Consiglio dei Ministri del 27 marzo 2026 relativo alla sospensione di diritto dalla carica di deputato regionale dell'onorevole Michele Mancuso. Decreto notificato a questa assemblea regionale con nota PEC del commissario dello Stato per la Regione Siciliana del 2 aprile 2026. protocollata in pari data al numero 11813. L'assemblea ne prende atto con con effetto a decorrere dal 14 febbraio 2026 accertata la sospensione del signor Michele Mancuso dalla carica di deputato dell'Assemblea regionale Siciliana ai sensi dell'articolo 78 del decreto legislativo 31 dicembre 2012 numero 235 la sospensione cessa nel caso in cui nei confronti dell'interessato venga meno

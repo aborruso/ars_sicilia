@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 221 del 13 gennaio 2026 (video delle ore 17:28)
 
-- Seduta: 221
-- Data: 2026-01-13
-- Video YouTube: Vwvq1EYAxpE
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/13/seduta-221/video-1728/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Questo è in viaggio per un operere tra cui locali. >> Sì, sì. Comunico che a seguito dell'approvazione della legge di bilancio della regione per il trienno 2026-202 i seguenti disegni di legge sono inviati alla commissione bilancio al fine di procedere all'aggiornamento delle disposizioni finanziarie in esse contenute e quindi avremo il disegno di legge numero 738 enti locali che va in commissione. No, rimani in aula. Ma ok, >> per il parere sul sull'articolo. Allora, sì, il disegno di legge 738 stralcio 1 comma terà con riguardo al comma 4 dell'articolo 1 ed al comma 3 dell'articolo 13 va in commissione bilancio, poi e rimane in aula sempre incardinato. Riconoscimento della

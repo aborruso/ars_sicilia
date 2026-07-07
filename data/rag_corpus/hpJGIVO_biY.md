@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 237 del 24 marzo 2026 (video delle ore 15:34)
 
-- Seduta: 237
-- Data: 2026-03-24
-- Video YouTube: hpJGIVO_biY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/24/seduta-237/video-1534/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] è aperta. Avverto che i processi verbali delle sedute numero 235 del 10 marzo 2026 e 236 dell'11 marzo 2026 sono posti a disposizione gli onorevoli deputati che intendano prenderne visione e sono considerati approvati in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85 ovvero la domanda scrutino nominale o discrutino segreto, articolo 127 sono effettuate mediante procedimento elettronico. 10. Comunico che l'onorevole Claudici sarà in missione dal 9 al 10 aprile 2026. L'assemblea ne prende atto.

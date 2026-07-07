@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 224 del 28 gennaio 2026 (video delle ore 16:54)
 
-- Seduta: 224
-- Data: 2026-01-28
-- Video YouTube: 1Ox4EcC4sKU
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/28/seduta-224/video-1654/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Seduta è aperta. Colleghi prima commissione a prendere. >> All'interno dei vostri tablet troverete il disegno di legge con gli emendamenti. Invito la prima commissione a prendere posto. Dov'è il presidente? Abate la prima commissione. il governo, se mi chiamate il vicepresidente, così iniziamo. Poi non è che togliamo Ok,

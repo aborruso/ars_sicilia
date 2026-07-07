@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 228 del 11 febbraio 2026 (video delle ore 15:36)
 
-- Seduta: 228
-- Data: 2026-02-11
-- Video YouTube: xxALoliKO04
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/11/seduta-228/video-1536/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta 226 del 4 febbraio 2026 è posto a disposizione degli onorevoli deputati che intendono prendere visione di considerato approvato in assenza di osservazione in contrario nella presente seduta. Ai es sensi del comma 9 dell'articolo 127 del regolamento interno do il previso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della terzera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuati mediante procedimento elettronico. All'articolo 10.

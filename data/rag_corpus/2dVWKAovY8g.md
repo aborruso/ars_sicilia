@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 219 del 10 dicembre 2025 (video delle ore 15:28)
 
-- Seduta: 219
-- Data: 2025-12-10
-- Video YouTube: 2dVWKAovY8g
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/10/seduta-219/video-1528/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta riprende. Ho l'intervento adesso è iscritto a parlare l'onorevole Giristro e poi l'onorevole Venezia. Prego. Onorevole Giristro. >> Vuoi parlare prima? Vuoi parlare prima? >> Grazie presidente. Grazie colleghi. Grazie assessore. Buongiorno. Buon pomeriggio assessore. >> Allora, volevo dirle questo, assessore. Mi rivolgo prima di tutto prima di tutti a lei perché lei lo sa con quale affetto e quale stima ho nella sua persona. Il problema è che lei non è la l'artefice assessore, forse lei è anche vittima perché il problema non è la persona. Quando noi aggridiamo la persona non è

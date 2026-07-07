@@ -23,7 +23,6 @@ ANAGRAFICA = REPO_ROOT / "data" / "anagrafica_video.csv"
 TRASCRIZIONI_DIR = REPO_ROOT / "data" / "trascrizioni"
 DEFAULT_OUTPUT = REPO_ROOT / "data" / "rag_corpus"
 
-SITE_BASE = "https://aborruso.github.io/ars_sicilia"
 PARAGRAPH_SECONDS = 60
 
 MESI = [
@@ -87,23 +86,14 @@ def data_italiana(iso_date: str) -> str:
     return f"{int(d)} {MESI[int(m) - 1]} {y}"
 
 
-def video_page_url(row) -> str:
-    y, m, d = row["data_seduta"].split("-")
-    ora = row["ora_video"].replace(":", "")
-    return f"{SITE_BASE}/sedute/{y}/{m}/{d}/seduta-{row['numero_seduta']}/video-{ora}/"
-
-
 def render_markdown(row, paragraphs, variant: str) -> str:
     numero = row["numero_seduta"]
     data_it = data_italiana(row["data_seduta"])
+    # Header minimale: niente URL, ID o boilerplate — inquinano il retrieval
+    # (i token dell'URL matchano qualunque query che li contenga; il link alla
+    # pagina video lo ricostruisce il frontend dal nome file = youtube_id).
     lines = [
         f"# Assemblea Regionale Siciliana — seduta n. {numero} del {data_it} (video delle ore {row['ora_video']})",
-        "",
-        f"- Seduta: {numero}",
-        f"- Data: {row['data_seduta']}",
-        f"- Video YouTube: {row['youtube_id']}",
-        f"- Pagina video: {video_page_url(row)}",
-        "- Fonte: trascrizione automatica dei sottotitoli YouTube",
         "",
         "## Trascrizione",
         "",

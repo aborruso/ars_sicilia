@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 243 del 14 aprile 2026 (video delle ore 15:39)
 
-- Seduta: 243
-- Data: 2026-04-14
-- Video YouTube: 1sAAkQJ8bbA
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/14/seduta-243/video-1539/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:03] Cari colleghi, allora la conferenza dei capigruppo all'unanimità ha stabilito che l'emendamento sulla sanità sul disegno legge della sanità sul disegno di legge sulla sanità sesta verrà votato domani. Eh, verranno votati gli amendamenti aggiuntivi. Verranno votato il disegno di legge e gli emendamenti aggiuntivi. Per quanto riguarda invece tra cui l'emendamento l'emendamento sulla gratuità dei trasporti, primo gratuità trasporti e forze dell'ordine caro Gasolio e Alma Viva, sempre previo parere parere della commissione bilancio. Sulla proroga invece sul sugli ASU sullo viene vorranno votati sullo stralcio con parere sempre della commissione bilancio sullo stralcio prima con riferimento al disegno di legge numero 1030 stralcio primo a norme in materia di personale di autorizzazione

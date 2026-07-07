@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 261 del 1 luglio 2026 (video delle ore 15:14)
 
-- Seduta: 261
-- Data: 2026-07-01
-- Video YouTube: 1iK5iZFziVo
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/07/01/seduta-261/video-1514/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:08] Avverto che il processo verbale della seduta precedente è posto a disposizione agli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Venezia. Comunico il congedo dell'onorevole Venezia. Comunico che con nota protocollo 1146 del 30 giugno 2026 la commissione parlamentare speciale di inchiesta e vigilanza del fenomeno della mafia della corruzione in Sicilia è stata autorizzata a riunirsi nella giornata di lunedì 6 luglio 2026 presso la Prefettura di Catania secondo l'ordine del giorno nella commissione medesima. L'assemblea ne prende atto. Allora, comunico che è in data luglio comunico che in data 1 luglio 2026 si è costituito il gruppo parlamentare denominato concorrente Ismaele Lavardera

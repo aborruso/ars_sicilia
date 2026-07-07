@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 238 del 25 marzo 2026 (video delle ore 16:00)
 
-- Seduta: 238
-- Data: 2026-03-25
-- Video YouTube: AkMdypB4iK8
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/25/seduta-238/video-1600/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Allora, colleghi, così come deciso in conferenza dei capigruppo, il programma rimane assolutamente invariato rispetto a quanto stabilito nelle settimane precedenti. In più, rispetto a quello che avevamo concordato, ci sarà l'approvazione del consolidato che oggi è stato esitato dalla commissione bilancio e che faremo martedì prossimo. E che faremo martedì prossimo. Poi rimane invariato mercoledì prossima mercoledì prossimo attività ispettiva con l'assessore Savarino per il territorio ambiente. Martedì invece ci sarà ricordo il disegno di legge sullo stralcio della sessa commissione. Pertanto adesso invece andiamo a trattare il disegno di legge sulle variazioni di bilancio. Lo str lo strico primo, lo str quinto gli emendamenti. Il termine degli emendamenti è venerdì. Ah, abbiamo deciso inoltre che il

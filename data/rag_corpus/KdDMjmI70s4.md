@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 20:31)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: KdDMjmI70s4
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-2031/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:10] Chiedo la presenza del governo in aula. Non vedo l'assessore Dannino. Mettete glielo mettete al presidente lo dove vai? Dove vai? Dove vai?

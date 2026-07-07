@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 219 del 10 dicembre 2025 (video delle ore 12:12)
 
-- Seduta: 219
-- Data: 2025-12-10
-- Video YouTube: R_n5fqhw6DY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/10/seduta-219/video-1212/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta riprende. Governo in aula c'è assessore D'Agnino e presidente della commissione bilancio e ai banchi della commissione. Colleghi, continuiamo la discussione generale rispetto a quello che avevamo stabilito. Chiedo ai colleghi di registrarsi per intervenire. Ovviamente chi è già chi già ha fatto l'intervento nella seduta passata della discussione generale non può nuovamente intervenire oggi sulla discussione generale. La discussione è aperta. Onorevole Burtone, lei non ha Lei mi pare non era intervenuto. Ah, prego. >> Burtone è intervenuto? Sicuro, onorevole Burtone, non è intervenuta nella discussione generale. >> Non era intervenut prego, prego. Forse è intervenuto sull'ordine dei lavori, ricordo e poi sull'ex articolo 83.

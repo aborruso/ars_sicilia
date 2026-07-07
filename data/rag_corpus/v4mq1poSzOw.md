@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 17:58)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: v4mq1poSzOw
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1758/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] volte. Allora, >> siamo a gol. Allora colleghi, siamo al 6 GOV, >> c'è la riscrittura come annunciato emendamento. Sì, il se Golf 1. No, c'è un'ulteriore riscrittura al Se1, ma anche che gli scrivessimo la pace nel mondo, già ho capito. Così ha sensazione che c'è una richiesta di voto segreto, quindi maladia. Prego. Orevole Catanzaro che vuole dire? Ha fatto così.

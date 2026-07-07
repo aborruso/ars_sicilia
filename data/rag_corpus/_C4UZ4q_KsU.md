@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 233 del 3 marzo 2026 (video delle ore 16:38)
 
-- Seduta: 233
-- Data: 2026-03-03
-- Video YouTube: _C4UZ4q_KsU
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/03/seduta-233/video-1638/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione agli onevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione incontraria nella presente seduta. Comunico il congedo dell'onorevole Burtone per oggi e domani mercoledì 4 marzo. Avverto che le comunicazioni di diritto di quell'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato A ha resoconto dell'odierna seduta. Comunico che a rettifica della precedente comunicazione relativa alla seduta d'aula numero 231 del 24 febbraio 2026 la richiesta di parere numero 149 da ritenersi limitata esclusivamente alla seconda commissione legislativa permanente bilancio, a differenza di quanto pr precedentemente riportato per mero errore materiale l'assemblea ne prende atto. I sensi del comma9 dell'articolo 127 del

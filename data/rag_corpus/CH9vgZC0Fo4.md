@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 227 del 10 febbraio 2026 (video delle ore 16:49)
 
-- Seduta: 227
-- Data: 2026-02-10
-- Video YouTube: CH9vgZC0Fo4
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/10/seduta-227/video-1649/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Concedo dell'onorevole >> comunico il concedo dell'onorevole Albano per la seduta di mercoledì 11 febbraio per oggi Bone per motivi di salute >> e comunico il congedo dell'onorevole Burtone per la seduta di oggi per motivi di salute. >> Comunico che l'onorevole Scuvera sarà in missione dall'11 al 12 febbraio 2026. L'assemblea ne prende atto sia l'autorizzazione >> e questa è l'autorizzazione. Perfetto. >> Ai sensi del comma 9 dell'articolo 127 del regolamento interno del previso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale

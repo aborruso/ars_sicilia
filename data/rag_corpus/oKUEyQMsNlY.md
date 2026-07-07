@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 229 del 17 febbraio 2026 (video delle ore 15:50)
 
-- Seduta: 229
-- Data: 2026-02-17
-- Video YouTube: oKUEyQMsNlY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/17/seduta-229/video-1550/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:02] La seduta è aperta. Avverto che i processi verbali della seduta numero 227 del 10 febbraio 2026 e e 228 dell'11 febbraio 2026 sono posti a disposizione degli onorevoli deputati che intendono prenderne visione e sono considerati approvati in assenza di osservazione in contrario nella presente seduta. L'assemblea ne prende atto. A sensi della del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio siedetto, sono effettuati mediante procedimento elettronico.

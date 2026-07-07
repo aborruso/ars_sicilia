@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 255 del 10 giugno 2026 (video delle ore 15:27)
 
-- Seduta: 255
-- Data: 2026-06-10
-- Video YouTube: IP_kGqUzjqc
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/10/seduta-255/video-1527/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione agli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno, do il preavviso di 30 minuti al fine delle eventuali votazioni medianti procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85, ovvero la domanda di scrutino nominale o discrutino segreto articolo 127 sono effettuate mediante procedimento elettronico. Comunico i congedi dell'onorevole Santo Primavera, dell'onorevole Giovanni Di Mauro e dell'onorevole Burtone per motivi di salute. Bene, colleghi,

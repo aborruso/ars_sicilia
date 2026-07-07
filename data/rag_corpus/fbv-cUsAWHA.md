@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 236 del 11 marzo 2026 (video delle ore 15:57)
 
-- Seduta: 236
-- Data: 2026-03-11
-- Video YouTube: fbv-cUsAWHA
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/11/seduta-236/video-1557/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Fabri, avverto che le comunicazioni di rito di cui all'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato A resoconto dell'odierna seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanti deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Allora, questa questo è

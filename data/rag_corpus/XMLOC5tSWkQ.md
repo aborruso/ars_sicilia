@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 250 del 13 maggio 2026 (video delle ore 19:00)
 
-- Seduta: 250
-- Data: 2026-05-13
-- Video YouTube: XMLOC5tSWkQ
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/13/seduta-250/video-1900/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] a votare la la Nel frattempo che gli uffici preparano gli emendamenti che avete presentato, votiamo la 50. La 50 che è a firma dell'onorevole assenza. Chi è favorevole rimanga seduto. Chi è contrario si alzi. È approvato. Andiamo all'emendamento. È la 18. Aspetta a 50 approva. Aspetta a 50. Mi dici qual era un emendamento di Abate? C'è l'emendamento abbate accantonato. Qual era un emendamento di Abate? Sì, c'è un emendamento di Abate accantonato. Sì, la 30. C'è una 30. C'è un emendamento al 30. Articolo 9. No, è stato approvato, mi pare. Ora vediamo. No, l'articolo 9. Ora lo votiamo. Allora, onorevole Intravaglio, facciamo tutto, non ti preoccupi. Allora, A30 con A30.1.

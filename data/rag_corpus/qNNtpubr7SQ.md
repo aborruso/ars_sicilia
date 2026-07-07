@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 239 del 31 marzo 2026 (video delle ore 15:23)
 
-- Seduta: 239
-- Data: 2026-03-31
-- Video YouTube: qNNtpubr7SQ
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/31/seduta-239/video-1523/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in osservazioni in assenza di osservazione in contrario nella presente seduta. A es comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Comunico i congedi dell'onorevole Abate, Saverino, Ersilia, eh, Dario, Safina e donorevole Di Pasquale. Sono altri?

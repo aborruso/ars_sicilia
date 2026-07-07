@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 249 del 12 maggio 2026 (video delle ore 17:05)
 
-- Seduta: 249
-- Data: 2026-05-12
-- Video YouTube: kYX47otETyE
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/12/seduta-249/video-1705/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] seduta riprendere. Prego, assessore. Ha chiesto di intervenire. Grazie presidente. Preferisco chiedere il ritiro della dell'emendamento per maggiori approfondimenti. Va bene. Allora, sul cinque. Allora, sostanzialmente in funzione del fatto che non si può ritirare un articolo al testo, mettiamo in votazione l'articolo 5. Chi è favorevole si alzi, chi è contrario rimanga seduto. L'articolo 5 non è approvato. Andiamo invece all'articolo 6. Ok, ci sono dei soppressivi a firma dell'onorevole Catanzara e altri mantenuti o ritirati. Cosa? Ritiro. Grazie. Allora, 6.1 ritirato, 6.2 ritirato, 6.3 sempre Catanzaro ritirato, 6.4 Catanzaro ritirato, 6.8

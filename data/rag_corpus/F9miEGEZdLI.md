@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 257 del 17 giugno 2026 (video delle ore 15:33)
 
-- Seduta: 257
-- Data: 2026-06-17
-- Video YouTube: F9miEGEZdLI
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/17/seduta-257/video-1533/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:03] Avverto che il processo verbale della seduta precedente è posto a disposizione agli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazioni in contrari in contrario nella presente seduta. Salve assessore. Ai sensi del comma 9 dell'articolo 127 del regolamento interno, do il preavviso di una trentina di minuti al fine delle eventuali votazioni medianti procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85 ovvero la domanda discrutino nominale o scrutino segreto articolo 127 sono effettuate mediante procedimento elettronico. Il presidente della commissione Vitrano è seduto ai banchi della commissione, ha già fatto la relazione. Il governo è presente con l'assessore e quindi la discussione è aperta. Che cosa succede

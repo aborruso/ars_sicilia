@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 222 del 14 gennaio 2026 (video delle ore 15:23)
 
-- Seduta: 222
-- Data: 2026-01-14
-- Video YouTube: 89M05t-iKuk
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/14/seduta-222/video-1523/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:03] Avverto che il processo verbale della seduta precedente è posta a disposizione dagli onorevoli deputati che intendono prendere visione ed è considerata approvato in assenza di osservazione in contrario nella presente seduta. ai sensi del comma 9 articolo 127 del regolamento interno, do il previso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovesse aver luogo nel corso della seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Allora, invito la prima commissione a prendere posto. Invito il presidente a rendere la relazione. Il presidente della commissione >> commissione. Allora, invito la commissione a prendere posto e il presidente della commissione per la relazione. Prego.

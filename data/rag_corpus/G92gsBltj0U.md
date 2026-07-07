@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 223 del 27 gennaio 2026 (video delle ore 16:51)
 
-- Seduta: 223
-- Data: 2026-01-27
-- Video YouTube: G92gsBltj0U
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/27/seduta-223/video-1651/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] La seduta riprende. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno, do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Ci sono i congedi dell'onorevole Giuseppe Lombardo del gruppo Sud Chiaman, dell'onorevole Bernardet Grasso

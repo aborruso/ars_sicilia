@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 259 del 24 giugno 2026 (video delle ore 15:15)
 
-- Seduta: 259
-- Data: 2026-06-24
-- Video YouTube: 2qdvHNZpwM0
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/24/seduta-259/video-1515/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] è aperta. Passiamo al primo punto dell'ordine del giorno che sono che lo svolgimento di interrogazione della rubrica famiglie, politiche sociali e lavoro. L'assessore è in aula. Avverto che il processo verbale della seduta precedente è posto a disposizione onevoli deputati che intendono prenderne visione ed è considerata approvata in assenza di osservazione in contrario nella presente seduta. Andiamo subito alla prima interpellanza. Sala 151 che è a firma dell'onorevole Giambona che vedo in aula e quindi a lei la parola poi assessore la numero 151 al solito assessore se se può se riesce sempre una sintesi ovviamente poi al al collega Giambona gli chiedi diamo tutto il il documento. Prego. Prego assessore. Sì, ma ci sono. No, non sarò

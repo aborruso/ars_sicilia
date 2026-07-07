@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 00:01)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: 4Gw3chuAH-0
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-0001/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] a riprendere. Si sono anche strappati i pantaloni per colpa di dell'onorevole De Luca. Onorevole De Luca. >> No, no, lo so. Ora lo rimette. Onorevole De Luca, sto comunicando all'aula che lei mi ha fatto perdere. Qual è il fondo? No,

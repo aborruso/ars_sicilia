@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 15:57)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: hdBrcmGOUWM
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1557/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] E la seduta è aperta, la discussione >> la discussione generale è chiusa. Passiamo subito al passaggio degli articoli. Chi è favorevole rimangao, che è contrario si alzi. Il passaggio degli articoli è approvato. Colleghi, >> ho solamente Ho solamente fatto il passaggio degli articoli >> del bilancio >> del del bilancio. Dico, dobbiamo discutere del bilancio, devo fare prima il passaggio degli articoli. Quindi >> anche della manovra il passaggioarticolo è unificato il passaggio degli articoli è unificato e si inizia dal bilancio e quindi se in aula magari ehm c'è un attimino un po' più di silenzio mi ascoltate?

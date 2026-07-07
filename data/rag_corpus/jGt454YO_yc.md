@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 231 del 24 febbraio 2026 (video delle ore 15:15)
 
-- Seduta: 231
-- Data: 2026-02-24
-- Video YouTube: jGt454YO_yc
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/24/seduta-231/video-1515/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza e osservazione in contrario nella presente seduta. Avverto che le comunicazioni di rito di cui all'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato a al resoconto dell'odierna seduta. Comunico che a seguito dell'accettazione come raccomandazione da parte del governo nella seduta numero 223 del 27 gennaio 2026 dell'ordine del giorno numero 512 è da considerarsi conseguentemente superata la mozione numero 329 in quanto di identico contenuto. L'assemblea ne prende atto.

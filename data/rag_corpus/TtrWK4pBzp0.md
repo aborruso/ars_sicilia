@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 251 del 26 maggio 2026 (video delle ore 15:21)
 
-- Seduta: 251
-- Data: 2026-05-26
-- Video YouTube: TtrWK4pBzp0
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/26/seduta-251/video-1521/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] è aperta. Avverto che i processi verbali delle sedute numero 249 del 12 maggio 2026 e 250 del 13 maggio 2026 sono posti a disposizione degli onorevoli deputati che intendono prenderne visione e sono considerati approvati in assenza di osservazioni in contrario nella presente seduta ai sensi del comma 9 dell'articolo 127 regolamento interno. Do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85 ovvero la domanda di scrutino nominale o di scrutino segreto articolo 127 sono effettuate mediante procedimento elettronico.

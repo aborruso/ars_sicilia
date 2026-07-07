@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 17:54)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: x2TPvo-LuVs
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1754/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] C'è questa differenza. La seduta riprende. Allora, colleghi, siamo all'articolo 84 >> dopo dopo l'84. I soppressivi immagino che siano ritirati. C'è l'onorevole Sunzeri, chiede a lui. L'onorevole Catanzaro. Va bene. Sì, sì, assolutamente. Aspetto tutto il tempo che le serve. L'84.7 inammissibile l'84.29 inammissibile. Ah, si vota solo il mantenimento. È inutile perché tanto si vota solo il mantenimento. Mettiamo in votazione l'articolo 84. Chi è favorevole ressi seduto. Chi è contrario si alzi. È approvato prima, nella fretta abbiamo votato l'emendamento dell'80, ma non l'articolo. Pertanto mettiamo in votazione l'articolo 80. Chi è favorevole ressi seduto, chi è contrario

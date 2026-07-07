@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 230 del 18 febbraio 2026 (video delle ore 15:34)
 
-- Seduta: 230
-- Data: 2026-02-18
-- Video YouTube: g8c5zDOasxY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/18/seduta-230/video-1534/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovesse avere ruolo nel corso della presente seduta. Invito pertanto i deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuati mediante procedimento elettronico. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendono prendere visione ed è considerato approvato nel senso di osservazione in contrario nella presenza seduta. Burone per motivi di comunico che l'onorevole Burtone oggi 18 febbraio per motivi di salute sarà

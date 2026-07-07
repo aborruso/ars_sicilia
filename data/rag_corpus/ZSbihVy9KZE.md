@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 224 del 28 gennaio 2026 (video delle ore 11:06)
 
-- Seduta: 224
-- Data: 2026-01-28
-- Video YouTube: ZSbihVy9KZE
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/28/seduta-224/video-1106/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Colleghi, >> diamo le comunicazioni ai sensi del comma dell'articolo 127 del regolamento interno. Do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della terza personale di voto. Vi ricordo che anche la richiesta di verifica del numero legale articolo 85, ovvero la domanda scrutino, scrutino nominale o scrutino segreto articolo 127 sono effettuate mediante procedimento elettronico. Colleghi, così come avevamo concordato, noi dobbiamo chiudere la discussione generale sugli enti sugli enti locali, sul disegno dei leggi degli enti locali. Qui quindi chiedo ai colleghi se c'è qualcuno che volesse intervenire. sono autorizzate, >> quindi sono autorizzate le commissioni antimafia quarta e sesta a continuare le attività di commissione parallelamente all'aula

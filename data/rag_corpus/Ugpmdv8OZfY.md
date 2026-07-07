@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 222 del 14 gennaio 2026 (video delle ore 16:27)
 
-- Seduta: 222
-- Data: 2026-01-14
-- Video YouTube: Ugpmdv8OZfY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/14/seduta-222/video-1627/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Prego, onorevole Gilistro, completi. >> Grazie. No, presidente, devo dire che l'interlocuzione che ho avuto con l'assessore, con i miei colleghi, con l'onorevole Figucci e tutti i miei colleghi è quello di scendere un pochino ed essere responsabili tutti quanti insieme. Io chiedo però un impegno importantissimo e che non è derogabile, non è derogabile in tempi brevissimi la convocazione in commissione in commissione la convocazione dei presidenti, parlo per tutta la Sicilia, dei presidenti del Libero di Consorzio, dei sindaci che svolgono e che devono svolgere questo ruolo per salvaguardare i nostri ragazzi e soprattutto per la loro incolumità fisica oltre che psichica. E non dobbiamo permettere ai ragazzi di scioperare, dobbiamo essere noi a impedire ai ragazzi di entrare a scuola che sono frigoriferi a 5-6°. Quindi accetto e scendo da questo con questo impegno che lei presidente, so di quanto lei è presidente giusto e presidente di

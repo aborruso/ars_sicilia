@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 01:29)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: UF-rjbQPqGE
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-0129/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] Allora, la seduta riprende. Prima c'è la votazione della nota di variazione. >> Chi è favorevole resti seduto. Chi è contrario si alzi. È approvata. Adesso ci sono c'è il voto finale, però ho capito che c'era il capogruppo. C'era dichiarazione di voto. No. Sì. >> Sì. Capogruppo del Movimento 5 Stelle, onorevole De Luca. Prego. Presidente, al termine di una settimana in cui quest'aula si è contraddistinta più

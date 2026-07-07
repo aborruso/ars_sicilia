@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 221 del 13 gennaio 2026 (video delle ore 15:13)
 
-- Seduta: 221
-- Data: 2026-01-13
-- Video YouTube: -1zQYv-SupY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/13/seduta-221/video-1513/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Comunico che la gara di fiducia di Santo Razio Primavera con nota PEC del 29 dicembre 2025 protocollata in pari data, ha trasmesso copia della sentenza della Corte di Cassazione prima sezione civile numero 344/2025 pubblicata il 28 dicembre 2025 con la quale viene rigettato il ricorso di Salvatore Giuffrida verso la sentenza della Corte d'Appello di Palermo. Prima sezione civile numero 89 del 22 gennaio 2025 che aveva accolto l'appello proposto da Sant'Orazio Primavera dichiarando lo stesso giuffride ineleggibile alla carica di deputato dell'Assemblea regionale siciliana. Ricordo altresì che in esecuzione della sentenza della Corte d'Appello di Palermo numero 8925 Santo Razio Primavera a seguito del giuramento di rito prestato nella seduta d'aula 151 del 28 gennaio 2025 veniva

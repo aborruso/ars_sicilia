@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 219 del 10 dicembre 2025 (video delle ore 11:30)
 
-- Seduta: 219
-- Data: 2025-12-10
-- Video YouTube: w8pMFL57a44
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/10/seduta-219/video-1130/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] deputati che intendono prendere visione ed è considerato approvato in assenza di osservazioni in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85, ovvero la domanda di scrittino nominale o di scrutino segreto articolo 127 sono effettuate mediante procedimento elettronico. Colleghi, solo per comunicarvi che rinvio la seduta di una una mezz'oretta. Sì, sì, una mezz'oretta e riprendiamo. Sì. No. Ehm, quindi la seduta è rinviata alle >> alle 12:00 seduta è sospetta

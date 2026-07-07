@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 11:32)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: yOUahsk64Is
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1132/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] è aperta. >> Chiede ai colleghi di prendere posto. Siamo arrivati all'articolo 2. Il governo è pres. Ok. Chiedo al governo però di dirlo al microfono così che gli altri colleghi possano sentirlo. >> Sì, buongiorno. Grazie presidente. Essendo stato ieri approvato un una riscrittura parziale dell'articolo 1 con alcuni emendamenti e i miei uffici stanno lavorando all'adeguamento dell'articolo 2 per renderlo omogeneo con l'articolo 1. Quindi chiederei, essendo ancora in corso questo lavoro, di accantonarlo per un momento e passare a un altro articolo. Grazie. >> Andiamo direttamente allora all'articolo 3. Chiedo al presidente di Paola di potermi sostituire. Qua, qua.

@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 249 del 12 maggio 2026 (video delle ore 15:38)
 
-- Seduta: 249
-- Data: 2026-05-12
-- Video YouTube: vrrzxESNk_4
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/12/seduta-249/video-1538/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanti deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. C'è il congedo dell'onorevole Di Pasquale per oggi. Avverto che le comunicazioni di rito di

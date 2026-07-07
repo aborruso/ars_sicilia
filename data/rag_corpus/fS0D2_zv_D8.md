@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 15:33)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: fS0D2_zv_D8
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1533/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Prende assessore dove siamo all'articolo. Ok, non c'è alcun genere di sintesi, pertanto si va avanti come vorrà il nostro signore. Siamo all'articolo 23, colleghi, ci sono altri interventi? >> Prego. Ah, no, siamo sul voto del 23. può intervenire dopo il voto. >> Siamo all'articolo 23 che mi dicono che non è stato votato. >> Abbiamo votato gliemendamento. Si deve votare abbiamo >> Si deve votare semplicemente l'articolo

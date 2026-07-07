@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 18:22)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: IL01spOKjSU
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1822/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta riprende. Chiedo al governo di prendere posto. Andiamo avanti. Aveva chiesto di intervenire l'onorevole Catanzaro. De Luca Antonio. Onorevole De Luca Antonio. Onorevole De Luca aveva chiesto di intervenire sul quattro. Camarella non si sente, io l'ho premuta. >> Prego, onorevole De Luca. Presidente, io sull'articolo 4, così come sui successivi 5 6 e 7, chiedo che si avvii una fase di riflessione per arrivare alla riscrittura complessiva di questi articoli che contengono norme,

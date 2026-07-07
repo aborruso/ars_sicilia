@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 225 del 3 febbraio 2026 (video delle ore 15:17)
 
-- Seduta: 225
-- Data: 2026-02-03
-- Video YouTube: 2Tk4TmRSFUk
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/03/seduta-225/video-1517/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:03] Avverto che i processi verbali delle sedute numero 223 del 27 gennaio 2026 e 224 del 28 gennaio 2026 sono posti a disposizione agli onorevoli deputati che intendano prenderne visione e sono considerati approvati in assenza di osservazione in contrario nella presente seduta. Comunico che l'onorevole Ferrara sarà in missione dal 9 al 12 febbraio 2026. L'assemblea ne prende atto. Avverto che le comunicazioni di diritto di cui all'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato A resoconto dell'odierna seduta. Comunico che a seguito dell'accoglimento come raccomandazione da parte del governo nella seduta numero 220 del 167 18 19 20 e 21 dicembre 2025 degli ordini del giorno numero 468 e 469 sono conseguentemente superate rispettivamente le mozioni numero 323 e 324 in quanto di identico contenuto l'assemblea ne prende atto. Bene,

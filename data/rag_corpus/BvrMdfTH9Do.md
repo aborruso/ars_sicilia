@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 247 del 28 aprile 2026 (video delle ore 15:14)
 
-- Seduta: 247
-- Data: 2026-04-28
-- Video YouTube: BvrMdfTH9Do
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/28/seduta-247/video-1514/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Va bene, va bene, non ce n'è problema. Comunico che è pervenuta nella nota PEC del 22 aprile 2026 da parte dell'avvocato di fiducia dell'onorevole Giuseppe Castiglione, protocollata 13.879 1879 Digge 2026 di Paradat con la quale si comunica la revoca della misura cauterale a carico dell'onorevole Giuseppe Castiglione a seguito del provvedimento giudiziario IB allegato che lo stesso legale di fiducia attesta essere immediatamente esecutivo. Pertanto, a decorrere dalla data del suddetto provvedimento giudiziario di revoca della misura coercitiva del Tribunale di Catania, così come previsto dal decreto del presidente del Consiglio dei Ministri del 16 aprile 2025, cessa la sospensione di diritto dell'onorevole Castiglione dalla carica di deputato regionale con pari decorrenze accessualmente l'affidamento temporale

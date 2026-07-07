@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 11:41)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: Lohgbf6fugY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1141/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Colleghi, la seduta è aperta. >> Andiamo all'articolo 22. >> Andiamo all'articolo 22. colleghi,

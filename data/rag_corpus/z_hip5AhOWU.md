@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 231 del 24 febbraio 2026 (video delle ore 15:44)
 
-- Seduta: 231
-- Data: 2026-02-24
-- Video YouTube: z_hip5AhOWU
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/24/seduta-231/video-1544/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] la questione, ho avuto modo di potermi confrontare con il presidente della regione e in virtù del fatto che domani avrebbe comunque mandato il governo al completo o comunque il vicepresidente che avrebbe potuto relazionare, ho spiegato che questo Parlamento in questo momento ha bisogno della sua presenza. Pertanto domani, per evitare di lasciare l'aula che non possa lavorare, possiamo organizzarci con il disegno di legge che, diciamo, è stato abbastanza discusso in maniera anche semplice, immagino sarà votata all'unanimità di Comisso Città della Pace. Successivamente ci sarà la rubrica della dell'assessore Dannino sull'economia per quanto riguarda le interrogazioni. L'unica differenza rispetto all'orario è che anziché alle 15:00 l'aula è convocata per domani alle ore alle ore 14. La seduta è rinviata domani. Ha chiesto di intervenire l'onorevole la

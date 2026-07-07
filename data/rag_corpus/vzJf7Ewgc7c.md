@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 250 del 13 maggio 2026 (video delle ore 21:11)
 
-- Seduta: 250
-- Data: 2026-05-13
-- Video YouTube: vzJf7Ewgc7c
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/13/seduta-250/video-2111/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Prende. Eravamo alla richiesta di voto segreto da parte dell'onorevole Cracolici. Ha chiesto di intervenire l'onorevole Assenza. Prego, onorevole. Aspetti, aspetti. Lo attacchiamo il microfono. Prego. Prego. Ovrevole assenza. Presidente, io ritiro l'emendamento perché non voglio creare ulteriori problemi al corso dei lavori. Chiedo che nell'impegno d'onore preso dall'onorevole Cracoligi alla SEUS e alla e all'Astunga anche l'ARPA perché non possiamo rischiare non rischiamo di Ringrazio

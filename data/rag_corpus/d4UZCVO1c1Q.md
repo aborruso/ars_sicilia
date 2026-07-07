@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 245 del 21 aprile 2026 (video delle ore 15:41)
 
-- Seduta: 245
-- Data: 2026-04-21
-- Video YouTube: d4UZCVO1c1Q
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/21/seduta-245/video-1541/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:02] Ai sensi del comma 9 dell'articolo 127 del regolamento interno, do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85, ovvero la domanda di scrutino nominale o di scrutino segreto articolo 127 sono effettuate mediante procedimento elettronico. Grazie. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intentano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Comunico i congedi Giuseppe Lombardo del gruppo Sud di Chiaman. Per motivi di salute dell'onorevole Lavardera.

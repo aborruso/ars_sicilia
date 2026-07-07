@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 23:37)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: WgRx3jJY6O0
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-2337/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Chiedo. Dov'è l'assessore? C'è Sì. Eh, c'è l'assessore Dannino. Assessore. Serve una sigla. Dov'è messo l'emendamento? Allora, >> non scriviamo più abbiamo scritto. >> Va bene. Sui tablet troverete un emendamento tra i fuorissacco >> che è il tab.gov, quindi vi do il tempo di poterlo leggere. >> Sì, può uno per gruppo può intervenire. Prego. Ora Luca. Questo è questo è fuorisacco. Quindi vai. Però, presidente, allora noi abbiamo bisogno innanzitutto di tempo

@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 256 del 16 giugno 2026 (video delle ore 15:21)
 
-- Seduta: 256
-- Data: 2026-06-16
-- Video YouTube: quN839F1yak
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/16/seduta-256/video-1521/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli che intendano prenderne degli onorevoli deputati che intendono prendere visione ed è considerato approvato in assenza di osservazione in control. Conedo dell'onorevole Primavera. Comunico il congedo dell'onorevole Primavera e comunico che con nota protocollo numero 999 del 2026 dell'11 giugno 2026 l'onorevole Lacquota è stata autorizzata a recarsi in missione il 30 giugno e il primo luglio 2026. L'assemblea ne prende atto. Avverto che le comunicazioni di rito di cui l'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato a al resoconto dell'odierna seduta. Ai sensi del comma dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento

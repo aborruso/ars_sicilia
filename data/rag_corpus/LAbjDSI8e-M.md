@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 253 del 3 giugno 2026 (video delle ore 15:10)
 
-- Seduta: 253
-- Data: 2026-06-03
-- Video YouTube: LAbjDSI8e-M
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/03/seduta-253/video-1510/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La campana era accesa la campana. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendono prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presenza seduta. L'assemblea ne prende atto. Concedo per oggi l'onorevole Oggi l'onorevole Cinninnesi chiede il concedo per la seduta odierna. L'assemblea ne prende atto. Allora, con decreto 145 l'onorevole Cicolla Cirrone Cicolla è stata nominata componente leggi solo qua. Perfetto. Leggi solo io. Perfetto. Va bene.

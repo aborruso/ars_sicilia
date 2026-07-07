@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 234 del 4 marzo 2026 (video delle ore 15:12)
 
-- Seduta: 234
-- Data: 2026-03-04
-- Video YouTube: iD9fvoidp7Y
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/03/04/seduta-234/video-1512/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazioni in contrario nella presente seduta. Comunico il congedo per la seduta di oggi dell'onorevole Valentina Chinnici e comunico che l'onorevole Venezia sarà in missione dal 25 al 28 marzo 2026. L'assemblea ne prende atto. Avverto che le comunicazioni di rito di cui all'articolo 83 del regolamento interno dell'assemblea saranno riportate nell'allegato A reso conto dell'odierna seduta ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante il procedimento elettronico che dovessero aver luogo nel

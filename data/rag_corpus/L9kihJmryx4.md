@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 18:22)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: L9kihJmryx4
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1822/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] seduta riprende. Allora, colleghi, così come deciso in conferenza dei capigruppo, ricominceremo la trattazione dei punti. Gli unici articoli trattati saranno l'11, il 15, il 16, il 110, il 114, il 131, il 132, il 133 e il 134. Ricordo ricordo che no, scusi, non ricordo. Volevo comunicare all'aula che dal giorno 13, quando riprenderemo i lavori, 13 di gennaio, ci saranno tre disegni di legge che verranno trattati. Giorno 3 ci mettiamo quello locali e poi si arriva il percorso in commissione. >> Da giorno 13 noi materialmente porteremo in aula il disegno di legge degli enti locali che è già pronto aula da tempo.

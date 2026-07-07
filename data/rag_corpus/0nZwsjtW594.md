@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 226 del 4 febbraio 2026 (video delle ore 15:34)
 
-- Seduta: 226
-- Data: 2026-02-04
-- Video YouTube: 0nZwsjtW594
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/04/seduta-226/video-1534/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] seduta è aperta. Comunico, avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di un'osservazione incontrale nella presente seduta. Adorno il congedo per malattia per >> comunico il congedo dell'onorevole Adorno per malattia. Non abbiamo altro. Abbiamo l'assessore in aula. Iniziamo con l'attività ispettiva relativamente alla rubrica Beni Culturali e Identità Siciliana. Andiamo all'interrogazione numero 1735. chiarimenti e intentimenti del governo regionale sulla mancata attivazione e nomina dell'autorità garante per i diritti e doveri culturali a prima firma dell'onorevole Saverino. Prego assessore. >> Sì, grazie presidente. Sostanzialmente

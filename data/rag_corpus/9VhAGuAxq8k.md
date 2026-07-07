@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 232 del 25 febbraio 2026 (video delle ore 14:36)
 
-- Seduta: 232
-- Data: 2026-02-25
-- Video YouTube: 9VhAGuAxq8k
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/25/seduta-232/video-1436/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Prego. La commissione quinta di prendere posto. Di di prendere posto. Avverto che il processo verbale della seduta precedente ha posto a disposizione degli onorevoli deputati che intendono prendere visione ed è considerata approvato in assenza di osservazione in contrario nella presente seduta. Conedi per la seduta odierna D Leo. Congedi per la seduta odierna l'onorevole De Leo. La Rocca Ruvolo, l'onorevole La Rocca Ruvolo è Nunzia Albano e Nunzia Albano. Assemblea ne prende atto ai sensi del comma 9 dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine dell'eventuale votazione mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanti deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del

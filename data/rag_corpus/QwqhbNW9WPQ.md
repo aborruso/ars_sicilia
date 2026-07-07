@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 242 del 8 aprile 2026 (video delle ore 15:17)
 
-- Seduta: 242
-- Data: 2026-04-08
-- Video YouTube: QwqhbNW9WPQ
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/08/seduta-242/video-1517/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Ai sensi del comma dell'articolo 127 del regolamento interno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante il procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85, ovvero la domanda discutino nominale o discutino segreto articolo 127 sono effettuate mediante procedimento elettronico. Colleghi, il primo punto all'ordine del giorno è rinviato a martedì prossimo perché la commissione verifica poteri

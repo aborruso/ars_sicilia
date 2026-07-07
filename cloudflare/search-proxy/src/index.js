@@ -39,13 +39,21 @@ export default {
     }
 
     try {
+      const q = query.trim();
+      // Il reranker (bge-reranker-base) azzera i punteggi delle query italiane
+      // di una sola parola: per quelle il match keyword è già autorevole,
+      // quindi si usa BM25 puro senza reranking. Per le query multi-parola
+      // resta hybrid+reranker; "or" perché una query naturale non deve
+      // richiedere che TUTTI i termini compaiano nel documento.
+      const singleWord = q.split(/\s+/).length === 1;
       const result = await env.SEARCH.search({
-        messages: [{ role: 'user', content: query.trim() }],
-        ai_search_options: {
-          // "or": una query naturale non deve richiedere che TUTTI i termini
-          // compaiano nel documento (il default "and" azzera il recall)
-          retrieval: { keyword_match_mode: 'or' },
-        },
+        messages: [{ role: 'user', content: q }],
+        ai_search_options: singleWord
+          ? {
+              reranking: { enabled: false },
+              retrieval: { retrieval_type: 'keyword', score_threshold: 0.1, max_num_results: 20 },
+            }
+          : { retrieval: { keyword_match_mode: 'or' } },
       });
       const rawChunks = result?.chunks || [];
       const chunks = rawChunks.map((c) => ({

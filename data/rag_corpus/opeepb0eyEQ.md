@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 229 del 17 febbraio 2026 (video delle ore 17:39)
 
-- Seduta: 229
-- Data: 2026-02-17
-- Video YouTube: opeepb0eyEQ
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/02/17/seduta-229/video-1739/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Ah, prima c'era il >> No, ma già l'ho comunicato, il congedo dell'onorevole De Luca Cateno. Prego, onorevole Abate, vi siete riuniti. >> Grazie presidente. Come avevo annunciato precedentemente, visto che questo è un disegno di legge che non nasce da una penna o da una scrittura di un singolo deputato o dall'attività del sottoscritto, ma è una è un assemblaggio di norme che provengono da diversi deputati cui è stato garantito di poter arrivare in aula dove l'aula decide su quello che è l'approvazione o la bocciatura di quei disegni di legge come i provenienti che potevano essere inseriti nella finanziaria dove sono stati stralciati per poter fare questo tipo di lavoro. Si è decisa in commissione che non ci sono le condizioni di poter richiedere in commissione il disegno di legge, quindi si può continuare a votare disegno di legge e completare il l'approvazione, la

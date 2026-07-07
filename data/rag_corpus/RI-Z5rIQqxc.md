@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 260 del 30 giugno 2026 (video delle ore 15:47)
 
-- Seduta: 260
-- Data: 2026-06-30
-- Video YouTube: RI-Z5rIQqxc
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/30/seduta-260/video-1547/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] aperta ai sensi del comma9 dell'articolo 127 del regolamento ernerno do il preavviso di 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovesse aver luogo nel corso della presente seduta. Invito pertanto i deputati ammonirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale articolo 85 ovvero la domanda escrutino nominale o scrutino decreto articolo 127 sono effettuate mediante procedimento elettronico. Avverto che il processo verbale della seduta precedente è posto a disposizione agli onorevoli deputati che intentano prenderne visione ed è considerato approvata in assenza di osservazione incontrella presente seduta. Comunico i congedi dell'onorevole Cirone Cipolla. dell'onorevole Schillaci e dell'onorevole Burtone per motivi di salute. Avverto che le comunicazioni di rito di quell'articolo 83 del regolamento

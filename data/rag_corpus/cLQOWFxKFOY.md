@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 219 del 10 dicembre 2025 (video delle ore 13:01)
 
-- Seduta: 219
-- Data: 2025-12-10
-- Video YouTube: cLQOWFxKFOY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/10/seduta-219/video-1301/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] La seduta è aperta, l'assessore è presente, l'assessore Dagnino è aperta la discussione generale o il primo a intervenire già registrato, che è l'onorevole Cateno De Luca. Prego, onorevole. A lei la parola. Signor presidente della Regione Siciliana, oggi rappresentato dall'assessore Dagnino. Signor presidente del Parlamento, qui rappresentato dal vice

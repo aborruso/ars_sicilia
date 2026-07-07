@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 240 del 1 aprile 2026 (video delle ore 15:09)
 
-- Seduta: 240
-- Data: 2026-04-01
-- Video YouTube: GNuLQZZJu74
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/01/seduta-240/video-1509/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] L'aula è aperta. Iniziamo. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendono prendere visione ed è considerato approvato in assenza di osservazione in contrario della presente seduta. L'assemblea ne prende altro. Comunico che venga messo in concedo il l'onorevole Sebastiano Venezia. Assemblea ne prende altro. azioni non ce ne abbiamo. Quindi passiamo al passiamo alla rubrica svolgimento ai sensi dell'articolo 159 comma3 del regolamento interno di interrogazione e interpellanza della rubrica territorio e ambiente. Iniziamo con l'interrogazione 1279, verifiche urgenti inerenti alle rilevanti criticità emerse a seguito degli interventi per la riqualificazione

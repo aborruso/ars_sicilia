@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 252 del 27 maggio 2026 (video delle ore 15:12)
 
-- Seduta: 252
-- Data: 2026-05-27
-- Video YouTube: GVgimDgbd1Y
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/27/seduta-252/video-1512/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Seduta è aperta. Avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Comunico che su richiesta del presidente della quarta commissione il termine per la presentazione degli emendamenti al disegno di legge numero 1030 stralcio quarta disposizione in materia di transizione energetica di sistemi di accumulo di governo del territorio di tutela ambientale e di interpretazione autentica modifiche a leggi regionali varie. già fissato a mercoledì 3 giugno 2026 alle ore 13 e prorogato a mercoledì 10 giugno 2026 alle ore 13. L'assemblea ne prende atto e possiamo iniziare. L'assessore è in aula e possiamo iniziare con la

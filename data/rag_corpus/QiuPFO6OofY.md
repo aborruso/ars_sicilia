@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 245 del 21 aprile 2026 (video delle ore 15:56)
 
-- Seduta: 245
-- Data: 2026-04-21
-- Video YouTube: QiuPFO6OofY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/04/21/seduta-245/video-1556/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Seduta è riaperta. Prego, onorevole De Luca. Grazie presidente. Allora, dicevo, se posso mantenere la mia premessa, io comprendo il grave imbarazzo in cui si trova il governo che ieri ha visto il suo assessore al turismo rinviato a giudizio, ma oggi questo non può essere il motivo per cui l'aula non tratta il collegato alla quinta, perché vede presidente di Paola, in assenza di una concertazione in capigruppo che non c'è stata. Io non credo che ci possa essere altro motivo per cui il governo vuole sottrarre all'esame dell'aula il collegato quinto. Cioè, non c'è un motivo tecnico, non è che nel collegato prima c'è un un attimo onorevole De Luca, il governo non si è

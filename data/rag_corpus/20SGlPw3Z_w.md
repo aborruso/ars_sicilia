@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 250 del 13 maggio 2026 (video delle ore 15:27)
 
-- Seduta: 250
-- Data: 2026-05-13
-- Video YouTube: 20SGlPw3Z_w
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/05/13/seduta-250/video-1527/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:01] La seduta è aperta. Le comunicazioni quello nuovo. Quello nuovo. Stampa stampa. Ci sono comunicazioni ai sensi del comma9 dell'articolo 127 del regolamento interno, do il preavviso ai 30 minuti al fine delle eventuali votazioni mediante procedimento elettronico che dovessero aver luogo nel corso della presente seduta. Invito per tanti deputati a munirsi per tempo della tessera personale di voto. Ricordo che anche la richiesta di verifica del numero legale, ovvero la domanda di scrutinio nominale o di scrutinio segreto, sono effettuate mediante procedimento elettronico. Fabri,

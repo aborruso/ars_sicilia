@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 14:29)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: vQu81h-DhPY
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1429/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:07] Chiamate l'assessore, per favore. Sì, stanno lavorando. Stanno lavorando. Oh.

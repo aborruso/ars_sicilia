@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 16:01)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: CADN75ByYoA
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1601/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:50] Colleghi, chiedo di prendere posto. Durante questa fase, nonostante non ci sia ancora uno stralcio che è stato fatto dalla presidenza, eviteremo di trattare tutti i temi ordinamentali e microsettoriali che semmai avranno saranno oggetto di una valutazione successiva. Invece adesso, visto è considerato le tante riscritture, elaborazione di testi e quant'altro, passiamo all'articolo 27. Ci sono emendamenti all'articolo 27 soppressivi? chiedo se siano ritirati o meno. Onorevole De Luca, sono mantenuti o ritirati gli emendamenti? >> Ritirati. Grazie onorevole

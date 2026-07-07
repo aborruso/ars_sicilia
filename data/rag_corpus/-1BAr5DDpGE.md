@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 222 del 14 gennaio 2026 (video delle ore 15:44)
 
-- Seduta: 222
-- Data: 2026-01-14
-- Video YouTube: -1BAr5DDpGE
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/14/seduta-222/video-1544/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Parola al presidente della commissione per fare per la relazione. Prego presidente Abbate. >> Grazie presidente. Governo, è arrivato il vicepresidente. Quindi andiamo ad illustrare quella che la redazione del disegno di legge 738 Stralcio 1ter ha riferito a degli articoli che riguardano gli enti locali e che sono state assemblate poi un disegno di legge condiviso in commissione, approvata in commissione che proviene anche dal frutto di sollecitazione anche di contributi dei dei singoli deputati della commissione, e anche altri di tutto lo schieramento politici, destra e sinistra, quindi maggioranza e opposizione. Presento di legge nasce dall'esame degli emendamenti aggiuntivi presentati al disegno di legge 738.

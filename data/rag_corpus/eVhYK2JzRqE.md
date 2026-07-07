@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 258 del 23 giugno 2026 (video delle ore 16:45)
 
-- Seduta: 258
-- Data: 2026-06-23
-- Video YouTube: eVhYK2JzRqE
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/06/23/seduta-258/video-1645/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:00] Ok, prova 1 2 3 4. Ok, a posto. La seduta è aperta, eh? Du avverto che il processo verbale della seduta precedente è posto a disposizione degli onorevoli deputati che intendano prenderne visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. Conedo l'onorevole Chinnici comunico il congedo e l'onorevole

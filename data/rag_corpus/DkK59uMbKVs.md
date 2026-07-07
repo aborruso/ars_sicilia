@@ -1,11 +1,5 @@
 # Assemblea Regionale Siciliana — seduta n. 220 del 16 dicembre 2025 (video delle ore 17:46)
 
-- Seduta: 220
-- Data: 2025-12-16
-- Video YouTube: DkK59uMbKVs
-- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2025/12/16/seduta-220/video-1746/
-- Fonte: trascrizione automatica dei sottotitoli YouTube
-
 ## Trascrizione
 
 [00:00:03] Colleghi, riprendiamo posto e riprendiamo riprendiamo a ringrazio sia gli assessori Dagnetturano che i colleghi che hanno lavorato durante questo tempo per fare una sintesi nei vostri all'interno dei vostri tablet trova Troverete, >> l'emendamento Bill 18 che prendo pure io. >> Emendamento Bill 18 che lo troverete all'interno della cartella Fuorisacco. Emendamento Bill 18. >> Naturalmente chiedo all'onorevole Giambona di ritirare >> gli emendamenti >> a sua firma. >> A sua firma. Onorevole Giambon, com'è? Allora, l'emendamento
