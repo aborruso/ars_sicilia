@@ -195,8 +195,6 @@ const videoMap = Object.fromEntries(
         const url = new URL(window.location.href);
         if (q.trim()) url.searchParams.set('q', q.trim());
         else url.searchParams.delete('q');
-        if (aiCheckbox?.checked) url.searchParams.set('ai', '1');
-        else url.searchParams.delete('ai');
         // history.state va preservato: azzerarlo rompe il ripristino della
         // pagina al "back" con le ViewTransitions di Astro (URL aggiornato
         // ma contenuto non sostituito).
@@ -209,12 +207,8 @@ const videoMap = Object.fromEntries(
         search(input.value);
       });
 
-      aiCheckbox?.addEventListener('change', () => syncURL(input.value));
-
-      // Ricerca pre-attivata da ?q= (e ?ai=1) — link condivisibili
-      const params = new URLSearchParams(window.location.search);
-      const initialQ = params.get('q');
-      if (aiCheckbox && params.get('ai') === '1') aiCheckbox.checked = true;
+      // Ricerca pre-attivata da ?q= — link condivisibili
+      const initialQ = new URLSearchParams(window.location.search).get('q');
       if (initialQ) {
         input.value = initialQ;
         search(initialQ);
