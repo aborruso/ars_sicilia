@@ -26,19 +26,21 @@ scelto invece **Cloudflare AI Search**, un servizio gestito:
 * **Se lo stack self-hosted tornasse rilevante**: `docs/rag/evaluation.md`
   resta il punto di partenza per quella strada.
 
-# Pagina "labs" nascosta invece di feature pubblica
+# Prima "labs" nascosta, poi rilascio pubblico
 
 La ricerca nelle trascrizioni è stata lanciata come pagina non in menu,
 esclusa da sitemap, con meta noindex e URL a slug casuale — non come
 feature pubblica da subito.
 
-* **Perché**: permette di validare qualità del retrieval e costi/limiti
-  del piano free con traffico reale ma controllato, prima di esporla a
-  tutti gli utenti del sito. Vedi
-  [architettura della ricerca](/wiki/ricerca-trascrizioni/architettura.md).
-* **Quando promuoverla**: nessun criterio formale ancora definito;
-  valutare dopo aver esteso il corpus a tutte le trascrizioni disponibili
-  e aver osservato risultati stabili nel tempo.
+* **Perché**: ha permesso di validare qualità del retrieval e limiti del
+  piano free con traffico controllato. In quella fase sono emersi e sono
+  stati corretti tre problemi sostanziali (reranking no-op, recall del
+  solo vettoriale, chunk più lunghi della finestra del reranker) — vedi
+  [tuning e valutazione](/wiki/ricerca-trascrizioni/tuning-e-valutazione.md).
+* **Esito**: promossa a pagina pubblica `/ricerca/` (menu "Cerca") dopo
+  l'estensione del corpus a tutte le trascrizioni e la stabilizzazione
+  della configurazione. Il meccanismo "labs" (filtro sitemap + prop
+  `noindex`) resta disponibile per futuri esperimenti.
 
 # Corpus RAG dentro il workflow esistente, non uno separato
 

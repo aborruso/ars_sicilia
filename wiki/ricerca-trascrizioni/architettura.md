@@ -48,20 +48,21 @@ SRT (data/trascrizioni/) → corpus Markdown (data/rag_corpus/)
    all'istanza. CORS ristretto al dominio del sito e a `localhost:4321`
    per lo sviluppo locale.
 
-5. **Pagina** (`src/pages/labs/<slug-nascosto>.astro`) — pagina "labs":
-   non in nessun menu, esclusa dalla sitemap (filtro `/labs/` in
-   `astro.config.mjs`), meta `noindex` (prop `noindex` su
-   `BaseLayout`/`PageLayout`, vedi [sito Astro](/wiki/frontend/sito-astro.md)).
-   Lo slug esatto e l'URL del Worker deployato **non sono riportati in
-   questo wiki** perché la pagina è pensata per restare privata
-   (raggiungibile solo da chi conosce l'URL) — si trovano nel repo
-   locale/output di deploy, non qui.
+5. **Pagina** (`src/pages/ricerca/index.astro`, URL `/ricerca/`) —
+   linkata nel menu principale ("Cerca"). Nata come pagina "labs"
+   nascosta (slug casuale, noindex, fuori sitemap) per la fase di test,
+   promossa a pagina pubblica dopo la validazione del retrieval; il
+   filtro sitemap `/labs/` in `astro.config.mjs` e la prop `noindex` dei
+   layout restano disponibili per futuri esperimenti (vedi
+   [sito Astro](/wiki/frontend/sito-astro.md)).
 
    Pattern di ricerca client-side riusato da `src/pages/ddl/[page].astro`
    (fetch, stato, sync `?q=` nell'URL). Ogni risultato mostra: seduta,
    data, estratto, punteggio di rilevanza, link alla pagina video con
    `?t=SECONDI` (che `VideoEmbed.astro` traduce in `start=` sull'iframe)
-   e link diretto a YouTube (`&t=Ns`).
+   e link diretto a YouTube (`&t=Ns`). Sotto il campo, suggerimenti
+   d'uso basati sui limiti misurati del retrieval (più parole = meglio,
+   accenti richiesti).
 
 # Vedi anche
 

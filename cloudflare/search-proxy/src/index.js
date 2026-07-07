@@ -41,6 +41,11 @@ export default {
     try {
       const result = await env.SEARCH.search({
         messages: [{ role: 'user', content: query.trim() }],
+        ai_search_options: {
+          // "or": una query naturale non deve richiedere che TUTTI i termini
+          // compaiano nel documento (il default "and" azzera il recall)
+          retrieval: { keyword_match_mode: 'or' },
+        },
       });
       const rawChunks = result?.chunks || [];
       const chunks = rawChunks.map((c) => ({

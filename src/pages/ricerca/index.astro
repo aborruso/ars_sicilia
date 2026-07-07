@@ -2,7 +2,6 @@
 import PageLayout from '../../layouts/PageLayout.astro';
 import { loadVideos } from '../../lib/data-loader';
 
-// Pagina sperimentale, non linkata dai menu, esclusa da sitemap (filtro /labs/) e noindex.
 // Ricerca semantica sulle trascrizioni via Cloudflare AI Search (proxy Worker).
 
 const videos = await loadVideos();
@@ -25,14 +24,13 @@ const videoMap = Object.fromEntries(
 
 <PageLayout
   title="Ricerca nelle trascrizioni (beta)"
-  description="Ricerca sperimentale nel testo trascritto dei video delle sedute ARS"
-  noindex={true}
+  description="Ricerca nel testo trascritto dei video delle sedute ARS: ogni risultato porta al punto del video in cui se ne parla"
 >
   <div class="mb-8">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Ricerca nelle trascrizioni <span class="text-base align-middle px-2 py-1 bg-amber-100 text-amber-800 rounded">beta</span></h1>
     <p class="text-lg text-warm-600">
       Cerca nel testo trascritto dei video delle sedute. Ogni risultato porta al punto del video in cui se ne parla.
-      Per ora l'indice copre le <strong>10 sedute più recenti</strong> con trascrizione.
+      L'indice copre <strong>tutte le sedute con trascrizione disponibile</strong> e si aggiorna ogni notte.
     </p>
   </div>
 
@@ -54,6 +52,10 @@ const videoMap = Object.fromEntries(
         class="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1.5 bg-navy-800 text-white text-sm font-semibold rounded-md hover:bg-navy-900 transition-colors"
       >Cerca</button>
     </div>
+    <p class="text-sm text-warm-500 mt-2">
+      Suggerimenti: usa più parole per risultati migliori (es. <em>crisi idrica siccità</em> invece di <em>siccità</em>);
+      scrivi gli accenti (<em>sanità</em>, non <em>sanita</em>); puoi fare anche domande in linguaggio naturale.
+    </p>
   </form>
 
   <p id="trs-status" class="text-sm text-warm-500 mb-6 hidden"></p>

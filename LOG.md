@@ -1,3 +1,11 @@
+# 2026-07-08
+
+## Ricerca trascrizioni: tuning retrieval + rilascio pubblico
+
+- Caso "siccità" (10 sedute nel corpus, 1 restituita) → indagine con `scoring_details`: tre fix. (1) Hybrid search attivato (BM25+vettoriale, fusione RRF) — il solo vettoriale ha recall pessimo sui termini esatti. (2) `chunk_size` 1024→512 token: il reranker `bge-reranker-base` ha finestra di 512 token e vedeva solo metà chunk, azzerando i match nella seconda metà. (3) `keyword_match_mode: "or"` per-request nel Worker — il default "and" azzerava il recall delle query naturali multi-parola. Insidie documentate: similarity cache nei test A/B, accenti non normalizzati dal tokenizer keyword.
+- Rilascio pubblico: pagina spostata da `/labs/ricerca-<random>/` a `/ricerca/`, tolto noindex (ora in sitemap), voce "Cerca" con icona nel menu principale, suggerimenti d'uso sotto il campo (più parole = meglio, accenti richiesti), testo aggiornato (corpus completo, aggiornamento notturno).
+- Wiki aggiornato: `ricerca-trascrizioni/tuning-e-valutazione.md` riscritto con la storia dei tre problemi e le lezioni per test futuri.
+
 # 2026-07-07
 
 ## Ricerca semantica trascrizioni (beta, Cloudflare AI Search)
