@@ -29,7 +29,12 @@ const { youtubeId, title = 'Video seduta ARS' } = Astro.props;
     if (Number.isFinite(t) && t > 0) {
       const url = new URL(iframe.src);
       url.searchParams.set('start', String(t));
-      iframe.src = url.toString();
+      // Sostituisce il nodo invece di riassegnare src: cambiare src a un
+      // iframe già caricato aggiunge una voce alla history del browser
+      // (il "back" resterebbe sulla pagina video invece di uscirne).
+      const fresh = iframe.cloneNode() as HTMLIFrameElement;
+      fresh.src = url.toString();
+      iframe.replaceWith(fresh);
     }
   }
   document.addEventListener('astro:page-load', initVideoEmbedStart);

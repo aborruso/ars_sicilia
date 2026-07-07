@@ -30,7 +30,7 @@ Fondamentale il **controllo di verità sul corpus sorgente** (`grep -ic
 "termine" data/rag_corpus/*.md`): permette di distinguere "il tema non
 c'è" da "la ricerca non lo trova".
 
-# La storia del tuning (tre problemi trovati e corretti)
+# La storia del tuning (cinque problemi trovati e corretti)
 
 ## 1. Senza reranking: punteggi piatti e falsi positivi
 
@@ -93,6 +93,24 @@ URL e ID nei metadati facevano da esca per query contenenti quei token
 (scoperto incollando per sbaglio l'URL della pagina nel campo di
 ricerca: 10 "risultati" al 74%).
 
+## 5. Domande in linguaggio naturale: riscrittura in-Worker
+
+Le domande ("dove si parla di mafia?") davano 0 risultati: le parole
+interrogative diluiscono il match e il reranker le affossa. Il
+`query_rewrite` nativo di AI Search si è rivelato inadatto: col prompt
+di default non riscrive quasi nulla, e con un prompt custom il modello
+piccolo (llama-3.1-8b) **inventava** termini mai menzionati ("Cosa
+Nostra", nomi di persone, date). **Fix**: riscrittura fatta nel Worker
+con `env.AI.run` e llama-3.3-70b, prompt rigido (1-2 parole, SOLO
+termini presenti nella domanda, vietato aggiungere nomi/luoghi/date);
+la query riscritta passa poi per le euristiche già validate (1 parola →
+keyword puro). Risultati: "dove si parla di mafia?" → "mafia" → 13
+sedute; "quando si è discusso di siccità?" → "siccità" → 10/10. La
+risposta espone `query_used` e la pagina mostra "(cercato: …)" per
+trasparenza. Nota misurata: il reranker `bge-reranker-base` produce
+punteggi non discriminanti (0.03-0.07) su QUALSIASI query italiana di
+1-2 parole — non è un problema solo delle monoparola.
+
 # Configurazione applicata (istanza `ars-sicilia-trascrizioni`)
 
 | Parametro | Valore | Perché |
@@ -102,6 +120,8 @@ ricerca: 10 "risultati" al 74%).
 | `reranking` | Attivo, `@cf/baai/bge-reranker-base` | Separa nettamente match veri da rumore (0.77-0.97 vs sotto soglia) |
 | `keyword_match_mode` | "or" (override nel Worker, per request) | "and" azzera il recall delle query naturali multi-parola |
 | Query monoparola | keyword-only, no rerank, soglia 0.1 (euristica nel Worker) | Il reranker azzera le query italiane di una parola; BM25 è già autorevole |
+| Domande | riscrittura in-Worker (llama-3.3-70b, prompt rigido) → euristiche standard | Il query_rewrite nativo non riscrive (default) o inventa (8b + prompt custom) |
+| Risposta AI | opt-in (checkbox `?ai=1`), `chatCompletions` con llama-3.3-70b e system prompt "solo dai passaggi" | Generazione = costo+latenza+rischio allucinazione: mai come default |
 | `score_threshold` | 0.4 | Default; con reranking efficace taglia bene il rumore |
 | `max_num_results` | 20 | Pool più ampio per la fusione/reranking |
 | similarity cache | Attiva, "strong" | Risparmia quota; da tenere presente nei test (stessa query = risposta cache) |

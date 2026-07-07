@@ -28,9 +28,9 @@ export default {
       return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers });
     }
 
-    let query;
+    let query, ai;
     try {
-      ({ query } = await request.json());
+      ({ query, ai } = await request.json());
     } catch {
       return new Response(JSON.stringify({ error: 'Invalid JSON' }), { status: 400, headers });
     }
@@ -40,28 +40,88 @@ export default {
 
     try {
       const q = query.trim();
+      // Le domande ("dove si parla di…") vengono riscritte in parole chiave
+      // da un LLM prima della ricerca: le parole interrogative diluiscono il
+      // match e il reranker le penalizza.
+      const isQuestion =
+        q.includes('?') ||
+        /^(chi|che|cosa|com[e']|dove|quando|perch[eé]|quale|quali|quant[oaie])\b/i.test(q);
+      let effective = q;
+      if (isQuestion) {
+        try {
+          const rw = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
+            messages: [
+              {
+                role: 'system',
+                content:
+                  'Estrai dalla domanda il tema di ricerca: 1 o 2 parole AL MASSIMO, prese SOLO tra le ' +
+                  'parole della domanda (o la loro forma base). NON aggiungere nomi, luoghi, date o ' +
+                  'concetti non presenti nella domanda. Niente parole interrogative né verbi generici. ' +
+                  'Rispondi SOLO con le parole scelte.',
+              },
+              { role: 'user', content: q },
+            ],
+          });
+          const kw = (rw?.response || '').replace(/["'.,;:!?]/g, ' ').trim().split(/\s+/).slice(0, 2).join(' ');
+          if (kw.length >= 2) effective = kw;
+        } catch {
+          // riscrittura fallita: si usa la query originale
+        }
+      }
+
       // Il reranker (bge-reranker-base) azzera i punteggi delle query italiane
       // di una sola parola: per quelle il match keyword è già autorevole,
       // quindi si usa BM25 puro senza reranking. Per le query multi-parola
       // resta hybrid+reranker; "or" perché una query naturale non deve
       // richiedere che TUTTI i termini compaiano nel documento.
-      const singleWord = q.split(/\s+/).length === 1;
-      const result = await env.SEARCH.search({
-        messages: [{ role: 'user', content: q }],
-        ai_search_options: singleWord
-          ? {
-              reranking: { enabled: false },
-              retrieval: { retrieval_type: 'keyword', score_threshold: 0.1, max_num_results: 20 },
-            }
-          : { retrieval: { keyword_match_mode: 'or' } },
+      const singleWord = effective.split(/\s+/).length === 1;
+      const options = singleWord
+        ? {
+            reranking: { enabled: false },
+            retrieval: { retrieval_type: 'keyword', score_threshold: 0.1, max_num_results: 20 },
+          }
+        : { retrieval: { keyword_match_mode: 'or' } };
+
+      const searchPromise = env.SEARCH.search({
+        messages: [{ role: 'user', content: effective }],
+        ai_search_options: options,
       });
+
+      // Modalità opt-in "Risposta AI": in parallelo alla ricerca, genera una
+      // risposta in prosa basata sui passaggi recuperati (Workers AI).
+      const answerPromise = ai
+        ? env.SEARCH.chatCompletions({
+            messages: [
+              {
+                role: 'system',
+                content:
+                  'Rispondi in italiano, in modo conciso, basandoti ESCLUSIVAMENTE sui passaggi di trascrizione forniti. ' +
+                  'Se i passaggi non contengono la risposta, dillo chiaramente. Non inventare nulla.',
+              },
+              { role: 'user', content: q },
+            ],
+            model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+            ai_search_options: options,
+          }).catch(() => null)
+        : Promise.resolve(null);
+
+      const [result, aiResult] = await Promise.all([searchPromise, answerPromise]);
+
       const rawChunks = result?.chunks || [];
       const chunks = rawChunks.map((c) => ({
         key: c.item?.key || c.filename || c.attributes?.file?.name || '',
         score: c.score ?? null,
         text: c.text || (Array.isArray(c.content) ? c.content.map((p) => p.text).join('\n') : ''),
       }));
-      return new Response(JSON.stringify({ chunks }), { headers });
+      const answer = aiResult?.choices?.[0]?.message?.content || null;
+      return new Response(
+        JSON.stringify({
+          chunks,
+          ...(effective !== q ? { query_used: effective } : {}),
+          ...(ai ? { answer } : {}),
+        }),
+        { headers }
+      );
     } catch (err) {
       return new Response(JSON.stringify({ error: `Ricerca non disponibile: ${err.message}` }), {
         status: 502,
