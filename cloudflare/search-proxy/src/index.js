@@ -82,30 +82,29 @@ export default {
           }
         : { retrieval: { keyword_match_mode: 'or' } };
 
-      const searchPromise = env.SEARCH.search({
+      let usedOptions = options;
+      let result = await env.SEARCH.search({
         messages: [{ role: 'user', content: effective }],
-        ai_search_options: options,
+        ai_search_options: usedOptions,
       });
 
-      // Modalità opt-in "Risposta AI": in parallelo alla ricerca, genera una
-      // risposta in prosa basata sui passaggi recuperati (Workers AI).
-      const answerPromise = ai
-        ? env.SEARCH.chatCompletions({
-            messages: [
-              {
-                role: 'system',
-                content:
-                  'Rispondi in italiano, in modo conciso, basandoti ESCLUSIVAMENTE sui passaggi di trascrizione forniti. ' +
-                  'Se i passaggi non contengono la risposta, dillo chiaramente. Non inventare nulla.',
-              },
-              { role: 'user', content: q },
-            ],
-            model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-            ai_search_options: options,
-          }).catch(() => null)
-        : Promise.resolve(null);
-
-      const [result, aiResult] = await Promise.all([searchPromise, answerPromise]);
+      // Fallback per le multi-parola azzerate dal reranker: keyword puro in
+      // modalità "and" (tutte le parole nello stesso chunk) — preciso e onesto.
+      if (!singleWord && !(result?.chunks || []).length) {
+        usedOptions = {
+          reranking: { enabled: false },
+          retrieval: {
+            retrieval_type: 'keyword',
+            keyword_match_mode: 'and',
+            score_threshold: 0.1,
+            max_num_results: 20,
+          },
+        };
+        result = await env.SEARCH.search({
+          messages: [{ role: 'user', content: effective }],
+          ai_search_options: usedOptions,
+        });
+      }
 
       const rawChunks = result?.chunks || [];
       const chunks = rawChunks.map((c) => ({
@@ -113,7 +112,32 @@ export default {
         score: c.score ?? null,
         text: c.text || (Array.isArray(c.content) ? c.content.map((p) => p.text).join('\n') : ''),
       }));
-      const answer = aiResult?.choices?.[0]?.message?.content || null;
+
+      // Modalità opt-in "Risposta AI": genera SOLO se la ricerca ha trovato
+      // passaggi (guardrail deterministico contro risposte enciclopediche),
+      // con le stesse opzioni di retrieval che hanno prodotto i risultati.
+      let answer = null;
+      if (ai && chunks.length) {
+        const aiResult = await env.SEARCH.chatCompletions({
+          messages: [
+            {
+              role: 'system',
+              content:
+                "I passaggi forniti sono trascrizioni di sedute dell'Assemblea Regionale Siciliana. " +
+                'Rispondi in italiano, in modo conciso, basandoti ESCLUSIVAMENTE su quei passaggi. ' +
+                'Se i passaggi non contengono informazioni pertinenti, rispondi SOLO con: ' +
+                '"Le trascrizioni disponibili non contengono informazioni su questo tema." ' +
+                'NON usare MAI conoscenze generali esterne ai passaggi, nemmeno per spiegare i concetti. ' +
+                'Per citare una fonte scrivi SOLO il segnaposto [fonte: NOMEFILE] (mai la parola "documento" ' +
+                "né il nome file nudo), e se disponibile indica il minuto (es. 'al minuto 00:37:39').",
+            },
+            { role: 'user', content: q },
+          ],
+          model: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+          ai_search_options: usedOptions,
+        }).catch(() => null);
+        answer = aiResult?.choices?.[0]?.message?.content || null;
+      }
       return new Response(
         JSON.stringify({
           chunks,

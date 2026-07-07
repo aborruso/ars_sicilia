@@ -169,7 +169,18 @@ const videoMap = Object.fromEntries(
 
       function setAnswer(text: string | null) {
         if (!answerEl || !answerTextEl) return;
-        answerTextEl.textContent = text || '';
+        // Il modello cita le fonti coi nomi file interni ({youtubeId}.md),
+        // nel formato "[fonte: file.md]" chiesto dal prompt (con fallback sul
+        // nome file nudo): li sostituiamo con link leggibili alla seduta.
+        const sourceLink = (m: string, id: string) => {
+          const v = videoMap[id];
+          if (!v) return m;
+          return `<a href="${esc(v.url)}" class="text-navy-800 font-semibold underline underline-offset-2 hover:text-amber-600">seduta n. ${esc(String(v.numero))} del ${fmtDate(v.data)}</a>`;
+        };
+        const html = esc(text || '')
+          .replace(/\[fonte:\s*([A-Za-z0-9_-]{11})\.md\]/g, (m: string, id: string) => `(${sourceLink(m, id)})`)
+          .replace(/(?:&quot;|«|')?\b([A-Za-z0-9_-]{11})\.md\b(?:&quot;|»|')?/g, sourceLink);
+        answerTextEl.innerHTML = html;
         answerEl.classList.toggle('hidden', !text);
       }
 
