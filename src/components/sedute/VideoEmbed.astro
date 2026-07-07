@@ -15,5 +15,22 @@ const { youtubeId, title = 'Video seduta ARS' } = Astro.props;
     allowfullscreen
     class="absolute top-0 left-0 w-full h-full"
     loading="lazy"
+    data-video-embed
   ></iframe>
 </div>
+
+<script>
+  // Deep-link al secondo: ?t=SECONDI fa partire il video da quel punto
+  function initVideoEmbedStart() {
+    const iframe = document.querySelector<HTMLIFrameElement>('iframe[data-video-embed]');
+    if (!iframe || iframe.dataset.bound === 'true') return;
+    iframe.dataset.bound = 'true';
+    const t = parseInt(new URLSearchParams(window.location.search).get('t') || '', 10);
+    if (Number.isFinite(t) && t > 0) {
+      const url = new URL(iframe.src);
+      url.searchParams.set('start', String(t));
+      iframe.src = url.toString();
+    }
+  }
+  document.addEventListener('astro:page-load', initVideoEmbedStart);
+</script>

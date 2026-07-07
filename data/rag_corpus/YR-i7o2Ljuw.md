@@ -1,0 +1,13 @@
+# Assemblea Regionale Siciliana — seduta n. 223 del 27 gennaio 2026 (video delle ore 15:10)
+
+- Seduta: 223
+- Data: 2026-01-27
+- Video YouTube: YR-i7o2Ljuw
+- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/27/seduta-223/video-1510/
+- Fonte: trascrizione automatica dei sottotitoli YouTube
+
+## Trascrizione
+
+[00:00:00] Seduta è aperta. La conferenza dei presidenti dei gruppi parlamentari riunitasi oggi 27 gennaio 2026 sotto la presidenza del presidente dell'assemblea onorevole Galvagno e con la partecipazione del presidente della seconda commissione legislativa per immanente e bilancio, onorevole Daedone e del vicepresidente della Regione e assessore per l'agricoltura, lo sviluppo e la pesca mediterraneo onorevole San Martino e dell'assessore per le infrastrutture e alla mobilità onorevole Arrigò e dell'assessore per le attività produttive onorevole Tamaio e dell'assessore per ilittore per il territorio e dell'Ambiente, onorevole Savarino ha stabilito all'unanimità che nella giornata odierna l'aula procederà alla trattazione, alla votazione del disegno di legge di iniziativa governativa. Interventi urgenti per fronteggiare i danni causati da eventi meto e avversi nei giorni 19, 20 e 21 gennaio 2026 numero 1067 già assegnata alla seconda commissione legislativa permanente bilancio. Eventuali ulteriori interventi relativi alla situazione emergenziaria saranno inseriti in successivi disegni di legge che avranno
+
+[00:01:00] priorità rispetto agli altri DDL. La conferenza ha altresì convenuto di sospendere la trattazione del disegno di legge collegato di spesa, mentre rimane confermato quanto stabilito nel precedente programma calendario dei lavori con riferimento ai disegni di legge sugli enti locali DDL 738 Stralcio 1 comter e sulla dirigenza diddl 779 326 7088 e a disegni di legge collegati ordinamentali. L'assemblea ne prende atto, l'aula è sospesa è riconvocata alle ore 16: la seduta è sospesa.

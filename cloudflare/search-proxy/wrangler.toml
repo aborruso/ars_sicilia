@@ -1,0 +1,7 @@
+name = "ars-search-proxy"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+[[ai_search]]
+binding = "SEARCH"
+instance_name = "ars-sicilia-trascrizioni"

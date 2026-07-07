@@ -1,0 +1,202 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { loadVideos } from '../../lib/data-loader';
+
+// Pagina sperimentale, non linkata dai menu, esclusa da sitemap (filtro /labs/) e noindex.
+// Ricerca semantica sulle trascrizioni via Cloudflare AI Search (proxy Worker).
+
+const videos = await loadVideos();
+
+// Mappa youtube_id → dati per costruire i link dei risultati
+const videoMap = Object.fromEntries(
+  videos
+    .filter((v) => v.youtubeId)
+    .map((v) => [
+      v.youtubeId,
+      {
+        numero: v.seduta.numero,
+        data: v.seduta.dataSeduta,
+        ora: v.oraVideo,
+        url: `/ars_sicilia/sedute/${v.seduta.yearMonthDay.year}/${v.seduta.yearMonthDay.month}/${v.seduta.yearMonthDay.day}/${v.seduta.slug}/${v.slug}/`,
+      },
+    ])
+);
+---
+
+<PageLayout
+  title="Ricerca nelle trascrizioni (beta)"
+  description="Ricerca sperimentale nel testo trascritto dei video delle sedute ARS"
+  noindex={true}
+>
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Ricerca nelle trascrizioni <span class="text-base align-middle px-2 py-1 bg-amber-100 text-amber-800 rounded">beta</span></h1>
+    <p class="text-lg text-warm-600">
+      Cerca nel testo trascritto dei video delle sedute. Ogni risultato porta al punto del video in cui se ne parla.
+      Per ora l'indice copre le <strong>10 sedute più recenti</strong> con trascrizione.
+    </p>
+  </div>
+
+  <form id="trs-form" class="mb-8">
+    <label for="trs-search" class="sr-only">Cerca nelle trascrizioni</label>
+    <div class="relative">
+      <svg class="w-5 h-5 text-warm-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input
+        type="search"
+        id="trs-search"
+        placeholder="Es. sanità, precari, rifiuti, bilancio…"
+        autocomplete="off"
+        class="w-full pl-10 pr-28 py-3 border border-warm-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-amber-600"
+      />
+      <button
+        type="submit"
+        class="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1.5 bg-navy-800 text-white text-sm font-semibold rounded-md hover:bg-navy-900 transition-colors"
+      >Cerca</button>
+    </div>
+  </form>
+
+  <p id="trs-status" class="text-sm text-warm-500 mb-6 hidden"></p>
+  <div id="trs-results" class="space-y-6"></div>
+
+  <p class="text-xs text-warm-400 mt-8">
+    Powered by <a href="https://developers.cloudflare.com/ai-search/" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-600">Cloudflare AI Search</a>
+  </p>
+
+  <script type="application/json" id="trs-video-map" set:html={JSON.stringify(videoMap)}></script>
+
+  <script>
+    const WORKER_URL = 'https://ars-search-proxy.andy-pr.workers.dev';
+    const MARKER_RE = /\[(\d{2}):(\d{2}):(\d{2})\]/;
+
+    function esc(s: string): string {
+      return String(s).replace(/[&<>"']/g, (c) => (
+        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string
+      ));
+    }
+
+    function fmtDate(iso: string): string {
+      const [y, m, d] = (iso || '').split('-');
+      return d && m && y ? `${d}/${m}/${y}` : (iso || '');
+    }
+
+    function firstMarkerSeconds(text: string): number | null {
+      const m = MARKER_RE.exec(text);
+      return m ? parseInt(m[1], 10) * 3600 + parseInt(m[2], 10) * 60 + parseInt(m[3], 10) : null;
+    }
+
+    function toHms(s: number): string {
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const sec = s % 60;
+      return (h ? `${h}:` : '') + `${String(m).padStart(h ? 2 : 1, '0')}:${String(sec).padStart(2, '0')}`;
+    }
+
+    function excerpt(text: string): string {
+      // Rimuove header/marker per la lettura, tronca a ~380 caratteri
+      const clean = text
+        .replace(/^#.*$/gm, '')
+        .replace(/^- .*$/gm, '')
+        .replace(/^## .*$/gm, '')
+        .replace(/\[(\d{2}):(\d{2}):(\d{2})\]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      return clean.length > 380 ? clean.slice(0, 380) + '…' : clean;
+    }
+
+    function resultHTML(chunk: any, videoMap: any): string {
+      const youtubeId = String(chunk.key || '').replace(/\.md$/, '');
+      const video = videoMap[youtubeId];
+      const seconds = firstMarkerSeconds(chunk.text || '');
+      const label = video
+        ? `Seduta n. ${video.numero} del ${fmtDate(video.data)} — video delle ${video.ora}`
+        : youtubeId;
+      const pageHref = video ? (seconds != null ? `${video.url}?t=${seconds}` : video.url) : null;
+      const ytHref = seconds != null
+        ? `https://www.youtube.com/watch?v=${youtubeId}&t=${seconds}s`
+        : `https://www.youtube.com/watch?v=${youtubeId}`;
+      const tsBadge = seconds != null
+        ? `<span class="px-2 py-0.5 bg-navy-100 text-navy-800 rounded font-mono text-xs">dal minuto ${toHms(seconds)}</span>`
+        : '';
+      const score = chunk.score != null
+        ? `<span class="text-xs text-warm-400" title="rilevanza">${(chunk.score * 100).toFixed(0)}%</span>`
+        : '';
+      return `
+        <article class="card p-6">
+          <div class="flex flex-wrap items-center gap-2 mb-3">
+            ${pageHref
+              ? `<a href="${esc(pageHref)}" class="text-lg font-display font-bold text-navy-800 hover:text-amber-600 transition-colors">${esc(label)}</a>`
+              : `<span class="text-lg font-display font-bold text-navy-800">${esc(label)}</span>`}
+            ${tsBadge} ${score}
+          </div>
+          <p class="text-warm-700 leading-relaxed mb-3">${esc(excerpt(chunk.text || ''))}</p>
+          <div class="flex flex-wrap gap-3 text-sm">
+            ${pageHref ? `<a href="${esc(pageHref)}" class="text-navy-800 hover:text-amber-600 underline underline-offset-2">Guarda sul sito</a>` : ''}
+            <a href="${esc(ytHref)}" target="_blank" rel="noopener noreferrer" class="text-navy-800 hover:text-amber-600 underline underline-offset-2">Apri su YouTube</a>
+          </div>
+        </article>`;
+    }
+
+    function initTrsSearch() {
+      const form = document.getElementById('trs-form') as HTMLFormElement | null;
+      const input = document.getElementById('trs-search') as HTMLInputElement | null;
+      const statusEl = document.getElementById('trs-status');
+      const resultsEl = document.getElementById('trs-results');
+      if (!form || !input || !resultsEl || form.dataset.bound === 'true') return;
+      form.dataset.bound = 'true';
+
+      const videoMap = JSON.parse(document.getElementById('trs-video-map')?.textContent || '{}');
+
+      function setStatus(msg: string) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.classList.toggle('hidden', !msg);
+      }
+
+      async function search(q: string) {
+        const query = q.trim();
+        if (query.length < 2) return;
+        setStatus('Ricerca in corso…');
+        if (resultsEl) resultsEl.innerHTML = '';
+        try {
+          const res = await fetch(`${WORKER_URL}/search`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+          const chunks = data.chunks || [];
+          setStatus(chunks.length
+            ? `${chunks.length} passaggi trovati per "${query}"`
+            : `Nessun passaggio trovato per "${query}"`);
+          if (resultsEl) resultsEl.innerHTML = chunks.map((c: any) => resultHTML(c, videoMap)).join('');
+        } catch (err: any) {
+          setStatus(`Errore: ${err.message || err}`);
+        }
+      }
+
+      function syncURL(q: string) {
+        const url = new URL(window.location.href);
+        if (q.trim()) url.searchParams.set('q', q.trim());
+        else url.searchParams.delete('q');
+        history.replaceState(null, '', url.toString());
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        syncURL(input.value);
+        search(input.value);
+      });
+
+      // Ricerca pre-attivata da ?q= (link condivisibili)
+      const initialQ = new URLSearchParams(window.location.search).get('q');
+      if (initialQ) {
+        input.value = initialQ;
+        search(initialQ);
+      }
+    }
+
+    document.addEventListener('astro:page-load', initTrsSearch);
+  </script>
+</PageLayout>

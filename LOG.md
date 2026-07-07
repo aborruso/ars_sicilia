@@ -1,3 +1,15 @@
+# 2026-07-07
+
+## Ricerca semantica trascrizioni (beta, Cloudflare AI Search)
+
+- Corpus RAG: `scripts/build_rag_corpus.py` converte gli SRT in Markdown con marker `[HH:MM:SS]` per paragrafo (~60 s) + header metadati (seduta, data, URL video). Formato validato contro le pratiche correnti (finestre 30–120 s, timestamp per chunk); marker inline perché AI Search non supporta metadati per chunk. Esteso a tutte le 82 trascrizioni disponibili → `data/rag_corpus/`.
+- Bucket R2 `ars-trascrizioni` popolato con gli 82 file (`scripts/upload_rag_corpus.sh`); istanza AI Search `ars-sicilia-trascrizioni` creata e indicizzata (82/82, 0 errori).
+- Valutazione empirica con ~10 query di test: senza reranking i punteggi erano indistinguibili (0.4-0.6) con falsi positivi; con reranking (`@cf/baai/bge-reranker-base`) salgono a 0.77-0.97 sui match veri e restituiscono onestamente 0 risultati sui non-match. Reranking attivato, `max_num_results` alzato a 20. Osservazione non risolta: alcune query perdono il match quando il corpus cresce (20→82 doc) — vedi `wiki/ricerca-trascrizioni/tuning-e-valutazione.md`.
+- Worker proxy `cloudflare/search-proxy/` (binding nativo `[[ai_search]]`, niente token esposto, CORS su aborruso.github.io + localhost) deployato; fix bug lettura risposta (`result.chunks`, non `result.data`).
+- Pagina nascosta `/labs/ricerca-035553/`: fuori dai menu, esclusa da sitemap (filtro `/labs/`), meta noindex (nuova prop `noindex` nei layout), nota "powered by Cloudflare AI Search". Risultati con estratto e deep-link `?t=` alla pagina video; `VideoEmbed.astro` ora legge `?t=` e imposta `start=` nell'iframe.
+- Automazione: `transcripts_digests.yml` esteso per rigenerare il corpus, caricare su R2 solo i file nuovi/cambiati e forzare un sync job via API ad ogni run notturno — nessun intervento manuale per le trascrizioni future. Secret `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` aggiunti al repo.
+- Creato `wiki/` (formato OKF) con documentazione di progetto per concetti: architettura, dataset, pipeline, frontend, questa feature, CI/CD, decisioni architetturali.
+
 # 2026-07-05
 
 ## Navigazione a frecce + DDL nella pagina video

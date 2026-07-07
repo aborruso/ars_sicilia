@@ -8,14 +8,15 @@ interface Props {
   description: string;
   ogImage?: string;
   ogType?: 'website' | 'article';
+  noindex?: boolean;
 }
 
-const { title, description, ogImage, ogType, frontmatter } = Astro.props;
+const { title, description, ogImage, ogType, noindex, frontmatter } = Astro.props;
 const resolvedTitle = title ?? frontmatter?.title ?? '';
 const resolvedDescription = description ?? frontmatter?.description ?? '';
 ---
 
-<BaseLayout title={resolvedTitle} description={resolvedDescription} ogImage={ogImage} ogType={ogType}>
+<BaseLayout title={resolvedTitle} description={resolvedDescription} ogImage={ogImage} ogType={ogType} noindex={noindex}>
   <Header slot="header" />
 
   <div class="container-custom py-8">

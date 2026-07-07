@@ -1,7 +1,9 @@
 name: Transcripts and digests
 
 # Scarica le trascrizioni via API ufficiale YouTube (OAuth, non bloccata per IP)
-# e genera i digest AI con Gemini. Committa su main -> triggera il deploy del sito.
+# e genera i digest AI con Gemini. Rigenera anche il corpus RAG per la ricerca
+# semantica sulle trascrizioni e lo sincronizza su Cloudflare AI Search.
+# Committa su main -> triggera il deploy del sito.
 # Sostituisce il vecchio passaggio manuale locale.
 
 on:
@@ -72,10 +74,36 @@ jobs:
           . .venv/bin/activate
           ./scripts/generate_digests.sh
 
-      - name: Commit trascrizioni e digest
+      - name: Genera corpus RAG (SRT -> Markdown per Cloudflare AI Search)
+        run: |
+          . .venv/bin/activate
+          python3 scripts/build_rag_corpus.py --limit 0
+
+      - name: Set up Node (per wrangler)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Carica su R2 i file nuovi/cambiati e sincronizza l'indice
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          changed=$(git status --porcelain -- data/rag_corpus | cut -c4-)
+          if [ -z "$changed" ]; then
+            echo "Nessun file nuovo/cambiato nel corpus RAG."
+          else
+            echo "$changed" | while IFS= read -r f; do
+              npx wrangler r2 object put "ars-trascrizioni/$(basename "$f")" --file "$f" --content-type "text/markdown" --remote
+            done
+            curl -sf -X POST "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai-search/instances/ars-sicilia-trascrizioni/jobs" \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+          fi
+
+      - name: Commit trascrizioni, digest e corpus RAG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/trascrizioni/ data/digest/
-          git commit -m "chore: update transcripts and AI digests" || exit 0
+          git add data/trascrizioni/ data/digest/ data/rag_corpus/
+          git commit -m "chore: update transcripts, AI digests and RAG corpus" || exit 0
           git push

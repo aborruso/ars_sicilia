@@ -7,6 +7,7 @@ interface Props {
   description: string;
   ogImage?: string;
   ogType?: 'website' | 'article';
+  noindex?: boolean;
 }
 
 const {
@@ -14,6 +15,7 @@ const {
   description,
   ogImage = '/ars_sicilia/og-default.png',
   ogType = 'website',
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -30,6 +32,7 @@ const fullOgImage = new URL(ogImage, Astro.site);
 
     <title>{title} | ARS Sicilia</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <!-- OpenGraph -->
     <meta property="og:type" content={ogType} />

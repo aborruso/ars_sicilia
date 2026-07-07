@@ -1,58 +1,51 @@
-# Fix duplicati / qualità dati disegni di legge
+# Task: ricerca full-text trascrizioni con Cloudflare AI Search (pagina test nascosta)
 
-## Obiettivo
-Eliminare i "duplicati" apparenti dei DDL nel sito, senza perdere informazione reale.
+Piano completo: vedi piano approvato (Cloudflare AI Search, Worker proxy, pagina `/labs/ricerca-<random>/`).
+Documentazione di progetto (formato OKF): [wiki/](../wiki/index.md), in particolare
+[wiki/ricerca-trascrizioni/](../wiki/ricerca-trascrizioni/index.md).
 
-## Diagnosi (verificata sui PDF reali, niente OCR — sono PDF testo)
+## Fase 0 — Corpus RAG (valutazione formato)
+- [x] `scripts/build_rag_corpus.py`: SRT → Markdown con marker `[HH:MM:SS]` per paragrafo (~60 s)
+- [x] Corpus esteso a **tutti gli 82 SRT disponibili** (`data/rag_corpus/*.md`), non solo i 10 di test iniziali
+- [x] Variante di confronto → scelta marker inline (coerente con pratiche RAG-su-video)
 
-Due cause radice distinte:
+## Fase 1 — Setup Cloudflare
+- [x] Bucket R2 `ars-trascrizioni` popolato con tutti gli 82 file
+- [x] Istanza AI Search `ars-sicilia-trascrizioni` creata (utente, dashboard) e indicizzata (82/82, 0 errori)
+- [x] Valutazione con ~10 query di test: senza reranking punteggi indistinguibili (0.4-0.6) e falsi positivi; con reranking (`@cf/baai/bge-reranker-base`) punteggi 0.77-0.97 sui match veri, 0 risultati onesti sui non-match
+- [x] Tuning applicato: reranking attivo, `max_num_results` 20 — dettagli e osservazioni aperte in [wiki/ricerca-trascrizioni/tuning-e-valutazione.md](../wiki/ricerca-trascrizioni/tuning-e-valutazione.md)
 
-1. **Stralci collassati al numero padre.** Il PDF elenca voci distinte
-   `(n. 1030/A Stralcio I/A)`, `V/A`, `VI/A` con titoli e relatori diversi
-   (sanità / personale / lavoro). Il prompt impone `numero_disegno = 1030` per tutti.
-   `build-data.mjs` poi dedup per `numero` per seduta (riga 103) e aggrega per
-   `${numero}-${legislatura}` (riga 179) → **tiene 1 stralcio su 3, scarta gli altri**.
-   - Il numero 1030 (padre) è CORRETTO e non va cambiato (URL ICARO = padre).
-   - Va preservato lo **stralcio** come campo distinto, e incluso nelle chiavi di build-data.
+## Fase 2 — Worker proxy
+- [x] `cloudflare/search-proxy/` (binding nativo `[[ai_search]]`, CORS aborruso.github.io + localhost:4321)
+- [x] Deploy fatto, bug fix (risposta `search()` usa `result.chunks`, non `result.data`), verificato via curl
 
-2. **Titolo non normalizzato.** Stesso disegno (es. 993) esce con 7 forme: virgolette
-   curve/dritte, apostrofo `'`/`'`, spazi doppi (testo giustificato), punto finale,
-   annotazione `(n. 993/A)`, escape `’`. Verificato: i PDF stessi differiscono
-   (249 dritte/spazi singoli, 250+253 curve/spazi doppi) → la variazione non è solo
-   l'LLM, serve normalizzazione deterministica a valle.
+## Fase 3 — Pagina nascosta
+- [x] `src/pages/labs/ricerca-035553.astro`, sitemap filter + noindex, nota "powered by Cloudflare AI Search"
+- [x] Verificata in locale (screenshot utente): query in linguaggio naturale, risultati con timestamp e link
 
-## Non è un bug
-- 993 (giugno) e 974 (maggio) sono disegni DIVERSI realmente presenti negli stessi
-  OdG → sedute sovrapposte = corretto. NON si "risolve".
+## Fase 4 — Deep-link al secondo
+- [x] `VideoEmbed.astro`: legge `?t=` → iframe `?start=`
+- [ ] Non ancora verificato end-to-end il click reale dal risultato al secondo esatto nel player
 
-## Cosa rende DAVVERO il sito (ddls.json) — verificato
-- 22-record-per-DDL → 1 voce ciascuno. Corretto.
-- 947 spazzatura (`{`, 6566 char) NON vince il display: rende "Comiso 'Città della pace'". OK in pagina, sporco solo nel JSONL.
-- 1030 rende uno stralcio arbitrario ("transizione energetica") → fuorviante, ma utente ha scelto COLLASSARE.
-- 738 rende con virgolette curve residue → cosmetico.
+## Automazione (GitHub Actions)
+- [x] `transcripts_digests.yml` esteso: dopo trascrizioni+digest, rigenera il corpus RAG, carica su R2 solo i file nuovi/cambiati (`git status --porcelain`), forza un sync job via API, committa
+- [x] Secret `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID` impostati nel repo (fatto dall'utente)
+- [ ] Non ancora testato con un run reale del workflow (né `workflow_dispatch` né schedulato)
 
-## Decisione presa
-- **Stralci 1030: COLLASSARE a uno** (scelta utente, informata). Solo cambio chiave dedup, nessun campo stralcio, nessuna modifica a build-data.mjs.
-- **NIENTE reprocess**: 947 rende già pulito; basta scartare il record-spazzatura.
+## Wiki di progetto
+- [x] `wiki/` creato in formato OKF: architettura, dataset, pipeline, frontend, ricerca-trascrizioni, ci-cd, decisioni
+- [x] Verificati tutti i link interni; verificata assenza di dati sensibili (account ID, token, slug pagina nascosta)
 
-## Fasi (tutto nel post-processing di extract_odg_data.sh, righe ~328-337)
+## Ancora da fare
+- [ ] Commit e push di tutto il lavoro (finora solo locale)
+- [ ] Test end-to-end del workflow GitHub (dispatch manuale consigliato prima di aspettare lo schedule notturno)
+- [ ] Eventuale hybrid search (BM25+vettoriale) — candidato di miglioramento, non ancora provato
 
-### Fase 1 — Normalizzazione titolo (su JSONL esistente, no LLM)
-- [ ] Step mlr: deescape `\\u2019` (DUE backslash!), togli annotazione finale `(n. …)`,
-      togli virgolette apertura/chiusura + punto finale, canonicalizza apostrofo `’`→`'`
-      e virgolette `“”`→`"`, collassa spazi (`clean_whitespace`).
-
-### Fase 2 — Guard anti-spazzatura
-- [ ] Filtro: scarta titoli con `{`/`}` o lunghezza > 400 (legittimi max 264). Elimina 947 corrotto.
-
-### Fase 3 — Collasso stralci
-- [ ] Dedup finale: chiave `pdf_url,numero_disegno` (era `+titolo_disegno`).
-
-### Fase 4 — Applicare e verificare
-- [ ] Eseguire script (skippa i PDF, riapplica post-processing al JSONL esistente).
-- [ ] `node scripts/build-data.mjs` + check: 993 un titolo pulito, 947 niente spazzatura, 1030 un record/PDF.
-- [ ] commit + LOG.md.
-
-## Non è un bug (non toccare)
-- 953/974/993/930 = debiti fuori bilancio mesi diversi (marzo/maggio/giugno/…), stesse sedute = corretto (voci ricorrenti in OdG finché non votate).
-- 993 vs 974 = disegni diversi.
+## Review
+Feature realizzata end-to-end e funzionante in locale: ricerca semantica su tutte le
+trascrizioni disponibili (82 sedute), con tuning basato su valutazione empirica (il
+reranking è stato il cambio con l'impatto maggiore). Automazione predisposta perché il
+corpus resti sincronizzato ad ogni nuova trascrizione scaricata, senza intervento manuale.
+Aperta un'osservazione non risolta (query che perdono match forte quando il corpus cresce)
+documentata nel wiki per non perderla. Prossimo passo naturale: commit, push, e un run di
+prova del workflow.

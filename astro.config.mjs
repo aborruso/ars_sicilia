@@ -7,7 +7,11 @@ import remarkDefaultLayout from './src/lib/remark-default-layout.mjs';
 export default defineConfig({
   site: 'https://aborruso.github.io',
   base: '/ars_sicilia',
-  integrations: [tailwind(), sitemap(), mdx()],
+  integrations: [
+    tailwind(),
+    sitemap({ filter: (page) => !page.includes('/labs/') }),
+    mdx(),
+  ],
   markdown: {
     remarkPlugins: [[remarkDefaultLayout, { layout: 'src/layouts/PageLayout.astro' }]],
   },

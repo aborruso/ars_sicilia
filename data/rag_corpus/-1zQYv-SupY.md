@@ -1,0 +1,17 @@
+# Assemblea Regionale Siciliana — seduta n. 221 del 13 gennaio 2026 (video delle ore 15:13)
+
+- Seduta: 221
+- Data: 2026-01-13
+- Video YouTube: -1zQYv-SupY
+- Pagina video: https://aborruso.github.io/ars_sicilia/sedute/2026/01/13/seduta-221/video-1513/
+- Fonte: trascrizione automatica dei sottotitoli YouTube
+
+## Trascrizione
+
+[00:00:00] Comunico che la gara di fiducia di Santo Razio Primavera con nota PEC del 29 dicembre 2025 protocollata in pari data, ha trasmesso copia della sentenza della Corte di Cassazione prima sezione civile numero 344/2025 pubblicata il 28 dicembre 2025 con la quale viene rigettato il ricorso di Salvatore Giuffrida verso la sentenza della Corte d'Appello di Palermo. Prima sezione civile numero 89 del 22 gennaio 2025 che aveva accolto l'appello proposto da Sant'Orazio Primavera dichiarando lo stesso giuffride ineleggibile alla carica di deputato dell'Assemblea regionale siciliana. Ricordo altresì che in esecuzione della sentenza della Corte d'Appello di Palermo numero 8925 Santo Razio Primavera a seguito del giuramento di rito prestato nella seduta d'aula 151 del 28 gennaio 2025 veniva
+
+[00:01:00] immesso nelle funzioni di deputato dell'Assemblea regionale siciliana in esecuzione della successiva ordinanza della Corte d'Appello di Palermo, prima sezione civile 11.0762025 62025 del 19 maggio 2025 di cui l'assemblea aveva preso atto nella seduta d'aula 179 del 20 maggio 2025 per la quale in pendenza di ricorso per Cassazione era stata sospesa l'efficacia esecutiva della propria precedente sentenza numero 8925. Salvatore Giuffriva aveva temporaneamente riassunto le funzioni di deputato regionale dal 19 maggio 2025. Tutto ciò premesso in esecuzione della superiore sendenza della Corte di Cassazione numero 34404 del 2025. Confermativa la sentenza della Corte dell'Appello di Palermo numero 89/2025 sopra citata l'onorevole Santo Razio Privitera, avendo già presentato eh >> a che ho detto io? Ah, primavera, scusate. Assume le funzioni di deputato
+
+[00:02:02] regionale del 28/2025, data di pubblicazione della citata sentenza, risultandoì già iscritto al gruppo parlamentare misto, salva sua diversa dichiarazione a riguardo. Avverto altresì che dalla data della pubblicazione della medesima sentenza della Corte di Cassazione decorre il termine di 20 giorni per la presentazione di eventuale protesto o reclami ai sensi dell'articolo 61 comma3 della legge regionale 20 marzo del 51 numero 29 e successive modificazioni. L'assemblea ne prende atto. Comunico che in data 13 gennaio 2026 protocollata al numero 189/2026 l'onorevole Santo Primi Primavera ha comunicato di aderire al gruppo parlamentare popolare autonomisti, cessando contestualmente di far parte del gruppo parlamentare misto. L'assemblea ne prende atti. Avverto che il processo verbale della
+
+[00:03:02] seduta precedente è apposta a disposizione degli onorevoli deputati che intendono prendere visione ed è considerato approvato in assenza di osservazione in contrario nella presente seduta. >> Comunico che l'onorevole Cracolici è in missione dall'11 al 13 gennaio 2026. L'assemblea ne prende atto. È stata convocata di capuzzi per 15:30, quindi è sospesa e riprenderà il termine. Eh, comunico ai colleghi che è stata convocata l'assemblea dei capigruppo alle 15:30, perciò subito dopo, al appena è finita la riunione dei capigruppo, l'assemblea riprenderà. Grazie. La seduta è sospesa.
