@@ -179,7 +179,9 @@ const searchData = allDDLs.map((d) => ({
         const url = new URL(window.location.href);
         if (q.trim()) url.searchParams.set('q', q.trim());
         else url.searchParams.delete('q');
-        history.replaceState(null, '', url.toString());
+        // history.state va preservato: azzerarlo rompe il "back" con le
+        // ViewTransitions di Astro (URL aggiornato ma pagina non sostituita).
+        history.replaceState(history.state, '', url.toString());
       }
 
       input.addEventListener('input', (e) => {

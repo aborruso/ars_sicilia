@@ -217,7 +217,10 @@ const videoMap = Object.fromEntries(
         else url.searchParams.delete('q');
         if (aiCheckbox?.checked) url.searchParams.set('ai', '1');
         else url.searchParams.delete('ai');
-        history.replaceState(null, '', url.toString());
+        // history.state va preservato: azzerarlo rompe il ripristino della
+        // pagina al "back" con le ViewTransitions di Astro (URL aggiornato
+        // ma contenuto non sostituito).
+        history.replaceState(history.state, '', url.toString());
       }
 
       form.addEventListener('submit', (e) => {
