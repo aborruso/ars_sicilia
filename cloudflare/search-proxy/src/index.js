@@ -6,6 +6,26 @@ const ALLOWED_ORIGINS = [
   'http://localhost:4321',
 ];
 
+// Parole funzione italiane: in modalità keyword "or" farebbero matchare
+// qualunque documento (es. "di" compare 5000+ volte nel corpus), rendendo
+// pertinente qualsiasi query. Rimosse solo per il ramo BM25, non per quello
+// vettoriale/reranked (l'embedding le gestisce già correttamente).
+const STOPWORDS = new Set([
+  'a', 'ai', 'al', 'alla', 'alle', 'allo', 'con', 'che', 'chi', 'ci', 'coi',
+  'col', 'da', 'dai', 'dal', 'dalla', 'dalle', 'dallo', 'dei', 'del', 'della',
+  'delle', 'dello', 'di', 'e', 'ed', 'gli', 'i', 'il', 'in', 'io', 'la', 'le',
+  'lo', 'mi', 'ne', 'nei', 'nel', 'nella', 'nelle', 'nello', 'noi', 'o', 'per',
+  'più', 'quale', 'quali', 'quando', 'quanto', 'quello', 'questo', 'se', 'si',
+  'sono', 'su', 'sua', 'sue', 'sui', 'sul', 'sulla', 'sulle', 'sullo', 'suo',
+  'suoi', 'ti', 'tra', 'tu', 'un', 'una', 'uno', 'voi', 'era', 'stato', 'come',
+  'dove', 'perché', "perche'",
+]);
+
+function stripStopwords(text) {
+  const kept = text.split(/\s+/).filter((w) => !STOPWORDS.has(w.toLowerCase()));
+  return kept.length ? kept.join(' ') : text;
+}
+
 function corsHeaders(origin) {
   const allowed = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
   return {
@@ -72,42 +92,56 @@ export default {
 
       // Il reranker (bge-reranker-base) azzera i punteggi delle query italiane
       // di una sola parola: per quelle il match keyword è già autorevole,
-      // quindi si usa BM25 puro senza reranking. Per le query multi-parola
-      // resta hybrid+reranker; "or" perché una query naturale non deve
-      // richiedere che TUTTI i termini compaiano nel documento.
+      // quindi si usa BM25 puro senza reranking.
       const singleWord = effective.split(/\s+/).length === 1;
-      const options = singleWord
-        ? {
-            reranking: { enabled: false },
-            retrieval: { retrieval_type: 'keyword', score_threshold: 0.1, max_num_results: 20 },
-          }
-        : { retrieval: { keyword_match_mode: 'or' } };
+      const keywordOptions = {
+        reranking: { enabled: false },
+        retrieval: {
+          retrieval_type: 'keyword',
+          keyword_match_mode: 'or',
+          score_threshold: 0.1,
+          max_num_results: 20,
+        },
+      };
 
-      let usedOptions = options;
-      let result = await env.SEARCH.search({
-        messages: [{ role: 'user', content: effective }],
-        ai_search_options: usedOptions,
-      });
-
-      // Fallback per le multi-parola azzerate dal reranker: keyword puro in
-      // modalità "and" (tutte le parole nello stesso chunk) — preciso e onesto.
-      if (!singleWord && !(result?.chunks || []).length) {
-        usedOptions = {
-          reranking: { enabled: false },
-          retrieval: {
-            retrieval_type: 'keyword',
-            keyword_match_mode: 'and',
-            score_threshold: 0.1,
-            max_num_results: 20,
-          },
-        };
-        result = await env.SEARCH.search({
+      let usedOptions, rawChunks;
+      if (singleWord) {
+        usedOptions = keywordOptions;
+        const result = await env.SEARCH.search({
           messages: [{ role: 'user', content: effective }],
           ai_search_options: usedOptions,
         });
+        rawChunks = result?.chunks || [];
+      } else {
+        // Il reranker si è dimostrato inaffidabile anche su query multi-parola
+        // con nomi propri/termini specifici (caso verificato: "Mondello" —
+        // il chunk giusto esisteva nel corpus, il reranker l'ha scartato a
+        // favore di uno adiacente ma non pertinente). Si affianca sempre una
+        // ricerca BM25 pura, deterministica e non soggetta al reranker, e si
+        // uniscono i risultati (dedup per chunk id).
+        const rerankedOptions = { retrieval: { keyword_match_mode: 'or' } };
+        const keywordQuery = stripStopwords(effective);
+        const [reranked, keywordOnly] = await Promise.all([
+          env.SEARCH.search({
+            messages: [{ role: 'user', content: effective }],
+            ai_search_options: rerankedOptions,
+          }).catch(() => null),
+          env.SEARCH.search({
+            messages: [{ role: 'user', content: keywordQuery }],
+            ai_search_options: keywordOptions,
+          }).catch(() => null),
+        ]);
+        const seen = new Set();
+        rawChunks = [];
+        for (const c of [...(reranked?.chunks || []), ...(keywordOnly?.chunks || [])]) {
+          const dedupKey = c.id || `${c.item?.key}:${(c.text || '').slice(0, 40)}`;
+          if (seen.has(dedupKey)) continue;
+          seen.add(dedupKey);
+          rawChunks.push(c);
+        }
+        // Per la generazione conta il recall: priorità al ramo keyword.
+        usedOptions = keywordOptions;
       }
-
-      const rawChunks = result?.chunks || [];
       const chunks = rawChunks.map((c) => ({
         key: c.item?.key || c.filename || c.attributes?.file?.name || '',
         score: c.score ?? null,

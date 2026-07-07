@@ -138,6 +138,35 @@ indennità ex Province, manovrina, sblocca assunzioni. Esiti e fix:
   a 8 passaggi: prima produceva risposte contraddittorie con decine di
   segnaposto.
 
+## 7. Reranker inaffidabile anche su multi-parola: merge con BM25 puro
+
+Caso reale segnalato dall'utente: "dove si parla della polemica su italo
+belga e mondello?" (argomento verificato nel corpus, 4 sedute) tornava 1
+solo passaggio, per giunta quello sbagliato — un paragrafo adiacente
+(stesso file, 60s prima) su un argomento del tutto diverso (caccia
+bombardieri/Roma), perché due temi erano finiti nello stesso chunk a
+causa di un cambio di oratore a metà paragrafo, e il chunk col
+contenuto vero era stato scartato dal reranker. **Fix**: per le query
+multi-parola si lanciano sempre in parallelo hybrid+reranker E un ramo
+BM25 puro (no reranker, "or", stopword italiane rimosse prima —
+altrimenti "di", "e", "il" fanno matchare qualunque documento, vedi
+sotto), risultati uniti e deduplicati per id. Risultato: da 1 a 9
+passaggi pertinenti da 4 sedute, risposta AI corretta con citazioni
+puntuali.
+
+Effetto collaterale scoperto e corretto nello stesso giro: la modalità
+`keyword_match_mode: "or"` matcha anche le stopword ("di" compare 5000+
+volte nel corpus) — query totalmente estranee al corpus ("colonizzazione
+di Marte") tornavano 20 falsi positivi. Fix: lista di stopword italiane
+rimossa dalla query prima del solo ramo keyword (non dal ramo
+semantico/reranked, che le gestisce già). Residuo accettato: il
+reranker a volte assegna punteggi alti (0.9+) a passaggi vettorialmente
+"più vicini" ma comunque non pertinenti quando il tema è assente dal
+corpus (limite noto dei cross-encoder: restituiscono sempre un
+migliore-tra-i-peggiori) — verificato che questo non produce risposte
+AI errate: il modello resta onesto ("non contengono informazioni…")
+anche con questi chunk nel contesto.
+
 # Configurazione applicata (istanza `ars-sicilia-trascrizioni`)
 
 | Parametro | Valore | Perché |
