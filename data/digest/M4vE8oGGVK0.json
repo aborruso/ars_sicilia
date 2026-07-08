@@ -1,0 +1,111 @@
+{
+  "digest": "## Resoconto della Seduta dell'Assemblea Regionale Siciliana del 7 Luglio 2026\n\nLa seduta odierna dell'Assemblea Regionale Siciliana è stata caratterizzata da annunci procedurali e da un intenso dibattito, con forti critiche all'operato del Governo regionale guidato dal Presidente Schifani. L'aula, dopo aver preso atto del congedo dell'On. Santo Primitera, ha approvato il calendario dei lavori per la sessione estiva, che si concluderà il 5 agosto 2026. Tra i punti salienti figurano il voto finale sul DDL “Caro Voli” l'8 luglio, l'incardinamento del DDL 1030 il 14 luglio, la discussione della relazione del Presidente della Regione il 21 luglio e la discussione dei rendiconti 2020-2021 il 28 luglio. È stata data priorità all'esame del DDL 1171 sulla \"filiera del grano\".\n\nTuttavia, il clima politico è stato teso, con numerosi interventi dell'opposizione che hanno evidenziato quelle che ritengono gravi lacune e ritardi dell'esecutivo.\n\n**Criticità principali emerse:**\n\n-   **Crisi Idrica e Gestione dell'Acqua**: L'On. La Barera ha denunciato l'emergenza idrica in Sicilia, nonostante gli invasi pieni, promuovendo una raccolta di firme (8.000 in 4 giorni) per la fuoriuscita da Sicilacque e proponendo una \"exit strategy\" basata sull'articolo 30, per ridare la gestione idrica a un ente regionale. Ha criticato il silenzio del Presidente Schifani. Anche l'On. Gilistro ha espresso profonda preoccupazione per la privatizzazione dell'acqua e l'inefficienza del servizio, con il 70% di dispersione nelle tubature e mancato utilizzo dei fondi PNRR per il ripristino.\n\n-   **Gestione Fondi e Bilancio**: L'On. Campo ha attaccato il governo per la gestione dei concorsi e la messa a rischio di 250 milioni di euro destinati a lavoro, imprese e famiglie, accusando la maggioranza di immobilismo e ipocrisia. L'On. Giambona e l'On. Venezia hanno fortemente criticato il rinvio della discussione sulla variazione di bilancio, giudicando il governo inadeguato e incapace di affrontare le urgenze regionali come l'agricoltura, la pesca, la sanità e le difficoltà degli enti locali. Hanno definito la norma nazionale \"Spiagge sicure\" come una \"norma propaganda\" per l'esiguità dei fondi.\n\n-   **Crisi Occupazionale e Sviluppo Industriale**: L'On. Savarino ha sollevato l'allarme sulla crisi dello stabilimento Pfizer di Catania, con la cessazione della produzione che minaccia 330 posti di lavoro. Ha chiesto al governo regionale di agire proattivamente, proponendo un piano straordinario di salvaguardia e rilancio del polo farmaceutico. L'On. Burtone ha evidenziato il rischio di chiusura del convitto INPS di Caltagirone, essenziale per la formazione e il recupero scolastico, che metterebbe a rischio posti di lavoro e il diritto allo studio, chiedendo il rilascio immediato del bando per l'anno scolastico.\n\n-   **Ambiente e Salute**: L'On. Gilistro ha richiamato l'attenzione sull'inquinamento atmosferico nell'area di Siracusa. L'On. Spada ha chiesto che l'Assemblea si faccia promotrice di un disegno di legge-voto per sollecitare il governo nazionale a normare inquinanti come il Benzene, attualmente non regolamentati, che causano gravi problemi di salute nella zona industriale di Priolo, Melilli e Augusta.\n\nLa seduta si è conclusa con l'aula rinviata a domani, ore 14:30, in un clima di forte insoddisfazione per la gestione politica e amministrativa della Regione.",
+  "categories": [
+    "Procedure Parlamentari",
+    "Bilancio e Finanze",
+    "Infrastrutture e Trasporti",
+    "Ambiente e Territorio",
+    "Lavoro",
+    "Istruzione e Formazione",
+    "Sviluppo Economico",
+    "Sanità",
+    "Enti Locali e Autonomie",
+    "Politiche Sociali",
+    "Agricoltura",
+    "Sicurezza Pubblica"
+  ],
+  "people": [
+    {
+      "name": "Aricò",
+      "role": "Assessore per le Infrastrutture e la Mobilità"
+    },
+    {
+      "name": "Balso",
+      "role": "Onorevole, Deputato regionale della maggioranza"
+    },
+    {
+      "name": "Burtone",
+      "role": "Onorevole, Deputato regionale e Sindaco di Caltagirone"
+    },
+    {
+      "name": "Campo",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Cuffaro",
+      "role": "Ex Presidente della Regione"
+    },
+    {
+      "name": "Dagnino",
+      "role": "Dottor, Assessore all'Economia"
+    },
+    {
+      "name": "Galvagno",
+      "role": "Onorevole, Presidente dell'Assemblea Regionale Siciliana"
+    },
+    {
+      "name": "Geraci",
+      "role": "Onorevole, Deputato regionale della maggioranza"
+    },
+    {
+      "name": "Giambona",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Gilistro",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Giorgio Assenza",
+      "role": "Onorevole, Deputato regionale della maggioranza"
+    },
+    {
+      "name": "La Barera",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Lantiere",
+      "role": "Onorevole, Vicepresidente dell'Assemblea Regionale Siciliana"
+    },
+    {
+      "name": "Pace",
+      "role": "Onorevole, Deputato regionale della maggioranza"
+    },
+    {
+      "name": "Pellegrino",
+      "role": "Onorevole, Portavoce del Presidente della Regione Schifani"
+    },
+    {
+      "name": "Salvini",
+      "role": "Ministro"
+    },
+    {
+      "name": "Santo Primitera",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Savarino",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Schifani",
+      "role": "Presidente della Regione"
+    },
+    {
+      "name": "Spada",
+      "role": "Onorevole, Deputato regionale"
+    },
+    {
+      "name": "Tomarchio",
+      "role": "Onorevole, Deputato regionale della maggioranza"
+    },
+    {
+      "name": "Turano",
+      "role": "Onorevole, Assessore dell'Istruzione e la Formazione"
+    },
+    {
+      "name": "Venezia",
+      "role": "Onorevole, Deputato regionale"
+    }
+  ]
+}
