@@ -23,14 +23,14 @@ if (new Set(labels).size !== labels.length) {
 
 // 1. Schema: enum chiuso
 const schema = JSON.parse(fs.readFileSync(SCHEMA_PATH, 'utf8'));
+// NB: niente uniqueItems — l'API Gemini lo rifiuta ("Unknown name uniqueItems")
 schema.properties.categories = {
   type: 'array',
   items: { type: 'string', enum: labels },
   minItems: 1,
   maxItems: 5,
-  uniqueItems: true,
   description:
-    'From 1 to 5 categories characterizing the session, chosen EXCLUSIVELY from the controlled vocabulary (exact labels). Do not invent new categories.',
+    'From 1 to 5 DISTINCT categories characterizing the session, chosen EXCLUSIVELY from the controlled vocabulary (exact labels). No duplicates. Do not invent new categories.',
 };
 fs.writeFileSync(SCHEMA_PATH, JSON.stringify(schema, null, 2) + '\n');
 console.log(`Schema aggiornato: enum con ${labels.length} categorie.`);

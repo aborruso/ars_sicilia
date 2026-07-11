@@ -36,8 +36,7 @@
       },
       "minItems": 1,
       "maxItems": 5,
-      "uniqueItems": true,
-      "description": "From 1 to 5 categories characterizing the session, chosen EXCLUSIVELY from the controlled vocabulary (exact labels). Do not invent new categories."
+      "description": "From 1 to 5 DISTINCT categories characterizing the session, chosen EXCLUSIVELY from the controlled vocabulary (exact labels). No duplicates. Do not invent new categories."
     },
     "people": {
       "type": "array",
