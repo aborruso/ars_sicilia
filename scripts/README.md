@@ -16,6 +16,7 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `generate_digests.sh` — Genera digest automatici dai video YouTube usando trascrizioni e template.
 - `sync_vocabolario.mjs` — Propaga `data/vocabolario_categorie.json` (vocabolario controllato EuroVoc) verso schema e prompt del digest.
 - `remap_digest_categories.mjs` — One-off: normalizza le categorie storiche dei digest sul vocabolario controllato via `data/category_mapping.json`.
+- `reclassify_digest_categories.mjs` — One-off: riclassifica con LLM le categorie di digest sovra-taggati (testo digest + enum vocabolario, max 5).
 
 ### download_transcripts.sh
 
