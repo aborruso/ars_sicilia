@@ -44,6 +44,19 @@ digestFiles.forEach(file => {
 });
 console.log(`   Found ${digestMap.size} valid digests (out of ${digestFiles.length} files)`);
 
+// Guardia anti-deriva: le categorie dei digest devono appartenere al vocabolario controllato
+const vocabolario = JSON.parse(
+  fs.readFileSync(path.join(DATA_DIR, 'vocabolario_categorie.json'), 'utf-8')
+);
+const validCategoryLabels = new Set(vocabolario.categorie.map(c => c.label));
+digestMap.forEach((digest, youtubeId) => {
+  (digest.categories || []).forEach(cat => {
+    if (!validCategoryLabels.has(cat)) {
+      console.warn(`   ⚠️  Categoria fuori vocabolario in digest ${youtubeId}: "${cat}"`);
+    }
+  });
+});
+
 // 4. Aggregate sedute
 console.log('🔗 Aggregating sedute...');
 const seduteMap = new Map();

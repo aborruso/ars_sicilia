@@ -33,7 +33,9 @@ youtube_id, last_check, status, failure_reason, duration_minutes, no_transcript
 3 campi, tutti obbligatori:
 
 * `digest` (string) — riassunto Markdown, 200-400 parole, in italiano.
-* `categories` (array di string) — categorie tematiche (es. "Sanità", "Bilancio e Finanze").
+* `categories` (array di string) — da 1 a 5 categorie tematiche scelte dal vocabolario
+  controllato `data/vocabolario_categorie.json` (22 voci ancorate a concetti EuroVoc;
+  enum imposto dallo schema, propagato da `scripts/sync_vocabolario.mjs`).
 * `people` (array di oggetti `{name, role}`) — persone citate con ruolo.
 
 # Trascrizioni

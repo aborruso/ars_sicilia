@@ -17,21 +17,32 @@ prompt: |
      - Includi gli esiti delle votazioni con numeri precisi (se presenti)
      - Spiega i termini tecnici quando necessario
 
-  2. **CATEGORIE**: Estrai ed elenca le categorie rilevanti che definiscono contesto e tematiche della seduta. Usa categorie tipiche della vita parlamentare regionale, come:
-     - Sanità
-     - Bilancio e Finanze
-     - Infrastrutture e Trasporti
-     - Ambiente e Territorio
-     - Istruzione e Formazione
-     - Sviluppo Economico
-     - Politiche Sociali
-     - Agricoltura
-     - Turismo e Cultura
-     - Lavoro
-     - Enti Locali e Autonomie
-     - Giustizia e Contenzioso
-     - Procedure Parlamentari
-     E qualsiasi altra categoria rilevante che emerga dal contenuto.
+  2. **CATEGORIE**: Assegna da 1 a 5 categorie che definiscono contesto e tematiche della seduta. Scegli ESCLUSIVAMENTE dal seguente vocabolario controllato, copiando le etichette ESATTAMENTE come scritte (non inventare categorie nuove, non modificare le etichette). Le descrizioni ti aiutano a scegliere la categoria giusta.
+
+     [INIZIO ELENCO CATEGORIE]
+     - Procedure parlamentari: Lavori d'aula e funzionamento dell'Assemblea: ordine dei lavori, mozioni, interrogazioni, emendamenti, votazioni procedurali, nomine, regolamento interno, rapporti Governo-Assemblea.
+     - Bilancio e finanze: Bilancio regionale, leggi di stabilità, variazioni di bilancio, debito, tributi, spesa pubblica, programmazione economico-finanziaria.
+     - Enti locali e autonomie: Comuni, province e città metropolitane, finanza locale, autonomia speciale siciliana, rapporti Stato-Regione.
+     - Politiche sociali: Welfare, famiglia, povertà, disabilità, terzo settore, politiche giovanili, assistenza sociale.
+     - Ambiente e territorio: Tutela dell'ambiente, rifiuti, servizio idrico, dissesto idrogeologico, aree protette, sostenibilità, benessere animale.
+     - Lavoro: Occupazione, precariato, vertenze, sicurezza sul lavoro, politiche attive del lavoro, personale in formazione.
+     - Sviluppo economico: Imprese e attività produttive, industria, commercio, artigianato, competitività, credito, zone economiche speciali.
+     - Giustizia e legalità: Contenzioso, antimafia, anticorruzione, trasparenza, etica pubblica, criminalità organizzata.
+     - Infrastrutture e trasporti: Strade, ferrovie, porti, aeroporti, trasporto pubblico locale, mobilità, opere pubbliche, ponte sullo Stretto.
+     - Sanità: Servizio sanitario regionale, ospedali e ASP, liste d'attesa, salute pubblica, salute mentale, personale sanitario.
+     - Istruzione e formazione: Scuola, università, diritto allo studio, edilizia scolastica, formazione professionale, ricerca.
+     - Agricoltura e pesca: Agricoltura, agroalimentare, zootecnia, pesca, forestazione, consorzi di bonifica, crisi idrica in agricoltura.
+     - Turismo: Promozione turistica, strutture ricettive, grandi eventi a vocazione turistica.
+     - Cultura e sport: Beni culturali, patrimonio archeologico, spettacolo, editoria e informazione, identità siciliana, memoria storica, sport.
+     - Energia: Energie rinnovabili, efficientamento energetico, reti e impianti, costi dell'energia.
+     - Protezione civile: Emergenze, calamità naturali, incendi, ricostruzione post-disastro, soccorso civile.
+     - Sicurezza pubblica: Ordine pubblico, forze dell'ordine, videosorveglianza, sicurezza urbana.
+     - Pubblica amministrazione e digitale: Organizzazione e personale della Regione, società partecipate, semplificazione, digitalizzazione, gestione del patrimonio pubblico.
+     - Unione europea e relazioni internazionali: Fondi europei, PNRR, programmazione comunitaria, politica estera, cooperazione internazionale, pace.
+     - Diritti e pari opportunità: Diritti civili e umani, parità di genere, pari opportunità, contrasto alle discriminazioni e alla violenza di genere.
+     - Urbanistica ed edilizia: Pianificazione urbanistica, edilizia pubblica e privata, politiche abitative, assetto del territorio.
+     - Elezioni e riforme istituzionali: Legge elettorale, elezioni, riforme dello Statuto e delle istituzioni regionali, forma di governo.
+     [FINE ELENCO CATEGORIE]
 
   3. **PERSONE MENZIONATE**: Crea un elenco di tutte le persone citate nella trascrizione con i loro ruoli (es. Presidente della Regione, Assessore regionale, Deputato regionale, Sindaco, ecc.).
      - Includi il nome completo quando disponibile
@@ -65,7 +76,7 @@ prompt: |
   </digest>
 
   <categories>
-  Elenca le categorie rilevanti, una per riga, che caratterizzano temi e contesto di questa seduta. Usa categorie parlamentari regionali standard in italiano.
+  Elenca da 1 a 5 categorie, una per riga, scelte SOLO dal vocabolario controllato indicato sopra, con le etichette esatte.
   </categories>
 
   <people>

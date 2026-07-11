@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "descrizione": "Vocabolario controllato delle categorie tematiche delle sedute ARS. Ogni categoria è ancorata a un concetto EuroVoc (URI verificato sul dump locale). Unica fonte di verità: config/digest-schema.json e config/digest.yaml si rigenerano con scripts/sync_vocabolario.mjs.",
+    "source": "EuroVoc — http://publications.europa.eu/resource/dataset/eurovoc",
+    "dump_version": "20250702-0",
+    "dump_path": "data/eurovoc/eurovoc_in_skos_core_concepts_20250702-0.rdf",
+    "updated_at": "2026-07-11"
+  },
+  "categorie": [
+    {
+      "label": "Procedure parlamentari",
+      "slug": "procedure-parlamentari",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2703",
+      "eurovoc_label_it": "procedura parlamentare",
+      "descrizione": "Lavori d'aula e funzionamento dell'Assemblea: ordine dei lavori, mozioni, interrogazioni, emendamenti, votazioni procedurali, nomine, regolamento interno, rapporti Governo-Assemblea."
+    },
+    {
+      "label": "Bilancio e finanze",
+      "slug": "bilancio-e-finanze",
+      "eurovoc_uri": "http://eurovoc.europa.eu/1018",
+      "eurovoc_label_it": "finanze pubbliche",
+      "descrizione": "Bilancio regionale, leggi di stabilità, variazioni di bilancio, debito, tributi, spesa pubblica, programmazione economico-finanziaria."
+    },
+    {
+      "label": "Enti locali e autonomie",
+      "slug": "enti-locali-e-autonomie",
+      "eurovoc_uri": "http://eurovoc.europa.eu/68",
+      "eurovoc_label_it": "amministrazione locale",
+      "descrizione": "Comuni, province e città metropolitane, finanza locale, autonomia speciale siciliana, rapporti Stato-Regione."
+    },
+    {
+      "label": "Politiche sociali",
+      "slug": "politiche-sociali",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2517",
+      "eurovoc_label_it": "politica sociale",
+      "descrizione": "Welfare, famiglia, povertà, disabilità, terzo settore, politiche giovanili, assistenza sociale."
+    },
+    {
+      "label": "Ambiente e territorio",
+      "slug": "ambiente-e-territorio",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2470",
+      "eurovoc_label_it": "politica ambientale",
+      "descrizione": "Tutela dell'ambiente, rifiuti, servizio idrico, dissesto idrogeologico, aree protette, sostenibilità, benessere animale."
+    },
+    {
+      "label": "Lavoro",
+      "slug": "lavoro",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2468",
+      "eurovoc_label_it": "politica occupazionale",
+      "descrizione": "Occupazione, precariato, vertenze, sicurezza sul lavoro, politiche attive del lavoro, personale in formazione."
+    },
+    {
+      "label": "Sviluppo economico",
+      "slug": "sviluppo-economico",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2497",
+      "eurovoc_label_it": "politica economica",
+      "descrizione": "Imprese e attività produttive, industria, commercio, artigianato, competitività, credito, zone economiche speciali."
+    },
+    {
+      "label": "Giustizia e legalità",
+      "slug": "giustizia-e-legalita",
+      "eurovoc_uri": "http://eurovoc.europa.eu/5923",
+      "eurovoc_label_it": "sistema giudiziario",
+      "descrizione": "Contenzioso, antimafia, anticorruzione, trasparenza, etica pubblica, criminalità organizzata."
+    },
+    {
+      "label": "Infrastrutture e trasporti",
+      "slug": "infrastrutture-e-trasporti",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2494",
+      "eurovoc_label_it": "politica dei trasporti",
+      "descrizione": "Strade, ferrovie, porti, aeroporti, trasporto pubblico locale, mobilità, opere pubbliche, ponte sullo Stretto."
+    },
+    {
+      "label": "Sanità",
+      "slug": "sanita",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2479",
+      "eurovoc_label_it": "politica sanitaria",
+      "descrizione": "Servizio sanitario regionale, ospedali e ASP, liste d'attesa, salute pubblica, salute mentale, personale sanitario."
+    },
+    {
+      "label": "Istruzione e formazione",
+      "slug": "istruzione-e-formazione",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2467",
+      "eurovoc_label_it": "politica dell'istruzione",
+      "descrizione": "Scuola, università, diritto allo studio, edilizia scolastica, formazione professionale, ricerca."
+    },
+    {
+      "label": "Agricoltura e pesca",
+      "slug": "agricoltura-e-pesca",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2442",
+      "eurovoc_label_it": "politica agricola",
+      "descrizione": "Agricoltura, agroalimentare, zootecnia, pesca, forestazione, consorzi di bonifica, crisi idrica in agricoltura."
+    },
+    {
+      "label": "Turismo",
+      "slug": "turismo",
+      "eurovoc_uri": "http://eurovoc.europa.eu/4470",
+      "eurovoc_label_it": "turismo",
+      "descrizione": "Promozione turistica, strutture ricettive, grandi eventi a vocazione turistica."
+    },
+    {
+      "label": "Cultura e sport",
+      "slug": "cultura-e-sport",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2459",
+      "eurovoc_label_it": "politica culturale",
+      "descrizione": "Beni culturali, patrimonio archeologico, spettacolo, editoria e informazione, identità siciliana, memoria storica, sport."
+    },
+    {
+      "label": "Energia",
+      "slug": "energia",
+      "eurovoc_uri": "http://eurovoc.europa.eu/2498",
+      "eurovoc_label_it": "politica energetica",
+      "descrizione": "Energie rinnovabili, efficientamento energetico, reti e impianti, costi dell'energia."
+    },
+    {
+      "label": "Protezione civile",
+      "slug": "protezione-civile",
+      "eurovoc_uri": "http://eurovoc.europa.eu/3057",
+      "eurovoc_label_it": "protezione civile",
+      "descrizione": "Emergenze, calamità naturali, incendi, ricostruzione post-disastro, soccorso civile."
+    },
+    {
+      "label": "Sicurezza pubblica",
+      "slug": "sicurezza-pubblica",
+      "eurovoc_uri": "http://eurovoc.europa.eu/4045",
+      "eurovoc_label_it": "sicurezza pubblica",
+      "descrizione": "Ordine pubblico, forze dell'ordine, videosorveglianza, sicurezza urbana."
+    },
+    {
+      "label": "Pubblica amministrazione e digitale",
+      "slug": "pubblica-amministrazione-e-digitale",
+      "eurovoc_uri": "http://eurovoc.europa.eu/77",
+      "eurovoc_label_it": "pubblica amministrazione",
+      "descrizione": "Organizzazione e personale della Regione, società partecipate, semplificazione, digitalizzazione, gestione del patrimonio pubblico."
+    },
+    {
+      "label": "Unione europea e relazioni internazionali",
+      "slug": "unione-europea-e-relazioni-internazionali",
+      "eurovoc_uri": "http://eurovoc.europa.eu/3228",
+      "eurovoc_label_it": "relazioni internazionali",
+      "descrizione": "Fondi europei, PNRR, programmazione comunitaria, politica estera, cooperazione internazionale, pace."
+    },
+    {
+      "label": "Diritti e pari opportunità",
+      "slug": "diritti-e-pari-opportunita",
+      "eurovoc_uri": "http://eurovoc.europa.eu/584",
+      "eurovoc_label_it": "diritti umani",
+      "descrizione": "Diritti civili e umani, parità di genere, pari opportunità, contrasto alle discriminazioni e alla violenza di genere."
+    },
+    {
+      "label": "Urbanistica ed edilizia",
+      "slug": "urbanistica-ed-edilizia",
+      "eurovoc_uri": "http://eurovoc.europa.eu/4619",
+      "eurovoc_label_it": "urbanistica",
+      "descrizione": "Pianificazione urbanistica, edilizia pubblica e privata, politiche abitative, assetto del territorio."
+    },
+    {
+      "label": "Elezioni e riforme istituzionali",
+      "slug": "elezioni-e-riforme-istituzionali",
+      "eurovoc_uri": "http://eurovoc.europa.eu/4181",
+      "eurovoc_label_it": "riforma istituzionale",
+      "descrizione": "Legge elettorale, elezioni, riforme dello Statuto e delle istituzioni regionali, forma di governo."
+    }
+  ]
+}

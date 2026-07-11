@@ -14,7 +14,8 @@ Guida rapida agli script operativi. Tutti i comandi vanno eseguiti dalla root de
 - `scrape_studi_pubblicazioni.py` — Scraper incrementale delle sezioni correnti di "Studi e Pubblicazioni" (archivio escluso), output JSONL.
 - `update_descriptions.py` — Aggiorna descrizioni (e opzionalmente titoli) dei video già pubblicati.
 - `generate_digests.sh` — Genera digest automatici dai video YouTube usando trascrizioni e template.
-- `normalize_eurovoc_categories.mjs` — Normalizza le categorie su EuroVoc e aggiorna `data/eurovoc_mapping.json`.
+- `sync_vocabolario.mjs` — Propaga `data/vocabolario_categorie.json` (vocabolario controllato EuroVoc) verso schema e prompt del digest.
+- `remap_digest_categories.mjs` — One-off: normalizza le categorie storiche dei digest sul vocabolario controllato via `data/category_mapping.json`.
 
 ### download_transcripts.sh
 
@@ -61,24 +62,36 @@ Modelli testati per la configurazione iniziale:
 - `mistral-medium`
 - `gpt-5.2`
 
-### normalize_eurovoc_categories.mjs
+### sync_vocabolario.mjs
 
-Normalizza le categorie presenti in `src/data/processed/categories.json` verso EuroVoc
-usando il dump locale e `llm` con il modello `gemini-2.5-flash`. Lo script aggiorna
-incrementalmente `data/eurovoc_mapping.json` senza sovrascrivere le associazioni esistenti.
-Richiede `unzip` per estrarre il dump.
+Il vocabolario delle categorie vive in `data/vocabolario_categorie.json` (22 voci,
+ognuna ancorata a un concetto EuroVoc con URI verificato sul dump in `data/eurovoc/`).
+Questo script lo propaga verso:
 
-Uso:
+- `config/digest-schema.json` — `enum` chiuso sulle label (1–5 categorie per digest);
+- `config/digest.yaml` — elenco `label: descrizione` tra i marker
+  `[INIZIO ELENCO CATEGORIE]` / `[FINE ELENCO CATEGORIE]`.
+
+Da rilanciare (e committare l'output) ogni volta che il vocabolario cambia:
+
 ```bash
-node scripts/normalize_eurovoc_categories.mjs
+node scripts/sync_vocabolario.mjs
 ```
 
-Opzioni principali:
-- `--version` (es. `20250702-0`) per forzare una versione EuroVoc
-- `--review-threshold` per marcare come `review` le associazioni sotto soglia
-- `--refresh-dump` per riscaricare ed estrarre il dump
-- `--limit` per limitare il numero di categorie processate (test)
-- `--timeout-ms` timeout per singola richiesta LLM (default 120000)
+### remap_digest_categories.mjs
+
+One-off (idempotente, nessuna chiamata LLM): sostituisce l'array `categories` di ogni
+`data/digest/*.json` applicando `data/category_mapping.json` (categorie storiche libere
+→ vocabolario controllato). Ogni altro campo resta invariato. `scripts/build-data.mjs`
+emette un warning se un digest contiene categorie fuori vocabolario.
+
+```bash
+node scripts/remap_digest_categories.mjs --dry-run   # anteprima
+node scripts/remap_digest_categories.mjs
+```
+
+La versione precedente della normalizzazione (`normalize_eurovoc_categories.mjs`)
+è archiviata in `scripts/archive/`.
 
 ### scrape_studi_pubblicazioni.py
 

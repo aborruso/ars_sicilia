@@ -8,9 +8,36 @@
     "categories": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "Procedure parlamentari",
+          "Bilancio e finanze",
+          "Enti locali e autonomie",
+          "Politiche sociali",
+          "Ambiente e territorio",
+          "Lavoro",
+          "Sviluppo economico",
+          "Giustizia e legalità",
+          "Infrastrutture e trasporti",
+          "Sanità",
+          "Istruzione e formazione",
+          "Agricoltura e pesca",
+          "Turismo",
+          "Cultura e sport",
+          "Energia",
+          "Protezione civile",
+          "Sicurezza pubblica",
+          "Pubblica amministrazione e digitale",
+          "Unione europea e relazioni internazionali",
+          "Diritti e pari opportunità",
+          "Urbanistica ed edilizia",
+          "Elezioni e riforme istituzionali"
+        ]
       },
-      "description": "List of relevant categories that characterize the themes and context of this session. Use standard regional parliamentary categories in Italian (e.g., Sanità, Bilancio e Finanze, Infrastrutture e Trasporti, Ambiente e Territorio, etc.)"
+      "minItems": 1,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "description": "From 1 to 5 categories characterizing the session, chosen EXCLUSIVELY from the controlled vocabulary (exact labels). Do not invent new categories."
     },
     "people": {
       "type": "array",
@@ -26,10 +53,17 @@
             "description": "Their role or title (e.g., Presidente della Regione, Assessore, Consigliere regionale, Sindaco, etc.)"
           }
         },
-        "required": ["name", "role"]
+        "required": [
+          "name",
+          "role"
+        ]
       },
       "description": "List of all people cited in the transcript with their roles"
     }
   },
-  "required": ["digest", "categories", "people"]
+  "required": [
+    "digest",
+    "categories",
+    "people"
+  ]
 }
