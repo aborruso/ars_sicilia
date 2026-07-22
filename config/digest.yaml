@@ -17,6 +17,12 @@ prompt: |
      - Includi gli esiti delle votazioni con numeri precisi (se presenti)
      - Spiega i termini tecnici quando necessario
 
+     FORMATTAZIONE MARKDOWN (rispetta rigorosamente):
+     - Usa `##` o `###` SOLO come titolo di sezione, all'inizio della riga, seguiti da uno spazio. MAI in mezzo a una frase per enfatizzare parole.
+     - Per enfatizzare parole o concetti nel testo usa il grassetto `**parola**`, mai i cancelletti.
+     - Separa titoli e paragrafi con una riga vuota. Inserisci veri ritorni a capo, MAI la sequenza letterale `\n`.
+     - Non mescolare grassetto e titolo sulla stessa riga (es. NON scrivere `**## Titolo**`).
+
   2. **CATEGORIE**: Assegna da 1 a 5 categorie che definiscono contesto e tematiche della seduta. Scegli ESCLUSIVAMENTE dal seguente vocabolario controllato, copiando le etichette ESATTAMENTE come scritte (non inventare categorie nuove, non modificare le etichette). Le descrizioni ti aiutano a scegliere la categoria giusta.
 
      [INIZIO ELENCO CATEGORIE]

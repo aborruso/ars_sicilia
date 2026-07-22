@@ -1,3 +1,13 @@
+# 2026-07-22
+
+## Fix digest con `##` che rompevano la leggibilità
+
+- Segnalato il digest del video seduta 265 ore 15:44 (`hQ2AD_ax0Mw`): pieno di `##` che `marked` rendeva come heading spurii. Su ~85 digest solo 4 rotti (gli altri usano `## Titolo` a inizio riga, corretto); artefatto intermittente di gemini-2.5-flash con modalità diverse: blob monolinea con `## tema ##` inline (hQ2AD, BvrMdfTH9Do), `\n` letterali al posto dei ritorni a capo (iD9fvoidp7Y), `**## Titolo**` bold+heading mescolati (kYX47otETyE).
+- `config/digest.yaml`: regole di formattazione markdown (heading solo a inizio riga, enfasi con `**`, veri ritorni a capo, mai `\n` letterali) — prevenzione.
+- `build-data.mjs`: `normalizeDigestMarkdown()` al caricamento — converte `\n` letterali e rimuove i `#{2,}` inline preservando gli heading a inizio riga (difesa in profondità sui digest futuri).
+- Dati riparati: hQ2AD e BvrMdfTH9Do (struttura persa) rigenerati dal transcript col prompt aggiornato; iD9fvoidp7Y e kYX47otETyE (struttura intatta) puliti con la stessa trasformazione deterministica.
+- Modello pipeline invariato (gemini-2.5-flash, ancora free-tier). Nota: il free-tier ora raccomanda `gemini-3-flash-preview`, valutabile in futuro.
+
 # 2026-07-11
 
 ## Categorie sedute: vocabolario controllato EuroVoc

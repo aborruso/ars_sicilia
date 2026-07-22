@@ -31,6 +31,26 @@ console.log('💬 Loading digest files...');
 const digestDir = path.join(DATA_DIR, 'digest');
 const digestMap = new Map();
 
+// Normalizza il markdown del digest per il rendering.
+// A volte l'LLM produce artefatti che marked interpreta male:
+//  - la sequenza LETTERALE `\n` al posto di un vero ritorno a capo;
+//  - `##` usati come enfasi in mezzo alla frase (diventano heading spurii).
+// Preserva gli heading legittimi (`#{1,6}` a inizio riga) e rimuove i `##` inline.
+function normalizeDigestMarkdown(md) {
+  return md
+    .replace(/\\n/g, '\n') // `\n` letterali → ritorni a capo reali
+    .split('\n')
+    .map((line) => {
+      const heading = line.match(/^(\s{0,3}#{1,6}\s)/); // heading valido a inizio riga
+      const prefix = heading ? heading[0] : '';
+      const rest = line.slice(prefix.length).replace(/#{2,}/g, ''); // rimuovi `##`+ inline
+      return prefix + rest;
+    })
+    .join('\n')
+    .replace(/[ \t]{2,}/g, ' ') // ricompatta gli spazi lasciati dalla rimozione
+    .replace(/ +([,.;:])/g, '$1');
+}
+
 const digestFiles = fs.readdirSync(digestDir).filter(file => file.endsWith('.json'));
 digestFiles.forEach(file => {
   const youtubeId = file.replace('.json', '');
@@ -39,6 +59,7 @@ digestFiles.forEach(file => {
 
   // Skip empty or invalid digests
   if (content.digest && content.digest.trim().length > 10) {
+    content.digest = normalizeDigestMarkdown(content.digest);
     digestMap.set(youtubeId, content);
   }
 });
