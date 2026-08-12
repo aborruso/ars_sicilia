@@ -280,6 +280,7 @@ main() {
     local count=0
     local skipped=0
     local processed=0
+    local run_urls=""
 
     while IFS= read -r pdf_url; do
         ((count++)) || true
@@ -308,6 +309,7 @@ main() {
             fi
             echo "  → Processed" >&2
             ((processed++)) || true
+            run_urls+="$pdf_url"$'\n'
 
             if [[ "$limit" -gt 0 && "$processed" -ge "$limit" ]]; then
                 echo "" >&2
@@ -339,10 +341,10 @@ main() {
 $titolo_disegno = gsub($titolo_disegno, "\\u2019", "'");
 $titolo_disegno = sub($titolo_disegno, "\s*\(n\.\s*[0-9].*$", "");
 $titolo_disegno = clean_whitespace($titolo_disegno);
-$titolo_disegno = sub($titolo_disegno, "^[\x{0022}\x{201C}\x{201D}]+", "");
-$titolo_disegno = sub($titolo_disegno, "[\x{0022}\x{201C}\x{201D}.]+$", "");
-$titolo_disegno = gsub($titolo_disegno, "[\x{2018}\x{2019}]", "'");
-$titolo_disegno = gsub($titolo_disegno, "[\x{201C}\x{201D}]", "\"");
+$titolo_disegno = sub($titolo_disegno, "^[\"“”]+", "");
+$titolo_disegno = sub($titolo_disegno, "[\"“”.]+$", "");
+$titolo_disegno = gsub($titolo_disegno, "[‘’]", "'");
+$titolo_disegno = gsub($titolo_disegno, "[“”]", "\"");
 $titolo_disegno = clean_whitespace($titolo_disegno);
 MLR
         mlr -I --jsonl put -f "$norm_expr" "$OUTPUT_JSONL"
@@ -355,10 +357,12 @@ MLR
         mlr -I --jsonl head -n 1 -g pdf_url,numero_disegno "$OUTPUT_JSONL"
         echo "Normalizzato e deduplicato. Record finali: $(wc -l < "$OUTPUT_JSONL")" >&2
 
-        # Sanity check: PDF processati ma con 0 record nell'output finale
+        # Sanity check: PDF processati in QUESTO lancio ma con 0 record nell'output finale.
+        # Limitato al run corrente: sullo storico i PDF legittimamente privi della sezione
+        # "DISCUSSIONE DEI DISEGNI DI LEGGE" si ripresenterebbero a ogni esecuzione.
         local empty_pdfs
         empty_pdfs=$(comm -23 \
-            <(sort -u "$PROCESSED_LOG") \
+            <(printf '%s' "$run_urls" | sort -u) \
             <(jq -r '.pdf_url' "$OUTPUT_JSONL" | sort -u) 2>/dev/null || true)
         if [[ -n "$empty_pdfs" ]]; then
             echo "ATTENZIONE: PDF senza disegni estratti (verificare):" >&2
