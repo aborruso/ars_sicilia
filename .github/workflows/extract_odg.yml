@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Python tools
         run: |
-          uv tool install llm
+          uv tool install llm --with httpx
           uv tool install 'markitdown[pdf]'
           uv tool run llm install llm-gemini
 

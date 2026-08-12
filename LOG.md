@@ -1,3 +1,24 @@
+# 2026-08-12
+
+## Fix workflow `extract_odg` rotto da openai 3.0.0
+
+- Il job schedulato falliva su `uv tool run llm install llm-gemini` con `ModuleNotFoundError: No module named 'httpx'`.
+- Causa a monte: `llm==0.32` fa `import httpx` ma non lo dichiara tra le dipendenze (arrivava transitivamente da `openai`); `openai==3.0.0` è passato a `httpx2<3,>=2.7.0` e `llm` non ha tetto sulla versione, quindi nell'env finisce `httpx2` e l'import esplode.
+- Fix in `.github/workflows/extract_odg.yml`: `uv tool install llm --with httpx`. Preferito al pin `openai<3` perché la pipeline passa da `llm-gemini` e il client openai non viene mai usato.
+- Stesso rischio in locale: `generate_digests.sh` usa l'`llm` installato con `uv tool`, che regge solo perché precedente a openai 3.0.0 — si romperà al prossimo `uv tool upgrade llm` (rimedio: `uv tool install llm --with httpx --force`).
+- Segnalato a monte: issue [simonw/llm#1608](https://github.com/simonw/llm/issues/1608) e PR da una riga [simonw/llm#1609](https://github.com/simonw/llm/pull/1609) (dichiarare `httpx` in `dependencies`).
+- Secondo difetto emerso testando il loro repo, segnalato nella #1608 ma non corretto da noi: sotto openai 3 `pytest-httpx` non intercetta più (mocka `httpx`, openai usa `httpx2`) e i test partono verso `api.openai.com` per davvero. A/B su venv puliti: `tests/test_openai_responses.py` fa 64 passed con openai 2.54.0, 18 failed/46 passed/18 errors con 3.0.0.
+
+# 2026-07-28
+
+## Analisi della ricerca RAG sulle trascrizioni
+
+- Report in `docs/rag/report-analisi-ricerca.md`: analisi di architettura + 12 test dal vivo sul Worker con ground truth via grep.
+- Conferme: recall pieno su entità/monoparola, riscrittura domande affidabile, risposta AI corretta (~13 s).
+- Problemi: tetto 20 risultati taglia il recall sui temi frequenti ("sanità" 12/41 sedute); falsi positivi al 90-100% su query fuori corpus; rumore "or" sulle frasi generiche; refusi ASR sui cognomi ("Cracoligi"); endpoint senza rate limiting; le query senza accento ora funzionano (UI e wiki dicono il contrario → piattaforma cambiata).
+- Raccomandazioni prioritarie: max_num_results 50 + raggruppamento per seduta, flag "nessuna corrispondenza esatta", "and" con fallback "or", suite di regressione con golden set.
+- Piano operativo con checklist in `docs/rag/piano-miglioramenti.md` (14 interventi in 3 fasce di priorità).
+
 # 2026-07-22
 
 ## Fix digest con `##` che rompevano la leggibilità
