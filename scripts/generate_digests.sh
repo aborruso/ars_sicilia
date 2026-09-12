@@ -56,7 +56,7 @@ validate_digest_completeness() {
     sleep 5
 
     # Estrai il digest e verifica con LLM
-    local validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" --no-log 2>/dev/null)
+    local validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" --no-log --no-stream 2>/dev/null)
 
     # Estrai is_complete dal JSON di risposta
     local is_complete=$(echo "$validation_result" | grep -o '"is_complete"[[:space:]]*:[[:space:]]*[a-z]*' | grep -o '[a-z]*$')
@@ -72,7 +72,7 @@ validate_digest_completeness() {
 
 # Trap per cleanup
 cleanup() {
-    rm -f "$DIGEST_DIR"/.tmp_transcript_*.txt
+    rm -f "$DIGEST_DIR"/.tmp_transcript_*.txt "$DIGEST_DIR"/.tmp_error_*.txt
 }
 trap cleanup EXIT
 
@@ -106,6 +106,7 @@ while read -r youtube_id; do
     log "PROCESSO: $youtube_id"
 
     TRANSCRIPT_FILE="$DIGEST_DIR/.tmp_transcript_${youtube_id}.txt"
+    ERROR_FILE="$DIGEST_DIR/.tmp_error_${youtube_id}.txt"
 
     if [ "$USE_LOCAL_TRANSCRIPTS" = "true" ]; then
         # Modalità CI: usa SOLO la trascrizione locale (API ufficiale).
@@ -159,7 +160,7 @@ while read -r youtube_id; do
     for attempt in $(seq 1 $MAX_RETRIES); do
         log "  Tentativo $attempt/$MAX_RETRIES..."
 
-        if cat "$TRANSCRIPT_FILE" | llm -m "$MODEL" -t "$TEMPLATE_FILE" --schema "$SCHEMA_FILE" --no-log > "$OUTPUT_FILE" 2>&1; then
+        if cat "$TRANSCRIPT_FILE" | llm -m "$MODEL" -t "$TEMPLATE_FILE" --schema "$SCHEMA_FILE" --no-log --no-stream > "$OUTPUT_FILE" 2>"$ERROR_FILE"; then
             # Valida JSON
             if validate_json "$OUTPUT_FILE"; then
                 # Valida completezza digest
@@ -179,6 +180,10 @@ while read -r youtube_id; do
                 fi
             else
                 log "  ERRORE: JSON non valido, rimozione file"
+                log "  Risposta (primi 200 byte): $(head -c 200 "$OUTPUT_FILE" | tr '\n' ' ')"
+                if [ -s "$ERROR_FILE" ]; then
+                    log "  stderr (primi 200 byte): $(head -c 200 "$ERROR_FILE" | tr '\n' ' ')"
+                fi
                 rm -f "$OUTPUT_FILE"
                 if [ $attempt -lt $MAX_RETRIES ]; then
                     log "  Attesa prima del retry..."
@@ -187,6 +192,9 @@ while read -r youtube_id; do
             fi
         else
             log "  ERRORE: Generazione fallita"
+            if [ -s "$ERROR_FILE" ]; then
+                log "  stderr (primi 200 byte): $(head -c 200 "$ERROR_FILE" | tr '\n' ' ')"
+            fi
             rm -f "$OUTPUT_FILE"
             if [ $attempt -lt $MAX_RETRIES ]; then
                 sleep 5

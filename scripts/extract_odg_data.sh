@@ -139,7 +139,8 @@ process_pdf() {
     # Estrai dati con llm, con retry e backoff sui rate limit (free tier ~10 RPM, 429)
     local json_output="" attempt
     for attempt in 1 2 3; do
-        json_output=$(printf '%s' "$text" | llm -m "$MODEL" --schema-multi "$SCHEMA" --system "$SYSTEM_PROMPT" 2>/dev/null) && break
+        json_output=$(printf '%s' "$text" | llm -m "$MODEL" --schema-multi "$SCHEMA" --system "$SYSTEM_PROMPT" --no-stream 2>/dev/null) \
+            && printf '%s' "$json_output" | jq empty 2>/dev/null && break
         echo "  Tentativo $attempt fallito (rate limit?), attendo $((attempt * 15))s..." >&2
         sleep $((attempt * 15))
         json_output=""
@@ -302,14 +303,16 @@ main() {
                 fi
             fi
             if ! process_pdf "$pdf_url"; then
-                echo "  → ERRORE su $pdf_url (continuo)" >&2
+                # Non marcare come processato: altrimenti il PDF non verrebbe mai riprovato.
+                echo "  → ERRORE su $pdf_url (riprovo al prossimo run)" >&2
+            else
+                if ! grep -qFx "$pdf_url" "$PROCESSED_LOG"; then
+                    echo "$pdf_url" >> "$PROCESSED_LOG"
+                fi
+                echo "  → Processed" >&2
+                run_urls+="$pdf_url"$'\n'
+                ((processed++)) || true
             fi
-            if ! grep -qFx "$pdf_url" "$PROCESSED_LOG"; then
-                echo "$pdf_url" >> "$PROCESSED_LOG"
-            fi
-            echo "  → Processed" >&2
-            ((processed++)) || true
-            run_urls+="$pdf_url"$'\n'
 
             if [[ "$limit" -gt 0 && "$processed" -ge "$limit" ]]; then
                 echo "" >&2
