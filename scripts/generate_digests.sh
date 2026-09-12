@@ -230,3 +230,9 @@ log "Skipped (no transcript): $no_transcript"
 log "Generati: $generated"
 log "Falliti: $failed"
 # log "Log: $LOG_FILE"
+
+# Exit non-zero sui falliti: senza questo un digest che non si genera resta
+# invisibile, con il workflow che risulta comunque success (vedi LOG 2026-09-12).
+if [ "$failed" -gt 0 ]; then
+    exit 1
+fi

@@ -65,6 +65,10 @@ jobs:
           ./scripts/download_transcripts.sh
 
       - name: Genera digest (Gemini, da trascrizioni locali)
+        id: digests
+        # Un digest fallito non deve fermare la catena: le trascrizioni già scaricate
+        # vanno comunque committate. Il job viene poi marcato rosso in fondo.
+        continue-on-error: true
         env:
           USE_LOCAL_TRANSCRIPTS: "true"
           # schedule notturno: 10 (recupero arretrati). dispatch manuale: usa l'input (default 3).
@@ -107,3 +111,9 @@ jobs:
           git add data/trascrizioni/ data/digest/ data/rag_corpus/
           git commit -m "chore: update transcripts, AI digests and RAG corpus" || exit 0
           git push
+
+      - name: Segnala i digest falliti
+        if: steps.digests.outcome == 'failure'
+        run: |
+          echo "::error::Generazione digest fallita per almeno un video: cerca 'JSON non valido' o 'Generazione fallita' nel log dello step 'Genera digest'."
+          exit 1
