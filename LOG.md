@@ -1,5 +1,14 @@
 # 2026-09-13
 
+## Upload: l'id della pagina video ARS scade ogni giorno
+
+- Sintomo: il re-upload della seduta 244 falliva con `yt-dlp` "Unsupported URL". La pagina video risponde 200 ma con `<source src="">`.
+- Causa: l'id in `/agenda/seduta/aula/video/<id>` cambia ogni giorno (seduta 271: `2876870` il 9/9, `2883635` il 13/9 notte, `2884250` il 13/9 alle 12). Il crawler notturno rinfresca gli id delle sedute recenti e l'upload parte subito dopo, quindi le sedute nuove passano; si rompono recuperi, nuovi tentativi e arretrati.
+- Fix: `scraper.resolve_current_video_page_url` ritrova il video nella pagina della seduta per orario e data; `upload_single.py` lo usa prima del download, con fallback all'URL dell'anagrafica. L'anagrafica non cambia (`id_video` resta la chiave per aggiornare la riga).
+- Seduta 244 ricaricata via `daily_upload` manuale: URL risolto `2884212`, 3,6 GB, 195 minuti, nuovo `youtube_id` `bEQ4OO0Dz2I`. Un errore SSL al primo tentativo di upload è stato assorbito dal retry; verificato sul canale che non c'è un doppione. `JURqQS9ZZJ4` tolto da `video_not_found.txt`.
+- Da sapere: dopo un fallimento la riga passa a `status=failed`, `upload_single.py` sceglie per primi i falliti e il workflow fa `|| break`. Un video che fallisce sempre blocca quindi il ciclo notturno per le sedute nuove.
+- Piano e review in `tasks/todo-video-id-scaduti.md`.
+
 ## Validatore digest con `--schema`
 
 - Gemini avvolgeva la risposta del validatore di completezza in un fence ```` ```json ````: `is_complete` passava solo grazie a un `grep`, `jq -r '.reason'` falliva sempre e il motivo non arrivava mai nel log.
@@ -10,7 +19,7 @@
 - `JURqQS9ZZJ4` (seduta 244) risponde 404 dall'API YouTube e dall'oEmbed pubblico: il video non esiste più, ma veniva interrogato ogni notte.
 - `download_transcripts.sh` scrive i 404 in `data/trascrizioni/video_not_found.txt` e li salta a inizio ciclo; per riprovarne uno si toglie la riga.
 - `no_transcript.txt` non è usato come lista di skip: mescola 404 e sottotitoli non ancora generati, che vanno ritentati (`MWWbQ_FdEmg` è lì dentro e la trascrizione l'ha poi avuta).
-- Aperto: la pagina della seduta 244 linka ancora il video inesistente.
+- La seduta 244 è stata poi ricaricata (vedi sopra).
 
 # 2026-09-12
 

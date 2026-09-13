@@ -13,24 +13,24 @@ L'id della pagina video ARS (`/agenda/seduta/aula/video/<id>`) cambia ogni giorn
 
 ### Fase 1 - Risolvere l'URL attuale della pagina video
 
-- [ ] In `src/scraper.py`, funzione `resolve_current_video_page_url(url_pagina, ora_video, data_video)`: scarica la pagina della seduta con `get_seduta_page`, prende i video con `find_video_elements` + `extract_video_metadata` e restituisce il `video_page_url` con stessa `ora_video` (e `data_video`, se presente). `None` se non trova corrispondenza. Riusa il parsing esistente, nessuna logica nuova di scraping.
+- [x] In `src/scraper.py`, funzione `resolve_current_video_page_url(url_pagina, ora_video, data_video)`: scarica la pagina della seduta con `get_seduta_page`, prende i video con `find_video_elements` + `extract_video_metadata` e restituisce il `video_page_url` con stessa `ora_video` (e `data_video`, se presente). `None` se non trova corrispondenza. Riusa il parsing esistente, nessuna logica nuova di scraping.
   → verify: sulle sedute 244 e 271 restituisce una pagina il cui `<source src>` non è vuoto; su un orario inesistente restituisce `None`.
 
 ### Fase 2 - Usarlo in `upload_single.py` prima del download
 
-- [ ] Prima di `downloader.download_video`, chiamare la funzione e scaricare dall'URL risolto. Se la risoluzione fallisce, si usa `video_page_url` dell'anagrafica come oggi e si logga il fallback.
-- [ ] L'anagrafica non cambia: `id_video` resta la chiave con cui `update_anagrafica_youtube_id` ritrova la riga.
+- [x] Prima di `downloader.download_video`, chiamare la funzione e scaricare dall'URL risolto. Se la risoluzione fallisce, si usa `video_page_url` dell'anagrafica come oggi e si logga il fallback.
+- [x] L'anagrafica non cambia: `id_video` resta la chiave con cui `update_anagrafica_youtube_id` ritrova la riga.
   → verify: `yt-dlp --simulate` sull'URL risolto della 244 trova il formato HLS; `bash`/`python` senza errori di sintassi.
 
 ### Fase 3 - Ricaricare la seduta 244 via CI
 
-- [ ] Svuotare `youtube_id` e `status` della 244 in anagrafica (solo quella riga, CRLF preservati) e toglierla da `video_not_found.txt`; push; `workflow_dispatch` di `daily_upload`.
+- [x] Svuotare `youtube_id` e `status` della 244 in anagrafica (solo quella riga, CRLF preservati) e toglierla da `video_not_found.txt`; push; `workflow_dispatch` di `daily_upload`.
   → verify: nel log download completato e YouTube ID nuovo; in anagrafica la riga ha il nuovo `youtube_id` con `status=success`; `videos.list` sul nuovo id restituisce il video.
-- [ ] Se fallisce: ripristinare subito la riga (altrimenti la 244 `failed` viene scelta per prima ogni notte e ferma il ciclo di upload).
+- [x] (non servito) Se fallisce: ripristinare subito la riga (altrimenti la 244 `failed` viene scelta per prima ogni notte e ferma il ciclo di upload).
 
 ### Fase 4 - Chiusura
 
-- [ ] Voce in `LOG.md`; sezione di review qui sotto.
+- [x] Voce in `LOG.md`; sezione di review qui sotto.
 
 ## Domande aperte
 
@@ -38,3 +38,8 @@ L'id della pagina video ARS (`/agenda/seduta/aula/video/<id>`) cambia ogni giorn
 
 ## Review
 
+- Fase 1: sulla 244 e sulla 271 la funzione restituisce l'id attuale (`2884212`, `2884250`) e la pagina ha `src` valorizzato; su orario inesistente `None`.
+- Fase 2: sulla riga vera della 244, `yt-dlp --simulate` sull'URL risolto trova `hls-2821`; con l'URL dell'anagrafica dava "Unsupported URL".
+- Fase 3: run 34753579990 - "URL pagina video aggiornato: .../2884212", download 3601 MB, durata 195 minuti (ffprobe), YouTube ID `bEQ4OO0Dz2I`, anagrafica con `status=success`. Primo tentativo di upload interrotto da `EOF occurred in violation of protocol`, riuscito al retry; tra gli upload del canale c'è un solo video della seduta 244.
+- Un primo tentativo di re-upload, prima del fix, era fallito e aveva lasciato la 244 `failed`: è stata ripristinata perché avrebbe bloccato il ciclo notturno. Prima di individuare la rotazione degli id si era concluso, a torto, che il sito ARS non esponesse più alcun flusso.
+- Domanda aperta: trascrizione e digest della 244 arrivano col run notturno di `transcripts_digests` (YouTube deve prima generare i sottotitoli).
