@@ -1,3 +1,34 @@
+# 2026-09-13
+
+## Validatore digest con `--schema`
+
+- Gemini avvolgeva la risposta del validatore di completezza in un fence ```` ```json ````: `is_complete` passava solo grazie a un `grep`, `jq -r '.reason'` falliva sempre e il motivo non arrivava mai nel log.
+- Nuovo `config/validate-digest-schema.json` (`is_complete`, `reason`), passato con `--schema`; entrambi i campi letti con `jq`. Provato su digest completo e troncato con `llm` 0.28 e 0.35.
+
+## Skip permanente dei video 404 nel download trascrizioni
+
+- `JURqQS9ZZJ4` (seduta 244) risponde 404 dall'API YouTube e dall'oEmbed pubblico: il video non esiste più, ma veniva interrogato ogni notte.
+- `download_transcripts.sh` scrive i 404 in `data/trascrizioni/video_not_found.txt` e li salta a inizio ciclo; per riprovarne uno si toglie la riga.
+- `no_transcript.txt` non è usato come lista di skip: mescola 404 e sottotitoli non ancora generati, che vanno ritentati (`MWWbQ_FdEmg` è lì dentro e la trascrizione l'ha poi avuta).
+- Aperto: la pagina della seduta 244 linka ancora il video inesistente.
+
+# 2026-09-12
+
+## Fix digest e OdG: i thinking summaries di `llm-gemini` rompevano il JSON
+
+- Sintomo: nessun digest generato dal 6 agosto. Il workflow `transcripts_digests` risultava `success` ogni notte ma dentro falliva con "JSON non valido" su tutti e 3 i tentativi (run 34673360840).
+- Causa: la CI installa `llm`/`llm-gemini` senza pin e da 0.34 il plugin emette i thinking summaries su stdout, prima del JSON. Riprodotta in un venv con le versioni della CI; in locale (`llm` 0.28, `llm-gemini` 0.31) non si manifesta.
+- Fix: `--no-stream` su tutte e tre le chiamate a `llm` (le due in `generate_digests.sh`, quella in `extract_odg_data.sh`). Verificato che l'opzione esiste sia in 0.28 sia in 0.35, quindi regge l'aggiornamento - a differenza del pin, che avrebbe solo riportato la CI alla versione dove il difetto è dormiente.
+- `generate_digests.sh`: stderr non finisce più dentro il file JSON (`2>"$ERROR_FILE"` invece di `2>&1`) e su JSON non valido logga i primi 200 byte di risposta e stderr. È il motivo per cui l'errore è rimasto invisibile quattro giorni: il file veniva cancellato senza lasciare traccia.
+- `extract_odg_data.sh`: il retry ora valida il JSON (`jq empty`), e un PDF che fallisce non viene più aggiunto a `odg_pdfs_processed.txt` - prima veniva marcato come fatto e non sarebbe mai stato riprovato.
+- Digest della seduta 271 (`J2jC29F-ARA`) generato in locale e pubblicato (commit `816ef17`).
+- Nota sull'OdG 271: zero disegni estratti è corretto, quel PDF non ha la sezione "DISCUSSIONE DEI DISEGNI DI LEGGE" (il ddl presente sta in "DISEGNI DI LEGGE PRESENTATI ED INVIATI", che il prompt esclude).
+
+## Job rosso sui digest falliti
+
+- `generate_digests.sh` esce 1 se ci sono falliti; nel workflow lo step ha `continue-on-error` (le trascrizioni scaricate vengono comunque committate) e un passo finale marca rosso il job dopo il commit.
+- Verificato in CI su un branch usa-e-getta senza il digest della 271: rigenerato al primo tentativo con le versioni non pinnate.
+
 # 2026-08-12
 
 ## Fix workflow `extract_odg` rotto da openai 3.0.0
