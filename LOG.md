@@ -1,12 +1,19 @@
 # 2026-09-13
 
+## Upload: i video nuovi passano prima dei `failed`
+
+- `get_first_unuploaded_video` sceglieva per primo un video `failed` e il workflow `daily_upload` si ferma al primo errore (`|| break`): un video che fallisce sempre bloccava ogni notte le sedute nuove.
+- Ora prima i video mai tentati, nell'ordine dell'anagrafica; i `failed` solo se non ce ne sono, a partire dal `last_check` più vecchio. Il `|| break` resta: un video nuovo che fallisce ferma la run, ma la notte dopo gli altri nuovi gli passano davanti.
+- Resta rispettato il requisito "un `failed` è eleggibile per retry in una run successiva". Change OpenSpec `update-upload-failed-priority`, validata `--strict` e archiviata; spec `ars-video-pipeline` aggiornata.
+- Verificato su CSV di prova con le colonne dell'anagrafica: failed prima di un nuovo nel file → scelto il nuovo; solo failed → il più vecchio; nessun candidato → `None`; due nuovi → ordine dell'anagrafica. Sull'anagrafica reale: nessun video da caricare.
+
 ## Upload: l'id della pagina video ARS scade ogni giorno
 
 - Sintomo: il re-upload della seduta 244 falliva con `yt-dlp` "Unsupported URL". La pagina video risponde 200 ma con `<source src="">`.
 - Causa: l'id in `/agenda/seduta/aula/video/<id>` cambia ogni giorno (seduta 271: `2876870` il 9/9, `2883635` il 13/9 notte, `2884250` il 13/9 alle 12). Il crawler notturno rinfresca gli id delle sedute recenti e l'upload parte subito dopo, quindi le sedute nuove passano; si rompono recuperi, nuovi tentativi e arretrati.
 - Fix: `scraper.resolve_current_video_page_url` ritrova il video nella pagina della seduta per orario e data; `upload_single.py` lo usa prima del download, con fallback all'URL dell'anagrafica. L'anagrafica non cambia (`id_video` resta la chiave per aggiornare la riga).
 - Seduta 244 ricaricata via `daily_upload` manuale: URL risolto `2884212`, 3,6 GB, 195 minuti, nuovo `youtube_id` `bEQ4OO0Dz2I`. Un errore SSL al primo tentativo di upload è stato assorbito dal retry; verificato sul canale che non c'è un doppione. `JURqQS9ZZJ4` tolto da `video_not_found.txt`.
-- Da sapere: dopo un fallimento la riga passa a `status=failed`, `upload_single.py` sceglie per primi i falliti e il workflow fa `|| break`. Un video che fallisce sempre blocca quindi il ciclo notturno per le sedute nuove.
+- Emerso qui: dopo un fallimento la riga passa a `status=failed`, `upload_single.py` sceglieva per primi i falliti e il workflow fa `|| break`, quindi un video che fallisce sempre bloccava le sedute nuove. Risolto (vedi sopra).
 - Piano e review in `tasks/todo-video-id-scaduti.md`.
 
 ## Validatore digest con `--schema`

@@ -139,15 +139,19 @@ def load_config(config_path: str = None) -> dict:
 def get_first_unuploaded_video(anagrafica_path: str) -> Optional[dict]:
     """
     Trova primo video senza youtube_id in anagrafica.
-    
+
+    I video mai tentati hanno la precedenza sui `failed`: un video che fallisce
+    sempre non deve bloccare le sedute nuove (il workflow si ferma al primo errore).
+    Fra più `failed` si parte da quello con `last_check` più vecchio.
+
     Args:
         anagrafica_path: Path al CSV anagrafica
-        
+
     Returns:
         Dict con dati video o None
     """
     try:
-        failed_candidate = None
+        failed_rows = []
         with open(anagrafica_path, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -161,12 +165,14 @@ def get_first_unuploaded_video(anagrafica_path: str) -> Optional[dict]:
 
                 status = (row.get('status') or '').lower()
                 if status == 'failed':
-                    return row
+                    failed_rows.append(row)
+                    continue
 
-                if failed_candidate is None:
-                    failed_candidate = row
+                return row
 
-        return failed_candidate
+        if failed_rows:
+            return min(failed_rows, key=lambda r: r.get('last_check') or '')
+        return None
         
     except Exception as e:
         print(f"✗ Errore lettura anagrafica: {e}")
