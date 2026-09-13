@@ -375,13 +375,31 @@ def main():
         video_filename = f"ars_{video_row['numero_seduta']}_{video_row['id_video']}.mp4"
         video_path = temp_dir / video_filename
 
+        # L'id della pagina video ARS cambia ogni giorno: con quello in anagrafica,
+        # se vecchio, la pagina non espone più il flusso. Si rilegge dalla pagina seduta.
+        download_url = video_row['video_page_url']
+        try:
+            current_url = scraper.resolve_current_video_page_url(
+                video_row['url_pagina'],
+                video_row['ora_video'],
+                video_row.get('data_video') or None
+            )
+            if current_url:
+                if current_url != download_url:
+                    print(f"  URL pagina video aggiornato: {current_url}")
+                download_url = current_url
+            else:
+                print(f"  ⚠️  Video non ritrovato nella pagina seduta, uso URL anagrafica")
+        except Exception as e:
+            print(f"  ⚠️  Pagina seduta non raggiungibile ({e}), uso URL anagrafica")
+
         try:
             # Download con retry automatico
             duration_mins = None
             def do_download():
                 nonlocal duration_mins
                 success, duration_mins = downloader.download_video(
-                    video_row['video_page_url'],
+                    download_url,
                     str(video_path),
                     retries=config['download'].get('max_retries', 3),
                     max_height=config['download'].get('max_height')

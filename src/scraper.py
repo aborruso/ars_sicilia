@@ -372,6 +372,40 @@ def extract_seduta_info(html: BeautifulSoup, seduta_url: str) -> dict:
     }
 
 
+def resolve_current_video_page_url(
+    seduta_url: str,
+    ora_video: str,
+    data_video: str = None
+) -> Optional[str]:
+    """
+    Ricava l'URL attuale della pagina video dalla pagina della seduta.
+
+    L'id della pagina video ARS cambia ogni giorno: con un id vecchio la pagina
+    risponde 200 ma senza sorgente HLS, e yt-dlp fallisce. Il video si ritrova
+    nella pagina della seduta per orario (e data, se indicata).
+
+    Args:
+        seduta_url: URL della pagina seduta
+        ora_video: Orario del video in formato HH:MM
+        data_video: Data del video in formato YYYY-MM-DD (opzionale)
+
+    Returns:
+        URL attuale della pagina video, o None se non c'è una sola corrispondenza
+
+    Raises:
+        requests.RequestException: Se il download della pagina seduta fallisce
+    """
+    html = get_seduta_page(seduta_url)
+    info = extract_seduta_info(html, seduta_url)
+    matches = [
+        v for v in info['videos']
+        if v['ora_video'] == ora_video and (not data_video or v['data_video'] == data_video)
+    ]
+    if len(matches) != 1:
+        return None
+    return matches[0]['video_page_url']
+
+
 def crawl_sedute(start_url: str, max_sedute: int = None) -> list:
     """
     Crawl sedute a partire da un URL.
