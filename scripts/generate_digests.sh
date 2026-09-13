@@ -13,6 +13,7 @@ TRANSCRIPT_DIR="$PROJECT_DIR/data/trascrizioni"
 TEMPLATE_FILE="$PROJECT_DIR/config/digest.yaml"
 SCHEMA_FILE="$PROJECT_DIR/config/digest-schema.json"
 VALIDATE_TEMPLATE="$PROJECT_DIR/config/validate-digest.yaml"
+VALIDATE_SCHEMA="$PROJECT_DIR/config/validate-digest-schema.json"
 # LOG_DIR="$PROJECT_DIR/data/logs"
 # LOG_FILE="$LOG_DIR/digest_$(date +%Y%m%d_%H%M%S).log"
 
@@ -55,17 +56,19 @@ validate_digest_completeness() {
     # Pausa per rate limiting API
     sleep 5
 
-    # Estrai il digest e verifica con LLM
-    local validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" --no-log --no-stream 2>/dev/null)
+    # Estrai il digest e verifica con LLM (--schema: risposta JSON pura, senza fence Markdown)
+    local validation_result
+    validation_result=$(jq -r '.digest' "$file" | llm -m "$MODEL" -t "$VALIDATE_TEMPLATE" --schema "$VALIDATE_SCHEMA" --no-log --no-stream 2>/dev/null) || validation_result=""
 
-    # Estrai is_complete dal JSON di risposta
-    local is_complete=$(echo "$validation_result" | grep -o '"is_complete"[[:space:]]*:[[:space:]]*[a-z]*' | grep -o '[a-z]*$')
+    local is_complete
+    is_complete=$(printf '%s' "$validation_result" | jq -r '.is_complete' 2>/dev/null) || is_complete=""
 
     if [ "$is_complete" = "true" ]; then
         return 0
     else
-        local reason=$(echo "$validation_result" | jq -r '.reason' 2>/dev/null || echo "Digest incompleto")
-        log "  ATTENZIONE: $reason"
+        local reason
+        reason=$(printf '%s' "$validation_result" | jq -r '.reason // empty' 2>/dev/null) || reason=""
+        log "  ATTENZIONE: ${reason:-risposta del validatore non leggibile}"
         return 1
     fi
 }

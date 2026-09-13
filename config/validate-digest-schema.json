@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "is_complete": {
+      "type": "boolean",
+      "description": "true if the digest is complete, false if it is truncated"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Assessment explained in 1-2 sentences, in Italian"
+    }
+  },
+  "required": [
+    "is_complete",
+    "reason"
+  ]
+}
