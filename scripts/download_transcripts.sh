@@ -28,6 +28,12 @@ while IFS= read -r line; do
 
 	echo "Processing: $youtube_id"
 
+	# Video non più su YouTube (404): skip permanente. Per riprovarlo, togliere la riga.
+	if [ -f "$OUTPUT_DIR/video_not_found.txt" ] && grep -qFx "$youtube_id" "$OUTPUT_DIR/video_not_found.txt"; then
+		echo "  Skipping: video not found (video_not_found.txt)"
+		continue
+	fi
+
 	srt_file="$OUTPUT_DIR/${youtube_id}.it.srt"
 	txt_file="$OUTPUT_DIR/${youtube_id}.it.txt"
 
@@ -47,7 +53,7 @@ while IFS= read -r line; do
 		fi
 		if [ "$rc" -eq 3 ]; then
 			echo "  Warning: video not found (404), skipping $youtube_id"
-			echo "$youtube_id" >>"$OUTPUT_DIR/no_transcript.txt"
+			echo "$youtube_id" >>"$OUTPUT_DIR/video_not_found.txt"
 			continue
 		fi
 		echo "  Error: API transcript download failed for $youtube_id"
@@ -68,6 +74,9 @@ done < <(tail -n +2 "$CSV_FILE")
 
 if [ -f "$OUTPUT_DIR/no_transcript.txt" ]; then
 	sort -u "$OUTPUT_DIR/no_transcript.txt" -o "$OUTPUT_DIR/no_transcript.txt"
+fi
+if [ -f "$OUTPUT_DIR/video_not_found.txt" ]; then
+	sort -u "$OUTPUT_DIR/video_not_found.txt" -o "$OUTPUT_DIR/video_not_found.txt"
 fi
 
 echo "Done!"
