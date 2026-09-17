@@ -1,0 +1,7512 @@
+1
+00:00:00,160 --> 00:00:03,840
+La seduta è aperta
+
+2
+00:00:07,960 --> 00:00:13,360
+ai sensi del comma 9 dell'articolo 127
+
+3
+00:00:10,719 --> 00:00:15,360
+del regolamento interno do il preavviso
+
+4
+00:00:13,360 --> 00:00:17,359
+di 30 minuti al fine delle eventuali
+
+5
+00:00:15,360 --> 00:00:19,080
+votazioni mediante procedimento
+
+6
+00:00:17,359 --> 00:00:21,240
+elettronico che dovessero aver luogo nel
+
+7
+00:00:19,080 --> 00:00:23,320
+corso della presente seduta. Invito
+
+8
+00:00:21,240 --> 00:00:25,920
+pertanto i deputati ammonirsi per tempo
+
+9
+00:00:23,320 --> 00:00:27,359
+della tessera personale di voto. Ricordo
+
+10
+00:00:25,920 --> 00:00:29,840
+che anche la richiesta di verifica del
+
+11
+00:00:27,359 --> 00:00:31,400
+numero legale articolo 85 ovvero la
+
+12
+00:00:29,840 --> 00:00:34,280
+domanda di scrutino nominale o
+
+13
+00:00:31,400 --> 00:00:36,040
+discrutino segreto articolo 127 sono
+
+14
+00:00:34,280 --> 00:00:38,600
+effettuate mediante procedimento
+
+15
+00:00:36,040 --> 00:00:40,680
+elettronico.
+
+16
+00:00:38,600 --> 00:00:42,640
+Avverto che il processo verbale della
+
+17
+00:00:40,680 --> 00:00:44,840
+seduta precedente è posto a disposizione
+
+18
+00:00:42,640 --> 00:00:46,440
+degli onorevoli deputati che intendano
+
+19
+00:00:44,840 --> 00:00:48,520
+prenderne visione ed è considerato
+
+20
+00:00:46,440 --> 00:00:51,480
+approvato in assente osservazioni in
+
+21
+00:00:48,520 --> 00:00:53,480
+contrario nella presente seduta.
+
+22
+00:00:51,480 --> 00:00:54,960
+Avverto che le comunicazioni di rito di
+
+23
+00:00:53,480 --> 00:00:57,399
+quell'articolo 83 del regolamento
+
+24
+00:00:54,960 --> 00:01:00,120
+interno dell'assemblea saranno riportate
+
+25
+00:00:57,399 --> 00:01:02,440
+nell'allegato A resoconto dell'odierna
+
+26
+00:01:00,120 --> 00:01:05,040
+seduta. Colleghi, andiamo subito al
+
+27
+00:01:02,440 --> 00:01:08,080
+punto all'ordine del giorno. Invito la
+
+28
+00:01:05,040 --> 00:01:12,000
+quinta commissione a prendere posto ai
+
+29
+00:01:08,080 --> 00:01:15,560
+banchi, il governo è presente e invito
+
+30
+00:01:12,000 --> 00:01:17,840
+il vicepresidente Chinnici è presente.
+
+31
+00:01:15,560 --> 00:01:20,400
+Invito il relatore e c'è anche
+
+32
+00:01:17,840 --> 00:01:24,479
+l'onorevole Caronia.
+
+33
+00:01:20,400 --> 00:01:27,439
+Invito il collega collega Saverino a
+
+34
+00:01:24,479 --> 00:01:29,640
+fare da la relazione del disegno di
+
+35
+00:01:27,439 --> 00:01:32,720
+legge. Prego, onorevole.
+
+36
+00:01:29,640 --> 00:01:35,000
+Grazie presidente. Onorevoli colleghi,
+
+37
+00:01:32,720 --> 00:01:37,040
+il disegno di legge che oggi finalmente
+
+38
+00:01:35,000 --> 00:01:40,159
+stiamo incardinando
+
+39
+00:01:37,040 --> 00:01:42,360
+è a prima firma dell'onorevole del
+
+40
+00:01:40,159 --> 00:01:44,280
+collega onorevole Fabio Venezia che
+
+41
+00:01:42,360 --> 00:01:45,920
+ringrazio sempre per questo tipo di
+
+42
+00:01:44,280 --> 00:01:47,880
+sensibilità
+
+43
+00:01:45,920 --> 00:01:50,200
+relativa ai nostri beni, al nostro
+
+44
+00:01:47,880 --> 00:01:52,960
+grande patrimonio, immenso patrimonio
+
+45
+00:01:50,200 --> 00:01:54,479
+artistico culturale e naturalmente
+
+46
+00:01:52,960 --> 00:01:58,640
+sottoscritto a tutto il Partito
+
+47
+00:01:54,479 --> 00:02:01,119
+Democratico e ringrazio il naturalmente
+
+48
+00:01:58,640 --> 00:02:02,759
+il presidente Ferrara Fabrizio Ferrara
+
+49
+00:02:01,119 --> 00:02:05,360
+della quinta commissione cultura,
+
+50
+00:02:02,759 --> 00:02:09,800
+formazione e lavoro, anche se assente le
+
+51
+00:02:05,360 --> 00:02:11,080
+nostre vice vice presidenti e tutta la
+
+52
+00:02:09,800 --> 00:02:14,080
+commissione, i colleghi della
+
+53
+00:02:11,080 --> 00:02:16,840
+commissione quinta per averlo non solo
+
+54
+00:02:14,080 --> 00:02:19,400
+attenzionato e votato all'unanimità. Il
+
+55
+00:02:16,840 --> 00:02:21,840
+disegno di legge, appunto, prevede il
+
+56
+00:02:19,400 --> 00:02:24,200
+riconoscimento e la valorizzazione dei
+
+57
+00:02:21,840 --> 00:02:27,040
+cimiteri monumentali e storici della
+
+58
+00:02:24,200 --> 00:02:29,720
+Sicilia. Già oggi più che mai i cimeni
+
+59
+00:02:27,040 --> 00:02:32,080
+non sono considerati soltanto luoghi di
+
+60
+00:02:29,720 --> 00:02:35,239
+intimità e della della memoria, ma sono
+
+61
+00:02:32,080 --> 00:02:38,560
+anche spalsi di civiltà e di cultura,
+
+62
+00:02:35,239 --> 00:02:41,000
+perché, come dicevo prima, riconoscono e
+
+63
+00:02:38,560 --> 00:02:43,519
+racchiudono anche un patrimonio storico,
+
+64
+00:02:41,000 --> 00:02:46,040
+artistico e monumentale di particolare
+
+65
+00:02:43,519 --> 00:02:48,400
+pregio che va sicuramente tutelato e
+
+66
+00:02:46,040 --> 00:02:50,920
+valorizzato. Abbiamo tantissime
+
+67
+00:02:48,400 --> 00:02:56,239
+sculture, bassorilievi bronzi, cappelle
+
+68
+00:02:50,920 --> 00:03:00,200
+neogotiche e mausulè in stile Liberty.
+
+69
+00:02:56,239 --> 00:03:04,040
+Caratterizzano tanti tanto di questi
+
+70
+00:03:00,200 --> 00:03:06,840
+monumenti i principali cimiteri della
+
+71
+00:03:04,040 --> 00:03:09,560
+monumentali della nostra territorio
+
+72
+00:03:06,840 --> 00:03:11,680
+della Sicilia. Partendo da Caltagirone,
+
+73
+00:03:09,560 --> 00:03:14,840
+passando da Paternò, Caltanissetta,
+
+74
+00:03:11,680 --> 00:03:17,680
+Catania, il cimitero degli inglesi a
+
+75
+00:03:14,840 --> 00:03:20,040
+Messina, Siracusa, Segesta, Santo
+
+76
+00:03:17,680 --> 00:03:22,319
+Stefano di Camastra e così tanti altri.
+
+77
+00:03:20,040 --> 00:03:28,680
+Questo per fare vedere che, appunto, il
+
+78
+00:03:22,319 --> 00:03:32,319
+nostro territorio è pieno e di ehm ed è
+
+79
+00:03:28,680 --> 00:03:36,360
+grande rappresentativo di appunto questi
+
+80
+00:03:32,319 --> 00:03:38,319
+di questi monumenti e naturalmente tutti
+
+81
+00:03:36,360 --> 00:03:40,959
+questi, insomma, l'architettura
+
+82
+00:03:38,319 --> 00:03:43,120
+cimiteriale in Sicilia risente anche
+
+83
+00:03:40,959 --> 00:03:45,799
+delle tante dominazioni che ci sono
+
+84
+00:03:43,120 --> 00:03:49,680
+state e delle varie correnti artistiche
+
+85
+00:03:45,799 --> 00:03:53,560
+europee della seconda metà dell'8 e i
+
+86
+00:03:49,680 --> 00:03:56,640
+primi decenni delo secolo. Diversi
+
+87
+00:03:53,560 --> 00:04:01,480
+cimiteri storici sono diventati e stati
+
+88
+00:03:56,640 --> 00:04:06,720
+dichiarati anche monumento nazionali.
+
+89
+00:04:01,480 --> 00:04:10,159
+I cimiteri monumentali, ah, assessore,
+
+90
+00:04:06,720 --> 00:04:13,560
+ehm, sono anche luoghi della memoria
+
+91
+00:04:10,159 --> 00:04:15,640
+collettiva. In questi cimiteri,
+
+92
+00:04:13,560 --> 00:04:18,799
+assessore,
+
+93
+00:04:15,640 --> 00:04:21,799
+in questi cimiteri
+
+94
+00:04:18,799 --> 00:04:23,800
+hanno trovato sepoltura, personalità
+
+95
+00:04:21,799 --> 00:04:28,080
+illustre che si sono naturalmente
+
+96
+00:04:23,800 --> 00:04:29,880
+distinte nei vari ambiti del sapere. E
+
+97
+00:04:28,080 --> 00:04:31,479
+tra l'altro in quest'ultimo periodo,
+
+98
+00:04:29,880 --> 00:04:33,919
+anche in Italia, così in molti paesi
+
+99
+00:04:31,479 --> 00:04:36,720
+d'Europa e addirittura poi all'estero,
+
+100
+00:04:33,919 --> 00:04:39,639
+si è anche
+
+101
+00:04:36,720 --> 00:04:42,639
+diffuso il cosiddetto
+
+102
+00:04:39,639 --> 00:04:47,560
+turismo dei luoghi del silenzio, cioè
+
+103
+00:04:42,639 --> 00:04:49,120
+percorsi che sono nati proprio a per
+
+104
+00:04:47,560 --> 00:04:51,800
+valorizzare
+
+105
+00:04:49,120 --> 00:04:55,960
+e riconoscere i vari monumenti
+
+106
+00:04:51,800 --> 00:04:57,400
+visitatori che all'interno dei nostri
+
+107
+00:04:55,960 --> 00:04:59,919
+cimiteri
+
+108
+00:04:57,400 --> 00:05:03,120
+oltre che a cercare un luogo di pace e
+
+109
+00:04:59,919 --> 00:05:05,360
+di silenzio, ma soprattutto
+
+110
+00:05:03,120 --> 00:05:08,479
+hanno la possibilità di ammirare opere
+
+111
+00:05:05,360 --> 00:05:11,479
+d'arte e monumenti funebri di grande
+
+112
+00:05:08,479 --> 00:05:14,560
+valore. Proprio per questo disegno di
+
+113
+00:05:11,479 --> 00:05:16,199
+legge all'articolo 1 vuole riconoscere
+
+114
+00:05:14,560 --> 00:05:18,039
+il valore dei cimiteri storici e
+
+115
+00:05:16,199 --> 00:05:21,440
+monumentali della Sicilia e quindi
+
+116
+00:05:18,039 --> 00:05:24,400
+garantire la tutela e la valorizzazione
+
+117
+00:05:21,440 --> 00:05:27,759
+degli stessi. L'articolo 2 della
+
+118
+00:05:24,400 --> 00:05:30,199
+proposta stabilisce e definisce quindi
+
+119
+00:05:27,759 --> 00:05:33,600
+l'iter di riconoscimento dei cimiteri
+
+120
+00:05:30,199 --> 00:05:36,560
+storici e monumentali che devono avere
+
+121
+00:05:33,600 --> 00:05:39,479
+dei particolari requisiti.
+
+122
+00:05:36,560 --> 00:05:42,880
+L'articolo 3 invece intende favorire
+
+123
+00:05:39,479 --> 00:05:46,360
+anche la cooperazione tra enti pubblici
+
+124
+00:05:42,880 --> 00:05:47,880
+e soggetti privati, non solo per la
+
+125
+00:05:46,360 --> 00:05:50,880
+valorizzazione,
+
+126
+00:05:47,880 --> 00:05:52,600
+la divulgazione, lo studio e la
+
+127
+00:05:50,880 --> 00:05:56,080
+fruizione
+
+128
+00:05:52,600 --> 00:05:59,919
+dei cimiteri monumentali siciliani.
+
+129
+00:05:56,080 --> 00:06:02,600
+L'articolo 4 prevede lo stanziamento di
+
+130
+00:05:59,919 --> 00:06:04,600
+appositi contributi regionali per i
+
+131
+00:06:02,600 --> 00:06:07,800
+progetti presentati non solo dai
+
+132
+00:06:04,600 --> 00:06:11,039
+soggetti titolari e gestori di cimitari
+
+133
+00:06:07,800 --> 00:06:13,560
+storici, giusto per salvaguardare lo
+
+134
+00:06:11,039 --> 00:06:15,160
+stesso patrimonio, migliorare la
+
+135
+00:06:13,560 --> 00:06:19,360
+fruizione
+
+136
+00:06:15,160 --> 00:06:23,639
+pubblica, incentivare la catalogazione
+
+137
+00:06:19,360 --> 00:06:29,039
+e lo studio dei manufatti e quindi
+
+138
+00:06:23,639 --> 00:06:31,599
+sviluppare il itinerari e percorsi che
+
+139
+00:06:29,039 --> 00:06:33,599
+possono essere sia multimediali che
+
+140
+00:06:31,599 --> 00:06:38,160
+digitali,
+
+141
+00:06:33,599 --> 00:06:40,400
+giusto per rilanciare paesaggi culturali
+
+142
+00:06:38,160 --> 00:06:42,800
+e proprio il turismo dei luoghi del
+
+143
+00:06:40,400 --> 00:06:45,560
+silenzio. A questi dobbiamo aggiungere
+
+144
+00:06:42,800 --> 00:06:47,560
+appunto l'articolo 5 che individua
+
+145
+00:06:45,560 --> 00:06:49,199
+ulteriori azioni della regioni
+
+146
+00:06:47,560 --> 00:06:51,319
+finalizzate alla promozione, alla
+
+147
+00:06:49,199 --> 00:06:54,520
+valorizzazione dei cimiteri monumentali
+
+148
+00:06:51,319 --> 00:06:57,120
+e storici, mentre l'articolo 6
+
+149
+00:06:54,520 --> 00:07:00,039
+stabilisce le modalità di controllo
+
+150
+00:06:57,120 --> 00:07:04,720
+sull'attuazione delle iniziative. Gli
+
+151
+00:07:00,039 --> 00:07:08,560
+articoli 7 e 8 disciplinano gli aspetti
+
+152
+00:07:04,720 --> 00:07:11,400
+finanziari. Quindi, eh, presidente,
+
+153
+00:07:08,560 --> 00:07:14,720
+conclusa la relazione, spero che il
+
+154
+00:07:11,400 --> 00:07:17,319
+disegno di legge possiamo subito passare
+
+155
+00:07:14,720 --> 00:07:20,319
+alla all'esame dei singoli articoli.
+
+156
+00:07:17,319 --> 00:07:20,319
+Grazie.
+
+157
+00:07:20,639 --> 00:07:26,599
+Grazie onorevole. Apro la discussione
+
+158
+00:07:24,199 --> 00:07:29,560
+generale. C'era l'onorevole Mciichè che
+
+159
+00:07:26,599 --> 00:07:31,400
+voleva parlare. L'onorevole Mciichè in
+
+160
+00:07:29,560 --> 00:07:33,440
+discussione generale o extracussione
+
+161
+00:07:31,400 --> 00:07:35,840
+generale?
+
+162
+00:07:33,440 --> 00:07:38,400
+Non ho nessun nessuna discussione
+
+163
+00:07:35,840 --> 00:07:40,560
+generale. È soltanto è soltanto per una
+
+164
+00:07:38,400 --> 00:07:43,400
+precisazione che credo che interessi
+
+165
+00:07:40,560 --> 00:07:45,440
+tutti, non soltanto me, anzi me meno
+
+166
+00:07:43,400 --> 00:07:48,159
+degli altri.
+
+167
+00:07:45,440 --> 00:07:51,080
+C'è stato comunicato che non avremo più
+
+168
+00:07:48,159 --> 00:07:56,280
+in questo parlamento la banca, quindi va
+
+169
+00:07:51,080 --> 00:07:56,280
+via banca lo sportello di Banca Intesa.
+
+170
+00:07:57,080 --> 00:08:01,720
+Va via lo sportello di Banca Intesa che
+
+171
+00:07:59,400 --> 00:08:04,280
+abbiamo oggi.
+
+172
+00:08:01,720 --> 00:08:06,879
+Mi sono chiesto il perché. Ho chiesto un
+
+173
+00:08:04,280 --> 00:08:09,440
+poco in giro, non ho ricevuto, devo
+
+174
+00:08:06,879 --> 00:08:11,759
+essere sincero, risposte convincenti, ma
+
+175
+00:08:09,440 --> 00:08:14,800
+è un problema mio questo. Non certamente
+
+176
+00:08:11,759 --> 00:08:17,639
+tutti gli altri, ma un problema c'è.
+
+177
+00:08:14,800 --> 00:08:20,319
+Io sono capogruppo.
+
+178
+00:08:17,639 --> 00:08:23,319
+Io, come tutti gli altri capigruppo,
+
+179
+00:08:20,319 --> 00:08:26,039
+abbiamo l'incombensza di dovere pagare
+
+180
+00:08:23,319 --> 00:08:29,039
+tutti i dipendenti del gruppo, di dovere
+
+181
+00:08:26,039 --> 00:08:31,560
+pagare le spese del gruppo, di dovere
+
+182
+00:08:29,039 --> 00:08:33,959
+avere le fatture, di farle guidetanzare,
+
+183
+00:08:31,560 --> 00:08:36,560
+di fare, cioè tutto una serie di
+
+184
+00:08:33,959 --> 00:08:39,200
+attività di tipo amministrativo, per cui
+
+185
+00:08:36,560 --> 00:08:42,120
+io fino ad oggi mediamente, almeno due
+
+186
+00:08:39,200 --> 00:08:44,360
+tre volte al settimana in banca sono
+
+187
+00:08:42,120 --> 00:08:46,240
+dovuto andare.
+
+188
+00:08:44,360 --> 00:08:49,240
+Non ci sarà più la banca. Benissimo, io
+
+189
+00:08:46,240 --> 00:08:51,880
+dovrò andare in via Mariano Stabile dove
+
+190
+00:08:49,240 --> 00:08:55,320
+c'è la filiale di Bancaintesa. Ma a
+
+191
+00:08:51,880 --> 00:08:56,519
+parte una parentesi, perché devo andare
+
+192
+00:08:55,320 --> 00:08:57,519
+là, mi obbligate, vado ad andare in
+
+193
+00:08:56,519 --> 00:09:00,640
+banchetesa, posso andare anche
+
+194
+00:08:57,519 --> 00:09:02,440
+dall'altra parte a questo punto fino a
+
+195
+00:09:00,640 --> 00:09:04,880
+prova contraria. Non essendo più
+
+196
+00:09:02,440 --> 00:09:06,120
+l'assemblea che se ne occupa, sono
+
+197
+00:09:04,880 --> 00:09:08,160
+libero di andare dove voglio, in
+
+198
+00:09:06,120 --> 00:09:10,040
+qualsiasi banca voglio. Bene, iniziamo
+
+199
+00:09:08,160 --> 00:09:12,399
+un casino di questi che non che non
+
+200
+00:09:10,040 --> 00:09:14,920
+finiscono più da a partire da oggi per
+
+201
+00:09:12,399 --> 00:09:17,480
+il futuro. Ma ammesso non consista che
+
+202
+00:09:14,920 --> 00:09:20,120
+io voglia rimanere in banca intesa come
+
+203
+00:09:17,480 --> 00:09:22,000
+gruppo e poi magari invece il nuovo
+
+204
+00:09:20,120 --> 00:09:23,560
+capogruppo vorrà cambiare, quindi
+
+205
+00:09:22,000 --> 00:09:28,120
+immaginatevi quello che può venirne
+
+206
+00:09:23,560 --> 00:09:30,959
+fuori. Ma io devo uscire da questo
+
+207
+00:09:28,120 --> 00:09:34,120
+edificio o devo mandare qualcuno che
+
+208
+00:09:30,959 --> 00:09:36,040
+lavora nei gruppi? Nel gruppo il quale
+
+209
+00:09:34,120 --> 00:09:37,839
+dovrà uscire, si dovrà prendere un taxi
+
+210
+00:09:36,040 --> 00:09:41,000
+oppure dovrà andare con la macchina a
+
+211
+00:09:37,839 --> 00:09:44,399
+cui matematicamente faranno una multa.
+
+212
+00:09:41,000 --> 00:09:47,279
+Cioè inizia tutta una, veramente dico
+
+213
+00:09:44,399 --> 00:09:49,680
+una situazione di difficoltà nella
+
+214
+00:09:47,279 --> 00:09:51,640
+gestione quotidiana
+
+215
+00:09:49,680 --> 00:09:55,000
+di questa di questa assemblea e dei
+
+216
+00:09:51,640 --> 00:09:57,200
+gruppi di questa assemblea. Allora,
+
+217
+00:09:55,000 --> 00:10:00,040
+siccome un paio di cose le so, mi
+
+218
+00:09:57,200 --> 00:10:03,720
+permetto di comunicarvele così si
+
+219
+00:10:00,040 --> 00:10:06,680
+prendono decisioni. Intanto devo dire
+
+220
+00:10:03,720 --> 00:10:09,200
+prima di tutto che avrei considerato più
+
+221
+00:10:06,680 --> 00:10:11,120
+corretto che di questa vertenza se ne
+
+222
+00:10:09,200 --> 00:10:13,079
+occupasse il consiglio di presidenza,
+
+223
+00:10:11,120 --> 00:10:15,800
+che non mi risulta invece sia stato
+
+224
+00:10:13,079 --> 00:10:17,959
+coinvolto in questa in questa vicenda.
+
+225
+00:10:15,800 --> 00:10:20,360
+Questo mi pare strano, però per carità
+
+226
+00:10:17,959 --> 00:10:22,040
+ne sapete più di me, quindi sapete se è
+
+227
+00:10:20,360 --> 00:10:23,920
+obbligatorio o meno. Ma se anche non
+
+228
+00:10:22,040 --> 00:10:26,079
+fosse obbligatorio, secondo me sarebbe
+
+229
+00:10:23,920 --> 00:10:29,200
+stato quantomeno opportuno metterli a
+
+230
+00:10:26,079 --> 00:10:32,920
+conoscenza di questo. Secondo mi risulta
+
+231
+00:10:29,200 --> 00:10:37,200
+che Banchint Intesa abbia fatto una
+
+232
+00:10:32,920 --> 00:10:39,000
+richiesta, una proposta di continuare
+
+233
+00:10:37,200 --> 00:10:41,920
+esattamente nelle condizioni attuali,
+
+234
+00:10:39,000 --> 00:10:44,920
+quindi senza ulteriore ulteriori spese,
+
+235
+00:10:41,920 --> 00:10:48,680
+ok? quantomeno fino a fine legislatura
+
+236
+00:10:44,920 --> 00:10:51,240
+per evitare che a metà della partita,
+
+237
+00:10:48,680 --> 00:10:53,399
+mentre mentre siamo qua tutti noi gruppi
+
+238
+00:10:51,240 --> 00:10:55,720
+cambiamo improvvisamente e ci troviamo
+
+239
+00:10:53,399 --> 00:10:58,440
+con delle situazioni da gestire diverse
+
+240
+00:10:55,720 --> 00:11:00,839
+rispetto a quelle di prima. Gli è stato
+
+241
+00:10:58,440 --> 00:11:03,200
+risposto di no.
+
+242
+00:11:00,839 --> 00:11:05,519
+Bene, Bancaintesa a quel punto ha fatto
+
+243
+00:11:03,200 --> 00:11:07,079
+un'altra richiesta, questa serviva a
+
+244
+00:11:05,519 --> 00:11:09,360
+Bancaintesa,
+
+245
+00:11:07,079 --> 00:11:13,079
+che era quella di aspettare sino al 21
+
+246
+00:11:09,360 --> 00:11:16,240
+settembre perché questa situazione che
+
+247
+00:11:13,079 --> 00:11:18,560
+si è creata di fatto nasce da una
+
+248
+00:11:16,240 --> 00:11:22,200
+situazione nazionale per cui Banca
+
+249
+00:11:18,560 --> 00:11:24,839
+Intesa e credo anche Unicredit accorpano
+
+250
+00:11:22,200 --> 00:11:27,000
+tutte le filiali che ci sono nel paese
+
+251
+00:11:24,839 --> 00:11:30,320
+l'Italia, quindi non ci sarà più la
+
+252
+00:11:27,000 --> 00:11:34,040
+filiale del del Parlamento piuttosto che
+
+253
+00:11:30,320 --> 00:11:36,200
+la finale numero 2 o 3 di di via Mariano
+
+254
+00:11:34,040 --> 00:11:38,880
+Stabili, ci sarà anche intesa così come
+
+255
+00:11:36,200 --> 00:11:41,320
+ci sarà Unicredit. Punto, avevano
+
+256
+00:11:38,880 --> 00:11:43,560
+chiesto se si potesse aspettare almeno
+
+257
+00:11:41,320 --> 00:11:48,360
+sino al 21 settembre, giusto per un
+
+258
+00:11:43,560 --> 00:11:51,040
+fatto di di come dire di di di evitare
+
+259
+00:11:48,360 --> 00:11:53,480
+confusioni, perché materialmente
+
+260
+00:11:51,040 --> 00:11:55,800
+e e le carte
+
+261
+00:11:53,480 --> 00:11:57,639
+le le due filiali diventano una, ma
+
+262
+00:11:55,800 --> 00:11:59,760
+materialmente c'è un giro di carte di
+
+263
+00:11:57,639 --> 00:12:03,560
+cose, per cui se fosse stato fatto il
+
+264
+00:11:59,760 --> 00:12:05,959
+21, quando già erano un'unica un'unica
+
+265
+00:12:03,560 --> 00:12:07,360
+filiale, a loro sarebbe servito per
+
+266
+00:12:05,959 --> 00:12:09,360
+evitare maggiori di confusione e
+
+267
+00:12:07,360 --> 00:12:11,800
+quant'altro. Gli è stato negato anche
+
+268
+00:12:09,360 --> 00:12:14,639
+questo e gli è stato detto "No, dovete
+
+269
+00:12:11,800 --> 00:12:16,160
+andare via subito perché ci servono i
+
+270
+00:12:14,639 --> 00:12:18,639
+locali".
+
+271
+00:12:16,160 --> 00:12:20,000
+Allora, io come dire sono stato
+
+272
+00:12:18,639 --> 00:12:22,320
+presidente di questo palazzo
+
+273
+00:12:20,000 --> 00:12:25,040
+meraviglioso e locali ce nei quante ne
+
+274
+00:12:22,320 --> 00:12:28,079
+vogliamo e non so a che cosa possano
+
+275
+00:12:25,040 --> 00:12:30,639
+servire questi locali in maniera così
+
+276
+00:12:28,079 --> 00:12:33,880
+urgente da dovere fare saltare questo
+
+277
+00:12:30,639 --> 00:12:35,720
+accordo con manca intesa che vi posso
+
+278
+00:12:33,880 --> 00:12:38,000
+garantire perché mi è stato detto
+
+279
+00:12:35,720 --> 00:12:40,880
+personalmente non ci sono rimasti molto
+
+280
+00:12:38,000 --> 00:12:43,480
+bene dalla dalla situazione che si è che
+
+281
+00:12:40,880 --> 00:12:45,240
+si è verificata, anzi si sentono
+
+282
+00:12:43,480 --> 00:12:47,399
+abbastanza e
+
+283
+00:12:45,240 --> 00:12:50,480
+come dire confusi per questa situazione
+
+284
+00:12:47,399 --> 00:12:52,720
+che si è verificata. Allora,
+
+285
+00:12:50,480 --> 00:12:54,480
+se questa cosa di bacchettesa non si può
+
+286
+00:12:52,720 --> 00:12:56,440
+sistemare, e credo che non si possa
+
+287
+00:12:54,480 --> 00:12:58,600
+sistemare anche perché ora io ho detto
+
+288
+00:12:56,440 --> 00:13:00,680
+vabbè si farà un nuovo bando, ci saranno
+
+289
+00:12:58,600 --> 00:13:02,240
+mi ha detto no, nuovo bando non se ne
+
+290
+00:13:00,680 --> 00:13:04,519
+può fare perché il prossimo bando si
+
+291
+00:13:02,240 --> 00:13:06,480
+potrà fare nel 31
+
+292
+00:13:04,519 --> 00:13:08,680
+perché questo è stato fatto, ha
+
+293
+00:13:06,480 --> 00:13:10,720
+partecipato solo Banca Intesa, ma il
+
+294
+00:13:08,680 --> 00:13:13,079
+bando è stato fatto, quindi non se ne
+
+295
+00:13:10,720 --> 00:13:16,639
+può fare un altro, bisogna che passino i
+
+296
+00:13:13,079 --> 00:13:19,920
+5 anni che erano il la durata di questo
+
+297
+00:13:16,639 --> 00:13:22,240
+di questo bando. Per cui da qui al 2031
+
+298
+00:13:19,920 --> 00:13:25,079
+noi qui saremo nelle mani di Dio, cioè
+
+299
+00:13:22,240 --> 00:13:27,279
+non sapremo nessuno di noi per sapere il
+
+300
+00:13:25,079 --> 00:13:29,199
+mio conto corrente. Io che non sono un
+
+301
+00:13:27,279 --> 00:13:30,959
+maestro dell'onine, devo spiegare, devo
+
+302
+00:13:29,199 --> 00:13:33,519
+anche dire, perché sono abbastanza
+
+303
+00:13:30,959 --> 00:13:35,360
+vecchio e comunque in banca non ci si
+
+304
+00:13:33,519 --> 00:13:39,199
+posso andare più, dovrò andare, non so
+
+305
+00:13:35,360 --> 00:13:41,680
+dove, dovrò mandare mia figlia, ma
+
+306
+00:13:39,199 --> 00:13:44,680
+io non mi voglio più prendere la
+
+307
+00:13:41,680 --> 00:13:47,600
+responsabilità di capogruppo
+
+308
+00:13:44,680 --> 00:13:50,360
+nella gestione quotidiana dei conti del
+
+309
+00:13:47,600 --> 00:13:52,440
+gruppo, senza avere più le persone che
+
+310
+00:13:50,360 --> 00:13:54,040
+mi hanno aiutato a farlo sino ad oggi,
+
+311
+00:13:52,440 --> 00:13:55,639
+senza avere le persone da cui andavo e
+
+312
+00:13:54,040 --> 00:13:57,480
+gli dicevo, "Scusa, ma che devo fare in
+
+313
+00:13:55,639 --> 00:13:59,880
+questa situazione e loro mi spiegavano
+
+314
+00:13:57,480 --> 00:14:01,800
+che cos'è che dovessi fare. Io oggi mi
+
+315
+00:13:59,880 --> 00:14:05,120
+ritrovo in una situazione veramente
+
+316
+00:14:01,800 --> 00:14:07,639
+complicata e comunico e ho finito e
+
+317
+00:14:05,120 --> 00:14:09,480
+comunico a questa assemblea che se potrò
+
+318
+00:14:07,639 --> 00:14:12,880
+in funzione di una banca che mi dà una
+
+319
+00:14:09,480 --> 00:14:16,160
+mano maggiore io cambio banca perché a
+
+320
+00:14:12,880 --> 00:14:18,440
+quel punto diventa un conto personale
+
+321
+00:14:16,160 --> 00:14:20,920
+del gruppo, non più dell'assemblea come
+
+322
+00:14:18,440 --> 00:14:22,839
+oggi, perché nel momento in cui non c'è
+
+323
+00:14:20,920 --> 00:14:25,040
+più la banca dell'assemblea non è non
+
+324
+00:14:22,839 --> 00:14:26,880
+c'è questa e non c'è nessun altro. Io
+
+325
+00:14:25,040 --> 00:14:29,800
+chiedo scusa se ho fatto questo
+
+326
+00:14:26,880 --> 00:14:32,639
+intervento, se ho fermato il lavoro del
+
+327
+00:14:29,800 --> 00:14:35,199
+Parlamento, ma ho problemi personali nel
+
+328
+00:14:32,639 --> 00:14:37,160
+gestire questa cosa come capogruppo, al
+
+329
+00:14:35,199 --> 00:14:41,279
+di là del fatto che mi è sembrata una
+
+330
+00:14:37,160 --> 00:14:44,959
+scelta leggermente scellerata.
+
+331
+00:14:41,279 --> 00:14:46,839
+Grazie onorevole Michiche, dico io ehm
+
+332
+00:14:44,959 --> 00:14:49,000
+onorevole Michichè, le stavo rispondendo
+
+333
+00:14:46,839 --> 00:14:50,800
+io, ma ho visto che l'onorevole Di
+
+334
+00:14:49,000 --> 00:14:53,240
+Pasquale ha chiesto di intervenire.
+
+335
+00:14:50,800 --> 00:14:55,639
+Credo che l'onorevole Di Pasquale possa
+
+336
+00:14:53,240 --> 00:14:59,399
+fare un intervento anche chiarificatore
+
+337
+00:14:55,639 --> 00:15:02,800
+a riguardo, diciamo, quello che ha detto
+
+338
+00:14:59,399 --> 00:15:04,040
+l'onorevole Miccichè. Mi riservo poi di
+
+339
+00:15:02,800 --> 00:15:05,440
+intervenire poi successivamente. Prego,
+
+340
+00:15:04,040 --> 00:15:08,240
+onorevole Di Pasquale.
+
+341
+00:15:05,440 --> 00:15:09,959
+E sì, io ho sentito, ho ascoltato
+
+342
+00:15:08,240 --> 00:15:12,240
+l'intervento
+
+343
+00:15:09,959 --> 00:15:14,240
+dell'onorevole Micciichè. E guardi,
+
+344
+00:15:12,240 --> 00:15:16,480
+onorevole Micciich,
+
+345
+00:15:14,240 --> 00:15:19,600
+se me l'avesse detto prima di entrare,
+
+346
+00:15:16,480 --> 00:15:22,639
+gli avrei spiegato bene da deputato
+
+347
+00:15:19,600 --> 00:15:25,920
+questore, da componente del consiglio di
+
+348
+00:15:22,639 --> 00:15:27,560
+amministrazione la questione e forse gli
+
+349
+00:15:25,920 --> 00:15:29,199
+avrei potuto evitare anche di fare
+
+350
+00:15:27,560 --> 00:15:31,759
+l'intervento
+
+351
+00:15:29,199 --> 00:15:33,240
+la eh
+
+352
+00:15:31,759 --> 00:15:35,120
+anche perché secondo me non ne vale la
+
+353
+00:15:33,240 --> 00:15:36,839
+pena neanche discuterne in aula tutto
+
+354
+00:15:35,120 --> 00:15:40,040
+questo tempo, però visto che lei l'ha
+
+355
+00:15:36,839 --> 00:15:42,800
+sollevato, purtroppo io sono chiamato,
+
+356
+00:15:40,040 --> 00:15:46,480
+mi sento chiamato
+
+357
+00:15:42,800 --> 00:15:50,319
+a rispondere. Noi abbiamo avuto è
+
+358
+00:15:46,480 --> 00:15:53,000
+scaduta la tesoreria della
+
+359
+00:15:50,319 --> 00:15:56,519
+dell'assemblea che prima se ne occupava
+
+360
+00:15:53,000 --> 00:15:57,720
+la banca banca prima Bancanova, poi
+
+361
+00:15:56,519 --> 00:16:00,040
+Banca Intesa.
+
+362
+00:15:57,720 --> 00:16:01,839
+Colleghi, un attimo di silenzio in aula.
+
+363
+00:16:00,040 --> 00:16:03,560
+in fondo,
+
+364
+00:16:01,839 --> 00:16:06,279
+in fondo i colleghi in fondo
+
+365
+00:16:03,560 --> 00:16:09,600
+questo. Dopodiché, quindi, noi abbiamo
+
+366
+00:16:06,279 --> 00:16:12,319
+avviato tutte le abbiamo avviato tutta
+
+367
+00:16:09,600 --> 00:16:17,160
+una serie le procedure per poter
+
+368
+00:16:12,319 --> 00:16:19,839
+rinnovare la tesoreria, non riuscendoci
+
+369
+00:16:17,160 --> 00:16:22,720
+perché quello che era stata la
+
+370
+00:16:19,839 --> 00:16:26,720
+disponibilità che avevamo sempre avuto
+
+371
+00:16:22,720 --> 00:16:29,079
+di Banca Intesa e si è rimessa in
+
+372
+00:16:26,720 --> 00:16:32,399
+discussione a tal punto che tutta una
+
+373
+00:16:29,079 --> 00:16:36,560
+serie di cose che venivano riconosciute
+
+374
+00:16:32,399 --> 00:16:38,160
+all'assemblea non esistono più,
+
+375
+00:16:36,560 --> 00:16:40,360
+sia dal punto di vista proprio di
+
+376
+00:16:38,160 --> 00:16:43,120
+organismo assemblea e sia dal punto di
+
+377
+00:16:40,360 --> 00:16:45,319
+vista di correntisti. È cambiato tutti.
+
+378
+00:16:43,120 --> 00:16:50,720
+Guardate, io mi sono sentito preso quasi
+
+379
+00:16:45,319 --> 00:16:52,440
+alla gola da deputato eh questore del
+
+380
+00:16:50,720 --> 00:16:55,480
+Consiglio di Presidenza, perché noi
+
+381
+00:16:52,440 --> 00:16:59,079
+comunque dovevamo garantire il servizio
+
+382
+00:16:55,480 --> 00:17:01,759
+di tesoreria. Alla fine i bandi sono
+
+383
+00:16:59,079 --> 00:17:05,760
+andati sempre deserti perché capisco che
+
+384
+00:17:01,759 --> 00:17:10,079
+la tesoreria non serve eh è a perdere,
+
+385
+00:17:05,760 --> 00:17:12,160
+non c'è e non sono attratti dal
+
+386
+00:17:10,079 --> 00:17:14,640
+le banche non sono attratte dal servizio
+
+387
+00:17:12,160 --> 00:17:17,640
+di tesoreria. Dopodiché abbiamo fatto
+
+388
+00:17:14,640 --> 00:17:20,480
+una è stata fatta, ma non da noi, dico
+
+389
+00:17:17,640 --> 00:17:22,319
+la parte politica, la parte gli uffici
+
+390
+00:17:20,480 --> 00:17:26,240
+giustamente hanno fatto una procedura
+
+391
+00:17:22,319 --> 00:17:30,840
+negoziata e dove si sono condivise, cioè
+
+392
+00:17:26,240 --> 00:17:33,559
+dove loro hanno detto che appunto
+
+393
+00:17:30,840 --> 00:17:37,400
+tra le cose che si che non avrebbero più
+
+394
+00:17:33,559 --> 00:17:41,160
+garantito anche gli uffici e lasciando
+
+395
+00:17:37,400 --> 00:17:43,640
+solamente lo sportello automatico.
+
+396
+00:17:41,160 --> 00:17:46,080
+Sono andati in questo modo. Sono andati
+
+397
+00:17:43,640 --> 00:17:47,760
+in questo modo. Dopodiché ora, siccome
+
+398
+00:17:46,080 --> 00:17:49,480
+se ne devono andare, io ricevo
+
+399
+00:17:47,760 --> 00:17:52,559
+telefonate, sono uno di quelle che
+
+400
+00:17:49,480 --> 00:17:55,120
+ricevo telefonate da una settimana
+
+401
+00:17:52,559 --> 00:17:57,039
+per lasciare i locali, ma loro ci
+
+402
+00:17:55,120 --> 00:17:59,840
+dovevano pensare prima, ci dovevano
+
+403
+00:17:57,039 --> 00:18:03,880
+pensare durante la la quello che era
+
+404
+00:17:59,840 --> 00:18:06,760
+stato il procedimento eh di trattativa
+
+405
+00:18:03,880 --> 00:18:08,679
+negoziata con gli uffici e se devono
+
+406
+00:18:06,760 --> 00:18:09,919
+restare devono pagare i locali. Chi
+
+407
+00:18:08,679 --> 00:18:11,880
+resta deve pagare il locale
+
+408
+00:18:09,919 --> 00:18:15,120
+dell'affitto, senò danno all'erario
+
+409
+00:18:11,880 --> 00:18:19,280
+perché regali non ne come non ne abbiamo
+
+410
+00:18:15,120 --> 00:18:19,280
+avuto non ne facciamo a nessuno.
+
+411
+00:18:19,919 --> 00:18:22,240
+No, basta
+
+412
+00:18:20,440 --> 00:18:23,640
+no colleghi
+
+413
+00:18:22,240 --> 00:18:27,039
+perché altrimenti onorevole MC che
+
+414
+00:18:23,640 --> 00:18:27,039
+diventa dibattito
+
+415
+00:18:28,840 --> 00:18:34,240
+e questo dico di Pasquale abbia spiegato
+
+416
+00:18:32,559 --> 00:18:36,440
+il collega di Pasquale abbia spiegato un
+
+417
+00:18:34,240 --> 00:18:38,720
+po' come sono andate le cose, poi se ci
+
+418
+00:18:36,440 --> 00:18:41,960
+sono ulteriori approfondimenti si fa.
+
+419
+00:18:38,720 --> 00:18:45,559
+Iniziamo la discussione generale. Si è
+
+420
+00:18:41,960 --> 00:18:48,720
+iscritta a parlare l'onorevole Campo.
+
+421
+00:18:45,559 --> 00:18:50,679
+Prego, onorevole, ne ha facoltà.
+
+422
+00:18:48,720 --> 00:18:54,360
+La discussione regionale, vi ricordo che
+
+423
+00:18:50,679 --> 00:18:56,840
+è aperta sul disegno di legge. Prego,
+
+424
+00:18:54,360 --> 00:18:59,640
+onorevole Campo.
+
+425
+00:18:56,840 --> 00:19:03,120
+Grazie presidente di Paola, governo e
+
+426
+00:18:59,640 --> 00:19:06,200
+colleghi. E il disegno di legge
+
+427
+00:19:03,120 --> 00:19:09,000
+chiaramente sarebbe apprezzabile, solo
+
+428
+00:19:06,200 --> 00:19:11,159
+che in Sicilia in questo momento la
+
+429
+00:19:09,000 --> 00:19:14,400
+situazione dei cimiteri è
+
+430
+00:19:11,159 --> 00:19:18,240
+particolarmente grave. Abbiamo dei
+
+431
+00:19:14,400 --> 00:19:20,640
+cimiteri che da decenni sono interdetti
+
+432
+00:19:18,240 --> 00:19:23,559
+alla pubblica fruizione
+
+433
+00:19:20,640 --> 00:19:25,880
+e non sono poche città. C'è quello di
+
+434
+00:19:23,559 --> 00:19:29,880
+Modica che versa in condizioni
+
+435
+00:19:25,880 --> 00:19:33,960
+strutturali gravissime. Circa 2000 tombe
+
+436
+00:19:29,880 --> 00:19:37,679
+non possono avere un fiore da più di 10
+
+437
+00:19:33,960 --> 00:19:40,600
+anni il cimitero di Siracusa e che
+
+438
+00:19:37,679 --> 00:19:43,840
+addirittura era al buio, parecchie tombe
+
+439
+00:19:40,600 --> 00:19:45,760
+al buio e anche qui diverse transenne e
+
+440
+00:19:43,840 --> 00:19:49,159
+tombe interdette. il cimitero
+
+441
+00:19:45,760 --> 00:19:52,159
+monumentale di Catania, altri cimiteri,
+
+442
+00:19:49,159 --> 00:19:55,120
+ci sono problemi seri per le sepolture,
+
+443
+00:19:52,159 --> 00:19:57,960
+bisogna aspettare parecchio tempo. Come
+
+444
+00:19:55,120 --> 00:20:00,799
+a Villabate, a Favara,
+
+445
+00:19:57,960 --> 00:20:03,080
+non ci sono disponibilità di loculi, a
+
+446
+00:20:00,799 --> 00:20:04,960
+Calatabiano, a Daicatena, a
+
+447
+00:20:03,080 --> 00:20:09,120
+Piedimonteetneo.
+
+448
+00:20:04,960 --> 00:20:11,799
+Ecco, in particolare io ho visitato il
+
+449
+00:20:09,120 --> 00:20:15,679
+cimitero di Modica e le posso dire,
+
+450
+00:20:11,799 --> 00:20:19,200
+presidente, che nonostante le transenne
+
+451
+00:20:15,679 --> 00:20:22,600
+in più di 2000 tombe si trovava un
+
+452
+00:20:19,200 --> 00:20:25,280
+fiore, quindi le persone scavalcano pur
+
+453
+00:20:22,600 --> 00:20:27,720
+di poter piangere la salma dei propri
+
+454
+00:20:25,280 --> 00:20:30,799
+cari e mettono a rischio la propria
+
+455
+00:20:27,720 --> 00:20:34,520
+incolumità. Sono questioni, a mio
+
+456
+00:20:30,799 --> 00:20:36,440
+avviso, prioritarie rispetto e
+
+457
+00:20:34,520 --> 00:20:39,440
+chiaramente a questo disegno di legge
+
+458
+00:20:36,440 --> 00:20:42,280
+che, per carità, voteremo perché non
+
+459
+00:20:39,440 --> 00:20:46,080
+abbiamo nulla in contrario, però ricordo
+
+460
+00:20:42,280 --> 00:20:49,400
+che il governo Schifani aveva promesso
+
+461
+00:20:46,080 --> 00:20:52,200
+ben 2 milioni di euro per risolvere le
+
+462
+00:20:49,400 --> 00:20:55,039
+questioni dei cimiteri e in particolare
+
+463
+00:20:52,200 --> 00:20:57,840
+aveva fatto anche un comunicato relativo
+
+464
+00:20:55,039 --> 00:20:59,840
+al cimitero di Modica e ad oggi in
+
+465
+00:20:57,840 --> 00:21:02,520
+queste variazioni di bilancio non
+
+466
+00:20:59,840 --> 00:21:05,039
+abbiamo visto assolutamente nulla, che
+
+467
+00:21:02,520 --> 00:21:07,360
+poi non è solo la questione dei cimiteri
+
+468
+00:21:05,039 --> 00:21:09,520
+monumentali, perché all'interno di
+
+469
+00:21:07,360 --> 00:21:11,400
+questi cimiteri che magari non sono
+
+470
+00:21:09,520 --> 00:21:13,960
+tutti monumentali come quello di
+
+471
+00:21:11,400 --> 00:21:16,360
+Catania, ci sono anche delle tombe
+
+472
+00:21:13,960 --> 00:21:18,480
+illustri. C'è per esempio a Modica
+
+473
+00:21:16,360 --> 00:21:22,400
+quella dello scrittore Raffaele
+
+474
+00:21:18,480 --> 00:21:25,520
+Poidomani e che ha scritto il libro
+
+475
+00:21:22,400 --> 00:21:27,400
+Carruba e Cavalieri, un testo molto
+
+476
+00:21:25,520 --> 00:21:30,080
+importante che ha ispirato anche il
+
+477
+00:21:27,400 --> 00:21:32,880
+gatto Pardo. Ecco, ci sono delle
+
+478
+00:21:30,080 --> 00:21:36,320
+questioni che a mio avviso andrebbero
+
+479
+00:21:32,880 --> 00:21:39,279
+affrontate perché oggi è inaudito
+
+480
+00:21:36,320 --> 00:21:42,120
+pensare che i cimiteri siano un luogo
+
+481
+00:21:39,279 --> 00:21:45,159
+morto, un luogo imbalsamato, un luogo
+
+482
+00:21:42,120 --> 00:21:47,440
+senza fruizione. E no, il cimitero è il
+
+483
+00:21:45,159 --> 00:21:50,520
+luogo dei vivi. C'è gente che va al
+
+484
+00:21:47,440 --> 00:21:53,279
+cimitero ogni giorno e non si può
+
+485
+00:21:50,520 --> 00:21:55,960
+togliere a queste persone il diritto di
+
+486
+00:21:53,279 --> 00:21:58,120
+piangere i propri cari o di mettere a
+
+487
+00:21:55,960 --> 00:22:00,559
+rischio la loro incolumità perché devono
+
+488
+00:21:58,120 --> 00:22:02,480
+scavalcare le transenne per mettere un
+
+489
+00:22:00,559 --> 00:22:04,760
+fiore ai propri cari. Allora, io,
+
+490
+00:22:02,480 --> 00:22:07,320
+presidente, chiedo una cosa o che venga
+
+491
+00:22:04,760 --> 00:22:10,120
+subemendato questo disegno di legge
+
+492
+00:22:07,320 --> 00:22:12,559
+approntando le somme per risolvere i
+
+493
+00:22:10,120 --> 00:22:15,720
+problemi strutturali dei tanti citari
+
+494
+00:22:12,559 --> 00:22:18,240
+siciliani interdetti alla fruizione,
+
+495
+00:22:15,720 --> 00:22:21,360
+oppure che il governo si prenda un
+
+496
+00:22:18,240 --> 00:22:23,240
+impegno oggi stesso di risolvere il
+
+497
+00:22:21,360 --> 00:22:25,400
+problema nelle future variazioni di
+
+498
+00:22:23,240 --> 00:22:27,840
+bilancio che ci stiamo appressando a
+
+499
+00:22:25,400 --> 00:22:29,360
+votare già nelle commissioni di merito
+
+500
+00:22:27,840 --> 00:22:32,480
+perché la questione non è più
+
+501
+00:22:29,360 --> 00:22:36,520
+rinviabile. Grazie.
+
+502
+00:22:32,480 --> 00:22:38,679
+Grazie onorevole Campo. Colleghi, io ho
+
+503
+00:22:36,520 --> 00:22:43,200
+difficoltà ad ascoltare gli interventi.
+
+504
+00:22:38,679 --> 00:22:46,760
+Vi chiedo se il tono di voce di chi sta
+
+505
+00:22:43,200 --> 00:22:48,240
+tra i banchi può essere abbassato.
+
+506
+00:22:46,760 --> 00:22:51,960
+Ha chiesto di intervenire l'onorevole
+
+507
+00:22:48,240 --> 00:22:51,960
+Burtone. Prego, onorevole.
+
+508
+00:23:06,679 --> 00:23:09,679
+Presidente,
+
+509
+00:23:10,360 --> 00:23:18,240
+è in discussione un disegno di legge
+
+510
+00:23:14,159 --> 00:23:21,440
+che affronta un problema significativo
+
+511
+00:23:18,240 --> 00:23:23,600
+nelle nostre comunità.
+
+512
+00:23:21,440 --> 00:23:25,559
+la valorizzazione anche dal punto di
+
+513
+00:23:23,600 --> 00:23:28,919
+vista artistico
+
+514
+00:23:25,559 --> 00:23:31,520
+dei nostri cimiteri.
+
+515
+00:23:28,919 --> 00:23:35,159
+Nel tempo si sono
+
+516
+00:23:31,520 --> 00:23:37,600
+messi al centro i temi urbanistici
+
+517
+00:23:35,159 --> 00:23:39,840
+sanitari che riguardano
+
+518
+00:23:37,600 --> 00:23:43,679
+i cimiteri, la distanza dal centro
+
+519
+00:23:39,840 --> 00:23:45,640
+abitato, per esempio, la necessità di
+
+520
+00:23:43,679 --> 00:23:48,520
+avere infrastrutture per garantire
+
+521
+00:23:45,640 --> 00:23:52,600
+prevenzione e salute.
+
+522
+00:23:48,520 --> 00:23:56,039
+Si sono fatte anche in alcune realtà
+
+523
+00:23:52,600 --> 00:23:57,840
+delle opere infrastrutturali necessarie.
+
+524
+00:23:56,039 --> 00:23:59,840
+L'assemblea invece, grazie
+
+525
+00:23:57,840 --> 00:24:01,559
+all'intervento, alla proposta del
+
+526
+00:23:59,840 --> 00:24:03,559
+collega
+
+527
+00:24:01,559 --> 00:24:06,559
+Fabio Venezia,
+
+528
+00:24:03,559 --> 00:24:09,200
+mette al centro una questione, quello
+
+529
+00:24:06,559 --> 00:24:11,159
+anche della cultura,
+
+530
+00:24:09,200 --> 00:24:13,919
+capire da dove siamo partiti per
+
+531
+00:24:11,159 --> 00:24:16,559
+arrivare alla realizzazione dei cimiteri
+
+532
+00:24:13,919 --> 00:24:19,360
+che sono presenti nella nostre nelle
+
+533
+00:24:16,559 --> 00:24:21,360
+nostre città.
+
+534
+00:24:19,360 --> 00:24:24,559
+Sappiamo tutti che un tempo i morti
+
+535
+00:24:21,360 --> 00:24:27,080
+venivano seppelliti nelle chiese oppure
+
+536
+00:24:24,559 --> 00:24:28,880
+in alcune confraternite.
+
+537
+00:24:27,080 --> 00:24:31,480
+Dopodiché,
+
+538
+00:24:28,880 --> 00:24:36,840
+a metà dell'800 in Sicilia i Borboni
+
+539
+00:24:31,480 --> 00:24:39,760
+emanarono una norma per determinare
+
+540
+00:24:36,840 --> 00:24:44,720
+la realizzazione di luoghi in cui
+
+541
+00:24:39,760 --> 00:24:46,720
+seppellire i nostri morti e quindi c'è
+
+542
+00:24:44,720 --> 00:24:48,559
+stata un'evoluzione,
+
+543
+00:24:46,720 --> 00:24:52,840
+un impegno.
+
+544
+00:24:48,559 --> 00:24:56,159
+Debbo dire che la cosa che emerge però
+
+545
+00:24:52,840 --> 00:24:57,960
+io sono di un comune dell'aria interna,
+
+546
+00:24:56,159 --> 00:25:00,640
+ma posso dire già dalla città, da
+
+547
+00:24:57,960 --> 00:25:03,120
+Catania, si evidenzia questa bellezza
+
+548
+00:25:00,640 --> 00:25:06,640
+anche di alcune tombe che hanno
+
+549
+00:25:03,120 --> 00:25:10,880
+caratteristiche barocche,
+
+550
+00:25:06,640 --> 00:25:14,840
+ma anche di altre tendenze culturali
+
+551
+00:25:10,880 --> 00:25:17,080
+e quindi c'è la necessità di
+
+552
+00:25:14,840 --> 00:25:19,880
+intervenire. Il limite che abbiamo
+
+553
+00:25:17,080 --> 00:25:23,600
+soltanto quello delle risorse che sono
+
+554
+00:25:19,880 --> 00:25:27,159
+troppo poche, anche se noi speriamo che
+
+555
+00:25:23,600 --> 00:25:30,000
+col nuovo anno ci possa essere una
+
+556
+00:25:27,159 --> 00:25:32,399
+individuazione di fondi che possano
+
+557
+00:25:30,000 --> 00:25:35,880
+essere sufficienti a dare un segnale
+
+558
+00:25:32,399 --> 00:25:39,440
+concreto per la ristrutturazione
+
+559
+00:25:35,880 --> 00:25:43,640
+anche di queste strutture che sono
+
+560
+00:25:39,440 --> 00:25:46,760
+strutture importanti per una città, per
+
+561
+00:25:43,640 --> 00:25:49,960
+i le cittadine e i cittadini.
+
+562
+00:25:46,760 --> 00:25:52,200
+E quindi presidente noi siamo qui per
+
+563
+00:25:49,960 --> 00:25:55,200
+accelerare l'approvazione,
+
+564
+00:25:52,200 --> 00:25:56,880
+presente l'assessore, noi pensiamo certo
+
+565
+00:25:55,200 --> 00:25:59,720
+che la legge può trovare degli
+
+566
+00:25:56,880 --> 00:26:03,200
+aggiustamenti, dovrà trovare un impegno
+
+567
+00:25:59,720 --> 00:26:06,480
+per l'applicazione perché non c'è dubbio
+
+568
+00:26:03,200 --> 00:26:10,240
+che saranno chiamati a dare un
+
+569
+00:26:06,480 --> 00:26:13,799
+contributo nella formulazione di questo,
+
+570
+00:26:10,240 --> 00:26:16,840
+eh diciamo calendario, di queste eh
+
+571
+00:26:13,799 --> 00:26:18,360
+strutture. c'è bisogno eh delle
+
+572
+00:26:16,840 --> 00:26:22,080
+sovrintendenze
+
+573
+00:26:18,360 --> 00:26:25,720
+eh per i mettere al centro le
+
+574
+00:26:22,080 --> 00:26:29,559
+caratteristiche che possono eh di
+
+575
+00:26:25,720 --> 00:26:31,840
+segnalare quali sono eh i nostri
+
+576
+00:26:29,559 --> 00:26:35,200
+cimiteri che hanno caratteristiche
+
+577
+00:26:31,840 --> 00:26:37,480
+culturali, monumentali e quindi c'è
+
+578
+00:26:35,200 --> 00:26:40,679
+tutta un'azione che si dovrà promuovere,
+
+579
+00:26:37,480 --> 00:26:44,600
+però ecco, io credo che l'accento vada
+
+580
+00:26:40,679 --> 00:26:47,520
+mosso e vada messo su gli interventi che
+
+581
+00:26:44,600 --> 00:26:49,559
+dobbiamo fare, anche perché io
+
+582
+00:26:47,520 --> 00:26:53,399
+concretamente parto da una realtà che
+
+583
+00:26:49,559 --> 00:26:56,080
+amministro c'è bisogno. Ci sono delle
+
+584
+00:26:53,399 --> 00:26:59,320
+bellissime tombe che sono state
+
+585
+00:26:56,080 --> 00:27:02,960
+costruite negli anni negli anni
+
+586
+00:26:59,320 --> 00:27:06,760
+precedenti e che oggi non hanno più
+
+587
+00:27:02,960 --> 00:27:09,480
+eredi, non ci sono più rappresentanti di
+
+588
+00:27:06,760 --> 00:27:12,840
+quelle famiglie che hanno dato vita a
+
+589
+00:27:09,480 --> 00:27:16,159
+delle strutture di grande significato
+
+590
+00:27:12,840 --> 00:27:20,399
+architettonico e culturale e quindi c'è
+
+591
+00:27:16,159 --> 00:27:21,520
+bisogno anche di avere la possibilità di
+
+592
+00:27:20,399 --> 00:27:24,279
+far incidere
+
+593
+00:27:21,520 --> 00:27:27,120
+gli enti locali, i comuni in particolare
+
+594
+00:27:24,279 --> 00:27:30,000
+per ristrutturare quelli che sono
+
+595
+00:27:27,120 --> 00:27:32,600
+monumenti che rappresentano una realtà.
+
+596
+00:27:30,000 --> 00:27:37,120
+Militello che è il comune che io
+
+597
+00:27:32,600 --> 00:27:39,720
+amministro al cimitero che ha realizzato
+
+598
+00:27:37,120 --> 00:27:42,440
+a metà dell'800 quando i Borboni
+
+599
+00:27:39,720 --> 00:27:45,720
+definivano questa definirono questa
+
+600
+00:27:42,440 --> 00:27:51,120
+questa legge, questa norma. era un
+
+601
+00:27:45,720 --> 00:27:53,919
+cimitero che aveva una eh diciamo una
+
+602
+00:27:51,120 --> 00:27:56,399
+capienza molto piccola.
+
+603
+00:27:53,919 --> 00:27:59,120
+Allora si io ho trovato scritto che
+
+604
+00:27:56,399 --> 00:28:05,440
+erano 0,040
+
+605
+00:27:59,120 --> 00:28:07,559
+salme di terreno ed erano quindi 700 m²
+
+606
+00:28:05,440 --> 00:28:11,279
+in tutto c'era una parte monumentale e
+
+607
+00:28:07,559 --> 00:28:15,120
+una parte invece di cimitero che
+
+608
+00:28:11,279 --> 00:28:19,480
+prevedeva il seppellimento a terra.
+
+609
+00:28:15,120 --> 00:28:21,760
+E quindi c'è l'evidenza di una realtà
+
+610
+00:28:19,480 --> 00:28:25,559
+che presenta caratteristiche che possono
+
+611
+00:28:21,760 --> 00:28:28,679
+essere tenute ad esempio noi abbiamo due
+
+612
+00:28:25,559 --> 00:28:31,039
+tombe importantissime, quelle realizzate
+
+613
+00:28:28,679 --> 00:28:33,000
+dalla famiglia Reforgiata ed un'altra
+
+614
+00:28:31,039 --> 00:28:36,440
+realizzata famiglia Maorana che a
+
+615
+00:28:33,000 --> 00:28:39,399
+Militello ha radici antiche e che ha
+
+616
+00:28:36,440 --> 00:28:42,159
+avuto personaggi di grandi rilievi. Di
+
+617
+00:28:39,399 --> 00:28:45,000
+grande rilievo. Ebbene, queste tombe
+
+618
+00:28:42,159 --> 00:28:48,080
+necessitano di interventi strutturali e
+
+619
+00:28:45,000 --> 00:28:50,600
+noi chiediamo quindi che si acceleri e
+
+620
+00:28:48,080 --> 00:28:52,880
+si possano mettere gli enti locali nelle
+
+621
+00:28:50,600 --> 00:28:56,200
+condizioni di intervenire perché si
+
+622
+00:28:52,880 --> 00:28:58,960
+tratta di intervenire per salvare alcuni
+
+623
+00:28:56,200 --> 00:29:01,600
+simboli che fanno riferimento ad un
+
+624
+00:28:58,960 --> 00:29:04,440
+passato che non deve essere dimenticato,
+
+625
+00:29:01,600 --> 00:29:06,919
+che non deve essere distrutto. Certo, ci
+
+626
+00:29:04,440 --> 00:29:09,399
+sono altre parti delle nostre città che
+
+627
+00:29:06,919 --> 00:29:12,039
+hanno un grande significato culturale,
+
+628
+00:29:09,399 --> 00:29:14,159
+però il cimitero è rappresentativo ed è
+
+629
+00:29:12,039 --> 00:29:16,960
+rappresentativo di una storia,
+
+630
+00:29:14,159 --> 00:29:18,919
+dell'impegno di una comunità.
+
+631
+00:29:16,960 --> 00:29:21,679
+È stato sottolineato, proprio facendo
+
+632
+00:29:18,919 --> 00:29:24,679
+riferimento al mio comune che dopo 11
+
+633
+00:29:21,679 --> 00:29:26,880
+anni di quella di quella legge furono
+
+634
+00:29:24,679 --> 00:29:29,840
+soltanto pochi comuni che si
+
+635
+00:29:26,880 --> 00:29:32,320
+allinearono. Tra questi c'è anche la
+
+636
+00:29:29,840 --> 00:29:34,840
+comunità che amministro. Non c'è dubbio,
+
+637
+00:29:32,320 --> 00:29:38,559
+quindi, che ci sono delle tombe che
+
+638
+00:29:34,840 --> 00:29:42,360
+vanno ulteriormente qualificate e
+
+639
+00:29:38,559 --> 00:29:44,120
+portate ad una condizione di essere
+
+640
+00:29:42,360 --> 00:29:47,440
+anche
+
+641
+00:29:44,120 --> 00:29:49,480
+guardate, valorizzate nel loro
+
+642
+00:29:47,440 --> 00:29:51,880
+apprezzamento
+
+643
+00:29:49,480 --> 00:29:54,320
+anche dai posteri
+
+644
+00:29:51,880 --> 00:29:56,200
+vivrà nelle nostre comunità. E concludo,
+
+645
+00:29:54,320 --> 00:30:01,440
+presidente.
+
+646
+00:29:56,200 --> 00:30:03,440
+Ugo Foscolo nelle nei seporchi scriveva:
+
+647
+00:30:01,440 --> 00:30:08,000
+"Forse
+
+648
+00:30:03,440 --> 00:30:10,159
+la morte può essere attenuata nel dolore
+
+649
+00:30:08,000 --> 00:30:14,039
+se ci sono dei cipressi che danno
+
+650
+00:30:10,159 --> 00:30:18,760
+l'ombra". e aggiungeva però anche tombe
+
+651
+00:30:14,039 --> 00:30:24,799
+in cui col pianto viene data la
+
+652
+00:30:18,760 --> 00:30:29,919
+possibilità di pregare e di sostenere
+
+653
+00:30:24,799 --> 00:30:34,039
+l'anima di chi riposa in pace.
+
+654
+00:30:29,919 --> 00:30:36,279
+Grazie onorevole Burtone.
+
+655
+00:30:34,039 --> 00:30:39,279
+Ha chiesto di intervenire l'onorevole
+
+656
+00:30:36,279 --> 00:30:39,279
+Gilistro.
+
+657
+00:30:44,080 --> 00:30:49,200
+Colleghi, ci sono altri che vogliono
+
+658
+00:30:45,360 --> 00:30:49,200
+intervenire in discussione generale?
+
+659
+00:30:49,760 --> 00:30:52,519
+Allora, io ho solo l'intervento
+
+660
+00:30:50,880 --> 00:30:55,600
+dell'onorevole Giambone e poi chiudo la
+
+661
+00:30:52,519 --> 00:30:57,880
+discussione generale. Va bene.
+
+662
+00:30:55,600 --> 00:31:00,080
+Discussione generale chiusa.
+
+663
+00:30:57,880 --> 00:31:02,760
+Grazie. Grazie presidente. Grazie
+
+664
+00:31:00,080 --> 00:31:07,440
+governo. Grazie onorevoli colleghi.
+
+665
+00:31:02,760 --> 00:31:10,279
+Riguardo alla questione cimiteri,
+
+666
+00:31:07,440 --> 00:31:12,399
+faccio presente che già
+
+667
+00:31:10,279 --> 00:31:15,799
+dalla preistoria
+
+668
+00:31:12,399 --> 00:31:17,919
+il culto dei morti, dalla preistoria il
+
+669
+00:31:15,799 --> 00:31:20,919
+culto dei morti
+
+670
+00:31:17,919 --> 00:31:23,760
+è qualcosa di irrinunciabile
+
+671
+00:31:20,919 --> 00:31:27,799
+per l'essere umano
+
+672
+00:31:23,760 --> 00:31:30,440
+da dalla preistoria in poi. Il culto dei
+
+673
+00:31:27,799 --> 00:31:33,519
+morti è qualcosa di straordinario, non è
+
+674
+00:31:30,440 --> 00:31:37,240
+una cosa che riguarda soltanto i
+
+675
+00:31:33,519 --> 00:31:40,480
+genitori, riguarda le famiglie, riguarda
+
+676
+00:31:37,240 --> 00:31:43,360
+la memoria storica, riguarda il nostro
+
+677
+00:31:40,480 --> 00:31:46,679
+vissuto, il DNA,
+
+678
+00:31:43,360 --> 00:31:50,600
+l'epigenetica che noi ancora conserviamo
+
+679
+00:31:46,679 --> 00:31:52,799
+nei nostri corpi attraverso la memoria
+
+680
+00:31:50,600 --> 00:31:56,639
+dei nostri
+
+681
+00:31:52,799 --> 00:31:59,480
+genitori, dei nostri nonni. Ora questo
+
+682
+00:31:56,639 --> 00:32:03,480
+disegno di legge è apprezzabile perché
+
+683
+00:31:59,480 --> 00:32:07,679
+pensate che ancora fino a al secolo
+
+684
+00:32:03,480 --> 00:32:11,000
+scorso le famiglie dedicavano cappelle
+
+685
+00:32:07,679 --> 00:32:14,880
+monumentali di un certo pregio con un
+
+686
+00:32:11,000 --> 00:32:17,840
+valore artistico importante
+
+687
+00:32:14,880 --> 00:32:22,240
+per quello che riguarda la memoria dei
+
+688
+00:32:17,840 --> 00:32:24,519
+loro dei loro morti. Oggi, ancora oggi,
+
+689
+00:32:22,240 --> 00:32:28,039
+se ci giriamo,
+
+690
+00:32:24,519 --> 00:32:31,880
+se andiamo in giro a vedere i cimiteri,
+
+691
+00:32:28,039 --> 00:32:35,440
+i cimiteri dei caduti in guerra, di
+
+692
+00:32:31,880 --> 00:32:39,240
+tutti i popoli che vediamo nei nostri
+
+693
+00:32:35,440 --> 00:32:44,320
+nelle nostre città, americani, inglesi,
+
+694
+00:32:39,240 --> 00:32:48,080
+vediamo cimiteri decorosi dove ogni mese
+
+695
+00:32:44,320 --> 00:32:51,679
+viene applicata pulizia, rigenerazione,
+
+696
+00:32:48,080 --> 00:32:54,519
+quei cimiteri nonostante siano a decine
+
+697
+00:32:51,679 --> 00:32:58,039
+di migliaia di chilometri
+
+698
+00:32:54,519 --> 00:33:01,360
+dai loro dai loro parenti, sono
+
+699
+00:32:58,039 --> 00:33:04,799
+manutenuti in maniera straordinaria.
+
+700
+00:33:01,360 --> 00:33:07,919
+Ebbene, nei nostri cimiteri oggi, come
+
+701
+00:33:04,799 --> 00:33:10,440
+dice e come ha detto l'onorevole Campo,
+
+702
+00:33:07,919 --> 00:33:14,399
+Stefania Campo, ho detto proprio questo,
+
+703
+00:33:10,440 --> 00:33:16,559
+cioè oggi non è permesso alle famiglie
+
+704
+00:33:14,399 --> 00:33:19,760
+poter onorare
+
+705
+00:33:16,559 --> 00:33:22,600
+i loro i loro morti. Questa è una cosa
+
+706
+00:33:19,760 --> 00:33:25,639
+straordinariamente grave. Cadono i
+
+707
+00:33:22,600 --> 00:33:28,919
+soffitti, cadono i tetti dei cimiteri,
+
+708
+00:33:25,639 --> 00:33:32,200
+non possono essere visitati. È una
+
+709
+00:33:28,919 --> 00:33:35,200
+qualcosa di veramente indecoroso. Andate
+
+710
+00:33:32,200 --> 00:33:38,440
+a vedere il cimitero di Siracusa. Anche
+
+711
+00:33:35,200 --> 00:33:40,720
+questo. Non solo abbiamo abbandonato i
+
+712
+00:33:38,440 --> 00:33:44,080
+cimiteri monumentali, ora siamo arrivati
+
+713
+00:33:40,720 --> 00:33:46,080
+ai loculi. Cosa vogliamo fare? Alla
+
+714
+00:33:44,080 --> 00:33:48,440
+fossa comune?
+
+715
+00:33:46,080 --> 00:33:50,799
+Questo è quello dove stiamo andando,
+
+716
+00:33:48,440 --> 00:33:54,240
+dove stiamo andando dal punto di vista
+
+717
+00:33:50,799 --> 00:33:56,120
+morale, dal punto di vista di etica, nei
+
+718
+00:33:54,240 --> 00:33:58,240
+confronti dei nostri morti, dove
+
+719
+00:33:56,120 --> 00:34:00,240
+vogliamo arrivare?
+
+720
+00:33:58,240 --> 00:34:03,159
+Allora, propongo a questo governo,
+
+721
+00:34:00,240 --> 00:34:06,720
+presidente, che sia fatta per la prima
+
+722
+00:34:03,159 --> 00:34:09,240
+volta in maniera seria un programmazione
+
+723
+00:34:06,720 --> 00:34:11,560
+organica per quello che riguarda la
+
+724
+00:34:09,240 --> 00:34:15,159
+ristrutturazione, la riqualificazione,
+
+725
+00:34:11,560 --> 00:34:17,800
+la decorosità dei nostri cimiteri. È un
+
+726
+00:34:15,159 --> 00:34:20,919
+impegno importante.
+
+727
+00:34:17,800 --> 00:34:24,119
+C'è nessuno di noi che non abbia
+
+728
+00:34:20,919 --> 00:34:26,599
+in un cimitero il proprio familiare, il
+
+729
+00:34:24,119 --> 00:34:29,320
+proprio genitore, il proprio nonno e
+
+730
+00:34:26,599 --> 00:34:32,879
+quindi impegno questo governo a fare
+
+731
+00:34:29,320 --> 00:34:35,480
+veramente qualcosa. Non possiamo essere
+
+732
+00:34:32,879 --> 00:34:41,879
+classificati come quelli che non diamo
+
+733
+00:34:35,480 --> 00:34:41,879
+onore neanche ai nostri cari. Grazie.
+
+734
+00:34:42,119 --> 00:34:46,040
+Grazie onorevole Giistro.
+
+735
+00:34:44,720 --> 00:34:47,960
+L'ultimo intervento è l'onorevole
+
+736
+00:34:46,040 --> 00:34:49,480
+Giambona. Prego onorevole. Poi la
+
+737
+00:34:47,960 --> 00:34:52,040
+discussione generale è chiusa. Iniziamo
+
+738
+00:34:49,480 --> 00:34:55,040
+con la votazione degli emendamenti e
+
+739
+00:34:52,040 --> 00:34:55,040
+dell'articolo.
+
+740
+00:35:06,079 --> 00:35:11,200
+Grazie presidente. Onorevoli colleghi,
+
+741
+00:35:08,480 --> 00:35:13,440
+governo.
+
+742
+00:35:11,200 --> 00:35:15,200
+Bene, il trattare questo disegno di
+
+743
+00:35:13,440 --> 00:35:17,839
+legge
+
+744
+00:35:15,200 --> 00:35:19,320
+risparmierei le battute facili. Stiamo
+
+745
+00:35:17,839 --> 00:35:21,839
+trattando un disegno di legge sui
+
+746
+00:35:19,320 --> 00:35:24,880
+cimiteri in un contesto politico di
+
+747
+00:35:21,839 --> 00:35:27,960
+maggioranza moribondo.
+
+748
+00:35:24,880 --> 00:35:30,079
+Ma detto questo, presidente, è anche
+
+749
+00:35:27,960 --> 00:35:32,720
+vero che è un argomento sociale sul
+
+750
+00:35:30,079 --> 00:35:35,040
+quale non possiamo che
+
+751
+00:35:32,720 --> 00:35:37,760
+assolutamente porre la massima la
+
+752
+00:35:35,040 --> 00:35:41,720
+massima attenzione, anche perché parlare
+
+753
+00:35:37,760 --> 00:35:43,839
+dei nostri dei nostri cimiteri
+
+754
+00:35:41,720 --> 00:35:45,599
+anche monumentali significa parlare
+
+755
+00:35:43,839 --> 00:35:48,040
+della nostra memoria, della nostra
+
+756
+00:35:45,599 --> 00:35:51,000
+storia, della nostra cultura.
+
+757
+00:35:48,040 --> 00:35:53,359
+anche dei nostri dei nostri cari, luoghi
+
+758
+00:35:51,000 --> 00:35:57,000
+in cui ci sono
+
+759
+00:35:53,359 --> 00:35:59,640
+anche modalità attraverso cui attrarre
+
+760
+00:35:57,000 --> 00:36:01,599
+dei turisti e questo avviene in tutto il
+
+761
+00:35:59,640 --> 00:36:03,760
+mondo, avviene anche nella nostra nella
+
+762
+00:36:01,599 --> 00:36:06,319
+nostra regione.
+
+763
+00:36:03,760 --> 00:36:09,760
+Beh, io però al pari di chi è
+
+764
+00:36:06,319 --> 00:36:12,240
+intervenuto prima voglio rappresentare
+
+765
+00:36:09,760 --> 00:36:15,119
+come le difficoltà nella gestione dei
+
+766
+00:36:12,240 --> 00:36:17,599
+cimiteri siciliani,
+
+767
+00:36:15,119 --> 00:36:19,960
+anche monumentali sia oramai diventata
+
+768
+00:36:17,599 --> 00:36:22,200
+all'ordine del giorno.
+
+769
+00:36:19,960 --> 00:36:25,520
+Sono stato un amministratore locale,
+
+770
+00:36:22,200 --> 00:36:28,400
+molti deputati qui presenti lo sono, lo
+
+771
+00:36:25,520 --> 00:36:32,160
+sono stati e le condizioni in cui
+
+772
+00:36:28,400 --> 00:36:36,079
+versano tanti dei cimiteri siciliani
+
+773
+00:36:32,160 --> 00:36:39,240
+sono note a tutti. con carenze di posti
+
+774
+00:36:36,079 --> 00:36:41,400
+e con attese di tumulazioni, con tombe
+
+775
+00:36:39,240 --> 00:36:43,040
+che in alcuni casi sono state e vengono
+
+776
+00:36:41,400 --> 00:36:44,760
+accatastate
+
+777
+00:36:43,040 --> 00:36:47,359
+sotto gli occhi di tutti e
+
+778
+00:36:44,760 --> 00:36:49,000
+nell'indifferenza collettiva, lentezze
+
+779
+00:36:47,359 --> 00:36:52,000
+burocratiche, molto spesso c'è anche
+
+780
+00:36:49,000 --> 00:36:53,720
+notevole notevole degrado. Cosa voglio
+
+781
+00:36:52,000 --> 00:36:55,640
+dire? che oggi parlando di cimiteri
+
+782
+00:36:53,720 --> 00:36:57,560
+monumentali probabilmente il Parlamento
+
+783
+00:36:55,640 --> 00:36:59,720
+siciliano deve acquisire consapevolezza
+
+784
+00:36:57,560 --> 00:37:02,000
+insieme al governo rispetto a quella che
+
+785
+00:36:59,720 --> 00:37:04,599
+è un'esigenza di intervenire per dare
+
+786
+00:37:02,000 --> 00:37:07,599
+sostegno a molti comuni e io ricordo che
+
+787
+00:37:04,599 --> 00:37:09,440
+un terzo dei comuni siciliani sono
+
+788
+00:37:07,599 --> 00:37:11,200
+oramai in costante difficoltà
+
+789
+00:37:09,440 --> 00:37:15,440
+economico-finanziaria,
+
+790
+00:37:11,200 --> 00:37:16,960
+tra dissesto, predisesto, non riescono a
+
+791
+00:37:15,440 --> 00:37:18,920
+fornire quelli che sono i servizi
+
+792
+00:37:16,960 --> 00:37:21,720
+essenziali al cittadino e quello dei
+
+793
+00:37:18,920 --> 00:37:22,400
+servizi cimiteriali è sicuramente uno di
+
+794
+00:37:21,720 --> 00:37:25,800
+quelli
+
+795
+00:37:22,400 --> 00:37:27,960
+che stentano a che stentano a garantire.
+
+796
+00:37:25,800 --> 00:37:31,240
+E allora, presidente e colleghi, noi
+
+797
+00:37:27,960 --> 00:37:34,440
+oggi discutiamo questo disegno di legge
+
+798
+00:37:31,240 --> 00:37:37,200
+e però la vera sfida è al momento in cui
+
+799
+00:37:34,440 --> 00:37:40,240
+questo verrà approvato. Permettetemi di
+
+800
+00:37:37,200 --> 00:37:43,640
+dire che la norma ha una copertura
+
+801
+00:37:40,240 --> 00:37:46,560
+finanziaria, sebbene iniziale,
+
+802
+00:37:43,640 --> 00:37:48,720
+ma credo che sia assolutamente
+
+803
+00:37:46,560 --> 00:37:51,240
+inadeguata per avviare un percorso di
+
+804
+00:37:48,720 --> 00:37:54,240
+vera valorizzazione dei nostri cimiteri
+
+805
+00:37:51,240 --> 00:37:57,319
+monumentali. Stiamo parlando di €105.000
+
+806
+00:37:54,240 --> 00:37:59,440
+per tutta la Regione Siciliana.
+
+807
+00:37:57,319 --> 00:38:01,240
+E allora io ritengo che al netto di
+
+808
+00:37:59,440 --> 00:38:04,640
+quello che è il percorso che adesso noi
+
+809
+00:38:01,240 --> 00:38:06,839
+faremo in questo Parlamento, di una
+
+810
+00:38:04,640 --> 00:38:09,359
+norma che ha delle finalità
+
+811
+00:38:06,839 --> 00:38:11,920
+assolutamente lodevoli, ci dovrà essere
+
+812
+00:38:09,359 --> 00:38:14,760
+l'impegno di questo Parlamento e del
+
+813
+00:38:11,920 --> 00:38:16,480
+governo, affinché la si finanzi di qui
+
+814
+00:38:14,760 --> 00:38:18,920
+in avanti, che si pongano in essere
+
+815
+00:38:16,480 --> 00:38:21,839
+delle azioni per aiutare le nostre
+
+816
+00:38:18,920 --> 00:38:24,480
+comunità affinché i nostri luoghi,
+
+817
+00:38:21,839 --> 00:38:27,520
+appunto, in cui sono i nostri cari, i
+
+818
+00:38:24,480 --> 00:38:29,520
+luoghi in cui, appunto, per rilevanza
+
+819
+00:38:27,520 --> 00:38:30,960
+hanno le caratteristiche di cimiteri
+
+820
+00:38:29,520 --> 00:38:33,280
+monumentali, possono essere
+
+821
+00:38:30,960 --> 00:38:35,240
+riqualificati, attenzionati con le
+
+822
+00:38:33,280 --> 00:38:38,040
+nostre chiese, le nostre cappelle, i
+
+823
+00:38:35,240 --> 00:38:41,520
+nostri monumenti e non lasciare i nostri
+
+824
+00:38:38,040 --> 00:38:45,079
+amministratori locali soli. Grazie.
+
+825
+00:38:41,520 --> 00:38:47,520
+Grazie onorevole Giambona. Iniziamo a
+
+826
+00:38:45,079 --> 00:38:49,119
+votazione.
+
+827
+00:38:47,520 --> 00:38:50,720
+Votiamo il passaggio degli articoli. Chi
+
+828
+00:38:49,119 --> 00:38:51,839
+è favorevole rimanga suto, che contro si
+
+829
+00:38:50,720 --> 00:38:55,200
+alza. Approvato.
+
+830
+00:38:51,839 --> 00:38:59,319
+È approvato. Andiamo all'articolo 1. C'è
+
+831
+00:38:55,200 --> 00:39:01,359
+l'emendamento 1.1 della commissione.
+
+832
+00:38:59,319 --> 00:39:03,280
+Qual è il parere del governo, assessore
+
+833
+00:39:01,359 --> 00:39:06,520
+Scarpinato.
+
+834
+00:39:03,280 --> 00:39:07,240
+È un emendamento di commissione.
+
+835
+00:39:06,520 --> 00:39:09,040
+Favorevole.
+
+836
+00:39:07,240 --> 00:39:11,000
+Parere del governo favorevole. Il parere
+
+837
+00:39:09,040 --> 00:39:12,000
+della commissione penso sia favorevole
+
+838
+00:39:11,000 --> 00:39:13,280
+perché è un emendamento della
+
+839
+00:39:12,000 --> 00:39:16,040
+commissione.
+
+840
+00:39:13,280 --> 00:39:17,599
+Mettiamo in votazione l'emendamento 1.1.
+
+841
+00:39:16,040 --> 00:39:20,480
+Chi è favorevole rimanga seduto. Che è
+
+842
+00:39:17,599 --> 00:39:22,400
+contrario si alzi. È approvato. A questo
+
+843
+00:39:20,480 --> 00:39:24,680
+punto mettiamo in votazione l'articolo
+
+844
+00:39:22,400 --> 00:39:26,200
+1. Chi è favorevole rimanga seduto che è
+
+845
+00:39:24,680 --> 00:39:28,280
+contrario si alzi. L'articolo 1. È
+
+846
+00:39:26,200 --> 00:39:32,400
+approvato.
+
+847
+00:39:28,280 --> 00:39:34,319
+Andiamo all'articolo 2, emendamento 2.1
+
+848
+00:39:32,400 --> 00:39:36,720
+che anche questo è della commissione. Il
+
+849
+00:39:34,319 --> 00:39:37,839
+parere del governo. Assessore
+
+850
+00:39:36,720 --> 00:39:39,680
+parere favorevole.
+
+851
+00:39:37,839 --> 00:39:43,040
+Parere favorevole. Parere favorevole
+
+852
+00:39:39,680 --> 00:39:43,880
+pure della commissione. Spiega
+
+853
+00:39:43,040 --> 00:39:45,480
+è unento tecnico
+
+854
+00:39:43,880 --> 00:39:47,000
+è un emendamento tecnico. Onorevole
+
+855
+00:39:45,480 --> 00:39:49,240
+Giambona.
+
+856
+00:39:47,000 --> 00:39:53,440
+L'onorevole
+
+857
+00:39:49,240 --> 00:39:53,440
+Caron vuole spiegare. Prego, onorevole.
+
+858
+00:39:54,480 --> 00:39:59,319
+Si tratta di un emendamento tecnico,
+
+859
+00:39:57,520 --> 00:40:02,560
+peraltro concordato con i proponenti
+
+860
+00:39:59,319 --> 00:40:04,640
+della norma per rendere omogeneo il
+
+861
+00:40:02,560 --> 00:40:06,160
+testo rispetto agli articoli successivi,
+
+862
+00:40:04,640 --> 00:40:10,240
+per cui è prettamente sono delle
+
+863
+00:40:06,160 --> 00:40:10,240
+modifiche prettamente tecniche.
+
+864
+00:40:16,760 --> 00:40:20,440
+Va bene. Mettiamo in votazione col
+
+865
+00:40:19,000 --> 00:40:22,640
+parere favorevole del governo della
+
+866
+00:40:20,440 --> 00:40:24,000
+commissione l'emendamento 2.1 che è
+
+867
+00:40:22,640 --> 00:40:26,240
+favorevole rimanga seduto che è contro
+
+868
+00:40:24,000 --> 00:40:29,079
+che si alzi approvato. A questo punto
+
+869
+00:40:26,240 --> 00:40:30,520
+possiamo approvare votare l'articolo 2.
+
+870
+00:40:29,079 --> 00:40:33,280
+Che è favorevole rimanga seduto, che è
+
+871
+00:40:30,520 --> 00:40:35,599
+contrario si alzi è approvato. Andiamo
+
+872
+00:40:33,280 --> 00:40:38,200
+all'articolo 3. Non ci sono.
+
+873
+00:40:35,599 --> 00:40:38,480
+C'è l'emendamento 3.1 fuori sacco del
+
+874
+00:40:38,200 --> 00:40:41,119
+governo.
+
+875
+00:40:38,480 --> 00:40:41,800
+C'è un emendamento 3.1 fuoracco del
+
+876
+00:40:41,119 --> 00:40:43,119
+governo
+
+877
+00:40:41,800 --> 00:40:45,440
+è modificativo del testo
+
+878
+00:40:43,119 --> 00:40:47,640
+che è modificativo del testo e quindi a
+
+879
+00:40:45,440 --> 00:40:51,160
+questo punto se lo votiamo
+
+880
+00:40:47,640 --> 00:40:54,680
+andiamo a riscrivere il
+
+881
+00:40:51,160 --> 00:40:54,680
+dov'è questo emendamento
+
+882
+00:41:08,319 --> 00:41:14,160
+fuori sacco
+
+883
+00:41:09,920 --> 00:41:16,480
+a firma del governo il 3.1 con il parere
+
+884
+00:41:14,160 --> 00:41:18,839
+favorevole ovviamente del governo. La
+
+885
+00:41:16,480 --> 00:41:22,000
+commissione
+
+886
+00:41:18,839 --> 00:41:23,079
+cos'è sta cosa? Eh, fuori. Eh,
+
+887
+00:41:22,000 --> 00:41:25,319
+favorevole
+
+888
+00:41:23,079 --> 00:41:26,680
+presidente. Se ci spiega
+
+889
+00:41:25,319 --> 00:41:29,000
+e questo lo deve spiegare il governo
+
+890
+00:41:26,680 --> 00:41:31,160
+perché è un emendamento del governo.
+
+891
+00:41:29,000 --> 00:41:33,160
+Prego, assessore.
+
+892
+00:41:31,160 --> 00:41:36,680
+Lo può spiegare lì, assessore lì a
+
+893
+00:41:33,160 --> 00:41:36,680
+microfono. Assessore.
+
+894
+00:41:40,440 --> 00:41:49,599
+Comunico i congedi degli onorevoli La
+
+895
+00:41:44,000 --> 00:41:49,599
+Rocca, D'Agostino e Cirrone Cipolla.
+
+896
+00:41:51,319 --> 00:41:54,920
+Gli ero aperto qua.
+
+897
+00:42:05,480 --> 00:42:10,520
+Grazie presidente. sostanzialmente è
+
+898
+00:42:08,400 --> 00:42:13,319
+solo un'armonizzazione nel percorso
+
+899
+00:42:10,520 --> 00:42:16,000
+ovviamente dello strumento normativo con
+
+900
+00:42:13,319 --> 00:42:18,359
+la il proponimento di inserire nella
+
+901
+00:42:16,000 --> 00:42:20,800
+carta regionale dei luoghi della cultura
+
+902
+00:42:18,359 --> 00:42:24,200
+e della memoria la LIM questo nuovo
+
+903
+00:42:20,800 --> 00:42:26,119
+strumento che sostanzialmente va ad
+
+904
+00:42:24,200 --> 00:42:27,680
+armonizzare il percorso che è stato
+
+905
+00:42:26,119 --> 00:42:28,920
+enunciato prima con gli articoli
+
+906
+00:42:27,680 --> 00:42:30,720
+precedenti.
+
+907
+00:42:28,920 --> 00:42:33,640
+Grazie assessore. Onorevole Schillaci,
+
+908
+00:42:30,720 --> 00:42:36,160
+lei vuole intervenire? Prego.
+
+909
+00:42:33,640 --> 00:42:39,640
+Grazie, presidente. Io vedo che
+
+910
+00:42:36,160 --> 00:42:42,240
+l'assessore è, diciamo,
+
+911
+00:42:39,640 --> 00:42:45,200
+diciamo, propone questa, diciamo, questa
+
+912
+00:42:42,240 --> 00:42:47,839
+carta dei luoghi della memoria, però,
+
+913
+00:42:45,200 --> 00:42:50,079
+caro assessore, con un'interrogazione
+
+914
+00:42:47,839 --> 00:42:52,800
+già depositata da tanto tempo a cui
+
+915
+00:42:50,079 --> 00:42:55,599
+l'assessorato e il dipartimento non ha
+
+916
+00:42:52,800 --> 00:42:58,319
+risposto, noi abbiamo chiesto come
+
+917
+00:42:55,599 --> 00:43:02,280
+Movimento 5 Stelle il ripristino della
+
+918
+00:42:58,319 --> 00:43:05,079
+carta dei beni culturali. che a mio
+
+919
+00:43:02,280 --> 00:43:08,000
+avviso è molto più importante dei luoghi
+
+920
+00:43:05,079 --> 00:43:10,720
+della memoria perché sa assessore i beni
+
+921
+00:43:08,000 --> 00:43:15,160
+culturali e sappiamo bene quello che sta
+
+922
+00:43:10,720 --> 00:43:18,880
+succedendo in quest'ultimo periodo, sono
+
+923
+00:43:15,160 --> 00:43:21,599
+in grave grave difficoltà non solo per
+
+924
+00:43:18,880 --> 00:43:23,680
+le carenze di organico che sappiamo
+
+925
+00:43:21,599 --> 00:43:25,920
+bene, che non dipendono naturalmente
+
+926
+00:43:23,680 --> 00:43:29,000
+solo da lei, ma e per questo
+
+927
+00:43:25,920 --> 00:43:31,680
+sollecitiamo dei concorsi pubblici che
+
+928
+00:43:29,000 --> 00:43:36,960
+possano finalmente rinvigorire i
+
+929
+00:43:31,680 --> 00:43:40,559
+dipartimento e i ruoli del del dei beni
+
+930
+00:43:36,960 --> 00:43:43,839
+culturali. Ma eh assessore, noi la
+
+931
+00:43:40,559 --> 00:43:46,040
+sollecitiamo invece a ripristinare la
+
+932
+00:43:43,839 --> 00:43:50,480
+carta dei beni culturali che era stata
+
+933
+00:43:46,040 --> 00:43:53,119
+istituita nel 2004 e che poi è stata
+
+934
+00:43:50,480 --> 00:43:55,920
+seppellita e invece è uno strumento
+
+935
+00:43:53,119 --> 00:43:58,760
+importante di cui godono anche altre
+
+936
+00:43:55,920 --> 00:44:00,960
+regioni e non vedo perché in un momento
+
+937
+00:43:58,760 --> 00:44:04,599
+di grande difficoltà per i beni
+
+938
+00:44:00,960 --> 00:44:08,240
+culturali la Regione Siciliana invece
+
+939
+00:44:04,599 --> 00:44:10,800
+decide di continuare a non rinvigorire
+
+940
+00:44:08,240 --> 00:44:14,240
+questa carta dei beni culturali perché è
+
+941
+00:44:10,800 --> 00:44:15,960
+importante stabilire una priorità su
+
+942
+00:44:14,240 --> 00:44:18,319
+quelli che sono gli interventi,
+
+943
+00:44:15,960 --> 00:44:22,119
+innanzitutto una mappatura dei beni
+
+944
+00:44:18,319 --> 00:44:25,640
+culturali, ma poi anche una un
+
+945
+00:44:22,119 --> 00:44:28,800
+calendario, una un monitoraggio e
+
+946
+00:44:25,640 --> 00:44:31,599
+soprattutto una calendarizzazione delle
+
+947
+00:44:28,800 --> 00:44:34,240
+priorità di intervento sui nostri beni
+
+948
+00:44:31,599 --> 00:44:37,920
+culturali. Il patrimonio culturale della
+
+949
+00:44:34,240 --> 00:44:40,880
+Sicilia è l'oro nero della Sicilia,
+
+950
+00:44:37,920 --> 00:44:43,520
+perché i nostri turisti non vengono per
+
+951
+00:44:40,880 --> 00:44:45,839
+le coste o perlomeno vengono anche per
+
+952
+00:44:43,520 --> 00:44:49,200
+le coste, ma il primo motivo per cui
+
+953
+00:44:45,839 --> 00:44:51,920
+vengono in Sicilia è il patrimonio
+
+954
+00:44:49,200 --> 00:44:55,040
+culturale. Quindi quello che noi
+
+955
+00:44:51,920 --> 00:44:58,040
+chiediamo è un cambiamento di passo.
+
+956
+00:44:55,040 --> 00:44:58,040
+Grazie.
+
+957
+00:44:58,400 --> 00:45:03,319
+Grazie onorevole Schillaci. A questo
+
+958
+00:45:01,400 --> 00:45:06,359
+punto io metterei in votazione
+
+959
+00:45:03,319 --> 00:45:07,920
+l'emendamento 3.1 col parere favorevole
+
+960
+00:45:06,359 --> 00:45:09,400
+del governo della commissione che è
+
+961
+00:45:07,920 --> 00:45:11,599
+favorevole rimanga seduti, che contrario
+
+962
+00:45:09,400 --> 00:45:13,920
+si alzi è approvato. Mettiamo in
+
+963
+00:45:11,599 --> 00:45:15,920
+votazione a questo punto l'articolo 3.
+
+964
+00:45:13,920 --> 00:45:17,200
+Chi è favorevole così come emendato, chi
+
+965
+00:45:15,920 --> 00:45:18,720
+è favorevole rimanga seduto. Che è
+
+966
+00:45:17,200 --> 00:45:22,760
+contro si alzi.
+
+967
+00:45:18,720 --> 00:45:26,280
+È approvato. Andiamo all'articolo 4. C'è
+
+968
+00:45:22,760 --> 00:45:29,680
+un emendamento 4.1
+
+969
+00:45:26,280 --> 00:45:34,520
+dell'onorevole la Vardera. Laa è già la
+
+970
+00:45:29,680 --> 00:45:34,520
+sua già compresa nella
+
+971
+00:45:38,200 --> 00:45:42,599
+Onorevole Vardè, lei lo vuole mantenere?
+
+972
+00:45:40,800 --> 00:45:43,920
+Lo vuole spiegare? Cont.
+
+973
+00:45:42,599 --> 00:45:46,400
+Prego.
+
+974
+00:45:43,920 --> 00:45:51,960
+Guardi, presidente, basta
+
+975
+00:45:46,400 --> 00:45:54,079
+spiegarlo con la storia. Assessore
+
+976
+00:45:51,960 --> 00:45:57,640
+assessore,
+
+977
+00:45:54,079 --> 00:45:59,640
+le dicevo questo emendamento,
+
+978
+00:45:57,640 --> 00:46:02,079
+assessore Scarpinato,
+
+979
+00:45:59,640 --> 00:46:04,000
+sono qua davanti a lei. Saluti,
+
+980
+00:46:02,079 --> 00:46:07,559
+cordialità.
+
+981
+00:46:04,000 --> 00:46:11,400
+Questo emendamento lo spieghiamo a chi
+
+982
+00:46:07,559 --> 00:46:13,480
+ci segue con una storia che essendo
+
+983
+00:46:11,400 --> 00:46:15,720
+palermitani entrambi conosciamo o
+
+984
+00:46:13,480 --> 00:46:19,319
+dovremmo conoscere.
+
+985
+00:46:15,720 --> 00:46:22,640
+Un signore perde il padre
+
+986
+00:46:19,319 --> 00:46:25,160
+circa 10 anni fa per una malattia.
+
+987
+00:46:22,640 --> 00:46:27,800
+Questo signore è in una condizione di
+
+988
+00:46:25,160 --> 00:46:30,319
+inaccessibilità in quanto, diciamo, lo
+
+989
+00:46:27,800 --> 00:46:33,520
+ha il padre lo hanno sepolto al cimitero
+
+990
+00:46:30,319 --> 00:46:36,160
+Sant'Orsola di Palermo, uno dei cimiteri
+
+991
+00:46:33,520 --> 00:46:38,839
+storici monumentali tra i più importanti
+
+992
+00:46:36,160 --> 00:46:41,359
+della nostra città. E questo signore si
+
+993
+00:46:38,839 --> 00:46:43,520
+ritrova a non potere visitare il padre
+
+994
+00:46:41,359 --> 00:46:46,319
+perché gliel'hanno messo in una in un
+
+995
+00:46:43,520 --> 00:46:48,599
+loculo al quarto piano. Questo signore è
+
+996
+00:46:46,319 --> 00:46:52,000
+in carrozzina, non può fisicamente
+
+997
+00:46:48,599 --> 00:46:54,119
+salire le scale e ed è costretto a non
+
+998
+00:46:52,000 --> 00:46:57,400
+potere visitare il padre. Quindi stiamo
+
+999
+00:46:54,119 --> 00:47:00,599
+negando il diritto sacrosanto a questo
+
+1000
+00:46:57,400 --> 00:47:03,119
+signore di potere piangere sulla tomba
+
+1001
+00:47:00,599 --> 00:47:05,880
+del padre. Ecco il senso di questo
+
+1002
+00:47:03,119 --> 00:47:07,400
+emendamento di buon senso che guarda
+
+1003
+00:47:05,880 --> 00:47:09,400
+l'interesse
+
+1004
+00:47:07,400 --> 00:47:11,119
+generale di chi purtroppo non può
+
+1005
+00:47:09,400 --> 00:47:12,680
+accedere a quei cimiteri monumentali in
+
+1006
+00:47:11,119 --> 00:47:14,920
+quanto chiaramente appunto barriere
+
+1007
+00:47:12,680 --> 00:47:18,200
+architettoniche storiche che nessuno
+
+1008
+00:47:14,920 --> 00:47:20,440
+vuole disquisire. Scrivo al sindaco di
+
+1009
+00:47:18,200 --> 00:47:22,240
+Palermo, il dottore La Galla che mi
+
+1010
+00:47:20,440 --> 00:47:25,680
+risponde e mi dice onorevole è una
+
+1011
+00:47:22,240 --> 00:47:27,319
+storia incredibile purtroppo noi non
+
+1012
+00:47:25,680 --> 00:47:29,520
+possiamo fare nulla. la gestione di
+
+1013
+00:47:27,319 --> 00:47:31,559
+questa di questo cimitero e anche la
+
+1014
+00:47:29,520 --> 00:47:33,000
+gestione in generale è di una società
+
+1015
+00:47:31,559 --> 00:47:35,599
+privata, di un ente diciamo
+
+1016
+00:47:33,000 --> 00:47:37,480
+ecclesiastico che certamente ha il
+
+1017
+00:47:35,599 --> 00:47:39,480
+controllo di quel cimitero stesso, ma
+
+1018
+00:47:37,480 --> 00:47:41,160
+noi normando a livello regionale
+
+1019
+00:47:39,480 --> 00:47:44,000
+l'accessibilità
+
+1020
+00:47:41,160 --> 00:47:47,880
+anche delle persone che hanno, come dire
+
+1021
+00:47:44,000 --> 00:47:50,480
+difficoltà di accessibilità, credo che
+
+1022
+00:47:47,880 --> 00:47:52,720
+rendiamo un servizio alla collettività e
+
+1023
+00:47:50,480 --> 00:47:54,319
+alla Sicilia. Quindi mi auguro che
+
+1024
+00:47:52,720 --> 00:47:57,079
+questo emendamento venga mantenuto e
+
+1025
+00:47:54,319 --> 00:47:59,359
+venga approvato.
+
+1026
+00:47:57,079 --> 00:48:01,520
+Va bene. Onorevole Vardera. È un
+
+1027
+00:47:59,359 --> 00:48:03,160
+sostitutivo alla lettera H. Questo per
+
+1028
+00:48:01,520 --> 00:48:05,720
+la commissione che deve dare un parere e
+
+1029
+00:48:03,160 --> 00:48:08,559
+per il governo che deve dare un parere.
+
+1030
+00:48:05,720 --> 00:48:11,800
+C'è già la lettera H a riguardo.
+
+1031
+00:48:08,559 --> 00:48:14,200
+L'onorevole Lavardera va a modificare la
+
+1032
+00:48:11,800 --> 00:48:16,319
+lettera a sostituire la lettera H
+
+1033
+00:48:14,200 --> 00:48:18,800
+esplicitando ulteriori cose. Quindi
+
+1034
+00:48:16,319 --> 00:48:22,800
+chiedo il parere della commissione e poi
+
+1035
+00:48:18,800 --> 00:48:22,800
+del governo. Parere della commissione.
+
+1036
+00:48:23,359 --> 00:48:27,880
+Prima non lo so. Governo. Commissione?
+
+1037
+00:48:25,760 --> 00:48:29,640
+Prima governo.
+
+1038
+00:48:27,880 --> 00:48:31,880
+Governo.
+
+1039
+00:48:29,640 --> 00:48:33,280
+Favorevole. Commissione
+
+1040
+00:48:31,880 --> 00:48:35,640
+favorevole.
+
+1041
+00:48:33,280 --> 00:48:37,240
+Mettiamo in votazione l'emendamento 4.1
+
+1042
+00:48:35,640 --> 00:48:38,640
+col parere favorevole del governo e la
+
+1043
+00:48:37,240 --> 00:48:39,720
+commissione. Che è favorevole rimanga
+
+1044
+00:48:38,640 --> 00:48:42,520
+seduto, che contrario si alzi.
+
+1045
+00:48:39,720 --> 00:48:45,599
+L'emendamento 4.1 è approvato e
+
+1046
+00:48:42,520 --> 00:48:48,160
+sostituisce così la lettera h. Andiamo
+
+1047
+00:48:45,599 --> 00:48:51,200
+all'emendamento 4.2 che è un emendamento
+
+1048
+00:48:48,160 --> 00:48:53,440
+della commissione. Chiedo il parere del
+
+1049
+00:48:51,200 --> 00:48:55,520
+governo.
+
+1050
+00:48:53,440 --> 00:48:57,240
+Favorevole. Parere favorevole del
+
+1051
+00:48:55,520 --> 00:48:59,119
+governo. Parere favorevole della
+
+1052
+00:48:57,240 --> 00:49:01,920
+commissione. Lo metto in votazione.
+
+1053
+00:48:59,119 --> 00:49:03,160
+Mettiamo in votazione l'emendamento 4.2.
+
+1054
+00:49:01,920 --> 00:49:05,960
+Chi è favorevole rimanga subito. Che il
+
+1055
+00:49:03,160 --> 00:49:09,160
+controllo si alzi. È approvato. A questo
+
+1056
+00:49:05,960 --> 00:49:11,000
+punto andiamo a votare l'articolo 4 così
+
+1057
+00:49:09,160 --> 00:49:12,720
+come emendato. Chi è favorevole rimanga
+
+1058
+00:49:11,000 --> 00:49:15,799
+seduto. Chi è contrario si alzi.
+
+1059
+00:49:12,720 --> 00:49:17,359
+L'articolo 4 è approvato. Andiamo
+
+1060
+00:49:15,799 --> 00:49:19,000
+all'emendamento
+
+1061
+00:49:17,359 --> 00:49:21,040
+5.2
+
+1062
+00:49:19,000 --> 00:49:24,040
+due dell'onorevole
+
+1063
+00:49:21,040 --> 00:49:26,839
+la Vardera che onorevole ahimè è
+
+1064
+00:49:24,040 --> 00:49:28,640
+inammissibile perché ho un parere
+
+1065
+00:49:26,839 --> 00:49:30,559
+contrario della commissione bilancio
+
+1066
+00:49:28,640 --> 00:49:34,599
+perché era stato inviato in commissione
+
+1067
+00:49:30,559 --> 00:49:37,119
+bilancio e ho il parere contrario della
+
+1068
+00:49:34,599 --> 00:49:40,079
+commissione magari lo potrà riproporre
+
+1069
+00:49:37,119 --> 00:49:43,119
+successivamente in variazione o in una
+
+1070
+00:49:40,079 --> 00:49:44,839
+legge di fin vuole intervenire onore
+
+1071
+00:49:43,119 --> 00:49:49,400
+vuole la guardare. Prego.
+
+1072
+00:49:44,839 --> 00:49:52,200
+Niente. Allora, questa storia
+
+1073
+00:49:49,400 --> 00:49:55,480
+continua ad essere la rappresentazione
+
+1074
+00:49:52,200 --> 00:49:58,520
+plastica del maltorto che il nostro
+
+1075
+00:49:55,480 --> 00:50:01,160
+gruppo parlamentare sta subendo, essendo
+
+1076
+00:49:58,520 --> 00:50:04,680
+escluso dalla commissione bilancio.
+
+1077
+00:50:01,160 --> 00:50:06,960
+Nessuno dei colleghi presenti in
+
+1078
+00:50:04,680 --> 00:50:10,599
+commissione bilancio hanno potuto
+
+1079
+00:50:06,960 --> 00:50:12,799
+difendere un nostro emendamento.
+
+1080
+00:50:10,599 --> 00:50:17,200
+Andate bene, presidente, perché fate
+
+1081
+00:50:12,799 --> 00:50:20,359
+orecchie da mercanti da 48 ore e lo fate
+
+1082
+00:50:17,200 --> 00:50:22,880
+da luglio. Da luglio voi sostanzialmente
+
+1083
+00:50:20,359 --> 00:50:26,680
+state impedendo al nostro gruppo
+
+1084
+00:50:22,880 --> 00:50:29,400
+parlamentare di esercitare il ruolo che
+
+1085
+00:50:26,680 --> 00:50:31,319
+gli spetta di diritto in quanto tutti i
+
+1086
+00:50:29,400 --> 00:50:33,440
+gruppi parlamentari devono essere
+
+1087
+00:50:31,319 --> 00:50:35,440
+degnamente rappresentati in modo
+
+1088
+00:50:33,440 --> 00:50:38,520
+proporzionale.
+
+1089
+00:50:35,440 --> 00:50:41,040
+Presidente che nelle prossime ore non è
+
+1090
+00:50:38,520 --> 00:50:43,839
+una minaccia, è una constatazione. Siamo
+
+1091
+00:50:41,040 --> 00:50:45,960
+pronti ad azioni eclatanti, quindi noi
+
+1092
+00:50:43,839 --> 00:50:48,720
+non ci fermiamo perché la bocciatura di
+
+1093
+00:50:45,960 --> 00:50:50,960
+questa di questo emendamento che non
+
+1094
+00:50:48,720 --> 00:50:52,559
+abbiamo potuto difendere in commissione
+
+1095
+00:50:50,960 --> 00:50:55,119
+perché non c'eravamo in commissione,
+
+1096
+00:50:52,559 --> 00:50:57,400
+anzi ringrazio pubblicamente l'onorevole
+
+1097
+00:50:55,119 --> 00:50:59,599
+Caronia che quantomeno il buon senso ha
+
+1098
+00:50:57,400 --> 00:51:01,640
+avuto la possibilità di difenderlo. Ce
+
+1099
+00:50:59,599 --> 00:51:03,480
+l'hanno bocciato il resto dei colleghi.
+
+1100
+00:51:01,640 --> 00:51:05,480
+inspiegabile. C'è una storia che ha a
+
+1101
+00:51:03,480 --> 00:51:07,680
+che fare con un emendamento che dà la
+
+1102
+00:51:05,480 --> 00:51:09,240
+possibilità di potere abbattere le
+
+1103
+00:51:07,680 --> 00:51:11,079
+barriere architettoniche. Era di di
+
+1104
+00:51:09,240 --> 00:51:12,520
+quello si parlava o comunque, in modo
+
+1105
+00:51:11,079 --> 00:51:14,359
+particolare, chiedo scusa, cioè questo
+
+1106
+00:51:12,520 --> 00:51:15,839
+il tema è comunque non c'è stata data
+
+1107
+00:51:14,359 --> 00:51:17,640
+possibilità di potere partecipare, non
+
+1108
+00:51:15,839 --> 00:51:19,640
+ci siamo in commissione bilancio,
+
+1109
+00:51:17,640 --> 00:51:21,240
+continuiamo con questa pantomima e
+
+1110
+00:51:19,640 --> 00:51:23,280
+vediamo fin dove dobbiamo arrivare. Noi
+
+1111
+00:51:21,240 --> 00:51:26,119
+siamo pronti alla guerra,
+
+1112
+00:51:23,280 --> 00:51:28,720
+democraticamente parlando.
+
+1113
+00:51:26,119 --> 00:51:31,760
+Onorevole Lavardera, io l'ho ascoltata
+
+1114
+00:51:28,720 --> 00:51:34,920
+anche ieri su questo tema. Ovviamente le
+
+1115
+00:51:31,760 --> 00:51:37,839
+sa che questa presidenza è assolutamente
+
+1116
+00:51:34,920 --> 00:51:39,960
+una presidenza che ascolta e cerca di
+
+1117
+00:51:37,839 --> 00:51:43,680
+venire incontro a tutti i colleghi e
+
+1118
+00:51:39,960 --> 00:51:45,520
+tutti i gruppi. Però le devo ricordare
+
+1119
+00:51:43,680 --> 00:51:49,000
+che il gruppo controcorrente si è
+
+1120
+00:51:45,520 --> 00:51:52,240
+costituito a legislatura vigente e si è
+
+1121
+00:51:49,000 --> 00:51:55,880
+costituito un paio di mesi fa. Lei sa
+
+1122
+00:51:52,240 --> 00:51:58,440
+benissimo che il regolamento dice che i
+
+1123
+00:51:55,880 --> 00:52:01,640
+gruppi e che le commissioni possono
+
+1124
+00:51:58,440 --> 00:52:04,760
+essere modificate, le commissioni
+
+1125
+00:52:01,640 --> 00:52:08,040
+permanenti, a metà legislatura se il
+
+1126
+00:52:04,760 --> 00:52:11,680
+presidente decide di modificare Eh sì,
+
+1127
+00:52:08,040 --> 00:52:15,079
+fatemi finire, fatemi finire, fatemi
+
+1128
+00:52:11,680 --> 00:52:21,559
+finire, fatemi finire,
+
+1129
+00:52:15,079 --> 00:52:24,160
+fatemi, fatemi Io io lo ascol
+
+1130
+00:52:21,559 --> 00:52:28,160
+Io
+
+1131
+00:52:24,160 --> 00:52:30,319
+io io credo che dovreste
+
+1132
+00:52:28,160 --> 00:52:32,520
+io credo che dovreste ascoltare come io
+
+1133
+00:52:30,319 --> 00:52:35,119
+ho ascoltato voi e come tutta l'aula vi
+
+1134
+00:52:32,520 --> 00:52:37,760
+ascolta. ogni qualvolta fate gli
+
+1135
+00:52:35,119 --> 00:52:39,359
+interventi. Questa legislatura ad oggi
+
+1136
+00:52:37,760 --> 00:52:41,480
+non c'è stata non è stata fatta una
+
+1137
+00:52:39,359 --> 00:52:43,559
+modifica dei componenti delle
+
+1138
+00:52:41,480 --> 00:52:45,960
+commissione, tant'è che le ho detto
+
+1139
+00:52:43,559 --> 00:52:48,440
+anche la scorsa seduta d'aula che ci
+
+1140
+00:52:45,960 --> 00:52:50,880
+sono alcuni gruppi parlamentari che sono
+
+1141
+00:52:48,440 --> 00:52:53,240
+stati costituiti che ad oggi non sono
+
+1142
+00:52:50,880 --> 00:52:56,400
+rappresentati in commissione bilancio.
+
+1143
+00:52:53,240 --> 00:52:58,880
+mi pare di capire che c'è mi pare di
+
+1144
+00:52:56,400 --> 00:53:02,200
+capire che c'è da parte di questa
+
+1145
+00:52:58,880 --> 00:53:05,240
+presidenza la massima disponibilità a
+
+1146
+00:53:02,200 --> 00:53:07,480
+trovare una soluzione. Però dico, non è
+
+1147
+00:53:05,240 --> 00:53:09,920
+che possiamo non è che possiamo,
+
+1148
+00:53:07,480 --> 00:53:11,400
+diciamo, in ogni seduta parlamentare
+
+1149
+00:53:09,920 --> 00:53:14,559
+ricordare le stesse cose. c'è la
+
+1150
+00:53:11,400 --> 00:53:16,520
+disponibilità, vedremo di trovare, sarà
+
+1151
+00:53:14,559 --> 00:53:21,400
+poi la presidenza dell'assemblea a
+
+1152
+00:53:16,520 --> 00:53:23,440
+decidere se fare una modifica delle
+
+1153
+00:53:21,400 --> 00:53:26,079
+commissioni permanenti. Onorevole
+
+1154
+00:53:23,440 --> 00:53:28,319
+lavardè, quindi l'emendamento è
+
+1155
+00:53:26,079 --> 00:53:31,280
+inammissibile
+
+1156
+00:53:28,319 --> 00:53:32,760
+per motivi tecnici
+
+1157
+00:53:31,280 --> 00:53:35,359
+e non c'è un discorso, diciamo, di
+
+1158
+00:53:32,760 --> 00:53:37,520
+copertura da un punto di vista di
+
+1159
+00:53:35,359 --> 00:53:39,960
+commissione e bilancio, è un motivo
+
+1160
+00:53:37,520 --> 00:53:42,880
+tecnico. Quindi
+
+1161
+00:53:39,960 --> 00:53:47,280
+andiamo al 5.3
+
+1162
+00:53:42,880 --> 00:53:47,280
+che è un emendamento della commissione.
+
+1163
+00:53:49,520 --> 00:53:55,240
+Il sub a quale emendamento era onorevole
+
+1164
+00:53:51,359 --> 00:53:59,680
+campo? Al 5.2. È inammissibile. Se è
+
+1165
+00:53:55,240 --> 00:53:59,680
+inammissibile. Prego.
+
+1166
+00:53:59,760 --> 00:54:08,240
+Grazie, presidente. Allora, se a Palermo
+
+1167
+00:54:02,839 --> 00:54:10,880
+è interdetto l'accesso al portatore ehm
+
+1168
+00:54:08,240 --> 00:54:13,720
+diversamente abile con la carrozzina, a
+
+1169
+00:54:10,880 --> 00:54:17,480
+Modica si fa parkour per visitare le
+
+1170
+00:54:13,720 --> 00:54:20,520
+proprie tombe, tra transenne, divieti,
+
+1171
+00:54:17,480 --> 00:54:24,119
+cemento crollato, ci sono 2000 tombe in
+
+1172
+00:54:20,520 --> 00:54:25,880
+questa situazione. Io capisco ora che
+
+1173
+00:54:24,119 --> 00:54:28,400
+l'emendamento è inammissibile, però mi
+
+1174
+00:54:25,880 --> 00:54:30,520
+piacerebbe, visto che comunque non è
+
+1175
+00:54:28,400 --> 00:54:33,000
+passato dalla commissione bilancio, però
+
+1176
+00:54:30,520 --> 00:54:36,760
+mi piacerebbe che il governo prendesse
+
+1177
+00:54:33,000 --> 00:54:39,240
+un impegno su questa cosa, perché noi è
+
+1178
+00:54:36,760 --> 00:54:42,240
+da più di 10 anni che viviamo questo
+
+1179
+00:54:39,240 --> 00:54:45,079
+disagio e anche se le tombe non sono
+
+1180
+00:54:42,240 --> 00:54:47,559
+monumentali, ci sono tante tombe di
+
+1181
+00:54:45,079 --> 00:54:50,200
+persone a cui è stato vietato pure
+
+1182
+00:54:47,559 --> 00:54:52,799
+piangere, ma la regione può vietare le
+
+1183
+00:54:50,200 --> 00:54:56,000
+lacrime, non è giusto. È una cosa
+
+1184
+00:54:52,799 --> 00:54:58,079
+inammissibile. Questa è inammissibile. E
+
+1185
+00:54:56,000 --> 00:55:00,440
+la situazione di Modica è la più grave,
+
+1186
+00:54:58,079 --> 00:55:03,319
+lo ripeto, ma in Sicilia ce ne sono
+
+1187
+00:55:00,440 --> 00:55:06,640
+tanti comuni così. C'è Catania, c'è
+
+1188
+00:55:03,319 --> 00:55:09,079
+Siracusa. A Siracusa la luce non c'era.
+
+1189
+00:55:06,640 --> 00:55:12,359
+Due settimane senza luce, un sacco di
+
+1190
+00:55:09,079 --> 00:55:14,680
+salme che non avevano l'illuminazione.
+
+1191
+00:55:12,359 --> 00:55:17,400
+Poi abbiamo tutte le tombe che non
+
+1192
+00:55:14,680 --> 00:55:19,319
+possono essere fruite in tanti altri
+
+1193
+00:55:17,400 --> 00:55:21,400
+piccoli comuni dell'altra parte della
+
+1194
+00:55:19,319 --> 00:55:24,280
+Sicilia. Allora, io vorrei che il
+
+1195
+00:55:21,400 --> 00:55:26,920
+governo quantomeno si esprimesse perché
+
+1196
+00:55:24,280 --> 00:55:29,920
+noi questa situazione la dobbiamo
+
+1197
+00:55:26,920 --> 00:55:29,920
+risolvere.
+
+1198
+00:55:32,520 --> 00:55:37,480
+Andiamo all'emendamento
+
+1199
+00:55:34,960 --> 00:55:39,079
+5.3 e che è un emendamento di
+
+1200
+00:55:37,480 --> 00:55:41,160
+commissione
+
+1201
+00:55:39,079 --> 00:55:42,880
+e parere del governo
+
+1202
+00:55:41,160 --> 00:55:44,039
+favorevole.
+
+1203
+00:55:42,880 --> 00:55:46,000
+Parere della commissione
+
+1204
+00:55:44,039 --> 00:55:47,319
+favorevole.
+
+1205
+00:55:46,000 --> 00:55:49,720
+Bene, mettiamo in votazione
+
+1206
+00:55:47,319 --> 00:55:51,520
+l'emendamento 5.3 col parere favorevole
+
+1207
+00:55:49,720 --> 00:55:53,119
+di governo e commissione che è
+
+1208
+00:55:51,520 --> 00:55:56,640
+favorevole rimanga suto, che control si
+
+1209
+00:55:53,119 --> 00:55:59,799
+alzi e approvato.
+
+1210
+00:55:56,640 --> 00:56:02,319
+Andiamo all'emendamento 5.1
+
+1211
+00:55:59,799 --> 00:56:04,319
+dell'onorevole lavardera. Devo votare
+
+1212
+00:56:02,319 --> 00:56:05,839
+solo nelle parole nel rispetto delle
+
+1213
+00:56:04,319 --> 00:56:07,079
+caratteristiche storiche artistiche e
+
+1214
+00:56:05,839 --> 00:56:07,680
+monumentali perché
+
+1215
+00:56:07,079 --> 00:56:09,839
+presidente
+
+1216
+00:56:07,680 --> 00:56:13,000
+onorevole un attimo aspetti di questo
+
+1217
+00:56:09,839 --> 00:56:15,039
+emendamento io posso far votare solo la
+
+1218
+00:56:13,000 --> 00:56:17,400
+parte nel rispetto delle caratteristiche
+
+1219
+00:56:15,039 --> 00:56:19,039
+storicoartistiche e monumentali dei
+
+1220
+00:56:17,400 --> 00:56:20,280
+luoghiesto è già contenuto nel testo
+
+1221
+00:56:19,039 --> 00:56:22,480
+perché il resto già è contenuto nel
+
+1222
+00:56:20,280 --> 00:56:26,240
+testo. Prego, onorevole. Sì, presidente.
+
+1223
+00:56:22,480 --> 00:56:27,799
+Allora, io le ricordo
+
+1224
+00:56:26,240 --> 00:56:31,680
+che
+
+1225
+00:56:27,799 --> 00:56:34,039
+assimilare e dire questa presidenza
+
+1226
+00:56:31,680 --> 00:56:35,920
+inglobbando la storia della presidenza
+
+1227
+00:56:34,039 --> 00:56:37,760
+di Galbagno, la invito, siccome lei è
+
+1228
+00:56:35,920 --> 00:56:39,640
+una persona per bene che stimo
+
+1229
+00:56:37,760 --> 00:56:41,960
+politicamente, a non a non assimilare
+
+1230
+00:56:39,640 --> 00:56:44,039
+questa presidenza alla presidenza di
+
+1231
+00:56:41,960 --> 00:56:46,240
+Calvagno, perché grazie a Dio la sua
+
+1232
+00:56:44,039 --> 00:56:48,520
+presidenza rispetto a quella di Calvagno
+
+1233
+00:56:46,240 --> 00:56:50,440
+è assolutamente, diciamo, in due
+
+1234
+00:56:48,520 --> 00:56:53,839
+direzioni opposte. potrei fare mille
+
+1235
+00:56:50,440 --> 00:56:56,920
+differenze. Se lei però entra nel merito
+
+1236
+00:56:53,839 --> 00:56:59,799
+di una roba che, ripeto, è guarantigie
+
+1237
+00:56:56,920 --> 00:57:02,000
+costituzionali delle minoranze di tutti
+
+1238
+00:56:59,799 --> 00:57:03,920
+i parlamenti, io le prego di non
+
+1239
+00:57:02,000 --> 00:57:06,319
+infilarsi in questo merito. Lasci che
+
+1240
+00:57:03,920 --> 00:57:08,559
+sia la presidenza di Galvagno a
+
+1241
+00:57:06,319 --> 00:57:11,119
+continuare a impedire un un diritto
+
+1242
+00:57:08,559 --> 00:57:13,039
+parlamentare, perché lei ricordo che lei
+
+1243
+00:57:11,119 --> 00:57:15,799
+come vicepresidente vicario è anche
+
+1244
+00:57:13,039 --> 00:57:17,559
+rappresentante delle minoranze. è stato
+
+1245
+00:57:15,799 --> 00:57:21,000
+votato, lei è in consiglio di presidenza
+
+1246
+00:57:17,559 --> 00:57:23,680
+anche per garantire le minoranze e il
+
+1247
+00:57:21,000 --> 00:57:25,079
+fatto che la Lantieri ieri ci fa parlare
+
+1248
+00:57:23,680 --> 00:57:26,880
+e il vicepresidente che dovrebbe
+
+1249
+00:57:25,079 --> 00:57:28,400
+garantire le minoranze non garantisce le
+
+1250
+00:57:26,880 --> 00:57:30,680
+minoranze. Ma com'è finita sta storia
+
+1251
+00:57:28,400 --> 00:57:33,000
+qua? Io mi mi sto confondendo. Allora,
+
+1252
+00:57:30,680 --> 00:57:35,280
+siamo seri. Siccome conosco la sua
+
+1253
+00:57:33,000 --> 00:57:37,640
+bontà, la sua capacità politica, il suo
+
+1254
+00:57:35,280 --> 00:57:39,240
+essere rigoroso sotto tutti i punti di
+
+1255
+00:57:37,640 --> 00:57:41,799
+vista, perché la sua presidenza è
+
+1256
+00:57:39,240 --> 00:57:44,319
+eccezionale, le do un consiglio e le
+
+1257
+00:57:41,799 --> 00:57:46,520
+dico "Non metta in fila e dica questa
+
+1258
+00:57:44,319 --> 00:57:48,839
+presidenza". assimolandola a quella di
+
+1259
+00:57:46,520 --> 00:57:50,480
+Calvagno, perché grazie a Dio la sua
+
+1260
+00:57:48,839 --> 00:57:52,440
+presidenza rispetto a quella di Calvagno
+
+1261
+00:57:50,480 --> 00:57:54,280
+è lontana di luce. Quindi noi le
+
+1262
+00:57:52,440 --> 00:57:57,160
+chiediamo sommessamente, in maniera
+
+1263
+00:57:54,280 --> 00:57:59,400
+serena e tranquilla, di stare dalla
+
+1264
+00:57:57,160 --> 00:58:01,920
+parte di queste minoranze che stanno
+
+1265
+00:57:59,400 --> 00:58:03,839
+subendo un maltorto e che in questo
+
+1266
+00:58:01,920 --> 00:58:07,280
+momento è il regolamento con una missiva
+
+1267
+00:58:03,839 --> 00:58:09,480
+puntuale, precisa, delineata, con
+
+1268
+00:58:07,280 --> 00:58:12,160
+attività di studi anche giuridici
+
+1269
+00:58:09,480 --> 00:58:15,160
+presentata nostra presidente 3 mesi e
+
+1270
+00:58:12,160 --> 00:58:18,240
+mezzo fa, è stata inevasa, non
+
+1271
+00:58:15,160 --> 00:58:19,559
+ascoltata, per cui sono convinto che
+
+1272
+00:58:18,240 --> 00:58:22,000
+magari lei non conosce
+
+1273
+00:58:19,559 --> 00:58:23,480
+approfonditamente. Lasci star, la prego.
+
+1274
+00:58:22,000 --> 00:58:25,359
+Lei non conosce la vicenda perché non
+
+1275
+00:58:23,480 --> 00:58:26,400
+l'abbiamo mandata a lei la la missiva,
+
+1276
+00:58:25,359 --> 00:58:28,799
+l'abbiamo mandata al presidente
+
+1277
+00:58:26,400 --> 00:58:30,640
+Galvagno, quindi sono sicuro che se lei
+
+1278
+00:58:28,799 --> 00:58:33,599
+dovesse leggere quella missiva che gli
+
+1279
+00:58:30,640 --> 00:58:35,720
+manderò tra poco, sono convinto che più
+
+1280
+00:58:33,599 --> 00:58:38,079
+tardi sarà insieme a noi a protestare.
+
+1281
+00:58:35,720 --> 00:58:41,160
+Io sono convinto perché su questa
+
+1282
+00:58:38,079 --> 00:58:43,760
+vicenda non ne va il nostro gruppo, quel
+
+1283
+00:58:41,160 --> 00:58:45,720
+gruppo, l'altro gruppo, ne va della
+
+1284
+00:58:43,760 --> 00:58:47,960
+credibilità della democrazia, delle
+
+1285
+00:58:45,720 --> 00:58:50,319
+istituzioni, convinto che lei ci crede
+
+1286
+00:58:47,960 --> 00:58:52,920
+molto più di me e che rappresenta
+
+1287
+00:58:50,319 --> 00:58:54,599
+convintamente anche una parte di
+
+1288
+00:58:52,920 --> 00:58:56,240
+opposizione perché le vicepresidente
+
+1289
+00:58:54,599 --> 00:58:58,920
+vicario eletto anche dell'opposizione,
+
+1290
+00:58:56,240 --> 00:59:00,720
+sono sicuro che non prenderà la
+
+1291
+00:58:58,920 --> 00:59:04,240
+posizione del presidente Calbagna. La
+
+1292
+00:59:00,720 --> 00:59:06,400
+ringrazio e torno al mio posto.
+
+1293
+00:59:04,240 --> 00:59:10,079
+Io, onorevole Lavardera, a parte che
+
+1294
+00:59:06,400 --> 00:59:12,480
+l'ho fatta intervenire sul tema,
+
+1295
+00:59:10,079 --> 00:59:14,720
+sia sull'emendamento che adesso su
+
+1296
+00:59:12,480 --> 00:59:17,319
+quest'altro emendamento, io le ho solo
+
+1297
+00:59:14,720 --> 00:59:20,400
+ricordato che all'interno di questa
+
+1298
+00:59:17,319 --> 00:59:22,960
+legislatura ci sono stati dei passaggi
+
+1299
+00:59:20,400 --> 00:59:25,400
+da parte di alcuni colleghi parlamentari
+
+1300
+00:59:22,960 --> 00:59:28,760
+legittimi che hanno permesso la
+
+1301
+00:59:25,400 --> 00:59:30,880
+formazione di forze politiche e le ho
+
+1302
+00:59:28,760 --> 00:59:33,640
+detto che in commissione bilancio, oltre
+
+1303
+00:59:30,880 --> 00:59:35,680
+al gruppo controcorrente c'è il gruppo
+
+1304
+00:59:33,640 --> 00:59:38,680
+della Lega che ad oggi non è
+
+1305
+00:59:35,680 --> 00:59:38,680
+rappresentata.
+
+1306
+00:59:38,920 --> 00:59:47,039
+Eh sì. Eh beh. Sì, ok, ci sono. Dico sì,
+
+1307
+00:59:44,359 --> 00:59:48,680
+dico, però dico, come non siete, come
+
+1308
+00:59:47,039 --> 00:59:51,119
+non è rappresentato Controcorrente, non
+
+1309
+00:59:48,680 --> 00:59:54,240
+è rappresentata nemmeno la Lega e io
+
+1310
+00:59:51,119 --> 00:59:56,880
+sono convinto che la presidenza la
+
+1311
+00:59:54,240 --> 00:59:59,680
+presidenza Galvagno, poi onorevole
+
+1312
+00:59:56,880 --> 01:00:01,920
+Lavardea, la presidenza è unica, sono
+
+1313
+00:59:59,680 --> 01:00:06,000
+convinto che rispetto alla richiesta che
+
+1314
+01:00:01,920 --> 01:00:10,400
+è stata fatta si troverà una soluzione
+
+1315
+01:00:06,000 --> 01:00:10,400
+sull'emendamento 5.1.
+
+1316
+01:00:10,839 --> 01:00:14,760
+Il parere del governo.
+
+1317
+01:00:15,160 --> 01:00:18,640
+Sì, il parere del governo, assessore,
+
+1318
+01:00:17,920 --> 01:00:21,480
+solo
+
+1319
+01:00:18,640 --> 01:00:24,200
+solo per la parte quella del
+
+1320
+01:00:21,480 --> 01:00:25,760
+Sì. Caratesi storico storico artistica e
+
+1321
+01:00:24,200 --> 01:00:28,760
+monumentali dai luoghi. Parere
+
+1322
+01:00:25,760 --> 01:00:31,400
+favorevole. Parere della commissione
+
+1323
+01:00:28,760 --> 01:00:33,400
+favorevole. Col parere favorevole del
+
+1324
+01:00:31,400 --> 01:00:36,480
+governo e della commissione metto in
+
+1325
+01:00:33,400 --> 01:00:38,200
+votazione la parte che, ripeto, nel
+
+1326
+01:00:36,480 --> 01:00:40,920
+rispetto delle caratteristiche storiche
+
+1327
+01:00:38,200 --> 01:00:43,039
+artistiche e monumentale dei luoghi.
+
+1328
+01:00:40,920 --> 01:00:45,440
+Quindi la parte una parte
+
+1329
+01:00:43,039 --> 01:00:47,760
+dell'emendamento 5.1. Chi è favorevole
+
+1330
+01:00:45,440 --> 01:00:49,559
+rimanga seduta, che è contrario si alzi.
+
+1331
+01:00:47,760 --> 01:00:51,319
+È approvato
+
+1332
+01:00:49,559 --> 01:00:54,559
+l'articolo 5.
+
+1333
+01:00:51,319 --> 01:00:56,440
+Votiamo l'articolo 5 così come emendato.
+
+1334
+01:00:54,559 --> 01:01:01,359
+Chi è favorevole rimanga seduto, chi è
+
+1335
+01:00:56,440 --> 01:01:04,880
+contrario si alzi. È approvato.
+
+1336
+01:01:01,359 --> 01:01:07,680
+Andiamo all'articolo 6. C'è
+
+1337
+01:01:04,880 --> 01:01:12,160
+l'emendamento 6.1. Onorevole Lavardera e
+
+1338
+01:01:07,680 --> 01:01:14,119
+a sua firma lo vuole spiegare il 6.1
+
+1339
+01:01:12,160 --> 01:01:17,920
+stesso accessibilità
+
+1340
+01:01:14,119 --> 01:01:19,119
+legato all'accessibilità. Lo leggo,
+
+1341
+01:01:17,920 --> 01:01:20,880
+penso che sia sempre legato
+
+1342
+01:01:19,119 --> 01:01:26,160
+all'accessibilità
+
+1343
+01:01:20,880 --> 01:01:26,160
+e quindi chiedo il parere del governo
+
+1344
+01:01:26,920 --> 01:01:31,400
+della commissione. È favorevole del
+
+1345
+01:01:28,400 --> 01:01:31,400
+governo
+
+1346
+01:01:32,440 --> 01:01:35,280
+e
+
+1347
+01:01:32,920 --> 01:01:37,319
+governo favorevole.
+
+1348
+01:01:35,280 --> 01:01:39,240
+Allora, pongo in votazione col parere
+
+1349
+01:01:37,319 --> 01:01:42,880
+favorevole del governo e della
+
+1350
+01:01:39,240 --> 01:01:44,480
+commissione l'emendamento 6.1. Chi è
+
+1351
+01:01:42,880 --> 01:01:47,400
+favorevole rimanga seduto. Chi è
+
+1352
+01:01:44,480 --> 01:01:49,480
+contrario si alzi. È approvato
+
+1353
+01:01:47,400 --> 01:01:52,400
+l'emendamento 6.1. Andiamo
+
+1354
+01:01:49,480 --> 01:01:54,240
+all'emendamento 6.2
+
+1355
+01:01:52,400 --> 01:01:57,240
+che è della commissione. Parere del
+
+1356
+01:01:54,240 --> 01:01:57,240
+governo.
+
+1357
+01:01:57,640 --> 01:02:01,760
+Parere favorevole.
+
+1358
+01:01:59,760 --> 01:02:05,760
+Favorevole pure della commissione. Metto
+
+1359
+01:02:01,760 --> 01:02:07,400
+in in votazione l'emendamento 6.2.
+
+1360
+01:02:05,760 --> 01:02:07,920
+Onorevole Canina, mi raccomando.
+
+1361
+01:02:07,400 --> 01:02:09,680
+Favorevole.
+
+1362
+01:02:07,920 --> 01:02:11,240
+Favorevole. Sì. Michele
+
+1363
+01:02:09,680 --> 01:02:13,400
+chi è favorevole rimanga suo che il
+
+1364
+01:02:11,240 --> 01:02:15,119
+controllo si alzi. L'emendamento 6.2 è
+
+1365
+01:02:13,400 --> 01:02:17,880
+approvato.
+
+1366
+01:02:15,119 --> 01:02:20,880
+Andiamo a questo punto a votare
+
+1367
+01:02:17,880 --> 01:02:22,680
+l'articolo 6, così come emendato. Chi è
+
+1368
+01:02:20,880 --> 01:02:25,039
+favorevole rimanga seduto, chi è
+
+1369
+01:02:22,680 --> 01:02:28,960
+contrario si alzi. L'articolo 6 è
+
+1370
+01:02:25,039 --> 01:02:28,960
+approvato. Ci rimane
+
+1371
+01:02:44,559 --> 01:02:48,920
+Andiamo all'articolo Andiamo
+
+1372
+01:02:46,000 --> 01:02:50,720
+all'articolo 7.
+
+1373
+01:02:48,920 --> 01:02:52,599
+Non ci sono emendamenti. Chi è
+
+1374
+01:02:50,720 --> 01:02:55,799
+favorevole rimanga seduto, chi è
+
+1375
+01:02:52,599 --> 01:02:59,000
+contrario si alzi. L'articolo 7
+
+1376
+01:02:55,799 --> 01:02:59,000
+è approvato.
+
+1377
+01:02:59,119 --> 01:03:03,559
+Ah, prego, prego. Onorevole Giambona.
+
+1378
+01:03:01,039 --> 01:03:05,319
+Sono è la norma finanziaria. Prego.
+
+1379
+01:03:03,559 --> 01:03:09,079
+No, appunto perché siamo sulla norma
+
+1380
+01:03:05,319 --> 01:03:12,000
+finanziaria e ho la possibilità di avere
+
+1381
+01:03:09,079 --> 01:03:14,680
+e un minimo di confronto con con il
+
+1382
+01:03:12,000 --> 01:03:17,279
+governo e con l'assessore Alamo, il
+
+1383
+01:03:14,680 --> 01:03:19,520
+quale si renderà conto che la dotazione
+
+1384
+01:03:17,279 --> 01:03:23,200
+che noi prevediamo per questo disegno di
+
+1385
+01:03:19,520 --> 01:03:27,520
+legge, diciamo, è simbolica, mettiamola
+
+1386
+01:03:23,200 --> 01:03:30,079
+così, sono circa €100.000, €105.000,
+
+1387
+01:03:27,520 --> 01:03:31,920
+definirei apripista, ecco, rispetto a
+
+1388
+01:03:30,079 --> 01:03:35,240
+quello che è appunto l'apertura di un
+
+1389
+01:03:31,920 --> 01:03:37,440
+capitolo volto poi a prevedere e mi
+
+1390
+01:03:35,240 --> 01:03:39,200
+immagino io una serie di interventi di
+
+1391
+01:03:37,440 --> 01:03:41,480
+ricognizione, riqualificazione e
+
+1392
+01:03:39,200 --> 01:03:44,079
+attenzione per i nostri cimiteri
+
+1393
+01:03:41,480 --> 01:03:45,520
+monumentali. Allora ne approfitto,
+
+1394
+01:03:44,079 --> 01:03:49,119
+presidente, se lei me ne dà appunto
+
+1395
+01:03:45,520 --> 01:03:51,440
+l'occasione, per chiedere al governo
+
+1396
+01:03:49,119 --> 01:03:55,079
+quali sono le intenzioni a partire dalla
+
+1397
+01:03:51,440 --> 01:03:57,680
+prossima finanziaria regionale e se,
+
+1398
+01:03:55,079 --> 01:03:59,319
+appunto, c'è la volontà di cominciare a
+
+1399
+01:03:57,680 --> 01:04:01,799
+entrare nel merito rispetto a quello che
+
+1400
+01:03:59,319 --> 01:04:03,079
+è l'impegno che questo Parlamento sta
+
+1401
+01:04:01,799 --> 01:04:06,240
+prendendo con tutte le comunità
+
+1402
+01:04:03,079 --> 01:04:08,200
+siciliane, ovvero di far sì che questi
+
+1403
+01:04:06,240 --> 01:04:09,960
+cimiteri monumentali comincino
+
+1404
+01:04:08,200 --> 01:04:13,520
+effettivamente ad essere valorizzati.
+
+1405
+01:04:09,960 --> 01:04:15,680
+Allora, noi oggi stanziamo €105.000,
+
+1406
+01:04:13,520 --> 01:04:18,400
+lo diciamo il governo ci dà
+
+1407
+01:04:15,680 --> 01:04:21,319
+rassicurazioni che questa norma e non
+
+1408
+01:04:18,400 --> 01:04:24,039
+rimarrà. Purtroppo, devo dire, come
+
+1409
+01:04:21,319 --> 01:04:25,880
+tante altre norme, una norma spot e una
+
+1410
+01:04:24,039 --> 01:04:28,279
+norma inattuata, perché per attuare le
+
+1411
+01:04:25,880 --> 01:04:30,400
+norme e specialmente in questo ambito
+
+1412
+01:04:28,279 --> 01:04:32,279
+c'è necessità che vengano appostate
+
+1413
+01:04:30,400 --> 01:04:34,760
+delle risorse. Quindi chiedo al governo,
+
+1414
+01:04:32,279 --> 01:04:38,039
+se c'è la volontà politica anche nella
+
+1415
+01:04:34,760 --> 01:04:40,359
+prossima finanziaria regionale di
+
+1416
+01:04:38,039 --> 01:04:43,520
+appunto valorizzare il capitolo stesso e
+
+1417
+01:04:40,359 --> 01:04:46,000
+garantire interventi economici più
+
+1418
+01:04:43,520 --> 01:04:49,480
+sostanziosi per dare seguito alla norma
+
+1419
+01:04:46,000 --> 01:04:49,480
+stessa. Grazie.
+
+1420
+01:04:53,240 --> 01:04:58,400
+Va bene, onorevole Giambona il governo
+
+1421
+01:04:55,799 --> 01:05:02,640
+ha ascoltato e sono convinto che la sua
+
+1422
+01:04:58,400 --> 01:05:04,680
+richiesta verrà, spero, accolta e
+
+1423
+01:05:02,640 --> 01:05:07,799
+quantomeno valutata.
+
+1424
+01:05:04,680 --> 01:05:10,039
+Colleghi, andiamo all'articolo 8.
+
+1425
+01:05:07,799 --> 01:05:13,119
+Non ci sono emendamenti e metto in
+
+1426
+01:05:10,039 --> 01:05:15,839
+votazione l'articolo 8. Chi è favorevole
+
+1427
+01:05:13,119 --> 01:05:18,880
+rimanga seduto, chi è contrario si alzi.
+
+1428
+01:05:15,839 --> 01:05:21,799
+L'articolo 8 è approvato.
+
+1429
+01:05:18,880 --> 01:05:24,359
+Articolo 9. Anche qui eh ci sono le
+
+1430
+01:05:21,799 --> 01:05:27,279
+tabelle. Vabbè,
+
+1431
+01:05:24,359 --> 01:05:28,880
+l'articolo 8 ha allegato una tabella che
+
+1432
+01:05:27,279 --> 01:05:31,720
+trovate
+
+1433
+01:05:28,880 --> 01:05:34,160
+all'interno del
+
+1434
+01:05:31,720 --> 01:05:35,480
+del vostro tablet ed è ovviamente
+
+1435
+01:05:34,160 --> 01:05:39,680
+approvato con l'approvazione
+
+1436
+01:05:35,480 --> 01:05:41,440
+dell'articolo 8. Andiamo all'articolo 9.
+
+1437
+01:05:39,680 --> 01:05:43,839
+Non ci sono emendamenti ovviamente
+
+1438
+01:05:41,440 --> 01:05:46,079
+perché la norma finale. Chi è favorevole
+
+1439
+01:05:43,839 --> 01:05:50,160
+rimanga seduto. Chi è contrario?
+
+1440
+01:05:46,079 --> 01:05:52,839
+si alzi l'articolo 9 è approvato. A
+
+1441
+01:05:50,160 --> 01:05:56,599
+questo punto, colleghi, abbiamo finito
+
+1442
+01:05:52,839 --> 01:05:58,839
+la trattazione degli emendamenti e
+
+1443
+01:05:56,599 --> 01:06:02,599
+dell'articolato.
+
+1444
+01:05:58,839 --> 01:06:05,200
+Penso che sia stata una discussione
+
+1445
+01:06:02,599 --> 01:06:08,240
+proficua e quindi possiamo mettere in
+
+1446
+01:06:05,200 --> 01:06:11,319
+votazione, se prendete posto, possiamo
+
+1447
+01:06:08,240 --> 01:06:14,119
+mettere in votazione l'intero disegno di
+
+1448
+01:06:11,319 --> 01:06:17,440
+legge.
+
+1449
+01:06:14,119 --> 01:06:20,559
+Se prendete posto apro la votazione
+
+1450
+01:06:17,440 --> 01:06:24,240
+così mettiamo in votazione questo
+
+1451
+01:06:20,559 --> 01:06:24,240
+disegno di legge.
+
+1452
+01:06:25,880 --> 01:06:34,599
+Prendete posto così apriamo questa
+
+1453
+01:06:28,440 --> 01:06:34,599
+votazione. La votazione è aperta.
+
+1454
+01:06:44,839 --> 01:06:51,720
+Tenete premuto, la votazione è chiusa.
+
+1455
+01:06:50,200 --> 01:06:54,720
+Bene,
+
+1456
+01:06:51,720 --> 01:06:56,520
+con
+
+1457
+01:06:54,720 --> 01:07:02,079
+abbiamo votato onorevole Catanzaro
+
+1458
+01:06:56,520 --> 01:07:05,599
+doveva presentarlo prima. Bene, con 34
+
+1459
+01:07:02,079 --> 01:07:08,440
+votanti mag
+
+1460
+01:07:05,599 --> 01:07:11,240
+favorevoli la legge e il disegno di
+
+1461
+01:07:08,440 --> 01:07:11,799
+legge è approvato e quindi è diventata
+
+1462
+01:07:11,240 --> 01:07:14,279
+legge.
+
+1463
+01:07:11,799 --> 01:07:17,480
+Quindi allora lunedì e martedì faremo
+
+1464
+01:07:14,279 --> 01:07:18,200
+attività spett
+
+1465
+01:07:17,480 --> 01:07:21,480
+lunedì
+
+1466
+01:07:18,200 --> 01:07:23,839
+lunedì e scusami martedì e mercoledì.
+
+1467
+01:07:21,480 --> 01:07:26,960
+Martedì e mercoledì colleghi. Sì.
+
+1468
+01:07:23,839 --> 01:07:29,319
+Onorevole Adorno,
+
+1469
+01:07:26,960 --> 01:07:31,799
+va bene, va bene. L'onorevole Adorno ha
+
+1470
+01:07:29,319 --> 01:07:33,559
+votato favorevolmente, dico, la
+
+1471
+01:07:31,799 --> 01:07:36,359
+registriamo,
+
+1472
+01:07:33,559 --> 01:07:40,839
+ehm una comunicazione sui lavori della
+
+1473
+01:07:36,359 --> 01:07:42,880
+prossima settimana, martedì e mercoledì
+
+1474
+01:07:40,839 --> 01:07:46,079
+e faremo attività ispettiva
+
+1475
+01:07:42,880 --> 01:07:49,079
+limitatamente alla prima ora, quindi
+
+1476
+01:07:46,079 --> 01:07:50,799
+nella prima ora faremo attività
+
+1477
+01:07:49,079 --> 01:07:52,799
+ispettiva. gli assessori hanno dato già
+
+1478
+01:07:50,799 --> 01:07:56,480
+disponibilità
+
+1479
+01:07:52,799 --> 01:07:59,720
+adesso mano
+
+1480
+01:07:56,480 --> 01:08:03,119
+che allora martedì e mercoledì
+
+1481
+01:07:59,720 --> 01:08:06,200
+relativamente alla prima ora faremo
+
+1482
+01:08:03,119 --> 01:08:08,359
+attività ispettiva. Vi comunicheremo vi
+
+1483
+01:08:06,200 --> 01:08:11,359
+comunicheremo gli assessori quando il
+
+1484
+01:08:08,359 --> 01:08:14,880
+governo ce ricomura. Dalla seconda.
+
+1485
+01:08:11,359 --> 01:08:16,400
+Dalla seconda ascolteremo i vostri
+
+1486
+01:08:14,880 --> 01:08:17,960
+interventi.
+
+1487
+01:08:16,400 --> 01:08:21,400
+Cracolici ha votato a favore.
+
+1488
+01:08:17,960 --> 01:08:25,359
+Anche l'onorevole Cracolici ha votato a
+
+1489
+01:08:21,400 --> 01:08:28,239
+favore. Se non ci sono ulteriori
+
+1490
+01:08:25,359 --> 01:08:30,880
+anche l'onorevole Scuvera
+
+1491
+01:08:28,239 --> 01:08:33,920
+come interviene
+
+1492
+01:08:30,880 --> 01:08:36,560
+come ex articolo 83 c'è l'intervento
+
+1493
+01:08:33,920 --> 01:08:39,560
+dell'onorevole Giambona e dell'onorevole
+
+1494
+01:08:36,560 --> 01:08:39,560
+Chinnici.
+
+1495
+01:08:47,520 --> 01:08:51,719
+Presidente,
+
+1496
+01:08:50,000 --> 01:08:55,199
+colleghi,
+
+1497
+01:08:51,719 --> 01:08:57,040
+colleghi, l'aula sta continuando, c'è
+
+1498
+01:08:55,199 --> 01:08:59,440
+l'onorevole Giambone e poi ho altri due
+
+1499
+01:08:57,040 --> 01:09:02,679
+colleghi che devono intervenire. Se mi
+
+1500
+01:08:59,440 --> 01:09:04,440
+fate ascoltare, cortesemente l'onorevole
+
+1501
+01:09:02,679 --> 01:09:08,960
+Giambone è chi deve parlare se può
+
+1502
+01:09:04,440 --> 01:09:08,960
+andare fuori aula.
+
+1503
+01:09:09,799 --> 01:09:16,319
+Prego, onorevole Giambon. No, adesso,
+
+1504
+01:09:13,319 --> 01:09:16,319
+adesso
+
+1505
+01:09:18,759 --> 01:09:25,120
+beh, presidente, io intervengo
+
+1506
+01:09:22,239 --> 01:09:28,520
+rivolgendomi alla presidenza, ai
+
+1507
+01:09:25,120 --> 01:09:31,359
+colleghi e al governo, anche alla luce
+
+1508
+01:09:28,520 --> 01:09:33,880
+di di quello che è il programma della
+
+1509
+01:09:31,359 --> 01:09:37,440
+prossima settimana.
+
+1510
+01:09:33,880 --> 01:09:40,400
+Ebbene, comeè noto, questo Parlamento
+
+1511
+01:09:37,440 --> 01:09:43,120
+ancora stenta a riprendere concretamente
+
+1512
+01:09:40,400 --> 01:09:45,679
+un ritmo, per dire la verità, un ritmo
+
+1513
+01:09:43,120 --> 01:09:48,080
+di lavori, diciamo, adeguato a quelle
+
+1514
+01:09:45,679 --> 01:09:50,440
+che sono le esigenze della Sicilia, non
+
+1515
+01:09:48,080 --> 01:09:53,279
+si è mai intrapreso. Ciò non di meno,
+
+1516
+01:09:50,440 --> 01:09:55,960
+presidente, ho ascoltato
+
+1517
+01:09:53,279 --> 01:09:58,400
+ehm che la prossima settimana faremo
+
+1518
+01:09:55,960 --> 01:10:01,440
+attività ispettiva limitatamente alla
+
+1519
+01:09:58,400 --> 01:10:03,880
+prima ora, dopodiché e forse qualche
+
+1520
+01:10:01,440 --> 01:10:06,679
+comunicazione. Questo significa che la
+
+1521
+01:10:03,880 --> 01:10:10,199
+prossima settimana probabilmente
+
+1522
+01:10:06,679 --> 01:10:13,040
+l'attività d'aula, ecco, si andrà
+
+1523
+01:10:10,199 --> 01:10:15,199
+esclusivamente a ricondurre a questa ora
+
+1524
+01:10:13,040 --> 01:10:18,840
+e poco più. E allora io le dico,
+
+1525
+01:10:15,199 --> 01:10:21,400
+presidente, siccome giusto giusto ieri
+
+1526
+01:10:18,840 --> 01:10:24,440
+con l'assessore alla salute ci siamo
+
+1527
+01:10:21,400 --> 01:10:27,520
+resi conto che ci sono interrogazioni
+
+1528
+01:10:24,440 --> 01:10:30,239
+giacenti e che devono essere affrontate
+
+1529
+01:10:27,520 --> 01:10:32,800
+oramai da diverso tempo, in alcuni casi
+
+1530
+01:10:30,239 --> 01:10:34,080
+da anni. Ieri abbiamo affrontato
+
+1531
+01:10:32,800 --> 01:10:36,719
+interrogazioni che erano state
+
+1532
+01:10:34,080 --> 01:10:38,360
+depositate addirittura nel 2023 e
+
+1533
+01:10:36,719 --> 01:10:40,640
+parliamo dei problemi della gente, del
+
+1534
+01:10:38,360 --> 01:10:42,600
+quotidiano, del vissuto quotidiano.
+
+1535
+01:10:40,640 --> 01:10:44,760
+Allora io mi chiedo e chiedo alla
+
+1536
+01:10:42,600 --> 01:10:46,920
+presidenza e a tutti i colleghi, forse
+
+1537
+01:10:44,760 --> 01:10:49,280
+non è il caso magari di valutare che
+
+1538
+01:10:46,920 --> 01:10:52,960
+anziché limitare la discussione delle
+
+1539
+01:10:49,280 --> 01:10:55,320
+interrogazioni solamente alla prima ora
+
+1540
+01:10:52,960 --> 01:10:57,719
+di estendere il periodo di trattazione
+
+1541
+01:10:55,320 --> 01:11:01,120
+delle stesse. Del resto, se questo
+
+1542
+01:10:57,719 --> 01:11:04,600
+Parlamento, che ha centinaia di disegni
+
+1543
+01:11:01,120 --> 01:11:06,000
+di legge depositati, anche per mano del
+
+1544
+01:11:04,600 --> 01:11:08,440
+gruppo parlamentare del Partito
+
+1545
+01:11:06,000 --> 01:11:10,560
+Democratico, non riesce a portare in
+
+1546
+01:11:08,440 --> 01:11:13,080
+aula la discussione di altri argomenti.
+
+1547
+01:11:10,560 --> 01:11:15,360
+Quantomeno, anziché limitare la
+
+1548
+01:11:13,080 --> 01:11:18,320
+discussione la prossima settimana
+
+1549
+01:11:15,360 --> 01:11:20,440
+solamente ad un'ora, io la estenderei.
+
+1550
+01:11:18,320 --> 01:11:22,199
+Io credo che questo possa essere,
+
+1551
+01:11:20,440 --> 01:11:24,600
+diciamo, per così dire, una buona
+
+1552
+01:11:22,199 --> 01:11:26,840
+modalità per rendere merito a quello che
+
+1553
+01:11:24,600 --> 01:11:30,120
+è il lavoro dei colleghi nei territori
+
+1554
+01:11:26,840 --> 01:11:31,920
+sulle interrogazioni e dare risposte ai
+
+1555
+01:11:30,120 --> 01:11:34,440
+siciliani. Lei mi parlerà di
+
+1556
+01:11:31,920 --> 01:11:35,760
+regolamento, caro presidente, ma io le
+
+1557
+01:11:34,440 --> 01:11:37,639
+invito da questo punto di vista
+
+1558
+01:11:35,760 --> 01:11:40,320
+eventualmente anche a valutare con la
+
+1559
+01:11:37,639 --> 01:11:42,480
+conferenza di capigruppo per dare
+
+1560
+01:11:40,320 --> 01:11:44,440
+seguito a questa che è un'esigenza che
+
+1561
+01:11:42,480 --> 01:11:46,960
+dà risposte da una parte ad un
+
+1562
+01:11:44,440 --> 01:11:49,000
+immobilismo di questa assemblea e
+
+1563
+01:11:46,960 --> 01:11:51,360
+dall'altro all'esigenza di dare risposte
+
+1564
+01:11:49,000 --> 01:11:53,080
+ai siciliani.
+
+1565
+01:11:51,360 --> 01:11:57,320
+Grazie onorevole Giambona. lei sa
+
+1566
+01:11:53,080 --> 01:11:59,000
+benissimo che andremo sicuramente oltre
+
+1567
+01:11:57,320 --> 01:12:00,920
+l'ora e poi le ricordo sempre che ci
+
+1568
+01:11:59,000 --> 01:12:04,159
+sono le commissioni che in questo
+
+1569
+01:12:00,920 --> 01:12:08,000
+momento sono al lavoro a riguardo la
+
+1570
+01:12:04,159 --> 01:12:10,320
+variazione di bilancio. C'è l'intervento
+
+1571
+01:12:08,000 --> 01:12:12,400
+dell'onorevole Chinnici e poi
+
+1572
+01:12:10,320 --> 01:12:14,800
+l'intervento dell'onorevole Burtone e
+
+1573
+01:12:12,400 --> 01:12:17,800
+poi chiudiamo l'aula. Prego, onorevole
+
+1574
+01:12:14,800 --> 01:12:17,800
+Chinnici.
+
+1575
+01:12:18,040 --> 01:12:22,440
+Grazie presidente.
+
+1576
+01:12:20,000 --> 01:12:24,800
+Allora, intervengo in merito alla annosa
+
+1577
+01:12:22,440 --> 01:12:27,120
+questione dei trasporti scolastici
+
+1578
+01:12:24,800 --> 01:12:31,040
+perché oggi ho ricevuto una risposta
+
+1579
+01:12:27,120 --> 01:12:33,320
+piccata dai vertici dell'AST che mi
+
+1580
+01:12:31,040 --> 01:12:36,679
+hanno accusato di creare allarmismo
+
+1581
+01:12:33,320 --> 01:12:38,520
+perché avevo denunciato, dichiarato
+
+1582
+01:12:36,679 --> 01:12:41,760
+quello che mi era stato riferito e che
+
+1583
+01:12:38,520 --> 01:12:44,719
+mi è stato confermato ovviamente e da
+
+1584
+01:12:41,760 --> 01:12:47,280
+diversi studenti e famiglie studenti che
+
+1585
+01:12:44,719 --> 01:12:50,000
+il primo giorno di scuola lunedì eh sono
+
+1586
+01:12:47,280 --> 01:12:52,600
+rimasti a piedi. pur svegliandosi alle
+
+1587
+01:12:50,000 --> 01:12:54,960
+5:00 del mattino, non sono riusciti a
+
+1588
+01:12:52,600 --> 01:12:58,560
+venire a scuola. Ecco, c'è il
+
+1589
+01:12:54,960 --> 01:13:00,480
+l'assessore Aricò che appunto eh diciamo
+
+1590
+01:12:58,560 --> 01:13:03,679
+a competenza sui sui trasporti
+
+1591
+01:13:00,480 --> 01:13:06,800
+scolastici. Bene, eh dopo questo mio
+
+1592
+01:13:03,679 --> 01:13:08,800
+intervento sulla stampa, oggi l'AST mi
+
+1593
+01:13:06,800 --> 01:13:11,120
+ha risposto appunto in maniera piccata,
+
+1594
+01:13:08,800 --> 01:13:14,880
+dicendo che io dovevo informarmi meglio
+
+1595
+01:13:11,120 --> 01:13:17,679
+e che loro si erano mossi e diciamo in
+
+1596
+01:13:14,880 --> 01:13:19,360
+guardando al calendario scolastico
+
+1597
+01:13:17,679 --> 01:13:21,000
+regionale. insomma, hanno dato la
+
+1598
+01:13:19,360 --> 01:13:22,639
+responsabilità, in poche parole, forse
+
+1599
+01:13:21,000 --> 01:13:24,920
+all'ufficio scolastico regionale, forse
+
+1600
+01:13:22,639 --> 01:13:26,280
+all'assessorato all'istruzione, in uno
+
+1601
+01:13:24,920 --> 01:13:28,639
+scarico a barile abbastanza
+
+1602
+01:13:26,280 --> 01:13:31,120
+imbarazzante. Mi sarei aspettata,
+
+1603
+01:13:28,639 --> 01:13:33,040
+quindi, se davvero il problema era solo
+
+1604
+01:13:31,120 --> 01:13:35,600
+questo, di un misunderstanding comunque
+
+1605
+01:13:33,040 --> 01:13:37,199
+imbarazzante perché a casa mia, diciamo,
+
+1606
+01:13:35,600 --> 01:13:39,920
+tutte le persone che vanno a scuola, le
+
+1607
+01:13:37,199 --> 01:13:44,080
+mie figlie, mio marito in scuole diverse
+
+1608
+01:13:39,920 --> 01:13:47,360
+hanno iniziato tutti il 14 lunedì. E
+
+1609
+01:13:44,080 --> 01:13:49,600
+comunque il 15 c'è stato questo
+
+1610
+01:13:47,360 --> 01:13:53,120
+problema. Oggi siamo appunto a
+
+1611
+01:13:49,600 --> 01:13:55,960
+mercoledì, ancora ancora decine e decine
+
+1612
+01:13:53,120 --> 01:13:59,080
+di ragazzi sono rimasti alle fermate
+
+1613
+01:13:55,960 --> 01:14:01,120
+degli autobus, dove tra l'altro si
+
+1614
+01:13:59,080 --> 01:14:03,920
+assiste purtroppo a uno spettacolo
+
+1615
+01:14:01,120 --> 01:14:06,719
+veramente triste e mortificante per i
+
+1616
+01:14:03,920 --> 01:14:08,920
+ragazzi perché devono contendersi
+
+1617
+01:14:06,719 --> 01:14:12,360
+svegliandosi, ripeto, alle 5:00, alle
+
+1618
+01:14:08,920 --> 01:14:15,639
+5:30 del mattino e devono contendersi il
+
+1619
+01:14:12,360 --> 01:14:19,520
+l'autobus che passa e e molti restano a
+
+1620
+01:14:15,639 --> 01:14:23,120
+piedi, quindi davvero Io mi chiedo come
+
+1621
+01:14:19,520 --> 01:14:25,440
+si possa ancora nel 2026 non garantire
+
+1622
+01:14:23,120 --> 01:14:27,760
+ai nostri studenti la possibilità di
+
+1623
+01:14:25,440 --> 01:14:30,679
+andare a scuola.
+
+1624
+01:14:27,760 --> 01:14:33,400
+Questi episodi che io ho riferito e che
+
+1625
+01:14:30,679 --> 01:14:36,400
+sono facilmente verificabili da chi vive
+
+1626
+01:14:33,400 --> 01:14:39,199
+nel mondo reale e non è abituato a stare
+
+1627
+01:14:36,400 --> 01:14:41,800
+qua dentro e a e a parlare per proclami.
+
+1628
+01:14:39,199 --> 01:14:43,880
+Basta sentire le persone, basta cogliere
+
+1629
+01:14:41,800 --> 01:14:47,480
+i disagi normali, basta parlare con le
+
+1630
+01:14:43,880 --> 01:14:48,920
+scuole, con i presidi, con i professori.
+
+1631
+01:14:47,480 --> 01:14:50,800
+Oggi c'erano ragazzi che a prima ora
+
+1632
+01:14:48,920 --> 01:14:52,199
+avevano le verifiche normalmente a
+
+1633
+01:14:50,800 --> 01:14:54,239
+scuola, sapete, si fanno anche le
+
+1634
+01:14:52,199 --> 01:14:56,840
+verifiche e non sono riusciti a andare a
+
+1635
+01:14:54,239 --> 01:14:59,320
+scuola. ripeto, svegliandosi alle 5:00
+
+1636
+01:14:56,840 --> 01:15:02,000
+del mattino per percorrere 20 km perché
+
+1637
+01:14:59,320 --> 01:15:05,520
+alla fine parliamo di San Giuseppe Iato,
+
+1638
+01:15:02,000 --> 01:15:07,400
+San Cipirrello, Partinico, cioè zone
+
+1639
+01:15:05,520 --> 01:15:10,000
+diciamo limitrofe della città
+
+1640
+01:15:07,400 --> 01:15:12,120
+metropolitana di Palermo, ragazzi che
+
+1641
+01:15:10,000 --> 01:15:13,679
+sono anche in obbligo scolastico, quindi
+
+1642
+01:15:12,120 --> 01:15:16,159
+non stiamo parlando di lussi, stiamo
+
+1643
+01:15:13,679 --> 01:15:18,159
+parlando dell'obbligo di istruzione e
+
+1644
+01:15:16,159 --> 01:15:20,679
+del diritto all'istruzione che viene
+
+1645
+01:15:18,159 --> 01:15:22,800
+ancora una volta negato. Sono 4 anni che
+
+1646
+01:15:20,679 --> 01:15:25,760
+ne parlo, mi annoio io stessa a parlare
+
+1647
+01:15:22,800 --> 01:15:28,960
+come un disco rotto. Non non mi piace il
+
+1648
+01:15:25,760 --> 01:15:30,800
+negazionismo dell'assessore Aricò, così
+
+1649
+01:15:28,960 --> 01:15:33,000
+facciamo arrabbiare anche lui perché per
+
+1650
+01:15:30,800 --> 01:15:34,679
+lui questo problema non esiste. Nella
+
+1651
+01:15:33,000 --> 01:15:36,480
+mia commissione e commissione istruzione
+
+1652
+01:15:34,679 --> 01:15:38,560
+mi si dice che non è competenza della
+
+1653
+01:15:36,480 --> 01:15:40,520
+commissione istruzione,
+
+1654
+01:15:38,560 --> 01:15:44,080
+ma signori, se i ragazzi non vanno a
+
+1655
+01:15:40,520 --> 01:15:46,400
+scuola e che ci sia un matching fra
+
+1656
+01:15:44,080 --> 01:15:48,679
+istruzione e trasporti mi pare il
+
+1657
+01:15:46,400 --> 01:15:50,159
+minimo, si chiama trasporto scolastico,
+
+1658
+01:15:48,679 --> 01:15:52,040
+quindi unisce le competenze
+
+1659
+01:15:50,159 --> 01:15:53,120
+all'assessorato ai trasporti, le
+
+1660
+01:15:52,040 --> 01:15:56,280
+competenze dell'assessorato
+
+1661
+01:15:53,120 --> 01:15:59,199
+all'istruzione. Ora, ora vedo che l'AST
+
+1662
+01:15:56,280 --> 01:16:01,520
+chiede, ha mandato un comunicato, forse
+
+1663
+01:15:59,199 --> 01:16:03,400
+perché si è resa conto che in effetti io
+
+1664
+01:16:01,520 --> 01:16:06,679
+non stavo vaneggiando né offendendo
+
+1665
+01:16:03,400 --> 01:16:08,000
+nessuno e adesso chiedono, non so, 20
+
+1666
+01:16:06,679 --> 01:16:10,400
+milioni di euro, qualcosa per
+
+1667
+01:16:08,000 --> 01:16:13,040
+implementare le corse. Allora, io non so
+
+1668
+01:16:10,400 --> 01:16:15,520
+se c'è una cattiva gestione dei fondi,
+
+1669
+01:16:13,040 --> 01:16:17,280
+se i fondi sono bastevoli, se manca un
+
+1670
+01:16:15,520 --> 01:16:19,199
+efficientamento un'organizzazione,
+
+1671
+01:16:17,280 --> 01:16:21,800
+perché non non credo che sia sempre
+
+1672
+01:16:19,199 --> 01:16:24,840
+questione soltanto di soldi. che c'è
+
+1673
+01:16:21,800 --> 01:16:27,679
+questione di soldi, evidentemente
+
+1674
+01:16:24,840 --> 01:16:30,560
+non mancherà a quest'aula provvedere e
+
+1675
+01:16:27,679 --> 01:16:32,400
+anziché al solito, visto che si parla
+
+1676
+01:16:30,560 --> 01:16:34,120
+tanto di questi benedetti emendamenti
+
+1677
+01:16:32,400 --> 01:16:36,600
+territoriali
+
+1678
+01:16:34,120 --> 01:16:38,760
+con l'eufemismo di fit, adesso li
+
+1679
+01:16:36,600 --> 01:16:40,239
+chiamiamo così, fondi investimento
+
+1680
+01:16:38,760 --> 01:16:43,040
+territoriali, cioè la solita
+
+1681
+01:16:40,239 --> 01:16:45,320
+polverizzazione mancettistica, se per
+
+1682
+01:16:43,040 --> 01:16:47,679
+favore possiamo evitare questo scandalo,
+
+1683
+01:16:45,320 --> 01:16:49,920
+stavolta destiniamo i soldi, se servono,
+
+1684
+01:16:47,679 --> 01:16:52,920
+al trasporto scolastico, ma che non
+
+1685
+01:16:49,920 --> 01:16:54,639
+accada più, Ma purtroppo è facile fare
+
+1686
+01:16:52,920 --> 01:16:56,960
+la Cassandra perché accadrà anche
+
+1687
+01:16:54,639 --> 01:16:58,960
+domani, accadrà dopodomani questo
+
+1688
+01:16:56,960 --> 01:17:00,520
+spettacolo triste per i nostri alunni
+
+1689
+01:16:58,960 --> 01:17:04,440
+che non è dignitoso per i nostri alunni
+
+1690
+01:17:00,520 --> 01:17:07,600
+che debbano litigare per salire dentro
+
+1691
+01:17:04,440 --> 01:17:10,239
+il pullman per andare a scuola.
+
+1692
+01:17:07,600 --> 01:17:13,239
+Penso di chiedere una cosa normale.
+
+1693
+01:17:10,239 --> 01:17:13,239
+Grazie.
+
+1694
+01:17:23,040 --> 01:17:28,520
+Grazie. Grazie onorevole Chinnici. Ha
+
+1695
+01:17:26,280 --> 01:17:33,560
+chiesto di intervenire l'onorevole
+
+1696
+01:17:28,520 --> 01:17:33,560
+Burtone e poi c'è l'onorevole Campo.
+
+1697
+01:17:37,080 --> 01:17:42,679
+Presidente, ieri ne ho anche parlato in
+
+1698
+01:17:39,679 --> 01:17:46,760
+commissione salute, c'era l'assessore,
+
+1699
+01:17:42,679 --> 01:17:48,280
+però l'argomento è troppo importante per
+
+1700
+01:17:46,760 --> 01:17:51,120
+non
+
+1701
+01:17:48,280 --> 01:17:53,040
+intervenire qui in aula per
+
+1702
+01:17:51,120 --> 01:17:55,360
+sensibilizzare intanto questo
+
+1703
+01:17:53,040 --> 01:17:59,480
+parlamento. Io ho avuto notizie
+
+1704
+01:17:55,360 --> 01:18:02,360
+attraverso alcune famiglie che
+
+1705
+01:17:59,480 --> 01:18:04,719
+abbiamo una situazione difficile
+
+1706
+01:18:02,360 --> 01:18:08,360
+riguardo all'approvvigionamento
+
+1707
+01:18:04,719 --> 01:18:13,199
+di sacche di sangue per le trasfusioni,
+
+1708
+01:18:08,360 --> 01:18:19,600
+in particolare per alcuni gruppi gruppo
+
+1709
+01:18:13,199 --> 01:18:23,000
+0H positivo, però c'è una difficoltà
+
+1710
+01:18:19,600 --> 01:18:25,040
+per dare risposta ai talassemici, ma
+
+1711
+01:18:23,000 --> 01:18:28,960
+anche agli ammalati. di tumori, ma
+
+1712
+01:18:25,040 --> 01:18:33,639
+soprattutto i talassemici, perché sono
+
+1713
+01:18:28,960 --> 01:18:36,920
+la gran parte bambini e quindi c'è una,
+
+1714
+01:18:33,639 --> 01:18:39,440
+credo, necessità in più quella di
+
+1715
+01:18:36,920 --> 01:18:42,239
+rispondere a chi è più debole, i
+
+1716
+01:18:39,440 --> 01:18:45,760
+ragazzini, le ragazzine che hanno
+
+1717
+01:18:42,239 --> 01:18:49,040
+problemi così delicati e all'assessore
+
+1718
+01:18:45,760 --> 01:18:51,199
+io ho messo in evidenza la necessità di
+
+1719
+01:18:49,040 --> 01:18:54,080
+intervenire tempestivamente, fare oggi
+
+1720
+01:18:51,199 --> 01:18:57,199
+un'azione promozionale forse
+
+1721
+01:18:54,080 --> 01:18:59,440
+servirebbe, ma non darebbe una risposta
+
+1722
+01:18:57,199 --> 01:19:02,560
+concreta al problema.
+
+1723
+01:18:59,440 --> 01:19:05,120
+e quindi ho chiesto di interloquire con
+
+1724
+01:19:02,560 --> 01:19:06,760
+le altre regioni. La situazione è
+
+1725
+01:19:05,120 --> 01:19:10,080
+difficile in tutta la comunità
+
+1726
+01:19:06,760 --> 01:19:14,199
+nazionale, però noi siamo il una delle
+
+1727
+01:19:10,080 --> 01:19:16,040
+realtà regionali con maggiori problemi e
+
+1728
+01:19:14,199 --> 01:19:19,840
+io ribadisco questa richiesta,
+
+1729
+01:19:16,040 --> 01:19:22,360
+presidente, quella di utilizzare questi
+
+1730
+01:19:19,840 --> 01:19:25,760
+canali per chiedere alle altre ragioni
+
+1731
+01:19:22,360 --> 01:19:29,920
+solidarietà nei confronti dei siciliani
+
+1732
+01:19:25,760 --> 01:19:32,360
+e dare delle risposte, risposte che
+
+1733
+01:19:29,920 --> 01:19:34,320
+vengono cercate ogni giorno dagli
+
+1734
+01:19:32,360 --> 01:19:36,880
+operatori sanitari, dai medici che
+
+1735
+01:19:34,320 --> 01:19:40,040
+operano in questi centri trasfusionali
+
+1736
+01:19:36,880 --> 01:19:42,239
+stanno cercando di fare il meglio, vanno
+
+1737
+01:19:40,040 --> 01:19:45,360
+alla ricerca giornalmente di queste
+
+1738
+01:19:42,239 --> 01:19:49,000
+sacche di sangue, non riescono sempre a
+
+1739
+01:19:45,360 --> 01:19:51,600
+dare delle risposte e vengono disattese
+
+1740
+01:19:49,000 --> 01:19:54,560
+le richieste delle famiglie, richieste
+
+1741
+01:19:51,600 --> 01:19:57,239
+necessarie e determinate dall'urgenza.
+
+1742
+01:19:54,560 --> 01:19:59,159
+Quindi, presidente, io le chiedo di
+
+1743
+01:19:57,239 --> 01:20:01,159
+intervenire per sollecitare
+
+1744
+01:19:59,159 --> 01:20:03,639
+ulteriormente l'assessore che ha dato la
+
+1745
+01:20:01,159 --> 01:20:06,639
+sua disponibilità. Io lo cercherò nelle
+
+1746
+01:20:03,639 --> 01:20:09,400
+prossime ore perché parliamo di urgenze,
+
+1747
+01:20:06,639 --> 01:20:12,880
+non parliamo di tempi
+
+1748
+01:20:09,400 --> 01:20:14,960
+eh lunghi, parliamo di della necessità
+
+1749
+01:20:12,880 --> 01:20:18,159
+di dare risposte nelle prossime ore
+
+1750
+01:20:14,960 --> 01:20:21,239
+perché le richieste sono tante e non
+
+1751
+01:20:18,159 --> 01:20:23,960
+hanno trovato nelle giornate, negli
+
+1752
+01:20:21,239 --> 01:20:26,880
+ultimi giorni delle risposte positive.
+
+1753
+01:20:23,960 --> 01:20:29,400
+Infine, presidente, mi permetto chiedere
+
+1754
+01:20:26,880 --> 01:20:32,000
+anche alla presidenza di sollecitare
+
+1755
+01:20:29,400 --> 01:20:34,960
+tutti i colleghi parlamentari finché nei
+
+1756
+01:20:32,000 --> 01:20:37,120
+propri territori si faccia un'azione
+
+1757
+01:20:34,960 --> 01:20:40,840
+promozionale per chiedere ai cittadini
+
+1758
+01:20:37,120 --> 01:20:44,280
+di di donare. L'atto della donazione è
+
+1759
+01:20:40,840 --> 01:20:47,199
+uno degli degli atti più importanti,
+
+1760
+01:20:44,280 --> 01:20:49,320
+è un significato profondo
+
+1761
+01:20:47,199 --> 01:20:51,719
+dell'altruismo.
+
+1762
+01:20:49,320 --> 01:20:54,280
+Io ho fatto il donatore da quando avevo
+
+1763
+01:20:51,719 --> 01:20:57,280
+18 anni. Purtroppo anc oggi non lo posso
+
+1764
+01:20:54,280 --> 01:21:00,080
+più fare. Spero però di continuare a
+
+1765
+01:20:57,280 --> 01:21:02,800
+promuovere questo impegno che è un
+
+1766
+01:21:00,080 --> 01:21:04,360
+impegno che ci fa uomini rispetto ai
+
+1767
+01:21:02,800 --> 01:21:07,360
+problemi che ci sono nelle nostre
+
+1768
+01:21:04,360 --> 01:21:07,360
+comunità.
+
+1769
+01:21:08,040 --> 01:21:12,320
+Grazie onorevole Burtone all'ultimo
+
+1770
+01:21:09,639 --> 01:21:14,080
+intervento dell'onorevole Campo.
+
+1771
+01:21:12,320 --> 01:21:17,159
+Onorevole Giambona lei è già intervenuto
+
+1772
+01:21:14,080 --> 01:21:18,520
+su ex articolo 83
+
+1773
+01:21:17,159 --> 01:21:20,239
+e no l'ordine dei lavori all'inizio
+
+1774
+01:21:18,520 --> 01:21:23,360
+dell'aula. Prego, onorevole Campo.
+
+1775
+01:21:20,239 --> 01:21:26,159
+Grazie presidente. Io volevo ringraziare
+
+1776
+01:21:23,360 --> 01:21:29,239
+invece l'assessore Ricotò. L'ho
+
+1777
+01:21:26,159 --> 01:21:32,480
+attaccato quando mi sono sentita di
+
+1778
+01:21:29,239 --> 01:21:36,000
+farlo, ma è giusto anche riconoscere le
+
+1779
+01:21:32,480 --> 01:21:38,080
+cose buone fatte. La scuola di Comiso,
+
+1780
+01:21:36,000 --> 01:21:40,400
+il liceo artistico ha dovuto da
+
+1781
+01:21:38,080 --> 01:21:42,760
+quest'anno recepire
+
+1782
+01:21:40,400 --> 01:21:45,080
+la norma del tempo breve, quindi il
+
+1783
+01:21:42,760 --> 01:21:47,719
+sabato i ragazzi non andranno più a
+
+1784
+01:21:45,080 --> 01:21:52,040
+scuola, quindi ha allungato l'orario e
+
+1785
+01:21:47,719 --> 01:21:55,159
+l'autobus è stato prontamente spostato
+
+1786
+01:21:52,040 --> 01:21:58,040
+per non lasciare i ragazzi fino alle 17
+
+1787
+01:21:55,159 --> 01:21:59,679
+in giro in un'altra città, quasi tutti
+
+1788
+01:21:58,040 --> 01:22:02,560
+minorenni
+
+1789
+01:21:59,679 --> 01:22:05,400
+e quindi lo volevo ecco ringraziare da
+
+1790
+01:22:02,560 --> 01:22:07,880
+questo scranno perché che c'era molto
+
+1791
+01:22:05,400 --> 01:22:10,520
+subuglio all'interno dei gruppi delle
+
+1792
+01:22:07,880 --> 01:22:12,239
+mamme proprio per questo motivo e si era
+
+1793
+01:22:10,520 --> 01:22:16,199
+anche programmato uno sciopero che
+
+1794
+01:22:12,239 --> 01:22:19,360
+ovviamente non si farà. Grazie.
+
+1795
+01:22:16,199 --> 01:22:21,440
+Grazie onorevole Campo.
+
+1796
+01:22:19,360 --> 01:22:25,920
+Onorevole Giampona Giambona se deve
+
+1797
+01:22:21,440 --> 01:22:27,560
+intervenire dal posto dallo scrano
+
+1798
+01:22:25,920 --> 01:22:29,360
+2 minuti onorevole Giambona anche perché
+
+1799
+01:22:27,560 --> 01:22:31,080
+era già intervenuto. Prego.
+
+1800
+01:22:29,360 --> 01:22:32,719
+Grazie presidente. Ero intervenuto
+
+1801
+01:22:31,080 --> 01:22:35,360
+sull'ordine dei lavori. La ringrazio per
+
+1802
+01:22:32,719 --> 01:22:37,199
+avermi concesso la parola, ma approfitto
+
+1803
+01:22:35,360 --> 01:22:39,080
+della presenza dell'assessore alle
+
+1804
+01:22:37,199 --> 01:22:41,920
+infrastrutture e ai trasporti perché è
+
+1805
+01:22:39,080 --> 01:22:43,800
+notizia di qualche ora fa e
+
+1806
+01:22:41,920 --> 01:22:44,800
+relativamente a quella che è la protesta
+
+1807
+01:22:43,800 --> 01:22:46,719
+in atto da parte degli
+
+1808
+01:22:44,800 --> 01:22:49,120
+autotrasportatori.
+
+1809
+01:22:46,719 --> 01:22:51,040
+Ebbene, il caro carburante sta segnando
+
+1810
+01:22:49,120 --> 01:22:53,159
+in maniera significativa quella che è la
+
+1811
+01:22:51,040 --> 01:22:55,560
+condizione di vita dal punto di vista
+
+1812
+01:22:53,159 --> 01:22:57,760
+economico delle nostre delle famiglie
+
+1813
+01:22:55,560 --> 01:23:01,280
+siciliane, ma anche di chi opera,
+
+1814
+01:22:57,760 --> 01:23:04,679
+appunto, spostandosi per l'Italia,
+
+1815
+01:23:01,280 --> 01:23:07,360
+utilizzando il carburante, il cui costo
+
+1816
+01:23:04,679 --> 01:23:10,080
+è aumentato vertiginosamente.
+
+1817
+01:23:07,360 --> 01:23:11,880
+Il tema delle accise, degli interventi
+
+1818
+01:23:10,080 --> 01:23:13,880
+prospettati a inizio legislatura da
+
+1819
+01:23:11,880 --> 01:23:16,080
+parte del governo nazionale, ad oggi
+
+1820
+01:23:13,880 --> 01:23:17,880
+ancora non si concretizzano e ci sono
+
+1821
+01:23:16,080 --> 01:23:19,440
+diverse categorie, appunto, gli
+
+1822
+01:23:17,880 --> 01:23:22,719
+autotrasportatori,
+
+1823
+01:23:19,440 --> 01:23:25,800
+potrei aggiungere la categoria degli NCC
+
+1824
+01:23:22,719 --> 01:23:27,719
+e potrei aggiungere gli operatori al
+
+1825
+01:23:25,800 --> 01:23:30,760
+mondo dell'agricoltura, della pesca, in
+
+1826
+01:23:27,719 --> 01:23:33,040
+sostanza e settori comparti trainanti
+
+1827
+01:23:30,760 --> 01:23:35,840
+per la nostra economia che chiedono un
+
+1828
+01:23:33,040 --> 01:23:37,360
+aiuto, che chiedono un sostegno. Gli
+
+1829
+01:23:35,840 --> 01:23:40,280
+autotrasportatori
+
+1830
+01:23:37,360 --> 01:23:42,679
+oggi annunciano che sono pronti a
+
+1831
+01:23:40,280 --> 01:23:45,440
+protestare anche all'interno delle
+
+1832
+01:23:42,679 --> 01:23:48,480
+nostre arterie principali legittimamente
+
+1833
+01:23:45,440 --> 01:23:50,800
+perché non riescono e a coprire quelli
+
+1834
+01:23:48,480 --> 01:23:53,199
+che sono i costi. Tra l'altro ricordo
+
+1835
+01:23:50,800 --> 01:23:55,639
+che loro molto spesso ottemperano a
+
+1836
+01:23:53,199 --> 01:23:58,120
+contratti sottoscritti antecedentemente
+
+1837
+01:23:55,639 --> 01:24:00,719
+a questa fase di crisi acuta del settore
+
+1838
+01:23:58,120 --> 01:24:03,000
+petrolifero. Allora io chiedo al governo
+
+1839
+01:24:00,719 --> 01:24:05,639
+se intende intervenire prontamente per
+
+1840
+01:24:03,000 --> 01:24:08,400
+aiutare appunto questa categoria. E
+
+1841
+01:24:05,639 --> 01:24:10,280
+quindi parallelamente aiutando il
+
+1842
+01:24:08,400 --> 01:24:13,280
+settore dell'autotrasporto si aiutano
+
+1843
+01:24:10,280 --> 01:24:15,080
+anche le famiglie siciliane e perché in
+
+1844
+01:24:13,280 --> 01:24:18,520
+questa fase abbiamo visto come
+
+1845
+01:24:15,080 --> 01:24:20,800
+l'inflazione purtroppo ha eroso il
+
+1846
+01:24:18,520 --> 01:24:24,880
+potere di acquisto delle famiglie
+
+1847
+01:24:20,800 --> 01:24:26,760
+siciliane. Grazie presidente.
+
+1848
+01:24:24,880 --> 01:24:29,600
+Grazie onorevole Giambona. Prego.
+
+1849
+01:24:26,760 --> 01:24:32,120
+Assessore Rico.
+
+1850
+01:24:29,600 --> 01:24:35,920
+Presidente, è soltanto per fare
+
+1851
+01:24:32,120 --> 01:24:37,840
+chiarezza rispetto alla richiesta giusta
+
+1852
+01:24:35,920 --> 01:24:41,480
+degli autotrasportatori,
+
+1853
+01:24:37,840 --> 01:24:45,159
+anche se devo dire che è una richiesta
+
+1854
+01:24:41,480 --> 01:24:46,679
+curiosa, nel senso che il comitato
+
+1855
+01:24:45,159 --> 01:24:51,400
+autotrasportatori
+
+1856
+01:24:46,679 --> 01:24:54,080
+ha parlato con la il mio gabinetto sia
+
+1857
+01:24:51,400 --> 01:24:57,000
+ieri sera che questa mattina e gli hanno
+
+1858
+01:24:54,080 --> 01:25:00,080
+assicurato e gli stiamo assicurando che
+
+1859
+01:24:57,000 --> 01:25:02,719
+il decreto sarà pubblicato entro questa
+
+1860
+01:25:00,080 --> 01:25:05,119
+settimana. Quindi, avendo comunicato per
+
+1861
+01:25:02,719 --> 01:25:08,280
+le vie brevi
+
+1862
+01:25:05,119 --> 01:25:11,040
+il risultato di una serie di incontri in
+
+1863
+01:25:08,280 --> 01:25:13,639
+cui ci sarà a breve pubblicato il
+
+1864
+01:25:11,040 --> 01:25:16,920
+decreto per il caro carburanti, ci è
+
+1865
+01:25:13,639 --> 01:25:20,440
+sembrato quantomeno strana questa presa
+
+1866
+01:25:16,920 --> 01:25:23,000
+di posizione, questo comunicato stampa è
+
+1867
+01:25:20,440 --> 01:25:25,880
+di un'ora fa perché le rassicurazioni
+
+1868
+01:25:23,000 --> 01:25:28,199
+sono state date in maniera ampia e
+
+1869
+01:25:25,880 --> 01:25:29,639
+diretta.
+
+1870
+01:25:28,199 --> 01:25:32,119
+Grazie presidente.
+
+1871
+01:25:29,639 --> 01:25:33,719
+Grazie assessore. A questo punto l'aula
+
+1872
+01:25:32,119 --> 01:25:37,199
+è riconvocata
+
+1873
+01:25:33,719 --> 01:25:39,600
+a martedì prossimo alle ore 15 con
+
+1874
+01:25:37,199 --> 01:25:42,000
+l'ordine del giorno atti spettivi.
+
+1875
+01:25:39,600 --> 01:25:43,560
+Assessore Ricò poi ci comunicherà quali
+
+1876
+01:25:42,000 --> 01:25:47,159
+sono gli assessori che martedì e
+
+1877
+01:25:43,560 --> 01:25:49,440
+mercoledì saranno presenti. La seduta è
+
+1878
+01:25:47,159 --> 01:25:49,440
+chiusa.
+
