@@ -1,0 +1,8120 @@
+1
+00:00:01,280 --> 00:00:04,839
+La seduta è aperta.
+
+2
+00:00:06,120 --> 00:00:12,840
+Allora, abbiamo comunica.
+
+3
+00:00:10,120 --> 00:00:14,440
+Ok.
+
+4
+00:00:12,840 --> 00:00:16,640
+Avverto che il processo verbale della
+
+5
+00:00:14,440 --> 00:00:19,240
+seduta precedente è posto a disposizione
+
+6
+00:00:16,640 --> 00:00:22,000
+degli onorevoli deputati che che ne
+
+7
+00:00:19,240 --> 00:00:23,359
+intendano prenderne visione ed è
+
+8
+00:00:22,000 --> 00:00:25,840
+considerato approvato in assenza
+
+9
+00:00:23,359 --> 00:00:28,840
+osservazione in contrario nella presente
+
+10
+00:00:25,840 --> 00:00:28,840
+seduta.
+
+11
+00:00:29,560 --> 00:00:34,120
+Ai sensi del comma 9 dell'articolo 127
+
+12
+00:00:31,800 --> 00:00:35,600
+del regolamento interno do il preavviso
+
+13
+00:00:34,120 --> 00:00:37,000
+di 30 minuti al fine delle eventuali
+
+14
+00:00:35,600 --> 00:00:39,440
+votazioni mediante procedimento
+
+15
+00:00:37,000 --> 00:00:41,480
+elettronico che dovessero aver luogo nel
+
+16
+00:00:39,440 --> 00:00:44,239
+corso della presente seduta. Invito
+
+17
+00:00:41,480 --> 00:00:46,800
+pertanto i deputati a munirsi per tempo
+
+18
+00:00:44,239 --> 00:00:48,239
+della tessera personale di voto. Ricordo
+
+19
+00:00:46,800 --> 00:00:51,079
+che anche la richiesta di verifica del
+
+20
+00:00:48,239 --> 00:00:52,800
+numero legale articolo 85, ovvero la
+
+21
+00:00:51,079 --> 00:00:55,680
+domanda di scrutino nominale o
+
+22
+00:00:52,800 --> 00:00:57,520
+discrutino segreto articolo 127 sono
+
+23
+00:00:55,680 --> 00:01:00,520
+effettuate mediante procedimento
+
+24
+00:00:57,520 --> 00:01:00,520
+elettronico.
+
+25
+00:01:02,239 --> 00:01:07,799
+Comunico che la conferenza dei
+
+26
+00:01:04,960 --> 00:01:12,640
+presidenti dei gruppi parlamentari
+
+27
+00:01:07,799 --> 00:01:14,920
+riunitasi oggi 11 novembre 2026
+
+28
+00:01:12,640 --> 00:01:17,799
+sotto la presidenza del presidente
+
+29
+00:01:14,920 --> 00:01:19,880
+dell'assemblea onorevole Galvagno, alla
+
+30
+00:01:17,799 --> 00:01:21,240
+presenza del vicepresidente vicario
+
+31
+00:01:19,880 --> 00:01:23,640
+onorevole Di Paola e con la
+
+32
+00:01:21,240 --> 00:01:26,200
+partecipazione dell'assessore per le
+
+33
+00:01:23,640 --> 00:01:28,960
+infrastrutture e la mobilità, onorevole
+
+34
+00:01:26,200 --> 00:01:32,840
+Aricò, delegato ai rapporti tra governo
+
+35
+00:01:28,960 --> 00:01:35,600
+e assemblea, ha deliberato all'unanim
+
+36
+00:01:32,840 --> 00:01:38,280
+il seguente programma calendario dei
+
+37
+00:01:35,600 --> 00:01:41,320
+lavori parlamentari con riferimento alla
+
+38
+00:01:38,280 --> 00:01:45,960
+sessione di bilancio. La sessione di
+
+39
+00:01:41,320 --> 00:01:48,719
+bilancio avrà inizio il 12 novembre
+
+40
+00:01:45,960 --> 00:01:50,880
+2026 in coincidenza con l'assegnazione
+
+41
+00:01:48,719 --> 00:01:53,600
+dei documenti finanziari alle
+
+42
+00:01:50,880 --> 00:01:56,000
+commissioni parlamentari conformemente a
+
+43
+00:01:53,600 --> 00:01:59,439
+quanto stabilito dal regolamento interno
+
+44
+00:01:56,000 --> 00:02:02,280
+dell'ARS. Conseguentemente, dal 13
+
+45
+00:01:59,439 --> 00:02:04,799
+novembre successivo, le commissioni di
+
+46
+00:02:02,280 --> 00:02:07,960
+merito terranno seduta per l'esame di
+
+47
+00:02:04,799 --> 00:02:13,400
+quanto di loro competenza, da concludere
+
+48
+00:02:07,960 --> 00:02:16,720
+entro martedì 24 novembre 2026.
+
+49
+00:02:13,400 --> 00:02:21,920
+In tale periodo, altresì l'aula terrà
+
+50
+00:02:16,720 --> 00:02:25,640
+seduta martedì 17 novembre 2026 per la
+
+51
+00:02:21,920 --> 00:02:30,959
+discussione della NADEF.
+
+52
+00:02:25,640 --> 00:02:32,879
+Mercoledì 25 novembre 2026 la seconda
+
+53
+00:02:30,959 --> 00:02:35,800
+commissione legislativa permanente
+
+54
+00:02:32,879 --> 00:02:38,360
+bilancio avvierà l'esame dei documenti
+
+55
+00:02:35,800 --> 00:02:42,040
+finanziarie finanziari per quanto di
+
+56
+00:02:38,360 --> 00:02:45,239
+competenza per esitarli per l'aula entro
+
+57
+00:02:42,040 --> 00:02:48,000
+il successivo
+
+58
+00:02:45,239 --> 00:02:50,200
+questoa il fascicolo,
+
+59
+00:02:48,000 --> 00:02:52,040
+quindi dal
+
+60
+00:02:50,200 --> 00:02:55,040
+Ah, ecco qua. Sì, sì, sì, sì, sì, sì.
+
+61
+00:02:52,040 --> 00:02:55,040
+Allora,
+
+62
+00:02:56,640 --> 00:03:02,840
+la seduta d'avo detto, è martedì 17
+
+63
+00:03:00,000 --> 00:03:06,879
+novembre 2026.
+
+64
+00:03:02,840 --> 00:03:10,360
+Entro lunedì 7 dicembre
+
+65
+00:03:06,879 --> 00:03:13,000
+2026 la seconda commissione legislativa
+
+66
+00:03:10,360 --> 00:03:16,200
+permanente bilancio, dopo l'esame di
+
+67
+00:03:13,000 --> 00:03:19,440
+competenza, esiterà per l'aula i
+
+68
+00:03:16,200 --> 00:03:23,959
+suddetti documenti finanziari. L'aula
+
+69
+00:03:19,440 --> 00:03:25,799
+terrà infine seduta giovedì 10 dicembre
+
+70
+00:03:23,959 --> 00:03:27,640
+2026
+
+71
+00:03:25,799 --> 00:03:30,439
+per avviare la discussione generale dei
+
+72
+00:03:27,640 --> 00:03:33,080
+disegni di legge la cui votazione finale
+
+73
+00:03:30,439 --> 00:03:36,000
+è fin d'ora fissata
+
+74
+00:03:33,080 --> 00:03:40,560
+come termine massimo al pomeriggio di
+
+75
+00:03:36,000 --> 00:03:42,799
+martedì 22 dicembre 2026
+
+76
+00:03:40,560 --> 00:03:44,920
+massimo.
+
+77
+00:03:42,799 --> 00:03:47,680
+Il termine ultimo per la presentazione
+
+78
+00:03:44,920 --> 00:03:51,280
+degli emendamenti in aula è fissato
+
+79
+00:03:47,680 --> 00:03:54,879
+entro le ore 18 di sabato 12 dicembre
+
+80
+00:03:51,280 --> 00:04:00,079
+2026. L'assemblea ne prende atto per
+
+81
+00:03:54,879 --> 00:04:02,352
+chiudere al massimo il martedì 22
+
+82
+00:04:00,079 --> 00:04:02,799
+dicembre 2026.
+
+83
+00:04:02,352 --> 00:04:05,000
+[sbuffare]
+
+84
+00:04:02,799 --> 00:04:08,799
+Bene, colleghi, adesso andiamo subito
+
+85
+00:04:05,000 --> 00:04:11,720
+all'ordine del giorno
+
+86
+00:04:08,799 --> 00:04:13,319
+e che è
+
+87
+00:04:11,720 --> 00:04:15,439
+questo
+
+88
+00:04:13,319 --> 00:04:16,680
+parere.
+
+89
+00:04:15,439 --> 00:04:20,079
+La commissione statuto a
+
+90
+00:04:16,680 --> 00:04:24,800
+la commissione statuto se può prendere
+
+91
+00:04:20,079 --> 00:04:26,320
+posto ai banchi della commissione
+
+92
+00:04:24,800 --> 00:04:31,199
+insieme
+
+93
+00:04:26,320 --> 00:04:31,199
+al presidente della commissione statuto
+
+94
+00:04:37,400 --> 00:04:43,560
+e presidente Lombardo
+
+95
+00:04:39,639 --> 00:04:47,199
+la invito a fare la relazione
+
+96
+00:04:43,560 --> 00:04:50,039
+sul parere che l'aula oggi dovrà dare.
+
+97
+00:04:47,199 --> 00:04:52,560
+Prego, presidente Lombardo.
+
+98
+00:04:50,039 --> 00:04:55,280
+Grazie presidente.
+
+99
+00:04:52,560 --> 00:04:57,320
+Onorevoli colleghi, il presidente della
+
+100
+00:04:55,280 --> 00:05:00,120
+giunta regionale ha trasmesso
+
+101
+00:04:57,320 --> 00:05:02,120
+all'Assemblea Regionale Siciliana, ai
+
+102
+00:05:00,120 --> 00:05:06,280
+sensi dell'articolo 15 della legge
+
+103
+00:05:02,120 --> 00:05:09,400
+regionale 28 ottobre 2020 numero 26 la
+
+104
+00:05:06,280 --> 00:05:14,440
+deliberazione numero 327 dell'11
+
+105
+00:05:09,400 --> 00:05:16,440
+settembre 2026 regante schema di decreto
+
+106
+00:05:14,440 --> 00:05:19,240
+norme di attuazione dello statuto della
+
+107
+00:05:16,440 --> 00:05:21,120
+Regione Siciliana reganti modifiche al
+
+108
+00:05:19,240 --> 00:05:24,160
+decreto del presidente della Repubblica
+
+109
+00:05:21,120 --> 00:05:26,919
+30 agosto 1975
+
+110
+00:05:24,160 --> 00:05:29,280
+numero 636
+
+111
+00:05:26,919 --> 00:05:31,759
+in materia di pubblica beneficenza ed
+
+112
+00:05:29,280 --> 00:05:34,000
+opere pie. apprezzamento.
+
+113
+00:05:31,759 --> 00:05:37,680
+L'articolo 15 comma1 della legge
+
+114
+00:05:34,000 --> 00:05:40,039
+regionale numero 26 del 2020 stabilisce
+
+115
+00:05:37,680 --> 00:05:42,800
+che le deliberazioni di giunta regionale
+
+116
+00:05:40,039 --> 00:05:45,280
+reganti schemi di norme di attuazione
+
+117
+00:05:42,800 --> 00:05:47,199
+dello statuto prima della trasmissione
+
+118
+00:05:45,280 --> 00:05:50,199
+alla commissione paritetica prevista
+
+119
+00:05:47,199 --> 00:05:51,919
+dall'articolo 43 dello statuto siano
+
+120
+00:05:50,199 --> 00:05:55,080
+sottoposti all'Assemblea regionale
+
+121
+00:05:51,919 --> 00:05:56,919
+siciliana che esprime il proprio parere
+
+122
+00:05:55,080 --> 00:05:59,800
+previa istruttoria della commissione
+
+123
+00:05:56,919 --> 00:06:01,600
+competente entro 30 giorni dalla
+
+124
+00:05:59,800 --> 00:06:03,880
+relativa assegnazione da parte del
+
+125
+00:06:01,600 --> 00:06:05,720
+presidente dell'assemblea.
+
+126
+00:06:03,880 --> 00:06:08,639
+A esenza della previsione da ultimo
+
+127
+00:06:05,720 --> 00:06:10,960
+citata, lo schema di decreto è stato
+
+128
+00:06:08,639 --> 00:06:13,319
+trasmesso alla commissione parlamentare
+
+129
+00:06:10,960 --> 00:06:15,800
+speciale per l'esame dei disegni di
+
+130
+00:06:13,319 --> 00:06:17,720
+legge di modifica dello statuto, della
+
+131
+00:06:15,800 --> 00:06:19,639
+legge statutaria e delle proposte di
+
+132
+00:06:17,720 --> 00:06:22,560
+norme di attuazione da parte del governo
+
+133
+00:06:19,639 --> 00:06:24,800
+regionale commissione statuto che ha
+
+134
+00:06:22,560 --> 00:06:30,080
+svolto l'istruttoria nelle sedute numero
+
+135
+00:06:24,800 --> 00:06:34,000
+39 del 30 settembre 2026 e numero 40 del
+
+136
+00:06:30,080 --> 00:06:36,319
+6 ottobre 2026 prendendo atto nella
+
+137
+00:06:34,000 --> 00:06:38,880
+prima delle due sedute
+
+138
+00:06:36,319 --> 00:06:41,520
+del parere favorevole, nel frattempo
+
+139
+00:06:38,880 --> 00:06:44,000
+espresso dalla prima commissione Affari
+
+140
+00:06:41,520 --> 00:06:49,360
+istituzionali nel corso della seduta
+
+141
+00:06:44,000 --> 00:06:51,680
+numero 282 del 23 settembre 2026.
+
+142
+00:06:49,360 --> 00:06:54,080
+La modifica proposta interviene sul
+
+143
+00:06:51,680 --> 00:06:59,919
+decreto del Presidente della Repubblica
+
+144
+00:06:54,080 --> 00:07:02,120
+30 agosto 1975 numero 636
+
+145
+00:06:59,919 --> 00:07:05,160
+regante norme di attuazione dello
+
+146
+00:07:02,120 --> 00:07:07,560
+Statuto della Regione Siciliana in in
+
+147
+00:07:05,160 --> 00:07:09,160
+materia di pubblica beneficenza ed
+
+148
+00:07:07,560 --> 00:07:11,039
+opere.
+
+149
+00:07:09,160 --> 00:07:14,199
+Al fine di inquadrare la proposta di
+
+150
+00:07:11,039 --> 00:07:19,240
+modifica si rammenta che l'articolo 1
+
+151
+00:07:14,199 --> 00:07:21,800
+del citato DPR numero 636 1975
+
+152
+00:07:19,240 --> 00:07:25,000
+ha trasferito agli organi della regione
+
+153
+00:07:21,800 --> 00:07:26,520
+le funzioni
+
+154
+00:07:25,000 --> 00:07:28,520
+amministrative
+
+155
+00:07:26,520 --> 00:07:30,560
+precedentemente attribuite agli organi
+
+156
+00:07:28,520 --> 00:07:33,639
+centrali e periferici dello Stato in
+
+157
+00:07:30,560 --> 00:07:35,240
+materia di ordinamento e di controllo
+
+158
+00:07:33,639 --> 00:07:37,879
+sulle istituzioni pubbliche di
+
+159
+00:07:35,240 --> 00:07:39,879
+assistenza e beneficenza e sugli enti
+
+160
+00:07:37,879 --> 00:07:42,560
+comunali di assistenza operante nel
+
+161
+00:07:39,879 --> 00:07:45,960
+territorio della Sicilia. Tra queste
+
+162
+00:07:42,560 --> 00:07:48,240
+funzione il secondo comma lettera C
+
+163
+00:07:45,960 --> 00:07:50,919
+dell'articolo 1, cita l'autorizzazione
+
+164
+00:07:48,240 --> 00:07:53,960
+agli enti assistenziali ad accettare
+
+165
+00:07:50,919 --> 00:07:57,039
+lasciti e donazione ed acquistare beni
+
+166
+00:07:53,960 --> 00:08:00,319
+immobili. Inoltre, il quinto e ultimo
+
+167
+00:07:57,039 --> 00:08:03,080
+comma del medesimo articolo 1 stabilisce
+
+168
+00:08:00,319 --> 00:08:04,960
+che resta fermo l'obbligo di procedere
+
+169
+00:08:03,080 --> 00:08:07,560
+previo parere del Consiglio di Giustizia
+
+170
+00:08:04,960 --> 00:08:09,280
+Amministrativa per la Regione Siciliana
+
+171
+00:08:07,560 --> 00:08:12,159
+per i provvedimenti concernenti il
+
+172
+00:08:09,280 --> 00:08:14,199
+riconoscimento, la fusione e la
+
+173
+00:08:12,159 --> 00:08:16,360
+soppressione delle istituzioni e degli
+
+174
+00:08:14,199 --> 00:08:18,440
+enti, nonché l'approvazione dei
+
+175
+00:08:16,360 --> 00:08:20,360
+rispettivi statuti e le loro
+
+176
+00:08:18,440 --> 00:08:23,240
+modificazioni e l'autorizzazione agli
+
+177
+00:08:20,360 --> 00:08:24,960
+enti medesimi ad accettare lasciti e
+
+178
+00:08:23,240 --> 00:08:27,800
+donazione e
+
+179
+00:08:24,960 --> 00:08:30,440
+acquistare beni immobile. Lo schema di
+
+180
+00:08:27,800 --> 00:08:33,120
+norma di attuazione in esame propone
+
+181
+00:08:30,440 --> 00:08:36,839
+l'abrogazione delle due disposizioni del
+
+182
+00:08:33,120 --> 00:08:39,919
+DPR numero 636175
+
+183
+00:08:36,839 --> 00:08:43,440
+appena richiamate, ossia l'articolo 1
+
+184
+00:08:39,919 --> 00:08:45,519
+seconda comma lettera C e quinto comma
+
+185
+00:08:43,440 --> 00:08:48,080
+che dà un raffronto con le normativa
+
+186
+00:08:45,519 --> 00:08:49,839
+statale si ritengono non in linea con i
+
+187
+00:08:48,080 --> 00:08:52,880
+principi di snellezza e rapidità
+
+188
+00:08:49,839 --> 00:08:55,080
+dell'azione amministrativa
+
+189
+00:08:52,880 --> 00:08:57,399
+nella legislazione nazionale
+
+190
+00:08:55,080 --> 00:09:01,560
+dall'entrata in vigore della legge 15
+
+191
+00:08:57,399 --> 00:09:04,000
+maggio 1997 numero 127.
+
+192
+00:09:01,560 --> 00:09:05,920
+Non è più previsto che gli enti, Ivi
+
+193
+00:09:04,000 --> 00:09:08,680
+comprese le istituzioni pubbliche di
+
+194
+00:09:05,920 --> 00:09:10,399
+assistenza e beneficenza, acquisiscono
+
+195
+00:09:08,680 --> 00:09:12,519
+l'autorizzazione per l'acquisto di
+
+196
+00:09:10,399 --> 00:09:16,519
+immobili o per l'accettazione di
+
+197
+00:09:12,519 --> 00:09:18,000
+donazioni, eredità e legati, così come
+
+198
+00:09:16,519 --> 00:09:19,839
+non risulta più necessaria
+
+199
+00:09:18,000 --> 00:09:22,600
+l'acquisizione del parere del Consiglio
+
+200
+00:09:19,839 --> 00:09:24,800
+di Stato se non nei casi espressamente
+
+201
+00:09:22,600 --> 00:09:28,440
+prevista dell'articolo 25 della citata
+
+202
+00:09:24,800 --> 00:09:28,440
+legge numero 127.
+
+203
+00:09:29,360 --> 00:09:33,240
+Tale normativa statale, tuttavia non
+
+204
+00:09:31,519 --> 00:09:35,880
+dispiega effetti nell'ordinamento
+
+205
+00:09:33,240 --> 00:09:37,680
+regionale siciliano in considerazione
+
+206
+00:09:35,880 --> 00:09:40,320
+della peculiare posizione che le
+
+207
+00:09:37,680 --> 00:09:43,000
+disposizioni di attuazione dello statuto
+
+208
+00:09:40,320 --> 00:09:44,560
+occupano nella gerarchia delle fonti e
+
+209
+00:09:43,000 --> 00:09:47,320
+della peculiare procedura di
+
+210
+00:09:44,560 --> 00:09:49,079
+approvazione che la caratterizza.
+
+211
+00:09:47,320 --> 00:09:51,600
+Alla luce di tale ricostruzione,
+
+212
+00:09:49,079 --> 00:09:53,440
+pertanto e dell'istruttoria svolta, la
+
+213
+00:09:51,600 --> 00:09:55,399
+commissione parlamentare speciale per
+
+214
+00:09:53,440 --> 00:09:57,839
+l'esame dei disegni di legge di modifica
+
+215
+00:09:55,399 --> 00:09:59,640
+dello statuto, della legge statutaria e
+
+216
+00:09:57,839 --> 00:10:01,680
+delle proposte di norme di attuazione da
+
+217
+00:09:59,640 --> 00:10:03,519
+parte del governo regionale ha
+
+218
+00:10:01,680 --> 00:10:05,600
+deliberato di proporre all'aula di
+
+219
+00:10:03,519 --> 00:10:08,399
+esprimere parere favorevole sullo schema
+
+220
+00:10:05,600 --> 00:10:10,880
+di decreto norme di attuazione dello
+
+221
+00:10:08,399 --> 00:10:12,399
+statuto della Regione Siciliana recante
+
+222
+00:10:10,880 --> 00:10:16,040
+modifiche del decreto del presidente
+
+223
+00:10:12,399 --> 00:10:18,880
+della Repubblica 30 agosto 1975
+
+224
+00:10:16,040 --> 00:10:22,279
+numero 636 in materia di pubblica
+
+225
+00:10:18,880 --> 00:10:25,000
+beneficenza ed opere pie apprezzamento
+
+226
+00:10:22,279 --> 00:10:28,880
+deliberazione numero 327
+
+227
+00:10:25,000 --> 00:10:30,640
+dell'11 settembre 2026. Nel dettaglio lo
+
+228
+00:10:28,880 --> 00:10:33,399
+schema di modifica delle norme di
+
+229
+00:10:30,640 --> 00:10:37,680
+attuazione è composto da due articoli.
+
+230
+00:10:33,399 --> 00:10:40,120
+L'articolo 1 contiene due commi. Comma 1
+
+231
+00:10:37,680 --> 00:10:42,160
+dispone la soppressione della lettera C
+
+232
+00:10:40,120 --> 00:10:45,440
+del secondo comma dell'articolo 1 del
+
+233
+00:10:42,160 --> 00:10:47,480
+DPR 30 agosto 1975
+
+234
+00:10:45,440 --> 00:10:49,480
+numero 636,
+
+235
+00:10:47,480 --> 00:10:51,040
+così eliminando la previsione secondo
+
+236
+00:10:49,480 --> 00:10:53,079
+cui gli enti assistenziali debbono
+
+237
+00:10:51,040 --> 00:10:55,360
+acquisire l'autorizzazione prima
+
+238
+00:10:53,079 --> 00:10:58,040
+dell'accettazione di lascio di donazione
+
+239
+00:10:55,360 --> 00:11:00,560
+in caso di acquisto di beni immobile. Il
+
+240
+00:10:58,040 --> 00:11:03,079
+comma 2 prevede la soppressione del
+
+241
+00:11:00,560 --> 00:11:04,760
+quinto comma del medesimo articolo 1,
+
+242
+00:11:03,079 --> 00:11:06,360
+così determinando il venir meno
+
+243
+00:11:04,760 --> 00:11:08,440
+dell'obbligo di procedere il previo
+
+244
+00:11:06,360 --> 00:11:11,040
+parere del Consiglio di Giustizia
+
+245
+00:11:08,440 --> 00:11:12,959
+Amministrativa per la Regione Siciliana
+
+246
+00:11:11,040 --> 00:11:15,279
+per tutti i provvedimenti concernenti il
+
+247
+00:11:12,959 --> 00:11:17,200
+riconoscimento, la fusione e la
+
+248
+00:11:15,279 --> 00:11:19,240
+soppressione delle istituzioni e degli
+
+249
+00:11:17,200 --> 00:11:21,399
+enti, nonché l'approvazione dei
+
+250
+00:11:19,240 --> 00:11:23,680
+rispettivi statuti e le loro
+
+251
+00:11:21,399 --> 00:11:26,399
+modificazioni e l'autorizzazione agli
+
+252
+00:11:23,680 --> 00:11:29,680
+enti medesimi ad accettare lascita e
+
+253
+00:11:26,399 --> 00:11:32,680
+donazione e ad acquistare beni immobile.
+
+254
+00:11:29,680 --> 00:11:34,600
+L'articolo 2 invece contiene le formule
+
+255
+00:11:32,680 --> 00:11:36,399
+finali relative alla pubblicazione del
+
+256
+00:11:34,600 --> 00:11:38,480
+decreto nella Gazzetta Ufficiale della
+
+257
+00:11:36,399 --> 00:11:40,160
+Repubblica Italiana e all'obbligo di
+
+258
+00:11:38,480 --> 00:11:43,600
+osservanza.
+
+259
+00:11:40,160 --> 00:11:43,600
+Grazie presidente.
+
+260
+00:11:50,519 --> 00:11:55,120
+Grazie al presidente Lombardo. Apriamo
+
+261
+00:11:53,120 --> 00:11:58,839
+la discussione generale. C'è l'onorevole
+
+262
+00:11:55,120 --> 00:12:00,399
+Sunseri e poi l'onorevole Varrica. Se
+
+263
+00:11:58,839 --> 00:12:02,399
+qualcuno della maggioranza vuole
+
+264
+00:12:00,399 --> 00:12:04,560
+intervenire.
+
+265
+00:12:02,399 --> 00:12:06,959
+Eh, prego, onorevole Sunseri e poi
+
+266
+00:12:04,560 --> 00:12:08,959
+chiudo la discussione generale. Prego.
+
+267
+00:12:06,959 --> 00:12:10,360
+No, io Grazie presidente. sull'ordine
+
+268
+00:12:08,959 --> 00:12:12,760
+dei lavori, come avevo chiesto
+
+269
+00:12:10,360 --> 00:12:15,000
+semplicemente perché
+
+270
+00:12:12,760 --> 00:12:16,760
+premesso che mi aspettavo comunque un
+
+271
+00:12:15,000 --> 00:12:19,399
+intervento da parte del governo, perché
+
+272
+00:12:16,760 --> 00:12:20,800
+viene da parte del governo il testo,
+
+273
+00:12:19,399 --> 00:12:22,440
+quindi diciamo al di là del presidente
+
+274
+00:12:20,800 --> 00:12:24,880
+della commissione statuto che ringrazio
+
+275
+00:12:22,440 --> 00:12:27,600
+per così puntigliosa e dettagliata
+
+276
+00:12:24,880 --> 00:12:30,519
+relazione che ha permesso anche ai meno
+
+277
+00:12:27,600 --> 00:12:34,040
+attenti, diciamo, sul del testo di
+
+278
+00:12:30,519 --> 00:12:35,519
+averne piena conoscenza e ho capito che
+
+279
+00:12:34,040 --> 00:12:37,040
+però all'interno di questo documento che
+
+280
+00:12:35,519 --> 00:12:38,360
+dovremmo votare oggi non c'è né niente,
+
+281
+00:12:37,040 --> 00:12:41,720
+non ci sono fit, non c'è niente. Niente,
+
+282
+00:12:38,360 --> 00:12:43,639
+perché la maggioranza non c'è assente e
+
+283
+00:12:41,720 --> 00:12:45,360
+quindi quando non ci sono risorse in
+
+284
+00:12:43,639 --> 00:12:48,839
+questa assemblea poi si ritrova solo la
+
+285
+00:12:45,360 --> 00:12:52,560
+minoranza qui a essere presente e a
+
+286
+00:12:48,839 --> 00:12:55,639
+valutare l'eventuale voto necessario. Mi
+
+287
+00:12:52,560 --> 00:12:58,079
+pare di capire. Allora, per evitare,
+
+288
+00:12:55,639 --> 00:13:00,279
+diciamo, di alzare i tesserini e non
+
+289
+00:12:58,079 --> 00:13:03,480
+dare e non permettere ovviamente il voto
+
+290
+00:13:00,279 --> 00:13:06,079
+oggi le chiederei di chiedere al governo
+
+291
+00:13:03,480 --> 00:13:07,360
+o ai capigruppi di maggioranza che
+
+292
+00:13:06,079 --> 00:13:10,560
+probabilmente dopo la capigruppo hanno
+
+293
+00:13:07,360 --> 00:13:12,800
+abbandonato l'aula, di eh far rientrare
+
+294
+00:13:10,560 --> 00:13:14,720
+i colleghi e prendersi la responsabilità
+
+295
+00:13:12,800 --> 00:13:17,320
+di un voto che il governo chiede, se ci
+
+296
+00:13:14,720 --> 00:13:19,560
+sono ovviamente in palazzo si figuri e
+
+297
+00:13:17,320 --> 00:13:21,079
+eh perché diciamo sono dei provenienti
+
+298
+00:13:19,560 --> 00:13:23,720
+del governo e non ci può essere
+
+299
+00:13:21,079 --> 00:13:26,000
+solamente la presenza quando ci sono le
+
+300
+00:13:23,720 --> 00:13:27,839
+variazioni di bilancio o la finanziaria,
+
+301
+00:13:26,000 --> 00:13:29,959
+anche davanti agli atti che il governo
+
+302
+00:13:27,839 --> 00:13:31,600
+presenta necessari, serve che la
+
+303
+00:13:29,959 --> 00:13:33,199
+maggioranza sia presente, altrimenti,
+
+304
+00:13:31,600 --> 00:13:34,880
+diciamo, la richiesta di responsabilità
+
+305
+00:13:33,199 --> 00:13:37,360
+nei confronti delle minoranze, diciamo,
+
+306
+00:13:34,880 --> 00:13:38,360
+viene meno perché altrimenti, no? Sì,
+
+307
+00:13:37,360 --> 00:13:41,240
+potremmo anche bocciarlo
+
+308
+00:13:38,360 --> 00:13:44,639
+volontariamente, ma eh preferirei
+
+309
+00:13:41,240 --> 00:13:46,560
+evitare alzare i tesserini. Grazie.
+
+310
+00:13:44,639 --> 00:13:48,639
+Grazie onorevole Sunseri. Onorevole
+
+311
+00:13:46,560 --> 00:13:50,560
+Varrica. Sì, grazie presidente. Io
+
+312
+00:13:48,639 --> 00:13:52,839
+chiaramente mi allineo alla richiesta
+
+313
+00:13:50,560 --> 00:13:55,800
+del collega Sunseri sulla discussione
+
+314
+00:13:52,839 --> 00:13:57,279
+generale. Sarò brevissimo. Eh, questa è
+
+315
+00:13:55,800 --> 00:13:59,440
+chiaramente un, diciamo, un
+
+316
+00:13:57,279 --> 00:14:02,399
+provvedimento del tutto secondario,
+
+317
+00:13:59,440 --> 00:14:03,800
+risibile, non dico inutile, ma diciamo
+
+318
+00:14:02,399 --> 00:14:06,440
+veramente poco importante. La
+
+319
+00:14:03,800 --> 00:14:09,279
+Commissione Statuto, di cui mi onoro di
+
+320
+00:14:06,440 --> 00:14:11,600
+fare parte era partita con un programma
+
+321
+00:14:09,279 --> 00:14:14,040
+di lavoro, diciamo, molto importante.
+
+322
+00:14:11,600 --> 00:14:16,839
+Pensavamo di ragionare su addirittura su
+
+323
+00:14:14,040 --> 00:14:19,000
+una modifica puntuale dello statuto, una
+
+324
+00:14:16,839 --> 00:14:21,279
+serie di audizioni. Poi sai che cosa è
+
+325
+00:14:19,000 --> 00:14:23,720
+successo, presidente?
+
+326
+00:14:21,279 --> 00:14:25,279
+hanno arrestato il presidente
+
+327
+00:14:23,720 --> 00:14:28,120
+che è un componente di Forza Italia, lo
+
+328
+00:14:25,279 --> 00:14:29,800
+hanno arrestato e purtroppo ringrazio,
+
+329
+00:14:28,120 --> 00:14:31,720
+anzi adesso il presidente Lombardo, il
+
+330
+00:14:29,800 --> 00:14:34,000
+vicepresidente Lombardo, ora presidente
+
+331
+00:14:31,720 --> 00:14:38,160
+in pectore che ha portato avanti,
+
+332
+00:14:34,000 --> 00:14:39,720
+diciamo, i sì, quello che diciamo ha
+
+333
+00:14:38,160 --> 00:14:42,519
+portato avanti comunque i lavori
+
+334
+00:14:39,720 --> 00:14:45,959
+ordinari dopo una fase chiaramente di eh
+
+335
+00:14:42,519 --> 00:14:50,199
+di di freno a causa di questa di questa
+
+336
+00:14:45,959 --> 00:14:52,120
+brutta vicenda eh giudiziaria che eh
+
+337
+00:14:50,199 --> 00:14:54,120
+diciamo è singolare, tra virgolette,
+
+338
+00:14:52,120 --> 00:14:56,959
+chiaramente per ora ha un impianto del
+
+339
+00:14:54,120 --> 00:14:58,040
+tutto investigativo, però riguarda e mi
+
+340
+00:14:56,959 --> 00:15:01,680
+ricollego a quello che ha detto il
+
+341
+00:14:58,040 --> 00:15:03,800
+collega Sunseri, leggo testualmente, il
+
+342
+00:15:01,680 --> 00:15:05,360
+deputato in questione avrebbe ottenuto
+
+343
+00:15:03,800 --> 00:15:06,800
+€12.000 000 per favorire il
+
+344
+00:15:05,360 --> 00:15:09,920
+finanziamento ad un'associazione in
+
+345
+00:15:06,800 --> 00:15:12,040
+Sena. Quindi, diciamo, questo schema si
+
+346
+00:15:09,920 --> 00:15:13,440
+sarebbe verificato, poi lo proverà la
+
+347
+00:15:12,040 --> 00:15:15,320
+procura, il tribunale, questo non ci
+
+348
+00:15:13,440 --> 00:15:18,880
+riguarda, nell'ambito di una delle
+
+349
+00:15:15,320 --> 00:15:22,079
+cosiddette mancette o i cosiddetti fit o
+
+350
+00:15:18,880 --> 00:15:24,560
+le altre cose e che purtroppo si sono
+
+351
+00:15:22,079 --> 00:15:26,000
+verificate e sembra si continueranno a
+
+352
+00:15:24,560 --> 00:15:29,199
+verificare perché la legge di bilancio
+
+353
+00:15:26,000 --> 00:15:31,399
+sembra che voglia adesso rinforzare con
+
+354
+00:15:29,199 --> 00:15:35,040
+altri 50 milioni di euro o più questo
+
+355
+00:15:31,399 --> 00:15:37,680
+genere di di finanziamenti, per cui noi
+
+356
+00:15:35,040 --> 00:15:38,880
+siamo veramente stupiti. di questo
+
+357
+00:15:37,680 --> 00:15:42,079
+atteggiamento. Peraltro la maggioranza
+
+358
+00:15:38,880 --> 00:15:46,639
+neanche c'è, non saremo noi comunque ad
+
+359
+00:15:42,079 --> 00:15:46,639
+approvare questo provvedimento. Grazie.
+
+360
+00:15:47,360 --> 00:15:52,440
+Grazie collega Varrica. Ha chiesto di
+
+361
+00:15:50,120 --> 00:15:54,000
+intervenire l'onorevole Safina. Prego,
+
+362
+00:15:52,440 --> 00:15:56,600
+onorevole.
+
+363
+00:15:54,000 --> 00:15:58,600
+Grazie presidente. Onorevoli colleghi,
+
+364
+00:15:56,600 --> 00:16:00,759
+come diceva il collega Varrica, questo è
+
+365
+00:15:58,600 --> 00:16:02,639
+un provvedimento di natura secondaria ed
+
+366
+00:16:00,759 --> 00:16:05,240
+è di natura secondaria anche rispetto al
+
+367
+00:16:02,639 --> 00:16:09,079
+tema che tratta, che è quello delle IPA.
+
+368
+00:16:05,240 --> 00:16:11,160
+Il governo da più tempo aveva annunziato
+
+369
+00:16:09,079 --> 00:16:13,160
+che avrebbe presentato un disegno di
+
+370
+00:16:11,160 --> 00:16:15,839
+legge di riforma di riordino delle IPA
+
+371
+00:16:13,160 --> 00:16:18,759
+che ricorda a me stesso, assessore, sono
+
+372
+00:16:15,839 --> 00:16:21,519
+in crisi, oltre 60 sono prossimi alla
+
+373
+00:16:18,759 --> 00:16:22,839
+liquidazione. Il patrimonio è
+
+374
+00:16:21,519 --> 00:16:25,240
+sostanzialmente bloccato da
+
+375
+00:16:22,839 --> 00:16:27,720
+pignoramenti. I dipendenti, quelli che
+
+376
+00:16:25,240 --> 00:16:29,600
+non sono passati ad altri enti, sono
+
+377
+00:16:27,720 --> 00:16:31,160
+creditori di migliaia e migliaia
+
+378
+00:16:29,600 --> 00:16:34,120
+migliaia di euro di stipendi. Non
+
+379
+00:16:31,160 --> 00:16:35,959
+riusciamo loro a dare alcuna risposta.
+
+380
+00:16:34,120 --> 00:16:37,800
+Nel frattempo
+
+381
+00:16:35,959 --> 00:16:40,000
+alcuni deputati della maggioranza che
+
+382
+00:16:37,800 --> 00:16:42,560
+oggi, come dicevano nei colleghi, è
+
+383
+00:16:40,000 --> 00:16:45,000
+assolutamente assente e quindi questo
+
+384
+00:16:42,560 --> 00:16:46,800
+provvedimento non penso che potrà essere
+
+385
+00:16:45,000 --> 00:16:49,560
+approvato oggi, che il parere l'aula lo
+
+386
+00:16:46,800 --> 00:16:51,720
+potrà esprimere. Ehm si lasciano andare
+
+387
+00:16:49,560 --> 00:16:52,959
+a dichiarazioni dicendo daremo il
+
+388
+00:16:51,720 --> 00:16:55,199
+patrimonio a questi, daremo il
+
+389
+00:16:52,959 --> 00:16:57,519
+patrimonio ad altri, come se le ragioni
+
+390
+00:16:55,199 --> 00:17:00,360
+dei creditori nella cessione del
+
+391
+00:16:57,519 --> 00:17:04,760
+patrimonio delle IPA non valero nulla.
+
+392
+00:17:00,360 --> 00:17:06,439
+Ora, purtroppo, eh questa è l'ennesima
+
+393
+00:17:04,760 --> 00:17:08,520
+occasione persa di questa legislatura,
+
+394
+00:17:06,439 --> 00:17:12,319
+di un governo che non ha approvato
+
+395
+00:17:08,520 --> 00:17:14,520
+alcuna riforma, riforma che invece
+
+396
+00:17:12,319 --> 00:17:17,919
+sarebbe necessaria perché le IPA
+
+397
+00:17:14,520 --> 00:17:19,360
+potrebbero svolgere eh
+
+398
+00:17:17,919 --> 00:17:20,880
+nel nostro territorio, nella nostra
+
+399
+00:17:19,360 --> 00:17:23,480
+regione, un ruolo fondamentale a tutela
+
+400
+00:17:20,880 --> 00:17:24,959
+delle fragilità che che riguardano le
+
+401
+00:17:23,480 --> 00:17:26,839
+cittadine e cittadini e invece le
+
+402
+00:17:24,959 --> 00:17:29,520
+abbiamo lasciate ancora una volta per
+
+403
+00:17:26,839 --> 00:17:31,760
+altri 5 anni al loro destino perché
+
+404
+00:17:29,520 --> 00:17:36,039
+diciamo ce l'ho approvata, diciamo, la
+
+405
+00:17:31,760 --> 00:17:38,679
+legge di stabilità con o senza fit, ma i
+
+406
+00:17:36,039 --> 00:17:40,960
+fit voi, diciamo, li rimetterete e li
+
+407
+00:17:38,679 --> 00:17:42,600
+rimpinguerete ulteriormente. La
+
+408
+00:17:40,960 --> 00:17:47,000
+legislatura è finita e purtroppo
+
+409
+00:17:42,600 --> 00:17:47,000
+un'altra occasione è andata sprecata.
+
+410
+00:17:48,280 --> 00:17:53,799
+Concedo dellonorevole Cirone Cipolla,
+
+411
+00:17:50,480 --> 00:17:57,000
+comunico il congedo dell'onorevole
+
+412
+00:17:53,799 --> 00:17:58,640
+Cirrone Cipolla. Vogliono intervenire.
+
+413
+00:17:57,000 --> 00:18:00,440
+Ho visto l'onorevole Giambona e poi
+
+414
+00:17:58,640 --> 00:18:03,200
+l'onorevole Primavera. Prego, onorevole
+
+415
+00:18:00,440 --> 00:18:03,200
+Giambona.
+
+416
+00:18:04,440 --> 00:18:11,720
+Grazie presidente.
+
+417
+00:18:07,520 --> 00:18:13,480
+Beh, allora nel trattare questo
+
+418
+00:18:11,720 --> 00:18:16,080
+questa
+
+419
+00:18:13,480 --> 00:18:19,320
+risoluzione che necessita appunto il
+
+420
+00:18:16,080 --> 00:18:21,440
+parere del di tutta l'Assise, sarebbe
+
+421
+00:18:19,320 --> 00:18:24,200
+stato anche interessante avere un
+
+422
+00:18:21,440 --> 00:18:26,480
+confronto con il presidente della
+
+423
+00:18:24,200 --> 00:18:30,159
+regione
+
+424
+00:18:26,480 --> 00:18:31,919
+perché oggi nel parlare di norme di
+
+425
+00:18:30,159 --> 00:18:34,720
+attuazione dello statuto e avuto
+
+426
+00:18:31,919 --> 00:18:36,320
+riguardo a quello che è l'argomento
+
+427
+00:18:34,720 --> 00:18:38,360
+che oggi ci troviamo a discutere,
+
+428
+00:18:36,320 --> 00:18:41,039
+potremmo dire,
+
+429
+00:18:38,360 --> 00:18:43,720
+potremmo dire che la montagna ha
+
+430
+00:18:41,039 --> 00:18:45,320
+partorito il Topolino.
+
+431
+00:18:43,720 --> 00:18:48,480
+Dico questo perché il presidente della
+
+432
+00:18:45,320 --> 00:18:51,120
+Regione Schifani e tutto il governo
+
+433
+00:18:48,480 --> 00:18:53,720
+all'inizio della legislatura aveva
+
+434
+00:18:51,120 --> 00:18:57,200
+annunciato in maniera roboante
+
+435
+00:18:53,720 --> 00:19:01,600
+l'intenzione di mettere in campo una
+
+436
+00:18:57,200 --> 00:19:04,280
+serie di azioni per attuare quello che
+
+437
+00:19:01,600 --> 00:19:06,799
+in verità noi tutti sappiamo, che buona
+
+438
+00:19:04,280 --> 00:19:10,720
+parte dello Statuto Siciliano, per
+
+439
+00:19:06,799 --> 00:19:13,600
+quelli che sono, ecco, gli articoli più
+
+440
+00:19:10,720 --> 00:19:15,840
+rilevanti e faccio riferimento a quelli
+
+441
+00:19:13,600 --> 00:19:19,480
+che hanno fondamentalmente
+
+442
+00:19:15,840 --> 00:19:22,799
+eh le norme fanno riferimento a norme
+
+443
+00:19:19,480 --> 00:19:25,840
+finanziarie e fiscali, di fatto sono
+
+444
+00:19:22,799 --> 00:19:29,080
+assolutamente inattuate e mi riferisco
+
+445
+00:19:25,840 --> 00:19:32,120
+all'articolo 36 sulla potestà tributaria
+
+446
+00:19:29,080 --> 00:19:34,600
+e riscossione diretta sull'articolo 37
+
+447
+00:19:32,120 --> 00:19:37,679
+ovvero la tassazione delle imprese che
+
+448
+00:19:34,600 --> 00:19:39,600
+hanno sede legale fuori dalla Sicilia
+
+449
+00:19:37,679 --> 00:19:41,120
+sul Fondo di solidarietà nazionale e
+
+450
+00:19:39,600 --> 00:19:44,200
+sulle norme che riguardano il regime
+
+451
+00:19:41,120 --> 00:19:46,159
+doganale e valutario. Bene. Sottoscritto
+
+452
+00:19:44,200 --> 00:19:49,159
+che ha fatto parte della Commissione
+
+453
+00:19:46,159 --> 00:19:51,600
+Statuto, oggi registra che a distanza
+
+454
+00:19:49,159 --> 00:19:54,360
+oramai di 4 anni dalla sua istituzione
+
+455
+00:19:51,600 --> 00:19:58,080
+fondamentalmente i lavori si sono si
+
+456
+00:19:54,360 --> 00:20:00,480
+possono sintetizzare in due atti. uno
+
+457
+00:19:58,080 --> 00:20:02,080
+che ha visto fondamentalmente un'altra
+
+458
+00:20:00,480 --> 00:20:05,840
+norma di attuazione dello statuto,
+
+459
+00:20:02,080 --> 00:20:08,360
+ovvero in tema di pubblica sicurezza
+
+460
+00:20:05,840 --> 00:20:10,400
+volta a sburocratizzare
+
+461
+00:20:08,360 --> 00:20:12,559
+gli adempimenti per gli enti locali
+
+462
+00:20:10,400 --> 00:20:15,280
+siciliani nello svolgimento dei pubblici
+
+463
+00:20:12,559 --> 00:20:16,960
+spettacoli. Una norma che si attendeva
+
+464
+00:20:15,280 --> 00:20:20,280
+da decenni e che abbiamo fortemente
+
+465
+00:20:16,960 --> 00:20:22,960
+sostenuto, è questa che riguarda appunto
+
+466
+00:20:20,280 --> 00:20:26,159
+le IPA siciliane per un aspetto
+
+467
+00:20:22,960 --> 00:20:28,600
+specifico per un aspetto specifico che
+
+468
+00:20:26,159 --> 00:20:31,440
+riguarda le IPAB. e siciliane mi
+
+469
+00:20:28,600 --> 00:20:33,400
+aggiungono quell'altra situazione
+
+470
+00:20:31,440 --> 00:20:36,880
+assolutamente, ecco, io l'avevo rimossa
+
+471
+00:20:33,400 --> 00:20:38,559
+volutamente della norma sul deputato
+
+472
+00:20:36,880 --> 00:20:41,400
+supplente sulla quale noi abbiamo
+
+473
+00:20:38,559 --> 00:20:44,240
+rappresentato sempre e costantemente la
+
+474
+00:20:41,400 --> 00:20:47,720
+nostra la nostra contrarietà. Beh,
+
+475
+00:20:44,240 --> 00:20:49,919
+rimane, per così dire, eh da la
+
+476
+00:20:47,720 --> 00:20:51,480
+considerazione iniziale. Il governo
+
+477
+00:20:49,919 --> 00:20:54,360
+della regione dovrebbe venire qui a
+
+478
+00:20:51,480 --> 00:20:57,000
+dirci cosa intende fare su queste norme
+
+479
+00:20:54,360 --> 00:21:00,039
+e l'anno scorso e sempre il presidente
+
+480
+00:20:57,000 --> 00:21:03,400
+della regione con un comunicato stampa è
+
+481
+00:21:00,039 --> 00:21:06,000
+venuto qui a dirci che è possibile
+
+482
+00:21:03,400 --> 00:21:08,039
+portare avanti in Sicilia delle norme
+
+483
+00:21:06,000 --> 00:21:10,440
+sulla fiscalità di sviluppo. È stato
+
+484
+00:21:08,039 --> 00:21:13,240
+annunciato come un passo storico. Bene,
+
+485
+00:21:10,440 --> 00:21:15,440
+di concreto abbiamo visto ben poco e
+
+486
+00:21:13,240 --> 00:21:18,840
+oggi abbiamo questo Topolino, il
+
+487
+00:21:15,440 --> 00:21:21,720
+topolino che riguarda le IPA siciliane,
+
+488
+00:21:18,840 --> 00:21:24,440
+ma tratta solamente un piccolo aspetto
+
+489
+00:21:21,720 --> 00:21:26,880
+di un'enorme problematica, di un di un
+
+490
+00:21:24,440 --> 00:21:29,080
+problema, quello delle IPA, che il
+
+491
+00:21:26,880 --> 00:21:31,320
+governo e la sua maggioranza hanno
+
+492
+00:21:29,080 --> 00:21:33,640
+deciso letteralmente di abbandonare. Noi
+
+493
+00:21:31,320 --> 00:21:36,919
+abbiamo centinaia di lavoratori in giro
+
+494
+00:21:33,640 --> 00:21:38,840
+per la per la Sicilia che non ottengono
+
+495
+00:21:36,919 --> 00:21:41,640
+retribuzioni da anni, che non ottengono
+
+496
+00:21:38,840 --> 00:21:45,240
+il pagamento dei contributi oramai da
+
+497
+00:21:41,640 --> 00:21:48,200
+anni, il cui futuro è assolutamente
+
+498
+00:21:45,240 --> 00:21:51,679
+incerto e per il quale attendiamo una
+
+499
+00:21:48,200 --> 00:21:54,320
+una riforma. a più riprese annunciata e
+
+500
+00:21:51,679 --> 00:21:57,039
+l'assessore al lavoro l'anno scorso
+
+501
+00:21:54,320 --> 00:21:59,840
+portò in commissione una proposta
+
+502
+00:21:57,039 --> 00:22:02,120
+assolutamente non accolta dal
+
+503
+00:21:59,840 --> 00:22:04,279
+sottoscritto de altre dalle altre forze
+
+504
+00:22:02,120 --> 00:22:06,679
+di minoranza che aveva di fatto
+
+505
+00:22:04,279 --> 00:22:09,240
+l'obiettivo di lasciare sull'astrico
+
+506
+00:22:06,679 --> 00:22:11,679
+tutti quelli che sono i dipendenti delle
+
+507
+00:22:09,240 --> 00:22:13,240
+IPA in situazioni di difficoltà
+
+508
+00:22:11,679 --> 00:22:15,159
+economico-finanziaria che sono
+
+509
+00:22:13,240 --> 00:22:17,720
+fondamentalmente la maggior parte. Ecco
+
+510
+00:22:15,159 --> 00:22:20,360
+perché noi siamo nuovamente al punto di
+
+511
+00:22:17,720 --> 00:22:23,760
+partenza. chiedere al governo che cosa
+
+512
+00:22:20,360 --> 00:22:25,960
+intende fare. Oggi siamo qui, e lo hanno
+
+513
+00:22:23,760 --> 00:22:28,880
+detto anche i colleghi, con grande senso
+
+514
+00:22:25,960 --> 00:22:31,240
+di responsabilità perché riteniamo che
+
+515
+00:22:28,880 --> 00:22:33,360
+comunque, come abbiamo fatto del resto
+
+516
+00:22:31,240 --> 00:22:36,640
+ieri con la con l'approvazione della
+
+517
+00:22:33,360 --> 00:22:39,600
+norma sulla dirigenza regionale che la
+
+518
+00:22:36,640 --> 00:22:41,279
+si attendeva da oltre 25 anni, con
+
+519
+00:22:39,600 --> 00:22:43,360
+grande senso di responsabilità abbiamo
+
+520
+00:22:41,279 --> 00:22:46,159
+portato avanti questo percorso, ma
+
+521
+00:22:43,360 --> 00:22:49,080
+riteniamo che la medesima responsabilità
+
+522
+00:22:46,159 --> 00:22:51,559
+la debbono avere anche i colleghi di
+
+523
+00:22:49,080 --> 00:22:53,679
+maggioranza che devono essere qui a
+
+524
+00:22:51,559 --> 00:22:56,840
+rappresentare la volontà di modificarlo
+
+525
+00:22:53,679 --> 00:22:58,880
+questo questo statuto con l'approvazione
+
+526
+00:22:56,840 --> 00:23:01,159
+di questo parere. Quindi vorremmo capire
+
+527
+00:22:58,880 --> 00:23:03,320
+e concludo presidente dell'assemblea se
+
+528
+00:23:01,159 --> 00:23:04,640
+c'è la volontà e c'è la convergenza
+
+529
+00:23:03,320 --> 00:23:06,320
+degli altri partiti politici
+
+530
+00:23:04,640 --> 00:23:09,400
+nell'affrontare
+
+531
+00:23:06,320 --> 00:23:11,919
+sinergicamente la discussione e poi se
+
+532
+00:23:09,400 --> 00:23:13,279
+del caso l'approvazione del parere sulla
+
+533
+00:23:11,919 --> 00:23:14,360
+norma di attuazione dello statuto.
+
+534
+00:23:13,279 --> 00:23:16,039
+Grazie.
+
+535
+00:23:14,360 --> 00:23:17,640
+Grazie onorevole Giambona ha chiesto
+
+536
+00:23:16,039 --> 00:23:19,679
+intervenire l'onorevole Primavera. Prego
+
+537
+00:23:17,640 --> 00:23:22,880
+onorevole.
+
+538
+00:23:19,679 --> 00:23:27,840
+Grazie, signor presidente.
+
+539
+00:23:22,880 --> 00:23:29,600
+Il parere che oggi quest'aula è chiamata
+
+540
+00:23:27,840 --> 00:23:32,440
+a votare
+
+541
+00:23:29,600 --> 00:23:35,480
+riguarda una norma di attuazione
+
+542
+00:23:32,440 --> 00:23:39,240
+statutaria che prevede una procedura,
+
+543
+00:23:35,480 --> 00:23:44,240
+per così dire, aggravata
+
+544
+00:23:39,240 --> 00:23:47,120
+in materia di istituti di pubblici di
+
+545
+00:23:44,240 --> 00:23:48,799
+assistenza e beneficenza, le cosiddette
+
+546
+00:23:47,120 --> 00:23:51,640
+IPAB.
+
+547
+00:23:48,799 --> 00:23:54,200
+e quella
+
+548
+00:23:51,640 --> 00:24:00,120
+questa norma di attuazione statutaria
+
+549
+00:23:54,200 --> 00:24:00,120
+che aveva una propria razio in quel
+
+550
+00:24:02,480 --> 00:24:08,919
+e la razio doveva essere quella di
+
+551
+00:24:06,080 --> 00:24:12,880
+tutelare non solo il patrimonio, ma
+
+552
+00:24:08,919 --> 00:24:16,960
+anche questi istituti che nascono con la
+
+553
+00:24:12,880 --> 00:24:16,960
+legge Crispi del 1890.
+
+554
+00:24:17,720 --> 00:24:23,760
+Badate bene che
+
+555
+00:24:20,600 --> 00:24:27,760
+ancora oggi in Sicilia
+
+556
+00:24:23,760 --> 00:24:31,200
+e forse l'unica regione in Italia, in
+
+557
+00:24:27,760 --> 00:24:35,720
+materia di IPA si applica ancora la
+
+558
+00:24:31,200 --> 00:24:38,320
+legge Crispi risalente al 1890.
+
+559
+00:24:35,720 --> 00:24:42,000
+A differenza di altre regioni, in altre
+
+560
+00:24:38,320 --> 00:24:46,080
+regioni le IPAB sono state trasformate
+
+561
+00:24:42,000 --> 00:24:50,200
+in aziende di servizi per la persona
+
+562
+00:24:46,080 --> 00:24:53,039
+attraverso una riforma organica statale
+
+563
+00:24:50,200 --> 00:24:56,120
+che ha trovato poi
+
+564
+00:24:53,039 --> 00:24:59,600
+seguito nelle competenze
+
+565
+00:24:56,120 --> 00:25:02,799
+concorrenti delle varie regioni.
+
+566
+00:24:59,600 --> 00:25:06,600
+non è avvenuto proprio per la natura
+
+567
+00:25:02,799 --> 00:25:08,880
+speciale la nostra regione in Sicilia.
+
+568
+00:25:06,600 --> 00:25:12,120
+Ma a onore della cronaca e voglio
+
+569
+00:25:08,880 --> 00:25:15,799
+riprendere l'intervento del collega
+
+570
+00:25:12,120 --> 00:25:17,919
+Safina, a onore della cronaca già
+
+571
+00:25:15,799 --> 00:25:21,080
+qualche governo
+
+572
+00:25:17,919 --> 00:25:26,320
+precedente aveva tentendato una riforma
+
+573
+00:25:21,080 --> 00:25:28,520
+organica della materia e mi riferisco
+
+574
+00:25:26,320 --> 00:25:31,960
+al precedente governo, al governo
+
+575
+00:25:28,520 --> 00:25:34,720
+Musumeci che con l'assessore alla
+
+576
+00:25:31,960 --> 00:25:35,880
+famiglia Scavone aveva proprio
+
+577
+00:25:34,720 --> 00:25:38,520
+instaurato
+
+578
+00:25:35,880 --> 00:25:41,080
+un tavolo tecnico coinvolgendo parti
+
+579
+00:25:38,520 --> 00:25:44,320
+sociali, dipartimento alla sanità,
+
+580
+00:25:41,080 --> 00:25:47,200
+dipartimento alla famiglia, presidenza
+
+581
+00:25:44,320 --> 00:25:51,039
+della regione, ufficio legislativo e
+
+582
+00:25:47,200 --> 00:25:53,279
+legale e sicuramente mi dimentico
+
+583
+00:25:51,039 --> 00:25:56,360
+qualche altro soggetto istituzionale
+
+584
+00:25:53,279 --> 00:25:58,760
+coinvolto nel tavolo. Non voglio
+
+585
+00:25:56,360 --> 00:26:01,960
+dimenticare la Corte dei Conti, non
+
+586
+00:25:58,760 --> 00:26:04,240
+voglio dimenticare nemmeno le università
+
+587
+00:26:01,960 --> 00:26:07,279
+siciliane. E da quel tavolo era
+
+588
+00:26:04,240 --> 00:26:11,240
+scaturito un disegno di legge organico
+
+589
+00:26:07,279 --> 00:26:14,360
+di riforma del settore che era stato
+
+590
+00:26:11,240 --> 00:26:17,320
+portato alla votazione della giunta
+
+591
+00:26:14,360 --> 00:26:21,760
+Musumeci. Purtroppo intervenne una
+
+592
+00:26:17,320 --> 00:26:24,480
+circostanza nefasta che fu il Covid e le
+
+593
+00:26:21,760 --> 00:26:28,159
+priorità
+
+594
+00:26:24,480 --> 00:26:31,279
+furono altre. Al momento in cui sono
+
+595
+00:26:28,159 --> 00:26:34,919
+stato proclamato deputato di questa
+
+596
+00:26:31,279 --> 00:26:37,320
+legislatura, io ho rispolverato quel
+
+597
+00:26:34,919 --> 00:26:40,919
+progetto di legge, quel disegno di legge
+
+598
+00:26:37,320 --> 00:26:43,919
+Scavone Musumeci e l'ho ripresentato
+
+599
+00:26:40,919 --> 00:26:45,440
+attualizzandolo
+
+600
+00:26:43,919 --> 00:26:48,039
+a
+
+601
+00:26:45,440 --> 00:26:51,320
+agli uffici della presidenza
+
+602
+00:26:48,039 --> 00:26:54,679
+dell'assemblea affinché potesse partire
+
+603
+00:26:51,320 --> 00:26:57,039
+l'istruttoria per
+
+604
+00:26:54,679 --> 00:26:59,919
+discutere prima in commissione e poi in
+
+605
+00:26:57,039 --> 00:27:02,159
+aula questo disegno di legge che già è
+
+606
+00:26:59,919 --> 00:27:05,039
+pronto, già è per così dire
+
+607
+00:27:02,159 --> 00:27:08,640
+confezionato, occorrerebbe attualizzarlo
+
+608
+00:27:05,039 --> 00:27:09,960
+solo su qualche particolare su cui vi è
+
+609
+00:27:08,640 --> 00:27:12,080
+stata qualche evoluzione
+
+610
+00:27:09,960 --> 00:27:15,760
+giurisprudenziale negli ultimi anni,
+
+611
+00:27:12,080 --> 00:27:18,039
+negli ultimi mesi, ma già la riforma è
+
+612
+00:27:15,760 --> 00:27:21,399
+pronta. Allora, se c'è la volontà di
+
+613
+00:27:18,039 --> 00:27:24,320
+quest'aula di dare un segnale preciso al
+
+614
+00:27:21,399 --> 00:27:27,600
+mondo delle IPA, un sistema ormai
+
+615
+00:27:24,320 --> 00:27:30,200
+vetusto, anacronistico per cosa per come
+
+616
+00:27:27,600 --> 00:27:32,440
+viene disciplinato in Sicilia, già
+
+617
+00:27:30,200 --> 00:27:34,600
+abbiamo la risposta pronta. Quindi io
+
+618
+00:27:32,440 --> 00:27:37,559
+voglio rivolgere un appello non al
+
+619
+00:27:34,600 --> 00:27:40,120
+governo perché l'iniziativa legislativa
+
+620
+00:27:37,559 --> 00:27:42,200
+è anche di ogni singolo deputato e anche
+
+621
+00:27:40,120 --> 00:27:44,600
+quindi di questa assemblea. Voglio
+
+622
+00:27:42,200 --> 00:27:47,240
+rivolgere un appello alle opposizioni
+
+623
+00:27:44,600 --> 00:27:50,600
+affinché venga ripreso questo disegno di
+
+624
+00:27:47,240 --> 00:27:54,080
+legge da me riproposto e ripresentato a
+
+625
+00:27:50,600 --> 00:27:57,240
+quest'aula in modo da potere dare una
+
+626
+00:27:54,080 --> 00:28:01,039
+risposta decisa e innovativa al settore
+
+627
+00:27:57,240 --> 00:28:01,039
+in Sicilia. Grazie.
+
+628
+00:28:01,679 --> 00:28:07,320
+Grazie onorevole Primavera
+
+629
+00:28:05,480 --> 00:28:09,640
+e colleghi
+
+630
+00:28:07,320 --> 00:28:13,760
+a questo punto
+
+631
+00:28:09,640 --> 00:28:15,919
+ah sì comunico il congedo dell'onorevole
+
+632
+00:28:13,760 --> 00:28:18,480
+Intravagli e dell'onorevole Cateno De
+
+633
+00:28:15,919 --> 00:28:21,720
+Luca
+
+634
+00:28:18,480 --> 00:28:24,559
+e colleghi
+
+635
+00:28:21,720 --> 00:28:29,480
+la discussione generale che ho visto è
+
+636
+00:28:24,559 --> 00:28:32,760
+molto molto ampia su un tema importante
+
+637
+00:28:29,480 --> 00:28:35,480
+Eh, credo che debba essere continuata
+
+638
+00:28:32,760 --> 00:28:37,200
+martedì prossimo
+
+639
+00:28:35,480 --> 00:28:39,799
+perché
+
+640
+00:28:37,200 --> 00:28:41,840
+reputo che ci debba essere ci deve
+
+641
+00:28:39,799 --> 00:28:44,200
+essere un approfondimento, quindi
+
+642
+00:28:41,840 --> 00:28:48,200
+martedì continueremo la discussione
+
+643
+00:28:44,200 --> 00:28:51,600
+generale e poi andremo ad esprimere il
+
+644
+00:28:48,200 --> 00:28:53,480
+parere. Assessore Aricò, lei voleva
+
+645
+00:28:51,600 --> 00:28:54,840
+ribadire qualcosa, considerando che la
+
+646
+00:28:53,480 --> 00:28:58,080
+discussione generale non la chiudiamo
+
+647
+00:28:54,840 --> 00:29:00,200
+oggi, quindi e onorevole Sunzeri era
+
+648
+00:28:58,080 --> 00:29:02,600
+sempre sul tema su qualche altra Ah, ok.
+
+649
+00:29:00,200 --> 00:29:04,600
+Allora, prego assessore, così almeno e
+
+650
+00:29:02,600 --> 00:29:09,120
+poi continueremo martedì.
+
+651
+00:29:04,600 --> 00:29:11,600
+No, presidente, io capisco perfettamente
+
+652
+00:29:09,120 --> 00:29:15,159
+gli interventi che si sono succeduti dai
+
+653
+00:29:11,600 --> 00:29:17,279
+colleghi. Il governo è presente, è
+
+654
+00:29:15,159 --> 00:29:20,000
+presente per continuare la discussione
+
+655
+00:29:17,279 --> 00:29:21,720
+generale, quindi qualora si voglia
+
+656
+00:29:20,000 --> 00:29:24,039
+continuare la discussione generale, non
+
+657
+00:29:21,720 --> 00:29:27,399
+penso che ci sono altri argomenti
+
+658
+00:29:24,039 --> 00:29:29,799
+all'ordine del giorno impellenti da
+
+659
+00:29:27,399 --> 00:29:31,480
+dover da tanto da dover accantonare la
+
+660
+00:29:29,799 --> 00:29:34,360
+discussione generale. Quindi io la
+
+661
+00:29:31,480 --> 00:29:36,360
+prego, presidente, io sottoscritto sono
+
+662
+00:29:34,360 --> 00:29:39,080
+qui, sono assessore alle infrastrutture,
+
+663
+00:29:36,360 --> 00:29:41,440
+non si parla di finanziamenti o fit o
+
+664
+00:29:39,080 --> 00:29:44,960
+benefici territoriali, si parla di IPA,
+
+665
+00:29:41,440 --> 00:29:49,320
+si parla di una legge vecchia datata dal
+
+666
+00:29:44,960 --> 00:29:52,279
+1890 che questo governo e la commissione
+
+667
+00:29:49,320 --> 00:29:56,159
+statuto sta cercando di dare attuazione
+
+668
+00:29:52,279 --> 00:29:58,559
+in maniera diversa. Quindi sarà un tema
+
+669
+00:29:56,159 --> 00:30:01,080
+che probabilmente qualche collega
+
+670
+00:29:58,559 --> 00:30:03,399
+ritiene, così come ha detto residuale,
+
+671
+00:30:01,080 --> 00:30:06,399
+ogni tema che affronta quest'aula non
+
+672
+00:30:03,399 --> 00:30:09,120
+deve essere mai trattato come tema o
+
+673
+00:30:06,399 --> 00:30:12,159
+legge residuale, senò significherebbe
+
+674
+00:30:09,120 --> 00:30:14,760
+mortificare la presenza di ognuno di noi
+
+675
+00:30:12,159 --> 00:30:16,360
+oggi oggi qui. Quindi siamo per
+
+676
+00:30:14,760 --> 00:30:19,000
+continuare la discussione generale e se
+
+677
+00:30:16,360 --> 00:30:21,679
+ritiene onorevole Safina anche per
+
+678
+00:30:19,000 --> 00:30:25,039
+votare ricordando che questa che
+
+679
+00:30:21,679 --> 00:30:26,880
+quest'aula votiamola che ricordando che
+
+680
+00:30:25,039 --> 00:30:29,640
+quest'aula
+
+681
+00:30:26,880 --> 00:30:32,399
+ricordando ricordando che quest'aula a
+
+682
+00:30:29,640 --> 00:30:34,960
+proposito di riforme ha condiviso anche
+
+683
+00:30:32,399 --> 00:30:37,159
+con l'opposizione la norma sul codice
+
+684
+00:30:34,960 --> 00:30:39,559
+dei contratti che ci siamo intestati
+
+685
+00:30:37,159 --> 00:30:41,480
+tutti e quindi è importante quando si
+
+686
+00:30:39,559 --> 00:30:44,440
+parla che questa non ha mai provato di
+
+687
+00:30:41,480 --> 00:30:46,760
+riforme importante ricordare quanto a
+
+688
+00:30:44,440 --> 00:30:49,240
+livello bipartisan è stato approvato nei
+
+689
+00:30:46,760 --> 00:30:51,760
+mesi scorsi che è la riforma del codice
+
+690
+00:30:49,240 --> 00:30:54,120
+dei contratti. Quindi noi siamo qui, il
+
+691
+00:30:51,760 --> 00:30:56,880
+governo è presente, se volessimo
+
+692
+00:30:54,120 --> 00:30:59,760
+continuare la discussione generale, poi
+
+693
+00:30:56,880 --> 00:31:04,159
+sarà la decisione dei della presidenza,
+
+694
+00:30:59,760 --> 00:31:04,159
+dei capigruppo, quella di deferire
+
+695
+00:31:08,320 --> 00:31:14,159
+colleghi, vedo anche il capogruppo di
+
+696
+00:31:11,600 --> 00:31:16,480
+Forza Italia, secondo me, questo
+
+697
+00:31:14,159 --> 00:31:18,760
+argomento è bene che, così come ha detto
+
+698
+00:31:16,480 --> 00:31:21,519
+anche l'assessore, ma penso che ci sia
+
+699
+00:31:18,760 --> 00:31:23,440
+unanimità A riguardo continuiamo la
+
+700
+00:31:21,519 --> 00:31:26,679
+discussione generale martedì in maniera
+
+701
+00:31:23,440 --> 00:31:30,799
+tale che poi martedì diamo diamo il
+
+702
+00:31:26,679 --> 00:31:35,720
+parere e come ex articolo 83 l'onorevole
+
+703
+00:31:30,799 --> 00:31:39,559
+Sunseri Saverino Marà
+
+704
+00:31:35,720 --> 00:31:43,159
+e lo so colleghi c'è Sunzeri, Saverino,
+
+705
+00:31:39,559 --> 00:31:46,039
+Lavardera, Marano e Gilistro.
+
+706
+00:31:43,159 --> 00:31:48,440
+Prego.
+
+707
+00:31:46,039 --> 00:31:49,679
+Grazie presidente. Allora, ne approfitto
+
+708
+00:31:48,440 --> 00:31:51,279
+sicuramente della presenza
+
+709
+00:31:49,679 --> 00:31:54,639
+dell'assessore
+
+710
+00:31:51,279 --> 00:31:59,240
+Aricò, ma la mia è il mio vuole essere
+
+711
+00:31:54,639 --> 00:32:02,320
+un intervento che deve e vuole arrivare
+
+712
+00:31:59,240 --> 00:32:03,760
+ai sindaci siciliani e ai cittadini
+
+713
+00:32:02,320 --> 00:32:06,279
+siciliani, perché quello che si sta
+
+714
+00:32:03,760 --> 00:32:08,679
+verificando dopo l'approvazione della
+
+715
+00:32:06,279 --> 00:32:11,559
+variazione di bilancio è qualcosa di
+
+716
+00:32:08,679 --> 00:32:13,240
+surreale.
+
+717
+00:32:11,559 --> 00:32:15,880
+Come ormai i siciliani sanno, questa
+
+718
+00:32:13,240 --> 00:32:19,399
+assemblea ha votato un disegno di legge
+
+719
+00:32:15,880 --> 00:32:23,279
+di variazione di bilancio che stanziava
+
+720
+00:32:19,399 --> 00:32:26,200
+circa 170 milioni di euro che andranno a
+
+721
+00:32:23,279 --> 00:32:28,480
+finire per tutta una serie di interventi
+
+722
+00:32:26,200 --> 00:32:30,399
+che i deputati hanno deciso essere
+
+723
+00:32:28,480 --> 00:32:32,799
+importanti o prioritari per il proprio
+
+724
+00:32:30,399 --> 00:32:34,480
+territorio. Faccio riferimento ai fondi
+
+725
+00:32:32,799 --> 00:32:38,840
+FIT.
+
+726
+00:32:34,480 --> 00:32:40,880
+In pratica sono più di 1200 decreti che
+
+727
+00:32:38,840 --> 00:32:44,200
+il dipartimento guidato dall'assessore
+
+728
+00:32:40,880 --> 00:32:47,000
+Ricosi appresterà a dover redigere
+
+729
+00:32:44,200 --> 00:32:50,880
+nell'arco dei prossimi mesi.
+
+730
+00:32:47,000 --> 00:32:52,360
+Ma la cosa più veramente surreale che
+
+731
+00:32:50,880 --> 00:32:55,919
+questo Parlamento abbia fatto negli
+
+732
+00:32:52,360 --> 00:32:59,360
+ultimi anni è che ha deciso di stanziare
+
+733
+00:32:55,919 --> 00:33:01,960
+una quota di queste risorse pari a 15
+
+734
+00:32:59,360 --> 00:33:04,039
+milioni di euro per i comuni che non
+
+735
+00:33:01,960 --> 00:33:06,200
+sono all'interno
+
+736
+00:33:04,039 --> 00:33:07,600
+dei cosiddetti comuni scelti dai
+
+737
+00:33:06,200 --> 00:33:10,080
+deputati, no? Quindi ci sono stati i
+
+738
+00:33:07,600 --> 00:33:13,320
+deputati di maggioranza che hanno deciso
+
+739
+00:33:10,080 --> 00:33:16,639
+di destinare delle risorse €50.000,
+
+740
+00:33:13,320 --> 00:33:19,840
+€30.000, €70.000, €100.000
+
+741
+00:33:16,639 --> 00:33:22,320
+a più di 300 comuni siciliani, lasciando
+
+742
+00:33:19,840 --> 00:33:24,799
+fuori una sessantina di comuni che non
+
+743
+00:33:22,320 --> 00:33:27,760
+compaiono in nessuna delle tabelle
+
+744
+00:33:24,799 --> 00:33:29,840
+ricadenti dei cosiddetti fondi FIT.
+
+745
+00:33:27,760 --> 00:33:33,799
+Ecco, la notizia meravigliosa è che
+
+746
+00:33:29,840 --> 00:33:36,720
+questi comuni riceveranno più risorse di
+
+747
+00:33:33,799 --> 00:33:39,480
+quelli che sono stati individuati dal
+
+748
+00:33:36,720 --> 00:33:42,279
+fondo dei FIT. Cioè il paradosso è che
+
+749
+00:33:39,480 --> 00:33:46,159
+quel povero e disgraziato comune che ha
+
+750
+00:33:42,279 --> 00:33:48,760
+ricevuto 100, mettiamo per esempio un un
+
+751
+00:33:46,159 --> 00:33:52,000
+finanziamento da €100.000
+
+752
+00:33:48,760 --> 00:33:55,159
+deciso dal deputato di maggioranza,
+
+753
+00:33:52,000 --> 00:33:57,679
+prenderà meno risorse del Comune che non
+
+754
+00:33:55,159 --> 00:34:00,399
+è stato individuato nelle tabelle che la
+
+755
+00:33:57,679 --> 00:34:03,799
+maggioranza ha deciso. Cioè è una cosa
+
+756
+00:34:00,399 --> 00:34:06,360
+di un paradosso tale che a raccontarlo
+
+757
+00:34:03,799 --> 00:34:09,359
+fuori vengono i brividi. Cioè, noi siamo
+
+758
+00:34:06,360 --> 00:34:11,440
+riusciti a fare una norma che chi non ha
+
+759
+00:34:09,359 --> 00:34:14,599
+non è all'interno di quelle tabelle
+
+760
+00:34:11,440 --> 00:34:17,000
+prenderà più soldi di chi è stato
+
+761
+00:34:14,599 --> 00:34:19,200
+penalizzato dal suo stesso deputato.
+
+762
+00:34:17,000 --> 00:34:22,520
+Cioè io faccio riferimento a tantissimi
+
+763
+00:34:19,200 --> 00:34:26,119
+comuni, sono il 70% dei comuni
+
+764
+00:34:22,520 --> 00:34:28,639
+individuati prenderà meno risorse, cioè
+
+765
+00:34:26,119 --> 00:34:32,240
+essere stato selezionato dal deputato di
+
+766
+00:34:28,639 --> 00:34:34,040
+maggioranza è una disgrazia, cioè
+
+767
+00:34:32,240 --> 00:34:36,040
+prenderanno meno risorse di quelli che
+
+768
+00:34:34,040 --> 00:34:37,520
+prenderanno gli altri. È una cosa,
+
+769
+00:34:36,040 --> 00:34:39,480
+guardate, paradossale, cioè io non
+
+770
+00:34:37,520 --> 00:34:42,079
+pensavo che noi questa assemblea fosse
+
+771
+00:34:39,480 --> 00:34:44,359
+in grado di anche solo immaginare una
+
+772
+00:34:42,079 --> 00:34:48,280
+norma del genere, cioè il suggerimento
+
+773
+00:34:44,359 --> 00:34:50,240
+che do ai sindaci disgraziati che non
+
+774
+00:34:48,280 --> 00:34:52,839
+riceveranno meno risorse di tutti gli
+
+775
+00:34:50,240 --> 00:34:54,480
+altri è di rifiutare quel finanziamento
+
+776
+00:34:52,839 --> 00:34:56,599
+e di rientrare tra i comuni che non
+
+777
+00:34:54,480 --> 00:35:00,400
+erano selezionati dai deputati di
+
+778
+00:34:56,599 --> 00:35:03,560
+maggioranza perché prenderanno di più.
+
+779
+00:35:00,400 --> 00:35:05,440
+E questa cosa è veramente surreale. Cioè
+
+780
+00:35:03,560 --> 00:35:08,400
+io credo non si sia mai fatta una norma
+
+781
+00:35:05,440 --> 00:35:12,440
+talmente stupida, perché è una norma
+
+782
+00:35:08,400 --> 00:35:14,160
+stupida che danneggia i comuni. Quindi i
+
+783
+00:35:12,440 --> 00:35:17,040
+le faccio senza io non voglio andare
+
+784
+00:35:14,160 --> 00:35:19,359
+chissà posso posso elencarle centinaia
+
+785
+00:35:17,040 --> 00:35:21,119
+di comuni che prenderanno meno, ma le
+
+786
+00:35:19,359 --> 00:35:23,520
+parlo del mio comune, cioè Termini
+
+787
+00:35:21,119 --> 00:35:24,839
+Merese che ha visto un deputato di
+
+788
+00:35:23,520 --> 00:35:26,200
+maggioranza, non sappiamo neanche chi,
+
+789
+00:35:24,839 --> 00:35:27,720
+perché poi le norme arrivano così,
+
+790
+00:35:26,200 --> 00:35:30,560
+diciamo, col mazzi, quindi non sappiamo
+
+791
+00:35:27,720 --> 00:35:32,800
+chi l'ha proposto, che prenderà €100.000
+
+792
+00:35:30,560 --> 00:35:34,640
+è un comune disgraziato
+
+793
+00:35:32,800 --> 00:35:37,599
+perché se non ci fosse stato in quella
+
+794
+00:35:34,640 --> 00:35:41,400
+tabella avrebbe preso €150.000, cioè
+
+795
+00:35:37,599 --> 00:35:45,119
+€50.000 in più. è paradossale,
+
+796
+00:35:41,400 --> 00:35:47,880
+cioè a raccontarlo ai ragazzi, a chi ci
+
+797
+00:35:45,119 --> 00:35:49,640
+segue, ci cioè non possono che prenderci
+
+798
+00:35:47,880 --> 00:35:52,680
+in giro.
+
+799
+00:35:49,640 --> 00:35:56,319
+Cioè quella norma non ha senso, così
+
+800
+00:35:52,680 --> 00:36:00,079
+comeè impostata, non ha alcun senso.
+
+801
+00:35:56,319 --> 00:36:02,280
+Cioè era meglio non essere tra i comuni
+
+802
+00:36:00,079 --> 00:36:06,319
+privilegiati dai fitto o dai deputati di
+
+803
+00:36:02,280 --> 00:36:08,680
+maggioranza. Ma io qui siamo oltre
+
+804
+00:36:06,319 --> 00:36:11,480
+all'essere scarsi, oltre, cioè abbiamo
+
+805
+00:36:08,680 --> 00:36:14,319
+superato quel limite è il non essere in
+
+806
+00:36:11,480 --> 00:36:17,280
+grado di programmare e progettare delle
+
+807
+00:36:14,319 --> 00:36:19,839
+risorse che possono essere distribuite
+
+808
+00:36:17,280 --> 00:36:22,040
+in maniera equa ai comuni e come se non
+
+809
+00:36:19,839 --> 00:36:24,560
+bastasse queste risorse verranno
+
+810
+00:36:22,040 --> 00:36:27,119
+affidate a un avviso che l'assessore si
+
+811
+00:36:24,560 --> 00:36:28,920
+sta premurando a fare che non vedranno
+
+812
+00:36:27,119 --> 00:36:31,160
+ripartizioni
+
+813
+00:36:28,920 --> 00:36:33,760
+per popolazione per altro. ci sta una
+
+814
+00:36:31,160 --> 00:36:35,640
+ripartizione eh come dire suddivisa da
+
+815
+00:36:33,760 --> 00:36:37,200
+tutti i comuni e quindi anche più
+
+816
+00:36:35,640 --> 00:36:38,520
+piccoli prenderanno quelli più grandi
+
+817
+00:36:37,200 --> 00:36:42,480
+che non sono stati inseriti all'interno
+
+818
+00:36:38,520 --> 00:36:44,640
+dell'elenco e che fortuna loro fortuna
+
+819
+00:36:42,480 --> 00:36:47,640
+loro non hanno avuto santi nella
+
+820
+00:36:44,640 --> 00:36:47,640
+maggioranza.
+
+821
+00:36:52,640 --> 00:36:56,119
+Assessore vuole intervenire ora o alla
+
+822
+00:36:54,599 --> 00:36:57,839
+fine perché poi ci possono essere altri
+
+823
+00:36:56,119 --> 00:37:00,000
+interventi a particolar. Presidente, io
+
+824
+00:36:57,839 --> 00:37:02,480
+vorrei rispetto al tema posto
+
+825
+00:37:00,000 --> 00:37:04,760
+dall'onorevole Sunseri capire se ci sono
+
+826
+00:37:02,480 --> 00:37:08,920
+altri interventi sempre sullo stesso
+
+827
+00:37:04,760 --> 00:37:12,079
+argomento e poi vorrei intervenire dopo
+
+828
+00:37:08,920 --> 00:37:13,920
+e che altri colleghi vogliano, diciamo,
+
+829
+00:37:12,079 --> 00:37:15,440
+subito dopo. Quindi non so se ci sono
+
+830
+00:37:13,920 --> 00:37:16,400
+altri colleghi che vogliono
+
+831
+00:37:15,440 --> 00:37:17,960
+assessore assessore
+
+832
+00:37:16,400 --> 00:37:20,160
+ma su questo argomento su questo
+
+833
+00:37:17,960 --> 00:37:23,520
+argomento perché è una è una mia delega
+
+834
+00:37:20,160 --> 00:37:25,520
+ho tre 4 5 se interventi, magari se
+
+835
+00:37:23,520 --> 00:37:29,160
+ascoltiamo gli interventi dei colleghi e
+
+836
+00:37:25,520 --> 00:37:32,240
+poi alla fine e interviene onorevole
+
+837
+00:37:29,160 --> 00:37:34,920
+Saverino. Prego.
+
+838
+00:37:32,240 --> 00:37:37,200
+Grazie presidente. Presidente, le ho
+
+839
+00:37:34,920 --> 00:37:39,680
+chiesto di intervenire oggi proprio per
+
+840
+00:37:37,200 --> 00:37:42,359
+ehm mettere l'attenzione su due atti
+
+841
+00:37:39,680 --> 00:37:45,400
+parlamentari che ho appena depositato.
+
+842
+00:37:42,359 --> 00:37:47,400
+depositato stamattina, dopo aver letto
+
+843
+00:37:45,400 --> 00:37:49,800
+eh purtroppo, come abbiamo letto tutti
+
+844
+00:37:47,400 --> 00:37:53,440
+noi, delle gravi minacce che ci sono
+
+845
+00:37:49,800 --> 00:37:55,839
+state in alcuni, anzi in molti istituti
+
+846
+00:37:53,440 --> 00:37:59,720
+scolastici in Italia e molti anche in
+
+847
+00:37:55,839 --> 00:38:02,800
+Sicilia e quindi ho depositato firma,
+
+848
+00:37:59,720 --> 00:38:04,160
+prima firma mia, naturalmente condiviso
+
+849
+00:38:02,800 --> 00:38:06,160
+con tutti i colleghi del gruppo
+
+850
+00:38:04,160 --> 00:38:07,520
+parlamentare, ma sono certa di poterlo
+
+851
+00:38:06,160 --> 00:38:09,520
+condividere sia l'interrogazione
+
+852
+00:38:07,520 --> 00:38:12,599
+parlamentare che la mozione con tutti i
+
+853
+00:38:09,520 --> 00:38:15,800
+colleghi presenti in aula. proprio per
+
+854
+00:38:12,599 --> 00:38:17,880
+chiedere alla presidente Schifania e
+
+855
+00:38:15,800 --> 00:38:20,960
+tutto al governo regionale di
+
+856
+00:38:17,880 --> 00:38:22,680
+intervenire immediatamente su questa
+
+857
+00:38:20,960 --> 00:38:25,359
+situazione, naturalmente per quello che
+
+858
+00:38:22,680 --> 00:38:28,119
+è di nostra competenza, ma per creare un
+
+859
+00:38:25,359 --> 00:38:30,520
+tavolo e soprattutto creare un
+
+860
+00:38:28,119 --> 00:38:32,839
+coordinamento, perché è ovvio che le
+
+861
+00:38:30,520 --> 00:38:36,040
+scuole devono essere luoghi sicuri dove
+
+862
+00:38:32,839 --> 00:38:39,200
+i nostri ragazzi devono poter studiare e
+
+863
+00:38:36,040 --> 00:38:41,839
+crescere con serenità e le minacce per
+
+864
+00:38:39,200 --> 00:38:44,079
+quanto possono essere anche state state
+
+865
+00:38:41,839 --> 00:38:47,839
+considerate o quelle che eventualmente
+
+866
+00:38:44,079 --> 00:38:50,440
+potranno ancora esserci, anche se non,
+
+867
+00:38:47,839 --> 00:38:52,560
+diciamo, rimangono soltanto delle
+
+868
+00:38:50,440 --> 00:38:54,760
+minacce, ma è chiaro che creano e
+
+869
+00:38:52,560 --> 00:38:57,440
+alimentano un clima di paura e di
+
+870
+00:38:54,760 --> 00:38:59,599
+sconforto e non possiamo lasciare ad
+
+871
+00:38:57,440 --> 00:39:03,319
+affrontare da sole gli studenti, le
+
+872
+00:38:59,599 --> 00:39:06,400
+famiglie e né tantomeno
+
+873
+00:39:03,319 --> 00:39:08,119
+personale scolastico ad ad affrontare
+
+874
+00:39:06,400 --> 00:39:09,880
+questo tipo di emergenza. caro.
+
+875
+00:39:08,119 --> 00:39:11,680
+Ringraziamo naturalmente le forze
+
+876
+00:39:09,880 --> 00:39:13,240
+dell'ordine che sono intervenute per
+
+877
+00:39:11,680 --> 00:39:16,040
+tutto il loro lavoro e per il loro
+
+878
+00:39:13,240 --> 00:39:19,280
+operato, però credo che sia importante
+
+879
+00:39:16,040 --> 00:39:22,400
+che anche il governo regionale possa
+
+880
+00:39:19,280 --> 00:39:26,119
+farsi carico di questa situazione
+
+881
+00:39:22,400 --> 00:39:28,240
+sicuramente incresciosa che non è detto
+
+882
+00:39:26,119 --> 00:39:31,400
+che sia finita qui. Quindi cerchiamo di
+
+883
+00:39:28,240 --> 00:39:33,119
+rassicurare non solo, credo che bisogna
+
+884
+00:39:31,400 --> 00:39:36,240
+anche intervenire con un aiuto
+
+885
+00:39:33,119 --> 00:39:38,640
+psicologico anche per chi continua
+
+886
+00:39:36,240 --> 00:39:40,880
+dovrebbe continuare ad andare a scuola,
+
+887
+00:39:38,640 --> 00:39:42,880
+continuare a studiare, vivere con
+
+888
+00:39:40,880 --> 00:39:45,720
+serenità la scuola, il personale
+
+889
+00:39:42,880 --> 00:39:47,680
+scolastico, i dirigenti scolastici.
+
+890
+00:39:45,720 --> 00:39:51,560
+Ecco, credo che la Regione non può
+
+891
+00:39:47,680 --> 00:39:56,440
+rimanere a guardare soltanto come
+
+892
+00:39:51,560 --> 00:39:58,920
+spettatore, ma invito, chiedo
+
+893
+00:39:56,440 --> 00:40:00,680
+che si faccia
+
+894
+00:39:58,920 --> 00:40:02,760
+carico di questa situazione da
+
+895
+00:40:00,680 --> 00:40:05,680
+affrontare, che si faccia promotore di
+
+896
+00:40:02,760 --> 00:40:07,880
+tutte quelle iniziative urgenti proprio
+
+897
+00:40:05,680 --> 00:40:10,720
+a garantire la sicurezza dei nostri
+
+898
+00:40:07,880 --> 00:40:11,920
+giovani presso gli istituti scolastici.
+
+899
+00:40:10,720 --> 00:40:13,079
+Grazie.
+
+900
+00:40:11,920 --> 00:40:14,560
+Grazie onorevole. Ha chiesto di
+
+901
+00:40:13,079 --> 00:40:17,240
+intervenire l'onorevole la Vardera.
+
+902
+00:40:14,560 --> 00:40:17,240
+Prego onorevole.
+
+903
+00:40:28,839 --> 00:40:35,240
+Grazie presidente. Mentre in quest'aula
+
+904
+00:40:31,680 --> 00:40:38,160
+parliamo della riforma della dirigenza e
+
+905
+00:40:35,240 --> 00:40:40,119
+oggi un parere, come dire, che è
+
+906
+00:40:38,160 --> 00:40:42,880
+completamente anacronistico rispetto ai
+
+907
+00:40:40,119 --> 00:40:45,200
+tempi che stiamo vivendo. un parlamento
+
+908
+00:40:42,880 --> 00:40:46,280
+impantanato in questa giornata, in
+
+909
+00:40:45,200 --> 00:40:47,960
+questi giorni di lavoro in cui
+
+910
+00:40:46,280 --> 00:40:49,400
+sostanzialmente potevamo produrre di
+
+911
+00:40:47,960 --> 00:40:51,640
+meglio. Per carità, è una riforma, la
+
+912
+00:40:49,400 --> 00:40:53,000
+prima riforma che c'è stato. La Sicilia
+
+913
+00:40:51,640 --> 00:40:55,880
+resta a guardare quello che è la
+
+914
+00:40:53,000 --> 00:40:58,839
+priorità reale dei siciliani che ricordo
+
+915
+00:40:55,880 --> 00:41:02,040
+a tutti e quella della sanità. Ma c'è
+
+916
+00:40:58,839 --> 00:41:03,760
+una storia che finalmente oggi, dopo 2
+
+917
+00:41:02,040 --> 00:41:07,480
+anni di attesa, un anno e mezzo di
+
+918
+00:41:03,760 --> 00:41:10,160
+attesa, Villa Sofia Cervello manda una
+
+919
+00:41:07,480 --> 00:41:12,440
+risposta al sottoscritto rispetto a uno
+
+920
+00:41:10,160 --> 00:41:15,319
+scandalo che ci è costato qualcosa come
+
+921
+00:41:12,440 --> 00:41:17,680
+12 milioni di euro su un apparecchio
+
+922
+00:41:15,319 --> 00:41:21,040
+fermo, parcheggiato e posteggiato a
+
+923
+00:41:17,680 --> 00:41:24,200
+Villa Sofia, un ciclotrone che per non
+
+924
+00:41:21,040 --> 00:41:27,800
+addetti ai lavori è un apparecchio
+
+925
+00:41:24,200 --> 00:41:29,440
+fondamentale per i malati oncologici e
+
+926
+00:41:27,800 --> 00:41:30,960
+nellauz produzione dei farmaci
+
+927
+00:41:29,440 --> 00:41:32,480
+radioterapici.
+
+928
+00:41:30,960 --> 00:41:34,720
+Allora, cosa avevo scoperto? Avevo
+
+929
+00:41:32,480 --> 00:41:37,839
+scoperto che c'era questo macchinario
+
+930
+00:41:34,720 --> 00:41:40,359
+lasciato a morire a Villa Sofia. Ero
+
+931
+00:41:37,839 --> 00:41:43,800
+andato a toccare con mano questo spreco
+
+932
+00:41:40,359 --> 00:41:46,599
+di denaro pubblico costato 12 milioni di
+
+933
+00:41:43,800 --> 00:41:48,599
+euro documentati. Allora, ovviamente
+
+934
+00:41:46,599 --> 00:41:52,160
+avevo sollevato la questione perché il
+
+935
+00:41:48,599 --> 00:41:56,160
+paradosso parlamento e governo è che noi
+
+936
+00:41:52,160 --> 00:41:58,319
+per produrre quel farmaco radioterapico
+
+937
+00:41:56,160 --> 00:42:00,720
+abbiamo la possibilità di produrlo in
+
+938
+00:41:58,319 --> 00:42:03,040
+house e quindi non andare dai privati a
+
+939
+00:42:00,720 --> 00:42:05,480
+comprarlo, ma il paradosso è che andiamo
+
+940
+00:42:03,040 --> 00:42:07,480
+a pochi chilometri a una clinica privata
+
+941
+00:42:05,480 --> 00:42:09,760
+per comprare lo stesso farmaco che
+
+942
+00:42:07,480 --> 00:42:11,800
+inevitabilmente ci costa tre volte
+
+943
+00:42:09,760 --> 00:42:13,560
+tanto. Quindi abbiamo tre danni
+
+944
+00:42:11,800 --> 00:42:15,760
+sostanziali. il primo che è quello alla
+
+945
+00:42:13,560 --> 00:42:17,760
+salute pubblica, perché non avere la
+
+946
+00:42:15,760 --> 00:42:20,640
+produzione di un radio e di questi
+
+947
+00:42:17,760 --> 00:42:23,280
+farmaci all'interno fa sì che tutte le
+
+948
+00:42:20,640 --> 00:42:26,079
+pette arrivano con un tempo anche in cui
+
+949
+00:42:23,280 --> 00:42:28,480
+la gente deve avere mesi per effettuare
+
+950
+00:42:26,079 --> 00:42:30,319
+queste tipologie di esami. Il paradosso
+
+951
+00:42:28,480 --> 00:42:32,440
+è che ce l'abbiamo in casa, abbiamo
+
+952
+00:42:30,319 --> 00:42:34,559
+pagato soldi pubblici, 10 milioni di
+
+953
+00:42:32,440 --> 00:42:37,040
+euro, non lo utilizziamo, andiamo dal
+
+954
+00:42:34,559 --> 00:42:39,680
+privato con un evidente danno erariale.
+
+955
+00:42:37,040 --> 00:42:43,000
+Oggi il Villa Sofia risponde dopo 2
+
+956
+00:42:39,680 --> 00:42:45,960
+anni, si sveglia e conferma, senza
+
+957
+00:42:43,000 --> 00:42:48,720
+troppi giri di parole che questa accusa
+
+958
+00:42:45,960 --> 00:42:51,440
+che avevamo sollevato ritrova fondamento
+
+959
+00:42:48,720 --> 00:42:55,240
+perché sono costretti a dire è vero, lo
+
+960
+00:42:51,440 --> 00:42:58,400
+abbiamo comprato e da 22 anni non lo
+
+961
+00:42:55,240 --> 00:43:01,119
+abbiamo mai utilizzato. ripeto, un
+
+962
+00:42:58,400 --> 00:43:03,480
+ciclotrone che è una un apparecchio
+
+963
+00:43:01,119 --> 00:43:05,720
+sostanziale e fondamentale per quello
+
+964
+00:43:03,480 --> 00:43:07,920
+che è il mondo, ahimè, insomma, dei
+
+965
+00:43:05,720 --> 00:43:09,760
+malati che giustamente si trovano ad
+
+966
+00:43:07,920 --> 00:43:12,119
+affrontare quelli che è un che è un
+
+967
+00:43:09,760 --> 00:43:15,839
+tumore e quindi potrebbe essere d'aiuto
+
+968
+00:43:12,119 --> 00:43:18,839
+comprato, parcheggiato, 22 milioni di
+
+969
+00:43:15,839 --> 00:43:22,040
+euro, mai utilizzato col danno e la
+
+970
+00:43:18,839 --> 00:43:23,800
+beffa. Lo dice oggi Villa Sofia, che non
+
+971
+00:43:22,040 --> 00:43:25,680
+lo possono utilizzare. Ma il paradosso
+
+972
+00:43:23,800 --> 00:43:28,319
+quale? E quando avevo fatto questa
+
+973
+00:43:25,680 --> 00:43:30,240
+denuncia, Schifani si è arrabbiato e
+
+974
+00:43:28,319 --> 00:43:33,559
+aveva obbligato con un articolo su
+
+975
+00:43:30,240 --> 00:43:35,960
+Repubblica, entro 15 giorni deve tornare
+
+976
+00:43:33,559 --> 00:43:37,680
+in funzione l'apparecchio. Piccolo
+
+977
+00:43:35,960 --> 00:43:39,680
+particolare che il dottore Mazzara dice:
+
+978
+00:43:37,680 --> 00:43:40,960
+"Caro Schifani, questo apparecchio non
+
+979
+00:43:39,680 --> 00:43:43,480
+può essere più utilizzato,
+
+980
+00:43:40,960 --> 00:43:46,200
+dimenticatelo." Allora, qual è la
+
+981
+00:43:43,480 --> 00:43:49,040
+sintesi del problema? E il sistema che a
+
+982
+00:43:46,200 --> 00:43:50,520
+mio avviso è un sistema paramafioso in
+
+983
+00:43:49,040 --> 00:43:52,960
+cui noi dobbiamo avere il coraggio di
+
+984
+00:43:50,520 --> 00:43:55,079
+metterci mano perché questa terra la
+
+985
+00:43:52,960 --> 00:43:57,520
+cambieremo se avremo il coraggio di
+
+986
+00:43:55,079 --> 00:44:00,119
+parlare di una sanità diversa. Il
+
+987
+00:43:57,520 --> 00:44:03,200
+paradosso, colleghi deputati e governo è
+
+988
+00:44:00,119 --> 00:44:06,240
+che produrre quel quel farmaco, guarda
+
+989
+00:44:03,200 --> 00:44:09,079
+caso, c'è una clinica privata il cui
+
+990
+00:44:06,240 --> 00:44:11,440
+direttore sanitario è uomo noto alla
+
+991
+00:44:09,079 --> 00:44:13,400
+politica regionale, ex presidente del
+
+992
+00:44:11,440 --> 00:44:15,559
+Parlamento siciliano. Allora io non
+
+993
+00:44:13,400 --> 00:44:18,000
+vorrei, lo dico da quest'aula, io non
+
+994
+00:44:15,559 --> 00:44:20,640
+vorrei, gentile presidente che ci
+
+995
+00:44:18,000 --> 00:44:24,240
+possano essere dei conflitti di
+
+996
+00:44:20,640 --> 00:44:26,880
+interessi economici che travalicano gli
+
+997
+00:44:24,240 --> 00:44:28,599
+interessi della politica. Io mi recherò
+
+998
+00:44:26,880 --> 00:44:31,359
+nelle prossime ore, comeè giusto che
+
+999
+00:44:28,599 --> 00:44:34,040
+sia, presso la Procura della Corte dei
+
+1000
+00:44:31,359 --> 00:44:36,440
+Conti, perché chiederò che chi ha
+
+1001
+00:44:34,040 --> 00:44:39,800
+sbagliato, che chi ha comprato un
+
+1002
+00:44:36,440 --> 00:44:42,480
+apparecchio costato 12 milioni di euro
+
+1003
+00:44:39,800 --> 00:44:45,200
+per dare speranza e dare un minimo di
+
+1004
+00:44:42,480 --> 00:44:48,440
+supporto ai malati oncologici e a
+
+1005
+00:44:45,200 --> 00:44:51,960
+marcire in un, come dire, sotterraneo
+
+1006
+00:44:48,440 --> 00:44:54,559
+almeno se a Villa Sofia e per produrre
+
+1007
+00:44:51,960 --> 00:44:58,839
+quel farmaco noi andiamo a comprarlo a 4
+
+1008
+00:44:54,559 --> 00:45:01,319
+km in una clinica privata. Chi è chi ha
+
+1009
+00:44:58,839 --> 00:45:03,839
+questi interessi economici?
+
+1010
+00:45:01,319 --> 00:45:08,240
+Io non vorrei che dietro c'è un disegno
+
+1011
+00:45:03,839 --> 00:45:11,000
+chiaro per agevolare la sanità privata
+
+1012
+00:45:08,240 --> 00:45:14,119
+sulla pelle dei siciliani che per avere
+
+1013
+00:45:11,000 --> 00:45:17,400
+una PET devono aspettare mesi e mesi e
+
+1014
+00:45:14,119 --> 00:45:20,720
+recarsi fuori Sicilia. Questo è uno
+
+1015
+00:45:17,400 --> 00:45:22,839
+scandalo di proporzioni enormi davanti
+
+1016
+00:45:20,720 --> 00:45:24,839
+il quale la politica, perché noi non ci
+
+1017
+00:45:22,839 --> 00:45:27,200
+siamo soltanto limitati alla denuncia
+
+1018
+00:45:24,839 --> 00:45:29,000
+social, alla denuncia su Facebook,
+
+1019
+00:45:27,200 --> 00:45:31,119
+abbiamo chiesto atti, abbiamo
+
+1020
+00:45:29,000 --> 00:45:33,599
+documentato il il prodotto di questi
+
+1021
+00:45:31,119 --> 00:45:36,520
+atti che hanno portato alla all'azienda
+
+1022
+00:45:33,599 --> 00:45:38,800
+a risponderci allargando le braccia,
+
+1023
+00:45:36,520 --> 00:45:40,800
+dicendo "È vero, onorevole lavardera,
+
+1024
+00:45:38,800 --> 00:45:43,520
+lei purtroppo ha scoperto che questo
+
+1025
+00:45:40,800 --> 00:45:46,240
+macchinario è fermo da 20 anni e non è
+
+1026
+00:45:43,520 --> 00:45:49,839
+mai stato utilizzato, è costato 10
+
+1027
+00:45:46,240 --> 00:45:52,559
+milioni di euro e non abbiamo altro che
+
+1028
+00:45:49,839 --> 00:45:55,440
+purtroppo comprarlo dalla clinica
+
+1029
+00:45:52,559 --> 00:45:58,000
+privata il cui nome lo faremo nelle
+
+1030
+00:45:55,440 --> 00:46:00,520
+prossime certamente ore e colui il quale
+
+1031
+00:45:58,000 --> 00:46:03,040
+la dirige. Il sospetto nasce. Non vorrei
+
+1032
+00:46:00,520 --> 00:46:05,640
+che ci vola agevolare soggetti che sono
+
+1033
+00:46:03,040 --> 00:46:07,839
+stati appartenenti, guarda caso e
+
+1034
+00:46:05,640 --> 00:46:09,960
+chiudo, al partito dell'attuale
+
+1035
+00:46:07,839 --> 00:46:11,440
+presidente della regione e che
+
+1036
+00:46:09,960 --> 00:46:13,960
+inevitabilmente da questo non
+
+1037
+00:46:11,440 --> 00:46:15,760
+funzionamento del ciclotrone ne hanno un
+
+1038
+00:46:13,960 --> 00:46:17,200
+vantaggio non personale, ma per
+
+1039
+00:46:15,760 --> 00:46:19,319
+l'azienda e per la clinica che
+
+1040
+00:46:17,200 --> 00:46:20,960
+rappresentano. Questo i siciliani devono
+
+1041
+00:46:19,319 --> 00:46:23,480
+sapere, mentre in questo palazzo
+
+1042
+00:46:20,960 --> 00:46:25,960
+parliamo della riforma della dirigenza e
+
+1043
+00:46:23,480 --> 00:46:27,319
+del parere che oggi abbiamo esitato. I
+
+1044
+00:46:25,960 --> 00:46:29,200
+siciliani vogliono sapere che idea
+
+1045
+00:46:27,319 --> 00:46:31,280
+abbiamo di sanità e Schifani lo ha
+
+1046
+00:46:29,200 --> 00:46:32,760
+dimostrato. Prima i privati e poi il
+
+1047
+00:46:31,280 --> 00:46:35,839
+pubblico.
+
+1048
+00:46:32,760 --> 00:46:38,839
+Grazie onorevole Lavardera. Ha chiesto
+
+1049
+00:46:35,839 --> 00:46:43,480
+di intervenire l'onorevole Marano.
+
+1050
+00:46:38,839 --> 00:46:43,480
+No. Ok. L'onorevole Giristro.
+
+1051
+00:47:07,040 --> 00:47:14,800
+Grazie presidente. Grazie assessore
+
+1052
+00:47:11,040 --> 00:47:17,680
+governo, grazie colleghi.
+
+1053
+00:47:14,800 --> 00:47:21,200
+Presidente, intervengo perché la
+
+1054
+00:47:17,680 --> 00:47:23,960
+situazione di emergenza idrica
+
+1055
+00:47:21,200 --> 00:47:27,200
+che in questo momento vive la città di
+
+1056
+00:47:23,960 --> 00:47:31,240
+Siracusa è qualcosa che non si è mai
+
+1057
+00:47:27,200 --> 00:47:34,440
+visto nella storia di questa città, una
+
+1058
+00:47:31,240 --> 00:47:36,880
+città greca famosa perché le polle
+
+1059
+00:47:34,440 --> 00:47:40,040
+d'acqua e le sorgenti d'acqua dolce
+
+1060
+00:47:36,880 --> 00:47:43,400
+addirittura sorgono dal mare nell'isola
+
+1061
+00:47:40,040 --> 00:47:45,920
+di Ortigia. Ebbene, mi arrivano
+
+1062
+00:47:43,400 --> 00:47:48,440
+segnalazioni da tutta la città, ormai da
+
+1063
+00:47:45,920 --> 00:47:52,119
+diversi mesi. Ho chiesto una prima
+
+1064
+00:47:48,440 --> 00:47:54,839
+audizione già nel mese di giugno. Oggi
+
+1065
+00:47:52,119 --> 00:47:57,200
+ne ho richiesta un'altra che, anzi
+
+1066
+00:47:54,839 --> 00:47:59,880
+ringrazio il presidente Carta per averla
+
+1067
+00:47:57,200 --> 00:48:02,920
+calendarizzata già per la settimana
+
+1068
+00:47:59,880 --> 00:48:05,440
+prossima perché ormai il limite è stato
+
+1069
+00:48:02,920 --> 00:48:07,960
+oltrepassato. Mi arrivano segnalazioni
+
+1070
+00:48:05,440 --> 00:48:11,319
+da parte dei cittadini di acque marrone
+
+1071
+00:48:07,960 --> 00:48:14,599
+scuro. presidente in tutte in alcuni
+
+1072
+00:48:11,319 --> 00:48:18,640
+quartieri. La beffa è che tantissimi
+
+1073
+00:48:14,599 --> 00:48:21,599
+cittadini stanno acquistando cisterne
+
+1074
+00:48:18,640 --> 00:48:24,079
+autoclave per doverle ripulire perché
+
+1075
+00:48:21,599 --> 00:48:27,359
+continuamente si intasano di queste
+
+1076
+00:48:24,079 --> 00:48:29,920
+acque che non sono degne neanche per i
+
+1077
+00:48:27,359 --> 00:48:32,480
+gabinetti. Questa è una situazione
+
+1078
+00:48:29,920 --> 00:48:34,520
+drammatica, presidente. Noi dobbiamo
+
+1079
+00:48:32,480 --> 00:48:36,800
+prenderne atto perché questa situazione
+
+1080
+00:48:34,520 --> 00:48:39,880
+anche dal punto di vista igienico
+
+1081
+00:48:36,800 --> 00:48:42,079
+sanitario, può avere ripercussioni sulla
+
+1082
+00:48:39,880 --> 00:48:44,520
+salute dei dei cittadini. Quindi è una
+
+1083
+00:48:42,079 --> 00:48:46,520
+cosa che non è assolutamente
+
+1084
+00:48:44,520 --> 00:48:49,160
+prorogabile.
+
+1085
+00:48:46,520 --> 00:48:52,040
+Fra le altre cose questa tutta questa
+
+1086
+00:48:49,160 --> 00:48:56,119
+emergenza è passata da quando?
+
+1087
+00:48:52,040 --> 00:48:59,440
+Da Siam si è passati ad Aretusaque
+
+1088
+00:48:56,119 --> 00:49:02,640
+per volere dei lati. siracusana.
+
+1089
+00:48:59,440 --> 00:49:05,359
+Questa situazione improvvisamente che
+
+1090
+00:49:02,640 --> 00:49:09,880
+non è stata mai presente prima, sta
+
+1091
+00:49:05,359 --> 00:49:11,480
+creando difficoltà a bar, esercizi
+
+1092
+00:49:09,880 --> 00:49:14,200
+commerciali,
+
+1093
+00:49:11,480 --> 00:49:18,319
+ristoranti, aziende turistiche, aziende
+
+1094
+00:49:14,200 --> 00:49:21,440
+ricettive e scuole. Sono tre settimane
+
+1095
+00:49:18,319 --> 00:49:24,280
+che addirittura i bambini arrivano a
+
+1096
+00:49:21,440 --> 00:49:26,839
+scuola e devono uscire alle 9:30 perché
+
+1097
+00:49:24,280 --> 00:49:29,960
+non c'è l'acqua con genitori che non
+
+1098
+00:49:26,839 --> 00:49:33,000
+sono e non riescono ad organizzarli per
+
+1099
+00:49:29,960 --> 00:49:36,119
+andarli a prendere improvvisamente.
+
+1100
+00:49:33,000 --> 00:49:39,200
+stanno obbligando stanno obbligando
+
+1101
+00:49:36,119 --> 00:49:42,799
+acque a tutti gli edifici della città,
+
+1102
+00:49:39,200 --> 00:49:45,319
+cosa mai successa prima, a dotarsi di
+
+1103
+00:49:42,799 --> 00:49:48,200
+cisterne anche nelle scuole e di
+
+1104
+00:49:45,319 --> 00:49:50,480
+autoclavi con un costo aggiuntivo a
+
+1105
+00:49:48,200 --> 00:49:53,680
+carico delle amministrazioni e del
+
+1106
+00:49:50,480 --> 00:49:55,920
+libero consorzio. è finita perché il
+
+1107
+00:49:53,680 --> 00:49:58,520
+danno di immagine che questo ha causato
+
+1108
+00:49:55,920 --> 00:50:02,480
+sul turismo siciliano e soprattutto
+
+1109
+00:49:58,520 --> 00:50:04,680
+siracusano è enorme, ma in più hanno
+
+1110
+00:50:02,480 --> 00:50:06,240
+chiesto addirittura ai cittadini per una
+
+1111
+00:50:04,680 --> 00:50:09,280
+cosa che non hanno, che hanno di
+
+1112
+00:50:06,240 --> 00:50:12,160
+scarsissima qualità, addirittura una
+
+1113
+00:50:09,280 --> 00:50:14,960
+cauzione, una cauzione per un
+
+1114
+00:50:12,160 --> 00:50:17,400
+disservizio, non per un servizio. Quindi
+
+1115
+00:50:14,960 --> 00:50:21,880
+mercoledì prossimo mi auguro che il
+
+1116
+00:50:17,400 --> 00:50:25,079
+presidente dia abbia
+
+1117
+00:50:21,880 --> 00:50:27,160
+calendarizzi entro proprio oggi o domani
+
+1118
+00:50:25,079 --> 00:50:29,200
+la presenza di Aretusa Acque e del
+
+1119
+00:50:27,160 --> 00:50:31,319
+sindaco di Siracusa perché dovremo
+
+1120
+00:50:29,200 --> 00:50:34,520
+affrontare questo problema in maniera
+
+1121
+00:50:31,319 --> 00:50:37,520
+urgente e assolutamente improrabile.
+
+1122
+00:50:34,520 --> 00:50:37,520
+Grazie.
+
+1123
+00:50:38,040 --> 00:50:44,280
+Grazie onorevole Giristro. Ha chiesto di
+
+1124
+00:50:40,280 --> 00:50:44,280
+intervenire l'onorevole Burtone.
+
+1125
+00:50:58,319 --> 00:51:04,160
+Presidente, intervengo anche perché è
+
+1126
+00:51:00,359 --> 00:51:08,400
+presente l'assessore Ricò
+
+1127
+00:51:04,160 --> 00:51:11,079
+e io sto seguendo da tempo
+
+1128
+00:51:08,400 --> 00:51:14,119
+la vicenda legata alla realizzazione ai
+
+1129
+00:51:11,079 --> 00:51:17,319
+lavori dell'autostrada
+
+1130
+00:51:14,119 --> 00:51:19,200
+Catania Ragusa.
+
+1131
+00:51:17,319 --> 00:51:21,839
+è un'autostrada
+
+1132
+00:51:19,200 --> 00:51:24,680
+molto attesa dalle nostre comunità,
+
+1133
+00:51:21,839 --> 00:51:27,680
+soprattutto dalle comunità della
+
+1134
+00:51:24,680 --> 00:51:29,799
+provincia di Catania, del Calatino,
+
+1135
+00:51:27,680 --> 00:51:33,480
+in particolare
+
+1136
+00:51:29,799 --> 00:51:36,839
+della provincia di Ragusa, di Siracusa.
+
+1137
+00:51:33,480 --> 00:51:39,359
+sono realtà che intrecciano interessi
+
+1138
+00:51:36,839 --> 00:51:41,920
+economici importanti.
+
+1139
+00:51:39,359 --> 00:51:44,400
+La l'autostrada si lega a un iipotesi di
+
+1140
+00:51:41,920 --> 00:51:46,920
+sviluppo ulteriore nell'utilizzo dei
+
+1141
+00:51:44,400 --> 00:51:50,079
+nostri beni culturali,
+
+1142
+00:51:46,920 --> 00:51:54,240
+in particolare del tardo barocco, così
+
+1143
+00:51:50,079 --> 00:51:56,960
+presente in quelle realtà. I lavori
+
+1144
+00:51:54,240 --> 00:52:00,559
+procedono
+
+1145
+00:51:56,960 --> 00:52:02,400
+con una certa velocità in alcuni lotti.
+
+1146
+00:52:00,559 --> 00:52:05,200
+In un lotto invece assessore, io penso
+
+1147
+00:52:02,400 --> 00:52:06,920
+che lei sappia e i lavori sono molto
+
+1148
+00:52:05,200 --> 00:52:09,839
+rallentati
+
+1149
+00:52:06,920 --> 00:52:13,119
+perché il primo, il terzo e il quarto
+
+1150
+00:52:09,839 --> 00:52:16,000
+lotto sono arrivati oltre il 60% dei
+
+1151
+00:52:13,119 --> 00:52:18,559
+lavori di realizzazione
+
+1152
+00:52:16,000 --> 00:52:20,160
+e si parla anche della possibilità di
+
+1153
+00:52:18,559 --> 00:52:23,680
+utilizzare
+
+1154
+00:52:20,160 --> 00:52:25,920
+prossimo anno una corsia proprio di ciò
+
+1155
+00:52:23,680 --> 00:52:28,079
+che è stato realizzato, quindi veramente
+
+1156
+00:52:25,920 --> 00:52:30,400
+c'è stata un'accelerazione
+
+1157
+00:52:28,079 --> 00:52:33,040
+significativa. C'è l'otta invece numero
+
+1158
+00:52:30,400 --> 00:52:35,440
+due che arranca.
+
+1159
+00:52:33,040 --> 00:52:37,119
+Addirittura si parla del 4% della
+
+1160
+00:52:35,440 --> 00:52:42,000
+realizzazione
+
+1161
+00:52:37,119 --> 00:52:44,119
+e sono vicende che legate purtroppo
+
+1162
+00:52:42,000 --> 00:52:47,920
+anche alle imprese che avrebbero dovute
+
+1163
+00:52:44,119 --> 00:52:50,119
+eseguire queste attività. Non ci sono,
+
+1164
+00:52:47,920 --> 00:52:52,839
+diciamo, problematiche particolari dal
+
+1165
+00:52:50,119 --> 00:52:55,760
+punto di vista geologico o altro. Il
+
+1166
+00:52:52,839 --> 00:52:58,240
+problema è che le imprese che sono state
+
+1167
+00:52:55,760 --> 00:53:01,280
+finora incaricate non hanno potuto
+
+1168
+00:52:58,240 --> 00:53:04,440
+svolgere in maniera adeguata il proprio
+
+1169
+00:53:01,280 --> 00:53:08,760
+lavoro. In particolare, ora c'è la CMC
+
+1170
+00:53:04,440 --> 00:53:10,720
+che sta seguendo questo lotto.
+
+1171
+00:53:08,760 --> 00:53:12,920
+Era stato dichiarato uno sciopero per
+
+1172
+00:53:10,720 --> 00:53:16,640
+giorno 3 novembre ed è stato sospeso.
+
+1173
+00:53:12,920 --> 00:53:19,040
+Questo è un segnale, vorrei dire, di
+
+1174
+00:53:16,640 --> 00:53:22,480
+attenzione, di incoraggiamento. Pare che
+
+1175
+00:53:19,040 --> 00:53:24,280
+l'impresa abbia dato un cronoprogramma,
+
+1176
+00:53:22,480 --> 00:53:26,400
+che finora non ci siano stati i
+
+1177
+00:53:24,280 --> 00:53:30,880
+licenziamenti, che i pagamenti, la cassa
+
+1178
+00:53:26,400 --> 00:53:34,160
+edile venga adeguatamente corrisposta.
+
+1179
+00:53:30,880 --> 00:53:37,160
+Però veda, assessore, io credo che le
+
+1180
+00:53:34,160 --> 00:53:39,480
+comunità vogliano capire che cosa stia
+
+1181
+00:53:37,160 --> 00:53:41,359
+succedendo e soprattutto ci sia la
+
+1182
+00:53:39,480 --> 00:53:44,319
+necessità di un intervento del governo,
+
+1183
+00:53:41,359 --> 00:53:48,079
+anche perché la CMC ha tante commesse in
+
+1184
+00:53:44,319 --> 00:53:50,760
+tutta Italia, neanche in Sicilia si
+
+1185
+00:53:48,079 --> 00:53:53,880
+parla con il lettore fognario di di
+
+1186
+00:53:50,760 --> 00:53:56,119
+Palermo, di altri lavori e quindi
+
+1187
+00:53:53,880 --> 00:53:59,680
+bisogna capire per quella realtà che
+
+1188
+00:53:56,119 --> 00:54:01,960
+cosa bisogna fare, perché è necessario
+
+1189
+00:53:59,680 --> 00:54:04,520
+che ci sia un impulso anche per questo
+
+1190
+00:54:01,960 --> 00:54:06,960
+lotto. È un lotto, tra l'altro, che
+
+1191
+00:54:04,520 --> 00:54:09,920
+interessa una realtà che parte da
+
+1192
+00:54:06,960 --> 00:54:13,520
+Francofonte, arriva a Grammichele. sono
+
+1193
+00:54:09,920 --> 00:54:15,920
+tutte aree che orbitano attorno ai paesi
+
+1194
+00:54:13,520 --> 00:54:18,200
+anche del Calatino che io conosco bene
+
+1195
+00:54:15,920 --> 00:54:20,400
+perché sono
+
+1196
+00:54:18,200 --> 00:54:23,247
+di Militella e quindi di una realtà che
+
+1197
+00:54:20,400 --> 00:54:23,880
+è presente in questa
+
+1198
+00:54:23,247 --> 00:54:26,720
+[schiarire la voce]
+
+1199
+00:54:23,880 --> 00:54:28,880
+in questo territorio e i cittadini
+
+1200
+00:54:26,720 --> 00:54:30,720
+aspettano perché viene dato un
+
+1201
+00:54:28,880 --> 00:54:33,319
+significato
+
+1202
+00:54:30,720 --> 00:54:36,640
+notevole allo sviluppo nel momento in
+
+1203
+00:54:33,319 --> 00:54:38,760
+cui si realizzerà questa arteria. Non
+
+1204
+00:54:36,640 --> 00:54:40,760
+significherà tutto indubbiamente, però
+
+1205
+00:54:38,760 --> 00:54:43,200
+ecco si mettono insieme attività
+
+1206
+00:54:40,760 --> 00:54:46,960
+produttive significative della provincia
+
+1207
+00:54:43,200 --> 00:54:49,720
+di Ragusa con, ripeto, anche le ipotesi
+
+1208
+00:54:46,960 --> 00:54:52,079
+di un turismo culturale con
+
+1209
+00:54:49,720 --> 00:54:53,760
+l'utilizzazione di luoghi che sono
+
+1210
+00:54:52,079 --> 00:54:55,680
+splendidi dal punto di vista ambientale
+
+1211
+00:54:53,760 --> 00:54:58,000
+e culturale. Quindi, assessore, io
+
+1212
+00:54:55,680 --> 00:55:00,599
+vorrei cogliere l'accosione qui della
+
+1213
+00:54:58,000 --> 00:55:03,799
+sua presenza. lei è già disponibile a
+
+1214
+00:55:00,599 --> 00:55:06,119
+rispondere per altre questioni. Spero
+
+1215
+00:55:03,799 --> 00:55:08,040
+che dia anche una risposta rassicurante
+
+1216
+00:55:06,119 --> 00:55:09,680
+non soltanto
+
+1217
+00:55:08,040 --> 00:55:11,440
+a me in quanto parlamentare, ma
+
+1218
+00:55:09,680 --> 00:55:14,440
+soprattutto alle nostre comunità. La
+
+1219
+00:55:11,440 --> 00:55:14,440
+ringrazio.
+
+1220
+00:55:15,920 --> 00:55:22,200
+Grazie onorevole Burtone. Ha chiesto
+
+1221
+00:55:18,280 --> 00:55:22,200
+intervenire l'onorevole Campo.
+
+1222
+00:55:33,599 --> 00:55:39,400
+Grazie presidente di Paola. approfitto
+
+1223
+00:55:36,440 --> 00:55:42,000
+della presenza dell'assessore Aricò
+
+1224
+00:55:39,400 --> 00:55:44,240
+perché qualche giorno fa abbiamo avuto
+
+1225
+00:55:42,000 --> 00:55:48,039
+un incontro importante col Libero
+
+1226
+00:55:44,240 --> 00:55:50,480
+Consorzio di Ragusa, di Siracusa,
+
+1227
+00:55:48,039 --> 00:55:53,200
+con le parti politiche ma anche
+
+1228
+00:55:50,480 --> 00:55:56,400
+economiche dei due territori. Abbiamo
+
+1229
+00:55:53,200 --> 00:55:59,079
+appreso da fonti stampa che è stato
+
+1230
+00:55:56,400 --> 00:56:02,280
+espletato il bando per i caselli
+
+1231
+00:55:59,079 --> 00:56:04,440
+autostradali della Siracusa Gela.
+
+1232
+00:56:02,280 --> 00:56:06,640
+Assessore, lei è venuto nel nostro
+
+1233
+00:56:04,440 --> 00:56:09,200
+territorio, c'era un consiglio comunale
+
+1234
+00:56:06,640 --> 00:56:11,880
+aperto a Sicli, quando sono stati
+
+1235
+00:56:09,200 --> 00:56:13,839
+sottratti i fondi per la bretella di
+
+1236
+00:56:11,880 --> 00:56:16,760
+completamento fino a cicli della
+
+1237
+00:56:13,839 --> 00:56:19,240
+Siracusa Gela, ci aveva promesso non
+
+1238
+00:56:16,760 --> 00:56:22,359
+solo che sarebbero stati recuperati
+
+1239
+00:56:19,240 --> 00:56:24,640
+questi fondi, ma addirittura che avreste
+
+1240
+00:56:22,359 --> 00:56:28,319
+trovato i fondi per l'intero
+
+1241
+00:56:24,640 --> 00:56:30,720
+completamento della strada. I fondi FSC
+
+1242
+00:56:28,319 --> 00:56:33,079
+sono stati spostati per il fantomatico
+
+1243
+00:56:30,720 --> 00:56:35,480
+ponte sullo stretto. Di risorse
+
+1244
+00:56:33,079 --> 00:56:37,520
+economiche per la Siracusa Gela non ne
+
+1245
+00:56:35,480 --> 00:56:40,480
+abbiamo mai viste. La strada è
+
+1246
+00:56:37,520 --> 00:56:43,240
+un'incompiuta di fatto che finisce fino
+
+1247
+00:56:40,480 --> 00:56:46,119
+a Modica e lei mi mette anche il
+
+1248
+00:56:43,240 --> 00:56:48,200
+pedaggio per risanare i conti del CAS.
+
+1249
+00:56:46,119 --> 00:56:51,760
+Io capisco tutti i problemi che avete
+
+1250
+00:56:48,200 --> 00:56:54,720
+col CAS e il fatto che Salvini ha anche
+
+1251
+00:56:51,760 --> 00:56:57,319
+imposto delle limitazioni pena la revoca
+
+1252
+00:56:54,720 --> 00:57:00,240
+della concessione alla regione, ma non
+
+1253
+00:56:57,319 --> 00:57:02,880
+può pagare solo una parte di territorio,
+
+1254
+00:57:00,240 --> 00:57:04,480
+il sudest che per la prima volta nella
+
+1255
+00:57:02,880 --> 00:57:07,359
+storia ha qualche chilometro di
+
+1256
+00:57:04,480 --> 00:57:11,839
+autostrada per giunta incompiuta. Chi
+
+1257
+00:57:07,359 --> 00:57:15,920
+mettiamo il pedaggio e e ulteriore beffa
+
+1258
+00:57:11,839 --> 00:57:19,000
+l'altra strada, la la Ragusa Catania,
+
+1259
+00:57:15,920 --> 00:57:21,559
+scusate, è un cantiere, è un cantiere
+
+1260
+00:57:19,000 --> 00:57:24,799
+che ha ben quattro lotti che stanno
+
+1261
+00:57:21,559 --> 00:57:27,400
+andando avanti, ma che comunque generano
+
+1262
+00:57:24,799 --> 00:57:30,720
+un grosso disagio per il nostro
+
+1263
+00:57:27,400 --> 00:57:33,200
+territorio. E allora perché ci volete
+
+1264
+00:57:30,720 --> 00:57:35,640
+penalizzare così tanto? È una domanda
+
+1265
+00:57:33,200 --> 00:57:38,559
+che io le faccio, perché i debiti del
+
+1266
+00:57:35,640 --> 00:57:41,400
+CAS che ammontano a 46 milioni più altri
+
+1267
+00:57:38,559 --> 00:57:44,079
+90 milioni potenziali di contenzioso,
+
+1268
+00:57:41,400 --> 00:57:46,559
+perché li dobbiamo pagare solo noi? Un
+
+1269
+00:57:44,079 --> 00:57:50,000
+territorio che già soffre la pena di
+
+1270
+00:57:46,559 --> 00:57:52,720
+mancanza di infrastrutture da decenni.
+
+1271
+00:57:50,000 --> 00:57:54,799
+E colgo l'occasione per aggiungere due
+
+1272
+00:57:52,720 --> 00:57:57,079
+parole a quello che già ha detto il mio
+
+1273
+00:57:54,799 --> 00:57:59,960
+collega Burtone in precedenza sulla
+
+1274
+00:57:57,079 --> 00:58:02,119
+Ragusa Catania. Il il presidente
+
+1275
+00:57:59,960 --> 00:58:04,720
+Schifani è il commissario straordinario
+
+1276
+00:58:02,119 --> 00:58:07,119
+dell'opera, lei è assessore alle
+
+1277
+00:58:04,720 --> 00:58:11,039
+infrastrutture dello stesso colore
+
+1278
+00:58:07,119 --> 00:58:13,359
+politico del governo nazionale.
+
+1279
+00:58:11,039 --> 00:58:16,240
+Siccome il lotto tre è in forte
+
+1280
+00:58:13,359 --> 00:58:18,839
+sofferenza, perché a differenza degli
+
+1281
+00:58:16,240 --> 00:58:21,880
+altri lotti, l'uno, il 2 e il 4, che
+
+1282
+00:58:18,839 --> 00:58:25,000
+sono quasi al 50% e che stanno
+
+1283
+00:58:21,880 --> 00:58:28,599
+procedendo in maniera spedita, il lotto
+
+1284
+00:58:25,000 --> 00:58:31,200
+3 è al 3%. È un lotto intermedio ed è un
+
+1285
+00:58:28,599 --> 00:58:33,280
+lotto che potrebbe interrompere l'intera
+
+1286
+00:58:31,200 --> 00:58:36,119
+opera. È chiaro che la ditta è in
+
+1287
+00:58:33,280 --> 00:58:38,520
+difficoltà. Quello che le chiedo è di
+
+1288
+00:58:36,119 --> 00:58:41,079
+interloquire col governo nazionale per
+
+1289
+00:58:38,520 --> 00:58:44,520
+una modifica al codice dei contratti.
+
+1290
+00:58:41,079 --> 00:58:47,680
+Perché in casi straordinari come questi,
+
+1291
+00:58:44,520 --> 00:58:50,200
+dove non è più possibile che la ditta
+
+1292
+00:58:47,680 --> 00:58:53,079
+riesca ad andare avanti per non fermare
+
+1293
+00:58:50,200 --> 00:58:55,280
+l'intera opera dopo aver verificato lo
+
+1294
+00:58:53,079 --> 00:58:57,839
+scorrimento eccetera eccetera, è
+
+1295
+00:58:55,280 --> 00:59:00,319
+necessario che possano intervenire anche
+
+1296
+00:58:57,839 --> 00:59:02,440
+gli altri che già hanno l'appalto senza
+
+1297
+00:59:00,319 --> 00:59:04,799
+che si rifaccia il bando, perché rifare
+
+1298
+00:59:02,440 --> 00:59:07,760
+il bando significa rallentare
+
+1299
+00:59:04,799 --> 00:59:10,400
+ulteriormente l'opera perché ci sono
+
+1300
+00:59:07,760 --> 00:59:12,119
+nuove normative, servono nuovi fondi,
+
+1301
+00:59:10,400 --> 00:59:14,960
+Non si sa se con i ribassi si può
+
+1302
+00:59:12,119 --> 00:59:17,920
+riuscire a intervenire. Un disastro per
+
+1303
+00:59:14,960 --> 00:59:19,720
+un territorio eternamente penalizzato
+
+1304
+00:59:17,920 --> 00:59:22,160
+sul fronte delle infrastrutture.
+
+1305
+00:59:19,720 --> 00:59:24,200
+Assessore, se ne faccia carico e
+
+1306
+00:59:22,160 --> 00:59:26,559
+soprattutto rifletta sulla Siracusa
+
+1307
+00:59:24,200 --> 00:59:29,599
+Gela. Non meritiamo il pedaggio, ma il
+
+1308
+00:59:26,559 --> 00:59:32,520
+completamento. Poi dopo ci darete anche
+
+1309
+00:59:29,599 --> 00:59:34,400
+il pedaggio e pagheremo.
+
+1310
+00:59:32,520 --> 00:59:37,079
+Grazie. Onorevole Campo ha chiesto di
+
+1311
+00:59:34,400 --> 00:59:41,440
+intervenire l'onorevole Spada,
+
+1312
+00:59:37,079 --> 00:59:43,119
+poi ho l'onorevole Venezia e infine, ma
+
+1313
+00:59:41,440 --> 00:59:47,680
+non
+
+1314
+00:59:43,119 --> 00:59:47,680
+per importanza, l'onorevole Di Pasquale.
+
+1315
+00:59:49,720 --> 00:59:53,520
+Grazie, signor Presidente. Prendo spunto
+
+1316
+00:59:51,960 --> 00:59:55,720
+dall'intervento
+
+1317
+00:59:53,520 --> 00:59:58,680
+della collega per dire che in
+
+1318
+00:59:55,720 --> 01:00:01,680
+commissione quando si è trattato
+
+1319
+00:59:58,680 --> 01:00:04,880
+l'argomento e quindi l'attivazione dei
+
+1320
+01:00:01,680 --> 01:00:08,039
+caselli autostradali sulla Siracusa
+
+1321
+01:00:04,880 --> 01:00:11,400
+Gela, devo dire che gli unici che si
+
+1322
+01:00:08,039 --> 01:00:13,880
+sono opposti a questo tipo di iniziativa
+
+1323
+01:00:11,400 --> 01:00:16,000
+sono stati i parlamentari del Partito
+
+1324
+01:00:13,880 --> 01:00:20,000
+Democratico, nello specifico il
+
+1325
+01:00:16,000 --> 01:00:22,960
+sottoscritto insieme al collega e perché
+
+1326
+01:00:20,000 --> 01:00:25,720
+in qualche modo Non ritenevamo
+
+1327
+01:00:22,960 --> 01:00:27,359
+opportuno e giusto il fatto di
+
+1328
+01:00:25,720 --> 01:00:31,319
+sovraccaricare
+
+1329
+01:00:27,359 --> 01:00:32,920
+eh i cittadini di un costo su un'opera
+
+1330
+01:00:31,319 --> 01:00:34,640
+che di fatto non solo non si è mai
+
+1331
+01:00:32,920 --> 01:00:37,240
+completata, ma che di fatto riceve e
+
+1332
+01:00:34,640 --> 01:00:41,640
+continua a ricevere finanziamenti da
+
+1333
+01:00:37,240 --> 01:00:44,559
+parte del governo regionale. Ultimo, il
+
+1334
+01:00:41,640 --> 01:00:46,839
+ponte all'altezza di Cassibile che ha
+
+1335
+01:00:44,559 --> 01:00:50,119
+avuto un cedimento e che nella scorsa
+
+1336
+01:00:46,839 --> 01:00:52,680
+finanziaria abbiamo in qualche modo
+
+1337
+01:00:50,119 --> 01:00:56,160
+fatto sì che venissero stanziate delle
+
+1338
+01:00:52,680 --> 01:00:59,599
+risorse per sbloccare quello svincolo e
+
+1339
+01:00:56,160 --> 01:01:01,960
+quel tratto autostradale. Quindi da
+
+1340
+01:00:59,599 --> 01:01:04,559
+questo punto di vista penso che ognuno
+
+1341
+01:01:01,960 --> 01:01:06,520
+dei parlamentari regionali di questa
+
+1342
+01:01:04,559 --> 01:01:09,400
+maggioranza si dovrà assumere le proprie
+
+1343
+01:01:06,520 --> 01:01:11,400
+responsabilità e dovrà essere chiamato
+
+1344
+01:01:09,400 --> 01:01:13,920
+anche nelle valutazioni politiche degli
+
+1345
+01:01:11,400 --> 01:01:15,359
+stessi durante questi 5 anni dell'azione
+
+1346
+01:01:13,920 --> 01:01:18,480
+che avranno fatto e portata avanti a
+
+1347
+01:01:15,359 --> 01:01:19,880
+difesa del territorio. Però non voglio,
+
+1348
+01:01:18,480 --> 01:01:22,839
+come dire, dilungarmi su questo
+
+1349
+01:01:19,880 --> 01:01:25,119
+argomento, invece vorrei, presidente,
+
+1350
+01:01:22,839 --> 01:01:28,520
+chiederle nuovamente rispetto alla
+
+1351
+01:01:25,119 --> 01:01:30,520
+richiesta fatta ieri di istituzione
+
+1352
+01:01:28,520 --> 01:01:32,079
+all'interno di quest'aula di un
+
+1353
+01:01:30,520 --> 01:01:34,680
+dibattito
+
+1354
+01:01:32,079 --> 01:01:38,240
+con l'assessore alla sanità rispetto ai
+
+1355
+01:01:34,680 --> 01:01:41,640
+problemi legati al mondo della sanità,
+
+1356
+01:01:38,240 --> 01:01:44,640
+perché ritengo che ancora oggi non ci
+
+1357
+01:01:41,640 --> 01:01:47,319
+stiamo rendendo conto del problema serio
+
+1358
+01:01:44,640 --> 01:01:49,960
+che sta affrontando la nostra regione.
+
+1359
+01:01:47,319 --> 01:01:52,680
+Il fatto che l'assessore Caruso non
+
+1360
+01:01:49,960 --> 01:01:55,359
+venga in quest'aula da diversi mesi a
+
+1361
+01:01:52,680 --> 01:01:58,200
+riferire dei problemi sulla sanità
+
+1362
+01:01:55,359 --> 01:02:01,200
+siciliana è un fatto grave. Ed è un
+
+1363
+01:01:58,200 --> 01:02:04,520
+fatto grave dal punto di vista politico.
+
+1364
+01:02:01,200 --> 01:02:06,520
+Ripeto, siamo tutti consapevoli e anche
+
+1365
+01:02:04,520 --> 01:02:09,160
+il sottoscritto è consapevole del fatto
+
+1366
+01:02:06,520 --> 01:02:10,960
+che ci siano delle inchieste giudiziarie
+
+1367
+01:02:09,160 --> 01:02:13,240
+che interessano il mondo e l'ambito
+
+1368
+01:02:10,960 --> 01:02:15,119
+della sanità, ma noi oggi non stiamo
+
+1369
+01:02:13,240 --> 01:02:17,599
+chiedendo all'assessore Caruso di venire
+
+1370
+01:02:15,119 --> 01:02:20,480
+qui a rispondere su fatti che
+
+1371
+01:02:17,599 --> 01:02:22,799
+interessano, diciamo, questioni
+
+1372
+01:02:20,480 --> 01:02:25,400
+giudiziarie. Noi chiediamo all'assessore
+
+1373
+01:02:22,799 --> 01:02:27,000
+Caruso di venire in aula a riferire dei
+
+1374
+01:02:25,400 --> 01:02:29,960
+disagi e dei problemi che si vivono
+
+1375
+01:02:27,000 --> 01:02:31,960
+all'interno della sanità siciliana.
+
+1376
+01:02:29,960 --> 01:02:36,839
+Abbiamo
+
+1377
+01:02:31,960 --> 01:02:41,079
+creato un buco di 600 milioni di euro.
+
+1378
+01:02:36,839 --> 01:02:43,480
+Noi da qui a breve avremo la gestione
+
+1379
+01:02:41,079 --> 01:02:46,440
+sanitaria in Sicilia che non sarà più in
+
+1380
+01:02:43,480 --> 01:02:48,119
+grado di essere affrontata nei termini
+
+1381
+01:02:46,440 --> 01:02:50,599
+in cui l'abbiamo immaginata fino ad
+
+1382
+01:02:48,119 --> 01:02:52,559
+oggi. I soldi che stanziamo in ogni
+
+1383
+01:02:50,599 --> 01:02:54,839
+manovra finanziaria,
+
+1384
+01:02:52,559 --> 01:02:57,160
+6 milioni 5 milioni, per l'abbattimento
+
+1385
+01:02:54,839 --> 01:02:58,559
+delle liste d'attesa, non sta sortendo,
+
+1386
+01:02:57,160 --> 01:03:01,279
+non stanno sortendo gli effetti
+
+1387
+01:02:58,559 --> 01:03:04,079
+desiderati. Le liste d'attesa continuano
+
+1388
+01:03:01,279 --> 01:03:08,799
+ad essere infinite e i tempi d'attesa
+
+1389
+01:03:04,079 --> 01:03:13,559
+per, diciamo, eh le eh come dire i gli
+
+1390
+01:03:08,799 --> 01:03:17,400
+esami diagnostici sui singoli pazienti
+
+1391
+01:03:13,559 --> 01:03:20,760
+hanno tempi d'attesa che raggiungono più
+
+1392
+01:03:17,400 --> 01:03:25,160
+di 6 mesi. Allora, presidente,
+
+1393
+01:03:20,760 --> 01:03:27,400
+invito nuovamente lei e magari il
+
+1394
+01:03:25,160 --> 01:03:31,160
+governo e mi fa piacere che qui c'è
+
+1395
+01:03:27,400 --> 01:03:32,839
+l'assessore Ricò che ha la delega con il
+
+1396
+01:03:31,160 --> 01:03:35,319
+Parlamento
+
+1397
+01:03:32,839 --> 01:03:38,920
+di prima della discussione di questa
+
+1398
+01:03:35,319 --> 01:03:41,880
+finanziaria affrontare il tema in aula
+
+1399
+01:03:38,920 --> 01:03:43,799
+per consentire ai parlamentari regionali
+
+1400
+01:03:41,880 --> 01:03:46,480
+la possibilità
+
+1401
+01:03:43,799 --> 01:03:48,720
+di sottoporre all'assessore alcune
+
+1402
+01:03:46,480 --> 01:03:51,279
+questioni e soprattutto per dare
+
+1403
+01:03:48,720 --> 01:03:54,599
+risposte e rassicurare anche la
+
+1404
+01:03:51,279 --> 01:03:57,880
+popolazione che si vede quotidianamente,
+
+1405
+01:03:54,599 --> 01:03:57,880
+come dire,
+
+1406
+01:03:57,960 --> 01:04:05,160
+bombardata di notizie negative
+
+1407
+01:04:01,000 --> 01:04:07,119
+che non danno una serenità e sicuramente
+
+1408
+01:04:05,160 --> 01:04:09,559
+non trasferiscono,
+
+1409
+01:04:07,119 --> 01:04:12,920
+come dire, una serenità in tutti coloro
+
+1410
+01:04:09,559 --> 01:04:15,079
+i quali hanno oggi dei bisogni e che
+
+1411
+01:04:12,920 --> 01:04:16,960
+piuttosto che rivolgersi alle nostre
+
+1412
+01:04:15,079 --> 01:04:19,359
+aziende sanitarie, piuttosto che
+
+1413
+01:04:16,960 --> 01:04:22,760
+rivolgersi e nei confronti dei nostri
+
+1414
+01:04:19,359 --> 01:04:25,680
+ospedali, delle ASP, preferiscono o non
+
+1415
+01:04:22,760 --> 01:04:28,119
+andarsi a curare oppure curarsi in
+
+1416
+01:04:25,680 --> 01:04:30,680
+un'altra regione. E allora, siccome noi
+
+1417
+01:04:28,119 --> 01:04:32,440
+dobbiamo in qualche modo dare seguito
+
+1418
+01:04:30,680 --> 01:04:34,359
+anche a quelle che sono le istanze, le
+
+1419
+01:04:32,440 --> 01:04:37,039
+problematiche che ci vengono sottoposte
+
+1420
+01:04:34,359 --> 01:04:39,760
+quotidianamente, chiedo con forza,
+
+1421
+01:04:37,039 --> 01:04:42,920
+presidente, e spero che la prossima
+
+1422
+01:04:39,760 --> 01:04:45,480
+settimana possa essere l'occasione per
+
+1423
+01:04:42,920 --> 01:04:47,559
+affrontare questi temi, di convocare in
+
+1424
+01:04:45,480 --> 01:04:50,079
+quest'aula assessore Caruso per
+
+1425
+01:04:47,559 --> 01:04:52,480
+affrontare i temi che interessano la
+
+1426
+01:04:50,079 --> 01:04:55,359
+sanità all'interno della nostra regione.
+
+1427
+01:04:52,480 --> 01:04:58,200
+Grazie.
+
+1428
+01:04:55,359 --> 01:05:02,640
+Grazie onorevole Spada. C'è l'onorevole
+
+1429
+01:04:58,200 --> 01:05:02,640
+Venezia. Prego onorevole.
+
+1430
+01:05:11,119 --> 01:05:18,200
+Grazie presidente. Onorevoli colleghi,
+
+1431
+01:05:14,720 --> 01:05:23,760
+rappresentanti del governo.
+
+1432
+01:05:18,200 --> 01:05:27,440
+Ieri ho seguito i lavori in commissione
+
+1433
+01:05:23,760 --> 01:05:30,079
+salute e nel corso del
+
+1434
+01:05:27,440 --> 01:05:33,920
+della discussione
+
+1435
+01:05:30,079 --> 01:05:37,119
+sono emersi due dati
+
+1436
+01:05:33,920 --> 01:05:42,039
+che destano parecchia preoccupazione.
+
+1437
+01:05:37,119 --> 01:05:44,440
+Il primo è un dato che ha diffuso la
+
+1438
+01:05:42,039 --> 01:05:48,400
+Fondazione Gimbe,
+
+1439
+01:05:44,440 --> 01:05:51,279
+la quale sostiene che in Sicilia
+
+1440
+01:05:48,400 --> 01:05:54,799
+419.000
+
+1441
+01:05:51,279 --> 01:05:56,319
+cittadini siciliani non riescono a
+
+1442
+01:05:54,799 --> 01:05:59,799
+curarsi
+
+1443
+01:05:56,319 --> 01:06:03,680
+perché non hanno a disposizione i fondi
+
+1444
+01:05:59,799 --> 01:06:08,559
+necessari per rivolgersi alle strutture
+
+1445
+01:06:03,680 --> 01:06:12,520
+private, perché le liste d'attesa della
+
+1446
+01:06:08,559 --> 01:06:16,160
+sanità pubblica hanno raggiunto ormai
+
+1447
+01:06:12,520 --> 01:06:18,839
+tempi inaccettabili e incompatibili con
+
+1448
+01:06:16,160 --> 01:06:22,520
+la salute dei pazienti.
+
+1449
+01:06:18,839 --> 01:06:25,400
+E il secondo dato è che
+
+1450
+01:06:22,520 --> 01:06:27,599
+la sanità siciliana è allo sbando non
+
+1451
+01:06:25,400 --> 01:06:30,160
+solo per
+
+1452
+01:06:27,599 --> 01:06:34,319
+questioni di natura organizzative
+
+1453
+01:06:30,160 --> 01:06:38,200
+gestionali legate anche alla mancanza di
+
+1454
+01:06:34,319 --> 01:06:41,480
+personale medico, infermieristico e
+
+1455
+01:06:38,200 --> 01:06:44,160
+sanitario in genere, ma perché anche la
+
+1456
+01:06:41,480 --> 01:06:47,599
+spesa sanitaria in Sicilia è fuori
+
+1457
+01:06:44,160 --> 01:06:50,960
+controllo e si stima che da qui a fine
+
+1458
+01:06:47,599 --> 01:06:55,680
+anno c'è il rischio che
+
+1459
+01:06:50,960 --> 01:06:59,200
+occorrano 650 milioni per fare fronte
+
+1460
+01:06:55,680 --> 01:07:01,440
+alla spesa sanitaria in più rispetto a
+
+1461
+01:06:59,200 --> 01:07:04,760
+quella programmata.
+
+1462
+01:07:01,440 --> 01:07:08,480
+E quindi abbiamo da un lato
+
+1463
+01:07:04,760 --> 01:07:12,440
+condizioni legate ai servizi, ai
+
+1464
+01:07:08,480 --> 01:07:15,359
+cittadini che necessitano di cure che
+
+1465
+01:07:12,440 --> 01:07:18,200
+anziché andare avanti regrediscono e
+
+1466
+01:07:15,359 --> 01:07:21,160
+dall'altro un aumento esponenziale della
+
+1467
+01:07:18,200 --> 01:07:24,720
+spesa sanitaria. Io credo che questi due
+
+1468
+01:07:21,160 --> 01:07:26,920
+dati ci segnalano che la situazione
+
+1469
+01:07:24,720 --> 01:07:29,039
+ormai è fuori controllo da da tutti i
+
+1470
+01:07:26,920 --> 01:07:31,000
+punti di vista.
+
+1471
+01:07:29,039 --> 01:07:34,599
+ci segnalano che non c'è una
+
+1472
+01:07:31,000 --> 01:07:36,920
+programmazione vera nella gestione della
+
+1473
+01:07:34,599 --> 01:07:40,240
+sanità siciliana.
+
+1474
+01:07:36,920 --> 01:07:43,480
+ci segnalano che la sanità siciliana è,
+
+1475
+01:07:40,240 --> 01:07:46,920
+come abbiamo più volte ribadito, un
+
+1476
+01:07:43,480 --> 01:07:48,599
+bottino di guerra della politica per la
+
+1477
+01:07:46,920 --> 01:07:52,119
+spartizione
+
+1478
+01:07:48,599 --> 01:07:55,119
+del potere, per le nomine dei direttori
+
+1479
+01:07:52,119 --> 01:07:57,920
+generali, sanitari, amministrativi, per
+
+1480
+01:07:55,119 --> 01:08:00,160
+la promozione dei primari, per i
+
+1481
+01:07:57,920 --> 01:08:03,240
+trasferimenti del personale da un
+
+1482
+01:08:00,160 --> 01:08:05,359
+ospedale ad un altro. E mi chiedo e vi
+
+1483
+01:08:03,240 --> 01:08:09,079
+chiedo in quest'aula
+
+1484
+01:08:05,359 --> 01:08:12,520
+se il tema delle liste d'attesa non
+
+1485
+01:08:09,079 --> 01:08:15,920
+rappresenti vergognosamente un sistema
+
+1486
+01:08:12,520 --> 01:08:18,359
+volto ad ad alimentare il consenso
+
+1487
+01:08:15,920 --> 01:08:21,920
+elettorale in questa terra dove
+
+1488
+01:08:18,359 --> 01:08:24,759
+purtroppo il bisogno e il diritto
+
+1489
+01:08:21,920 --> 01:08:27,640
+diventa una richiesta di favore al
+
+1490
+01:08:24,759 --> 01:08:31,239
+politico di turno. Io credo che tutto
+
+1491
+01:08:27,640 --> 01:08:34,159
+ciò dovrebbe farci riflettere, dovrebbe
+
+1492
+01:08:31,239 --> 01:08:37,120
+farci fermare, perché le logiche di
+
+1493
+01:08:34,159 --> 01:08:39,640
+gestione di potere, le logiche di
+
+1494
+01:08:37,120 --> 01:08:42,359
+gestione della spesa pubblica non
+
+1495
+01:08:39,640 --> 01:08:45,239
+possono essere anteposte
+
+1496
+01:08:42,359 --> 01:08:49,319
+alla salute dei cittadini, alla
+
+1497
+01:08:45,239 --> 01:08:51,960
+necessità di cura. Pensare che nove
+
+1498
+01:08:49,319 --> 01:08:55,319
+cittadini su 100 non hanno i soldi per
+
+1499
+01:08:51,960 --> 01:08:58,560
+curarsi e che rinunciano alle cure è
+
+1500
+01:08:55,319 --> 01:09:02,080
+qualcosa che dovrebbe gridare vendetta.
+
+1501
+01:08:58,560 --> 01:09:05,120
+Abbiamo speso negli ultimi 4 anni 100
+
+1502
+01:09:02,080 --> 01:09:09,239
+milioni di euro per abbattere le liste
+
+1503
+01:09:05,120 --> 01:09:11,520
+d'attesa e i dati che diffonde il
+
+1504
+01:09:09,239 --> 01:09:14,520
+dipartimento
+
+1505
+01:09:11,520 --> 01:09:17,199
+legato alla sanità ci conferma che
+
+1506
+01:09:14,520 --> 01:09:19,000
+invece le liste i tempi di attesa sono
+
+1507
+01:09:17,199 --> 01:09:21,759
+aumentati.
+
+1508
+01:09:19,000 --> 01:09:24,520
+Noi chiediamo al governo regionale e mi
+
+1509
+01:09:21,759 --> 01:09:27,440
+dispiace che oggi non ci sia l'assessore
+
+1510
+01:09:24,520 --> 01:09:30,480
+della salute Marcello Caruso, di
+
+1511
+01:09:27,440 --> 01:09:33,480
+fermarsi un attimo e di cercare di
+
+1512
+01:09:30,480 --> 01:09:37,000
+capire come abbandonare queste logiche
+
+1513
+01:09:33,480 --> 01:09:40,560
+perverse che hanno alimentato il sistema
+
+1514
+01:09:37,000 --> 01:09:43,319
+sanitario siciliano che ha trovato anche
+
+1515
+01:09:40,560 --> 01:09:46,640
+momenti di opacità alla luce di diverse
+
+1516
+01:09:43,319 --> 01:09:48,520
+inchieste giudiziarie e di riprendere un
+
+1517
+01:09:46,640 --> 01:09:51,560
+cammino di trasparenza
+
+1518
+01:09:48,520 --> 01:09:54,199
+e di efficienza. Non è mai troppo tardi.
+
+1519
+01:09:51,560 --> 01:09:56,719
+Siamo alla fine di questa legislatura.
+
+1520
+01:09:54,199 --> 01:10:00,040
+Io credo che questi dati dovrebbero fare
+
+1521
+01:09:56,719 --> 01:10:02,040
+riflettere tutti e dovrebbero portare a
+
+1522
+01:10:00,040 --> 01:10:06,480
+scelte
+
+1523
+01:10:02,040 --> 01:10:09,480
+più importanti e improntate al bene
+
+1524
+01:10:06,480 --> 01:10:09,480
+comune.
+
+1525
+01:10:10,040 --> 01:10:14,800
+Grazie onorevole Venezia. l'ultimo
+
+1526
+01:10:12,280 --> 01:10:16,880
+intervento dell'onorevole Di Pasquale e
+
+1527
+01:10:14,800 --> 01:10:20,320
+poi do la parola all'assessore. Prego.
+
+1528
+01:10:16,880 --> 01:10:20,320
+Onorevole Di Pasquale.
+
+1529
+01:10:27,840 --> 01:10:32,400
+Signor presidente, signor assessore,
+
+1530
+01:10:29,920 --> 01:10:37,760
+colleghi parlamentari,
+
+1531
+01:10:32,400 --> 01:10:40,440
+eh vero assessore, eh quando
+
+1532
+01:10:37,760 --> 01:10:42,280
+durante il governo Crocetta
+
+1533
+01:10:40,440 --> 01:10:46,719
+riuscimmo
+
+1534
+01:10:42,280 --> 01:10:51,320
+a far finanziare la Ragusa Catania
+
+1535
+01:10:46,719 --> 01:10:53,159
+e sbloccare tutte le procedure
+
+1536
+01:10:51,320 --> 01:10:55,800
+burocratiche
+
+1537
+01:10:53,159 --> 01:10:57,440
+ehm fino arrivare al progetto di
+
+1538
+01:10:55,800 --> 01:10:59,640
+finanza.
+
+1539
+01:10:57,440 --> 01:11:03,520
+avvenne tutto in quel periodo, dai
+
+1540
+01:10:59,640 --> 01:11:06,560
+pareri relativi ai beni culturali, i
+
+1541
+01:11:03,520 --> 01:11:09,800
+pareri bloccati, pareri blocc guardi lei
+
+1542
+01:11:06,560 --> 01:11:12,320
+non i progetto di finanza. La prima fase
+
+1543
+01:11:09,800 --> 01:11:16,600
+era progetto di finanza, poi dopodiché
+
+1544
+01:11:12,320 --> 01:11:19,199
+dopo il governo Conte bis poi lo fa
+
+1545
+01:11:16,600 --> 01:11:21,159
+diventare invece di progetto di finanza,
+
+1546
+01:11:19,199 --> 01:11:24,440
+ve parla con chi l'ha seguito passo dopo
+
+1547
+01:11:21,159 --> 01:11:26,040
+passo e lo fa diventare invece elimina
+
+1548
+01:11:24,440 --> 01:11:30,239
+il pedaggio e viene eliminato il
+
+1549
+01:11:26,040 --> 01:11:33,120
+progetto di Finanza Conte bis.
+
+1550
+01:11:30,239 --> 01:11:35,280
+La prima parte però viene sbloccata
+
+1551
+01:11:33,120 --> 01:11:37,840
+durante quel governo. Il governo tanto
+
+1552
+01:11:35,280 --> 01:11:40,639
+cattivo, quel governo di Crocetta,
+
+1553
+01:11:37,840 --> 01:11:43,440
+riesce a riprendere il progetto, ad
+
+1554
+01:11:40,639 --> 01:11:46,880
+ottenere tutti i pareri che riguardavano
+
+1555
+01:11:43,440 --> 01:11:51,440
+la Sicilia, a trasmetterlo
+
+1556
+01:11:46,880 --> 01:11:54,840
+al Ministero, al dell'Ambiente
+
+1557
+01:11:51,440 --> 01:11:58,199
+e poi alle infrastrutture e poi al MEF.
+
+1558
+01:11:54,840 --> 01:12:01,480
+Quelli furono tutti i passaggi
+
+1559
+01:11:58,199 --> 01:12:04,560
+e mettendo le prime risorse le mese il
+
+1560
+01:12:01,480 --> 01:12:06,760
+governo Renzi per il progetto di
+
+1561
+01:12:04,560 --> 01:12:08,880
+finanza.
+
+1562
+01:12:06,760 --> 01:12:12,440
+Guardi, in quel periodo noi eravamo poi
+
+1563
+01:12:08,880 --> 01:12:14,800
+dopodiché ci fu il governo Conte bis che
+
+1564
+01:12:12,440 --> 01:12:16,560
+fece una scelta, quello lì di eliminare
+
+1565
+01:12:14,800 --> 01:12:19,560
+il pedaggio con tutta una serie di
+
+1566
+01:12:16,560 --> 01:12:21,880
+perplessità, io per primo, di eliminare
+
+1567
+01:12:19,560 --> 01:12:24,280
+il pedaggio e di farlo finanziamento
+
+1568
+01:12:21,880 --> 01:12:27,600
+pubblico totale aggiungendo gli
+
+1569
+01:12:24,280 --> 01:12:31,080
+ulteriori 600 700 milioni che mancavano.
+
+1570
+01:12:27,600 --> 01:12:34,880
+Conte presidente del consiglio, ministro
+
+1571
+01:12:31,080 --> 01:12:38,120
+eh ministro delle infrastrutture.
+
+1572
+01:12:34,880 --> 01:12:41,120
+Sì. ministro delle infrastrutture
+
+1573
+01:12:38,120 --> 01:12:41,120
+Paola
+
+1574
+01:12:41,280 --> 01:12:48,000
+De Micheli. Grazie Paola De Michele. 700
+
+1575
+01:12:44,800 --> 01:12:50,920
+milioni morale della favola. Cioè
+
+1576
+01:12:48,000 --> 01:12:53,480
+quest'opera c'eravamo convinti veramente
+
+1577
+01:12:50,920 --> 01:12:55,840
+di aver risolto una questione che era
+
+1578
+01:12:53,480 --> 01:12:58,320
+decennale e che finalmente potevamo
+
+1579
+01:12:55,840 --> 01:13:02,280
+arrivare al dunque.
+
+1580
+01:12:58,320 --> 01:13:03,800
+E l'opera è stata appartata, sta andando
+
+1581
+01:13:02,280 --> 01:13:08,719
+avanti,
+
+1582
+01:13:03,800 --> 01:13:10,960
+però ad oggi l'opera ha tutta una serie
+
+1583
+01:13:08,719 --> 01:13:12,960
+di difficoltà perché ci sono cantieri
+
+1584
+01:13:10,960 --> 01:13:15,440
+che stanno funzionando, cantieri che
+
+1585
+01:13:12,960 --> 01:13:17,280
+vanno veloci e forse la più importante
+
+1586
+01:13:15,440 --> 01:13:21,000
+infrastruttura che si sta realizzando in
+
+1587
+01:13:17,280 --> 01:13:25,639
+Sicilia e cantieri invece che sono quasi
+
+1588
+01:13:21,000 --> 01:13:30,000
+fermi, cioè quindi noi rischiamo già è
+
+1589
+01:13:25,639 --> 01:13:32,120
+sicuro, facciamo sopr luoghi da quando
+
+1590
+01:13:30,000 --> 01:13:36,120
+sono iniziati i lavori ne ho fatte
+
+1591
+01:13:32,120 --> 01:13:39,639
+diverse insieme anche al
+
+1592
+01:13:36,120 --> 01:13:41,719
+l'onorevole Barbagallo, componente della
+
+1593
+01:13:39,639 --> 01:13:44,360
+commissione trasporti, ne abbiamo fatti
+
+1594
+01:13:41,719 --> 01:13:48,080
+tre, quattro, ne abbiamo fatti diversi e
+
+1595
+01:13:44,360 --> 01:13:51,000
+dall'inizio noi denunciamo che purtroppo
+
+1596
+01:13:48,080 --> 01:13:53,320
+i lavori stanno andando a rilento in
+
+1597
+01:13:51,000 --> 01:13:55,360
+alcuni cantieri che sono in alcuni che
+
+1598
+01:13:53,320 --> 01:13:57,560
+sono proprio
+
+1599
+01:13:55,360 --> 01:14:00,400
+quasi nella fase essenziale.
+
+1600
+01:13:57,560 --> 01:14:02,520
+Io vorrei, assessore che su questo voi
+
+1601
+01:14:00,400 --> 01:14:06,199
+dovete svolgere un ruolo più
+
+1602
+01:14:02,520 --> 01:14:08,400
+determinante, più incisivo, perché già è
+
+1603
+01:14:06,199 --> 01:14:11,760
+saltato il cronoprogramma
+
+1604
+01:14:08,400 --> 01:14:13,560
+e comunque noi abbiamo perso l'occasione
+
+1605
+01:14:11,760 --> 01:14:15,840
+sulla Ragusa Catania di poter fare
+
+1606
+01:14:13,560 --> 01:14:19,719
+l'inaugurazione di tutta l'opera, quello
+
+1607
+01:14:15,840 --> 01:14:21,360
+che potete mettere in conto e di
+
+1608
+01:14:19,719 --> 01:14:23,719
+inaugurare qualche pezzettino di
+
+1609
+01:14:21,360 --> 01:14:27,000
+autostrada per fare magari più
+
+1610
+01:14:23,719 --> 01:14:29,320
+inaugurazione, ma l'autostrada tutta non
+
+1611
+01:14:27,000 --> 01:14:31,719
+potrà essere inaugurata nello stesso
+
+1612
+01:14:29,320 --> 01:14:33,719
+momento e si è perso un'occasione, si è
+
+1613
+01:14:31,719 --> 01:14:36,239
+persa un'occasione importante sulla
+
+1614
+01:14:33,719 --> 01:14:37,880
+Siracusa Gela. Lei lo sa. Noi anche
+
+1615
+01:14:36,239 --> 01:14:40,520
+questo durante il governo Crocetta
+
+1616
+01:14:37,880 --> 01:14:43,360
+l'abbiamo fatto finanziare per 211
+
+1617
+01:14:40,520 --> 01:14:46,159
+milioni di euro. L'assessore che allora
+
+1618
+01:14:43,360 --> 01:14:48,679
+la il suo predecessore l'assessore
+
+1619
+01:14:46,159 --> 01:14:50,960
+Bartolotta che ci mise in condizione di
+
+1620
+01:14:48,679 --> 01:14:53,639
+avere quelle risorse, dopodiché
+
+1621
+01:14:50,960 --> 01:14:55,679
+l'abbiamo appartato. Voi avete tagliato
+
+1622
+01:14:53,639 --> 01:14:57,800
+il nastro durante il governo Musumegi
+
+1623
+01:14:55,679 --> 01:15:00,880
+Morale della Paola avevamo rilasciato
+
+1624
+01:14:57,800 --> 01:15:03,239
+anche un un finanziamento di 350 milioni
+
+1625
+01:15:00,880 --> 01:15:05,480
+di euro per arrivare a Cicli. I soldi
+
+1626
+01:15:03,239 --> 01:15:08,520
+sono andati a finire nel ponte e non è
+
+1627
+01:15:05,480 --> 01:15:11,840
+rimasto nulla. Oggi si parla di pedaggi,
+
+1628
+01:15:08,520 --> 01:15:14,159
+sembra oltre danno la beffa.
+
+1629
+01:15:11,840 --> 01:15:15,440
+Noi un po' di lavoro l'avevamo fatto
+
+1630
+01:15:14,159 --> 01:15:17,880
+sulle infrastrutture e per le
+
+1631
+01:15:15,440 --> 01:15:20,800
+infrastrutture della provincia di Ragusa
+
+1632
+01:15:17,880 --> 01:15:22,880
+e oggi questo lavoro ovviamente noi lo
+
+1633
+01:15:20,800 --> 01:15:24,960
+vediamo,
+
+1634
+01:15:22,880 --> 01:15:27,960
+non abbiamo non vediamo una continuità,
+
+1635
+01:15:24,960 --> 01:15:30,639
+cioè ci potranno essere i tagli dei
+
+1636
+01:15:27,960 --> 01:15:33,360
+nastri ad oggi delle cose che abbiamo
+
+1637
+01:15:30,639 --> 01:15:34,880
+finanziato noi in quell'epoca, sia del
+
+1638
+01:15:33,360 --> 01:15:37,080
+governo regionale che il governo
+
+1639
+01:15:34,880 --> 01:15:40,199
+nazionale. Vorremmo che i futuri
+
+1640
+01:15:37,080 --> 01:15:42,600
+governi, magari che non apparteranno
+
+1641
+01:15:40,199 --> 01:15:44,120
+apparteranno allo stesso colore politico
+
+1642
+01:15:42,600 --> 01:15:47,480
+vostro, abbiano la possibilità di
+
+1643
+01:15:44,120 --> 01:15:50,600
+tagliare anche loro dei nastri.
+
+1644
+01:15:47,480 --> 01:15:52,320
+Grazie onorevole Di Pasquale. Assessore
+
+1645
+01:15:50,600 --> 01:15:53,880
+vuole
+
+1646
+01:15:52,320 --> 01:15:57,280
+in chiusura? Prego.
+
+1647
+01:15:53,880 --> 01:16:01,320
+Sì, presidente. Sono tanti gli argomenti
+
+1648
+01:15:57,280 --> 01:16:04,400
+che sono stati trattati oggi,
+
+1649
+01:16:01,320 --> 01:16:07,639
+sembrerebbe quasi un question time della
+
+1650
+01:16:04,400 --> 01:16:09,760
+della mia rubrica. Andiamo ai fit.
+
+1651
+01:16:07,639 --> 01:16:12,480
+C'è stato l'intervento, ho seguito con
+
+1652
+01:16:09,760 --> 01:16:15,880
+attenzione l'intervento dell'onorevole
+
+1653
+01:16:12,480 --> 01:16:19,679
+Sunseri e veda onorevole non troverà mai
+
+1654
+01:16:15,880 --> 01:16:23,159
+nessun comune che potrà dire che io ho
+
+1655
+01:16:19,679 --> 01:16:26,920
+li ho sollecitati per finanziamenti.
+
+1656
+01:16:23,159 --> 01:16:28,800
+Quindi se lei ci sono se ci sono delle
+
+1657
+01:16:26,920 --> 01:16:31,600
+iniziative da parte dei gruppi
+
+1658
+01:16:28,800 --> 01:16:33,440
+parlamentari per finanziare delle opere,
+
+1659
+01:16:31,600 --> 01:16:37,639
+voglio ricordare alcune opere che sono
+
+1660
+01:16:33,440 --> 01:16:40,440
+state finanziate anche raccordandosi col
+
+1661
+01:16:37,639 --> 01:16:43,199
+sottoscritto, come per esempio il
+
+1662
+01:16:40,440 --> 01:16:45,600
+Tribunale di Catania. Io non so se
+
+1663
+01:16:43,199 --> 01:16:47,280
+questa se il finanziamento del Tribunale
+
+1664
+01:16:45,600 --> 01:16:49,560
+di Catania, del completamento del
+
+1665
+01:16:47,280 --> 01:16:53,159
+Tribunale di Catania possa essere
+
+1666
+01:16:49,560 --> 01:16:55,600
+considerabile una mancia e tante tra
+
+1667
+01:16:53,159 --> 01:16:57,679
+strade e viadotti che sono stati
+
+1668
+01:16:55,600 --> 01:17:00,679
+finanziati. Pur tuttavia il
+
+1669
+01:16:57,679 --> 01:17:03,840
+sottoscritto, raccordandosi naturalmente
+
+1670
+01:17:00,679 --> 01:17:08,480
+col presidente della regione e con
+
+1671
+01:17:03,840 --> 01:17:12,040
+l'assessore all'economia nel redigere
+
+1672
+01:17:08,480 --> 01:17:16,080
+questa tipologia di finanziamento ha
+
+1673
+01:17:12,040 --> 01:17:18,440
+stabilito anche che circa l'8% delle
+
+1674
+01:17:16,080 --> 01:17:21,719
+risorse che ammontano ad oltre 15
+
+1675
+01:17:18,440 --> 01:17:26,000
+milioni di euro sarebbero state messe a
+
+1676
+01:17:21,719 --> 01:17:28,760
+bando. un bando che sarà aperto a tutti
+
+1677
+01:17:26,000 --> 01:17:32,320
+gli enti pubblici, anche a quelli che
+
+1678
+01:17:28,760 --> 01:17:35,320
+hanno avuto un finanziamento, a tutti
+
+1679
+01:17:32,320 --> 01:17:37,320
+gli enti pubblici, salvo che avere una
+
+1680
+01:17:35,320 --> 01:17:40,760
+priorità diversa, perché
+
+1681
+01:17:37,320 --> 01:17:43,440
+prioritariamente l'assessorato regionale
+
+1682
+01:17:40,760 --> 01:17:46,000
+alle infrastrutture finanzierà tutti
+
+1683
+01:17:43,440 --> 01:17:48,639
+quei comuni che non hanno ricevuto
+
+1684
+01:17:46,000 --> 01:17:51,600
+finanziamento nelle tabelle.
+
+1685
+01:17:48,639 --> 01:17:54,600
+il fatto che ci siano alcuni comuni che
+
+1686
+01:17:51,600 --> 01:17:57,040
+hanno abbiano potuto prendere dei
+
+1687
+01:17:54,600 --> 01:18:00,679
+finanziamenti senza averne fatto
+
+1688
+01:17:57,040 --> 01:18:02,800
+richiesta, a me questo mi,
+
+1689
+01:18:00,679 --> 01:18:04,360
+diciamo, mi desta quantomeno
+
+1690
+01:18:02,800 --> 01:18:06,320
+perplessità.
+
+1691
+01:18:04,360 --> 01:18:10,600
+Lei, l'onorevole Sunseri faceva
+
+1692
+01:18:06,320 --> 01:18:12,920
+riferimento al Comune di Termini Merese
+
+1693
+01:18:10,600 --> 01:18:16,440
+che sarebbe stato, io non ricordo in
+
+1694
+01:18:12,920 --> 01:18:19,639
+questo momento tutti i centinaia di
+
+1695
+01:18:16,440 --> 01:18:23,120
+interventi, credo che siano 984 gli
+
+1696
+01:18:19,639 --> 01:18:25,920
+interventi complessivi e che nell'ultima
+
+1697
+01:18:23,120 --> 01:18:29,000
+variazione di bilancio l'aula ha deciso
+
+1698
+01:18:25,920 --> 01:18:30,920
+e di sostenere, però ritengo non usuale
+
+1699
+01:18:29,000 --> 01:18:33,440
+che un comune che non abbia fatto
+
+1700
+01:18:30,920 --> 01:18:36,560
+richiesta e che non abbia indicato e
+
+1701
+01:18:33,440 --> 01:18:40,040
+quant antificato quell'opera e possa
+
+1702
+01:18:36,560 --> 01:18:41,920
+averla ricevuta perché, voglio dire, non
+
+1703
+01:18:40,040 --> 01:18:44,000
+penso che il legislatore, quindi,
+
+1704
+01:18:41,920 --> 01:18:45,920
+quest'aula, possa imbastire un
+
+1705
+01:18:44,000 --> 01:18:49,320
+provvedimento, una proposta di legge o
+
+1706
+01:18:45,920 --> 01:18:51,880
+un emendamento senza che formalmente si
+
+1707
+01:18:49,320 --> 01:18:55,360
+sia avviato un procedimento legislativo,
+
+1708
+01:18:51,880 --> 01:18:58,639
+cioè una richiesta in in tal senso. Pur
+
+1709
+01:18:55,360 --> 01:19:01,360
+tuttavia l'assessorato sta cercando di
+
+1710
+01:18:58,639 --> 01:19:04,000
+lavorare nel migliore nel migliore dei
+
+1711
+01:19:01,360 --> 01:19:08,040
+modi, non soltanto per cercare di
+
+1712
+01:19:04,000 --> 01:19:11,800
+trovare un meccanismo per finanziare,
+
+1713
+01:19:08,040 --> 01:19:13,800
+no? Questo il legislatore purtroppo se
+
+1714
+01:19:11,800 --> 01:19:15,800
+io fossi se avessi questo potere non
+
+1715
+01:19:13,800 --> 01:19:18,400
+sarei non farei l'assessore, farei
+
+1716
+01:19:15,800 --> 01:19:21,360
+altro. onorevole Di Pasquale, pur
+
+1717
+01:19:18,400 --> 01:19:24,440
+tuttavia l'assessorato che io
+
+1718
+01:19:21,360 --> 01:19:27,920
+momentaneamente negli ultimi 4 anni e
+
+1719
+01:19:24,440 --> 01:19:30,159
+guido e d'accordo col dipartimento sta
+
+1720
+01:19:27,920 --> 01:19:35,199
+imbastendo velocemente
+
+1721
+01:19:30,159 --> 01:19:38,600
+e un bando affinché possa recepire i il
+
+1722
+01:19:35,199 --> 01:19:40,360
+le richieste da parte di quei comuni che
+
+1723
+01:19:38,600 --> 01:19:43,679
+sono non hanno avuto alcun
+
+1724
+01:19:40,360 --> 01:19:47,840
+finanziamento, che credo oggi siano 73.
+
+1725
+01:19:43,679 --> 01:19:51,080
+Quindi voglio rassicurare tutti eh
+
+1726
+01:19:47,840 --> 01:19:53,199
+onorevole Sulio dice 66. Io dai miei dai
+
+1727
+01:19:51,080 --> 01:19:55,840
+conti che abbiamo fatto sono 73.
+
+1728
+01:19:53,199 --> 01:19:58,800
+Dopodiché dovranno dichiarare che
+
+1729
+01:19:55,840 --> 01:20:03,080
+nell'ultima Gazzetta non hanno ricevuto
+
+1730
+01:19:58,800 --> 01:20:07,280
+il finanziamento e lo stesso faremo con
+
+1731
+01:20:03,080 --> 01:20:10,960
+le parrocchie perché così prevede la
+
+1732
+01:20:07,280 --> 01:20:13,880
+norma e salvo però diversificare
+
+1733
+01:20:10,960 --> 01:20:16,880
+il la norma sui fit su due livelli
+
+1734
+01:20:13,880 --> 01:20:20,320
+diversi perché chi parteciperà al bando
+
+1735
+01:20:16,880 --> 01:20:22,360
+dovrà allegare naturalmente il progetto
+
+1736
+01:20:20,320 --> 01:20:23,520
+e dovrà diciamo poterlo
+
+1737
+01:20:22,360 --> 01:20:24,920
+assessore
+
+1738
+01:20:23,520 --> 01:20:26,920
+Ho l'ho ascoltata, lei ha detto che
+
+1739
+01:20:24,920 --> 01:20:28,120
+farete la stessa cosa rispetto ai comuni
+
+1740
+01:20:26,920 --> 01:20:29,520
+con le parrocchie.
+
+1741
+01:20:28,120 --> 01:20:31,440
+Sì.
+
+1742
+01:20:29,520 --> 01:20:32,880
+Può specificare meglio in che modo?
+
+1743
+01:20:31,440 --> 01:20:33,280
+Perché i comuni sappiamo quali sono i
+
+1744
+01:20:32,880 --> 01:20:35,040
+comuni.
+
+1745
+01:20:33,280 --> 01:20:36,960
+Sì. No, ma è un fatto importante,
+
+1746
+01:20:35,040 --> 01:20:39,600
+diciamo, avere fatto un comunicato
+
+1747
+01:20:36,960 --> 01:20:43,400
+stampa nelle prossime sicuramente 48
+
+1748
+01:20:39,600 --> 01:20:46,360
+ore. l'aula e voi sapete il rispetto che
+
+1749
+01:20:43,400 --> 01:20:50,679
+porto al Parlamento e all'assemblea
+
+1750
+01:20:46,360 --> 01:20:53,280
+regionale e lo una piccola una piccolo
+
+1751
+01:20:50,679 --> 01:20:57,320
+stanziamento verrà concesso agli enti
+
+1752
+01:20:53,280 --> 01:21:00,239
+ecclesiastici, così come da legge che
+
+1753
+01:20:57,320 --> 01:21:01,960
+non hanno potuto avere finanziamento
+
+1754
+01:21:00,239 --> 01:21:06,679
+nelle tabelle che già sono state
+
+1755
+01:21:01,960 --> 01:21:08,440
+approvate. Faccio faccio un riferimento.
+
+1756
+01:21:06,679 --> 01:21:11,600
+L'arcidio
+
+1757
+01:21:08,440 --> 01:21:14,880
+della provincia Talde Tali che non ha
+
+1758
+01:21:11,600 --> 01:21:18,360
+avuto finanziamento, potrà presentare il
+
+1759
+01:21:14,880 --> 01:21:21,320
+proprio progetto e prioritariamente
+
+1760
+01:21:18,360 --> 01:21:23,440
+avrà il finanziamento
+
+1761
+01:21:21,320 --> 01:21:25,480
+prioritariamente rispetto a già gli enti
+
+1762
+01:21:23,440 --> 01:21:29,080
+ecclesiastici che già ne hanno avuto
+
+1763
+01:21:25,480 --> 01:21:32,800
+almeno uno senza specificare importo.
+
+1764
+01:21:29,080 --> 01:21:36,040
+Quindi questa è il livello che stiamo
+
+1765
+01:21:32,800 --> 01:21:38,199
+che il bando che stiamo predisponendo.
+
+1766
+01:21:36,040 --> 01:21:39,960
+Cosa abbiamo fatto rispetto alle
+
+1767
+01:21:38,199 --> 01:21:42,239
+richieste che abbiamo avuto da alcuni
+
+1768
+01:21:39,960 --> 01:21:44,159
+comuni, ad alcuni enti pubblici, perché
+
+1769
+01:21:42,239 --> 01:21:45,960
+non tutti
+
+1770
+01:21:44,159 --> 01:21:48,840
+i beneficiati
+
+1771
+01:21:45,960 --> 01:21:51,719
+degli interventi fito,
+
+1772
+01:21:48,840 --> 01:21:53,679
+comuni o province, perché per esempio a
+
+1773
+01:21:51,719 --> 01:21:55,360
+Torbina è stato finanziato il parco
+
+1774
+01:21:53,679 --> 01:21:58,719
+archeologico.
+
+1775
+01:21:55,360 --> 01:22:02,199
+Da qui la richiesta di molti beneficiati
+
+1776
+01:21:58,719 --> 01:22:04,600
+dall'intervento dell'aula ad avere un
+
+1777
+01:22:02,199 --> 01:22:08,120
+po' più di tempo per presentare i
+
+1778
+01:22:04,600 --> 01:22:10,719
+progetti. ci sono finanziati progetti di
+
+1779
+01:22:08,120 --> 01:22:12,600
+valore ingente e quindi la redazione del
+
+1780
+01:22:10,719 --> 01:22:15,120
+progetto stesso con le con le
+
+1781
+01:22:12,600 --> 01:22:17,800
+autorizzazioni può richiedere qualche
+
+1782
+01:22:15,120 --> 01:22:20,320
+mese. Chi sarà più pronto lo richiederà
+
+1783
+01:22:17,800 --> 01:22:22,199
+e già saranno, diciamo, predisposti il
+
+1784
+01:22:20,320 --> 01:22:24,760
+decreto di trasferimento delle somme.
+
+1785
+01:22:22,199 --> 01:22:26,920
+Per tutti gli altri il dipartimento sta
+
+1786
+01:22:24,760 --> 01:22:29,639
+predisponendo il decreto di impegno
+
+1787
+01:22:26,920 --> 01:22:32,120
+delle risorse per poi, diciamo, non
+
+1788
+01:22:29,639 --> 01:22:36,159
+perdere le risorse e lasciare un po' più
+
+1789
+01:22:32,120 --> 01:22:41,239
+di tempo ai comuni per poter redigere e
+
+1790
+01:22:36,159 --> 01:22:44,960
+presentare il progetto. Per quanto e e
+
+1791
+01:22:41,239 --> 01:22:47,480
+riguarda invece, quindi sui fit, il
+
+1792
+01:22:44,960 --> 01:22:51,239
+lavoro dell'assessorato è assolutamente
+
+1793
+01:22:47,480 --> 01:22:54,120
+trasparente. Nelle prossime 48 ore
+
+1794
+01:22:51,239 --> 01:22:57,280
+comunicheremo quando verrà aperto il
+
+1795
+01:22:54,120 --> 01:23:00,400
+l'avviso e il bando e il bando sarà a
+
+1796
+01:22:57,280 --> 01:23:02,639
+sportello, quindi chi presenterà per
+
+1797
+01:23:00,400 --> 01:23:05,800
+primo potrà essere, diciamo,
+
+1798
+01:23:02,639 --> 01:23:08,719
+beneficiato. Dopodiché, anche se chi
+
+1799
+01:23:05,800 --> 01:23:10,199
+dovesse presentare per ultimo non è
+
+1800
+01:23:08,719 --> 01:23:12,360
+nell'elenco dei beneficiati,
+
+1801
+01:23:10,199 --> 01:23:14,600
+naturalmente prioritariamente avrà il
+
+1802
+01:23:12,360 --> 01:23:16,199
+finanziamento
+
+1803
+01:23:14,600 --> 01:23:18,280
+rispetto a chi l'ha presentato per
+
+1804
+01:23:16,199 --> 01:23:21,159
+primo, ma già era stato nel già inserito
+
+1805
+01:23:18,280 --> 01:23:22,800
+nell'elenco. Per quanto riguarda, ho
+
+1806
+01:23:21,159 --> 01:23:25,800
+seguito con attenzione l'intervento
+
+1807
+01:23:22,800 --> 01:23:29,360
+dell'onorevole Vardera, eppur e non
+
+1808
+01:23:25,800 --> 01:23:33,199
+avendo la delega alla salute mi ha
+
+1809
+01:23:29,360 --> 01:23:36,920
+incuriosito rispetto ad alcune date sul
+
+1810
+01:23:33,199 --> 01:23:38,920
+famoso macchinario ciclotrone che lui ha
+
+1811
+01:23:36,920 --> 01:23:43,880
+individuato essere stato comprato dal
+
+1812
+01:23:38,920 --> 01:23:46,880
+governo regionale 11 anni 11-12 anni fa.
+
+1813
+01:23:43,880 --> 01:23:50,560
+Ricordo quell'anno iniziava la sua
+
+1814
+01:23:46,880 --> 01:23:55,080
+avventura il presidente della Regione
+
+1815
+01:23:50,560 --> 01:24:00,280
+Crocetta e ha governato nei 5 anni
+
+1816
+01:23:55,080 --> 01:24:03,840
+successivi e dopodiché, diciamo,
+
+1817
+01:24:00,280 --> 01:24:06,719
+so e intuisco a quale, diciamo,
+
+1818
+01:24:03,840 --> 01:24:12,000
+istituzione o comunque clinica privata a
+
+1819
+01:24:06,719 --> 01:24:16,199
+cui lui si riferisce e diciamo per le
+
+1820
+01:24:12,000 --> 01:24:18,600
+notizie che arrivano dalla sanità e
+
+1821
+01:24:16,199 --> 01:24:21,880
+pubblica e privata, la ritengo una
+
+1822
+01:24:18,600 --> 01:24:25,360
+struttura di primoordine. Capisco che
+
+1823
+01:24:21,880 --> 01:24:28,080
+sono delle dichiarazioni importanti,
+
+1824
+01:24:25,360 --> 01:24:31,480
+capisco che sono delle dichiarazioni che
+
+1825
+01:24:28,080 --> 01:24:35,520
+vogliono accendere una lampadina sul
+
+1826
+01:24:31,480 --> 01:24:38,520
+tema e bisogna sicuramente approfondire,
+
+1827
+01:24:35,520 --> 01:24:41,520
+secondo me, probabilmente, diciamo,
+
+1828
+01:24:38,520 --> 01:24:43,639
+lasciando lasciando capire non so che
+
+1829
+01:24:41,520 --> 01:24:45,719
+cosa, ma sicuramente
+
+1830
+01:24:43,639 --> 01:24:48,000
+nelle prossime settimane e mi dispiace,
+
+1831
+01:24:45,719 --> 01:24:50,000
+diciamo, non avere la delega alla salute
+
+1832
+01:24:48,000 --> 01:24:51,800
+per poter approfondire il tema, ma
+
+1833
+01:24:50,000 --> 01:24:54,679
+sicuramente un tema sul quale va fatto
+
+1834
+01:24:51,800 --> 01:24:56,800
+chiarezza. Pur tuttavia ritengo che
+
+1835
+01:24:54,679 --> 01:24:59,560
+lanciare accuse senza fare nomi, ma
+
+1836
+01:24:56,800 --> 01:25:02,159
+facendo individuare facilmente nomi e
+
+1837
+01:24:59,560 --> 01:25:04,760
+cognomi o della clinica o del direttore
+
+1838
+01:25:02,159 --> 01:25:07,920
+sanitario, probabilmente sarebbe meglio
+
+1839
+01:25:04,760 --> 01:25:11,159
+fare direttamente, diciamo, accuse
+
+1840
+01:25:07,920 --> 01:25:13,639
+precise perché il Parlamento ha bisogno
+
+1841
+01:25:11,159 --> 01:25:16,639
+anche, ritengo, di avere chiarezza e
+
+1842
+01:25:13,639 --> 01:25:19,159
+trasparenza. Per quanto riguarda le
+
+1843
+01:25:16,639 --> 01:25:22,920
+tematiche sollevate sulla e Catania e
+
+1844
+01:25:19,159 --> 01:25:26,119
+Ragusa, soprattutto sullotto sui quattro
+
+1845
+01:25:22,920 --> 01:25:29,520
+lotti e sullotto e sul lotto 3, l'ha
+
+1846
+01:25:26,119 --> 01:25:31,679
+dichiarato sapientemente l'onorevole e
+
+1847
+01:25:29,520 --> 01:25:35,280
+Burtone. L'onorevole gli onorevoli
+
+1848
+01:25:31,679 --> 01:25:39,400
+Burtone e Campo. I tre lotti, quello 1 2
+
+1849
+01:25:35,280 --> 01:25:41,920
+e 4 sono al completamento oltre il 60%.
+
+1850
+01:25:39,400 --> 01:25:44,440
+sono in linea col cronoprogrammo. Si si
+
+1851
+01:25:41,920 --> 01:25:46,719
+col cronoprogrammo, si parla che nelle
+
+1852
+01:25:44,440 --> 01:25:50,040
+prossime nei prossimi mesi si potrebbero
+
+1853
+01:25:46,719 --> 01:25:52,679
+aprire alcune alcune linee. Sappiamo che
+
+1854
+01:25:50,040 --> 01:25:55,480
+nell'8 che nell'83 è un'opera che è
+
+1855
+01:25:52,679 --> 01:25:57,719
+stata giudicata, voluta fortemente,
+
+1856
+01:25:55,480 --> 01:26:00,280
+dicono me vorrà l'onorevole Di Pasquale,
+
+1857
+01:25:57,719 --> 01:26:02,440
+però commissariata col vecchio
+
+1858
+01:26:00,280 --> 01:26:04,679
+presidente, col col precedente
+
+1859
+01:26:02,440 --> 01:26:07,400
+presidente, col presidente Musumeci. La
+
+1860
+01:26:04,679 --> 01:26:11,360
+il bando è stato fatto, il bando è
+
+1861
+01:26:07,400 --> 01:26:13,760
+stato, diciamo, è pubblicato nel 2022.
+
+1862
+01:26:11,360 --> 01:26:15,800
+Nel 2023 sono stati aggiudicati quattro
+
+1863
+01:26:13,760 --> 01:26:18,040
+lotti, si n'è occupata come, diciamo,
+
+1864
+01:26:15,800 --> 01:26:20,280
+stazione appaltante direttamente l'ANAS
+
+1865
+01:26:18,040 --> 01:26:24,159
+a Roma. sono andati avanti. ritengo che
+
+1866
+01:26:20,280 --> 01:26:27,920
+sia un'opera che serva per quel
+
+1867
+01:26:24,159 --> 01:26:31,159
+comprensorio e le notizie che su sull'83
+
+1868
+01:26:27,920 --> 01:26:33,080
+che abbiamo rispetto ai vecchi
+
+1869
+01:26:31,159 --> 01:26:35,560
+concessionari,
+
+1870
+01:26:33,080 --> 01:26:38,679
+ai vecchi appaltatori dell'83, poi il
+
+1871
+01:26:35,560 --> 01:26:41,560
+subentro e sappiamo che hanno avuto
+
+1872
+01:26:38,679 --> 01:26:43,800
+ritardi che sembrerebbero non essere
+
+1873
+01:26:41,560 --> 01:26:46,679
+identificabili rispetto alla
+
+1874
+01:26:43,800 --> 01:26:49,360
+connotazione
+
+1875
+01:26:46,679 --> 01:26:52,960
+alla connotazione del territorio, ma
+
+1876
+01:26:49,360 --> 01:26:55,480
+legati alla gestione della ditta
+
+1877
+01:26:52,960 --> 01:26:58,000
+appaltatrice. Quindi faremo ulteriori
+
+1878
+01:26:55,480 --> 01:27:01,760
+verifiche e alla prossima seduta d'aula
+
+1879
+01:26:58,000 --> 01:27:04,960
+cercherò di dare risposte ancora più
+
+1880
+01:27:01,760 --> 01:27:08,760
+ancora più pregnanti. E per quanto
+
+1881
+01:27:04,960 --> 01:27:12,040
+riguarda invece il CAS, il famoso l'89
+
+1882
+01:27:08,760 --> 01:27:13,440
+della Siracusa GER, nel nell'intervento
+
+1883
+01:27:12,040 --> 01:27:16,920
+l'onorevole Di Pasquale ha voluto
+
+1884
+01:27:13,440 --> 01:27:20,639
+ricordare 700 milioni di finanziamento.
+
+1885
+01:27:16,920 --> 01:27:23,880
+Io non ho memoria, lo andrò. 700 milioni
+
+1886
+01:27:20,639 --> 01:27:26,639
+ha detto onore
+
+1887
+01:27:23,880 --> 01:27:28,880
+ah 700. Invece in totale in Ragusa
+
+1888
+01:27:26,639 --> 01:27:32,119
+Catania sono più di 1 miliardo di euro,
+
+1889
+01:27:28,880 --> 01:27:32,119
+di cui
+
+1890
+01:27:36,239 --> 01:27:42,000
+della della Ragusa perfetto. Quindi
+
+1891
+01:27:39,560 --> 01:27:44,480
+ricordo 700 milioni il finanziamento del
+
+1892
+01:27:42,000 --> 01:27:46,119
+Conte bis un'opera complessiva nei
+
+1893
+01:27:44,480 --> 01:27:48,600
+successivi governi di oltre 1 miliardo
+
+1894
+01:27:46,119 --> 01:27:51,440
+di euro di cui oltre 200 milioni dalla
+
+1895
+01:27:48,600 --> 01:27:54,960
+Regione dalla Regione Siciliana. Invece
+
+1896
+01:27:51,440 --> 01:27:58,159
+per quanto riguarda e il l'89 della
+
+1897
+01:27:54,960 --> 01:28:00,119
+Siracusa Gela, io onorevole e presidente
+
+1898
+01:27:58,159 --> 01:28:02,199
+ricordo perfettamente quell'impegno che
+
+1899
+01:28:00,119 --> 01:28:04,440
+prese a nome del governo per finanziare
+
+1900
+01:28:02,199 --> 01:28:06,840
+che avremmo finanziato all'interno di
+
+1901
+01:28:04,440 --> 01:28:09,320
+questa legislatura il l'89 della
+
+1902
+01:28:06,840 --> 01:28:11,520
+Siracusa Geled è ancora un impegno che
+
+1903
+01:28:09,320 --> 01:28:15,000
+voglio che voglio prendere pur sapendo
+
+1904
+01:28:11,520 --> 01:28:19,840
+che i 350 milioni che erano stati
+
+1905
+01:28:15,000 --> 01:28:23,440
+previsti in una in un precedente ipotesi
+
+1906
+01:28:19,840 --> 01:28:26,400
+di allocazione e programmazione dei
+
+1907
+01:28:23,440 --> 01:28:29,800
+fondi di cesione 2021-2027.
+
+1908
+01:28:26,400 --> 01:28:33,040
+Purtroppo i 350 milioni non bastavano
+
+1909
+01:28:29,800 --> 01:28:34,639
+per mandare in gara il l'89 della
+
+1910
+01:28:33,040 --> 01:28:37,560
+Siracusa Gela perché allora già
+
+1911
+01:28:34,639 --> 01:28:40,560
+servivano oltre 600 milioni. Ora l'opera
+
+1912
+01:28:37,560 --> 01:28:42,840
+è cresciuta di ulteriori 60 milioni di
+
+1913
+01:28:40,560 --> 01:28:45,320
+euro, ne serviranno 660. Abbiamo la
+
+1914
+01:28:42,840 --> 01:28:47,440
+consapevolezza col presidente Schifana,
+
+1915
+01:28:45,320 --> 01:28:49,360
+ne abbiamo più volte parlato e stiamo
+
+1916
+01:28:47,440 --> 01:28:52,119
+lavorando proprio per reperire le
+
+1917
+01:28:49,360 --> 01:28:54,400
+risorse dell'89 della Siracusa e Gela
+
+1918
+01:28:52,119 --> 01:28:56,159
+che oggi ammontano più di 60 milioni di
+
+1919
+01:28:54,400 --> 01:28:58,920
+euro. Si è ricordato anche l'onorevole
+
+1920
+01:28:56,159 --> 01:29:00,840
+SP la l'attività che questo che questa
+
+1921
+01:28:58,920 --> 01:29:03,560
+assemblea su proposta del governo,
+
+1922
+01:29:00,840 --> 01:29:05,760
+voglio ricordare, ha reperito ulteriori
+
+1923
+01:29:03,560 --> 01:29:08,920
+5 milioni di euro per il diadotto il
+
+1924
+01:29:05,760 --> 01:29:11,920
+Cassibile, opera che abbiamo finanziato
+
+1925
+01:29:08,920 --> 01:29:15,719
+con i fondi della Regione Siciliana.
+
+1926
+01:29:11,920 --> 01:29:20,159
+grazie ad eh la volontà dell'assemblea,
+
+1927
+01:29:15,719 --> 01:29:23,199
+ma su proposta del governo regionale,
+
+1928
+01:29:20,159 --> 01:29:26,960
+opera che sarà appaltata a breve. Per
+
+1929
+01:29:23,199 --> 01:29:29,080
+quanto riguarda eh l'appalto dei caselli
+
+1930
+01:29:26,960 --> 01:29:33,199
+autostradali,
+
+1931
+01:29:29,080 --> 01:29:36,280
+uno delle ehm dei rilievi che il
+
+1932
+01:29:33,199 --> 01:29:38,159
+Ministero ha mosso negli ultimi anni al
+
+1933
+01:29:36,280 --> 01:29:41,239
+consorzio autostrada è quello di avere
+
+1934
+01:29:38,159 --> 01:29:43,760
+dei meccanismi e metodi di pagamento
+
+1935
+01:29:41,239 --> 01:29:48,360
+vetusti. Tutto al proposito, noi nei
+
+1936
+01:29:43,760 --> 01:29:50,840
+fondi di coesione 2021-2027 abbiamo
+
+1937
+01:29:48,360 --> 01:29:52,400
+introdotto nuove risorse per
+
+1938
+01:29:50,840 --> 01:29:55,440
+riammodernare
+
+1939
+01:29:52,400 --> 01:29:58,080
+e tutti i meccanismi di pagamento per
+
+1940
+01:29:55,440 --> 01:29:59,679
+tutti i caselli della concessione
+
+1941
+01:29:58,080 --> 01:30:01,760
+autostradale. Il Ministero,
+
+1942
+01:29:59,679 --> 01:30:05,320
+naturalmente, oltre a fare questi
+
+1943
+01:30:01,760 --> 01:30:08,480
+rilievi, ci ha richiesto
+
+1944
+01:30:05,320 --> 01:30:11,960
+di poterli naturalmente inserire in
+
+1945
+01:30:08,480 --> 01:30:14,960
+tutti gli svincoli e degli ingressi e ma
+
+1946
+01:30:11,960 --> 01:30:18,159
+a riammodernarli significa anche dare la
+
+1947
+01:30:14,960 --> 01:30:20,760
+possibilità rispetto a meccanismi
+
+1948
+01:30:18,159 --> 01:30:23,800
+previsti dall'autorità anticorruzione,
+
+1949
+01:30:20,760 --> 01:30:27,760
+perché ad oggi almeno un operatore non
+
+1950
+01:30:23,800 --> 01:30:30,560
+ha la possibilità di poter, diciamo, far
+
+1951
+01:30:27,760 --> 01:30:33,080
+pagare i propri i propri clienti, i
+
+1952
+01:30:30,560 --> 01:30:35,440
+pedaggi autostradali. Quindi lo stiamo
+
+1953
+01:30:33,080 --> 01:30:38,520
+facendo anche per questo. Per quanto
+
+1954
+01:30:35,440 --> 01:30:40,719
+riguarda invece il CAS e quello che
+
+1955
+01:30:38,520 --> 01:30:42,520
+poteva fare il governo rispetto alle
+
+1956
+01:30:40,719 --> 01:30:44,480
+ispezioni che ci sono state nelle
+
+1957
+01:30:42,520 --> 01:30:47,320
+settimane precedenti le ha fatto, ha
+
+1958
+01:30:44,480 --> 01:30:49,920
+messo tutte le risorse in campo nel più
+
+1959
+01:30:47,320 --> 01:30:53,440
+breve tempo possibile. Avevamo proposto
+
+1960
+01:30:49,920 --> 01:30:56,400
+al CAS circa 36 milioni di euro. alla
+
+1961
+01:30:53,440 --> 01:30:58,679
+fine sono stati stanziati oltre 13
+
+1962
+01:30:56,400 --> 01:31:01,760
+milioni di euro per lavori che si stanno
+
+1963
+01:30:58,679 --> 01:31:03,960
+che si stanno per lavori per miticazione
+
+1964
+01:31:01,760 --> 01:31:07,920
+del rischio che stanno
+
+1965
+01:31:03,960 --> 01:31:12,239
+che si stanno ultimando entro il 31 e
+
+1966
+01:31:07,920 --> 01:31:15,480
+dicembre di quest'anno. Quindi,
+
+1967
+01:31:12,239 --> 01:31:17,600
+presidente, siamo consapevoli
+
+1968
+01:31:15,480 --> 01:31:20,480
+delle difficoltà che sta attraversando
+
+1969
+01:31:17,600 --> 01:31:22,000
+il CAS. Abbiamo già più volte avuto
+
+1970
+01:31:20,480 --> 01:31:23,800
+interlocuzioni
+
+1971
+01:31:22,000 --> 01:31:25,760
+anche formali in commissione
+
+1972
+01:31:23,800 --> 01:31:28,159
+parlamentare, anche con gli ispettori
+
+1973
+01:31:25,760 --> 01:31:30,600
+ministeriali, per trovare delle
+
+1974
+01:31:28,159 --> 01:31:32,760
+soluzioni o comunque per trovare tutto
+
+1975
+01:31:30,600 --> 01:31:35,320
+quello che potrà fare il governo
+
+1976
+01:31:32,760 --> 01:31:37,159
+regionale a fianco e per miticare la
+
+1977
+01:31:35,320 --> 01:31:39,320
+sicurezza dei tanti automobilisti
+
+1978
+01:31:37,159 --> 01:31:42,639
+siciliani e non. Presidente, mi lasci
+
+1979
+01:31:39,320 --> 01:31:46,920
+invece eh trattare un argomento che non
+
+1980
+01:31:42,639 --> 01:31:49,600
+è stato trattato oggi, ma riguarda il le
+
+1981
+01:31:46,920 --> 01:31:54,679
+14 isole siciliane.
+
+1982
+01:31:49,600 --> 01:31:57,679
+Proprio qualche ora fa gli otto le otto
+
+1983
+01:31:54,679 --> 01:32:01,639
+amministrazioni delle 14 isole siciliane
+
+1984
+01:31:57,679 --> 01:32:04,000
+si sono viste sull'isola di Lipari per
+
+1985
+01:32:01,639 --> 01:32:08,760
+protestare sul rincaro che ci che ci
+
+1986
+01:32:04,000 --> 01:32:13,440
+sono state sulle corse ministeriali
+
+1987
+01:32:08,760 --> 01:32:18,080
+e loro hanno contato circa l'84% in più
+
+1988
+01:32:13,440 --> 01:32:20,480
+rispetto al 2022 e hanno e tutto il
+
+1989
+01:32:18,080 --> 01:32:22,920
+supporto del governo regionale e vorrei
+
+1990
+01:32:20,480 --> 01:32:27,239
+ricordare sia all'aula, ma chi ci
+
+1991
+01:32:22,920 --> 01:32:29,400
+ascolta da casa o dall'ufficio, che il
+
+1992
+01:32:27,239 --> 01:32:30,960
+governo regionale fin dal giorno
+
+1993
+01:32:29,400 --> 01:32:34,960
+dell'insediamento
+
+1994
+01:32:30,960 --> 01:32:37,719
+sulle corse sulle commesse regionali di
+
+1995
+01:32:34,960 --> 01:32:41,080
+collegamento con le 14 isole siciliane
+
+1996
+01:32:37,719 --> 01:32:44,679
+ha sempre impedito l'aumento anche di un
+
+1997
+01:32:41,080 --> 01:32:47,960
+solo centesimo del costo dei biglietti.
+
+1998
+01:32:44,679 --> 01:32:51,119
+Io vorrei che su questa cosa ci potesse
+
+1999
+01:32:47,960 --> 01:32:53,400
+essere chiarezza e naturalmente sono
+
+2000
+01:32:51,119 --> 01:32:57,600
+disposto a confrontarmi anche con una
+
+2001
+01:32:53,400 --> 01:33:00,440
+seduta d'aula apposita affinché venga
+
+2002
+01:32:57,600 --> 01:33:03,159
+fatta finalmente chiarezza anche nella
+
+2003
+01:33:00,440 --> 01:33:05,040
+comunicazione esterna che associazioni
+
+2004
+01:33:03,159 --> 01:33:07,800
+del settore turistico o alcune
+
+2005
+01:33:05,040 --> 01:33:10,800
+amministrazioni vogliono fare speculando
+
+2006
+01:33:07,800 --> 01:33:15,119
+sulla confusione, ma vorrei ricordare
+
+2007
+01:33:10,800 --> 01:33:17,199
+che i collegamenti per da e per Le 14
+
+2008
+01:33:15,119 --> 01:33:19,400
+isole siciliani vengono gestite su
+
+2009
+01:33:17,199 --> 01:33:22,040
+commesse diverse, parte regionale e poi
+
+2010
+01:33:19,400 --> 01:33:26,040
+una commessa ministeriale. Tutte le
+
+2011
+01:33:22,040 --> 01:33:29,679
+commesse che che sono sottoscritte con
+
+2012
+01:33:26,040 --> 01:33:32,320
+la Regione dal 2022, giorno del nostro
+
+2013
+01:33:29,679 --> 01:33:35,080
+insediamento, ripeto, non hanno subito
+
+2014
+01:33:32,320 --> 01:33:37,800
+l'aumento di neanche un centesimo,
+
+2015
+01:33:35,080 --> 01:33:40,159
+nonostante il ricaro dei carburanti,
+
+2016
+01:33:37,800 --> 01:33:42,639
+nonostante l'inflazione che c'è stato.
+
+2017
+01:33:40,159 --> 01:33:45,400
+Abbiamo messo in genti risorse proprio
+
+2018
+01:33:42,639 --> 01:33:47,760
+per cambierà. Non so quali sono le
+
+2019
+01:33:45,400 --> 01:33:49,639
+proteste di queste amministrazioni e
+
+2020
+01:33:47,760 --> 01:33:52,199
+delle associazioni perché non riesco a
+
+2021
+01:33:49,639 --> 01:33:55,320
+capirle verso il governo regionale. Pur
+
+2022
+01:33:52,199 --> 01:33:58,480
+tuttavia ritengo che debbono avere
+
+2023
+01:33:55,320 --> 01:34:01,440
+attenzione e il nostro sostegno, nonché
+
+2024
+01:33:58,480 --> 01:34:03,480
+la solidarietà per questi rincari sulle
+
+2025
+01:34:01,440 --> 01:34:05,080
+commesse ministeriali. Grazie
+
+2026
+01:34:03,480 --> 01:34:06,920
+presidente.
+
+2027
+01:34:05,080 --> 01:34:11,400
+Grazie assessore. Colleghi, l'aula è
+
+2028
+01:34:06,920 --> 01:34:13,719
+riconvocata martedì prossimo alle ore 15
+
+2029
+01:34:11,400 --> 01:34:18,119
+con l'ordine del giorno stabilita dalla
+
+2030
+01:34:13,719 --> 01:34:18,119
+capigruppo. La seduta è chiusa.
+
